@@ -3,13 +3,14 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: hl7.fhir.cz.img-report
+id: hl7.fhir.cz.img
 canonical: https://hl7.cz/fhir/img #!!change here!!
-name: HL7CzImagingImplementationGuide
+name: HL7CzImagingReportImplementationGuide
 title: HL7 Czech Imaging Report IG
 description: Czech Imaging Report Implementation Guide
 status: draft # draft | active | retired | unknown
 version: 0.0.1
+language: cs
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -37,6 +38,9 @@ publisher:
 dependencies:
   hl7.fhir.uv.ips: 1.1.0
   hl7.fhir.cz.core: current
+  hl7.fhir.eu.base.r4: current
+  hl7.fhir.extensions.r5: 4.0.1
+  hl7.fhir.eu.extensions: current
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
@@ -62,16 +66,20 @@ dependencies:
 pages:
   index.md:
     title: Home
-# general-guidance.md:
-#   title: General Guidance
+  profile-guidance.md:
+    title: Profile Guidance
+  general-semantics.md:
+    title: General Semantics in a National Context
+  use-cases.md:
+    title: Use Cases
 # identifiers.md:
 #   title: Identifiers
-# artifacts.xml:
-#   title: Summary artifacts
+  artifacts.xml:
+    title: Summary artifacts
 # profiles-and-extensions.md:
 #   title: Profiles and extensions
-# downloads.md:
-#   title: Download
+  downloads.md:
+    title: Download
 #
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
@@ -95,6 +103,7 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 #    - https://ncez.mzcr.cz/fhir/CodeSystem/contact-role-supplement
 #    - https://ncez.mzcr.cz/fhir/CodeSystem/snomed-supplement-service-type
 #    - http://ncez.mzcr.cz/fhir/StructureDefinition/address-point-cz
+# path-expansion-params: '../../expansion-params.json' # for using SNOMED CT Czech Extension
 # path-resource:
 #    - input/resources
 #    - fsh-generated/resources
@@ -142,14 +151,15 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-#  Guidance:
-#    General guidance: general-guidance.html
+  Guidance:
+   General semantics: general-semantics.html
+   Use cases: use-cases.html
 #    Identifiers: identifiers.html
-#  Artifacts:
-#    Czech artifacts: artifacts.html
+  Artifacts:
+    Profile artifacts: artifacts.html
 #    Profiles and extensions: profiles-and-extensions.html
-#  About:
-#    Downloads: downloads.html
+  About:
+    Downloads: downloads.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
@@ -239,7 +249,7 @@ menu:
 # * date
 # * meta
 # * implicitRules
-# * language
+# * language = #cs
 # * text
 # * contained
 # * extension

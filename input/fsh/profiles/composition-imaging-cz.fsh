@@ -39,6 +39,10 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^definition = "Identifiers assigned to this Imaging Report by the performer or other systems. It shall be common to several report versions"
   * ^comment = "Composition.identifier SHALL be equal to one of the DiagnosticReport.identifier, if at least one exists"
 
+* extension contains 
+    $event-basedOn-url          named basedOn 0..* and
+    $information-recipient-url  named informationRecipient 0..*
+
 * status
   * ^short = "Status of the Report"
   * ^comment = "DiagnosticReport.status and Composition.status shall be aligned"

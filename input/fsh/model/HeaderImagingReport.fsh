@@ -1,5 +1,5 @@
 Logical: HeaderImagingReportCz
-Id: HeaderImagingReport
+Id: HeaderImagingReportCz
 Title: "A.1 - Imaging Report header data element"
 Description: """Imaging Report - Imaging Report header data element - A.1"""
 

@@ -8,8 +8,6 @@ Usage: #definition
 * experimental = true
 * description = """CZ Imaging Report Header Model to this guide mapping"""
 
-* language = #cs
-
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/SubjectCz"
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-patient-core"
 * group[=].element[+].code = #Header.subject
@@ -107,7 +105,7 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_PractitionerCore
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "where attester.mode = 'professional' AND Composition.attester.party.resolve().ofType(PractitionerRole)"
+* group[=].element[=].target.comment = "where attester.mode = 'professional' AND Composition.attester.party.resolve().ofType(CZ_PractitionerCore)"
 * group[=].element[+].code = #AttesterCz.identifier
 * group[=].element[=].display = "A.1.6.1 - Attester identifier"
 * group[=].element[=].target.code = #CZ_PractitionerCore.identifier					
@@ -135,7 +133,7 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_PractitionerCore					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "where attester.mode = 'legal' AND Composition.attester.party.resolve().ofType(PractitionerRole)"
+* group[=].element[=].target.comment = "where attester.mode = 'legal' AND Composition.attester.party.resolve().ofType(CZ_PractitionerCore)"
 * group[=].element[+].code = #LegalAuthenticatorCz.identifier
 * group[=].element[=].display = "A.1.7.1 - Legal authenticator identifier"
 * group[=].element[=].target.code = #CZ_PractitionerCore.identifier					

@@ -52,7 +52,6 @@ Description: "Clinical document used to represent a Imaging Report for the scope
   * search ..0
   * request ..0
   * response ..0
-* signature ^short = "Digital Signature of this report"
 
 * entry ^slicing.discriminator[0].type = #type
 * entry ^slicing.discriminator[0].path = "resource"
@@ -67,7 +66,7 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * entry[diagnosticReport].resource only CZ_DiagnosticReport
 
 * entry contains serviceRequest 0..*
-* entry[serviceRequest].resource only CZ_ServiceRequest
+* entry[serviceRequest].resource only CZ_ImagingOrderInformation
 
 * entry contains patient 0..1
 * entry[patient].resource only CZ_PatientCore or CZ_PatientAnimal
@@ -103,4 +102,10 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * entry[carePlan].resource only CarePlan
 
 * entry contains imagingStudy 0..*
-* entry[imagingStudy].resource only ImagingStudy
+* entry[imagingStudy].resource only CZ_StudyImaging
+
+* signature ^short = "Report Digital Signature"
+  * type ^short = "Digital Signature Purposes"
+  * when ^short = "When was signed"
+  * who ^short = "Who signed."
+  * data ^short = "Signature content"

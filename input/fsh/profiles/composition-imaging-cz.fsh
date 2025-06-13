@@ -8,10 +8,10 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * . ^short = "Imaging Report composition"
 * . ^definition = """
 Imaging Study Report composition.\n
-A composition is a set of healthcare-related information that is assembled together into a single logical document that 
-provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard 
+A composition is a set of healthcare-related information that is assembled together into a single logical document that
+provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard
 to who is making the statement.\n
-While a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, 
+While a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle,
 of which the Composition is the first resource contained.\n
 \n
 The `text` field of each section SHALL contain a textual representation of all listed entries.
@@ -20,14 +20,14 @@ The `text` field of each section SHALL contain a textual representation of all l
 * insert SetFmmandStatusRule ( 0, draft )
 //* insert MandateLanguageAndSecurity
 
-//* extension contains 
+//* extension contains
 //    DiagnosticReportReference named diagnosticreport-reference 1..1 MS and
 //    $event-basedOn-url named basedOn 0..* and
 //    $information-recipient-url named informationRecipient 0..* and
 //    $artifact-version-url named artifactVersion 0..1
 //* extension[diagnosticreport-reference].valueReference only Reference ( CZ_DiagnosticReport )
 //* extension[basedOn].valueReference only Reference ( ServiceRequest )
-// TODO see open issues - readdress the status of the information recipient.
+// TODO see open issues - readdress the status of the information recipient!
 //* extension[informationRecipient].valueReference only Reference ( ImInformationRecipient )
 
 * meta
@@ -71,16 +71,16 @@ The `text` field of each section SHALL contain a textual representation of all l
 
 * author 1..* MS
   * insert SliceElement( #profile, $this )
-* author contains 
-    author 0..* MS and 
+* author contains
+    author 0..* MS and
     authoring-device 0..* MS
 * author[author] only Reference(PractitionerRole)
 * author[authoring-device] only Reference(Device)
 
 // type of the report. Matching DiagnosticReport.code
-// code 
+// code
 //* type 1..
-//* type from CZ_DiagnosticReport (preferred) // valueset to be revised. 
+//* type from CZ_DiagnosticReport (preferred) // valueset to be revised.
 //  * ^short = "Type of Imaging Diagnostic Report"
 //  * ^definition = "Specifies that it refers to a Imaging Report"
 //  * ^comment = "At least one DiagnosticReport.code.coding and Composition.type.coding SHALL be equal"
@@ -97,9 +97,9 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section.code 1..1 MS  // LOINC code for the section
 * section.title MS
 * section.text MS
-* section contains 
-    imagingstudy 1..1 MS and 
-    order 1..1 MS and 
+* section contains
+    imagingstudy 1..1 MS and
+    order 1..1 MS and
     history 1..1 MS and
     procedure 1..1 MS and
     comparison 1..1 MS and
@@ -123,7 +123,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * entry[imagingstudy]
     * ^short = "Imaging Study Reference"
     * ^definition = "This entry holds a reference to the Imaging Study instance that is associated with this Composition."
-  * entry[imagingstudy] only Reference(ImagingStudy)  
+  * entry[imagingstudy] only Reference(ImagingStudy)
 
 ///////////////////////////////// ORDER SECTION ///////////////////////////////////////
 * section[order]
@@ -133,33 +133,33 @@ The `text` field of each section SHALL contain a textual representation of all l
 
   * entry MS
     * insert SliceElement( #profile, "$this" )
-  * entry contains 
-      order 0..* MS and 
-      orderPlacer 0..* MS and 
-      insurance 0..* MS and 
+  * entry contains
+      order 0..* MS and
+      orderPlacer 0..* MS and
+      insurance 0..* MS and
       insurranceprovider 0..* MS
 
   * entry[order]
     * ^short = "Order reference"
     * ^definition = "This entry holds a reference to the order for the Imaging Study and report."
-  * entry[order] only Reference(ServiceRequest)  
-  
+  * entry[order] only Reference(ServiceRequest)
+
   * entry[orderPlacer]
     * ^short = "Order Placer"
     * ^definition = "This entry holds a reference to order placer."
-  * entry[orderPlacer] only Reference(PractitionerRole)  
+  * entry[orderPlacer] only Reference(PractitionerRole)
 
   * entry[insurance]
     * ^short = "Insurrance"
     * ^definition = "This entry holds a reference to insurance."
-  * entry[insurance] only Reference(Coverage)  
+  * entry[insurance] only Reference(Coverage)
 
   * entry[insurranceprovider]
     * ^short = "Insurrance"
     * ^definition = "This entry holds a reference to insurance provider."
-  * entry[insurranceprovider] only Reference(Organization)  
+  * entry[insurranceprovider] only Reference(Organization)
 
-  
+
 ///////////////////////////////// HISTORY SECTION ///////////////////////////////////////
 * section[history]
   * ^short = "History"
@@ -171,14 +171,14 @@ The `text` field of each section SHALL contain a textual representation of all l
   * code = $loinc#55111-9 "Procedure"
   * entry MS
     * insert SliceElement( #profile, $this )
-  * entry contains 
+  * entry contains
       procedure 0..* MS and
       practitioner 0..* MS and
       device 0..* MS and
     //  imaging-phase 0..* MS and
       medication 0..* MS
   * entry[procedure] only Reference(Procedure)
-  * entry[practitioner] only Reference(Practitioner) 
+  * entry[practitioner] only Reference(Practitioner)
   * entry[device] only Reference(Device)
 //  * entry[imaging-phase] only Reference(ImagingStudyPhase)
   * entry[medication] only Reference(MedicationAdministration)
@@ -189,7 +189,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * code = $loinc#18834-2 "Comparison"
   * entry MS
     * insert SliceElement( #profile, $this )
-  * entry contains 
+  * entry contains
       comparedstudy 0..* MS
   * entry[comparedstudy] only Reference(ImagingStudy) //or ImagingSelection)
 
@@ -199,7 +199,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * code = $loinc#59776-5 "Findings"
   * entry MS
     * insert SliceElement( #profile, $this )
-  * entry contains 
+  * entry contains
       finding 0..* MS and
       keyimage 0..* MS
 //  * entry[finding] only Reference(Finding)
@@ -211,7 +211,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * code = $loinc#19005-8 "Impression"
   * entry MS
     * insert SliceElement( #profile, $this )
-  * entry contains 
+  * entry contains
       finding 0..* MS and
       impression 0..* MS and
       keyimage 0..* MS
@@ -225,7 +225,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * code = $loinc#18783-1 "Recommendation"
   * entry MS
     * insert SliceElement( #profile, $this )
-  * entry contains 
+  * entry contains
       CarePlan 0..* MS
   * entry[CarePlan] only Reference(CarePlan)
 

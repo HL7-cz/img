@@ -1,1 +1,0 @@
-This manual describes how to use this national profile for imaging report.

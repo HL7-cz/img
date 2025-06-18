@@ -1,0 +1,69 @@
+@startmindmap
+skinparam topurl StructureDefinition-
+
+* [[BodyImagingReportCz.html Tělo dokumentu]]
+** [[InformationAboutOrder.html Informace o žádance (objednávce)]]
+***_ ID žádanky (objednávky)
+***_ Datum a čas žádosti
+***_ Identifikace žadatele (osoby)
+***_ Kontaktní údaje žadatele
+***_ Organizace žadatele (objednatele)
+** [[ReasonForAdmision.html Důvod vyžádání (objednání)]]
+** [[DICOMMetadata.html DICOM metadata]]
+** [[SpecimenInformation.html Informace o vzorku]]
+** [[ReportOfImagingMethod.html Zpráva ze zobrazovacích metod]]
+***_ Typ modality
+***_ Typ zobrazovací metody
+***_ Důvod (indikace)
+***_ Klinická otázka
+***_ Část těla
+***_ Výkon (procedura)
+***_ Medikace
+***_ Nežádoucí reakce
+***_ Výsledek zobrazovací metody
+***_ Závěr
+***_ Doporučení
+***_ Textové části dokumentu
+** [[LinkToRelatedReport.html Odkaz na související zprávu]]
+** [[Attachments.html Média (přílohy)]]
+
+/'***_ Order placer
+***_ Order reason text
+***_ Order reason
+***_ Clinical question
+***_ Supporting information
+****_ Observation
+****_ Condition
+****_ Medication Administration
+****_ Devices
+****_ Pregnancy status
+****_ Gestational age
+****_ Sex for clinical use
+****_ Other supporting information
+** Specimen
+** Service request
+** Exposure information
+***_ Effective dose
+***_ Equivalent dose information
+****_ Equivalent dose
+****_ Tissue type
+** Examination Report
+***_ Modality
+***_ Body part
+****_ Body location
+****_ Laterality
+***_ Imaging procedures
+***_ Medication
+***_ Adverse reaction
+***_ Result data
+****_ Result text
+****_ Observation results
+***_ Conclusion
+****_ Impression
+****_ Condition or finding
+** Recommendation
+***_ Description
+***_ Care plan
+** Comparison Study
+'/
+@endmindmap

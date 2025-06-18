@@ -1,0 +1,40 @@
+@startmindmap
+skinparam topurl StructureDefinition-
+
+* [[BodyImagingReportHeaderCz.html Hlavička dokumentu]]
+** [[SubjectCz.html Identifikace pacienta]]
+/'    Shell we keep or not?
+** Preferred Health Professional
+'/
+** [[PayerCz.html Zdravotní pojištění]]
+/' ***_ Health insurance code
+***_ Health insurance name
+***_ Health insurance number '/
+** [[InformationRecipientCz.html Příjemce dokumentu]]
+** [[AttesterCz.html Ověřil]]
+***_ Ověřovatel
+***_ Datum a čas ověření
+** [[AuthorCz.html Autor dokumentu]]
+***_ Autor
+***_ Datum a čas uložení
+** [[LegalAuthenticator.html Zodpovídá]]
+***_ Zodpovědná osoba
+***_ Datum a čas autorizace
+** [[DocumentMetadataCz.html Metadata dokumentu]]
+***_ ID dokumentu
+***_ Kategorie dokumentu
+***_ Stav dokumentu
+'***_ Period
+***_ Datum a čas vytvoření
+***_ Název dokumentu
+'***_ Event type
+'***_ Specialty
+***_ Správce dokumentu
+'***_ Document format
+***_ Důvěrnost dokumentu
+***_ Jazyk dokumentu
+***_ Verze
+***_ Digitální podpis
+'***_ Study Instance UID
+'***_ Accession number
+@endmindmap

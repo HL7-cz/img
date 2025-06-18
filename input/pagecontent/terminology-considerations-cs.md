@@ -34,14 +34,14 @@ Následuje seznam použitých kódovacích systémů a číselníků:
 | A.2.6.11      | View                               | SNOMED CT [ViewProjectionCodelist]               |
 
 ### FHIR
-| Kód položky    | Popis položky           | Hodnota                                                                 |
-| ---------------| ----------------------- | ----------------------------------------------------------------------- |
-| A.1.1.6        | Úřední pohlaví          | https://terminology.hl7.org/4.0.0/ValueSet-v3-AdministrativeGender.html |
-| A.1.2.1        | Adresa                  | https://terminology.hl7.org/4.0.0/ValueSet-v3-Country2.html             |
-| A.1.2.4.1      | Typ kontaktu            | http://terminology.hl7.org/CodeSystem/v3-RoleClas                       |
-| A.1.8.2        | Kategorie dokumentu     | http://hl7.org/fhir/ValueSet/referenced-item-category                   |
-| A.1.8.3        | Stav dokumentu          | https://www.hl7.org/fhir/valueset-diagnostic-report-status.html         |
-| A.1.8.7        | Důvernost dokumentu     | https://terminology.hl7.org/ValueSet-v3-Confidentiality.html            |
+| Kód položky   | Popis položky         | Hodnota                                                                   |
+| --------------| --------------------- | ------------------------------------------------------------------------- |
+| A.1.1.6       | Úřední pohlaví        | https://terminology.hl7.org/4.0.0/ValueSet-v3-AdministrativeGender.html   |
+| A.1.2.1       | Adresa                | https://terminology.hl7.org/4.0.0/ValueSet-v3-Country2.html               |
+| A.1.2.4.1     | Typ kontaktu          | http://terminology.hl7.org/CodeSystem/v3-RoleClas                         |
+| A.1.8.2       | Kategorie dokumentu   | http://hl7.org/fhir/ValueSet/referenced-item-category                     |
+| A.1.8.3       | Stav dokumentu        | https://www.hl7.org/fhir/valueset-diagnostic-report-status.html           |
+| A.1.8.7       | Důvernost dokumentu   | https://terminology.hl7.org/ValueSet-v3-Confidentiality.html              |
 
 ### DASTA
 | Kód položky    | Popis položky           | Hodnota                                                                 |
@@ -59,11 +59,11 @@ Následuje seznam použitých kódovacích systémů a číselníků:
 ### DICOM
 
 | Kód položky    | Popis položky           | Hodnota                       |
-| ---------------| ----------------------- | ----------------------------- |
+| -------------- | ----------------------- | ----------------------------- |
 | A.2.4.1        | Typ Modality            | DICOM [ModalityCodelist]      |
 | A.2.6.12       | Modalita                | DICOM [Acquisition Modality]  |
 
 ### LOINC
 | Kód položky    | Popis položky           |Hodnota                                                                   |
-| ---------------| ----------------------- | ------------------------------------------------------------------------- |
-| A.2.4.2        | Typ zobrazovací metody  | https://loinc.org/oids/1.3.6.1.4.1.12009.10.2.5/                          |
+| -------------- | ----------------------- | ------------------------------------------------------------------------ |
+| A.2.4.2        | Typ zobrazovací metody  | https://loinc.org/oids/1.3.6.1.4.1.12009.10.2.5/                         |

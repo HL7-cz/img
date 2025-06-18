@@ -30,6 +30,10 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^comment = "Composition.identifier SHALL be equal to one of the DiagnosticReport.identifier, if at least one exists"
 
 * extension contains 
+    ImDiagnosticReportReference named diagnosticreport-reference 1..1  
+* extension[diagnosticreport-reference].valueReference only Reference ( CZ_DiagnosticReport )
+
+* extension contains 
     $event-basedOn-url          named basedOn 0..* and
     $information-recipient-url  named informationRecipient 0..*
 
@@ -88,13 +92,14 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section contains 
     imagingstudy 1..1 MS and 
     order 1..1 MS and 
+    clinicalQuestion 0..* and
     history 1..1 MS and
     procedure 1..1 MS and
     comparison 1..1 MS and
     findings 1..1 MS and
     impression 1..1 MS and
     recommendation 1..1 MS and
-    attachments 1..1 MS
+    communication 0..1
 
 ///////////////////////////////// IMAGING STUDY SECTION ///////////////////////////////////////
 * section[imagingstudy]
@@ -130,16 +135,22 @@ The `text` field of each section SHALL contain a textual representation of all l
     * ^definition = "This entry holds a reference to the order for the Imaging Study and report."
   * entry[order] only Reference(CZ_ImagingOrderInformation)  
 
+///////////////////////////////// Clinical question SECTION ///////////////////////////////////////
+* section[clinicalQuestion]
+  * ^short = "Clinical question"
+  * ^definition = "This section holds information about the clinical question that the imaging method is intended to answer."
+  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
+  * ^extension[0].valueString = "Section"
+  * code = $loinc#75328-5	"Prognosis"
+  * entry 1..
+  * entry only Reference(CZ_ClinicalQuestion) 
+
   
 ///////////////////////////////// HISTORY SECTION ///////////////////////////////////////
 * section[history]
   * ^short = "History"
-  * code = $loinc#18834-2 "Radiology Comparison study (narrative)"
-  * entry
-    * insert SliceElement( #profile, $this )
-  * entry contains 
-      comparedstudy 0..*
-  * entry[comparedstudy] only Reference(CZ_StudyImaging) //or CZ_SelectionImaging
+  * code = $loinc#11329-0 "History general Narrative - Reported"
+  * extension contains $note-url named note 0..*
 
 ///////////////////////////////// PROCEDURE SECTION ///////////////////////////////////////
 * section[procedure]
@@ -165,14 +176,14 @@ The `text` field of each section SHALL contain a textual representation of all l
 /////////////////// FINDINGS SECTION //////////////////////////
 * section[findings]
   * ^short = "Findings"
-  * code = $loinc#59776-5 "Procedure findings Narrative"
+  * code = $loinc#59776-5 "Findings"
   * entry MS
     * insert SliceElement( #profile, $this )
   * entry contains 
       finding 0..* MS and
       keyimage 0..* MS
   * entry[finding] only Reference(CZ_ObservationResultImaging)
-//  * entry[keyimage] only Reference(KeyImageDocumentReference or KeyImagesSelection)
+  * entry[keyimage] only Reference(CZ_KeyImageDocumentReference) //or KeyImageImagingSelection
 
 /////////////////// IMPRESSION SECTION //////////////////////////
 * section[impression]
@@ -185,8 +196,8 @@ The `text` field of each section SHALL contain a textual representation of all l
       impression 0..* MS and
       keyimage 0..* MS
   * entry[finding] only Reference(CZ_ObservationResultImaging)
-//  * entry[impression] only Reference(Impression)
-//  * entry[keyimage] only Reference(KeyImageDocumentReference or KeyImagesSelection)
+  * entry[impression] only Reference(CZ_ConditionImage)
+  * entry[keyimage] only Reference(CZ_KeyImageDocumentReference) //or KeyImageImagingSelection
 
 /////////////////// RECOMMENDATION SECTION //////////////////////////
 * section[recommendation]
@@ -198,15 +209,12 @@ The `text` field of each section SHALL contain a textual representation of all l
       CarePlan 0..* MS
   * entry[CarePlan] only Reference(CarePlan)
 
- /////////////////////////////////////// ATTACHMENTS SECTION /////////////////////////////////////////
-// -------------------------------------------------------------
-* section[attachments]
-  * ^short = "Library of attachments"
-  * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
-  * ^extension[0].valueString = "Section"
-  * code = $loinc#77599-9 "Additional documentation"
-  * entry 0..
-  * entry only Reference(CZ_Attachment)
+// /////////////////// COMMUNICATION SECTION //////////////////////////
+* section[communication]
+  * ^short = "Communications"
+// a proper code is needed
+  * code = $loinc#18783-1 "Radiology Study recommendation (narrative)"
+  * extension contains $note-url named note 0..*
 
 Invariant: text-or-section
 Description: "A Composition SHALL have either text, at least one section, or both."

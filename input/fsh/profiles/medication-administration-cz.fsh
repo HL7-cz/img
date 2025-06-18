@@ -13,7 +13,7 @@ Description: "Czech national profile for a medication administration."
 
 * identifier 1..
 * status MS
-* status from $hl7MedicationStatementStatus
+* status from $hl7MedicationAdminStatus
 * medication[x]
 * medication[x] only Reference(CZ_Medication) or CodeableConcept
 * medicationCodeableConcept from DLPLecivePripravkyCzVs (required)

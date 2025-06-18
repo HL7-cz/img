@@ -4,7 +4,7 @@ Title: "Digital Media Category (CZ)"
 Description: "Digital Media Category"
 
 * insert SetFmmandStatusRule ( 0, draft )
-
+* ^experimental = false
 * ^jurisdiction = $iso3166#CZ
 * ^language = #cs-CZ
 * ^identifier.system = "http://terminology.hl7.org/CodeSystem/media-category"

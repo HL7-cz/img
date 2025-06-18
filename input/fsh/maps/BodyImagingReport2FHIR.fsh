@@ -9,7 +9,7 @@ Usage: #definition
 * description = """CZ Imaging Report Body Model to this guide mapping"""
 
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/InformationAboutOrderCz"
-* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-imagingInformationAboutOrder"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-imagingOrderInformation"
 * group[=].element[+].code = #Body.InformationAboutOrder
 * group[=].element[=].display = "A.2.1 and A.2.2 - Information about order"
 * group[=].element[=].target.code = #Composition.section:InformationAboutOrder					
@@ -37,7 +37,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReasonForAdmission"
-* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-imagingInformationAboutOrder"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-imagingOrderInformation"
 * group[=].element[+].code = #ReasonForAdmission
 * group[=].element[=].display = "A.2.2 - Order reason"
 * group[=].element[=].target.code = #CZ_ImagingInformationAboutOrder.reasonCode
@@ -49,7 +49,7 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_ImagingInformationAboutOrder.reasonCode.coding
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/SpecimenInformationCz"
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/SpecimenInformation"
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-specimen"
 * group[=].element[+].code = #Body.SpecimenInformation
 * group[=].element[=].display = "A.2.3 - Speciment information"
@@ -129,7 +129,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-condition-imaging"
+* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-conditionImage"
 * group[=].element[+].code = #Body.ReportOfImagingMethod.reason
 * group[=].element[=].display = "A.2.4.3 - Reason (indication)"
 * group[=].element[=].target.code = #Composition.section:Procedure.reason.ofType(CZ_ConditionImage) 
@@ -337,7 +337,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
-* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-MedicationAdmistration"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-MedicationAdministration"
 * group[=].element[+].code = #Body.ReportOfImagingMethod.Medication
 * group[=].element[=].display = "A.2.4.7 - Medication"
 * group[=].element[=].target.code = #Composition.section:Procedure.used.ofType(CZ_MedicationAdministration)			
@@ -564,7 +564,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/Attachments"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-keyImage-documentReference"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-keyImage-documentReference"
 * group[=].element[+].code = #Attachments
 * group[=].element[=].display = "A.2.6 - Media (attachments)"
 * group[=].element[=].target.code = #Composition.section:findings.entry.ofType(CZ_KeyImageDocumentReference)

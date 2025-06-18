@@ -80,25 +80,23 @@ The `text` field of each section SHALL contain a textual representation of all l
 * date MS
   * ^short = "Date the report was last changed."
 
-* section MS
+* section 1..
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "code"
   * ^slicing.rules = #open
   * ^slicing.ordered = false
-* section.entry MS
-* section.code 1..1 MS  // LOINC code for the section
-* section.title MS
-* section.text MS
+* obeys text-or-section
+
 * section contains 
-    imagingstudy 1..1 MS and 
-    order 1..1 MS and 
+    imagingstudy 1..1 and 
+    order 1..1 and 
     clinicalQuestion 0..* and
-    history 1..1 MS and
-    procedure 1..1 MS and
-    comparison 1..1 MS and
-    findings 1..1 MS and
-    impression 1..1 MS and
-    recommendation 1..1 MS and
+    history 0..1 and
+    procedure 1..1 and
+    comparison 0..1 and
+    findings 1..1 and
+    impression 0..1 and
+    recommendation 0..1 and
     communication 0..1
 
 ///////////////////////////////// IMAGING STUDY SECTION ///////////////////////////////////////
@@ -142,7 +140,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
   * ^extension[0].valueString = "Section"
   * code = $loinc#75328-5	"Prognosis"
-  * entry 1..
+  * entry 0..
   * entry only Reference(CZ_ClinicalQuestion) 
 
   
@@ -176,7 +174,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 /////////////////// FINDINGS SECTION //////////////////////////
 * section[findings]
   * ^short = "Findings"
-  * code = $loinc#59776-5 "Findings"
+  * code = $loinc#59776-5 "Procedure findings Narrative"
   * entry MS
     * insert SliceElement( #profile, $this )
   * entry contains 

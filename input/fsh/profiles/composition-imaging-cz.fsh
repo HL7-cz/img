@@ -139,7 +139,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^definition = "This section holds information about the clinical question that the imaging method is intended to answer."
   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
   * ^extension[0].valueString = "Section"
-  * code = $loinc#75328-5	"Prognosis"
+  * code = $loinc#18785-6	"Radiology Reason for study (narrative)"
   * entry 0..
   * entry only Reference(CZ_ClinicalQuestion) 
 

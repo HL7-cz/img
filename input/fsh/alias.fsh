@@ -6,9 +6,10 @@ Alias: $loinc =  http://loinc.org
 Alias: $iso3166 = urn:iso:std:iso:3166
 Alias: $media-category = http://terminology.hl7.org/CodeSystem/media-category
 
-// --- EU Imaging Report Profiles
-Alias: $BundleEuImagingReport = http://hl7.eu/fhir/imaging/StructureDefinition/im-bundle
-Alias: $CompositionEuImagingReport = http://hl7.eu/fhir/imaging/StructureDefinition/im-composition
+// ValueSet
+Alias: $hl7MedicationAdminStatus = http://hl7.org/fhir/ValueSet/medication-admin-status
+Alias: $hl7-condition-category = http://hl7.org/fhir/ValueSet/condition-category
+Alias: $hl7-clinicalFindings = http://hl7.org/fhir/ValueSet/clinical-findings
 
 // Extensions
 Alias: $event-basedOn = http://hl7.org/fhir/StructureDefinition/event-basedOn
@@ -26,3 +27,4 @@ Alias: $event-basedOn-url                 = http://hl7.org/fhir/StructureDefinit
 Alias: $individual-genderIdentity         = http://hl7.org/fhir/StructureDefinition/individual-genderIdentity
 Alias: $information-recipient-url         = http://hl7.eu/fhir/StructureDefinition/information-recipient
 Alias: $document-reference-thumbnail-url  = http://hl7.org/fhir/StructureDefinition/documentreference-thumbnail
+Alias: $note-url                          = http://hl7.org/fhir/StructureDefinition/note|5.2.0

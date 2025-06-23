@@ -1,0 +1,10 @@
+@startmindmap
+skinparam topurl StructureDefinition-
+
+* [[ImagingReportCz.html Imaging Report]]
+** [[HeaderImagingReportCz.html Imaging Report Header]]
+** [[BodyImagingReportCz.html Imaging Report Body]]
+'** Link to Related Report
+'** Media
+'** Dicom Metadata
+@endmindmap

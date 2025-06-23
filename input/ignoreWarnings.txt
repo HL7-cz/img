@@ -1,0 +1,15 @@
+== Suppressed Messages ==
+# Concept Maps Groups Source and Target  are not Code Systems
+%not fully defined and populated, and no sourceScope is specified, so the source code checking will not be performed%
+%not fully defined and populated, and no targetScope is specified, so the target code checking will not be performed%
+
+# duplicated anchor ids
+The html source has duplicate anchor Ids: 1
+
+# DICOM valuesets do not resolve - that is expected.
+%Canonical URL 'http://dicom.nema.org/medical/dicom/current/output/chtml/part%
+%The link '#DCM%
+The link '??' for "Modality%
+The link '??' for "Laterality%
+The link '??' for "AcquisitionModality%
+The link '??' for "KeyObjectSelectionDocumentTitle%

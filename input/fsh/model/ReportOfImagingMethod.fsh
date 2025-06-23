@@ -18,7 +18,7 @@ Description: """Imaging Report - Imaging Report report of imaging method - A.2.4
 * clinicalQuestion 0..* string "A.2.4.4 - A clinical question" """The clinical question that the imaging method is intended to answer. Example: 'Suspected lung tumor.'"""
 * partOfBody 0..* BackboneElement "A.2.4.5 - Body part" """The body part that is the subject of an examination or procedure. At least one of the Body Part Code or Description elements must be present."""
 * partOfBody.code 0..1 CodeableConcept "A.2.4.5.1 - Body part code" """Body part classification code, location on/in the body.
-- Preferred system(s): SNOMED CT [BodyLacation|LocationICT-O-3]"""
+- Preferred system(s): SNOMED CT [BodyLocation|LocationICT-O-3]"""
 * partOfBody.laterality 0..1 CodeableConcept "A.2.4.5.2 - Laterality of body part" """Sideness, if meaningful. (Location on the side of the body, if needed to distinguish from a similar location on the other side of the body. If laterality is present, body location must also be present.)
 - Preferred system(s): SNOMED CT [Laterality Codelists]"""
 * partOfBody.description 0..1 string "A.2.4.5.3 - Body part description" """Human-readable description of the location on the body."""

@@ -1,0 +1,70 @@
+@startmindmap
+skinparam topurl StructureDefinition-
+
+* [[BodyImagingReportCz.html Imaging Report body]]
+** [[InformationAboutOrder.html Information About the Order]]
+***_ Identifier of request (order)
+***_ Date and time of request
+***_ Identification of the applicant (person)
+***_ Name of the applicant (person)
+***_ Applicant contact details - address
+***_ Applicant (client) organization
+** [[ReasonForAdmision.html Reason for Admission]]
+** [[DICOMMetadata.html DICOM Metadata]]
+** [[SpecimenInformation.html Sample Information]]
+** [[ReportOfImagingMethod.html Report of Imaging Method]]
+***_ Modality type
+***_ Type of imaging method
+***_ Reason (indication)
+***_ A clinical question
+***_ Body part
+***_ Performance (procedure)
+***_ Medication
+***_ Adverse reaction
+***_ Result of the imaging method
+***_ Conclusion
+***_ Recommendation
+***_ Text parts of the document
+** [[LinkToRelatedReport.html Link to Related Report]]
+** [[Attachments.html Media (Attachments)]]
+
+/'***_ Order placer
+***_ Order reason text
+***_ Order reason
+***_ Clinical question
+***_ Supporting information
+****_ Observation
+****_ Condition
+****_ Medication Administration
+****_ Devices
+****_ Pregnancy status
+****_ Gestational age
+****_ Sex for clinical use
+****_ Other supporting information
+** Specimen
+** Service request
+** Exposure information
+***_ Effective dose
+***_ Equivalent dose information
+****_ Equivalent dose
+****_ Tissue type
+** Examination Report
+***_ Modality
+***_ Body part
+****_ Body location
+****_ Laterality
+***_ Imaging procedures
+***_ Medication
+***_ Adverse reaction
+***_ Result data
+****_ Result text
+****_ Observation results
+***_ Conclusion
+****_ Impression
+****_ Condition or finding
+** Recommendation
+***_ Description
+***_ Care plan
+** Comparison Study
+'/
+@endmindmap

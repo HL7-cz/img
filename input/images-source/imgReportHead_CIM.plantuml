@@ -1,0 +1,40 @@
+@startmindmap
+skinparam topurl StructureDefinition-
+
+* [[BodyImagingReportHeaderCz.html Imaging Report Header]]
+** [[SubjectCz.html Imaging Report Subject]]
+/'    Shell we keep or not?
+** Preferred Health Professional
+'/
+** [[PayerCz.html Health Insurance and Payment Information]]
+/' ***_ Health insurance code
+***_ Health insurance name
+***_ Health insurance number '/
+** [[InformationRecipientCz.html Intended Recipient]]
+** [[AttesterCz.html Attestation]]
+***_ Attester
+***_ DateTime
+** [[AuthorCz.html Authorship]]
+***_ Author
+***_ DateTime
+** [[LegalAuthenticator.html Legal Authentication]]
+***_ Legal authenticator
+***_ DateTime
+** [[DocumentMetadataCz.html Document Metadata]]
+***_ Document ID
+***_ Document category
+***_ Document status
+'***_ Period
+***_ Report date and time
+***_ Document title
+'***_ Event type
+'***_ Specialty
+***_ Report custodian
+'***_ Document format
+***_ Confidentiality
+***_ Language
+***_ Version
+***_ Digital Signature
+'***_ Study Instance UID
+'***_ Accession number
+@endmindmap

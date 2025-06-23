@@ -32,7 +32,6 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * . ^definition = "Imaging Report Bundle. \r\nA container for a collection of resources in the inmaging report document."
 * ^language = #cs
 
-* insert ImposeProfile($BundleEuImagingReport, 0)
 * insert SetFmmandStatusRule ( 0, draft )
 
 * obeys dr-comp-subj
@@ -52,11 +51,9 @@ Description: "Clinical document used to represent a Imaging Report for the scope
   * search ..0
   * request ..0
   * response ..0
-* signature ^short = "Digital Signature of this report"
 
 * entry ^slicing.discriminator[0].type = #type
 * entry ^slicing.discriminator[0].path = "resource"
-// * entry ^slicing.ordered = true => changed on 2023-07-19  to be checked
 * entry ^slicing.ordered = false
 * entry ^slicing.rules = #open
 
@@ -67,13 +64,16 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * entry[diagnosticReport].resource only CZ_DiagnosticReport
 
 * entry contains serviceRequest 0..*
-* entry[serviceRequest].resource only CZ_ServiceRequest
+* entry[serviceRequest].resource only CZ_ImagingOrderInformation
 
 * entry contains patient 0..1
 * entry[patient].resource only CZ_PatientCore or CZ_PatientAnimal
 
 * entry contains observation 0..*
 * entry[observation].resource only CZ_ObservationResultImaging
+
+* entry contains clinicalQuestion 0..*
+* entry[clinicalQuestion].resource only CZ_ClinicalQuestion
 
 * entry contains specimen 0..*
 * entry[specimen].resource only CZ_Specimen
@@ -91,16 +91,22 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * entry[device].resource only CZ_DeviceObserver
 
 * entry contains coverage 0..*
-* entry[coverage].resource only Coverage
+* entry[coverage].resource only CZ_Coverage
 
 * entry contains medication 0..*
 * entry[medication].resource only CZ_Medication  
 
 * entry contains condition 0..*
-* entry[condition].resource only Condition
+* entry[condition].resource only CZ_ConditionImage
 
 * entry contains carePlan 0..*
-* entry[carePlan].resource only CarePlan
+* entry[carePlan].resource only CZ_CarePlanImage
 
 * entry contains imagingStudy 0..*
-* entry[imagingStudy].resource only ImagingStudy
+* entry[imagingStudy].resource only CZ_StudyImaging
+
+* signature ^short = "Report Digital Signature"
+  * type ^short = "Digital Signature Purposes"
+  * when ^short = "When was signed"
+  * who ^short = "Who signed."
+  * data ^short = "Signature content"

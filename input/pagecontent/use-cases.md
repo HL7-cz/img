@@ -8,6 +8,9 @@ The aim of this document is to define a standardized informational content and s
 
 ### Actors
 
+#### Originator
+Originator means anyone whose activity the Report (document) was created. A document resulting from the activity of the originator is also considered to be a document that was delivered to the originator or otherwise handed over. The originator can be a natural or legal person.
+
 #### Performer
 A performer is anyone who conducts (has conducted) an instrumental examination, i.e. the recording of an image.
 
@@ -82,7 +85,8 @@ The report is a separate part of the medical documentation regarding the provide
 
 An important requirement is the clear and verified identification of the examination subject.
 
-**Information:** Healthcare information from imaging methods
+**Information:** 
+Healthcare information from imaging methods
 
 **Actors:**
 - Performer

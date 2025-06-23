@@ -11,15 +11,16 @@ Description: "This profile defines how to represent Composition resource in HL7 
 * . ^short = "Imaging Report composition"
 * . ^definition = """
 Imaging Study Report composition.\n
-A composition is a set of healthcare-related information that is assembled together into a single logical document that 
-provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard 
+A composition is a set of healthcare-related information that is assembled together into a single logical document that
+provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard
 to who is making the statement.\n
-While a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, 
+While a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle,
 of which the Composition is the first resource contained.\n
 \n
 The `text` field of each section SHALL contain a textual representation of all listed entries.
 """
 * insert SetFmmandStatusRule ( 0, draft )
+
 
 * meta
   * security 0..* MS
@@ -57,6 +58,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^slicing.discriminator[=].path = "mode"
   * ^slicing.rules = #open
   * ^slicing.ordered = false
+
 * attester contains
     legalAuthenticator 0..* MS and 
     resultValidator 0..* MS
@@ -69,10 +71,11 @@ The `text` field of each section SHALL contain a textual representation of all l
   * mode = #professional
   * party only Reference(CZ_PractitionerRoleCore)
 
+
 // type of the report. Matching DiagnosticReport.code
-// code 
+// code
 //* type 1..
-//* type from CZ_DiagnosticReport (preferred) // valueset to be revised. 
+//* type from CZ_DiagnosticReport (preferred) // valueset to be revised.
 //  * ^short = "Type of Imaging Diagnostic Report"
 //  * ^definition = "Specifies that it refers to a Imaging Report"
 //  * ^comment = "At least one DiagnosticReport.code.coding and Composition.type.coding SHALL be equal"
@@ -85,6 +88,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^slicing.discriminator.path = "code"
   * ^slicing.rules = #open
   * ^slicing.ordered = false
+
 * obeys text-or-section
 
 * section contains 
@@ -98,6 +102,7 @@ The `text` field of each section SHALL contain a textual representation of all l
     impression 0..1 and
     recommendation 0..1 and
     communication 0..1
+
 
 ///////////////////////////////// IMAGING STUDY SECTION ///////////////////////////////////////
 * section[imagingstudy]
@@ -116,10 +121,12 @@ The `text` field of each section SHALL contain a textual representation of all l
     * ^definition = "This entry holds a reference to the Imaging Study instance that is associated with this Composition."
   * entry[imagingstudy] only Reference(CZ_StudyImaging)  
 
+
 ///////////////////////////////// ORDER SECTION ///////////////////////////////////////
 * section[order]
   * ^short = "Order"
   * ^definition = "This section holds information related to the order for the imaging study."
+
   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
   * ^extension[0].valueString = "Section"
   * code = $loinc#55115-0 "Requested imaging studies information Document"
@@ -127,6 +134,7 @@ The `text` field of each section SHALL contain a textual representation of all l
     * insert SliceElement( #profile, $this )
   * entry contains 
       order 0..*
+
 
   * entry[order]
     * ^short = "Order reference"
@@ -143,7 +151,6 @@ The `text` field of each section SHALL contain a textual representation of all l
   * entry 0..
   * entry only Reference(CZ_ClinicalQuestion) 
 
-  
 ///////////////////////////////// HISTORY SECTION ///////////////////////////////////////
 * section[history]
   * ^short = "History"
@@ -159,7 +166,6 @@ The `text` field of each section SHALL contain a textual representation of all l
   * entry contains 
       procedure 0..*
   * entry[procedure] only Reference(CZ_ProcedureImaging)
-
 
 ////////////////// COMPARISON SECTION //////////////////////////
 * section[comparison]
@@ -177,7 +183,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * code = $loinc#59776-5 "Procedure findings Narrative"
   * entry MS
     * insert SliceElement( #profile, $this )
-  * entry contains 
+  * entry contains
       finding 0..* MS and
       keyimage 0..* MS
   * entry[finding] only Reference(CZ_ObservationResultImaging)
@@ -189,7 +195,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * code = $loinc#19005-8 "Radiology Imaging study [Impression] (narrative)"
   * entry MS
     * insert SliceElement( #profile, $this )
-  * entry contains 
+  * entry contains
       finding 0..* MS and
       impression 0..* MS and
       keyimage 0..* MS
@@ -203,7 +209,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * code = $loinc#18783-1 "Radiology Study recommendation (narrative)"
   * entry MS
     * insert SliceElement( #profile, $this )
-  * entry contains 
+  * entry contains
       CarePlan 0..* MS
   * entry[CarePlan] only Reference(CarePlan)
 

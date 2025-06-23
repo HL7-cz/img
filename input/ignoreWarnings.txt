@@ -13,3 +13,7 @@ The link '??' for "Modality%
 The link '??' for "Laterality%
 The link '??' for "AcquisitionModality%
 The link '??' for "KeyObjectSelectionDocumentTitle%
+
+# Remove warnings related to R5 use of R4 packages
+%based on FHIR version 4.0.1. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try
+

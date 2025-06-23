@@ -23,16 +23,16 @@ When the resource represents a DICOM instance it SHALL contain a the SOP Instanc
   * system = "urn:ietf:rfc:3986"
   * value 1..1
 
-// nasledujici kod jde az od R5
-/** basedOn
-  * ^slicing.discriminator.type = #type
-  * ^slicing.discriminator.path = "$this"
-  * ^slicing.rules = #open
-  * ^slicing.ordered = false
-* basedOn contains orderaccession 0..1
-* basedOn[orderaccession] only Reference( CZ_ImagingOrderInformation )
+* extension contains
+  $cvDocumentReference-basedOn named basedOn 0..1
+  and ModalityCz named modality 1..1
+* extension
+  * ^slicing.discriminator[1].type = #value
+  * ^slicing.discriminator[=].path = "value"
+* extension[basedOn] contains imorderaccession 0..1
+* extension[basedOn][imorderaccession].value[x] only Reference(CZ_ImagingOrderInformation)
   * identifier 1..1
-  * identifier only CZ_AccessionNumberIdentifier */
+  * identifier only CZ_AccessionNumberIdentifier
 
 * category 1..*
   * insert SliceElement( #profile, $this )
@@ -42,8 +42,6 @@ When the resource represents a DICOM instance it SHALL contain a the SOP Instanc
     insert SliceElement( #value, $this )
   * coding contains keyimagecode 1..1
   * coding[keyimagecode] = $loinc#55113-5 "Key images Document Radiology"
-
-//* modality 1..1 nelze v R4
   
 * subject 1..1
 * subject only Reference(CZ_PatientCore or CZ_PatientAnimal)

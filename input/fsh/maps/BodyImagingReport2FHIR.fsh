@@ -627,7 +627,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Attachments.modality
 * group[=].element[=].display = "A.2.6.12 - Modality"
-* group[=].element[=].target.code = #CZ_KeyImageDocumentReference.modality				
+* group[=].element[=].target.code = #CZ_KeyImageDocumentReference.extension[modality]				
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Attachments.device
@@ -692,16 +692,11 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_StudyImaging.performer.actor.ofType(CZ_OrganizationCore).name
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
-* group[=].element[+].code = #DICOMMetadata.radiopharmaceuticalInfoSeq
-* group[=].element[=].display = "A.2.7.10 - Radiopharmaceutical Information Sequence"
-* group[=].element[=].target.code = #CZ_StudyImaging.
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #DICOMMetadata.series
 * group[=].element[=].display = "A.2.7.11 - RT Series information"
-* group[=].element[=].target.code = #CZ_StudyImaging
+* group[=].element[=].target.code = #CZ_StudyImaging.series
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent	
+* group[=].element[=].target.equivalence = #relatedto	
 * group[=].element[+].code = #DICOMMetadata.series.seriesNumber
 * group[=].element[=].display = "A.2.7.11.1 - Series Number"
 * group[=].element[=].target.code = #CZ_StudyImaging.series.number
@@ -715,11 +710,6 @@ Usage: #definition
 * group[=].element[+].code = #DICOMMetadata.studyDescription
 * group[=].element[=].display = "A.2.7.12 - Study Description"
 * group[=].element[=].target.code = #CZ_StudyImaging.description
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent	
-* group[=].element[+].code = #DICOMMetadata.studyPhase
-* group[=].element[=].display = "A.2.7.13 - Study Phase"
-* group[=].element[=].target.code = #CZ_StudyImaging
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #DICOMMetadata.studyReason
@@ -757,4 +747,17 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_StudyImaging.started
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/DICOMMetadata"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-radiationDoseObservation"
+* group[=].element[+].code = #DICOMMetadata
+* group[=].element[=].display = "A.2.7.10 - Radiopharmaceutical Information Sequence - DICOM tag (0054,0016)"
+* group[=].element[=].target.code = #Composition.section:imagingstudy.entry.ofType(CZ_RadiationDoseObservation)
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/DICOMMetadata"	
+* group[=].element[+].code = #DICOMMetadata.studyPhase
+* group[=].element[=].display = "A.2.7.13 - Study Phase"
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+
 	

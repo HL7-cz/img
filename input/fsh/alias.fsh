@@ -5,6 +5,8 @@ Alias: $orpha = https://www.orpha.net
 Alias: $loinc =  http://loinc.org
 Alias: $iso3166 = urn:iso:std:iso:3166
 Alias: $media-category = http://terminology.hl7.org/CodeSystem/media-category
+Alias: $dcm = http://dicom.nema.org/resources/ontology/DCM
+Alias: $ucum = http://unitsofmeasure.org
 
 // ValueSet
 Alias: $hl7MedicationAdminStatus = http://hl7.org/fhir/ValueSet/medication-admin-status
@@ -28,3 +30,5 @@ Alias: $individual-genderIdentity         = http://hl7.org/fhir/StructureDefinit
 Alias: $information-recipient-url         = http://hl7.eu/fhir/StructureDefinition/information-recipient
 Alias: $document-reference-thumbnail-url  = http://hl7.org/fhir/StructureDefinition/documentreference-thumbnail
 Alias: $note-url                          = http://hl7.org/fhir/StructureDefinition/note|5.2.0
+Alias: $cvDocumentReference-basedOn       = http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.basedOn
+Alias: $cvImagingSelection                = http://hl7.org/fhir/5.0/StructureDefinition/extension-ImagingSelection

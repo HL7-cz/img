@@ -1,9 +1,9 @@
 @startuml
-"Tvůrce obrazové zprávy" as creator
-"Uložiště obrazové zprávy" as repos
-"Spotřebitel obrazové zprávy" as consumer
-"Vytvoření obrazové zprávy" as (create)
-"Použití obrazové zprávy" as (use)
+"Tvůrce zprávy ze zobrazovacích metod" as creator
+"Uložiště zprávy ze zobrazovacích metod" as repos
+"Spotřebitel zprávy ze zobrazovacích metod" as consumer
+"Vytvoření zprávy ze zobrazovacích metod" as (create)
+"Použití zprávy ze zobrazovacích metod" as (use)
 
 "Uzavření/uložení zprávy" as (save)
 "Vyhledání/Získání zprávy" as (receive)

@@ -1,9 +1,9 @@
-## Účel
+### Účel
 
 Účelem dokumentu je vytvoření národní, funkční a technické specifikace pro výměnu výsledků zobrazovacích vyšetření. Současně musí navržený standard zaručovat základní kompatibilitu s obdobnými standardy, které vznikají v rámci evropského projektu X-eHealth a dalšími podobnými projekty. Koncept funkční specifikace proto vychází z evropské specifikace výsledků zobrazovacích vyšetření přijaté Evropskou sítí elektronického zdravotnictví (eHN) a v rámci cílů tohoto projektu je prováděna jeho adaptace na podmínky českého zdravotnictví tak, aby bylo možné jeho praktické použití v České republice.
 Dokument se zaměřuje zejména na oblast sémantické interoperability, ale zpracovává také některé legální, regulační a organizační aspekty, které jsou pro výměnu dat v rámci domény diagnostických zobrazovacích metod důležité.
 
-## Rozsah
+### Rozsah
 
 Tento dokument se zaměřuje na aspekty interoperability výsledků zobrazovacích metod vyšetření, typicky radiologických vyšetření či vyšetření nukleární medicíny, ale i vyšetření prováděná klinickými lékaři, jako je například gynekologický ultrazvuk. Typické pro zobrazovací metody vyšetření je pořizování obrazového záznamu, v současné době především v digitální podobě, které jsou posuzovány zdravotnickými pracovníky se specializací na tyto vyšetřovací metody. Zpráva ze zobrazovacích metod obsahuje informace o vlastním vyšetření a jeho výsledu v písemné podobě a je součástí zdravotnické dokumentace. Zpráva se uchovává jako součást zdravotnické dokumentace pacienta vedené poskytovatelem a je také předána nebo zpřístupněna lékaři, který provedení výkonu indikoval a pacientovi, pokud se nejedná o výkon prováděný v rámci hospitalizační péče. 
 
@@ -20,7 +20,7 @@ Dokument se zaměřuje na:
 
 Funkční specifikace je aplikovatelná na případy nemocniční péče, specializované ambulantní péče a praktického lékařství i urgentní péče.
 
-### Zahrnuté oblasti
+#### Zahrnuté oblasti
 
 Dokument se zaměřuje na standardizaci obsahu strukturovaného elektronického záznamu ze zobrazovacích metod (radiologické metody, metody nukleární medicíny, ultrazvukové metody apod.) a metadat, na aspekty interoperability a strojového zpracování, ale také na rozšíření údajů, např. reference na související záznamy, vybrané DICOM údaje z obrazových studiích, další přílohy apod. Dokument se zaměřuje také na aspekty související s výměnou a sdílením těchto zpráv za pomoci informačních technologií.
 
@@ -31,13 +31,13 @@ Dokument se zaměřuje na standardizaci obsahu strukturovaného elektronického 
 <p> </p>
 </div>
  
-### Nezahrnuté oblasti
+#### Nezahrnuté oblasti
 
 Dokument nezahrnuje oblast obrazové dokumentace v podobě digitálních obrazových záznamů (studií) z přístrojů. Tyto obrazové studie jsou vytvářeny, zpracovávány, uchovávány i přenášeny ve standardizovaných formátech a pomocí komunikačních protokolů mezinárodního standardu DICOM. Pro přenos, resp. sdílení mezi poskytovateli zdravotních služeb jsou v současné době k dispozici v ČR dvě výměnné sítě (ePACS a ReDiMed) založené na DICOM standardu.
 
-## Obsah
+### Obsah
 
-### Informační modely
+#### Informační modely
 
 ##### Koncepční pohled
 

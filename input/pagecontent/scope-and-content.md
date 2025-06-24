@@ -24,6 +24,7 @@ The functional specification is applicable to cases of hospital care, specialize
 ### Solution areas
 
 #### Areas covered
+
 The document focuses on standardizing the content of structured electronic records of imaging methods (radiological methods, nuclear medicine methods, ultrasound methods, etc.) and metadata, on interoperability and machine processing aspects, but also on data extensions, e.g. references to related records, selected DICOM data from imaging studies, additional annexes, etc. The document also focuses on aspects related to the exchange and sharing of these messages using information technology.
 
 <div>
@@ -35,3 +36,29 @@ The document focuses on standardizing the content of structured electronic recor
 #### Areas not covered
 
 The document does not cover the area of ​​image documentation in the form of digital image records (studies) from devices. These image studies are created, processed, stored and transmitted in standardized formats and using communication protocols of the international DICOM standard. For transmission or sharing between healthcare providers, two exchange networks (ePACS and ReDiMed) based on the DICOM standard are currently available in the Czech Republic.
+
+### Content
+
+### Information Models
+
+#### Conceptual view
+
+Imaging result report could be divided into several parts: document header, body, presented form in PDF and optionally it could also have various attachments.
+
+##### Imaging Result Report
+
+<figure>
+  {% include imgReport_CIM.svg %}
+</figure>
+
+##### Imaging Result header
+
+<figure>
+  {% include imgReportHead_CIM.svg %}
+</figure>
+
+##### Imaging Result body
+
+<figure>
+  {% include imgReportBody_CIM.svg %}
+</figure>

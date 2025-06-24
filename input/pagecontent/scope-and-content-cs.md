@@ -23,6 +23,7 @@ Funkční specifikace je aplikovatelná na případy nemocniční péče, specia
 ### Oblasti řešení
 
 #### Zahrnuté oblasti
+
 Dokument se zaměřuje na standardizaci obsahu strukturovaného elektronického záznamu ze zobrazovacích metod (radiologické metody, metody nukleární medicíny, ultrazvukové metody apod.) a metadat, na aspekty interoperability a strojového zpracování, ale také na rozšíření údajů, např. reference na související záznamy, vybrané DICOM údaje z obrazových studiích, další přílohy apod. Dokument se zaměřuje také na aspekty související s výměnou a sdílením těchto zpráv za pomoci informačních technologií.
 
 <div>
@@ -34,3 +35,29 @@ Dokument se zaměřuje na standardizaci obsahu strukturovaného elektronického 
 #### Nezahrnuté oblasti
 
 Dokument nezahrnuje oblast obrazové dokumentace v podobě digitálních obrazových záznamů (studií) z přístrojů. Tyto obrazové studie jsou vytvářeny, zpracovávány, uchovávány i přenášeny ve standardizovaných formátech a pomocí komunikačních protokolů mezinárodního standardu DICOM. Pro přenos, resp. sdílení mezi poskytovateli zdravotních služeb jsou v současné době k dispozici v ČR dvě výměnné sítě (ePACS a ReDiMed) založené na DICOM standardu.
+
+### Obsah
+
+### Informační modely
+
+#### Koncepční pohled
+
+Zpráva o výsledku zobrazování by mohla být rozdělena do několika částí: záhlaví dokumentu, tělo (obsah), vizuální podobu dokumentu v PDF a volitelně může obsahovat i různé přílohy.
+
+##### Zpráva ze zobrazovacích metod
+
+<figure>
+  {% include imgReport_CIM-cs.svg %}
+</figure>
+
+##### Hlavička dokumentu
+
+<figure>
+  {% include imgReportHead_CIM-cs.svg %}
+</figure>
+
+##### Tělo dokumentu
+
+<figure>
+  {% include imgReportBody_CIM-cs.svg %}
+</figure>

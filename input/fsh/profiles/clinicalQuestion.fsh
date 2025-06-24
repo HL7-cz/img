@@ -1,8 +1,8 @@
 Profile: CZ_ClinicalQuestion
 Parent: Condition
 Id: cz-clinicalQuestion
-Title: "Clinical question: Imaging Order (CZ)"
-Description: "Clinical question for Imaging Order for the scope of the Czech national interoperability project."
+Title: "Clinical question: Imaging Report (CZ)"
+Description: "Clinical question for Imaging Report for the scope of the Czech national interoperability project."
 
 * identifier
 * subject

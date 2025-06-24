@@ -1,0 +1,61 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logický model |
+| <#TECHNOLOGY>  Profil |
+endlegend
+class "Tělo zprávy ze zobrazovacích metod" <<LogicalModel>> [[StructureDefinition-BodyImageOrderCz.html]]
+note top #EEEEAE [[ConceptMap-BodyImagingOrder2FHIR-cz.html]]
+Concept Mapa
+endnote
+
+class "cz-composition-imaging" <<Profile>> [[StructureDefinition-cz-composition-imaging.html]]
+class "cz-imagingOrderInformation" <<Profile>> [[StructureDefinition-cz-imagingOrderInformation.html]]
+class "cz-conditionImage" <<Profile>> [[StructureDefinition-cz-conditionImage.html]]
+class "cz-study-imaging" <<Profile>> [[StructureDefinition-cz-study-imaging.html]]
+class "cz-clinicalQuestion" <<Profile>> [[StructureDefinition-cz-clinicalQuestion.html]]
+class "cz-procedure-imaging" <<Profile>> [[StructureDefinition-cz-procedure-imaging.html]]
+class "cz-diagnostic-report" <<Profile>> [[StructureDefinition-cz-diagnostic-report.html]]
+class "cz-keyImage-documentReference" <<Profile>> [[StructureDefinition-cz-keyImage-documentReference.html]]
+class "cz-radiationDoseObservation" <<Profile>> [[StructureDefinition-cz-radiationDoseObservation.html]]
+class "cz-specimen" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-specimen.html]]
+class "cz-MedicationAdministration" <<Profile>> [[StructureDefinition-cz-MedicationAdministration.html]]
+class "cz-allergyIntolerance" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-allergyIntolerance.html]]
+class "cz-carePlanImage" <<Profile>> [[StructureDefinition-cz-carePlanImage.html]]
+
+"Tělo zprávy ze zobrazovacích metod" <|. "cz-imagingOrderInformation"
+"Tělo zprávy ze zobrazovacích metod" <|. "cz-composition-imaging"
+"Tělo zprávy ze zobrazovacích metod" <|. "cz-study-imaging"
+"Tělo zprávy ze zobrazovacích metod" <|. "cz-clinicalQuestion"
+"Tělo zprávy ze zobrazovacích metod" <|. "cz-procedure-imaging"
+"Tělo zprávy ze zobrazovacích metod" <|. "cz-diagnostic-report"
+"Tělo zprávy ze zobrazovacích metod" <|. "cz-keyImage-documentReference"
+"Tělo zprávy ze zobrazovacích metod" <|. "cz-radiationDoseObservation"
+"Tělo zprávy ze zobrazovacích metod" <|. "cz-conditionImage"
+"Tělo zprávy ze zobrazovacích metod" <|. "cz-specimen"
+"Tělo zprávy ze zobrazovacích metod" <|. "cz-MedicationAdministration"
+"Tělo zprávy ze zobrazovacích metod" <|. "cz-allergyIntolerance"
+"Tělo zprávy ze zobrazovacích metod" <|. "cz-carePlanImage"
+
+"cz-imagingOrderInformation" -d[hidden]-> "cz-composition-imaging"
+"cz-composition-imaging" -d[hidden]-> "cz-study-imaging"
+"cz-study-imaging" -d[hidden]-> "cz-clinicalQuestion"
+"cz-clinicalQuestion" -d[hidden]-> "cz-diagnostic-report"
+"cz-diagnostic-report" -d[hidden]-> "cz-keyImage-documentReference"
+"cz-keyImage-documentReference" -d[hidden]-> "cz-radiationDoseObservation"
+"cz-radiationDoseObservation" -d[hidden]-> "cz-procedure-imaging"
+"cz-procedure-imaging" -d[hidden]-> "cz-conditionImage"
+"cz-conditionImage" -d[hidden]-> "cz-specimen"
+"cz-specimen" -d[hidden]-> "cz-MedicationAdministration"
+"cz-MedicationAdministration" -d[hidden]-> "cz-allergyIntolerance"
+"cz-allergyIntolerance" -d[hidden]-> "cz-carePlanImage"
+
+@enduml

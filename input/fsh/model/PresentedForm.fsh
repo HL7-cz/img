@@ -1,7 +1,7 @@
 Logical: PresentedFormCz
 Id: PresentedFormCz
 Title: "A.3 - Presented form"
-Description: """Presented form - Entire order as issued. Various formats could be provided,  pdf format is recommended."""
+Description: """Presented form - Entire report as issued. Various formats could be provided, pdf format is recommended."""
 
 * presentedForm 1..* Base "A.3 - Presented form" """Presented form of document"""
 * presentedForm.contentType 0..1 CodeableConcept "A.3.1 Type of content" """Type of content - MIME type is required"""

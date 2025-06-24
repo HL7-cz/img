@@ -1,8 +1,8 @@
 Profile: CZ_ConditionImage
 Parent: Condition
 Id: cz-conditionImage
-Title: "Condition: Imaging Order (CZ)"
-Description: "Condition for Imaging Order for the scope of the Czech national interoperability project."
+Title: "Condition: Imaging Report (CZ)"
+Description: "Condition for Imaging Report for the scope of the Czech national interoperability project."
 
 * identifier
 * subject

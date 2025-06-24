@@ -5,6 +5,27 @@
 </blockquote>
 </div>
 
-### Overview
+### Overview 
 
-This page will include an overview of all obligations.
+Obligations are a mean offered by HL7 FHIR to specify functional capabilities that defined actors MAY, SHOULD or SHALL to the data elements specified by the profiles.
+
+This page describes also the actors that have been defined for specifying the obligations.
+
+### Actors
+
+{% include fsh-link-references.md %}
+
+Three actors have been specified:
+* the [Creator](ActorDefinition-actor-creator-img.html) ;
+* the [Repository](ActorDefinition-actor-repos-img.html) ; and 
+* the [Consumer](ActorDefinition-actor-consumer-img.html)
+
+The first is the actor creating the report. This report can be send to a consumer or to a repository for report storage and sharing. 
+The second actor is the system maintaining a copy of the report received, to store and make it available for the consumers.
+The last actor is the system using the report received or retrieved.
+
+<p>{% include imgReport_Actors.svg %}</p>
+
+### Obligations List
+
+1. Patient Obligations ([CZ_PatientObligationsImg](StructureDefinition-cz-patient-obl-img.html))

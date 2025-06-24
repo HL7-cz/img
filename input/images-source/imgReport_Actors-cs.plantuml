@@ -1,0 +1,17 @@
+@startuml
+"Tvůrce obrazové zprávy" as creator
+"Uložiště obrazové zprávy" as repos
+"Spotřebitel obrazové zprávy" as consumer
+"Vytvoření obrazové zprávy" as (create)
+"Použití obrazové zprávy" as (use)
+
+"Uzavření/uložení zprávy" as (save)
+"Vyhledání/Získání zprávy" as (receive)
+
+creator --> (create)
+creator --> (save)
+consumer --> (use)
+consumer --> (receive)
+repos --> (save)
+repos --> (receive)
+@enduml

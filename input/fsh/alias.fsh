@@ -38,3 +38,10 @@ Alias: $information-recipient-url         = http://hl7.eu/fhir/StructureDefiniti
 Alias: $document-reference-thumbnail-url  = http://hl7.org/fhir/StructureDefinition/documentreference-thumbnail
 Alias: $note-url                          = http://hl7.org/fhir/StructureDefinition/note|5.2.0
 Alias: $cvDocumentReference-basedOn       = http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.basedOn
+Alias: $obligation = http://hl7.org/fhir/StructureDefinition/obligation
+
+// Actor Canonical
+
+Alias: $server = http://hl7.cz/fhir/img/actor-repos-img
+Alias: $creator = http://hl7.cz/fhir/img/actor-creator-img
+Alias: $consumer = http://hl7.cz/fhir/img/actor-consumer-img

@@ -112,7 +112,7 @@ pages:
   use-cases.md:
     title: Use cases
   use-cases-cs.md:
-    title: Příklady užití
+    title: Případy užití
   workflow.md:
     title: Workflow  
   workflow-cs.md:
@@ -314,7 +314,16 @@ menu:
 #     resources:
 #     - StructureDefinition/bark-control
 #     - StructureDefinition/bee-sting
-#
+groups:
+  obligations:
+    name:  Actors and Obligations (Informative)
+    description: Actors and Obligations used to describe the Imaging Report functional requirements for the specified data elements. Informative for this version of the guide.
+    resources:
+      - ActorDefinition/actor-consumer-img
+      - ActorDefinition/actor-creator-img
+      - ActorDefinition/actor-repos-img
+      - StructureDefinition/cz-patient-obl-img
+
 #
 # The ImplementationGuide resource defines several other properties
 # not represented above. These properties can be used as-is and

@@ -7,11 +7,18 @@ Alias: $iso3166 = urn:iso:std:iso:3166
 Alias: $media-category = http://terminology.hl7.org/CodeSystem/media-category
 Alias: $dcm = http://dicom.nema.org/resources/ontology/DCM
 Alias: $ucum = http://unitsofmeasure.org
+Alias: $mkn-10 = https://mkn10.uzis.cz
+Alias: $hl7-condition-category-cs =  http://terminology.hl7.org/CodeSystem/condition-category
 
 // ValueSet
 Alias: $hl7MedicationAdminStatus = http://hl7.org/fhir/ValueSet/medication-admin-status
 Alias: $hl7-condition-category = http://hl7.org/fhir/ValueSet/condition-category
 Alias: $hl7-clinicalFindings = http://hl7.org/fhir/ValueSet/clinical-findings
+Alias: $sct-condition-code = http://hl7.org/fhir/ValueSet/condition-code
+Alias: $hl7-condition-category = http://hl7.org/fhir/ValueSet/condition-category
+Alias: $mkn-10-problem-list = https://terminology.ncez.mzcr.cz/ValueSet/mkn-10
+Alias: $sct-device-type = http://hl7.org/fhir/ValueSet/device-type
+Alias: $sctBodySite = http://hl7.org/fhir/ValueSet/body-site
 
 // Extensions
 Alias: $event-basedOn = http://hl7.org/fhir/StructureDefinition/event-basedOn
@@ -31,4 +38,3 @@ Alias: $information-recipient-url         = http://hl7.eu/fhir/StructureDefiniti
 Alias: $document-reference-thumbnail-url  = http://hl7.org/fhir/StructureDefinition/documentreference-thumbnail
 Alias: $note-url                          = http://hl7.org/fhir/StructureDefinition/note|5.2.0
 Alias: $cvDocumentReference-basedOn       = http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.basedOn
-Alias: $cvImagingSelection                = http://hl7.org/fhir/5.0/StructureDefinition/extension-ImagingSelection

@@ -44,16 +44,16 @@ Description: """Imaging Report - Imaging Report report of imaging method - A.2.4
 * procedure.comment.author 0..1 string "A.2.4.6.9.1 - Author of the comment" """Author of the comment."""
 * procedure.comment.text 1..* string "A.2.4.6.9.2 - Text of the comment" """Plain or formatted text content of the comment."""
 * procedure.comment.dateTime 0..1 dateTime "A.2.4.6.9.3 - Date and time of the comment" """When the comment was written. This element must be included if the information cannot be inferred from the context (e.g. from visit information, etc.)."""
-* procedure.usedMedicalDevice 0..* BackboneElement "A.2.4.6.10 - Used medical device" """A medical device used during a procedure."""
-* procedure.usedMedicalDevice.name 0..1 string "A.2.4.6.10.1 - Name of medical device" """The brand name of the device or software."""
-* procedure.usedMedicalDevice.model 0..1 string "A.2.4.6.10.2 - Medical device model" """Device model or software version."""
-* procedure.usedMedicalDevice.identifier 0..* Identifier "A.2.4.6.10.3 - Medical device ID" """Unique identifiers assigned to a device by the manufacturer, other organization, or owner, such as a serial number. A commonly used coding system is the GTIN."""
-* procedure.usedMedicalDevice.type 0..1 CodeableConcept "A.2.4.6.10.4 - Type of medical device" """Product type code.
+* procedure.usedDevice 0..* BackboneElement "A.2.4.6.10 - Used medical device" """A medical device used during a procedure."""
+* procedure.usedDevice.name 0..1 string "A.2.4.6.10.1 - Name of medical device" """The brand name of the device or software."""
+* procedure.usedDevice.model 0..1 string "A.2.4.6.10.2 - Medical device model" """Device model or software version."""
+* procedure.usedDevice.iden 0..* Identifier "A.2.4.6.10.3 - Medical device ID" """Unique identifiers assigned to a device by the manufacturer, other organization, or owner, such as a serial number. A commonly used coding system is the GTIN."""
+* procedure.usedDevice.type 0..1 CodeableConcept "A.2.4.6.10.4 - Type of medical device" """Product type code.
 - Preferred system(s): SNOMED CT 
 - Preferred system(s): EMDN"""
-* procedure.usedMedicalDevice.description 0..1 string "A.2.4.6.10.5 - Description of the medical device" """Additional text description/specification of the device."""
-* procedure.usedMedicalDevice.manufacturer 0..1 string "A.2.4.6.10.6 - Manufacturer of medical device" """The name of the device or software manufacturer."""
-* procedure.usedMedicalDevice.UDI 0..1 Identifier "A.2.4.6.10.7 - UDI of the medical device" """UDI of the medical device placed on the label or packaging of the device."""
+* procedure.usedDevice.description 0..1 string "A.2.4.6.10.5 - Description of the medical device" """Additional text description/specification of the device."""
+* procedure.usedDevice.manufacturer 0..1 string "A.2.4.6.10.6 - Manufacturer of medical device" """The name of the device or software manufacturer."""
+* procedure.usedDevice.udi 0..1 Identifier "A.2.4.6.10.7 - UDI of the medical device" """UDI of the medical device placed on the label or packaging of the device."""
 * procedure.category 0..* CodeableConcept "A.2.4.6.11 - Performance category (procedures)" """The method or technique that was used to perform the procedure, e.g., access, irrigation, pressure, etc.
 - Preferred system(s): SNOMED CT [ProcedureCategoryCodelist]"""
 * procedure.code 1..1 CodeableConcept "A.2.4.6.12 - Performance (procedure)" """Code, or possibly name of the procedure.

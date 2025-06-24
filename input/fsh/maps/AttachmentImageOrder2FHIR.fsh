@@ -1,7 +1,7 @@
 Instance: AttachmentImagingOrder2FHIR-cz
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "https://hl7.cz/fhir/img-order/ConceptMap/AttachmentImagingOrder2FHIR-cz"
+* url = "https://hl7.cz/fhir/img/ConceptMap/AttachmentImagingOrder2FHIR-cz"
 * name = "AttachmentImagingOrder2FHIRcz"
 * title = "CZ Attachment Model to this guide Map"
 * status = #draft
@@ -9,7 +9,7 @@ Usage: #definition
 * description = """CZ Imaging Order Attachment Model to this guide mapping"""
 
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/PresentedFormCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-attachment"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-attachment"
 * group[=].element[+].code = #PresentedForm
 * group[=].element[=].display = "A.3 - Presented Form"
 * group[=].element[=].target.code = #Media.content
@@ -47,7 +47,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent	
 
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/AttachmentsCz"
-* group[=].target = "https://hl7.cz/fhir/img-order/StructureDefinition/cz-attachment"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-attachment"
 * group[=].element[+].code = #Attachments
 * group[=].element[=].display = "A.4 - Attachments"
 * group[=].element[=].target.code = #Attachments.content

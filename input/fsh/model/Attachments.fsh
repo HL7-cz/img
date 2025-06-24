@@ -1,5 +1,5 @@
 Logical: AttachmentsCz
-Id: Attachments
+Id: AttachmentsCz
 Title: "A.4 - Additional attachments"
 Description: """Imaging Report - Imaging Report additional attachments - A.4"""
 

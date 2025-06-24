@@ -17,3 +17,13 @@ The link '??' for "KeyObjectSelectionDocumentTitle%
 # Remove warnings related to R5 use of R4 packages
 %based on FHIR version 4.0.1. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try
 
+# A definition for CodeSystem 'url' could not be found
+A definition for CodeSystem 'http://snomed.info/sct' could not be found, so the code cannot be validated
+A definition for CodeSystem 'https://www.dastacr.cz/dasta/hypertext/DSBFV.htm' could not be found, so the code cannot be validated
+A definition for CodeSystem 'https://mkn10.uzis.cz' could not be found, so the code cannot be validated
+
+# URL does not resolve
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/rid'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/rcis'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/kp'
+No definition could be found for URL value 'http://hospital.cz/nis'

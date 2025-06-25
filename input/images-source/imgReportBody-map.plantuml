@@ -12,7 +12,7 @@ legend right
 | <#APPLICATION>  Logical Model |
 | <#TECHNOLOGY>  Profile |
 endlegend
-class "Imaging Report Body" <<LogicalModel>> [[StructureDefinition-BodyImageReportCz.html]]
+class "Imaging Report Body" <<LogicalModel>> [[StructureDefinition-BodyImagingReportCz.html]]
 note top #EEEEAE [[ConceptMap-BodyImagingReport2FHIR-cz.html]]
 Concept Map
 endnote

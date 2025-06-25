@@ -7,7 +7,7 @@
 
 ### Přehled
 
-Povinnosti(Obligations) jsou prostředkem, kterým se v  HL7 FHIR specifikuje schopnosti, které definovaní aktéři MOHOU, MĚLI BY nebo MUSÍ mít implementovány specifikovanými profily.
+Povinnosti (Obligations) jsou prostředkem, kterým se v  HL7 FHIR specifikuje schopnosti, které definovaní aktéři MOHOU (MAY), MĚLI BY (SHOULD) nebo MUSÍ (SHALL) mít implementovány specifikovanými profily.
 
 Tato stránka také popisuje aktéry, kteří byli definováni pro specifikaci povinností.
 
@@ -15,16 +15,15 @@ Tato stránka také popisuje aktéry, kteří byli definováni pro specifikaci p
 
 {% include fsh-link-references.md %}
 
-Byli specifikováni tři aktéři:
-* [Tvůrce](ActorDefinition-actor-creator-img.html);
-* [Úložiště](ActorDefinition-actor-repos-img.html); a
-* [Spotřebitel](ActorDefinition-actor-consumer-img.html)
+Byli specifikováni aktéři ve těchto rolích:
 
-Prvním je akter, který vytváří zprávu. Tuto zprávu lze odeslat spotřebiteli nebo do úložiště pro uložení a sdílení zpráv.
-Druhým aktérem je systém, který uchovává kopii přijaté zprávy, aby ji uložil a zpřístupnil spotřebitelům.
-Posledním aktérem je systém, který přijatou nebo načtenou zprávu používá.
+| Role                                                 | Popis                                                                                                                      |
+| ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| [Tvůrce](ActorDefinition-actor-creator-img.html)     | Prvním je aktér, který vytváří zprávu. Tuto zprávu lze odeslat konzumentovi nebo do úložiště pro ukládání a sdílení zpráv. |
+| [Úložiště](ActorDefinition-actor-repos-img.html)     | Druhým aktérem je systém, který uchovává kopii přijaté zprávy, aby ji uložil a zpřístupnil spotřebitelům.                  |
+| [Konzument](ActorDefinition-actor-consumer-img.html) | Posledním aktérem je systém, který přijatou nebo načtenou zprávu používá.                                                  |
 
-<p>{% include imgReport_Actors-cs.svg %}<p>
+<p>{% include imgReport_Actors-cs.svg %}</p>
 
 ### Seznam povinností
 

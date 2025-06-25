@@ -1,4 +1,4 @@
-Následuje seznam použitých kódovacích systémů a číselníků:
+Seznam použitých kódovacích systémů a číselníků:
 
 ### MKN-10 / Orphacode
 

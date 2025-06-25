@@ -26,7 +26,7 @@ The functional specification is applicable to cases of hospital care, specialize
 The document focuses on standardizing the content of structured electronic records of imaging methods (radiological methods, nuclear medicine methods, ultrasound methods, etc.) and metadata, on interoperability and machine processing aspects, but also on data extensions, e.g. references to related records, selected DICOM data from imaging studies, additional annexes, etc. The document also focuses on aspects related to the exchange and sharing of these messages using information technology.
 
 <div>
-<img src="content-en.png" class="figure-img img-responsive img-rounded center-block" width="60%">
+<img src="content-en.png" class="figure-img img-responsive img-rounded center-block" width="80%">
 <p> </p>
 <p>Fig. 1: CONTENT OF THE STANDARD</p>
 <p> </p>

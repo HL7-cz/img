@@ -2,7 +2,7 @@
 Profile:    CZ_MedicationAdministration
 Parent:     MedicationAdministration
 Id:         cz-MedicationAdministration
-Title:      "Medication Administration"
+Title:      "Medication Administration: Imaging Report (CZ)"
 Description: "Czech national profile for a medication administration."
 //-------------------------------------------------------------------------------------------
 * ^experimental = false

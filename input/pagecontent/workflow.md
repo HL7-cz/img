@@ -1,7 +1,7 @@
 A typical, standard course of the examination takes place gradually, where the individual steps follow each other in sequence, as shown in the following figure of the sequence diagram. This diagram does not include the extended Imaging Methods Report and its storage in the EHR repository and sending to the external examination orderer.
 
 <div>
-<img src="workflow-1-en.png" class="figure-img img-responsive img-rounded center-block" width="60%">
+<img src="workflow-1-en.png" class="figure-img img-responsive img-rounded center-block" width="80%">
 <p> </p>
 <p>Fig. 1: STANDARD WORKFLOW FOR IMAGING METHODS</p>
 <p> </p>
@@ -10,7 +10,7 @@ A typical, standard course of the examination takes place gradually, where the i
 The individual phases of the examination represent the state of development of the examination. The phase, the state in which the examination is, is informed by the so-called DICOM Modality Performed Procedure Step (MPPS) messages.
 
 <div>
-<img src="workflow-2-en.png" class="figure-img img-responsive img-rounded center-block" width="80%">
+<img src="workflow-2-en.png" class="figure-img img-responsive img-rounded center-block" width="90%">
 <p> </p>
 <p>Fig. 2: PHASE AND STATES OF THE EXAMINATION PROCESS</p>
 <p> </p>

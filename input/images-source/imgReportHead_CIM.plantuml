@@ -1,7 +1,7 @@
 @startmindmap
 skinparam topurl StructureDefinition-
 
-* [[BodyImagingReportHeaderCz.html Imaging Report Header]]
+* [[HeaderImagingReportCz.html Imaging Report Header]]
 ** [[SubjectCz.html Imaging Report Subject]]
 /'    Shell we keep or not?
 ** Preferred Health Professional
@@ -17,7 +17,7 @@ skinparam topurl StructureDefinition-
 ** [[AuthorCz.html Authorship]]
 ***_ Author
 ***_ DateTime
-** [[LegalAuthenticator.html Legal Authentication]]
+** [[LegalAuthenticatorCz.html Legal Authentication]]
 ***_ Legal authenticator
 ***_ DateTime
 ** [[DocumentMetadataCz.html Document Metadata]]

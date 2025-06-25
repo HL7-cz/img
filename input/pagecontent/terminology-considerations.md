@@ -1,4 +1,4 @@
-The following is a list of the codesystems and valueset used:
+List of the codesystems and valueset used:
 
 ### MKN-10 / Orphacode
 

@@ -1,6 +1,6 @@
-### Celkové implementační příručka
+### Kompletní implementační specifikace
 
-Implementační příručka lze nahrát [zde](full-ig.zip).
+Implementační příručka lze stáhnout [zde](full-ig.zip).
 
 ### NPM Archiv a definice
 

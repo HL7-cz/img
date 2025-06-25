@@ -1,6 +1,6 @@
 Logical: AttesterImagingCz
 Id: AttesterCz
-Title: "A.1.5 - Attester (multiple attesters could be provided)"
+Title: "A.1.6 - Attester (multiple attesters could be provided)"
 Description: """Attester (multiple attesters could be provided)"""
 
 * insert SetFmmandStatusRule ( 1, draft )

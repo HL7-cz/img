@@ -20,6 +20,10 @@ A performer is anyone who conducts (has conducted) an instrumental examination, 
 
 An author is anyone who has compiled or created the report (document). The author can be a natural person, such as a healthcare worker or an entity (system), such as AI.
 
+#### Verifier
+
+A Verifier is understood to be anyone who has verified the Report (information in the document). For example, they may have verified the conclusions of an observation with a new observation, or checked the completeness of information, the clarity, and the professional expertise of the message in the Report, etc. The Verifier is an individual (physical person), for instance, a "more experienced" healthcare professional who performed a so-called second reading.
+
 #### Validator
 
 A validator is anyone who has verified the formal and factual content of the document, i.e. the document's structure, completeness and semantic correctness of the data within the document, its integrity, etc. The validator can be a natural person or a system.
@@ -48,6 +52,10 @@ The recipient can be understood from different levels of abstraction as:
 - Patient, including a legal guardian or a representative with granted consent.
 - In infrequent cases, also a review doctor from the health insurance company.
 - Exceptionally, also authorized non-healthcare professionals or organizations in connection with duties arising from the law, such as courts, police or public authorities (PA).
+
+#### Report Subject
+
+The Report Subject refers to the patient, an individual (physical person), or an animal who is the subject of the examination or procedure, even if the object of the examination is only a sample.
 
 #### Originating IS
 

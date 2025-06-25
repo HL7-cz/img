@@ -2,9 +2,9 @@
 
 ### Úvod
 
-Tato implementační příručka je založena na [FHIR version R4](https://hl7.org/fhir/R4/). Specifikuje sadu pravidel, které jsou použity k definování toho, jak reprezentovat Obrazovou zprávy v českém národním kontextu, v souladu s evropskými směrnicemi eHN.
+Tato implementační příručka je založena na [FHIR version R4](https://hl7.org/fhir/R4/). Specifikuje sadu pravidel, které jsou použity k definování toho, jak reprezentovat Zprávu ze zobrazovacích metod v českém národním kontextu, v souladu s evropskými směrnicemi eHN.
 
-Jeho hlavním cílem je definovat obsahové komponenty a preferovanou strukturu, která má být použita pro konstrukci Obrazové zprávy. Účelem tohoto standardu je definovat formu Obrazové zprávy jako lékařského záznamu pacienta za účelem elektronické výměny zdravotních informací mezi jednotlivci, poskytovateli zdravotní péče a infrastrukturou v České republice.
+Jeho hlavním cílem je definovat obsahové komponenty a preferovanou strukturu, která má být použita pro konstrukci Zprávy ze zobrazovacích metod. Účelem tohoto standardu je definovat formu Zprávy z obrazového vyšetření jako lékařského záznamu pacienta za účelem elektronické výměny zdravotních informací mezi jednotlivci, poskytovateli zdravotní péče a infrastrukturou v České republice.
 
 Tato příručka nepopisuje způsob výměny této zprávy.
 

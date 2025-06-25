@@ -104,7 +104,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^short = "Imaging Study"
   * ^definition = "This section holds information related to the imaging studies covered by this report."
   // * title = "Imaging Studies"
-  * code = $loinc#18726-0
+  * code = $loinc#18726-0 "Radiology studies (set)"
   * entry MS
     * ^slicing.discriminator.type = #profile
     * ^slicing.discriminator.path = "$this"
@@ -140,7 +140,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
   * ^extension[0].valueString = "Section"
   * code = $loinc#18785-6	"Radiology Reason for study (narrative)"
-  * entry 0..
+  * entry 1..
   * entry only Reference(CZ_ClinicalQuestion) 
 
   

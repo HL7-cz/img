@@ -12,7 +12,7 @@ legend right
 | <#APPLICATION>  Logický model |
 | <#TECHNOLOGY>  Profil |
 endlegend
-class "Tělo zprávy ze zobrazovacích metod" <<LogicalModel>> [[StructureDefinition-BodyImageOrderCz.html]]
+class "Tělo zprávy ze zobrazovacích metod" <<LogicalModel>> [[StructureDefinition-BodyImagingReportCz.html]]
 note top #EEEEAE [[ConceptMap-BodyImagingOrder2FHIR-cz.html]]
 Concept Mapa
 endnote

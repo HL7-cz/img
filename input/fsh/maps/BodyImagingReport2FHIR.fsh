@@ -532,13 +532,6 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.section:Recommendation.entry.ofType(CZ_Careplan)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/AttachmentsCz"
-* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-diagnostic-report"
-* group[=].element[+].code = #Body.ReportOfImagingMethod.recommendation
-* group[=].element[=].display = "A.2.4.11 - Recommendation"
-* group[=].element[=].target.code = #Composition.section:Recommendation.entry.ofType(CZ_Careplan)
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
 * group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-composition-imaging"
 * group[=].element[+].code = #Body.ReportOfImagingMethod.typeOfImagingMethod

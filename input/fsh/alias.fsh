@@ -9,6 +9,7 @@ Alias: $dcm = http://dicom.nema.org/resources/ontology/DCM
 Alias: $ucum = http://unitsofmeasure.org
 Alias: $mkn-10 = https://mkn10.uzis.cz
 Alias: $hl7-condition-category-cs =  http://terminology.hl7.org/CodeSystem/condition-category
+Alias: $typeClinicalEvent = https://hl7.cz/fhir/img-order/CodeSystem/cz-typeClinicalEvent-cs
 
 // ValueSet
 Alias: $hl7MedicationAdminStatus = http://hl7.org/fhir/ValueSet/medication-admin-status
@@ -19,6 +20,9 @@ Alias: $hl7-condition-category = http://hl7.org/fhir/ValueSet/condition-category
 Alias: $mkn-10-problem-list = https://terminology.ncez.mzcr.cz/ValueSet/mkn-10
 Alias: $sct-device-type = http://hl7.org/fhir/ValueSet/device-type
 Alias: $sctBodySite = http://hl7.org/fhir/ValueSet/body-site
+Alias: $hl7-diagnostic-category = http://hl7.org/fhir/ValueSet/diagnostic-service-sections
+Alias: $dlp_lecprip = https://opendata.sukl.cz/ValueSet/dlp_lecivepripravky
+Alias: $dlp_formy = https://opendata.sukl.cz/ValueSet/dlp_formy
 
 // Extensions
 Alias: $event-basedOn = http://hl7.org/fhir/StructureDefinition/event-basedOn

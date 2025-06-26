@@ -26,7 +26,6 @@ Alias: $dlp_formy = https://opendata.sukl.cz/ValueSet/dlp_formy
 
 // Extensions
 Alias: $event-basedOn = http://hl7.org/fhir/StructureDefinition/event-basedOn
-Alias: $artifact-relatedArtifact = http://hl7.org/fhir/StructureDefinition/artifact-relatedArtifact
 Alias: $composition.version-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version
 Alias: $information-recipient = http://hl7.eu/fhir/StructureDefinition/information-recipient
 Alias: $diagnostic-report-composition-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
@@ -43,6 +42,9 @@ Alias: $document-reference-thumbnail-url  = http://hl7.org/fhir/StructureDefinit
 Alias: $note-url                          = http://hl7.org/fhir/StructureDefinition/note|5.2.0
 Alias: $cvDocumentReference-basedOn       = http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.basedOn
 Alias: $obligation = http://hl7.org/fhir/StructureDefinition/obligation
+Alias: $cvDiagnosticReport-supportingInfo = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.supportingInfo
+Alias: $cvDiagnosticReport-composition = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
+Alias: $artifact-version-url-5            = http://hl7.org/fhir/StructureDefinition/artifact-version|5.2.0
 
 // Actor Canonical
 

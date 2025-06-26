@@ -10,9 +10,11 @@ Description: "Diagnostic Report used to represent an entry of a Imaging Report, 
 
 * insert SetFmmandStatusRule ( 0, draft )
 
-* extension contains $diagnostic-report-composition-r5 named DiagnosticReportCompositionR5 1..1
-* extension[DiagnosticReportCompositionR5].valueReference only Reference(CZ_CompositionImagingReport)
-* extension[DiagnosticReportCompositionR5].valueReference 1..1
+//* extension contains
+//  $artifact-version-url-5 named artifactVersion 0..1
+//
+//  and $cvDiagnosticReport-supportingInfo named supportingInfo 0..*
+//  and $cvDiagnosticReport-composition named composition 1..1
 
 * basedOn only Reference(CZ_ImagingOrderInformation)
 //* basedOn.extension contains DiagnosticReportBasedOnRequisition named basedOn-requisition 0..*

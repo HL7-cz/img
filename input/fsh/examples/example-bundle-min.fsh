@@ -139,7 +139,7 @@ Usage: #example
 Description: "Reason For Admission of RTG"
 Title: "Reason For Admission of RTG"
 * id = "e20f7fc3-0237-496a-a57a-18acac3776df"
-* subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
+* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * code.coding = #S01.8 "Otevřená rána jiných částí hlavy"
 * code.text = "vyskočil z okna, pád ze 3 metrů na nohy (na hlavě jen exkoriace), v bezvědomí nebyl, kulhá, z hlavy mu teče krev, stěžuje si na bolest dolní části zad."
 
@@ -206,7 +206,7 @@ InstanceOf: CZ_ConditionImage
 Usage: #example
 Description: "Diagnosis  for RTG"
 Title: "Diagnosis for RTG"
-* subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
+* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * code.coding[diagnosis] = #T09.3 "Poranění míchy‚ úroveň neurčena" 
 * code.text = "Poranění míchy‚ úroveň neurčena"
 
@@ -219,7 +219,7 @@ Title: "Procedure of PET+CT"
 * code.coding = $sct#168537006 "Plain X-ray"
 * status = #completed
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
-* reasonReference = Reference (cz-examplemri-condition2)
+* reasonReference = Reference (cz-examplertg-condition2)
 
 Instance: cz-examplertg-diagnosticReport
 InstanceOf: CZ_DiagnosticReport
@@ -227,7 +227,7 @@ Usage: #example
 Description: "Diagnostic report of RTG"
 Title: "Diagnostic report of RTG"
 * id = "bd3e7b78-bfaa-428e-9168-8cd29cf54aba"
-* extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9)
+//* extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9)
 * category = #RAD
 * status = #available
 * code = $sct#168500000 "Radiology result normal"

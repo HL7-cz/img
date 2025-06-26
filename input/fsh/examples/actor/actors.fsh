@@ -31,7 +31,7 @@ Title: "Actor Imaging Report Repository"
 Description: """Imaging Report Report Repository: a system maintaining a copy of the received Imaging Report, to store and make it available for the consumers."""
 Usage: #example
 
-* url = "http://hl7.cz/fhir/img/actor-repos-eu-lab"
+* url = "http://hl7.cz/fhir/img/actor-server-img"
 * name = "ImgReportRepos"
 * status = #active
 * type = #system

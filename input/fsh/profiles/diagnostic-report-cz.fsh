@@ -10,11 +10,10 @@ Description: "Diagnostic Report used to represent an entry of a Imaging Report, 
 
 * insert SetFmmandStatusRule ( 0, draft )
 
-//* extension contains
-//  $artifact-version-url-5 named artifactVersion 0..1
-//
-//  and $cvDiagnosticReport-supportingInfo named supportingInfo 0..*
-//  and $cvDiagnosticReport-composition named composition 1..1
+* extension contains
+  $artifact-version-url-5 named artifactVersion 0..1
+  and $cvDiagnosticReport-supportingInfo named supportingInfo 0..*
+  and $cvDiagnosticReport-composition named composition 1..1
 
 * basedOn only Reference(CZ_ImagingOrderInformation)
 //* basedOn.extension contains DiagnosticReportBasedOnRequisition named basedOn-requisition 0..*
@@ -33,8 +32,7 @@ Description: "Diagnostic Report used to represent an entry of a Imaging Report, 
 * presentedForm 1..*
 * presentedForm obeys presentedform-01
 
-
 Invariant: presentedform-01
 Description: "At least one of presented form has PDF format"
 Severity: #warning
-Expression: "contentType = '#application/pdf'"
+Expression: "$this.contentType = '#application/pdf'"

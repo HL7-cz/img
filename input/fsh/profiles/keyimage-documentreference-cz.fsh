@@ -23,7 +23,7 @@ When the resource represents a DICOM instance it SHALL contain a the SOP Instanc
   * system = "urn:ietf:rfc:3986"
   * value 1..1
 
-/** extension contains
+* extension contains
   $cvDocumentReference-basedOn named basedOn 0..1
   and ModalityCz named modality 1..1
 * extension
@@ -32,7 +32,7 @@ When the resource represents a DICOM instance it SHALL contain a the SOP Instanc
 * extension[basedOn] contains imorderaccession 0..1
 * extension[basedOn][imorderaccession].value[x] only Reference(CZ_ImagingOrderInformation)
   * identifier 1..1
-  * identifier only CZ_AccessionNumberIdentifier */
+  * identifier only CZ_AccessionNumberIdentifier 
 
 * category 1..*
   * insert SliceElement( #profile, $this )

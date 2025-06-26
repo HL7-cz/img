@@ -6,3 +6,4 @@ Description: "Care plan for Imaging Report for the scope of the Czech national i
 
 * identifier
 * title
+* description

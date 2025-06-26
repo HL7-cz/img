@@ -8,26 +8,32 @@ Usage: #example
 * type = #document
 * timestamp = "2025-06-20T12:02:00+01:00"
 
-* entry[composition][0].fullUrl = "urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9"
-* entry[composition][=].resource = cz-examplertg-composition
+* entry[composition].fullUrl = "urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9"
+* entry[composition].resource = cz-examplertg-composition
 
-* entry[diagnosticReport][+].fullUrl = "urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba"
-* entry[diagnosticReport][=].resource = cz-examplertg-diagnosticReport
+* entry[diagnosticReport].fullUrl = "urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba"
+* entry[diagnosticReport].resource = cz-examplertg-diagnosticReport
 
-* entry[patient][+].fullUrl = "urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882"
-* entry[patient][=].resource = cz-examplertg-patient
+* entry[patient].fullUrl = "urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882"
+* entry[patient].resource = cz-examplertg-patient
 
-* entry[serviceRequest][+].fullUrl = "urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04"
-* entry[serviceRequest][=].resource = cz-examplertg-order
+* entry[practitioner].fullUrl = "urn:uuid:aafd64f9-36ab-4583-8088-efb93b44db9b"
+* entry[practitioner].resource = cz-examplertg-practitioner
 
-* entry[clinicalQuestion][+].fullUrl = "urn:uuid:e952169d-c3b7-4f4a-9eea-039e8708ff35"
-* entry[clinicalQuestion][=].resource = cz-examplertg-clinicalQuestion
+* entry[serviceRequest].fullUrl = "urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04"
+* entry[serviceRequest].resource = cz-examplertg-order
 
-* entry[imagingStudy][+].fullUrl = "urn:uuid:fc79917b-b1b0-44a6-beaa-e9715322c834"
-* entry[imagingStudy][=].resource = cz-examplertg-imagingStudy
+* entry[clinicalQuestion].fullUrl = "urn:uuid:e952169d-c3b7-4f4a-9eea-039e8708ff35"
+* entry[clinicalQuestion].resource = cz-examplertg-clinicalQuestion
 
-* entry[procedure][+].fullUrl = "urn:uuid:ea2967a5-0d00-461c-8785-b5affef4791c"
-* entry[procedure][=].resource = cz-examplertg-procedure
+* entry[imagingStudy].fullUrl = "urn:uuid:fc79917b-b1b0-44a6-beaa-e9715322c834"
+* entry[imagingStudy].resource = cz-examplertg-imagingStudy
+
+* entry[procedure].fullUrl = "urn:uuid:ea2967a5-0d00-461c-8785-b5affef4791c"
+* entry[procedure].resource = cz-examplertg-procedure
+
+* entry[observation].fullUrl = "urn:uuid:eca2bf34-9fa8-4abf-bd98-d8d49bcb1104"
+* entry[observation].resource = cz-examplertg-observation
 
 Instance: cz-examplertg-composition
 InstanceOf: CZ_CompositionImagingReport
@@ -37,10 +43,11 @@ Usage: #example
 * status = #final
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * date = "2025-05-20T12:02:00+01:00"
-* author = Reference(cz-examplertg-practitioner)
+* author = Reference(urn:uuid:aafd64f9-36ab-4583-8088-efb93b44db9b)
 * title = "Imaging Report - Rentgen Ing. Králíka"
 * confidentiality = #N
 * type = $typeClinicalEvent#RDG.RTG "RTG vyšetření"
+* extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba)
 * section[order].title = "Requested imaging studies information Document"
 * section[order].code = $loinc#55115-0 "Requested imaging studies information Document"
 * section[order].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Order information</div>" 
@@ -61,11 +68,17 @@ Usage: #example
 * section[procedure].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Procedure</div>" 
 * section[procedure].text.status = #generated
 * section[procedure].entry[0] = Reference(urn:uuid:ea2967a5-0d00-461c-8785-b5affef4791c)
+* section[findings].title = "Findings"
+* section[findings].code = $loinc#59776-5 "Procedure findings Narrative"
+* section[findings].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Findings</div>" 
+* section[findings].text.status = #generated
+* section[findings].entry[finding] = Reference(urn:uuid:eca2bf34-9fa8-4abf-bd98-d8d49bcb1104)
 
 Instance: cz-examplertg-practitioner
 InstanceOf: CZ_PractitionerCore
 Description: "Example of practitioner"
 Usage: #example
+* id = "aafd64f9-36ab-4583-8088-efb93b44db9b"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "123456789"
 * name.use = #usual
@@ -77,7 +90,7 @@ Usage: #example
 
 Instance: cz-examplertg-patient
 InstanceOf: CZ_PatientCore
-Usage: #inline
+Usage: #example
 Description: "Patient, contact information"
 * id = "62d2aa9a-a15f-4e43-9458-fec16c1c4882"
 * identifier[CPOJ][+].system = "https://ncez.mzcr.cz/fhir/sid/cpoj"
@@ -184,8 +197,8 @@ Usage: #example
 Description: "Imaging study of RTG"
 Title: "Imaging study of RTG"
 * id = "fc79917b-b1b0-44a6-beaa-e9715322c834"
-* identifier[+].system = "https://www.homolka.cz/"
-* identifier[=].value = "6609024"
+* identifier[studyInstanceUid].system = "urn:dicom:uid"
+* identifier[studyInstanceUid].value = "urn:oid:1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.1"
 * status = #available
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 
@@ -194,12 +207,14 @@ InstanceOf: CZ_ObservationResultImaging
 Usage: #example
 Description: "Observation of RTG"
 Title: "Observation of RTG"
+* id = "eca2bf34-9fa8-4abf-bd98-d8d49bcb1104"
 * language = #cs
 * status = #final
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * performer = Reference(cz-examplertg-practitioner)
 * code = $sct#168500000 "Radiology result normal" 
 * valueString = "Bez nálezu."
+* effectiveDateTime = "2025-10-06T09:10:00+01:00"
 
 Instance: cz-examplertg-condition2
 InstanceOf: CZ_ConditionImage
@@ -227,9 +242,9 @@ Usage: #example
 Description: "Diagnostic report of RTG"
 Title: "Diagnostic report of RTG"
 * id = "bd3e7b78-bfaa-428e-9168-8cd29cf54aba"
-//* extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9)
+* extension[composition].valueReference = Reference(urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9)
 * category = #RAD
-* status = #available
+* status = #final
 * code = $sct#168500000 "Radiology result normal"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * result.display = "Bez nálezu"

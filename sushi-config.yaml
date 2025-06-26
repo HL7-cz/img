@@ -40,8 +40,8 @@ dependencies:
   hl7.fhir.cz.img-order: current
   hl7.fhir.eu.base: current
 #  hl7.fhir.eu.imaging: current -- nelze je na R5
-#  hl7.fhir.extensions.r5: 4.0.1
-#  hl7.fhir.uv.extensions: 5.2.0
+  hl7.fhir.extensions.r5: 4.0.1
+  hl7.fhir.uv.extensions: 5.2.0
   hl7.fhir.eu.extensions: current
 #
 #

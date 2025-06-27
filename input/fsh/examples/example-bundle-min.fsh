@@ -35,6 +35,12 @@ Usage: #example
 * entry[observation].fullUrl = "urn:uuid:eca2bf34-9fa8-4abf-bd98-d8d49bcb1104"
 * entry[observation].resource = cz-examplertg-observation
 
+* entry[device][+].fullUrl = "urn:uuid:03903bc5-4ca0-4c55-8e4a-b256da9f788d"
+* entry[device][=].resource = cz-examplertg-device
+
+* entry[coverage][+].fullUrl = "urn:uuid:6a2b30b1-4ba7-4a24-adcf-beefa0eface1"
+* entry[coverage][=].resource = cz-examplertg-coverage
+
 Instance: cz-examplertg-composition
 InstanceOf: CZ_CompositionImagingReport
 Title: "Composition: RTG Imaging report"
@@ -133,9 +139,9 @@ Description: "Imaging order for Plain X-ray"
 * status = #active
 * intent = #order
 * category = $sct#363679005 	"Imaging" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
-* performer = Reference(cz-examplertg-device)
+* performer = Reference(urn:uuid:03903bc5-4ca0-4c55-8e4a-b256da9f788d)
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
-* insurance = Reference(cz-examplertg-coverage)
+* insurance = Reference(urn:uuid:6a2b30b1-4ba7-4a24-adcf-beefa0eface1)
 * bodySite = $sct#6757004 "Right knee"
 * bodySite = $sct#62175007 "Right leg"
 * bodySite = $sct#731788002 "LS Spine"
@@ -164,6 +170,7 @@ InstanceOf: CZ_DeviceObserver
 Usage: #example
 Description: "Radiographic imaging device used in RTG Imaging report"
 Title: "Device - Radiographic unit: RTG Imaging report"
+* id = "03903bc5-4ca0-4c55-8e4a-b256da9f788d"
 * type = $sct#68080007 "Radiographic unit"
 
 Instance: cz-examplertg-coverage
@@ -171,6 +178,7 @@ InstanceOf: CZ_Coverage
 Description: "Example of coverage in RTG Imaging report"
 Usage: #example
 Title: "Coverage: RTG Imaging report"
+* id = "6a2b30b1-4ba7-4a24-adcf-beefa0eface1"
 * status = #active
 * beneficiary = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * payor = Reference(cz-examplertg-organization)

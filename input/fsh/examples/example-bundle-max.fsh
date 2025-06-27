@@ -47,6 +47,15 @@ Usage: #example
 * entry[observation][+].fullUrl = "urn:uuid:1bcd2d5a-e401-4ac2-80d0-7ec558d6b250"
 * entry[observation][=].resource = cz-examplemri-observation
 
+* entry[device][+].fullUrl = "urn:uuid:723b5e24-133c-4e9a-aefb-5c14f5b2eac3"
+* entry[device][=].resource = cz-examplemri-device
+
+* entry[coverage][+].fullUrl = "urn:uuid:be4e7f9a-2771-4aa1-bcee-c386f9ba7eaa"
+* entry[coverage][=].resource = cz-examplemri-coverage
+
+* entry[medication][+].fullUrl = "urn:uuid:0987d1c9-0d9a-4d33-8efc-eee6a8c63059"
+* entry[medication][=].resource = cz-examplemri-medication
+
 Instance: cz-examplemri-composition
 InstanceOf: CZ_CompositionImagingReport
 Description: "Example of Imaging report (Composition) including a PET+CT report"
@@ -97,6 +106,7 @@ InstanceOf: CZ_DeviceObserver
 Usage: #example
 Description: "Positron emission tomography/computed tomography system device used in PET+CT Imaging report"
 Title: "Device - PET/CT system: PET+CT Imaging report"
+* id = "723b5e24-133c-4e9a-aefb-5c14f5b2eac3"
 * type = $sct#717326002 "PET/CT system"
 
 Instance: cz-examplemri-practitioner1
@@ -171,9 +181,9 @@ Description: "Imaging order: PET+CT Imaging report"
 * status = #active
 * intent = #order
 * category = $sct#363679005 	"Imaging" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
-* performer = Reference(cz-examplemri-device)
+* performer = Reference(urn:uuid:723b5e24-133c-4e9a-aefb-5c14f5b2eac3)
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
-* insurance = Reference(cz-examplemri-coverage)
+* insurance = Reference(urn:uuid:be4e7f9a-2771-4aa1-bcee-c386f9ba7eaa)
 * bodySite = $sct#69536005 "Head"
 * code.coding = $sct#1655436100011910 "PET CT of brain"
 * text.status = #additional
@@ -187,6 +197,7 @@ InstanceOf: CZ_Coverage
 Description: "Example of coverage in PET+CT Imaging report"
 Title: "Coverage: PET+CT Imaging report"
 Usage: #example
+* id = "be4e7f9a-2771-4aa1-bcee-c386f9ba7eaa"
 * status = #active
 * beneficiary = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * payor = Reference(cz-examplemri-organization)
@@ -284,7 +295,7 @@ Title: "Medication Administration: PET+CT Imaging report"
 * identifier[=].value = "a89a0433-998e-4408-9d7a-560c6d242366"
 * status = #completed
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
-* medicationReference = Reference (cz-examplemri-medication)
+* medicationReference = Reference (urn:uuid:0987d1c9-0d9a-4d33-8efc-eee6a8c63059)
 * dosage.dose = 260000 'ul' "ul"
 * dosage.route = $sct#47625008 "Intravenous route"
 * effectiveDateTime = "2022-10-07T08:15:00+01:00"
@@ -294,6 +305,7 @@ InstanceOf: CZ_Medication
 Usage: #example
 Description: "Medication during PET+CT Imaging report"
 Title: "Medication: PET+CT Imaging report"
+* id = "0987d1c9-0d9a-4d33-8efc-eee6a8c63059"
 * identifier[+].system = "https://www.nempriklad.cz/"
 * identifier[=].value = "a89a0433-998e-4408-9d7a-560c6d242367"
 * status = #active

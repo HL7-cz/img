@@ -26,6 +26,7 @@ class "cz-clinicalQuestion" <<Profile>> [[StructureDefinition-cz-clinicalQuestio
 class "cz-procedure-imaging" <<Profile>> [[StructureDefinition-cz-procedure-imaging.html]]
 class "cz-diagnostic-report" <<Profile>> [[StructureDefinition-cz-diagnostic-report.html]]
 class "cz-keyImage-documentReference" <<Profile>> [[StructureDefinition-cz-keyImage-documentReference.html]]
+class "cz-observation-result-imaging" <<Profile>> [[StructureDefinition-cz-observation-result-imaging.html]]
 class "cz-radiationDoseObservation" <<Profile>> [[StructureDefinition-cz-radiationDoseObservation.html]]
 'class "cz-coverage" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html]]
 'class "cz-appointment" <<Profile>> [[StructureDefinition-cz-appointment.html]]
@@ -45,6 +46,7 @@ class "cz-carePlanImage" <<Profile>> [[StructureDefinition-cz-carePlanImage.html
 "Imaging Report Body" <|. "cz-procedure-imaging"
 "Imaging Report Body" <|. "cz-diagnostic-report"
 "Imaging Report Body" <|. "cz-keyImage-documentReference"
+"Imaging Report Body" <|. "cz-observation-result-imaging"
 "Imaging Report Body" <|. "cz-radiationDoseObservation"
 '"Imaging Report Body" <|. "cz-appointment"
 '"Imaging Report Body" <|. "cz-coverage"
@@ -64,7 +66,8 @@ class "cz-carePlanImage" <<Profile>> [[StructureDefinition-cz-carePlanImage.html
 "cz-study-imaging" -d[hidden]-> "cz-clinicalQuestion"
 "cz-clinicalQuestion" -d[hidden]-> "cz-diagnostic-report"
 "cz-diagnostic-report" -d[hidden]-> "cz-keyImage-documentReference"
-"cz-keyImage-documentReference" -d[hidden]-> "cz-radiationDoseObservation"
+"cz-keyImage-documentReference" -d[hidden]-> "cz-observation-result-imaging"
+"cz-observation-result-imaging" -d[hidden]-> "cz-radiationDoseObservation"
 "cz-radiationDoseObservation" -d[hidden]-> "cz-procedure-imaging"
 "cz-procedure-imaging" -d[hidden]-> "cz-conditionImage"
 "cz-conditionImage" -d[hidden]-> "cz-specimen"

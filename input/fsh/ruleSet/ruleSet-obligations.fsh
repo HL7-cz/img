@@ -26,7 +26,7 @@ RuleSet: ObligationSet-04_server-shall-01
 RuleSet: ObligationSet-05_server-shall-02
 * insert ObligationActorAndCode($server, #SHALL:able-to-populate)
 * insert ObligationActorAndCode($consumer, #SHALL:handle)
-* insert ObligationActorAndCode($creator, #MAY:populate-if-known)
+* insert ObligationActorAndCode($creator, #MAY:able-to-populate)
 
 RuleSet: ObligationSet-06_server-shall-03
 * insert ObligationActorAndCode($server, #SHALL:able-to-populate)
@@ -40,7 +40,7 @@ RuleSet: ObligationSet-07_server-should-01
 RuleSet: ObligationSet-08_server-should-02
 * insert ObligationActorAndCode($server, #SHOULD:able-to-populate)
 * insert ObligationActorAndCode($consumer, #SHALL:handle)
-* insert ObligationActorAndCode($creator, #MAY:populate-if-known)
+* insert ObligationActorAndCode($creator, #MAY:able-to-populate)
 
 RuleSet: ObligationSet-09_server-should-03
 * insert ObligationActorAndCode($server, #SHOULD:able-to-populate)
@@ -54,7 +54,7 @@ RuleSet: ObligationSet-10_server-may-01
 RuleSet: ObligationSet-11_server-may-02
 * insert ObligationActorAndCode($server, #MAY:able-to-populate)
 * insert ObligationActorAndCode($consumer, #SHALL:handle)
-* insert ObligationActorAndCode($creator, #MAY:populate-if-known)
+* insert ObligationActorAndCode($creator, #MAY:able-to-populate)
 
 RuleSet: ObligationSet-12_server-may-03
 * insert ObligationActorAndCode($server, #MAY:able-to-populate)

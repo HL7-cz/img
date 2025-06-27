@@ -1,6 +1,7 @@
-Instance: cz-imagingorder-example
+Instance: cz-examplebase-imagingorder
 InstanceOf: CZ_ImagingOrderInformation
 Usage: #example
+Title: "Imaging order: MR"
 Description: "Imaging order for Magnetic Resonance"
 
 * identifier[+].system = "http://hospital.cz/nis"
@@ -8,8 +9,8 @@ Description: "Imaging order for Magnetic Resonance"
 * status = #active
 * intent = #order
 * category = $sct#363679005 	"Imaging"
-* performer = Reference(MRDevice)
-* subject = Reference(Mracena)
+* performer = Reference(cz-examplebase-device)
+* subject = Reference(cz-examplebase-patient)
 * bodySite = $sct#72696002
 * code.coding = $sct#19741000087109
 * text.status = #additional

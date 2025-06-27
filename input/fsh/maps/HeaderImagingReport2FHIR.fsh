@@ -186,7 +186,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent													
 * group[=].element[+].code = #Header.documentMetadata
 * group[=].element[=].display = "A.1.8 - Document metadata"
-* group[=].element[=].target.code = #Composition					
+* group[=].element[=].target.code = #Composition.meta					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[+].code = #Header.documentMetadata.identifier

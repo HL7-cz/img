@@ -4,7 +4,7 @@ Id: cz-imagingOrderInformation
 Title: "Service Request: Imaging Report (CZ)"
 Description: "Order information for the scope of the Czech national interoperability project."
 
-* identifier 1..
+* identifier 0..1
 * category 1..
 
 * authoredOn 1..

@@ -12,28 +12,28 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-imagingOrderInformation"
 * group[=].element[+].code = #Body.InformationAboutOrder
 * group[=].element[=].display = "A.2.1 and A.2.2 - Information about order"
-* group[=].element[=].target.code = #Composition.section:InformationAboutOrder					
+* group[=].element[=].target.code = #Composition.section:order					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[=].target.comment = "#Composition.InformationAboutOrder.entry.ofType(CZ_ImagingInformationAboutOrder)"	
 * group[=].element[+].code = #InformationAboutOrder.orderDetail
 * group[=].element[=].display = "A.2.1 - Order detail"
-* group[=].element[=].target.code = #CZ_ImagingInformationAboutOrder
+* group[=].element[=].target.code = #CZ_ImagingOrderInformation
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #InformationAboutOrder.identifier
 * group[=].element[=].display = "A.2.1.1 - Identifier of order detail"
-* group[=].element[=].target.code = #CZ_ImagingInformationAboutOrder.identifier
+* group[=].element[=].target.code = #CZ_ImagingOrderInformation.identifier
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #InformationAboutOrder.dateTime
 * group[=].element[=].display = "A.2.1.2 - Date and time of the order placement"
-* group[=].element[=].target.code = #CZ_ImagingInformationAboutOrder.authoredOn
+* group[=].element[=].target.code = #CZ_ImagingOrderInformation.authoredOn
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #InformationAboutOrder.requestedExecdateTime
 * group[=].element[=].display = "A.2.1.3 - Date and time of requested execution"
-* group[=].element[=].target.code = #CZ_ImagingInformationAboutOrder.occurrenceDateTime
+* group[=].element[=].target.code = #CZ_ImagingOrderInformation.occurrenceDateTime
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReasonForAdmission"
@@ -340,7 +340,7 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-MedicationAdministration"
 * group[=].element[+].code = #Body.ReportOfImagingMethod.Medication
 * group[=].element[=].display = "A.2.4.7 - Medication"
-* group[=].element[=].target.code = #Composition.section:Procedure.used.ofType(CZ_MedicationAdministration)			
+* group[=].element[=].target.code = #Composition.section:Procedure.partOf.ofType(CZ_MedicationAdministration)			
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #Medication.name
@@ -507,17 +507,17 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #resultOfImagingMethod.conclusion
 * group[=].element[=].display = "A.2.4.10 - Conclusion"
-* group[=].element[=].target.code = ##CZ_DiagnosticReport.conclusionCode
+* group[=].element[=].target.code = #CZ_DiagnosticReport.conclusionCode
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #resultOfImagingMethod.conclusion.text
 * group[=].element[=].display = "A.2.4.10.1 - Conclusion text"
-* group[=].element[=].target.code = #CZ_ObservationResultImaging.conclusionCode.text
+* group[=].element[=].target.code = #CZ_DiagnosticReport.conclusion
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #resultOfImagingMethod.conclusion.code
 * group[=].element[=].display = "A.2.4.10.2 - Coded conclusion"
-* group[=].element[=].target.code = #CZ_ObservationResultImaging.conclusionCode.coding
+* group[=].element[=].target.code = #CZ_DiagnosticReport.conclusionCode
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #resultOfImagingMethod.textPartsOfDocument

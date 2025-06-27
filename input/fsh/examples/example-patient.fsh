@@ -1,7 +1,8 @@
-Instance: Mracena
+Instance: cz-examplebase-patient
 InstanceOf: CZ_PatientCore
 Usage: #example
-Description: "Patient, contact information and practitioner"
+Title: "Patient Mracena"
+Description: "Patient Mracena with contact information and practitioner"
 
 * identifier[RC][+].system = "https://ncez.mzcr.cz/fhir/sid/rcis"
 * identifier[RC][=].value = "2716126452"

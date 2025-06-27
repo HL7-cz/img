@@ -1,6 +1,6 @@
 Instance: cz-examplertg-bundle
 InstanceOf: CZ_BundleImagingReport
-Title: "Bundle: RTG Patient Kralik"
+Title: "Bundle: RTG Imaging report"
 Description: "Example of Imaging report (Bundle) including a RTG report"
 Usage: #example
 * identifier[+].system = "http://example.org"
@@ -37,7 +37,8 @@ Usage: #example
 
 Instance: cz-examplertg-composition
 InstanceOf: CZ_CompositionImagingReport
-Description: "Example of Imaging report (Composition) including a RTG report"
+Title: "Composition: RTG Imaging report"
+Description: "Minimal composition for RTG Image report"
 Usage: #example
 * id = "dbd426a9-d660-4f97-8656-1e39db4a57c9"
 * status = #final
@@ -72,11 +73,12 @@ Usage: #example
 * section[findings].code = $loinc#59776-5 "Procedure findings Narrative"
 * section[findings].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Findings</div>" 
 * section[findings].text.status = #generated
-* section[findings].entry[finding] = Reference(urn:uuid:eca2bf34-9fa8-4abf-bd98-d8d49bcb1104)
+* section[findings].entry[0] = Reference(urn:uuid:eca2bf34-9fa8-4abf-bd98-d8d49bcb1104)
 
 Instance: cz-examplertg-practitioner
 InstanceOf: CZ_PractitionerCore
-Description: "Example of practitioner"
+Title: "Practitioner Keller"
+Description: "Author of RTG Imaging report"
 Usage: #example
 * id = "aafd64f9-36ab-4583-8088-efb93b44db9b"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
@@ -91,7 +93,8 @@ Usage: #example
 Instance: cz-examplertg-patient
 InstanceOf: CZ_PatientCore
 Usage: #example
-Description: "Patient, contact information"
+Title: "Patient Králík"
+Description: "Patient in RTG Imaging report"
 * id = "62d2aa9a-a15f-4e43-9458-fec16c1c4882"
 * identifier[CPOJ][+].system = "https://ncez.mzcr.cz/fhir/sid/cpoj"
 * identifier[CPOJ][=].value = "0551621110"
@@ -121,8 +124,8 @@ Description: "Patient, contact information"
 
 Instance: cz-examplertg-order
 InstanceOf: CZ_ImagingOrderInformation
-Usage: #inline
-Title: "Imaging order for Plain X-ray"
+Usage: #example
+Title: "Imaging order: RTG Imaging report"
 Description: "Imaging order for Plain X-ray"
 * id = "d6784779-d008-447d-90cf-89d5d53a0f04"
 * identifier[+].system = "https://www.homolka.cz/"
@@ -149,8 +152,8 @@ Description: "Imaging order for Plain X-ray"
 Instance: cz-examplertg-condition1
 InstanceOf: CZ_ConditionImage
 Usage: #example
-Description: "Reason For Admission of RTG"
-Title: "Reason For Admission of RTG"
+Description: "Reason For Admission of RTG Imaging report"
+Title: "Condition - Reason For Admission: RTG Imaging report"
 * id = "e20f7fc3-0237-496a-a57a-18acac3776df"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * code.coding = #S01.8 "Otevřená rána jiných částí hlavy"
@@ -159,15 +162,15 @@ Title: "Reason For Admission of RTG"
 Instance: cz-examplertg-device
 InstanceOf: CZ_DeviceObserver
 Usage: #example
-Description: "Radiographic imaging device"
-Title: "Device - Radiographic unit"
+Description: "Radiographic imaging device used in RTG Imaging report"
+Title: "Device - Radiographic unit: RTG Imaging report"
 * type = $sct#68080007 "Radiographic unit"
 
 Instance: cz-examplertg-coverage
 InstanceOf: CZ_Coverage
-Description: "Example of coverage"
+Description: "Example of coverage in RTG Imaging report"
 Usage: #example
-Title: "Coverage - Healthcare insurance company"
+Title: "Coverage: RTG Imaging report"
 * status = #active
 * beneficiary = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * payor = Reference(cz-examplertg-organization)
@@ -175,8 +178,8 @@ Title: "Coverage - Healthcare insurance company"
 Instance: cz-examplertg-organization
 InstanceOf: CZ_OrganizationCore
 Usage: #example
-Description: "Example of insurance organisation"
-Title: "Organization - Healthcare insurance company"
+Description: "Example of insurance organisation in RTG Imaging report"
+Title: "Organization - Healthcare insurance company: RTG Imaging report"
 * name = "Všeobecná zdravotní pojišťovna ČR"
 * identifier[KP].system =  "https://ncez.mzcr.cz/fhir/sid/kp"
 * identifier[KP].value = "111"
@@ -184,8 +187,8 @@ Title: "Organization - Healthcare insurance company"
 Instance: cz-examplertg-clinicalQuestion
 InstanceOf: CZ_ClinicalQuestion
 Usage: #example
-Description: "Clinical question"
-Title: "Clinical question in text form"
+Description: "Clinical question in text form for RTG Imaging report"
+Title: "Clinical question: RTG Imaging report"
 * id = "e952169d-c3b7-4f4a-9eea-039e8708ff35"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * category = $hl7-condition-category-cs#encounter-diagnosis
@@ -194,8 +197,8 @@ Title: "Clinical question in text form"
 Instance: cz-examplertg-imagingStudy
 InstanceOf: CZ_StudyImaging
 Usage: #example
-Description: "Imaging study of RTG"
-Title: "Imaging study of RTG"
+Description: "Imaging study of RTG Imaging report"
+Title: "Imaging study: RTG Imaging report"
 * id = "fc79917b-b1b0-44a6-beaa-e9715322c834"
 * identifier[studyInstanceUid].system = "urn:dicom:uid"
 * identifier[studyInstanceUid].value = "urn:oid:1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.1"
@@ -205,13 +208,13 @@ Title: "Imaging study of RTG"
 Instance: cz-examplertg-observation
 InstanceOf: CZ_ObservationResultImaging
 Usage: #example
-Description: "Observation of RTG"
-Title: "Observation of RTG"
+Description: "Observation of RTG Imaging report"
+Title: "Observation: RTG Imaging report"
 * id = "eca2bf34-9fa8-4abf-bd98-d8d49bcb1104"
 * language = #cs
 * status = #final
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
-* performer = Reference(cz-examplertg-practitioner)
+* performer = Reference(urn:uuid:aafd64f9-36ab-4583-8088-efb93b44db9b)
 * code = $sct#168500000 "Radiology result normal" 
 * valueString = "Bez nálezu."
 * effectiveDateTime = "2025-10-06T09:10:00+01:00"
@@ -219,8 +222,8 @@ Title: "Observation of RTG"
 Instance: cz-examplertg-condition2
 InstanceOf: CZ_ConditionImage
 Usage: #example
-Description: "Diagnosis  for RTG"
-Title: "Diagnosis for RTG"
+Description: "Diagnosis for RTG Imaging report"
+Title: "Condition - Diagnosis: RTG Imaging report"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * code.coding[diagnosis] = #T09.3 "Poranění míchy‚ úroveň neurčena" 
 * code.text = "Poranění míchy‚ úroveň neurčena"
@@ -228,8 +231,8 @@ Title: "Diagnosis for RTG"
 Instance: cz-examplertg-procedure
 InstanceOf: CZ_ProcedureImaging
 Usage: #example
-Description: "Procedure of PET+CT"
-Title: "Procedure of PET+CT"
+Description: "Procedure of RTG Imaging report"
+Title: "Procedure: RTG Imaging report"
 * id = "ea2967a5-0d00-461c-8785-b5affef4791c"
 * code.coding = $sct#168537006 "Plain X-ray"
 * status = #completed
@@ -239,8 +242,8 @@ Title: "Procedure of PET+CT"
 Instance: cz-examplertg-diagnosticReport
 InstanceOf: CZ_DiagnosticReport
 Usage: #example
-Description: "Diagnostic report of RTG"
-Title: "Diagnostic report of RTG"
+Description: "Diagnostic report of RTG Imaging report"
+Title: "Diagnostic report: RTG Imaging report"
 * id = "bd3e7b78-bfaa-428e-9168-8cd29cf54aba"
 * extension[composition].valueReference = Reference(urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9)
 * category = #RAD

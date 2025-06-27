@@ -1,7 +1,7 @@
 Profile: CZ_DiagnosticReport
 Parent: DiagnosticReport
 Id: cz-diagnostic-report
-Title: "DiagnosticReport: Imaging Report (CZ)"
+Title: "Diagnostic Report: Imaging Report (CZ)"
 Description: "Diagnostic Report used to represent an entry of a Imaging Report, including its context, for the scope of the Czech national interoperability project."
 * ^publisher = "HL7 CZ"
 * ^copyright = "HL7 Czech Republic"
@@ -30,9 +30,9 @@ Description: "Diagnostic Report used to represent an entry of a Imaging Report, 
 * result ^short = "results" // add reference to the used profiles
 * imagingStudy 0..0
 * presentedForm 1..*
-* presentedForm obeys presentedform-01
+* obeys presentedform-01
 
 Invariant: presentedform-01
 Description: "At least one of presented form has PDF format"
 Severity: #warning
-Expression: "$this.contentType = '#application/pdf'"
+Expression: "presentedForm.where(contentType = 'application/pdf').count() > 0"

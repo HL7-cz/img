@@ -28,3 +28,6 @@ Byli specifikováni aktéři ve těchto rolích:
 ### Seznam povinností
 
 1. Povinnosti pacienta ([CZ_PatientObligationsImg](StructureDefinition-cz-patient-obl-img.html))
+2. Povinnosti informací o žádance ([CZ_ServiceRequestObligationsImg](StructureDefinition-cz-serviceRequest-obl-img.html))
+3. Povinnosti zprávy ze zobrazovacích metod ([CZ_DiagnosticReportObligationsImg](StructureDefinition-cz-diagnosticReport-obl-img.html))
+4. Povinnosti výsledku vyšetření ([CZ_ObservationResultObligationsImg](StructureDefinition-cz-patient-obl-img.html))

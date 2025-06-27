@@ -28,3 +28,6 @@ Actors were specified in these roles:
 ### Obligations List
 
 1. Patient Obligations ([CZ_PatientObligationsImg](StructureDefinition-cz-patient-obl-img.html))
+2. Service Request Obligations ([CZ_ServiceRequestObligationsImg](StructureDefinition-cz-serviceRequest-obl-img.html))
+3. Diagnostic Report Obligations ([CZ_DiagnosticReportObligationsImg](StructureDefinition-cz-diagnosticReport-obl-img.html))
+4. Observation Result Obligations ([CZ_ObservationResultObligationsImg](StructureDefinition-cz-patient-obl-img.html))

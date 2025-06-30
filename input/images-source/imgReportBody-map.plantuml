@@ -1,0 +1,87 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logical Model |
+| <#TECHNOLOGY>  Profile |
+endlegend
+class "Imaging Report Body" <<LogicalModel>> [[StructureDefinition-BodyImagingReportCz.html]]
+note top #EEEEAE [[ConceptMap-BodyImagingReport2FHIR-cz.html]]
+Concept Map
+endnote
+
+class "cz-composition-imaging" <<Profile>> [[StructureDefinition-cz-composition-imaging.html]]
+class "cz-imagingOrderInformation" <<Profile>> [[StructureDefinition-cz-imagingOrderInformation.html]]
+class "cz-conditionImage" <<Profile>> [[StructureDefinition-cz-conditionImage.html]]
+'class "cz-encounter" <<Profile>> [[StructureDefinition-cz-encounter.html]]
+class "cz-study-imaging" <<Profile>> [[StructureDefinition-cz-study-imaging.html]]
+class "cz-clinicalQuestion" <<Profile>> [[StructureDefinition-cz-clinicalQuestion.html]]
+class "cz-procedure-imaging" <<Profile>> [[StructureDefinition-cz-procedure-imaging.html]]
+class "cz-diagnostic-report" <<Profile>> [[StructureDefinition-cz-diagnostic-report.html]]
+class "cz-keyImage-documentReference" <<Profile>> [[StructureDefinition-cz-keyImage-documentReference.html]]
+class "cz-observation-result-imaging" <<Profile>> [[StructureDefinition-cz-observation-result-imaging.html]]
+class "cz-radiationDoseObservation" <<Profile>> [[StructureDefinition-cz-radiationDoseObservation.html]]
+'class "cz-coverage" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html]]
+'class "cz-appointment" <<Profile>> [[StructureDefinition-cz-appointment.html]]
+class "cz-specimen" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-specimen.html]]
+'class "cz-observationImage" <<Profile>> [[StructureDefinition-cz-observationImage.html]]
+'class "cz-bodyweight" <<Profile>> [[StructureDefinition-cz-bodyweight.html]]
+'class "cz-bodyheight" <<Profile>> [[StructureDefinition-cz-bodyheight.html]]
+class "cz-MedicationAdministration" <<Profile>> [[StructureDefinition-cz-MedicationAdministration.html]]
+'class "cz-deviceUseStatement" <<Profile>> [[StructureDefinition-cz-deviceUseStatement.html]]
+class "cz-allergyIntolerance" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-allergyIntolerance.html]]
+class "cz-carePlanImage" <<Profile>> [[StructureDefinition-cz-carePlanImage.html]]
+
+"Imaging Report Body" <|. "cz-imagingOrderInformation"
+"Imaging Report Body" <|. "cz-composition-imaging"
+"Imaging Report Body" <|. "cz-study-imaging"
+"Imaging Report Body" <|. "cz-clinicalQuestion"
+"Imaging Report Body" <|. "cz-procedure-imaging"
+"Imaging Report Body" <|. "cz-diagnostic-report"
+"Imaging Report Body" <|. "cz-keyImage-documentReference"
+"Imaging Report Body" <|. "cz-observation-result-imaging"
+"Imaging Report Body" <|. "cz-radiationDoseObservation"
+'"Imaging Report Body" <|. "cz-appointment"
+'"Imaging Report Body" <|. "cz-coverage"
+"Imaging Report Body" <|. "cz-conditionImage"
+'"Imaging Report Body" <|. "cz-encounter"
+"Imaging Report Body" <|. "cz-specimen"
+'"Imaging Report Body" <|. "cz-observationImage"
+'"Imaging Report Body" <|. "cz-bodyweight"
+'"Imaging Report Body" <|. "cz-bodyheight"
+"Imaging Report Body" <|. "cz-MedicationAdministration"
+'"Imaging Report Body" <|. "cz-deviceUseStatement"
+"Imaging Report Body" <|. "cz-allergyIntolerance"
+"Imaging Report Body" <|. "cz-carePlanImage"
+
+"cz-imagingOrderInformation" -d[hidden]-> "cz-composition-imaging"
+"cz-composition-imaging" -d[hidden]-> "cz-study-imaging"
+"cz-study-imaging" -d[hidden]-> "cz-clinicalQuestion"
+"cz-clinicalQuestion" -d[hidden]-> "cz-diagnostic-report"
+"cz-diagnostic-report" -d[hidden]-> "cz-keyImage-documentReference"
+"cz-keyImage-documentReference" -d[hidden]-> "cz-observation-result-imaging"
+"cz-observation-result-imaging" -d[hidden]-> "cz-radiationDoseObservation"
+"cz-radiationDoseObservation" -d[hidden]-> "cz-procedure-imaging"
+"cz-procedure-imaging" -d[hidden]-> "cz-conditionImage"
+"cz-conditionImage" -d[hidden]-> "cz-specimen"
+'"cz-conditionImage" -d[hidden]-> "cz-appointment"
+'"cz-appointment" -d[hidden]-> "cz-coverage"
+'"cz-coverage" -d[hidden]-> "cz-specimen"
+"cz-specimen" -d[hidden]-> "cz-MedicationAdministration"
+'"cz-specimen" -d[hidden]-> "cz-observationImage"
+'"cz-observationImage" -d[hidden]-> "cz-bodyweight"
+'"cz-bodyweight" -d[hidden]-> "cz-bodyheight"
+'"cz-bodyheight" -d[hidden]-> "cz-MedicationAdministration"
+'"cz-MedicationAdministration" -d[hidden]-> "cz-deviceUseStatement"
+'"cz-deviceUseStatement" -d[hidden]-> "cz-allergyIntolerance"
+"cz-MedicationAdministration" -d[hidden]-> "cz-allergyIntolerance"
+"cz-allergyIntolerance" -d[hidden]-> "cz-carePlanImage"
+
+@enduml

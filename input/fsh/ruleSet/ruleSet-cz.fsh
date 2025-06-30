@@ -58,3 +58,14 @@ RuleSet: BasedOnOrderReference( slicename )
 * basedOn[{slicename}] only Reference( CZ_ImagingOrderInformation )
   * identifier 1..1
   * identifier only CZ_AccessionNumberIdentifier
+
+RuleSet: UCUMCopyrightForVS
+* ^copyright = "The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. https://ucum.org/trac/wiki/TermsOfUse"
+
+RuleSet: ObligationActorAndCode(actor, code)
+* ^extension[$obligation][+].extension[code].valueCode = {code}
+* ^extension[$obligation][=].extension[actor].valueCanonical = {actor}
+
+RuleSet: ObligationElement(element)
+// Used for profile level obligations. Insert after obligation code and actor
+* ^extension[$obligation][=].extension[elementId].valueString = {element}

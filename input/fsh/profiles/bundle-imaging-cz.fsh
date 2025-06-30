@@ -93,8 +93,11 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * entry contains coverage 0..*
 * entry[coverage].resource only CZ_Coverage
 
+* entry contains medicationAdministration 0..*
+* entry[medicationAdministration].resource only CZ_MedicationAdministration 
+
 * entry contains medication 0..*
-* entry[medication].resource only CZ_Medication  
+* entry[medication].resource only CZ_Medication
 
 * entry contains condition 0..*
 * entry[condition].resource only CZ_ConditionImage
@@ -104,6 +107,15 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 
 * entry contains imagingStudy 0..*
 * entry[imagingStudy].resource only CZ_StudyImaging
+
+* entry contains keyImageReference 0..*
+* entry[keyImageReference].resource only CZ_KeyImageDocumentReference
+
+* entry contains procedure 0..*
+* entry[procedure].resource only CZ_ProcedureImaging
+
+* entry contains allergyIntolerance 0..*
+* entry[allergyIntolerance].resource only CZ_AllergyIntolerance
 
 * signature ^short = "Report Digital Signature"
   * type ^short = "Digital Signature Purposes"

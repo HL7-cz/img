@@ -3,7 +3,9 @@ skinparam topurl StructureDefinition-
 
 * [[ImagingReportCz.html Zpráva ze zobrazovacích metod]]
 ** [[HeaderImagingReportCz.html Hlavička dokumentu]]
-** [[BodyImagingReportCz.html Tělo dokumentu]
+** [[BodyImagingReportCz.html Tělo dokumentu]]
+** Vizuální podoba dokumentu
+** Přílohy
 '** Link to Related Report
 '** Media
 '** Dicom Metadata

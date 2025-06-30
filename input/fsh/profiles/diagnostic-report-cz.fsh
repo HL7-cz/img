@@ -1,7 +1,7 @@
 Profile: CZ_DiagnosticReport
 Parent: DiagnosticReport
 Id: cz-diagnostic-report
-Title: "DiagnosticReport: Imaging Report (CZ)"
+Title: "Diagnostic Report: Imaging Report (CZ)"
 Description: "Diagnostic Report used to represent an entry of a Imaging Report, including its context, for the scope of the Czech national interoperability project."
 * ^publisher = "HL7 CZ"
 * ^copyright = "HL7 Czech Republic"
@@ -10,9 +10,10 @@ Description: "Diagnostic Report used to represent an entry of a Imaging Report, 
 
 * insert SetFmmandStatusRule ( 0, draft )
 
-* extension contains $diagnostic-report-composition-r5 named DiagnosticReportCompositionR5 1..1
-* extension[DiagnosticReportCompositionR5].valueReference only Reference(CZ_CompositionImagingReport)
-* extension[DiagnosticReportCompositionR5].valueReference 1..1
+* extension contains
+  $artifact-version-url-5 named artifactVersion 0..1
+  and $cvDiagnosticReport-supportingInfo named supportingInfo 0..*
+  and $cvDiagnosticReport-composition named composition 1..1
 
 * basedOn only Reference(CZ_ImagingOrderInformation)
 //* basedOn.extension contains DiagnosticReportBasedOnRequisition named basedOn-requisition 0..*
@@ -28,3 +29,10 @@ Description: "Diagnostic Report used to represent an entry of a Imaging Report, 
 * specimen ^short = "Specimens this report is based on." // add reference to the used profile
 * result ^short = "results" // add reference to the used profiles
 * imagingStudy 0..0
+* presentedForm 1..*
+* obeys presentedform-01
+
+Invariant: presentedform-01
+Description: "At least one of presented form has PDF format"
+Severity: #warning
+Expression: "presentedForm.where(contentType = 'application/pdf').count() > 0"

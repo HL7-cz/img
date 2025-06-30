@@ -109,17 +109,12 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^short = "Imaging Study"
   * ^definition = "This section holds information related to the imaging studies covered by this report."
   // * title = "Imaging Studies"
-  * code = $loinc#18726-0
-  * entry MS
-    * ^slicing.discriminator.type = #profile
-    * ^slicing.discriminator.path = "$this"
-    * ^slicing.rules = #open
-    * ^slicing.ordered = false
-  * entry contains imagingstudy 1..* MS
-  * entry[imagingstudy]
+  * code = $loinc#18726-0 "Radiology studies (set)"
+  * entry 1..* 
+  * entry
     * ^short = "Imaging Study Reference"
     * ^definition = "This entry holds a reference to the Imaging Study instance that is associated with this Composition."
-  * entry[imagingstudy] only Reference(CZ_StudyImaging)  
+  * entry only Reference(CZ_StudyImaging)  
 
 
 ///////////////////////////////// ORDER SECTION ///////////////////////////////////////
@@ -130,16 +125,12 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
   * ^extension[0].valueString = "Section"
   * code = $loinc#55115-0 "Requested imaging studies information Document"
+  * entry 0..*
+
   * entry
-    * insert SliceElement( #profile, $this )
-  * entry contains 
-      order 0..*
-
-
-  * entry[order]
     * ^short = "Order reference"
     * ^definition = "This entry holds a reference to the order for the Imaging Study and report."
-  * entry[order] only Reference(CZ_ImagingOrderInformation)  
+  * entry only Reference(CZ_ImagingOrderInformation)  
 
 ///////////////////////////////// Clinical question SECTION ///////////////////////////////////////
 * section[clinicalQuestion]
@@ -148,7 +139,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
   * ^extension[0].valueString = "Section"
   * code = $loinc#18785-6	"Radiology Reason for study (narrative)"
-  * entry 0..
+  * entry 1..
   * entry only Reference(CZ_ClinicalQuestion) 
 
 ///////////////////////////////// HISTORY SECTION ///////////////////////////////////////
@@ -161,57 +152,36 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section[procedure]
   * ^short = "Procedure"
   * code = $loinc#55111-9 "Current imaging procedure descriptions Document"
-  * entry 
-    * insert SliceElement( #profile, $this )
-  * entry contains 
-      procedure 0..*
-  * entry[procedure] only Reference(CZ_ProcedureImaging)
+  * entry 0..*
+  * entry only Reference(CZ_ProcedureImaging)
 
 ////////////////// COMPARISON SECTION //////////////////////////
 * section[comparison]
   * ^short = "History"
   * code = $loinc#18834-2 "Radiology Comparison study (narrative)"
-  * entry
-    * insert SliceElement( #profile, $this )
-  * entry contains 
-      comparedstudy 0..*
-  * entry[comparedstudy] only Reference(CZ_StudyImaging) //or CZ_SelectionImaging
+  * entry 0..*
+  * entry only Reference(CZ_StudyImaging) //or CZ_SelectionImaging
 
 /////////////////// FINDINGS SECTION //////////////////////////
 * section[findings]
   * ^short = "Findings"
   * code = $loinc#59776-5 "Procedure findings Narrative"
-  * entry MS
-    * insert SliceElement( #profile, $this )
-  * entry contains
-      finding 0..* MS and
-      keyimage 0..* MS
-  * entry[finding] only Reference(CZ_ObservationResultImaging)
-  * entry[keyimage] only Reference(CZ_KeyImageDocumentReference) //or KeyImageImagingSelection
+  * entry 0..* 
+  * entry only Reference(CZ_ObservationResultImaging or CZ_KeyImageDocumentReference)
 
 /////////////////// IMPRESSION SECTION //////////////////////////
 * section[impression]
   * ^short = "Impressions"
   * code = $loinc#19005-8 "Radiology Imaging study [Impression] (narrative)"
-  * entry MS
-    * insert SliceElement( #profile, $this )
-  * entry contains
-      finding 0..* MS and
-      impression 0..* MS and
-      keyimage 0..* MS
-  * entry[finding] only Reference(CZ_ObservationResultImaging)
-  * entry[impression] only Reference(CZ_ConditionImage)
-  * entry[keyimage] only Reference(CZ_KeyImageDocumentReference) //or KeyImageImagingSelection
+  * entry 0..* 
+  * entry only Reference(CZ_ObservationResultImaging or CZ_ConditionImage or CZ_KeyImageDocumentReference)
 
 /////////////////// RECOMMENDATION SECTION //////////////////////////
 * section[recommendation]
   * ^short = "Recommendations"
   * code = $loinc#18783-1 "Radiology Study recommendation (narrative)"
-  * entry MS
-    * insert SliceElement( #profile, $this )
-  * entry contains
-      CarePlan 0..* MS
-  * entry[CarePlan] only Reference(CarePlan)
+  * entry 0..* 
+  * entry only Reference(CZ_CarePlanImage)
 
 // /////////////////// COMMUNICATION SECTION //////////////////////////
 * section[communication]

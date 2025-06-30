@@ -1,0 +1,36 @@
+@startuml
+hide circle
+hide stereotype
+hide members
+hide methods
+skinparam linetype ortho
+skinparam class {
+BackgroundColor<<LogicalModel>> #APPLICATION
+BackgroundColor<<Profile>> #TECHNOLOGY
+}
+legend right
+| <#APPLICATION>  Logický model |
+| <#TECHNOLOGY>  Profil |
+endlegend
+class "Hlavička zprávy ze zobrazovacích metod" <<LogicalModel>> [[StructureDefinition-HeaderImagingReportCz.html]]
+note top #EEEEAE [[ConceptMap-HeaderImagingReport2FHIR-cz.html]]
+Concept Mapa
+endnote
+
+class "cz-coverage" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html]]
+class "cz-patient-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html]]
+class "cz-practitioner-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitioner-core.html]]
+class "cz-bundle-imaging" <<Profile>> [[StructureDefinition-cz-bundle-imaging.html]]
+class "cz-composition-imaging" <<Profile>> [[StructureDefinition-cz-composition-imaging.html]]
+
+"Hlavička zprávy ze zobrazovacích metod" <|. "cz-composition-imaging"
+"Hlavička zprávy ze zobrazovacích metod" <|. "cz-bundle-imaging"
+"Hlavička zprávy ze zobrazovacích metod" <|. "cz-patient-core"
+"Hlavička zprávy ze zobrazovacích metod" <|. "cz-coverage"
+"Hlavička zprávy ze zobrazovacích metod" <|. "cz-practitioner-core"
+
+"cz-bundle-imaging" -d[hidden]-> "cz-composition-imaging"
+"cz-composition-imaging" -d[hidden]-> "cz-patient-core"
+"cz-patient-core" -d[hidden]-> "cz-coverage"
+"cz-coverage" -d[hidden]-> "cz-practitioner-core"
+@enduml

@@ -8,8 +8,8 @@ skinparam topurl StructureDefinition-
 ***_ Identifikace žadatele (osoby)
 ***_ Kontaktní údaje žadatele
 ***_ Organizace žadatele (objednatele)
-** [[ReasonForAdmision.html Důvod vyžádání (objednání)]]
-** [[DICOMMetadata.html DICOM metadata]]
+** [[ReasonForAdmission.html Důvod vyžádání (objednání)]]
+** [[DcmMetadata.html DICOM metadata]]
 ** [[SpecimenInformation.html Informace o vzorku]]
 ** [[ReportOfImagingMethod.html Zpráva ze zobrazovacích metod]]
 ***_ Typ modality
@@ -25,7 +25,8 @@ skinparam topurl StructureDefinition-
 ***_ Doporučení
 ***_ Textové části dokumentu
 ** [[LinkToRelatedReport.html Odkaz na související zprávu]]
-** [[Attachments.html Média (přílohy)]]
+** [[KeyImagesAttachment.html Klíčové snímky]]
+'** [[Attachments.html Média (přílohy)]]
 
 /'***_ Order placer
 ***_ Order reason text

@@ -1,0 +1,17 @@
+@startuml
+"Imaging Report Creator" as creator
+"Imaging Report Repository" as repos
+"Imaging Report Consumer" as consumer
+"Create a report" as (create)
+"Use a report" as (use)
+
+"Close/Save a report" as (save)
+"Search/Receive a report" as (receive)
+
+creator --> (create)
+creator --> (save)
+consumer --> (use)
+consumer --> (receive)
+repos --> (save)
+repos --> (receive)
+@enduml

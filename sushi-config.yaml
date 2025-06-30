@@ -9,7 +9,7 @@ name: HL7CzImagingReportImplementationGuide
 title: HL7 Czech Imaging Report IG
 description: Czech Imaging Report Implementation Guide
 status: draft # draft | active | retired | unknown
-version: 0.0.1
+version: 0.0.2
 language: cs
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
@@ -41,6 +41,7 @@ dependencies:
   hl7.fhir.eu.base: current
 #  hl7.fhir.eu.imaging: current -- nelze je na R5
   hl7.fhir.extensions.r5: 4.0.1
+  hl7.fhir.uv.extensions: 5.2.0
   hl7.fhir.eu.extensions: current
 #
 #
@@ -72,7 +73,7 @@ pages:
   scope-and-content.md:
     title: Scope and content
   scope-and-content-cs.md:
-    title: Oblasti a obsah
+    title: Rozsah použití a obsah
   background.md:
     title: Background
   background-cs.md:
@@ -112,7 +113,7 @@ pages:
   use-cases.md:
     title: Use cases
   use-cases-cs.md:
-    title: Příklady užití
+    title: Případy užití
   workflow.md:
     title: Workflow  
   workflow-cs.md:
@@ -124,6 +125,18 @@ pages:
   downloads-cs.md:
     title: Download
 # === MAP ====
+  Header-map.html:
+    title: Header Model map
+  Header-map-cs.html:
+    title: Mapování logického modelu hlavičky
+  Body-map.html:
+    title: Body Model map
+  Body-map-cs.html:
+    title: Mapování logického modelu těla
+  Attachment-map.html:
+    title: Presented Form and Attachment Model map
+  Attachment-map-cs.html:
+    title: Mapování logického modelu vizuální podoby dokumentu a příloh
 
 # TODO
 
@@ -314,7 +327,19 @@ menu:
 #     resources:
 #     - StructureDefinition/bark-control
 #     - StructureDefinition/bee-sting
-#
+groups:
+  obligations:
+    name:  Actors and Obligations (Informative)
+    description: Actors and Obligations used to describe the Imaging Report functional requirements for the specified data elements. Informative for this version of the guide.
+    resources:
+      - ActorDefinition/actor-consumer-img
+      - ActorDefinition/actor-creator-img
+      - ActorDefinition/actor-repos-img
+      - StructureDefinition/cz-diagnosticReport-obl-img
+      - StructureDefinition/cz-observationResult-obl-img
+      - StructureDefinition/cz-patient-obl-img
+      - StructureDefinition/cz-serviceRequest-obl-img
+
 #
 # The ImplementationGuide resource defines several other properties
 # not represented above. These properties can be used as-is and

@@ -2,7 +2,7 @@
 Profile:    CZ_MedicationAdministration
 Parent:     MedicationAdministration
 Id:         cz-MedicationAdministration
-Title:      "Medication Administration"
+Title:      "Medication Administration: Imaging Report (CZ)"
 Description: "Czech national profile for a medication administration."
 //-------------------------------------------------------------------------------------------
 * ^experimental = false
@@ -12,10 +12,11 @@ Description: "Czech national profile for a medication administration."
 * . ^definition = "This profile is derived from the Medication Administration in FHIR, which is a record for tracking the administration of medications."
 
 * identifier 1..
-* status MS
+* status
 * status from $hl7MedicationAdminStatus
 * medication[x]
-* medication[x] only Reference(CZ_Medication) or CodeableConcept
-* medicationCodeableConcept from DLPLecivePripravkyCzVs (required)
+* medicationReference only Reference(CZ_Medication)
+* medicationCodeableConcept from DLPLecivePripravkyCzVs (preferred)
 * dosage 
-* dosage only Dosage
+  * route 0..1
+  * dose 0..1

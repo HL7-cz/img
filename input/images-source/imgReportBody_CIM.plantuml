@@ -9,8 +9,8 @@ skinparam topurl StructureDefinition-
 ***_ Name of the applicant (person)
 ***_ Applicant contact details - address
 ***_ Applicant (client) organization
-** [[ReasonForAdmision.html Reason for Admission]]
-** [[DICOMMetadata.html DICOM Metadata]]
+** [[ReasonForAdmission.html Reason for Admission]]
+** [[DcmMetadata.html DICOM Metadata]]
 ** [[SpecimenInformation.html Sample Information]]
 ** [[ReportOfImagingMethod.html Report of Imaging Method]]
 ***_ Modality type
@@ -26,7 +26,8 @@ skinparam topurl StructureDefinition-
 ***_ Recommendation
 ***_ Text parts of the document
 ** [[LinkToRelatedReport.html Link to Related Report]]
-** [[Attachments.html Media (Attachments)]]
+** [[KeyImagesAttachment.html Key Images]]
+'** [[Attachments.html Media (Attachments)]]
 
 /'***_ Order placer
 ***_ Order reason text

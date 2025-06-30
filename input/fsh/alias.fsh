@@ -5,15 +5,28 @@ Alias: $orpha = https://www.orpha.net
 Alias: $loinc =  http://loinc.org
 Alias: $iso3166 = urn:iso:std:iso:3166
 Alias: $media-category = http://terminology.hl7.org/CodeSystem/media-category
+Alias: $dcm = http://dicom.nema.org/resources/ontology/DCM
+Alias: $ucum = http://unitsofmeasure.org
+Alias: $mkn-10 = https://mkn10.uzis.cz
+Alias: $hl7-condition-category-cs =  http://terminology.hl7.org/CodeSystem/condition-category
+Alias: $typeClinicalEvent = https://hl7.cz/fhir/img-order/CodeSystem/cz-typeClinicalEvent-cs
+Alias: $hl7-allergyintoleranceclinicalstatus = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|4.0.1
 
 // ValueSet
 Alias: $hl7MedicationAdminStatus = http://hl7.org/fhir/ValueSet/medication-admin-status
 Alias: $hl7-condition-category = http://hl7.org/fhir/ValueSet/condition-category
 Alias: $hl7-clinicalFindings = http://hl7.org/fhir/ValueSet/clinical-findings
+Alias: $sct-condition-code = http://hl7.org/fhir/ValueSet/condition-code
+Alias: $hl7-condition-category = http://hl7.org/fhir/ValueSet/condition-category
+Alias: $mkn-10-problem-list = https://terminology.ncez.mzcr.cz/ValueSet/mkn-10
+Alias: $sct-device-type = http://hl7.org/fhir/ValueSet/device-type
+Alias: $sctBodySite = http://hl7.org/fhir/ValueSet/body-site
+Alias: $hl7-diagnostic-category = http://hl7.org/fhir/ValueSet/diagnostic-service-sections
+Alias: $dlp_lecprip = https://opendata.sukl.cz/ValueSet/dlp_lecivepripravky
+Alias: $dlp_formy = https://opendata.sukl.cz/ValueSet/dlp_formy
 
 // Extensions
 Alias: $event-basedOn = http://hl7.org/fhir/StructureDefinition/event-basedOn
-Alias: $artifact-relatedArtifact = http://hl7.org/fhir/StructureDefinition/artifact-relatedArtifact
 Alias: $composition.version-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version
 Alias: $information-recipient = http://hl7.eu/fhir/StructureDefinition/information-recipient
 Alias: $diagnostic-report-composition-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
@@ -28,3 +41,14 @@ Alias: $individual-genderIdentity         = http://hl7.org/fhir/StructureDefinit
 Alias: $information-recipient-url         = http://hl7.eu/fhir/StructureDefinition/information-recipient
 Alias: $document-reference-thumbnail-url  = http://hl7.org/fhir/StructureDefinition/documentreference-thumbnail
 Alias: $note-url                          = http://hl7.org/fhir/StructureDefinition/note|5.2.0
+Alias: $cvDocumentReference-basedOn       = http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.basedOn
+Alias: $obligation = http://hl7.org/fhir/StructureDefinition/obligation
+Alias: $cvDiagnosticReport-supportingInfo = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.supportingInfo
+Alias: $cvDiagnosticReport-composition = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
+Alias: $artifact-version-url-5            = http://hl7.org/fhir/StructureDefinition/artifact-version|5.2.0
+
+// Actor Canonical
+
+Alias: $server = http://hl7.cz/fhir/img/actor-server-img
+Alias: $creator = http://hl7.cz/fhir/img/actor-creator-img
+Alias: $consumer = http://hl7.cz/fhir/img/actor-consumer-img

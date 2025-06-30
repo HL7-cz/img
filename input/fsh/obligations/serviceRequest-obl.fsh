@@ -7,14 +7,14 @@ Description: "This profile defines obligations for an Order information in FHIR 
 // * ^copyright = "HL7 Europe"
 * insert SetFmmandStatusRule ( 0, informative)
 
-* identifier insert ObligationSet-11_server-may-02
-* text insert ObligationSet-06_server-shall-03
-* status insert ObligationSet-12_server-may-03
-* intent insert ObligationSet-12_server-may-03
-* category insert ObligationSet-12_server-may-03
-* subject insert ObligationSet-06_server-shall-03
-* authoredOn insert ObligationSet-06_server-shall-03
-* requester insert ObligationSet-12_server-may-03
-* reasonCode insert ObligationSet-09_server-should-03
+* identifier insert ObligationSet-04_creator-should-if-known
+* text insert ObligationSet-01_creator-shall-able
+* status insert ObligationSet-04_creator-should-if-known
+* intent insert ObligationSet-04_creator-should-if-known
+* category insert ObligationSet-04_creator-should-if-known
+* subject insert ObligationSet-01_creator-shall-able
+* authoredOn insert ObligationSet-01_creator-shall-able
+* requester insert ObligationSet-04_creator-should-if-known
+* reasonCode insert ObligationSet-03_creator-shall-if-known
 * reasonReference insert ObligationSet-09_server-should-03
 

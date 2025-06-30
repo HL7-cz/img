@@ -7,18 +7,18 @@ Description: "This profile defines obligations for an Observation result in FHIR
 // * ^copyright = "HL7 Europe"
 * insert SetFmmandStatusRule ( 0, informative)
 
-* hasMember insert ObligationSet-03_author-may
-* component insert ObligationSet-03_author-may
-* specimen insert ObligationSet-12_server-may-03
-* referenceRange insert ObligationSet-11_server-may-02
-* dataAbsentReason insert ObligationSet-03_author-may
-* value[x] insert ObligationSet-03_author-may
-* interpretation insert ObligationSet-03_author-may
-* method insert ObligationSet-03_author-may
-* derivedFrom insert ObligationSet-03_author-may
-* bodySite insert ObligationSet-03_author-may
-* status insert ObligationSet-03_author-may
-* code insert ObligationSet-01_author-shall
-* category insert ObligationSet-03_author-may 
-* device insert ObligationSet-03_author-may
-* valueDateTime insert ObligationSet-12_server-may-03
+* hasMember insert ObligationSet-04_creator-should-if-known
+* component insert ObligationSet-04_creator-should-if-known
+* specimen insert ObligationSet-03_creator-shall-if-known
+* referenceRange insert ObligationSet-03_creator-shall-if-known
+* dataAbsentReason insert ObligationSet-04_creator-should-if-known
+* value[x] insert ObligationSet-04_creator-should-if-known
+* interpretation insert ObligationSet-04_creator-should-if-known
+* method insert ObligationSet-04_creator-should-if-known
+* derivedFrom insert ObligationSet-04_creator-should-if-known
+* bodySite insert ObligationSet-04_creator-should-if-known
+* status insert ObligationSet-04_creator-should-if-known
+* code insert ObligationSet-01_creator-shall-able
+* category insert ObligationSet-04_creator-should-if-known 
+* device insert ObligationSet-04_creator-should-if-known
+* valueDateTime insert ObligationSet-03_creator-shall-if-known

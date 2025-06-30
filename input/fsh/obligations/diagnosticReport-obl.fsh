@@ -7,14 +7,14 @@ Description: "This profile defines obligations for an Diagnostic report in FHIR 
 // * ^copyright = "HL7 Europe"
 * insert SetFmmandStatusRule ( 0, informative)
 
-* text insert ObligationSet-01_author-shall
-* effectiveDateTime insert ObligationSet-12_server-may-03
-* performer insert ObligationSet-12_server-may-03
-* conclusion insert ObligationSet-01_author-shall
-* conclusionCode insert ObligationSet-03_author-may
-* extension[composition] insert ObligationSet-09_server-should-03
-* status insert ObligationSet-09_server-should-03
-* category insert ObligationSet-09_server-should-03
-* code insert ObligationSet-09_server-should-03
-* subject insert ObligationSet-09_server-should-03
-* presentedForm insert ObligationSet-08_server-should-02
+* text insert ObligationSet-01_creator-shall-able
+* effectiveDateTime insert ObligationSet-03_creator-shall-if-known
+* performer insert ObligationSet-03_creator-shall-if-known
+* conclusion insert ObligationSet-01_creator-shall-able
+* conclusionCode insert ObligationSet-04_creator-should-if-known
+* extension[composition] insert ObligationSet-02_creator-should-able
+* status insert ObligationSet-02_creator-should-able
+* category insert ObligationSet-02_creator-should-able
+* code insert ObligationSet-02_creator-should-able
+* subject insert ObligationSet-02_creator-should-able
+* presentedForm insert ObligationSet-01_creator-shall-able

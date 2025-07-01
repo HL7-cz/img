@@ -16,5 +16,5 @@ Description: "This profile defines obligations for an Order information in FHIR 
 * authoredOn insert ObligationSet-01_creator-shall-able
 * requester insert ObligationSet-04_creator-should-if-known
 * reasonCode insert ObligationSet-03_creator-shall-if-known
-* reasonReference insert ObligationSet-09_server-should-03
+* reasonReference insert ObligationSet-03_creator-shall-if-known
 

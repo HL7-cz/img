@@ -400,9 +400,9 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
 * group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-diagnostic-report"
-* group[=].element[+].code = #Body.ReportOfImagingMethod.resultOfImagingMethod
+* group[=].element[+].code = #resultOfImagingMethod
 * group[=].element[=].display = "A.2.4.9 - Result of the imaging method"
-* group[=].element[=].target.code = #Composition.extension[diagnosticreport-reference].ofType(CZ_DiagnosticReport)			
+* group[=].element[=].target.code = #Composition.extension[diagnosticreport-reference].ofType(CZ_DiagnosticReport)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #resultOfImagingMethod.narrativeText
@@ -410,9 +410,41 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_DiagnosticReport.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #resultOfImagingMethod.author
+* group[=].element[=].display = "A.2.4.9.3 - Result release date and time"
+* group[=].element[=].target.code = #CZ_DiagnosticReport.effectiveDateTime
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #resultOfImagingMethod.author
+* group[=].element[=].display = "A.2.4.9.4 - Result author"
+* group[=].element[=].target.code = #CZ_DiagnosticReport.performer[author]
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #resultOfImagingMethod.conclusion
+* group[=].element[=].display = "A.2.4.10 - Conclusion"
+* group[=].element[=].target.code = #CZ_DiagnosticReport.conclusionCode
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[+].code = #resultOfImagingMethod.conclusion.text
+* group[=].element[=].display = "A.2.4.10.1 - Conclusion text"
+* group[=].element[=].target.code = #CZ_DiagnosticReport.conclusion
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #resultOfImagingMethod.conclusion.code
+* group[=].element[=].display = "A.2.4.10.2 - Coded conclusion"
+* group[=].element[=].target.code = #CZ_DiagnosticReport.conclusionCode
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #resultOfImagingMethod.textPartsOfDocument
+* group[=].element[=].display = "A.2.4.12 - Text parts of the document"
+* group[=].element[=].target.code = #CZ_DiagnosticReport.presentedForm
+* group[=].element[=].target.display = "This is another representative form of the document, in addition to the PDF version, which must be saved as a text/plain document."
+* group[=].element[=].target.equivalence = #relatedto
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-observation-result-imaging"
 * group[=].element[+].code = #resultOfImagingMethod.formalizedText
 * group[=].element[=].display = "A.2.4.9.2 - Formalized text"
-* group[=].element[=].target.code = ##CZ_DiagnosticReport.result.ofType(CZ_ObservationResultImaging)
+* group[=].element[=].target.code = #CZ_DiagnosticReport.result.ofType(CZ_ObservationResultImaging)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #resultOfImagingMethod.formalizedText.note
@@ -495,36 +527,6 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_ObservationResultImaging.valueDateTime
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #resultOfImagingMethod.dateTimeResult
-* group[=].element[=].display = "A.2.4.9.3 - Result release date and time"
-* group[=].element[=].target.code = #CZ_DiagnosticReport.effectiveDateTime
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #resultOfImagingMethod.author
-* group[=].element[=].display = "A.2.4.9.4 - Result author"
-* group[=].element[=].target.code = #CZ_DiagnosticReport.performer[author]
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #resultOfImagingMethod.conclusion
-* group[=].element[=].display = "A.2.4.10 - Conclusion"
-* group[=].element[=].target.code = #CZ_DiagnosticReport.conclusionCode
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[=].element[+].code = #resultOfImagingMethod.conclusion.text
-* group[=].element[=].display = "A.2.4.10.1 - Conclusion text"
-* group[=].element[=].target.code = #CZ_DiagnosticReport.conclusion
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #resultOfImagingMethod.conclusion.code
-* group[=].element[=].display = "A.2.4.10.2 - Coded conclusion"
-* group[=].element[=].target.code = #CZ_DiagnosticReport.conclusionCode
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #resultOfImagingMethod.textPartsOfDocument
-* group[=].element[=].display = "A.2.4.12 - Text parts of the document"
-* group[=].element[=].target.code = #CZ_DiagnosticReport.presentedForm
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
 * group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-carePlanImage"
 * group[=].element[+].code = #Body.ReportOfImagingMethod.recommendation

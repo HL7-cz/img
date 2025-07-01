@@ -94,7 +94,10 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * entry[coverage].resource only CZ_Coverage
 
 * entry contains medicationAdministration 0..*
-* entry[medicationAdministration].resource only CZ_MedicationAdministration  
+* entry[medicationAdministration].resource only CZ_MedicationAdministration 
+
+* entry contains medication 0..*
+* entry[medication].resource only CZ_Medication
 
 * entry contains condition 0..*
 * entry[condition].resource only CZ_ConditionImage

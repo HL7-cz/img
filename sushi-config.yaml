@@ -9,7 +9,7 @@ name: HL7CzImagingReportImplementationGuide
 title: HL7 Czech Imaging Report IG
 description: Czech Imaging Report Implementation Guide
 status: draft # draft | active | retired | unknown
-version: 0.0.1
+version: 0.0.2
 language: cs
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
@@ -336,7 +336,10 @@ groups:
       - ActorDefinition/actor-consumer-img
       - ActorDefinition/actor-creator-img
       - ActorDefinition/actor-repos-img
+      - StructureDefinition/cz-diagnosticReport-obl-img
+      - StructureDefinition/cz-observationResult-obl-img
       - StructureDefinition/cz-patient-obl-img
+      - StructureDefinition/cz-serviceRequest-obl-img
 
 #
 # The ImplementationGuide resource defines several other properties

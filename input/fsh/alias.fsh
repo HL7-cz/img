@@ -11,6 +11,7 @@ Alias: $mkn-10 = https://mkn10.uzis.cz
 Alias: $hl7-condition-category-cs =  http://terminology.hl7.org/CodeSystem/condition-category
 Alias: $typeClinicalEvent = https://hl7.cz/fhir/img-order/CodeSystem/cz-typeClinicalEvent-cs
 Alias: $hl7-allergyintoleranceclinicalstatus = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|4.0.1
+Alias: $dlp_lecivePripravky = https://hl7.cz/fhir/core/CodeSystem/cz-dlplecivepripravky-cs
 
 // ValueSet
 Alias: $hl7MedicationAdminStatus = http://hl7.org/fhir/ValueSet/medication-admin-status

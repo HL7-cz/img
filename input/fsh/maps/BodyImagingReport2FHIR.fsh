@@ -480,6 +480,21 @@ Usage: #definition
 * group[=].element[+].code = #resultOfImagingMethod.formalizedText.observationValue
 * group[=].element[=].display = "A.2.4.9.2.7 - Observation value (measurement)"
 * group[=].element[=].target.code = #CZ_ObservationResultImaging.value[x]
+* group[=].element[=].target.display = "Resulting observation value could be in text, numeric or code form."
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[+].code = #resultOfImagingMethod.formalizedText.observationValue
+* group[=].element[=].display = "A.2.4.9.2.7 - Observation value (measurement) in text form"
+* group[=].element[=].target.code = #CZ_ObservationResultImaging.valueString
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #resultOfImagingMethod.formalizedText.observationValue
+* group[=].element[=].display = "A.2.4.9.2.7 - Observation value (measurement) in numeric form"
+* group[=].element[=].target.code = #CZ_ObservationResultImaging.valueQuanity
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #resultOfImagingMethod.formalizedText.observationValue
+* group[=].element[=].display = "A.2.4.9.2.7 - Observation value (measurement) in code form"
+* group[=].element[=].target.code = #CZ_ObservationResultImaging.valueCodeableConcept
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #resultOfImagingMethod.formalizedText.interpretation

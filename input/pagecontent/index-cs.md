@@ -42,7 +42,7 @@ Tato příručka je rozdělena na několik stránek, které jsou uvedeny v horn�
   * {{czCore}}
     * Kde to bylo možné, byly poděděny specifikace z definicí CZ core.
 
-### Závisloti
+### Závislosti
 
 {% include dependency-table.xhtml %}
 

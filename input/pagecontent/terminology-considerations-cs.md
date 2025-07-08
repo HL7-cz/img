@@ -13,24 +13,24 @@ Seznam použitých kódovacích systémů a číselníků:
 | ------------- | ---------------------------------- | ------------------------------------------------ |
 | A.2.3.2       | Biologický druh                    | SNOMED CT [TypeOfSpeciesCodelist]                |
 | A.2.3.3       | Materiál                           | SNOMED CT [SpecimenMaterialCodelist]             |
-| A.2.3.5       | Anatomické umístění                | SNOMED CT [BodyLocation|LocationICT-O-3]         |
+| A.2.3.5       | Anatomické umístění                | SNOMED CT [BodyLocation]                         |
 | A.2.3.6       | Morfologie                         | SNOMED CT [MorfologyCodelist]                    |
-| A.2.3.7       | Zdroj materiálu                    | SNOMED CT or EMDN                                |
+| A.2.3.7       | Zdroj materiálu                    | SNOMED CT                                        |
 | A.2.3.8       | Procedure                          | SNOMED CT [CollectionMethodCodelist]             |
-| A.2.4.3.2     | Reason for examination by code     | SNOMED CT [ReasonCodelist]                       |
-| A.2.4.5.1     | Body Part                          | SNOMED CT [BodyLocation|LocationICT-O-3]         |
-| A.2.4.5.2     | Laterality                         | SNOMED CT [Laterality Codelists]                 |
-| A.2.4.6.7.1   | Body location code                 | SNOMED CT [BodyLocation|LocationICT-O-3]         |
-| A.2.4.6.7.2   | Laterality of the body location    | SNOMED CT [Laterality Codelists]                 |
-| A.2.4.6.8.1   | Complications formalized           |                                                  |
-| A.2.4.6.10.4  | Type of medical device             |                                                  |
-| A.2.4.6.11    | Performance category (procedures)  | SNOMED CT [ProcedureCategoryCodelist]            |
-| A.2.4.6.12    | Performance (procedures)           | SNOMED CT [ProcedureCodelist]                    |
-| A.2.4.6.13    | Achieving a result                 | SNOMED CT                                        |
-| A.2.4.7.3     | The route of administration        | SNOMED CT: <284009009                            |
-| A.2.4.8.1     | Allergy code                       | SNOMED CT                                        |
-| A.2.4.8.2     | Allergy manifestation              | SNOMED CT                                        |
-| A.2.4.9.2.13  | Observation code                   | SNOMED CT                                        |
+| A.2.4.3.2     | Důvod vyšetření                    | SNOMED CT [ReasonCodelist]                       |
+| A.2.4.5.1     | Část těla                          | SNOMED CT [BodyLocation]                         |
+| A.2.4.5.2     | Lateralita                         | SNOMED CT [Laterality Codelists]                 |
+| A.2.4.6.7.1   | Umístění na těle                   | SNOMED CT [BodyLocation]                         |
+| A.2.4.6.7.2   | Lateralita                         | SNOMED CT [Laterality Codelists]                 |
+| A.2.4.6.8.1   | Komplikace                         | SNOMED CT                                        |
+| A.2.4.6.10.4  | Typ zdravotnického zařízení        | SNOMED CT [DiagnosticImagingEquipment]           |
+| A.2.4.6.11    | Kategorie výkonu                   | SNOMED CT [ProcedureCategoryCodelist]            |
+| A.2.4.6.12    | Výkon                              | SNOMED CT [ProcedureCodelist]                    |
+| A.2.4.6.13    | Dosažení výsledku                  | SNOMED CT                                        |
+| A.2.4.7.3     | Cesta podání                       | SNOMED CT: <284009009                            |
+| A.2.4.8.1     | Kód alergie                        | SNOMED CT                                        |
+| A.2.4.8.2     | Projev alergie                     | SNOMED CT                                        |
+| A.2.4.9.2.13  | Typ vyšetření                      | SNOMED CT                                        |
 | A.2.6.11      | View                               | SNOMED CT [ViewProjectionCodelist]               |
 
 ### FHIR

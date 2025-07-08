@@ -22,7 +22,6 @@ class "cz-imagingOrderInformation" <<Profile>> [[StructureDefinition-cz-imagingO
 class "cz-conditionImage" <<Profile>> [[StructureDefinition-cz-conditionImage.html]]
 'class "cz-encounter" <<Profile>> [[StructureDefinition-cz-encounter.html]]
 class "cz-study-imaging" <<Profile>> [[StructureDefinition-cz-study-imaging.html]]
-class "cz-clinicalQuestion" <<Profile>> [[StructureDefinition-cz-clinicalQuestion.html]]
 class "cz-procedure-imaging" <<Profile>> [[StructureDefinition-cz-procedure-imaging.html]]
 class "cz-diagnostic-report" <<Profile>> [[StructureDefinition-cz-diagnostic-report.html]]
 class "cz-keyImage-documentReference" <<Profile>> [[StructureDefinition-cz-keyImage-documentReference.html]]

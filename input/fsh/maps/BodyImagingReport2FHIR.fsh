@@ -146,17 +146,22 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
-* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-clinicalQuestion"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-conditionImage"
 * group[=].element[+].code = #Body.ReportOfImagingMethod.clinicalQuestion
-* group[=].element[=].display = "A.2.4.4 - A clinical question"
-* group[=].element[=].target.code = #CZ_ClinicalQuestion.coding.text
-* group[=].element[=].target.display = ""
+* group[=].element[=].display = "A.2.4.4 - A clinical question in text form"
+* group[=].element[=].target.code = #Composition.section:ClinicalQuestion.text
+* group[=].element[=].target.display = "In text form"
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Body.ReportOfImagingMethod.clinicalQuestion
+* group[=].element[=].display = "A.2.4.4 - A clinical question in code form"
+* group[=].element[=].target.code = #Composition.section:ClinicalQuestion.entry.ofType(CZ_Condition).code
+* group[=].element[=].target.display = "In code form"
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
 * group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-procedure-imaging"
 * group[=].element[+].code = #Body.ReportOfImagingMethod.Procedure
 * group[=].element[=].display = "A.2.4.6 - Performance (procedure)"
-* group[=].element[=].target.code = #Composition.section:Procedure.ofType(CZ_ProcedureImaging)				
+* group[=].element[=].target.code = #Composition.section:Procedure.entry.ofType(CZ_ProcedureImaging)				
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #Procedure.reason
@@ -313,7 +318,7 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-allergyIntolerance"
 * group[=].element[+].code = #Body.ReportOfImagingMethod.adverseReaction
 * group[=].element[=].display = "A.2.4.8 - Adverse reaction"
-* group[=].element[=].target.code = #Composition.section:Findings.ofType(CZ_ObservationResultImaging).focus.ofType(CZ_AllergyIntolerance)			
+* group[=].element[=].target.code = #Composition.section:Findings.entry.ofType(CZ_ObservationResultImaging).focus.ofType(CZ_AllergyIntolerance)			
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[+].code = #adverseReaction.allergyCode

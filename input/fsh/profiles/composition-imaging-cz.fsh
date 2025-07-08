@@ -139,25 +139,28 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
   * ^extension[0].valueString = "Section"
   * code = $loinc#18785-6	"Radiology Reason for study (narrative)"
-  * entry 1..
-  * entry only Reference(CZ_ClinicalQuestion) 
+  * text 1..
+  * entry 0..
+  * entry only Reference(CZ_ConditionImage) 
 
 ///////////////////////////////// HISTORY SECTION ///////////////////////////////////////
 * section[history]
   * ^short = "History"
+  * ^definition = "This section includes patient history and other prior clinical details deemed relevant to the imaging study by the imaging clinician."
   * code = $loinc#11329-0 "History general Narrative - Reported"
   * extension contains $note-url named note 0..*
 
 ///////////////////////////////// PROCEDURE SECTION ///////////////////////////////////////
 * section[procedure]
   * ^short = "Procedure"
+  * ^definition = "This section contains information such as the procedure type, the anatomy imaged, the date and time of the imaging examination, and the facility that performed it."
   * code = $loinc#55111-9 "Current imaging procedure descriptions Document"
   * entry 0..*
   * entry only Reference(CZ_ProcedureImaging)
 
 ////////////////// COMPARISON SECTION //////////////////////////
 * section[comparison]
-  * ^short = "History"
+  * ^short = "Comparison"
   * code = $loinc#18834-2 "Radiology Comparison study (narrative)"
   * entry 0..*
   * entry only Reference(CZ_StudyImaging) //or CZ_SelectionImaging
@@ -187,7 +190,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section[communication]
   * ^short = "Communications"
 // a proper code is needed
-  * code = $loinc#18783-1 "Radiology Study recommendation (narrative)"
+  * code = $loinc#73575-3 "Radiology Consult note"
   * extension contains $note-url named note 0..*
 
 Invariant: text-or-section

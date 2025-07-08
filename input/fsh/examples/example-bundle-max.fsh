@@ -1,4 +1,4 @@
-Instance: cz-examplemri-bundle
+Instance: cz-examplepetct-bundle
 InstanceOf: CZ_BundleImagingReport
 Title: "Bundle: PET+CT Imaging report"
 Description: "Example of Imaging report (Bundle) including a PET+CT report"
@@ -9,54 +9,54 @@ Usage: #example
 * timestamp = "2022-10-07T08:15:00+01:00"
 
 * entry[composition][0].fullUrl = "urn:uuid:a84899f0-a241-4f15-b5fd-47e8c9dbdc35"
-* entry[composition][=].resource = cz-examplemri-composition
+* entry[composition][=].resource = cz-examplepetct-composition
 
 * entry[patient][+].fullUrl = "urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da"
-* entry[patient][=].resource = cz-examplemri-patient
+* entry[patient][=].resource = cz-examplepetct-patient
 
 * entry[practitioner][+].fullUrl = "urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c"
-* entry[practitioner][=].resource = cz-examplemri-practitioner2
+* entry[practitioner][=].resource = cz-examplepetct-practitioner2
 
 * entry[serviceRequest][+].fullUrl = "urn:uuid:5be5b9c2-5ca6-4f2e-b3e2-47dc9b334a22"
-* entry[serviceRequest][=].resource = cz-examplemri-order
+* entry[serviceRequest][=].resource = cz-examplepetct-order
 
-* entry[clinicalQuestion][+].fullUrl = "urn:uuid:9ee22843-2526-436f-bf66-3f9874869c08"
-* entry[clinicalQuestion][=].resource = cz-examplemri-clinicalQuestion
+* entry[condition][+].fullUrl = "urn:uuid:9ee22843-2526-436f-bf66-3f9874869c08"
+* entry[condition][=].resource = cz-examplepetct-clinicalQuestion
 
 * entry[imagingStudy][+].fullUrl = "urn:uuid:e132f687-df35-4174-91bd-fe74cda5ac5d"
-* entry[imagingStudy][=].resource = cz-examplemri-imagingStudy
+* entry[imagingStudy][=].resource = cz-examplepetct-imagingStudy
 
 * entry[procedure][+].fullUrl = "urn:uuid:74820e62-42c2-4a39-9ded-251f3b8a58d0"
-* entry[procedure][=].resource = cz-examplemri-procedure
+* entry[procedure][=].resource = cz-examplepetct-procedure
 
 * entry[allergyIntolerance][+].fullUrl = "urn:uuid:0bd84e75-9c5e-406b-90a8-e39a615e9cf6"
-* entry[allergyIntolerance][=].resource = cz-examplemri-allergyIntolerance
+* entry[allergyIntolerance][=].resource = cz-examplepetct-allergyIntolerance
 
 * entry[medicationAdministration][+].fullUrl = "urn:uuid:a89a0433-998e-4408-9d7a-560c6d242366"
-* entry[medicationAdministration][=].resource = cz-examplemri-medicationAdministration
+* entry[medicationAdministration][=].resource = cz-examplepetct-medicationAdministration
 
 * entry[diagnosticReport][+].fullUrl = "urn:uuid:9c23deff-bf1d-46f6-bd0e-005e52b42121"
-* entry[diagnosticReport][=].resource = cz-examplemri-diagnosticReport
+* entry[diagnosticReport][=].resource = cz-examplepetct-diagnosticReport
 
 * entry[keyImageReference][+].fullUrl = "urn:uuid:2a00895f-9e01-4467-bf75-4f0c3552afa4"
-* entry[keyImageReference][=].resource = cz-examplemri-keyImageReference
+* entry[keyImageReference][=].resource = cz-examplepetct-keyImageReference
 
 * entry[carePlan][+].fullUrl = "urn:uuid:b9af425a-a9d9-4685-800c-d0d661c1b7a4"
-* entry[carePlan][=].resource = cz-examplemri-carePlan
+* entry[carePlan][=].resource = cz-examplepetct-carePlan
 
 * entry[observation][+].fullUrl = "urn:uuid:1bcd2d5a-e401-4ac2-80d0-7ec558d6b250"
-* entry[observation][=].resource = cz-examplemri-observation
+* entry[observation][=].resource = cz-examplepetct-observation
 
 * entry[device][+].fullUrl = "urn:uuid:723b5e24-133c-4e9a-aefb-5c14f5b2eac3"
-* entry[device][=].resource = cz-examplemri-device
+* entry[device][=].resource = cz-examplepetct-device
 
 * entry[coverage][+].fullUrl = "urn:uuid:be4e7f9a-2771-4aa1-bcee-c386f9ba7eaa"
-* entry[coverage][=].resource = cz-examplemri-coverage
+* entry[coverage][=].resource = cz-examplepetct-coverage
 
 * entry[medication][+].fullUrl = "urn:uuid:0987d1c9-0d9a-4d33-8efc-eee6a8c63059"
-* entry[medication][=].resource = cz-examplemri-medication
+* entry[medication][=].resource = cz-examplepetct-medication
 
-Instance: cz-examplemri-composition
+Instance: cz-examplepetct-composition
 InstanceOf: CZ_CompositionImagingReport
 Description: "Example of Imaging report (Composition) including a PET+CT report"
 Title: "Composition: PET+CT Imaging report"
@@ -76,7 +76,7 @@ Usage: #example
 * section[order].entry[0] = Reference(urn:uuid:5be5b9c2-5ca6-4f2e-b3e2-47dc9b334a22)
 * section[clinicalQuestion].title = "Clinical question"
 * section[clinicalQuestion].code = $loinc#18785-6	"Radiology Reason for study (narrative)"
-* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Clinical question</div>" 
+* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Clinical question: Recidiva?</div>" 
 * section[clinicalQuestion].text.status = #generated
 * section[clinicalQuestion].entry[0] = Reference(urn:uuid:9ee22843-2526-436f-bf66-3f9874869c08)
 * section[imagingstudy].title = "Imaging Study"
@@ -101,7 +101,7 @@ Usage: #example
 * section[recommendation].text.status = #generated
 * section[recommendation].entry[0] = Reference(urn:uuid:b9af425a-a9d9-4685-800c-d0d661c1b7a4)
 
-Instance: cz-examplemri-device
+Instance: cz-examplepetct-device
 InstanceOf: CZ_DeviceObserver
 Usage: #example
 Description: "Positron emission tomography/computed tomography system device used in PET+CT Imaging report"
@@ -109,7 +109,7 @@ Title: "Device - PET/CT system: PET+CT Imaging report"
 * id = "723b5e24-133c-4e9a-aefb-5c14f5b2eac3"
 * type = $sct#717326002 "PET/CT system"
 
-Instance: cz-examplemri-practitioner1
+Instance: cz-examplepetct-practitioner1
 InstanceOf: CZ_PractitionerCore
 Description: "Example of signing practitioner for PET+CT Imaging report"
 Title: "Practitioner Voštěp: PET+CT Imaging report"
@@ -122,7 +122,7 @@ Usage: #example
 * name.given = "Voštěp"
 * gender = #male
 
-Instance: cz-examplemri-practitioner2
+Instance: cz-examplepetct-practitioner2
 InstanceOf: CZ_PractitionerCore
 Description: "Example of requesting practitioner for PET+CT Imaging report"
 Title: "Practitioner Blažejovský:PET+CT Imaging report"
@@ -136,7 +136,7 @@ Usage: #example
 * name.given = "Blažejovský"
 * gender = #male
 
-Instance: cz-examplemri-patient
+Instance: cz-examplepetct-patient
 InstanceOf: CZ_PatientCore
 Usage: #example
 Description: "Patient, contact information for PET+CT Imaging report"
@@ -170,7 +170,7 @@ Title: "Patient Example: PET+CT Imaging report"
 * communication[=].preferred = true
 * communication[+].language = urn:ietf:bcp:47#cs
 
-Instance: cz-examplemri-order
+Instance: cz-examplepetct-order
 InstanceOf: CZ_ImagingOrderInformation
 Usage: #inline
 Title: "Imaging order for PET+CT Imaging report"
@@ -189,10 +189,10 @@ Description: "Imaging order: PET+CT Imaging report"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">PET+CT mozku pro diferenciální dg. tumoru a radiační nekrozy</div>"
 * authoredOn = "2022-10-06T12:02:00+01:00"
-* reasonReference = Reference(cz-examplemri-condition1)
+* reasonReference = Reference(cz-examplepetct-condition1)
 * requester = Reference(urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c)
 
-Instance: cz-examplemri-coverage
+Instance: cz-examplepetct-coverage
 InstanceOf: CZ_Coverage
 Description: "Example of coverage in PET+CT Imaging report"
 Title: "Coverage: PET+CT Imaging report"
@@ -200,9 +200,9 @@ Usage: #example
 * id = "be4e7f9a-2771-4aa1-bcee-c386f9ba7eaa"
 * status = #active
 * beneficiary = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
-* payor = Reference(cz-examplemri-organization)
+* payor = Reference(cz-examplepetct-organization)
 
-Instance: cz-examplemri-organization
+Instance: cz-examplepetct-organization
 InstanceOf: CZ_OrganizationCore
 Usage: #example
 Description: "Example of insurance organisation for PET+CT Imaging report"
@@ -211,17 +211,17 @@ Title: "Organization - Healthcare insurance company: PET+CT Imaging report"
 * identifier[KP].system =  "https://ncez.mzcr.cz/fhir/sid/kp"
 * identifier[KP].value = "111"
 
-Instance: cz-examplemri-clinicalQuestion
-InstanceOf: CZ_ClinicalQuestion
+Instance: cz-examplepetct-clinicalQuestion
+InstanceOf: CZ_ConditionImage
 Usage: #example
 Description: "Clinical question in text form for PET+CT Imaging report"
 Title: "Clinical question: PET+CT Imaging report"
 * id = "9ee22843-2526-436f-bf66-3f9874869c08"
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * category = $hl7-condition-category-cs#encounter-diagnosis
-* code.text = "Recidiva?"
+* code.coding[condition] = $sct#405785004
 
-Instance: cz-examplemri-imagingStudy
+Instance: cz-examplepetct-imagingStudy
 InstanceOf: CZ_StudyImaging
 Usage: #example
 Description: "Imaging study of PET+CT Imaging report"
@@ -232,7 +232,7 @@ Title: "Imaging study: PET+CT Imaging report"
 * status = #available
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 
-Instance: cz-examplemri-condition1
+Instance: cz-examplepetct-condition1
 InstanceOf: CZ_ConditionImage
 Usage: #example
 Description: "Reason For Admission of PET+CT Imaging report"
@@ -240,7 +240,7 @@ Title: "Condition - Reason For Admission: PET+CT Imaging report"
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * code.text = "Pacient po resekci GBM vlevo parietálně 5/18, zevní RT na parietotemporální oblast vlevo pro glioblastom, poté itoterapie temodalem. Nejasný nález vlevo parietálně."
 
-Instance: cz-examplemri-condition2
+Instance: cz-examplepetct-condition2
 InstanceOf: CZ_ConditionImage
 Usage: #example
 Description: "First Diagnosis for PET+CT Imaging report"
@@ -249,7 +249,7 @@ Title: "Diagnosis 1: PET+CT Imaging report"
 * code.coding[diagnosis] = #D50.0 "Anemie z nedostatku železa, sekundární po ztrátě krve (chronická)" 
 * code.text = "Anemie recidivující ztrátová hyposideremická z angiektázií ve vzestupném tračníku"
 
-Instance: cz-examplemri-condition3
+Instance: cz-examplepetct-condition3
 InstanceOf: CZ_ConditionImage
 Usage: #example
 Description: "Second Diagnosis for PET+CT Imaging report"
@@ -258,7 +258,7 @@ Title: "Diagnosis 2: PET+CT Imaging report"
 * code.coding[diagnosis] = #G45.9 "Tranzitorní ischemická ataka (TIA) NS" 
 * code.text = "Transitorní ischemická ataka"
 
-Instance: cz-examplemri-carePlan
+Instance: cz-examplepetct-carePlan
 InstanceOf: CZ_CarePlanImage
 Usage: #example
 Description: "Care plan for PET+CT Imaging report"
@@ -271,7 +271,7 @@ Title: "Care plan: PET+CT Imaging report"
 * intent = #proposal
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 
-Instance: cz-examplemri-allergyIntolerance
+Instance: cz-examplepetct-allergyIntolerance
 InstanceOf: CZ_AllergyIntolerance
 Usage: #example
 Description: "Allergy Intolerance during PET+CT Imaging report"
@@ -285,7 +285,7 @@ Title: "AllergyIntolerance: PET+CT Imaging report"
 * reaction.onset = "2022-10-07T08:30:00+01:00"
 * reaction.manifestation.text = "Lokální zčervenání pokožky po podání Fludeoxythymidinu"
 
-Instance: cz-examplemri-medicationAdministration
+Instance: cz-examplepetct-medicationAdministration
 InstanceOf: CZ_MedicationAdministration
 Usage: #example
 Description: "Medication Administration during PET+CT Imaging report"
@@ -300,7 +300,7 @@ Title: "Medication Administration: PET+CT Imaging report"
 * dosage.route = $sct#47625008 "Intravenous route"
 * effectiveDateTime = "2022-10-07T08:15:00+01:00"
 
-Instance: cz-examplemri-medication
+Instance: cz-examplepetct-medication
 InstanceOf: CZ_Medication
 Usage: #example
 Description: "Medication during PET+CT Imaging report"
@@ -312,7 +312,7 @@ Title: "Medication: PET+CT Imaging report"
 * code.coding[+] = $dlp_lecprip#0226200 "Fludeoxythymidin"
 * form = $dlp_formy#INJSOL "Injekční roztok"
 
-Instance: cz-examplemri-observation
+Instance: cz-examplepetct-observation
 InstanceOf: CZ_ObservationResultImaging
 Usage: #example
 Description: "Observation during procedure of PET+CT Imaging report"
@@ -327,7 +327,7 @@ Title: "Observation: PET+CT Imaging report"
 * valueString = "Na tomografických řezech nacházíme nehomogenně zvýšenou akumulaci RF při zadním okraji postresekční dutiny vlevo parietotemporálně, maximum akumulace RF resp. FLT je laterálně až do charakteru ložiska výrazně zvýšeného FLT."
 * effectiveDateTime = "2022-10-07T09:10:00+01:00"
 
-Instance: cz-examplemri-diagnosticReport
+Instance: cz-examplepetct-diagnosticReport
 InstanceOf: CZ_DiagnosticReport
 Usage: #example
 Description: "Diagnostic report of PET+CT Imaging report"
@@ -347,7 +347,7 @@ Nenalézáme žádná další jasná ložiska porušené hematoencefalické bari
 * presentedForm.creation = "2025-05-20T12:02:00+01:00"
 * extension[composition].valueReference = Reference(urn:uuid:a84899f0-a241-4f15-b5fd-47e8c9dbdc35)
 
-Instance: cz-examplemri-keyImageReference
+Instance: cz-examplepetct-keyImageReference
 InstanceOf: CZ_KeyImageDocumentReference
 Usage: #example
 Description: "Key Image Document reference for PET+CT Imaging report"
@@ -360,7 +360,7 @@ Title: "Key Image Document reference: PET+CT Imaging report"
 * content[content].attachment.title = "Key Image Document"
 * extension[modality].valueCodeableConcept = $dcm#CT
 
-Instance: cz-examplemri-procedure
+Instance: cz-examplepetct-procedure
 InstanceOf: CZ_ProcedureImaging
 Usage: #example
 Description: "Procedure of PET+CT Imaging report"
@@ -370,5 +370,5 @@ Title: "Procedure: PET+CT Imaging report"
 * status = #completed
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * partOf = Reference(urn:uuid:a89a0433-998e-4408-9d7a-560c6d242366)
-* reasonReference = Reference (cz-examplemri-condition2)
-* reasonReference = Reference (cz-examplemri-condition3)
+* reasonReference = Reference (cz-examplepetct-condition2)
+* reasonReference = Reference (cz-examplepetct-condition3)

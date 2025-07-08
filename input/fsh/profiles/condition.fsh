@@ -13,9 +13,9 @@ Description: "Condition for Imaging Report for the scope of the Czech national i
 * code.coding ^slicing.rules = #open
 * code.coding contains 
     diagnosis 0..1 and 
-    reason 0..1 
+    condition 0..1 
 * code.coding[diagnosis] from $mkn-10-problem-list
 * code.coding[diagnosis].system = $mkn-10 
-* code.coding[reason] from $sct-condition-code
-* code.coding[reason].system = "http://snomed.info/sct" (exactly)
+* code.coding[condition] from $sct-condition-code
+* code.coding[condition].system = "http://snomed.info/sct" (exactly)
 

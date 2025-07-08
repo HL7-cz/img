@@ -16,12 +16,14 @@ When the resource represents a DICOM instance it SHALL contain a the SOP Instanc
   * system 1..1 
   * system = "urn:ietf:rfc:3986"
   * value 1..1
+  * assigner only Reference(CZ_OrganizationCore)
 * identifier[sopClassInstanceUid] 
   * type 1..1
   * type = http://dicom.nema.org/resources/ontology/DCM#112002
   * system 1..1 
   * system = "urn:ietf:rfc:3986"
   * value 1..1
+  * assigner only Reference(CZ_OrganizationCore)
 
 * extension contains
   $cvDocumentReference-basedOn named basedOn 0..1
@@ -46,11 +48,15 @@ When the resource represents a DICOM instance it SHALL contain a the SOP Instanc
 * subject 1..1
 * subject only Reference(CZ_PatientCore or CZ_PatientAnimal)
 
+* author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore)
 * author
   * insert SliceElement( #profile, $this )
 * author contains performer 0..*
 * author[performer] only Reference(CZ_PractitionerRoleCore)
   
+* authenticator only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore)
+* custodian only Reference(CZ_OrganizationCore)
+
 * content
   * attachment 1..1
 * content 
@@ -68,6 +74,8 @@ When the resource represents a DICOM instance it SHALL contain a the SOP Instanc
     * url 1..1
 
 * extension contains $note-url named note 0..1 and CrossVersionMediaViewExtension named view 0..1
+
+* context.sourcePatientInfo only Reference(CZ_PatientCore or CZ_PatientAnimal)
 
 Extension: CrossVersionMediaViewExtension
 Title: "Media.view extension"

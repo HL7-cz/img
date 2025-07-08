@@ -6,6 +6,7 @@ Description: "Condition for Imaging Report for the scope of the Czech national i
 
 * identifier
 * subject
+* subject only Reference(CZ_PatientCore or Group)
 * category from $hl7-condition-category
 * code MS
 * code.coding ^slicing.discriminator[0].type = #value
@@ -18,4 +19,8 @@ Description: "Condition for Imaging Report for the scope of the Czech national i
 * code.coding[diagnosis].system = $mkn-10 
 * code.coding[condition] from $sct-condition-code
 * code.coding[condition].system = "http://snomed.info/sct" (exactly)
+
+* recorder only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore)
+* asserter only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore)
+* stage.assessment only Reference(ClinicalImpression or CZ_DiagnosticReport or CZ_ObservationResultImaging)
 

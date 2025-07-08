@@ -25,8 +25,12 @@ Description: "Diagnostic Report used to represent an entry of a Imaging Report, 
 * subject only Reference(CZ_PatientCore or Patient or Group or Location or Device or CZ_MedicalDevice)
 * encounter only Reference(Encounter) // profile defined for other scopes to be checked
 * effective[x] ^short = "Clinically relevant time/time-period for report."
+* performer only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CareTeam)
 * performer ^short = "Responsible Diagnostic Service." // add reference to the used profiles
+* resultsInterpreter only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CareTeam)
+* specimen only Reference(CZ_Specimen)
 * specimen ^short = "Specimens this report is based on." // add reference to the used profile
+* result only Reference(CZ_ObservationResultImaging)
 * result ^short = "results" // add reference to the used profiles
 * imagingStudy 0..0
 * presentedForm 1..*

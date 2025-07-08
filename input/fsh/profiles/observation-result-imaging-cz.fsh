@@ -21,11 +21,14 @@ This observation may represent the result of a imaging report
   * insert SliceElement( #value, type )
 * identifier contains observationUid 0..1
 * identifier[observationUid].type = MissingDicomTerminology#00080018 "SOP Instance UID"
+* identifier[observationUid].assigner only Reference(CZ_OrganizationCore)
+
 * partOf ^mustSupport = false
 * status MS
 
 * basedOn
   * insert SliceElement( #type, $this )
+  
 * basedOn contains imorderaccession 0..1
 * basedOn[imorderaccession] only Reference( CZ_ImagingOrderInformation )
   * identifier 1..1
@@ -49,7 +52,7 @@ This observation may represent the result of a imaging report
 * specimen only Reference(CZ_Specimen)
 * specimen MS
 * device MS
-* device only Reference(CZ_DeviceObserver or  DeviceMetric)
+* device only Reference(CZ_DeviceObserver or DeviceMetric)
 * referenceRange MS
 
 * derivedFrom only Reference(DocumentReference or CZ_StudyImaging or Media or QuestionnaireResponse or MolecularSequence or CZ_ObservationResultImaging)

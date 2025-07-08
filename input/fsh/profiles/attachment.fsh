@@ -15,3 +15,7 @@ Description: "Czech profile for attachment. "
 * content.url MS
 * content.title MS
 * content.creation MS
+
+* basedOn only Reference(CZ_ImagingOrderInformation or CarePlan)
+* subject only Reference(CZ_PatientCore or CZ_PractitionerCore or CZ_PractitionerRoleCore or Group or Device or CZ_Specimen or CZ_LocationCore)
+* operator only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CareTeam or CZ_PatientCore or Device or CZ_RelatedPersonCore)

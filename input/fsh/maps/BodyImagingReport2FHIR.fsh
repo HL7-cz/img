@@ -551,7 +551,7 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-carePlanImage"
 * group[=].element[+].code = #Body.ReportOfImagingMethod.recommendation
 * group[=].element[=].display = "A.2.4.11 - Recommendation"
-* group[=].element[=].target.code = #Composition.section:Recommendation.entry.ofType(CZ_Careplan)
+* group[=].element[=].target.code = #Composition.section:Recommendation.entry.ofType(CZ_Careplan).description
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"

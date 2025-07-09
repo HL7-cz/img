@@ -309,8 +309,8 @@ Title: "Medication: PET+CT Imaging report"
 * identifier[+].system = "https://www.nempriklad.cz/"
 * identifier[=].value = "a89a0433-998e-4408-9d7a-560c6d242367"
 * status = #active
-* code.coding[+] = $dlp_lecprip#0226200 "Fludeoxythymidin"
-* form = $dlp_formy#INJSOL "Injekční roztok"
+* code.coding[+] = $dlp_lecivePripravky#0226200 "Fludeoxythymidin"
+* form = $dlp_formy_cs#INJSOL "Injekční roztok"
 
 Instance: cz-examplepetct-observation
 InstanceOf: CZ_ObservationResultImaging

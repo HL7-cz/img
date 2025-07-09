@@ -34,7 +34,6 @@ class "cz-carePlanImage" <<Profile>> [[StructureDefinition-cz-carePlanImage.html
 "Tělo zprávy ze zobrazovacích metod" <|. "cz-imagingOrderInformation"
 "Tělo zprávy ze zobrazovacích metod" <|. "cz-composition-imaging"
 "Tělo zprávy ze zobrazovacích metod" <|. "cz-study-imaging"
-"Tělo zprávy ze zobrazovacích metod" <|. "cz-clinicalQuestion"
 "Tělo zprávy ze zobrazovacích metod" <|. "cz-procedure-imaging"
 "Tělo zprávy ze zobrazovacích metod" <|. "cz-diagnostic-report"
 "Tělo zprávy ze zobrazovacích metod" <|. "cz-keyImage-documentReference"
@@ -48,8 +47,7 @@ class "cz-carePlanImage" <<Profile>> [[StructureDefinition-cz-carePlanImage.html
 
 "cz-imagingOrderInformation" -d[hidden]-> "cz-composition-imaging"
 "cz-composition-imaging" -d[hidden]-> "cz-study-imaging"
-"cz-study-imaging" -d[hidden]-> "cz-clinicalQuestion"
-"cz-clinicalQuestion" -d[hidden]-> "cz-diagnostic-report"
+"cz-study-imaging" -d[hidden]-> "cz-diagnostic-report"
 "cz-diagnostic-report" -d[hidden]-> "cz-keyImage-documentReference"
 "cz-keyImage-documentReference" -d[hidden]-> "cz-observation-result-imaging"
 "cz-observation-result-imaging" -d[hidden]-> "cz-radiationDoseObservation"

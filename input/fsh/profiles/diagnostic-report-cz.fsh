@@ -14,6 +14,7 @@ Description: "Diagnostic Report used to represent an entry of a Imaging Report, 
   $artifact-version-url-5 named artifactVersion 0..1
   and $cvDiagnosticReport-supportingInfo named supportingInfo 0..*
   and $cvDiagnosticReport-composition named composition 1..1
+* extension[composition].valueReference only Reference(CZ_CompositionImagingReport or Composition) //only Reference(CZ_DiagnosticReport)
 
 * basedOn only Reference(CZ_ImagingOrderInformation)
 //* basedOn.extension contains DiagnosticReportBasedOnRequisition named basedOn-requisition 0..*
@@ -22,7 +23,7 @@ Description: "Diagnostic Report used to represent an entry of a Imaging Report, 
 //* code from CZ_LabStudyTypesVS (preferred)
 * code 1..
 * subject 1..
-* subject only Reference(CZ_PatientCore or Patient or Group or Location or Device or CZ_MedicalDevice)
+* subject only Reference(CZ_PatientCore or Patient or Group or Location or CZ_DeviceObserver or CZ_MedicalDevice)
 * encounter only Reference(Encounter) // profile defined for other scopes to be checked
 * effective[x] ^short = "Clinically relevant time/time-period for report."
 * performer only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CareTeam)

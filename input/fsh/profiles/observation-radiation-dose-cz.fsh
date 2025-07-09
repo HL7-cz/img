@@ -22,6 +22,8 @@ E.g. based on information from https://dicom.nema.org/medical/dicom/current/outp
 * identifier[radiation-sr-instance-uid]
   * type = MissingDicomTerminology#00083010 "Irradiation Event UID" 
   * assigner only Reference(CZ_OrganizationCore)
+
+* partOf only Reference(CZ_MedicationAdministration or MedicationDispense or MedicationStatement or Procedure or CZ_ProcedureImaging or Immunization or CZ_StudyImaging)
 * partOf 1..*
   * insert SliceElement( #profile, $this )
 * partOf contains study 1..1
@@ -48,8 +50,11 @@ E.g. based on information from https://dicom.nema.org/medical/dicom/current/outp
 
 // Performing irradiation device
 * device 
-* device only Reference(CZ_DeviceObserver)
+* device only Reference(CZ_DeviceObserver or CZ_MedicalDevice)
 * device ^short = "Irradiating modality"
+
+* hasMember only Reference(CZ_ObservationResultImaging or Observation or QuestionnaireResponse or MolecularSequence)
+* derivedFrom only Reference(DocumentReference or CZ_StudyImaging or Media or QuestionnaireResponse or MolecularSequence)
 
 // dose measurements
 * component

@@ -53,6 +53,9 @@ The `text` field of each section SHALL contain a textual representation of all l
 * custodian only Reference(CZ_OrganizationCore)
   * ^short = "Organization that manages the Imaging Report"
 
+//* relatesTo.target[x].targetReference only Reference(DocumentReference or CZ_CompositionImagingReport or Composition)
+//* relatesTo.target[x] only Reference(DocumentReference or CZ_CompositionImagingReport or Composition)
+
 * author
 //* author only Reference(CZ_PractitionerCore or CZ_DeviceObserver)
 * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)

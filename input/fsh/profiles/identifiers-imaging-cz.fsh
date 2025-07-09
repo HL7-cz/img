@@ -8,6 +8,7 @@ Description: "This profile on Identifier represents the Accession Number for the
 * value 1..1
 * type 1..1
 * type = http://terminology.hl7.org/CodeSystem/v2-0203#ACSN
+* assigner only Reference(CZ_OrganizationCore)
 
 Profile: CZ_StudyInstanceUidIdentifier
 Parent: Identifier
@@ -19,6 +20,7 @@ Description: "This profile on Identifier represents the Study Instance UID (0020
 * value 1..1
 * type 0..1
 * type = MissingDicomTerminology#0020000D "Study Instance UID" 
+* assigner only Reference(CZ_OrganizationCore)
 
 Profile: CZ_SopInstanceUidIdentifier
 Parent: Identifier
@@ -30,3 +32,4 @@ Description: "This profile on Identifier represents the SOP Class UID (0008,0018
 * value 1..1
 * type 1..1
 * type = MissingDicomTerminology#00080018 "SOP Instance UID"
+* assigner only Reference(CZ_OrganizationCore)

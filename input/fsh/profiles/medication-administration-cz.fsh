@@ -12,6 +12,7 @@ Description: "Czech national profile for a medication administration."
 * . ^definition = "This profile is derived from the Medication Administration in FHIR, which is a record for tracking the administration of medications."
 
 * identifier 1..
+* partOf only Reference(CZ_MedicationAdministration or MedicationAdministration or CZ_ProcedureImaging or Procedure)
 * status
 * status from $hl7MedicationAdminStatus
 * medication[x]
@@ -21,7 +22,7 @@ Description: "Czech national profile for a medication administration."
 * subject only Reference(CZ_PatientCore or CZ_PatientAnimal or Group)
 * performer.actor only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore or CZ_DeviceObserver)
 * reasonReference only Reference(CZ_ConditionImage or CZ_ObservationResultImaging or CZ_DiagnosticReport)
-* device only Reference(CZ_DeviceObserver)
+* device only Reference(CZ_DeviceObserver or CZ_MedicalDevice)
 
 * dosage 
   * route 0..1

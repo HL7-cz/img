@@ -31,6 +31,7 @@ When the resource represents a DICOM instance it SHALL contain a the SOP Instanc
 * extension
   * ^slicing.discriminator[1].type = #value
   * ^slicing.discriminator[=].path = "value"
+* extension[basedOn].valueReference only Reference (Appointment or AppointmentResponse or CZ_CarePlanImage or Claim or CommunicationRequest or Contract or CoverageEligibilityRequest or DeviceRequest or EnrollmentRequest or ImmunizationRecommendation or MedicationRequest or NutritionOrder or ServiceRequest or SupplyRequest or VisionPrescription or CZ_ImagingOrderInformation)
 * extension[basedOn] contains imorderaccession 0..1
 * extension[basedOn][imorderaccession].value[x] only Reference(CZ_ImagingOrderInformation)
   * identifier 1..1
@@ -48,7 +49,7 @@ When the resource represents a DICOM instance it SHALL contain a the SOP Instanc
 * subject 1..1
 * subject only Reference(CZ_PatientCore or CZ_PatientAnimal)
 
-* author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore)
+* author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CZ_DeviceObserver or CZ_MedicalDevice or CZ_PatientCore or CZ_RelatedPersonCore)
 * author
   * insert SliceElement( #profile, $this )
 * author contains performer 0..*

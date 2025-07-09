@@ -34,6 +34,8 @@ This observation may represent the result of a imaging report
   * identifier 1..1
   * identifier only CZ_AccessionNumberIdentifier
 
+* code from $sct (required)
+
 * subject ^short = "In the initial iteration of the Czech interoperability project: this is Patient (CZ)."
 * subject only Reference(CZ_PatientCore or CZ_PatientAnimal)
 

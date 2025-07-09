@@ -323,7 +323,7 @@ Title: "Observation: PET+CT Imaging report"
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * performer = Reference(urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c)
 * focus = Reference(urn:uuid:0bd84e75-9c5e-406b-90a8-e39a615e9cf6)
-* code.text = "Na tomografických řezech nacházíme nehomogenně zvýšenou akumulaci RF při zadním okraji postresekční dutiny vlevo parietotemporálně, maximum akumulace RF resp. FLT je laterálně až do charakteru ložiska výrazně zvýšeného FLT."
+* code = $sct#16554361000119106 "PET CT of brain"
 * valueString = "Na tomografických řezech nacházíme nehomogenně zvýšenou akumulaci RF při zadním okraji postresekční dutiny vlevo parietotemporálně, maximum akumulace RF resp. FLT je laterálně až do charakteru ložiska výrazně zvýšeného FLT."
 * effectiveDateTime = "2022-10-07T09:10:00+01:00"
 

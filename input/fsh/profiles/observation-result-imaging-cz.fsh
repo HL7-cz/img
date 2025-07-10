@@ -26,6 +26,10 @@ This observation may represent the result of a imaging report
 * partOf ^mustSupport = false
 * status MS
 
+* extension contains $observation-triggeredBy-r5 named triggeredBy-r5 0..*
+* extension[triggeredBy-r5].extension[observation] ^short = "Triggering observation."
+* extension[triggeredBy-r5].extension[type] ^short = "The type of trigger" // from http://hl7.org/fhir/ValueSet/observation-triggeredbytype
+
 * basedOn
   * insert SliceElement( #type, $this )
 * basedOn only Reference(CarePlan or DeviceRequest or ImmunizationRecommendation or MedicationRequest or NutritionOrder or ServiceRequest or CZ_ImagingOrderInformation)

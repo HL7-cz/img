@@ -48,6 +48,7 @@ Alias: $obligation = http://hl7.org/fhir/StructureDefinition/obligation
 Alias: $cvDiagnosticReport-supportingInfo = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.supportingInfo
 Alias: $cvDiagnosticReport-composition = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
 Alias: $artifact-version-url-5            = http://hl7.org/fhir/StructureDefinition/artifact-version|5.2.0
+Alias: $observation-triggeredBy-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
 
 // Actor Canonical
 

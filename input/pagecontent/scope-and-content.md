@@ -62,4 +62,4 @@ Imaging result report could be divided into several parts: document header, body
   {% include imgReportBody_CIM.svg %}
 </figure>
 
-{% include StructureDefinition-cz-composition-imaging-intro.md %}
+{% include scope-and-content-structure.md %}

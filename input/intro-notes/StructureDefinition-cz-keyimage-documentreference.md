@@ -1,0 +1,5 @@
+Může odkazovat na `DICOM` nebo `non-DICOM` obrazová data. Při odkazu na DICOM na základě DocumentReference.content.attachment.url by mělo být použito WADO-URI. Při odkazu na `non-DICOM` by DocumentReference.content.attachment.url měla být přímá URL (adresa k obrazu).\n
+Pokud zdroj reprezentuje instanci DICOM, MUSÍ obsahovat `SOP Instance UID` v prvku identifikátoru. Pokud zdroj reprezentuje DICOM sérii, MUSÍ obsahovat `Series Instance UID` v prvku identifikátoru.
+
+It can refer to a `DICOM` or `non-DICOM` image. When referring to a DICOM image, the DocumentReference.content.attachment.url should be a WADO-URI. When referring to a non-DICOM image, the DocumentReference.content.attachment.url should be a direct URL to the image.\n
+When the resource represents a DICOM instance it SHALL contain a the `SOP Instance UID` in the identifier element. When the resource represents a DICOM series it SHALL contain the `Series Instance UID` in the identifier element.

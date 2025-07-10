@@ -4,8 +4,9 @@ Parent: Composition
 Id: cz-composition-imaging
 //Id: composition-cz-imaging
 Title: "Composition: Imaging Report (CZ)"
-Description: "This profile defines how to represent Composition resource in HL7 FHIR for the scope of this guide."
-* ^purpose = "Imaging report bundle is an electronic health record extract containing results of imaging from a subject of care, comprising at least the required elements of the imaging dataset."
+Description: "This profile defines how to represent Composition resource in HL7 FHIR for the scope of this guide.\n
+Imaging report bundle is an electronic health record extract containing results of imaging from a subject of care, comprising at least the required elements of the imaging dataset."
+//* ^purpose = "Imaging report bundle is an electronic health record extract containing results of imaging from a subject of care, comprising at least the required elements of the imaging dataset.""
 * ^publisher = "HL7 CZ"
 * ^copyright = "HL7 CZ"
 * . ^short = "Imaging Report composition"
@@ -53,6 +54,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 * custodian only Reference(CZ_OrganizationCore)
   * ^short = "Organization that manages the Imaging Report"
 
+//TODO - pokusit se opravit!
 //* relatesTo.target[x].targetReference only Reference(DocumentReference or CZ_CompositionImagingReport or Composition)
 //* relatesTo.target[x] only Reference(DocumentReference or CZ_CompositionImagingReport or Composition)
 

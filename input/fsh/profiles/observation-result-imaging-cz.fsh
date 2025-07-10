@@ -36,7 +36,7 @@ This observation may represent the result of a imaging report
 
 * partOf only Reference(CZ_MedicationAdministration or MedicationDispense or MedicationStatement or CZ_ProcedureImaging or Immunization or CZ_StudyImaging)
 
-* code from $sct (required)
+* code from CZ_ObservationCodeVs (required)
 
 * subject ^short = "In the initial iteration of the Czech interoperability project: this is Patient (CZ)."
 * subject only Reference(CZ_PatientCore or CZ_PatientAnimal)

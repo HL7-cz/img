@@ -23,9 +23,6 @@ Usage: #example
 * entry[serviceRequest].fullUrl = "urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04"
 * entry[serviceRequest].resource = cz-examplertg-order
 
-* entry[clinicalQuestion].fullUrl = "urn:uuid:e952169d-c3b7-4f4a-9eea-039e8708ff35"
-* entry[clinicalQuestion].resource = cz-examplertg-clinicalQuestion
-
 * entry[imagingStudy].fullUrl = "urn:uuid:fc79917b-b1b0-44a6-beaa-e9715322c834"
 * entry[imagingStudy].resource = cz-examplertg-imagingStudy
 
@@ -62,9 +59,8 @@ Usage: #example
 * section[order].entry[0] = Reference(urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04)
 * section[clinicalQuestion].title = "Clinical question"
 * section[clinicalQuestion].code = $loinc#18785-6	"Radiology Reason for study (narrative)"
-* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Clinical question</div>" 
+* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Clinical question: Trauma skeletu?</div>" 
 * section[clinicalQuestion].text.status = #generated
-* section[clinicalQuestion].entry[0] = Reference(urn:uuid:e952169d-c3b7-4f4a-9eea-039e8708ff35)
 * section[imagingstudy].title = "Imaging Study"
 * section[imagingstudy].code = $loinc#18726-0 "Radiology studies (set)"
 * section[imagingstudy].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Imaging Study</div>" 
@@ -192,16 +188,6 @@ Title: "Organization - Healthcare insurance company: RTG Imaging report"
 * identifier[KP].system =  "https://ncez.mzcr.cz/fhir/sid/kp"
 * identifier[KP].value = "111"
 
-Instance: cz-examplertg-clinicalQuestion
-InstanceOf: CZ_ClinicalQuestion
-Usage: #example
-Description: "Clinical question in text form for RTG Imaging report"
-Title: "Clinical question: RTG Imaging report"
-* id = "e952169d-c3b7-4f4a-9eea-039e8708ff35"
-* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
-* category = $hl7-condition-category-cs#encounter-diagnosis
-* code.text = "Trauma skeletu?"
-
 Instance: cz-examplertg-imagingStudy
 InstanceOf: CZ_StudyImaging
 Usage: #example
@@ -223,7 +209,7 @@ Title: "Observation: RTG Imaging report"
 * status = #final
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * performer = Reference(urn:uuid:aafd64f9-36ab-4583-8088-efb93b44db9b)
-* code = $sct#168500000 "Radiology result normal" 
+* code = $sct#783628002 "Plain X-ray of hip" 
 * valueString = "Bez nálezu."
 * effectiveDateTime = "2025-10-06T09:10:00+01:00"
 

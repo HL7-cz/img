@@ -13,10 +13,19 @@ Description: """This profile represents an imaging study instance."""
 * identifier[studyInstanceUid] only CZ_StudyInstanceUidIdentifier
 
 * subject 1..1
-* subject only Reference( CZ_PatientCore or CZ_DeviceObserver )
+* subject only Reference(CZ_PatientCore or CZ_DeviceObserver)
+
+* basedOn only Reference(CZ_CarePlanImage or CZ_ImagingOrderInformation or Appointment)
+* referrer only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore)
+* interpreter only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore)
+* procedureReference only Reference(CZ_ProcedureImaging)
+* location only Reference(CZ_LocationCore)
+* reasonReference only Reference(CZ_ConditionImage or CZ_ObservationResultImaging or Media or CZ_DiagnosticReport or DocumentReference)
 
 * series
+  * specimen only Reference(CZ_Specimen)
   * performer.function from CZ_ImagingStudyPerformerTypeVS (extensible)
+  * performer.actor only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CareTeam or CZ_PatientCore or CZ_RelatedPersonCore or CZ_DeviceObserver or Device)
   * performer
     * insert SliceElement( #type, actor )
   * performer contains performer 0..1 and device 0..1 and custodian 0..1
@@ -29,7 +38,6 @@ Description: """This profile represents an imaging study instance."""
   * performer[device]
     * function = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#DEV
     * actor only Reference( CZ_DeviceObserver ) 
-
  // * insert EndpointTypes 
 
   * instance

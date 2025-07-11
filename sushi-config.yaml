@@ -9,8 +9,8 @@ name: HL7CzImagingReportImplementationGuide
 title: HL7 Czech Imaging Report IG
 description: Czech Imaging Report Implementation Guide
 status: draft # draft | active | retired | unknown
-version: 0.0.2
-language: cs
+version: 0.1.0-ballot
+#language: cs
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -38,11 +38,11 @@ publisher:
 dependencies:
   hl7.fhir.cz.core: current
   hl7.fhir.cz.img-order: current
-  hl7.fhir.eu.base: current
+  hl7.fhir.eu.base: 0.1.0-ballot
 #  hl7.fhir.eu.imaging: current -- nelze je na R5
   hl7.fhir.extensions.r5: 4.0.1
-  hl7.fhir.uv.extensions: 5.2.0
-  hl7.fhir.eu.extensions: current
+  hl7.fhir.uv.extensions.r4: 5.2.0
+  hl7.fhir.eu.extensions: 0.1.1-ballot
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
@@ -246,6 +246,7 @@ menu:
     Copyright (en): copyright.html
     Copyright (cs): copyright-cs.html
   Artifacts: artifacts.html
+  IG IMG EU: https://build.fhir.org/ig/hl7-eu/imaging/index.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

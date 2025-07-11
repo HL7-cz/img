@@ -21,15 +21,26 @@ This observation may represent the result of a imaging report
   * insert SliceElement( #value, type )
 * identifier contains observationUid 0..1
 * identifier[observationUid].type = MissingDicomTerminology#00080018 "SOP Instance UID"
+* identifier[observationUid].assigner only Reference(CZ_OrganizationCore)
+
 * partOf ^mustSupport = false
 * status MS
 
+* extension contains $observation-triggeredBy-r5 named triggeredBy-r5 0..*
+* extension[triggeredBy-r5].extension[observation] ^short = "Triggering observation."
+* extension[triggeredBy-r5].extension[type] ^short = "The type of trigger" // from http://hl7.org/fhir/ValueSet/observation-triggeredbytype
+
 * basedOn
   * insert SliceElement( #type, $this )
+* basedOn only Reference(CarePlan or DeviceRequest or ImmunizationRecommendation or MedicationRequest or NutritionOrder or ServiceRequest or CZ_ImagingOrderInformation)
 * basedOn contains imorderaccession 0..1
 * basedOn[imorderaccession] only Reference( CZ_ImagingOrderInformation )
   * identifier 1..1
   * identifier only CZ_AccessionNumberIdentifier
+
+* partOf only Reference(CZ_MedicationAdministration or MedicationDispense or MedicationStatement or CZ_ProcedureImaging or Immunization or CZ_StudyImaging)
+
+* code from CZ_ObservationCodeVs (required)
 
 * subject ^short = "In the initial iteration of the Czech interoperability project: this is Patient (CZ)."
 * subject only Reference(CZ_PatientCore or CZ_PatientAnimal)
@@ -49,8 +60,8 @@ This observation may represent the result of a imaging report
 * specimen only Reference(CZ_Specimen)
 * specimen MS
 * device MS
-* device only Reference(CZ_DeviceObserver or  DeviceMetric)
+* device only Reference(CZ_DeviceObserver or CZ_MedicalDevice or DeviceMetric)
 * referenceRange MS
-
+* hasMember only Reference(CZ_ObservationResultImaging or QuestionnaireResponse or MolecularSequence)
 * derivedFrom only Reference(DocumentReference or CZ_StudyImaging or Media or QuestionnaireResponse or MolecularSequence or CZ_ObservationResultImaging)
 * derivedFrom MS

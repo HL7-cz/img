@@ -11,23 +11,23 @@ Description: "This profile defines obligations for an human Patient in FHIR for 
 
 // Obligations at the element level 
 // Server obligations
-* identifier insert ObligationSet-02_author-should
-* identifier.system insert ObligationSet-05_server-shall-02
-* identifier.value insert ObligationSet-05_server-shall-02
-* name.given insert ObligationSet-01_author-shall
-* name.family insert ObligationSet-01_author-shall
-* birthDate insert ObligationSet-02_author-should
-* extension[patient-nationality] insert ObligationSet-03_author-may
-* gender insert ObligationSet-01_author-shall
+* identifier insert ObligationSet-02_creator-should-able
+* identifier.system insert ObligationSet-01_creator-shall-able
+* identifier.value insert ObligationSet-01_creator-shall-able
+* name.given insert ObligationSet-01_creator-shall-able
+* name.family insert ObligationSet-01_creator-shall-able
+* birthDate insert ObligationSet-02_creator-should-able
+* extension[patient-nationality] insert ObligationSet-04_creator-should-if-known
+* gender insert ObligationSet-01_creator-shall-able
 
-* telecom insert ObligationSet-03_author-may
-* address insert ObligationSet-03_author-may
+* telecom insert ObligationSet-04_creator-should-if-known
+* address insert ObligationSet-04_creator-should-if-known
 
-* generalPractitioner.identifier insert ObligationSet-02_author-should
-//* generalPractitioner.name insert ObligationSet-02_author-should
-//* generalPractitioner.qualification insert ObligationSet-03_author-may
-//* generalPractitioner.telecom insert ObligationSet-03_author-may
+* generalPractitioner.identifier insert ObligationSet-02_creator-should-able
+//* generalPractitioner.name insert ObligationSet-02_creator-should-able
+//* generalPractitioner.qualification insert ObligationSet-04_creator-should-if-known
+//* generalPractitioner.telecom insert ObligationSet-04_creator-should-if-known
 
-//* link.RelatedPersonCore insert ObligationSet-03_author-may
-//* link.RelatedPersonCore.relationship insert ObligationSet-03_author-may
-//* link.RelatedPersonCore.telecom insert ObligationSet-03_author-may
+//* link.RelatedPersonCore insert ObligationSet-04_creator-should-if-known
+//* link.RelatedPersonCore.relationship insert ObligationSet-04_creator-should-if-known
+//* link.RelatedPersonCore.telecom insert ObligationSet-04_creator-should-if-known

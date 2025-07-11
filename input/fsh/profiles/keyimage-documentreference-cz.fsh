@@ -2,9 +2,8 @@ Profile: CZ_KeyImageDocumentReference
 Id: cz-keyImage-documentReference
 Parent: DocumentReference
 Title: "Imaging Key Image Document Reference: Imaging Report (CZ)"
-Description: """A document containing key images for a patient. It can refer to a DICOM or non-DICOM image. When referring to a DICOM image, the DocumentReference.content.attachment.url should be a WADO-URI. When referring to a non-DICOM image, the DocumentReference.content.attachment.url should be a direct URL to the image.\n
-When the resource represents a DICOM instance it SHALL contain a the SOP Instance UID in the identifier element. When the resource represents a DICOM series it SHALL contain the Series Instance UID in the identifier element. 
-"""
+Description: """A document containing key images for a patient.It can refer to a `DICOM` or `non-DICOM` image. When referring to a DICOM image, the DocumentReference.content.attachment.url should be a WADO-URI. When referring to a non-DICOM image, the DocumentReference.content.attachment.url should be a direct URL to the image.\n
+When the resource represents a DICOM instance it SHALL contain a the `SOP Instance UID` in the identifier element. When the resource represents a DICOM series it SHALL contain the `Series Instance UID` in the identifier element."""
 * insert SetFmmandStatusRule( 1, draft )
 
 * identifier 
@@ -16,12 +15,14 @@ When the resource represents a DICOM instance it SHALL contain a the SOP Instanc
   * system 1..1 
   * system = "urn:ietf:rfc:3986"
   * value 1..1
+  * assigner only Reference(CZ_OrganizationCore)
 * identifier[sopClassInstanceUid] 
   * type 1..1
   * type = http://dicom.nema.org/resources/ontology/DCM#112002
   * system 1..1 
   * system = "urn:ietf:rfc:3986"
   * value 1..1
+  * assigner only Reference(CZ_OrganizationCore)
 
 * extension contains
   $cvDocumentReference-basedOn named basedOn 0..1
@@ -29,6 +30,7 @@ When the resource represents a DICOM instance it SHALL contain a the SOP Instanc
 * extension
   * ^slicing.discriminator[1].type = #value
   * ^slicing.discriminator[=].path = "value"
+* extension[basedOn].valueReference only Reference (Appointment or AppointmentResponse or CZ_CarePlanImage or Claim or CommunicationRequest or Contract or CoverageEligibilityRequest or DeviceRequest or EnrollmentRequest or ImmunizationRecommendation or MedicationRequest or NutritionOrder or ServiceRequest or SupplyRequest or VisionPrescription or CZ_ImagingOrderInformation)
 * extension[basedOn] contains imorderaccession 0..1
 * extension[basedOn][imorderaccession].value[x] only Reference(CZ_ImagingOrderInformation)
   * identifier 1..1
@@ -46,11 +48,15 @@ When the resource represents a DICOM instance it SHALL contain a the SOP Instanc
 * subject 1..1
 * subject only Reference(CZ_PatientCore or CZ_PatientAnimal)
 
+* author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CZ_DeviceObserver or CZ_MedicalDevice or CZ_PatientCore or CZ_RelatedPersonCore)
 * author
   * insert SliceElement( #profile, $this )
 * author contains performer 0..*
 * author[performer] only Reference(CZ_PractitionerRoleCore)
   
+* authenticator only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore)
+* custodian only Reference(CZ_OrganizationCore)
+
 * content
   * attachment 1..1
 * content 
@@ -68,6 +74,8 @@ When the resource represents a DICOM instance it SHALL contain a the SOP Instanc
     * url 1..1
 
 * extension contains $note-url named note 0..1 and CrossVersionMediaViewExtension named view 0..1
+
+* context.sourcePatientInfo only Reference(CZ_PatientCore or CZ_PatientAnimal)
 
 Extension: CrossVersionMediaViewExtension
 Title: "Media.view extension"

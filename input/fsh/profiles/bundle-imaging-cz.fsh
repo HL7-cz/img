@@ -72,9 +72,6 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * entry contains observation 0..*
 * entry[observation].resource only CZ_ObservationResultImaging
 
-* entry contains clinicalQuestion 0..*
-* entry[clinicalQuestion].resource only CZ_ClinicalQuestion
-
 * entry contains specimen 0..*
 * entry[specimen].resource only CZ_Specimen
 

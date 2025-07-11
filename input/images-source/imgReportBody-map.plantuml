@@ -22,7 +22,6 @@ class "cz-imagingOrderInformation" <<Profile>> [[StructureDefinition-cz-imagingO
 class "cz-conditionImage" <<Profile>> [[StructureDefinition-cz-conditionImage.html]]
 'class "cz-encounter" <<Profile>> [[StructureDefinition-cz-encounter.html]]
 class "cz-study-imaging" <<Profile>> [[StructureDefinition-cz-study-imaging.html]]
-class "cz-clinicalQuestion" <<Profile>> [[StructureDefinition-cz-clinicalQuestion.html]]
 class "cz-procedure-imaging" <<Profile>> [[StructureDefinition-cz-procedure-imaging.html]]
 class "cz-diagnostic-report" <<Profile>> [[StructureDefinition-cz-diagnostic-report.html]]
 class "cz-keyImage-documentReference" <<Profile>> [[StructureDefinition-cz-keyImage-documentReference.html]]
@@ -42,7 +41,6 @@ class "cz-carePlanImage" <<Profile>> [[StructureDefinition-cz-carePlanImage.html
 "Imaging Report Body" <|. "cz-imagingOrderInformation"
 "Imaging Report Body" <|. "cz-composition-imaging"
 "Imaging Report Body" <|. "cz-study-imaging"
-"Imaging Report Body" <|. "cz-clinicalQuestion"
 "Imaging Report Body" <|. "cz-procedure-imaging"
 "Imaging Report Body" <|. "cz-diagnostic-report"
 "Imaging Report Body" <|. "cz-keyImage-documentReference"
@@ -63,8 +61,7 @@ class "cz-carePlanImage" <<Profile>> [[StructureDefinition-cz-carePlanImage.html
 
 "cz-imagingOrderInformation" -d[hidden]-> "cz-composition-imaging"
 "cz-composition-imaging" -d[hidden]-> "cz-study-imaging"
-"cz-study-imaging" -d[hidden]-> "cz-clinicalQuestion"
-"cz-clinicalQuestion" -d[hidden]-> "cz-diagnostic-report"
+"cz-study-imaging" -d[hidden]-> "cz-diagnostic-report"
 "cz-diagnostic-report" -d[hidden]-> "cz-keyImage-documentReference"
 "cz-keyImage-documentReference" -d[hidden]-> "cz-observation-result-imaging"
 "cz-observation-result-imaging" -d[hidden]-> "cz-radiationDoseObservation"

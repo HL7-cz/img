@@ -13,17 +13,17 @@ List of the codesystems and valueset used:
 | ------------- | ---------------------------------- | ------------------------------------------------ |
 | A.2.3.2       | Species                            | SNOMED CT [TypeOfSpeciesCodelist]                |
 | A.2.3.3       | Material                           | SNOMED CT [SpecimenMaterialCodelist]             |
-| A.2.3.5       | Anatomic location                  | SNOMED CT [BodyLocation|LocationICT-O-3]         |
+| A.2.3.5       | Anatomic location                  | SNOMED CT [BodyLocation]                         |
 | A.2.3.6       | Morphology                         | SNOMED CT [MorfologyCodelist]                    |
-| A.2.3.7       | Source device                      | SNOMED CT or EMDN                                |
+| A.2.3.7       | Source device                      | SNOMED CT                                        |
 | A.2.3.8       | Procedure                          | SNOMED CT [CollectionMethodCodelist]             |
 | A.2.4.3.2     | Reason for examination by code     | SNOMED CT [ReasonCodelist]                       |
-| A.2.4.5.1     | Body Part                          | SNOMED CT [BodyLocation|LocationICT-O-3]         |
+| A.2.4.5.1     | Body Part                          | SNOMED CT [BodyLocation]                         |
 | A.2.4.5.2     | Laterality                         | SNOMED CT [Laterality Codelists]                 |
-| A.2.4.6.7.1   | Body location code                 | SNOMED CT [BodyLocation|LocationICT-O-3]         |
+| A.2.4.6.7.1   | Body location code                 | SNOMED CT [BodyLocation]                         |
 | A.2.4.6.7.2   | Laterality of the body location    | SNOMED CT [Laterality Codelists]                 |
-| A.2.4.6.8.1   | Complications formalized           |                                                  |
-| A.2.4.6.10.4  | Type of medical device             |                                                  |
+| A.2.4.6.8.1   | Complications formalized           | SNOMED CT                                        |
+| A.2.4.6.10.4  | Type of medical device             | SNOMED CT [DiagnosticImagingEquipment]           |
 | A.2.4.6.11    | Performance category (procedures)  | SNOMED CT [ProcedureCategoryCodelist]            |
 | A.2.4.6.12    | Performance (procedures)           | SNOMED CT [ProcedureCodelist]                    |
 | A.2.4.6.13    | Achieving a result                 | SNOMED CT                                        |

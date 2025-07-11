@@ -8,6 +8,7 @@ E.g. based on information from https://dicom.nema.org/medical/dicom/current/outp
 """
 * insert SetFmmandStatusRule( 1, draft )
 
+* basedOn only Reference(CZ_CarePlanImage or DeviceRequest or ImmunizationRecommendation or MedicationRequest or NutritionOrder or CZ_ImagingOrderInformation)
 * basedOn
   * insert SliceElement( #type, $this )
 * basedOn contains orderaccession 0..1
@@ -20,7 +21,9 @@ E.g. based on information from https://dicom.nema.org/medical/dicom/current/outp
 * identifier contains radiation-sr-instance-uid 0..1
 * identifier[radiation-sr-instance-uid]
   * type = MissingDicomTerminology#00083010 "Irradiation Event UID" 
+  * assigner only Reference(CZ_OrganizationCore)
 
+* partOf only Reference(CZ_MedicationAdministration or MedicationDispense or MedicationStatement or Procedure or CZ_ProcedureImaging or Immunization or CZ_StudyImaging)
 * partOf 1..*
   * insert SliceElement( #profile, $this )
 * partOf contains study 1..1
@@ -35,16 +38,23 @@ E.g. based on information from https://dicom.nema.org/medical/dicom/current/outp
 * subject 1..1
 * subject only Reference( CZ_PatientCore )
 
+* performer only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CareTeam or CZ_PatientCore or CZ_RelatedPersonCore)
+
 // value
 * value[x] 1..1 
 * value[x] only string
 * valueString ^short = "Dose Summary text."
 * valueString ^comment = "Textual representation of the dose summary based computed by the Dose Management system. Based on a locally defined template, definition of which is out of scope of this IG."
 
+* specimen only Reference(CZ_Specimen)
+
 // Performing irradiation device
 * device 
-* device only Reference(CZ_DeviceObserver)
+* device only Reference(CZ_DeviceObserver or CZ_MedicalDevice)
 * device ^short = "Irradiating modality"
+
+* hasMember only Reference(CZ_ObservationResultImaging or Observation or QuestionnaireResponse or MolecularSequence)
+* derivedFrom only Reference(DocumentReference or CZ_StudyImaging or Media or QuestionnaireResponse or MolecularSequence)
 
 // dose measurements
 * component

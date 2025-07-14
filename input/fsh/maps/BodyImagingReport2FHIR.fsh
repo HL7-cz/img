@@ -250,12 +250,12 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Procedure.usedDevice
-* group[=].element[=].display = "A.2.4.6.10 - Used medical devicee"
+* group[=].element[=].display = "A.2.4.6.10 - Used medical device"
 * group[=].element[=].target.code = #CZ_ProcedureImaging.used[device]
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Procedure.usedDevice.name
-* group[=].element[=].display = "A.2.4.6.10.1 - Name of medical devic"
+* group[=].element[=].display = "A.2.4.6.10.1 - Name of medical device"
 * group[=].element[=].target.code = #CZ_ProcedureImaging.used[device].displayName
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
@@ -452,6 +452,16 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_DiagnosticReport.result.ofType(CZ_ObservationResultImaging)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
+* group[=].element[+].code = #resultOfImagingMethod.formalizedText
+* group[=].element[=].display = "A.2.4.9.2 - Formalized text"
+* group[=].element[=].target.code = #Composition.section:Impression.entry.ofType(CZ_ObservationResultImaging)
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[+].code = #resultOfImagingMethod.formalizedText
+* group[=].element[=].display = "A.2.4.9.2 - Formalized text"
+* group[=].element[=].target.code = #Composition.section:Findings.entry.ofType(CZ_ObservationResultImaging)
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #resultOfImagingMethod.formalizedText.note
 * group[=].element[=].display = "A.2.4.9.2.1 - Note"
 * group[=].element[=].target.code = #CZ_ObservationResultImaging.note
@@ -572,10 +582,10 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/LinkToRelatedReport"
-* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-keyImage-documentReference"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-study-imaging"
 * group[=].element[+].code = #Body.LinkToRelatedReport.documentReference
 * group[=].element[=].display = "A.2.5.1 DocumentReference"
-* group[=].element[=].target.code = #Composition.section:impression.entry.ofType(CZ_KeyImageDocumentReference)
+* group[=].element[=].target.code = #Composition.section:comparison.entry.ofType(CZ_StudyImaging)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/AttachmentsCz"

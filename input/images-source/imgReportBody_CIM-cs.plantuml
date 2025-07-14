@@ -1,17 +1,17 @@
 @startmindmap
 skinparam topurl StructureDefinition-
 
-* [[BodyImagingReportCz.html Tělo dokumentu]]
-** [[InformationAboutOrder.html Informace o žádance (objednávce)]]
+* [[logBodyImagingReportCz.html Tělo dokumentu]]
+** [[logInformationAboutOrder.html Informace o žádance (objednávce)]]
 ***_ ID žádanky (objednávky)
 ***_ Datum a čas žádosti
 ***_ Identifikace žadatele (osoby)
 ***_ Kontaktní údaje žadatele
 ***_ Organizace žadatele (objednatele)
-** [[ReasonForAdmission.html Důvod vyžádání (objednání)]]
-** [[DcmMetadata.html DICOM metadata]]
-** [[SpecimenInformation.html Informace o vzorku]]
-** [[ReportOfImagingMethod.html Zpráva ze zobrazovacích metod]]
+** [[logReasonForAdmission.html Důvod vyžádání (objednání)]]
+** [[logDcmMetadata.html DICOM metadata]]
+** [[logSpecimenInformation.html Informace o vzorku]]
+** [[logReportOfImagingMethod.html Zpráva ze zobrazovacích metod]]
 ***_ Typ modality
 ***_ Typ zobrazovací metody
 ***_ Důvod (indikace)
@@ -24,8 +24,8 @@ skinparam topurl StructureDefinition-
 ***_ Závěr
 ***_ Doporučení
 ***_ Textové části dokumentu
-** [[LinkToRelatedReport.html Odkaz na související zprávu]]
-** [[KeyImagesAttachment.html Klíčové snímky]]
+** [[logLinkToRelatedReport.html Odkaz na související zprávu]]
+** [[logKeyImagesAttachment.html Klíčové snímky]]
 '** [[Attachments.html Média (přílohy)]]
 
 /'***_ Order placer

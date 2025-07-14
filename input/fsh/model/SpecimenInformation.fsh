@@ -1,4 +1,4 @@
-Logical: SpecimenInformationCz
+Logical: LogEnSpecimenInformationCz
 Id: SpecimenInformation
 Title: "A.2.3 - Sample information"
 Description: """Imaging Report - Imaging Report sample information - A.2.3 \r\nInformation about the sample if the subject of the examination is a sample."""

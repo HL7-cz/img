@@ -1,4 +1,4 @@
-Logical: ImagingReportCz
+Logical: LogEnImagingReportCz
 Id: ImagingReportCz
 Title: "A - Imaging Report"
 Description: """Imaging Report"""

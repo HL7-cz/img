@@ -1,9 +1,9 @@
 @startmindmap
 skinparam topurl StructureDefinition-
 
-* [[ImagingReportCz.html Zpráva ze zobrazovacích metod]]
-** [[HeaderImagingReportCz.html Hlavička dokumentu]]
-** [[BodyImagingReportCz.html Tělo dokumentu]]
+* [[logImagingReportCz.html Zpráva ze zobrazovacích metod]]
+** [[logHeaderImagingReportCz.html Hlavička dokumentu]]
+** [[logBodyImagingReportCz.html Tělo dokumentu]]
 ** Vizuální podoba dokumentu
 ** Přílohy
 '** Link to Related Report

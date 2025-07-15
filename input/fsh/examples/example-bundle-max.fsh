@@ -77,7 +77,7 @@ Usage: #example
 * section[clinicalQuestion].title = "Clinical question"
 * section[clinicalQuestion].code = $loinc#18785-6	"Radiology Reason for study (narrative)"
 * section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Clinical question: Recidiva?</div>" 
-* section[clinicalQuestion].text.status = #generated
+* section[clinicalQuestion].text.status = #additional
 * section[clinicalQuestion].entry[0] = Reference(urn:uuid:9ee22843-2526-436f-bf66-3f9874869c08)
 * section[imagingstudy].title = "Imaging Study"
 * section[imagingstudy].code = $loinc#18726-0 "Radiology studies (set)"

@@ -60,7 +60,7 @@ Usage: #example
 * section[clinicalQuestion].title = "Clinical question"
 * section[clinicalQuestion].code = $loinc#18785-6	"Radiology Reason for study (narrative)"
 * section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Clinical question: Trauma skeletu?</div>" 
-* section[clinicalQuestion].text.status = #generated
+* section[clinicalQuestion].text.status = #additional
 * section[imagingstudy].title = "Imaging Study"
 * section[imagingstudy].code = $loinc#18726-0 "Radiology studies (set)"
 * section[imagingstudy].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Imaging Study</div>" 

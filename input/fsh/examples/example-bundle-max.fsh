@@ -165,6 +165,7 @@ Title: "Patient Example: PET+CT Imaging report"
 * address[=].city = "Praha"
 * address[=].postalCode = "15000"
 * address[=].country = "CZ"
+  * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
 
 * communication[+].language = urn:ietf:bcp:47#sk
 * communication[=].preferred = true

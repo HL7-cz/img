@@ -30,6 +30,11 @@ This observation may represent the result of a imaging report
 * extension[triggeredBy-r5].extension[observation] ^short = "Triggering observation."
 * extension[triggeredBy-r5].extension[type] ^short = "The type of trigger" // from http://hl7.org/fhir/ValueSet/observation-triggeredbytype
 
+* extension contains $observation-value-r5 named value-r5 0..1
+* extension[value-r5]
+  * value[x] only Attachment
+  * ^short = "only for result of type Attachment"
+
 * basedOn
   * insert SliceElement( #type, $this )
 * basedOn only Reference(CarePlan or DeviceRequest or ImmunizationRecommendation or MedicationRequest or NutritionOrder or ServiceRequest or CZ_ImagingOrderInformation)

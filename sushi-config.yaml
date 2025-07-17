@@ -124,6 +124,10 @@ pages:
     title: Download
   downloads-cs.md:
     title: Download
+  implementation-notes.html:
+    title: Implementation notes
+  implementation-notes-cs.html:
+    title: Poznámky k implementaci
 # === MAP ====
   Header-map.html:
     title: Header Model map
@@ -236,6 +240,8 @@ menu:
     Examples (cs): examples-cs.html
     Obligations (en): obligations.html
     Obligations (cs): obligations-cs.html
+    Implementation notes (en): implementation-notes.html
+    Implementation notes (cs): implementation-notes-cs.html
   About:
     Authors (en): authors.html
     Authors (cs): authors-cs.html

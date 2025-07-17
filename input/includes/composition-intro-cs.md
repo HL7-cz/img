@@ -4,7 +4,7 @@ Dokument je rozdělen do sady povinných sekcí. Sekce jsou povinné, nikoli vol
 
 ### Struktura dokumentu
 
-Zobrazovací zpráva obsahuje následující sekce:
+Zobrazovací zpráva obsahuje následující sekce v tomto pořadí:
 
 #### Hlavička zprávy
 

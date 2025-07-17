@@ -4,7 +4,7 @@ The document is subdivided in a set of required sections. Sections are required 
 
 ### Document structure
 
-The Imaging Report holds the following sections:
+The Imaging Report holds the following sections in this order:
 
 #### Header
 

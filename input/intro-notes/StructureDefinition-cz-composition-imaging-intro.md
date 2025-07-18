@@ -1,7 +1,7 @@
 ## Content (cs)
 
-{% include scope-and-content-structure-cs.md %}
+{% include composition-intro-cs.md %}
 
 ## Content (en)
 
-{% include scope-and-content-structure.md %}
+{% include composition-intro.md %}

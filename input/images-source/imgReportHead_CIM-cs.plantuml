@@ -1,26 +1,26 @@
 @startmindmap
 skinparam topurl StructureDefinition-
 
-* [[HeaderImagingReportCz.html Hlavička dokumentu]]
-** [[SubjectCz.html Identifikace pacienta]]
+* [[logHeaderImagingReportCz.html Hlavička dokumentu]]
+** [[logSubjectCz.html Identifikace pacienta]]
 /'    Shell we keep or not?
 ** Preferred Health Professional
 '/
-** [[PayerCz.html Zdravotní pojištění]]
+** [[logPayerCz.html Zdravotní pojištění]]
 /' ***_ Health insurance code
 ***_ Health insurance name
 ***_ Health insurance number '/
-** [[InformationRecipientCz.html Příjemce dokumentu]]
-** [[AttesterCz.html Ověřil]]
+** [[logInformationRecipientCz.html Příjemce dokumentu]]
+** [[logAttesterCz.html Ověřil]]
 ***_ Ověřovatel
 ***_ Datum a čas ověření
-** [[AuthorCz.html Autor dokumentu]]
+** [[logAuthorCz.html Autor dokumentu]]
 ***_ Autor
 ***_ Datum a čas uložení
-** [[LegalAuthenticatorCz.html Zodpovídá]]
+** [[logLegalAuthenticatorCz.html Zodpovídá]]
 ***_ Zodpovědná osoba
 ***_ Datum a čas autorizace
-** [[DocumentMetadataCz.html Metadata dokumentu]]
+** [[logDocumentMetadataCz.html Metadata dokumentu]]
 ***_ ID dokumentu
 ***_ Kategorie dokumentu
 ***_ Stav dokumentu

@@ -124,6 +124,10 @@ pages:
     title: Download
   downloads-cs.md:
     title: Download
+  implementation-notes.md:
+    title: Implementation notes
+  implementation-notes-cs.md:
+    title: Poznámky k implementaci
 # === MAP ====
   Header-map.html:
     title: Header Model map
@@ -236,6 +240,8 @@ menu:
     Examples (cs): examples-cs.html
     Obligations (en): obligations.html
     Obligations (cs): obligations-cs.html
+    Implementation notes (en): implementation-notes.html
+    Implementation notes (cs): implementation-notes-cs.html
   About:
     Authors (en): authors.html
     Authors (cs): authors-cs.html
@@ -340,6 +346,32 @@ groups:
       - StructureDefinition/cz-observationResult-obl-img
       - StructureDefinition/cz-patient-obl-img
       - StructureDefinition/cz-serviceRequest-obl-img
+  
+  czech-logical-model:
+    name:  Czech logical model (Informative)
+    description: Logical model in czech language. Informative for this version of the guide.
+    resources:
+      - StructureDefinition/logAttachmentsCz
+      - StructureDefinition/logAttesterCz
+      - StructureDefinition/logAuthorCz
+      - StructureDefinition/logBodyImagingReportCz
+      - StructureDefinition/logDcmMetadata
+      - StructureDefinition/logdigitalSignatureCz
+      - StructureDefinition/logDocumentMetadataCz
+      - StructureDefinition/logHeaderImagingReportCz
+      - StructureDefinition/logImagingReportCz
+      - StructureDefinition/logInformationAboutOrder
+      - StructureDefinition/logInformationRecipientCz
+      - StructureDefinition/logKeyImagesAttachment
+      - StructureDefinition/logLegalAuthenticatorCz
+      - StructureDefinition/logLinkToRelatedReport
+      - StructureDefinition/logPayerCz
+      - StructureDefinition/logPresentedFormCz
+      - StructureDefinition/logReasonForAdmission
+      - StructureDefinition/logReportOfImagingMethod
+      - StructureDefinition/logSpecimenInformation
+      - StructureDefinition/logSubjectCz
+
 
 #
 # The ImplementationGuide resource defines several other properties

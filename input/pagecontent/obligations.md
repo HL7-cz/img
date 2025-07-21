@@ -19,8 +19,7 @@ Actors were specified in these roles:
 
 | Role                                                    | Description                                                                                                                          |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| the [Creator](ActorDefinition-actor-creator-img.html)   | The first is the actor creating the report. This report can be send to a consumer or to a repository for report storage and sharing. |
-| the [Repository](ActorDefinition-actor-repos-img.html)  | The second actor is the system maintaining a copy of the report received, to store and make it available for the consumers.          |
+| the [Creator](ActorDefinition-actor-creator-img.html)   | The first is the actor creating the report. This report can be send to a consumer for report storage and sharing. |
 | the [Consumer](ActorDefinition-actor-consumer-img.html) | The last actor is the system using the report received or retrieved.                                                                 |
 
 <p>{% include imgReport_Actors.svg %}</p>

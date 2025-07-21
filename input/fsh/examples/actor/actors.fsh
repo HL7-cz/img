@@ -1,7 +1,7 @@
 Instance: actor-creator-img
 InstanceOf: ActorDefinition
 Title: "Actor Imaging Report Creator"
-Description: """Imaging Report Creator: a system generating and sending/providing a Imaging Report to a Consumer or to a Repository for report storage and sharing."""
+Description: """Imaging Report Creator: a system generating and sending/providing a Imaging Report to a Consumer for report storage and sharing."""
 Usage: #example
 
 * url = "http://hl7.cz/fhir/img/actor-creator-img"
@@ -9,7 +9,7 @@ Usage: #example
 * status = #active
 * type = #system
 // * type = #entity
-* documentation = """This actor represents the Imaging Report creators. That is the actor creating the report that can be sent to a consumer or to a repository for report storage and sharing."""
+* documentation = """This actor represents the Imaging Report creators. That is the actor creating the report that can be sent to a consumer for report storage and sharing."""
 
 Instance: actor-consumer-img
 InstanceOf: ActorDefinition
@@ -24,16 +24,3 @@ Usage: #example
 // * type = #entity
 * documentation = """This actor represents the Imaging Report consumers. That is the system using the report received or retrieved.
 Using includes, but is not limited to, the report display, storage or processing."""
-
-Instance: actor-repos-img
-InstanceOf: ActorDefinition
-Title: "Actor Imaging Report Repository"
-Description: """Imaging Report Report Repository: a system maintaining a copy of the received Imaging Report, to store and make it available for the consumers."""
-Usage: #example
-
-* url = "http://hl7.cz/fhir/img/actor-server-img"
-* name = "ImgReportRepos"
-* status = #active
-* type = #system
-// * type = #entity
-* documentation = """This actor represents the Imaging Report Repositories. That is any system maintaining a copy of the report received, to store and make it available for the consumers."""

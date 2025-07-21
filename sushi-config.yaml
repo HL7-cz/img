@@ -341,7 +341,6 @@ groups:
     resources:
       - ActorDefinition/actor-consumer-img
       - ActorDefinition/actor-creator-img
-      - ActorDefinition/actor-repos-img
       - StructureDefinition/cz-diagnosticReport-obl-img
       - StructureDefinition/cz-observationResult-obl-img
       - StructureDefinition/cz-patient-obl-img

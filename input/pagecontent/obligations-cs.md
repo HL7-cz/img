@@ -20,7 +20,6 @@ Byli specifikováni aktéři ve těchto rolích:
 | Role                                                 | Popis                                                                                                                      |
 | ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | [Tvůrce](ActorDefinition-actor-creator-img.html)     | Prvním je aktér, který vytváří zprávu. Tuto zprávu lze odeslat konzumentovi nebo do úložiště pro ukládání a sdílení zpráv. |
-| [Úložiště](ActorDefinition-actor-repos-img.html)     | Druhým aktérem je systém, který uchovává kopii přijaté zprávy, aby ji uložil a zpřístupnil spotřebitelům.                  |
 | [Konzument](ActorDefinition-actor-consumer-img.html) | Posledním aktérem je systém, který přijatou nebo načtenou zprávu používá.                                                  |
 
 <p>{% include imgReport_Actors-cs.svg %}</p>

@@ -50,6 +50,7 @@ Alias: $cvDiagnosticReport-composition = http://hl7.org/fhir/5.0/StructureDefini
 Alias: $artifact-version-url-5            = http://hl7.org/fhir/StructureDefinition/artifact-version|5.2.0
 Alias: $observation-triggeredBy-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
 Alias: $observation-value-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x]
+Alias: $service-request-body-structure-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-ServiceRequest.bodyStructure
 
 // Actor Canonical
 

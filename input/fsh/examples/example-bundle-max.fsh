@@ -3,8 +3,8 @@ InstanceOf: CZ_BundleImagingReport
 Title: "Bundle: PET+CT Imaging report"
 Description: "Example of Imaging report (Bundle) including a PET+CT report"
 Usage: #example
-* identifier[+].system = "https://www.nempriklad.cz/nis"
-* identifier[=].value = "1234567.1"
+* identifier[+].system = "urn:ietf:rfc:3986"
+* identifier[=].value = "urn:uuid:c859d718-03c2-43ed-a16c-dbe57a6e34b5"
 * type = #document
 * timestamp = "2022-10-07T08:15:00+01:00"
 

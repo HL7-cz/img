@@ -54,6 +54,6 @@ Alias: $service-request-body-structure-r5 = http://hl7.org/fhir/5.0/StructureDef
 
 // Actor Canonical
 
-Alias: $server = http://hl7.cz/fhir/img/actor-server-img
+//Alias: $server = http://hl7.cz/fhir/img/actor-server-img
 Alias: $creator = http://hl7.cz/fhir/img/actor-creator-img
 Alias: $consumer = http://hl7.cz/fhir/img/actor-consumer-img

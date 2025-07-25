@@ -20,7 +20,6 @@ Byli specifikováni aktéři ve těchto rolích:
 | Role                                                 | Popis                                                                                                                      |
 | ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | [Tvůrce](ActorDefinition-actor-creator-img.html)     | Prvním je aktér, který vytváří zprávu. Tuto zprávu lze odeslat konzumentovi nebo do úložiště pro ukládání a sdílení zpráv. |
-| [Úložiště](ActorDefinition-actor-repos-img.html)     | Druhým aktérem je systém, který uchovává kopii přijaté zprávy, aby ji uložil a zpřístupnil spotřebitelům.                  |
 | [Konzument](ActorDefinition-actor-consumer-img.html) | Posledním aktérem je systém, který přijatou nebo načtenou zprávu používá.                                                  |
 
 <p>{% include imgReport_Actors-cs.svg %}</p>
@@ -30,4 +29,4 @@ Byli specifikováni aktéři ve těchto rolích:
 1. Povinnosti pro objekt pacienta ([CZ_PatientObligationsImg](StructureDefinition-cz-patient-obl-img.html))
 2. Povinnosti pro informace o žádance ([CZ_ServiceRequestObligationsImg](StructureDefinition-cz-serviceRequest-obl-img.html))
 3. Povinnosti zprávy ze zobrazovacích metod ([CZ_DiagnosticReportObligationsImg](StructureDefinition-cz-diagnosticReport-obl-img.html))
-4. Povinnosti výsledku vyšetření ([CZ_ObservationResultObligationsImg](StructureDefinition-cz-patient-obl-img.html))
+4. Povinnosti výsledku vyšetření ([CZ_ObservationResultObligationsImg](StructureDefinition-cz-observationResult-obl-img.html))

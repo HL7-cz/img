@@ -1,6 +1,5 @@
 @startuml
 "Tvůrce zprávy ze zobrazovacích metod" as creator
-"Uložiště zprávy ze zobrazovacích metod" as repos
 "Konzument zprávy ze zobrazovacích metod" as consumer
 "Vytvoření zprávy ze zobrazovacích metod" as (create)
 "Použití zprávy ze zobrazovacích metod" as (use)
@@ -12,6 +11,4 @@ creator --> (create)
 creator --> (save)
 consumer --> (use)
 consumer --> (receive)
-repos --> (save)
-repos --> (receive)
 @enduml

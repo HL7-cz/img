@@ -36,6 +36,16 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_ImagingOrderInformation.occurrenceDateTime
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #ReasonForAdmission
+* group[=].element[=].display = "A.2.2 - Order reason"
+* group[=].element[=].target.code = #CZ_ImagingOrderInformation.reason.ofType(CZ_Condition)
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #ReasonForAdmission.problem
+* group[=].element[=].display = "A.2.2.1 -  Problem / diagnosis / condition description"
+* group[=].element[=].target.code = #CZ_ImagingOrderInformation.reason.ofType(CZ_Condition).code
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReasonForAdmission"
 * group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-imagingOrderInformation"
 * group[=].element[+].code = #ReasonForAdmission

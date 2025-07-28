@@ -26,10 +26,10 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-coverage"
 * group[=].element[+].code = #Header.payer
 * group[=].element[=].display = "A.1.3 - Health insurance and payment information - Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care."
-* group[=].element[=].target.code = #Composition.section:Coverage			
+* group[=].element[=].target.code = #Composition.section:order.insurance		
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "Composition.section:Coverage.entry.ofType(CZ_Coverage)"
+* group[=].element[=].target.comment = "Composition.InformationAboutOrder.entry.ofType(CZ_ImagingInformationAboutOrder).insurance.ofType(CZ_Coverage)"
 * group[=].element[+].code = #Header.payer.insuranceCode
 * group[=].element[=].display = "A.1.3.1 - Health insurance code"
 * group[=].element[=].target.code = #CZ_Coverage.payor.identifier
@@ -237,3 +237,16 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "As business version, not as resource version"
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/digitalSignatureCz"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-bundle-imaging"
+* group[=].element[+].code = #Header.digitalSignatureCz.digitalSignature
+* group[=].element[=].display = "A.1.9.1 - Electronic signature or document seal"
+* group[=].element[=].target.code = #Bundle.signature.data		
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[+].code = #Header.digitalSignatureCz.timestamp
+* group[=].element[=].display = "A.1.9.2 - Electronic time stamp"
+* group[=].element[=].target.code = #Bundle.signature.when					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = ""

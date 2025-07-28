@@ -19,8 +19,7 @@ Actors were specified in these roles:
 
 | Role                                                    | Description                                                                                                                          |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| the [Creator](ActorDefinition-actor-creator-img.html)   | The first is the actor creating the report. This report can be send to a consumer or to a repository for report storage and sharing. |
-| the [Repository](ActorDefinition-actor-repos-img.html)  | The second actor is the system maintaining a copy of the report received, to store and make it available for the consumers.          |
+| the [Creator](ActorDefinition-actor-creator-img.html)   | The first is the actor creating the report. This report can be send to a consumer for report storage and sharing. |
 | the [Consumer](ActorDefinition-actor-consumer-img.html) | The last actor is the system using the report received or retrieved.                                                                 |
 
 <p>{% include imgReport_Actors.svg %}</p>
@@ -30,4 +29,4 @@ Actors were specified in these roles:
 1. Obligations for populating the patient object ([CZ_PatientObligationsImg](StructureDefinition-cz-patient-obl-img.html))
 2. Service Request Obligations ([CZ_ServiceRequestObligationsImg](StructureDefinition-cz-serviceRequest-obl-img.html))
 3. Diagnostic Report Obligations ([CZ_DiagnosticReportObligationsImg](StructureDefinition-cz-diagnosticReport-obl-img.html))
-4. Observation Result Obligations ([CZ_ObservationResultObligationsImg](StructureDefinition-cz-patient-obl-img.html))
+4. Observation Result Obligations ([CZ_ObservationResultObligationsImg](StructureDefinition-cz-observationResult-obl-img.html))

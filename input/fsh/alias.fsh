@@ -26,6 +26,7 @@ Alias: $sctBodySite = http://hl7.org/fhir/ValueSet/body-site
 Alias: $hl7-diagnostic-category = http://hl7.org/fhir/ValueSet/diagnostic-service-sections
 Alias: $dlp_lecprip = https://hl7.cz/fhir/core/ValueSet/cz-dlplecivepripravky-vs
 Alias: $dlp_formy = https://hl7.cz/fhir/core/ValueSet/cz-dlpformy-vs
+Alias: $hl7eu_document-type = http://hl7.eu/fhir/imaging-r5/ValueSet/ImImagingReportTypesEuVS
 
 // Extensions
 Alias: $event-basedOn = http://hl7.org/fhir/StructureDefinition/event-basedOn

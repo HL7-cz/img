@@ -237,14 +237,14 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "As business version, not as resource version"
-* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/digitalSignatureCz"
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/DigitalSignatureCz"
 * group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-bundle-imaging"
-* group[=].element[+].code = #Header.digitalSignatureCz.digitalSignature
+* group[=].element[+].code = #Header.DigitalSignatureCz.digitalSignature
 * group[=].element[=].display = "A.1.9.1 - Electronic signature or document seal"
 * group[=].element[=].target.code = #Bundle.signature.data		
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #Header.digitalSignatureCz.timestamp
+* group[=].element[+].code = #Header.DigitalSignatureCz.timestamp
 * group[=].element[=].display = "A.1.9.2 - Electronic time stamp"
 * group[=].element[=].target.code = #Bundle.signature.when					
 * group[=].element[=].target.display = ""

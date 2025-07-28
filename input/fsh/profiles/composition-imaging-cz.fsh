@@ -100,13 +100,8 @@ The `text` field of each section SHALL contain a textual representation of all l
   * party only Reference(CZ_PractitionerRoleCore)
 
 
-// type of the report. Matching DiagnosticReport.code
-// code
-//* type 1..
-//* type from CZ_DiagnosticReport (preferred) // valueset to be revised.
-//  * ^short = "Type of Imaging Diagnostic Report"
-//  * ^definition = "Specifies that it refers to a Imaging Report"
-//  * ^comment = "At least one DiagnosticReport.code.coding and Composition.type.coding SHALL be equal"
+* type 1..
+* type from $hl7eu_document-type (preferred) // valueset to be revised.
 
 * date MS
   * ^short = "Date the report was last changed."

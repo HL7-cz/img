@@ -71,33 +71,33 @@ Usage: #example
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:9c23deff-bf1d-46f6-bd0e-005e52b42121)
 * section[order].title = "Requested imaging studies information Document"
 * section[order].code = $loinc#55115-0 "Requested imaging studies information Document"
-* section[order].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Order information</div>" 
+* section[order].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Order information</div>"
 * section[order].text.status = #generated
 * section[order].entry[0] = Reference(urn:uuid:5be5b9c2-5ca6-4f2e-b3e2-47dc9b334a22)
 * section[clinicalQuestion].title = "Clinical question"
 * section[clinicalQuestion].code = $loinc#18785-6	"Radiology Reason for study (narrative)"
-* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Clinical question: Recidiva?</div>" 
+* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Clinical question: Recidiva?</div>"
 * section[clinicalQuestion].text.status = #additional
 * section[clinicalQuestion].entry[0] = Reference(urn:uuid:9ee22843-2526-436f-bf66-3f9874869c08)
 * section[imagingstudy].title = "Imaging Study"
 * section[imagingstudy].code = $loinc#18726-0 "Radiology studies (set)"
-* section[imagingstudy].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Imaging Study</div>" 
+* section[imagingstudy].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Imaging Study</div>"
 * section[imagingstudy].text.status = #generated
 * section[imagingstudy].entry[0] = Reference(urn:uuid:e132f687-df35-4174-91bd-fe74cda5ac5d)
 * section[procedure].title = "Procedure"
 * section[procedure].code = $loinc#55111-9 "Current imaging procedure descriptions Document"
-* section[procedure].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Procedure</div>" 
+* section[procedure].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Procedure</div>"
 * section[procedure].text.status = #generated
 * section[procedure].entry[0] = Reference(urn:uuid:74820e62-42c2-4a39-9ded-251f3b8a58d0)
 * section[findings].title = "Findings"
 * section[findings].code = $loinc#59776-5 "Procedure findings Narrative"
-* section[findings].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Findings</div>" 
+* section[findings].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Findings</div>"
 * section[findings].text.status = #generated
 * section[findings].entry[0] = Reference(urn:uuid:1bcd2d5a-e401-4ac2-80d0-7ec558d6b250)
 * section[findings].entry[+] = Reference(urn:uuid:2a00895f-9e01-4467-bf75-4f0c3552afa4)
 * section[recommendation].title = "Recommendation"
 * section[recommendation].code = $loinc#18783-1 "Radiology Study recommendation (narrative)"
-* section[recommendation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Findings</div>" 
+* section[recommendation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Findings</div>"
 * section[recommendation].text.status = #generated
 * section[recommendation].entry[0] = Reference(urn:uuid:b9af425a-a9d9-4685-800c-d0d661c1b7a4)
 
@@ -247,7 +247,7 @@ Usage: #example
 Description: "First Diagnosis for PET+CT Imaging report"
 Title: "Diagnosis 1: PET+CT Imaging report"
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
-* code.coding[diagnosis] = #D50.0 "Anemie z nedostatku železa, sekundární po ztrátě krve (chronická)" 
+* code.coding[diagnosis] = #D50.0 "Anemie z nedostatku železa, sekundární po ztrátě krve (chronická)"
 * code.text = "Anemie recidivující ztrátová hyposideremická z angiektázií ve vzestupném tračníku"
 
 Instance: cz-examplepetct-condition3
@@ -256,7 +256,7 @@ Usage: #example
 Description: "Second Diagnosis for PET+CT Imaging report"
 Title: "Diagnosis 2: PET+CT Imaging report"
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
-* code.coding[diagnosis] = #G45.9 "Tranzitorní ischemická ataka (TIA) NS" 
+* code.coding[diagnosis] = #G45.9 "Tranzitorní ischemická ataka (TIA) NS"
 * code.text = "Transitorní ischemická ataka"
 
 Instance: cz-examplepetct-carePlan
@@ -266,7 +266,7 @@ Description: "Care plan for PET+CT Imaging report"
 Title: "Care plan: PET+CT Imaging report"
 * id = "b9af425a-a9d9-4685-800c-d0d661c1b7a4"
 * identifier.system = "https://www.nempriklad.cz/nis"
-* identifier.value = "1234567" 
+* identifier.value = "1234567"
 * description = "Dále podle vývoje MRI."
 * status = #completed
 * intent = #proposal
@@ -333,6 +333,7 @@ InstanceOf: CZ_DiagnosticReport
 Usage: #example
 Description: "Diagnostic report of PET+CT Imaging report"
 Title: "Diagnostic report: PET+CT Imaging report"
+* meta.profile = "https://hl7.cz/fhir/img/StructureDefinition/cz-diagnostic-report"
 * id = "9c23deff-bf1d-46f6-bd0e-005e52b42121"
 * category = #CT
 * status = #final
@@ -367,7 +368,7 @@ Usage: #example
 Description: "Procedure of PET+CT Imaging report"
 Title: "Procedure: PET+CT Imaging report"
 * id = "74820e62-42c2-4a39-9ded-251f3b8a58d0"
-* code.coding = $sct#1655436100011910 "PET CT of brain" 
+* code.coding = $sct#1655436100011910 "PET CT of brain"
 * status = #completed
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * partOf = Reference(urn:uuid:a89a0433-998e-4408-9d7a-560c6d242366)

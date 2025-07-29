@@ -52,7 +52,7 @@ Description: "Clinical document used to represent a Imaging Report for the scope
   * request ..0
   * response ..0
 
-* entry ^slicing.discriminator[0].type = #type
+* entry ^slicing.discriminator[0].type = #profile
 * entry ^slicing.discriminator[0].path = "resource"
 * entry ^slicing.ordered = false
 * entry ^slicing.rules = #open
@@ -66,7 +66,7 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * entry contains serviceRequest 0..*
 * entry[serviceRequest].resource only CZ_ImagingOrderInformation
 
-* entry contains patient 0..1
+* entry contains patient 0..*
 * entry[patient].resource only CZ_PatientCore or CZ_PatientAnimal
 
 * entry contains observation 0..*
@@ -91,7 +91,7 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * entry[coverage].resource only CZ_Coverage
 
 * entry contains medicationAdministration 0..*
-* entry[medicationAdministration].resource only CZ_MedicationAdministration 
+* entry[medicationAdministration].resource only CZ_MedicationAdministration
 
 * entry contains medication 0..*
 * entry[medication].resource only CZ_Medication

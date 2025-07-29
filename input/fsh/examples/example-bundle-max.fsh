@@ -335,7 +335,7 @@ Description: "Diagnostic report of PET+CT Imaging report"
 Title: "Diagnostic report: PET+CT Imaging report"
 * meta.profile = "https://hl7.cz/fhir/img/StructureDefinition/cz-diagnostic-report"
 * id = "9c23deff-bf1d-46f6-bd0e-005e52b42121"
-* category = $loinc#18748-4 "Diagnostic imaging study"
+* category[imaging] = $loinc#18748-4 "Diagnostic imaging study"
 * status = #final
 * code = $sct#168500000 "Radiology result normal"
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)

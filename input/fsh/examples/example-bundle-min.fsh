@@ -241,7 +241,7 @@ Description: "Diagnostic report of RTG Imaging report"
 Title: "Diagnostic report: RTG Imaging report"
 * id = "bd3e7b78-bfaa-428e-9168-8cd29cf54aba"
 * extension[composition].valueReference = Reference(urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9)
-* category = $loinc#18748-4 "Diagnostic imaging study"
+* category[imaging] = $loinc#18748-4 "Diagnostic imaging study"
 * status = #final
 * code = $sct#168500000 "Radiology result normal"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)

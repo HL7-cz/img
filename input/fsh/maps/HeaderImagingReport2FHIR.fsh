@@ -110,7 +110,7 @@ Usage: #definition
 * group[=].element[=].target.code = #Patient.contact.telecom					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent	
-* group[+].source = "https://hl7.cz/fhir/lab/StructureDefinition/SubjectCz"					
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/SubjectCz"					
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"	
 * group[=].element[+].code = #Subject.contactInfo.preferedPhysician					
 * group[=].element[=].display = "A.1.2.3 Prefered physician"					
@@ -132,7 +132,7 @@ Usage: #definition
 * group[=].element[=].target.code = #Practitioner.telecom					
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent		
-* group[+].source = "https://hl7.cz/fhir/lab/StructureDefinition/SubjectCz"					
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/SubjectCz"					
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core"	
 * group[=].element[+].code = #Subject.contactInfo.preferedPhysician					
 * group[=].element[=].display = "A.1.2.3 Prefered physician"					

@@ -7,7 +7,7 @@ Description: "Digital Media Category"
 * ^experimental = false
 * ^jurisdiction = $iso3166#CZ
 * ^language = #cs-CZ
-* ^identifier.system = "http://terminology.hl7.org/CodeSystem/media-category"
+* ^identifier.system = "http://terminology.hl7.org/CodeSystem/media-category|4.0.0"
 // add value * ^identifier.value = "urn:oid:1.2.203.24341.11.1.1"
 * ^version = "0.1.0"
 //* ^status = #draft

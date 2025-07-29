@@ -39,18 +39,18 @@ Alias: $artifact-description-url          = http://hl7.org/fhir/StructureDefinit
 Alias: $artifact-version-url              = http://hl7.org/fhir/StructureDefinition/artifact-version
 Alias: $data-absent-reason-url            = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 Alias: $diagnostic-report-composition-url = http://hl7.org/fhir/StructureDefinition/extension-DiagnosticReport.composition
-Alias: $event-basedOn-url                 = http://hl7.org/fhir/StructureDefinition/event-basedOn
+Alias: $event-basedOn-url                 = http://hl7.org/fhir/StructureDefinition/event-basedOn|4.0.1
 Alias: $individual-genderIdentity         = http://hl7.org/fhir/StructureDefinition/individual-genderIdentity
 Alias: $information-recipient-url         = http://hl7.eu/fhir/StructureDefinition/information-recipient
 Alias: $document-reference-thumbnail-url  = http://hl7.org/fhir/StructureDefinition/documentreference-thumbnail
 Alias: $note-url                          = http://hl7.org/fhir/StructureDefinition/note|5.2.0
 Alias: $cvDocumentReference-basedOn       = http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.basedOn
-Alias: $obligation = http://hl7.org/fhir/StructureDefinition/obligation
+Alias: $obligation                        = http://hl7.org/fhir/StructureDefinition/obligation
 Alias: $cvDiagnosticReport-supportingInfo = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.supportingInfo
-Alias: $cvDiagnosticReport-composition = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
+Alias: $cvDiagnosticReport-composition    = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
 Alias: $artifact-version-url-5            = http://hl7.org/fhir/StructureDefinition/artifact-version|5.2.0
-Alias: $observation-triggeredBy-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
-Alias: $observation-value-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x]
+Alias: $observation-triggeredBy-r5        = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
+Alias: $observation-value-r5              = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x]
 Alias: $service-request-body-structure-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-ServiceRequest.bodyStructure
 
 // Actor Canonical

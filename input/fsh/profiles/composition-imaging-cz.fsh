@@ -59,7 +59,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^short = "Modality"
   * ^definition = "The type of imaging modality used to perform the study."
   //* ^comment = "At least one ImagingStudy.code.coding SHALL be equal to Composition.event.code.coding[imagingstudy]"
-* event.code[procedure].coding from https://www.hl7.org/fhir/valueset-procedure-reason.html (preferred)
+* event.code[procedure].coding from http://hl7.org/fhir/ValueSet/procedure-reason (preferred)
   * ^short = "Study Type"
   * ^definition = "The type of imaging study performed."
 

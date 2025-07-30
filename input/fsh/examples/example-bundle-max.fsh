@@ -8,53 +8,53 @@ Usage: #example
 * type = #document
 * timestamp = "2022-10-07T08:15:00+01:00"
 
-* entry[composition][0].fullUrl = "urn:uuid:a84899f0-a241-4f15-b5fd-47e8c9dbdc35"
-* entry[composition][=].resource = cz-examplepetct-composition
+* entry[composition].fullUrl = "urn:uuid:a84899f0-a241-4f15-b5fd-47e8c9dbdc35"
+* entry[composition].resource = cz-examplepetct-composition
 
-* entry[patient][+].fullUrl = "urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da"
-* entry[patient][=].resource = cz-examplepetct-patient
+* entry[diagnosticReport].fullUrl = "urn:uuid:9c23deff-bf1d-46f6-bd0e-005e52b42121"
+* entry[diagnosticReport].resource = cz-examplepetct-diagnosticReport
 
-* entry[practitioner][+].fullUrl = "urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c"
-* entry[practitioner][=].resource = cz-examplepetct-practitioner2
+* entry[patient].fullUrl = "urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da"
+* entry[patient].resource = cz-examplepetct-patient
 
-* entry[serviceRequest][+].fullUrl = "urn:uuid:5be5b9c2-5ca6-4f2e-b3e2-47dc9b334a22"
-* entry[serviceRequest][=].resource = cz-examplepetct-order
+* entry[practitioner].fullUrl = "urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c"
+* entry[practitioner].resource = cz-examplepetct-practitioner2
 
-* entry[condition][+].fullUrl = "urn:uuid:9ee22843-2526-436f-bf66-3f9874869c08"
-* entry[condition][=].resource = cz-examplepetct-clinicalQuestion
+* entry[serviceRequest].fullUrl = "urn:uuid:5be5b9c2-5ca6-4f2e-b3e2-47dc9b334a22"
+* entry[serviceRequest].resource = cz-examplepetct-order
 
-* entry[imagingStudy][+].fullUrl = "urn:uuid:e132f687-df35-4174-91bd-fe74cda5ac5d"
-* entry[imagingStudy][=].resource = cz-examplepetct-imagingStudy
+* entry[condition].fullUrl = "urn:uuid:9ee22843-2526-436f-bf66-3f9874869c08"
+* entry[condition].resource = cz-examplepetct-clinicalQuestion
 
-* entry[procedure][+].fullUrl = "urn:uuid:74820e62-42c2-4a39-9ded-251f3b8a58d0"
-* entry[procedure][=].resource = cz-examplepetct-procedure
+* entry[imagingStudy].fullUrl = "urn:uuid:e132f687-df35-4174-91bd-fe74cda5ac5d"
+* entry[imagingStudy].resource = cz-examplepetct-imagingStudy
 
-* entry[allergyIntolerance][+].fullUrl = "urn:uuid:0bd84e75-9c5e-406b-90a8-e39a615e9cf6"
-* entry[allergyIntolerance][=].resource = cz-examplepetct-allergyIntolerance
+* entry[procedure].fullUrl = "urn:uuid:74820e62-42c2-4a39-9ded-251f3b8a58d0"
+* entry[procedure].resource = cz-examplepetct-procedure
 
-* entry[medicationAdministration][+].fullUrl = "urn:uuid:a89a0433-998e-4408-9d7a-560c6d242366"
-* entry[medicationAdministration][=].resource = cz-examplepetct-medicationAdministration
+* entry[allergyIntolerance].fullUrl = "urn:uuid:0bd84e75-9c5e-406b-90a8-e39a615e9cf6"
+* entry[allergyIntolerance].resource = cz-examplepetct-allergyIntolerance
 
-* entry[diagnosticReport][+].fullUrl = "urn:uuid:9c23deff-bf1d-46f6-bd0e-005e52b42121"
-* entry[diagnosticReport][=].resource = cz-examplepetct-diagnosticReport
+* entry[medicationAdministration].fullUrl = "urn:uuid:a89a0433-998e-4408-9d7a-560c6d242366"
+* entry[medicationAdministration].resource = cz-examplepetct-medicationAdministration
 
-* entry[keyImageReference][+].fullUrl = "urn:uuid:2a00895f-9e01-4467-bf75-4f0c3552afa4"
-* entry[keyImageReference][=].resource = cz-examplepetct-keyImageReference
+* entry[keyImageReference].fullUrl = "urn:uuid:2a00895f-9e01-4467-bf75-4f0c3552afa4"
+* entry[keyImageReference].resource = cz-examplepetct-keyImageReference
 
-* entry[carePlan][+].fullUrl = "urn:uuid:b9af425a-a9d9-4685-800c-d0d661c1b7a4"
-* entry[carePlan][=].resource = cz-examplepetct-carePlan
+* entry[carePlan].fullUrl = "urn:uuid:b9af425a-a9d9-4685-800c-d0d661c1b7a4"
+* entry[carePlan].resource = cz-examplepetct-carePlan
 
-* entry[observation][+].fullUrl = "urn:uuid:1bcd2d5a-e401-4ac2-80d0-7ec558d6b250"
-* entry[observation][=].resource = cz-examplepetct-observation
+* entry[observation].fullUrl = "urn:uuid:1bcd2d5a-e401-4ac2-80d0-7ec558d6b250"
+* entry[observation].resource = cz-examplepetct-observation
 
-* entry[device][+].fullUrl = "urn:uuid:723b5e24-133c-4e9a-aefb-5c14f5b2eac3"
-* entry[device][=].resource = cz-examplepetct-device
+* entry[device].fullUrl = "urn:uuid:723b5e24-133c-4e9a-aefb-5c14f5b2eac3"
+* entry[device].resource = cz-examplepetct-device
 
-* entry[coverage][+].fullUrl = "urn:uuid:be4e7f9a-2771-4aa1-bcee-c386f9ba7eaa"
-* entry[coverage][=].resource = cz-examplepetct-coverage
+* entry[coverage].fullUrl = "urn:uuid:be4e7f9a-2771-4aa1-bcee-c386f9ba7eaa"
+* entry[coverage].resource = cz-examplepetct-coverage
 
-* entry[medication][+].fullUrl = "urn:uuid:0987d1c9-0d9a-4d33-8efc-eee6a8c63059"
-* entry[medication][=].resource = cz-examplepetct-medication
+* entry[medication].fullUrl = "urn:uuid:0987d1c9-0d9a-4d33-8efc-eee6a8c63059"
+* entry[medication].resource = cz-examplepetct-medication
 
 Instance: cz-examplepetct-composition
 InstanceOf: CZ_CompositionImagingReport
@@ -66,7 +66,7 @@ Usage: #example
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * date = "2025-05-20T12:02:00+01:00"
 * author = Reference(urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c)
-* type = $typeClinicalEvent#RDG.PETCT "PET/CT"
+* type = $sct#4261000179100 "Computed tomography imaging report"
 * title = "Zpráva z vyšetření PET+CT hlavy"
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:9c23deff-bf1d-46f6-bd0e-005e52b42121)
 * section[order].title = "Requested imaging studies information Document"
@@ -220,7 +220,7 @@ Title: "Clinical question: PET+CT Imaging report"
 * id = "9ee22843-2526-436f-bf66-3f9874869c08"
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * category = $hl7-condition-category-cs#encounter-diagnosis
-* code.coding[condition] = $sct#405785004
+* code.coding[condition] = $sct#126952004
 
 Instance: cz-examplepetct-imagingStudy
 InstanceOf: CZ_StudyImaging
@@ -333,13 +333,11 @@ InstanceOf: CZ_DiagnosticReport
 Usage: #example
 Description: "Diagnostic report of PET+CT Imaging report"
 Title: "Diagnostic report: PET+CT Imaging report"
-* meta.profile = "https://hl7.cz/fhir/img/StructureDefinition/cz-diagnostic-report"
 * id = "9c23deff-bf1d-46f6-bd0e-005e52b42121"
 * category[imaging] = $loinc#18748-4 "Diagnostic imaging study"
 * status = #final
 * code = $sct#168500000 "Radiology result normal"
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
-* result = Reference(urn:uuid:1bcd2d5a-e401-4ac2-80d0-7ec558d6b250)
 * conclusion = "Zvýšená mitotická aktivita dorzálně za postresekční dutinou až fokálního charakteru při jejím laterálním okraji - nález vzbuzuje podezření na viabilní neoplazii.
 Nenalézáme žádná další jasná ložiska porušené hematoencefalické bariéry nebo zvýšené mitotické aktivity svědčící pro přítomnost viabilní neoplazie v mozku."
 * presentedForm.contentType = #application/pdf

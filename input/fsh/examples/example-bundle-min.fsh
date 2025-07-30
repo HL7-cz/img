@@ -50,7 +50,7 @@ Usage: #example
 * author = Reference(urn:uuid:aafd64f9-36ab-4583-8088-efb93b44db9b)
 * title = "Imaging Report - Rentgen Ing. Králíka"
 * confidentiality = #N
-* type = $typeClinicalEvent#RDG.RTG "RTG vyšetření"
+* type = $sct#371527006 "Radiology report"
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba)
 * section[order].title = "Requested imaging studies information Document"
 * section[order].code = $loinc#55115-0 "Requested imaging studies information Document"

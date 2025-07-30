@@ -101,7 +101,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 
 
 * type 1..
-* type from $hl7eu_document-type (preferred) // valueset to be revised.
+* type from CZ_CompositionTypeVs (preferred) // valueset to be revised.
 
 * date MS
   * ^short = "Date the report was last changed."

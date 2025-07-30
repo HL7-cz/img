@@ -47,6 +47,10 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^short = "Status of the Report"
   * ^comment = "DiagnosticReport.status and Composition.status shall be aligned"
 
+// TODO: add code or value set for composition type
+//* type from
+
+
 * event.code
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "coding"

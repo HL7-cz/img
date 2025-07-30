@@ -8,8 +8,8 @@ Usage: #example
 * type = #document
 * timestamp = "2025-06-20T12:02:00+01:00"
 
-* entry[composition].fullUrl = "urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9"
-* entry[composition].resource = cz-examplertg-composition
+* entry[composition][0].fullUrl = "urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9"
+* entry[composition][=].resource = cz-examplertg-composition
 
 * entry[diagnosticReport].fullUrl = "urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba"
 * entry[diagnosticReport].resource = cz-examplertg-diagnosticReport
@@ -32,11 +32,11 @@ Usage: #example
 * entry[observation].fullUrl = "urn:uuid:eca2bf34-9fa8-4abf-bd98-d8d49bcb1104"
 * entry[observation].resource = cz-examplertg-observation
 
-* entry[device][+].fullUrl = "urn:uuid:03903bc5-4ca0-4c55-8e4a-b256da9f788d"
-* entry[device][=].resource = cz-examplertg-device
+* entry[device].fullUrl = "urn:uuid:03903bc5-4ca0-4c55-8e4a-b256da9f788d"
+* entry[device].resource = cz-examplertg-device
 
-* entry[coverage][+].fullUrl = "urn:uuid:6a2b30b1-4ba7-4a24-adcf-beefa0eface1"
-* entry[coverage][=].resource = cz-examplertg-coverage
+* entry[coverage].fullUrl = "urn:uuid:6a2b30b1-4ba7-4a24-adcf-beefa0eface1"
+* entry[coverage].resource = cz-examplertg-coverage
 
 Instance: cz-examplertg-composition
 InstanceOf: CZ_CompositionImagingReport
@@ -210,7 +210,7 @@ Title: "Observation: RTG Imaging report"
 * status = #final
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * performer = Reference(urn:uuid:aafd64f9-36ab-4583-8088-efb93b44db9b)
-* code = $sct#783628002 "Plain X-ray of hip" 
+* code = $sct#715959009 "Imaging of pelvis" 
 * valueString = "Bez nálezu."
 * effectiveDateTime = "2025-10-06T09:10:00+01:00"
 

@@ -8,8 +8,8 @@ Usage: #example
 * type = #document
 * timestamp = "2022-10-07T08:15:00+01:00"
 
-* entry[composition].fullUrl = "urn:uuid:a84899f0-a241-4f15-b5fd-47e8c9dbdc35"
-* entry[composition].resource = cz-examplepetct-composition
+* entry[composition][0].fullUrl = "urn:uuid:a84899f0-a241-4f15-b5fd-47e8c9dbdc35"
+* entry[composition][=].resource = cz-examplepetct-composition
 
 * entry[diagnosticReport].fullUrl = "urn:uuid:9c23deff-bf1d-46f6-bd0e-005e52b42121"
 * entry[diagnosticReport].resource = cz-examplepetct-diagnosticReport

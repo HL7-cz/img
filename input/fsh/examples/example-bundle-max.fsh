@@ -8,8 +8,11 @@ Usage: #example
 * type = #document
 * timestamp = "2022-10-07T08:15:00+01:00"
 
-* entry[composition][0].fullUrl = "urn:uuid:a84899f0-a241-4f15-b5fd-47e8c9dbdc35"
-* entry[composition][=].resource = cz-examplepetct-composition
+//* entry[composition][0].fullUrl = "urn:uuid:a84899f0-a241-4f15-b5fd-47e8c9dbdc35"
+//* entry[composition][=].resource = cz-examplepetct-composition
+* entry[0].fullUrl = "urn:uuid:a84899f0-a241-4f15-b5fd-47e8c9dbdc35"
+* entry[=].resource = cz-examplepetct-composition
+
 
 * entry[patient][+].fullUrl = "urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da"
 * entry[patient][=].resource = cz-examplepetct-patient
@@ -62,6 +65,7 @@ Description: "Example of Imaging report (Composition) including a PET+CT report"
 Title: "Composition: PET+CT Imaging report"
 Usage: #example
 * id = "a84899f0-a241-4f15-b5fd-47e8c9dbdc35"
+//* meta.profile[0] = "https://hl7.cz/fhir/img/StructureDefinition/CZ_CompositionImagingReport"
 * status = #final
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * date = "2025-05-20T12:02:00+01:00"
@@ -333,7 +337,7 @@ InstanceOf: CZ_DiagnosticReport
 Usage: #example
 Description: "Diagnostic report of PET+CT Imaging report"
 Title: "Diagnostic report: PET+CT Imaging report"
-* meta.profile = "https://hl7.cz/fhir/img/StructureDefinition/cz-diagnostic-report"
+//* meta.profile = "https://hl7.cz/fhir/img/StructureDefinition/cz-diagnostic-report"
 * id = "9c23deff-bf1d-46f6-bd0e-005e52b42121"
 * category = #CT
 * status = #final

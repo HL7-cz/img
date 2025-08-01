@@ -8,8 +8,8 @@ Usage: #example
 * type = #document
 * timestamp = "2025-06-20T12:02:00+01:00"
 
-* entry[composition][0].fullUrl = "urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9"
-* entry[composition][=].resource = cz-examplertg-composition
+* entry[composition].fullUrl = "urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9"
+* entry[composition].resource = cz-examplertg-composition
 
 * entry[diagnosticReport].fullUrl = "urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba"
 * entry[diagnosticReport].resource = cz-examplertg-diagnosticReport
@@ -44,6 +44,7 @@ Title: "Composition: RTG Imaging report"
 Description: "Minimal composition for RTG Image report"
 Usage: #example
 * id = "dbd426a9-d660-4f97-8656-1e39db4a57c9"
+* meta.profile[0] = "https://hl7.cz/fhir/img/StructureDefinition/cz-composition-imaging"
 * status = #final
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * date = "2025-05-20T12:02:00+01:00"
@@ -159,7 +160,7 @@ Description: "Reason For Admission of RTG Imaging report"
 Title: "Condition - Reason For Admission: RTG Imaging report"
 * id = "e20f7fc3-0237-496a-a57a-18acac3776df"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
-* code.coding = #S01.8 "Otevřená rána jiných částí hlavy"
+* code.coding = $mkn-10#S01.8 "Otevřená rána jiných částí hlavy"
 * code.text = "vyskočil z okna, pád ze 3 metrů na nohy (na hlavě jen exkoriace), v bezvědomí nebyl, kulhá, z hlavy mu teče krev, stěžuje si na bolest dolní části zad."
 
 Instance: cz-examplertg-device

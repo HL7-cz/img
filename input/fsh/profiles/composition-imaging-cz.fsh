@@ -47,10 +47,6 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^short = "Status of the Report"
   * ^comment = "DiagnosticReport.status and Composition.status shall be aligned"
 
-// TODO: add code or value set for composition type
-//* type from
-
-
 * event.code
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "coding"
@@ -106,6 +102,11 @@ The `text` field of each section SHALL contain a textual representation of all l
 
 * type 1..
 * type from CZ_CompositionTypeVs (preferred) // valueset to be revised.
+  * coding 1..*
+    * insert SliceElement( #value, $this )
+  * coding contains loinc 1..1
+  * coding[loinc] = $loinc#18748-4 "Diagnostic imaging study"
+
 
 * date MS
   * ^short = "Date the report was last changed."

@@ -8,8 +8,8 @@ Usage: #example
 * type = #document
 * timestamp = "2022-10-07T08:15:00+01:00"
 
-* entry[composition][0].fullUrl = "urn:uuid:a84899f0-a241-4f15-b5fd-47e8c9dbdc35"
-* entry[composition][=].resource = cz-examplepetct-composition
+* entry[composition].fullUrl = "urn:uuid:a84899f0-a241-4f15-b5fd-47e8c9dbdc35"
+* entry[composition].resource = cz-examplepetct-composition
 
 * entry[diagnosticReport].fullUrl = "urn:uuid:9c23deff-bf1d-46f6-bd0e-005e52b42121"
 * entry[diagnosticReport].resource = cz-examplepetct-diagnosticReport
@@ -62,7 +62,7 @@ Description: "Example of Imaging report (Composition) including a PET+CT report"
 Title: "Composition: PET+CT Imaging report"
 Usage: #example
 * id = "a84899f0-a241-4f15-b5fd-47e8c9dbdc35"
-//* meta.profile[0] = "https://hl7.cz/fhir/img/StructureDefinition/CZ_CompositionImagingReport"
+* meta.profile[0] = "https://hl7.cz/fhir/img/StructureDefinition/cz-composition-imaging"
 * status = #final
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * date = "2025-05-20T12:02:00+01:00"

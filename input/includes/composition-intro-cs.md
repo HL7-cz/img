@@ -22,10 +22,10 @@ Sekce objednávky obsahuje informace o objednávkách, které vedly ke studiím 
 > Poznámka: „Vyloučení X“, ačkoli je pro zobrazovacího lékaře do jisté míry užitečné, může být problematické pro fakturaci, protože příznaky, které naznačují možnou přítomnost onemocnění a prokazují lékařskou nutnost zobrazovacího vyšetření, jsou implicitní, ale nejsou zachyceny. V praxi se na pracovišti tato formuloce stále více odmítá.
 
 
-#### Anamnéza (History)
+#### Podpůrné klinické údaje (History)
 
 
-Tato část obsahuje anamnézu pacienta a další předchozí klinické podrobnosti, které zobrazovací lékař považuje za relevantní pro zobrazovací studii. Některé informace může poskytnout odesílající lékař v objednávce a další jsou extrahovány z lékařské dokumentace zobrazovacím personálem, automatizovanými nástroji nebo samotným radiologem. Tyto informace poskytují základní informace pro zobrazovacího lékaře, kontext pro obsah zprávy a někdy jsou relevantní pro fakturaci a klinické pokyny. Mezi potenciální zdroje patří výsledky nebo shrnutí klinických poznámek ze setkání, kde byla zadána objednávka zobrazovacího vyšetření.
+Tato část obsahuje klinické údaje pacienta a další předchozí klinické podrobnosti, které zobrazovací lékař považuje za relevantní pro zobrazovací studii. Některé informace může poskytnout odesílající lékař v objednávce a další jsou extrahovány z lékařské dokumentace zobrazovacím personálem, automatizovanými nástroji nebo samotným radiologem. Tyto informace poskytují základní informace pro zobrazovacího lékaře, kontext pro obsah zprávy a někdy jsou relevantní pro fakturaci a klinické pokyny. Mezi potenciální zdroje patří výsledky nebo shrnutí klinických poznámek ze setkání, kde byla zadána objednávka zobrazovacího vyšetření.
 
 #### Procedura (Procedure)
 

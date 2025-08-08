@@ -355,7 +355,7 @@ groups:
       - StructureDefinition/logAuthorCz
       - StructureDefinition/logBodyImagingReportCz
       - StructureDefinition/logDcmMetadata
-      - StructureDefinition/logdigitalSignatureCz
+      - StructureDefinition/logDigitalSignatureCz
       - StructureDefinition/logDocumentMetadataCz
       - StructureDefinition/logHeaderImagingReportCz
       - StructureDefinition/logImagingReportCz

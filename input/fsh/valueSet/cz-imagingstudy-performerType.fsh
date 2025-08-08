@@ -4,4 +4,4 @@ Title:	    "Imaging Study Performer Type Value Set"
 Description:   """Imaging Study series performer type codes, it extends on the base set defined in the FHIR specification."""
 * ^experimental = false
 * include codes from valueset http://hl7.org/fhir/ValueSet/series-performer-function
-* http://terminology.hl7.org/CodeSystem/v3-ParticipationType#CST	"custodian"
+* http://terminology.hl7.org/CodeSystem/v3-ParticipationType|5.0.0#CST	"custodian"

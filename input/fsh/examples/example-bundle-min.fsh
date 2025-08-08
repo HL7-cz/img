@@ -32,11 +32,11 @@ Usage: #example
 * entry[observation].fullUrl = "urn:uuid:eca2bf34-9fa8-4abf-bd98-d8d49bcb1104"
 * entry[observation].resource = cz-examplertg-observation
 
-* entry[device][+].fullUrl = "urn:uuid:03903bc5-4ca0-4c55-8e4a-b256da9f788d"
-* entry[device][=].resource = cz-examplertg-device
+* entry[device].fullUrl = "urn:uuid:03903bc5-4ca0-4c55-8e4a-b256da9f788d"
+* entry[device].resource = cz-examplertg-device
 
-* entry[coverage][+].fullUrl = "urn:uuid:6a2b30b1-4ba7-4a24-adcf-beefa0eface1"
-* entry[coverage][=].resource = cz-examplertg-coverage
+* entry[coverage].fullUrl = "urn:uuid:6a2b30b1-4ba7-4a24-adcf-beefa0eface1"
+* entry[coverage].resource = cz-examplertg-coverage
 
 Instance: cz-examplertg-composition
 InstanceOf: CZ_CompositionImagingReport
@@ -44,13 +44,14 @@ Title: "Composition: RTG Imaging report"
 Description: "Minimal composition for RTG Image report"
 Usage: #example
 * id = "dbd426a9-d660-4f97-8656-1e39db4a57c9"
+* meta.profile[0] = "https://hl7.cz/fhir/img/StructureDefinition/cz-composition-imaging"
 * status = #final
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * date = "2025-05-20T12:02:00+01:00"
 * author = Reference(urn:uuid:aafd64f9-36ab-4583-8088-efb93b44db9b)
 * title = "Imaging Report - Rentgen Ing. Králíka"
 * confidentiality = #N
-* type = $typeClinicalEvent#RDG.RTG "RTG vyšetření"
+* type = $sct#371527006 "Radiology report"
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba)
 * section[order].title = "Requested imaging studies information Document"
 * section[order].code = $loinc#55115-0 "Requested imaging studies information Document"
@@ -159,7 +160,7 @@ Description: "Reason For Admission of RTG Imaging report"
 Title: "Condition - Reason For Admission: RTG Imaging report"
 * id = "e20f7fc3-0237-496a-a57a-18acac3776df"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
-* code.coding = #S01.8 "Otevřená rána jiných částí hlavy"
+* code.coding = $mkn-10#S01.8 "Otevřená rána jiných částí hlavy"
 * code.text = "vyskočil z okna, pád ze 3 metrů na nohy (na hlavě jen exkoriace), v bezvědomí nebyl, kulhá, z hlavy mu teče krev, stěžuje si na bolest dolní části zad."
 
 Instance: cz-examplertg-device
@@ -210,7 +211,7 @@ Title: "Observation: RTG Imaging report"
 * status = #final
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * performer = Reference(urn:uuid:aafd64f9-36ab-4583-8088-efb93b44db9b)
-* code = $sct#783628002 "Plain X-ray of hip" 
+* code = $sct#715959009 "Imaging of pelvis" 
 * valueString = "Bez nálezu."
 * effectiveDateTime = "2025-10-06T09:10:00+01:00"
 
@@ -241,7 +242,7 @@ Description: "Diagnostic report of RTG Imaging report"
 Title: "Diagnostic report: RTG Imaging report"
 * id = "bd3e7b78-bfaa-428e-9168-8cd29cf54aba"
 * extension[composition].valueReference = Reference(urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9)
-* category = #RAD
+* category[imaging] = $loinc#18748-4 "Diagnostic imaging study"
 * status = #final
 * code = $sct#168500000 "Radiology result normal"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)

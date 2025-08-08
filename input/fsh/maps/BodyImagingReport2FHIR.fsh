@@ -14,7 +14,7 @@ Usage: #definition
 * group[=].element[=].display = "A.2.1 and A.2.2 - Information about order"
 * group[=].element[=].target.code = #Composition.section:order					
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.comment = "Composition.InformationAboutOrder.entry.ofType(CZ_ImagingInformationAboutOrder)"	
+* group[=].element[=].target.comment = "Composition.section:order.entry.ofType(CZ_ImagingInformationAboutOrder)"	
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #InformationAboutOrder.orderDetail
 * group[=].element[=].display = "A.2.1 - Order detail"
@@ -63,7 +63,7 @@ Usage: #definition
 * group[=].element[+].code = #Body.SpecimenInformation
 * group[=].element[=].display = "A.2.3 - Speciment information"
 * group[=].element[=].target.code = #Composition.section:order.specimen				
-* group[=].element[=].target.comment = "Composition.InformationAboutOrder.entry.ofType(CZ_ImagingInformationAboutOrder).specimen.ofType(CZ_Specimen)"
+* group[=].element[=].target.comment = "Composition.section:order.entry.ofType(CZ_ImagingInformationAboutOrder).specimen.ofType(CZ_Specimen)"
 * group[=].element[=].target.equivalence = #relatedto	
 * group[=].element[+].code = #SpecimenInformation.identifier
 * group[=].element[=].display = "A.2.3.1 - Identifier of specimen"
@@ -114,7 +114,7 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-study-imaging"
 * group[=].element[+].code = #Body.ReportOfImagingMethod.typeOfModality
 * group[=].element[=].display = "A.2.4.1 - Modality type"
-* group[=].element[=].target.code = #Composition.section:findings.ofType(CZ_StudyImaging).series.modality
+* group[=].element[=].target.code = #Composition.section:findings.entry.ofType(CZ_StudyImaging).series.modality
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Body.ReportOfImagingMethod.partOfBody

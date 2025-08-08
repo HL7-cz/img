@@ -47,10 +47,6 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^short = "Status of the Report"
   * ^comment = "DiagnosticReport.status and Composition.status shall be aligned"
 
-// TODO: add code or value set for composition type
-//* type from
-
-
 * event.code
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "coding"
@@ -63,7 +59,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^short = "Modality"
   * ^definition = "The type of imaging modality used to perform the study."
   //* ^comment = "At least one ImagingStudy.code.coding SHALL be equal to Composition.event.code.coding[imagingstudy]"
-* event.code[procedure].coding from https://www.hl7.org/fhir/valueset-procedure-reason.html (preferred)
+* event.code[procedure].coding from http://hl7.org/fhir/ValueSet/procedure-reason (preferred)
   * ^short = "Study Type"
   * ^definition = "The type of imaging study performed."
 
@@ -104,13 +100,13 @@ The `text` field of each section SHALL contain a textual representation of all l
   * party only Reference(CZ_PractitionerRoleCore)
 
 
-// type of the report. Matching DiagnosticReport.code
-// code
-//* type 1..
-//* type from CZ_DiagnosticReport (preferred) // valueset to be revised.
-//  * ^short = "Type of Imaging Diagnostic Report"
-//  * ^definition = "Specifies that it refers to a Imaging Report"
-//  * ^comment = "At least one DiagnosticReport.code.coding and Composition.type.coding SHALL be equal"
+* type 1..
+* type from CZ_CompositionTypeVs (preferred) // valueset to be revised.
+  * coding 1..*
+    * insert SliceElement( #value, $this )
+  * coding contains loinc 1..1
+  * coding[loinc] = $loinc#18748-4 "Diagnostic imaging study"
+
 
 * date MS
   * ^short = "Date the report was last changed."

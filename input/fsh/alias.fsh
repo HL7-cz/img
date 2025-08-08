@@ -4,7 +4,7 @@ Alias: $sct =  http://snomed.info/sct
 Alias: $orpha = https://www.orpha.net
 Alias: $loinc =  http://loinc.org
 Alias: $iso3166 = urn:iso:std:iso:3166
-Alias: $media-category = http://terminology.hl7.org/CodeSystem/media-category
+Alias: $media-category = http://terminology.hl7.org/CodeSystem/media-category|4.0.0
 Alias: $dcm = http://dicom.nema.org/resources/ontology/DCM
 Alias: $ucum = http://unitsofmeasure.org
 Alias: $mkn-10 = https://mkn10.uzis.cz
@@ -26,6 +26,7 @@ Alias: $sctBodySite = http://hl7.org/fhir/ValueSet/body-site
 Alias: $hl7-diagnostic-category = http://hl7.org/fhir/ValueSet/diagnostic-service-sections
 Alias: $dlp_lecprip = https://hl7.cz/fhir/core/ValueSet/cz-dlplecivepripravky-vs
 Alias: $dlp_formy = https://hl7.cz/fhir/core/ValueSet/cz-dlpformy-vs
+Alias: $hl7eu_document-type = http://hl7.eu/fhir/imaging-r5/ValueSet/ImImagingReportTypesEuVS
 
 // Extensions
 Alias: $event-basedOn = http://hl7.org/fhir/StructureDefinition/event-basedOn
@@ -38,18 +39,18 @@ Alias: $artifact-description-url          = http://hl7.org/fhir/StructureDefinit
 Alias: $artifact-version-url              = http://hl7.org/fhir/StructureDefinition/artifact-version
 Alias: $data-absent-reason-url            = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 Alias: $diagnostic-report-composition-url = http://hl7.org/fhir/StructureDefinition/extension-DiagnosticReport.composition
-Alias: $event-basedOn-url                 = http://hl7.org/fhir/StructureDefinition/event-basedOn
+Alias: $event-basedOn-url                 = http://hl7.org/fhir/StructureDefinition/event-basedOn|4.0.1
 Alias: $individual-genderIdentity         = http://hl7.org/fhir/StructureDefinition/individual-genderIdentity
 Alias: $information-recipient-url         = http://hl7.eu/fhir/StructureDefinition/information-recipient
 Alias: $document-reference-thumbnail-url  = http://hl7.org/fhir/StructureDefinition/documentreference-thumbnail
 Alias: $note-url                          = http://hl7.org/fhir/StructureDefinition/note|5.2.0
 Alias: $cvDocumentReference-basedOn       = http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.basedOn
-Alias: $obligation = http://hl7.org/fhir/StructureDefinition/obligation
+Alias: $obligation                        = http://hl7.org/fhir/StructureDefinition/obligation
 Alias: $cvDiagnosticReport-supportingInfo = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.supportingInfo
-Alias: $cvDiagnosticReport-composition = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
+Alias: $cvDiagnosticReport-composition    = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
 Alias: $artifact-version-url-5            = http://hl7.org/fhir/StructureDefinition/artifact-version|5.2.0
-Alias: $observation-triggeredBy-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
-Alias: $observation-value-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x]
+Alias: $observation-triggeredBy-r5        = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
+Alias: $observation-value-r5              = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x]
 Alias: $service-request-body-structure-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-ServiceRequest.bodyStructure
 
 // Actor Canonical

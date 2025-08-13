@@ -5,6 +5,7 @@ Alias: $orpha = https://www.orpha.net
 Alias: $loinc =  http://loinc.org
 Alias: $iso3166 = urn:iso:std:iso:3166
 Alias: $media-category = http://terminology.hl7.org/CodeSystem/media-category|4.0.0
+Alias: $dicom = http://dicom.nema.org/resources/ontology/DCM|2022.4.20221006
 Alias: $dcm = http://dicom.nema.org/resources/ontology/DCM
 Alias: $ucum = http://unitsofmeasure.org
 Alias: $mkn-10 = https://mkn10.uzis.cz
@@ -52,7 +53,7 @@ Alias: $artifact-version-url-5            = http://hl7.org/fhir/StructureDefinit
 Alias: $observation-triggeredBy-r5        = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
 Alias: $observation-value-r5              = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x]
 Alias: $service-request-body-structure-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-ServiceRequest.bodyStructure
-
+Alias: $bodySite-reference                = http://hl7.org/fhir/StructureDefinition/bodySite|5.2.0
 // Actor Canonical
 
 //Alias: $server = http://hl7.cz/fhir/img/actor-server-img

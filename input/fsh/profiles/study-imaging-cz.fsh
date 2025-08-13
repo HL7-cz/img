@@ -39,7 +39,7 @@ Description: """This profile represents an imaging study instance."""
     * function = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#DEV
     * actor only Reference( CZ_DeviceObserver ) 
  // * insert EndpointTypes 
-
+  * modality from CZ_ModalityVs (extensible) 
   * instance
     * extension contains 
       ImagingStudyInstanceDescription named instance-description 0..1

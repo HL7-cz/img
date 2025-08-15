@@ -55,26 +55,26 @@ Usage: #example
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba)
 * section[order].title = "Requested imaging studies information Document"
 * section[order].code = $loinc#55115-0 "Requested imaging studies information Document"
-* section[order].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Order information</div>" 
+* section[order].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Order information</div>"
 * section[order].text.status = #generated
 * section[order].entry[0] = Reference(urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04)
 * section[clinicalQuestion].title = "Clinical question"
 * section[clinicalQuestion].code = $loinc#18785-6	"Radiology Reason for study (narrative)"
-* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Clinical question: Trauma skeletu?</div>" 
+* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Clinical question: Trauma skeletu?</div>"
 * section[clinicalQuestion].text.status = #additional
 * section[imagingstudy].title = "Imaging Study"
 * section[imagingstudy].code = $loinc#18726-0 "Radiology studies (set)"
-* section[imagingstudy].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Imaging Study</div>" 
+* section[imagingstudy].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Imaging Study</div>"
 * section[imagingstudy].text.status = #generated
 * section[imagingstudy].entry[0] = Reference(urn:uuid:fc79917b-b1b0-44a6-beaa-e9715322c834)
 * section[procedure].title = "Procedure"
 * section[procedure].code = $loinc#55111-9 "Current imaging procedure descriptions Document"
-* section[procedure].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Procedure</div>" 
+* section[procedure].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Procedure</div>"
 * section[procedure].text.status = #generated
 * section[procedure].entry[0] = Reference(urn:uuid:ea2967a5-0d00-461c-8785-b5affef4791c)
 * section[findings].title = "Findings"
 * section[findings].code = $loinc#59776-5 "Procedure findings Narrative"
-* section[findings].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Findings</div>" 
+* section[findings].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Findings</div>"
 * section[findings].text.status = #generated
 * section[findings].entry[0] = Reference(urn:uuid:eca2bf34-9fa8-4abf-bd98-d8d49bcb1104)
 
@@ -116,12 +116,12 @@ Description: "Patient in RTG Imaging report"
 * address[=].type = #physical
 * address[=].text = "Pod Hroudou 8, 190 00 Praha 9 - Prosek"
 * address[=].line[+] = "Pod Hroudou 8"
-//* address[=].line[=].extension[streetName].valueString = "Pod Hroudou"
-//* address[=].line[=].extension[houseNumber].valueString = "8"
+* address[=].line[=].extension[streetName].valueString = "Pod Hroudou"
+* address[=].line[=].extension[houseNumber].valueString = "8"
 * address[=].city = "Praha"
 * address[=].postalCode = "19000"
 * address[=].country = "CZ"
-//  * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
+  * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
 
 * communication[+].language = urn:ietf:bcp:47#cs
 * communication[=].preferred = true
@@ -213,7 +213,7 @@ Title: "Observation: RTG Imaging report"
 * status = #final
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * performer = Reference(urn:uuid:aafd64f9-36ab-4583-8088-efb93b44db9b)
-* code = $sct#715959009 //"Imaging of pelvis" 
+* code = $sct#715959009 //"Imaging of pelvis"
 * valueString = "Bez nálezu."
 * effectiveDateTime = "2025-10-06T09:10:00+01:00"
 
@@ -223,7 +223,7 @@ Usage: #example
 Description: "Diagnosis for RTG Imaging report"
 Title: "Condition - Diagnosis: RTG Imaging report"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
-* code.coding[diagnosis] = #T09.3 "Poranění míchy‚ úroveň neurčena" 
+* code.coding[diagnosis] = #T09.3 "Poranění míchy‚ úroveň neurčena"
 * code.text = "Poranění míchy‚ úroveň neurčena"
 
 Instance: cz-examplertg-procedure

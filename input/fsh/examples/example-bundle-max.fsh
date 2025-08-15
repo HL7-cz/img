@@ -149,7 +149,7 @@ Title: "Patient Example: PET+CT Imaging report"
 * identifier[RID][+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
 * identifier[RID][=].value = "2066425387"
 
-* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#SK
+//* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#SK
 * name.use = #usual
 * name.family = "Jana"
 * name.given = "Example"
@@ -161,12 +161,12 @@ Title: "Patient Example: PET+CT Imaging report"
 * address[=].type = #physical
 * address[=].text = "Ulice 13a, 150 00 Praha 5"
 * address[=].line[+] = "Ulice 13a"
-* address[=].line[=].extension[streetName].valueString = "Ulice"
-* address[=].line[=].extension[houseNumber].valueString = "13a"
+//* address[=].line[=].extension[streetName].valueString = "Ulice"
+//* address[=].line[=].extension[houseNumber].valueString = "13a"
 * address[=].city = "Praha"
 * address[=].postalCode = "15000"
 * address[=].country = "CZ"
-  * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
+//  * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
 
 * communication[+].language = urn:ietf:bcp:47#sk
 * communication[=].preferred = true
@@ -187,7 +187,7 @@ Description: "Imaging order: PET+CT Imaging report"
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * insurance = Reference(urn:uuid:be4e7f9a-2771-4aa1-bcee-c386f9ba7eaa)
 * bodySite = $sct#69536005 "Head"
-* code.coding = $sct#1655436100011910 "PET CT of brain"
+* code.coding = $sct#16554361000119106 "PET CT of brain"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">PET+CT mozku pro diferenciální dg. tumoru a radiační nekrozy</div>"
 * authoredOn = "2022-10-06T12:02:00+01:00"
@@ -233,6 +233,8 @@ Title: "Imaging study: PET+CT Imaging report"
 * identifier[studyInstanceUid].value = "urn:oid:1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.2"
 * status = #available
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
+* series.uid = "1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.2.1"
+* series.modality = $dcm#CT "Computed Tomography"
 
 Instance: cz-examplepetct-condition1
 InstanceOf: CZ_ConditionImage
@@ -325,7 +327,7 @@ Title: "Observation: PET+CT Imaging report"
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * performer = Reference(urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c)
 * focus = Reference(urn:uuid:0bd84e75-9c5e-406b-90a8-e39a615e9cf6)
-* code = $sct#16554361000119106 "PET CT of brain"
+* code = $sct#16554361000119106 //"PET CT of brain"
 * valueString = "Na tomografických řezech nacházíme nehomogenně zvýšenou akumulaci RF při zadním okraji postresekční dutiny vlevo parietotemporálně, maximum akumulace RF resp. FLT je laterálně až do charakteru ložiska výrazně zvýšeného FLT."
 * effectiveDateTime = "2022-10-07T09:10:00+01:00"
 
@@ -367,7 +369,7 @@ Usage: #example
 Description: "Procedure of PET+CT Imaging report"
 Title: "Procedure: PET+CT Imaging report"
 * id = "74820e62-42c2-4a39-9ded-251f3b8a58d0"
-* code.coding = $sct#1655436100011910 "PET CT of brain"
+* code.coding = $sct#16554361000119106 "PET CT of brain"
 * status = #completed
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * partOf = Reference(urn:uuid:a89a0433-998e-4408-9d7a-560c6d242366)

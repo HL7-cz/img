@@ -5,9 +5,10 @@ Alias: $orpha = https://www.orpha.net
 Alias: $loinc =  http://loinc.org
 Alias: $iso3166 = urn:iso:std:iso:3166
 Alias: $media-category = http://terminology.hl7.org/CodeSystem/media-category|4.0.0
+Alias: $dicom = http://dicom.nema.org/resources/ontology/DCM|2022.4.20221006
 Alias: $dcm = http://dicom.nema.org/resources/ontology/DCM
 Alias: $ucum = http://unitsofmeasure.org
-Alias: $mkn-10 = https://mkn10.uzis.cz
+Alias: $mkn-10 = https://terminology.uzis.cz/CodeSystem/Mkn10_5
 Alias: $hl7-condition-category-cs =  http://terminology.hl7.org/CodeSystem/condition-category
 Alias: $typeClinicalEvent = https://hl7.cz/fhir/img-order/CodeSystem/cz-typeClinicalEvent-cs
 Alias: $hl7-allergyintoleranceclinicalstatus = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|4.0.1
@@ -20,7 +21,7 @@ Alias: $hl7-condition-category = http://hl7.org/fhir/ValueSet/condition-category
 Alias: $hl7-clinicalFindings = http://hl7.org/fhir/ValueSet/clinical-findings
 Alias: $sct-condition-code = http://hl7.org/fhir/ValueSet/condition-code
 Alias: $hl7-condition-category = http://hl7.org/fhir/ValueSet/condition-category
-Alias: $mkn-10-problem-list = https://terminology.ncez.mzcr.cz/ValueSet/mkn-10
+Alias: $mkn-10-problem-list = https://terminology.uzis.cz/ValueSet/mkn-10
 Alias: $sct-device-type = http://hl7.org/fhir/ValueSet/device-type
 Alias: $sctBodySite = http://hl7.org/fhir/ValueSet/body-site
 Alias: $hl7-diagnostic-category = http://hl7.org/fhir/ValueSet/diagnostic-service-sections
@@ -52,7 +53,7 @@ Alias: $artifact-version-url-5            = http://hl7.org/fhir/StructureDefinit
 Alias: $observation-triggeredBy-r5        = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
 Alias: $observation-value-r5              = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x]
 Alias: $service-request-body-structure-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-ServiceRequest.bodyStructure
-
+Alias: $bodySite-reference                = http://hl7.org/fhir/StructureDefinition/bodySite|5.2.0
 // Actor Canonical
 
 //Alias: $server = http://hl7.cz/fhir/img/actor-server-img

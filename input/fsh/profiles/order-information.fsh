@@ -4,8 +4,8 @@ Id: cz-imagingOrderInformation
 Title: "Service Request: Imaging Report (CZ)"
 Description: "Order information for the scope of the Czech national interoperability project."
 
-* extension contains $service-request-body-structure-r5 named bodyStructure-R5 0..*
-* extension[bodyStructure-R5] ^short = "Body Structure"
+* extension contains $bodySite-reference named bodySite 0..1
+* extension[bodySite].valueReference only Reference(BodyStructureCz)
 * identifier 0..1
 
 * basedOn only Reference(CZ_CarePlanImage or CarePlan or CZ_ImagingOrderInformation or ServiceRequest or MedicationRequest)

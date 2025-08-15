@@ -17,7 +17,7 @@ Description: "This profile defines obligations for an human Patient in FHIR for 
 * name.given insert ObligationSet-01_creator-shall-able
 * name.family insert ObligationSet-01_creator-shall-able
 * birthDate insert ObligationSet-02_creator-should-able
-* extension[patient-nationality] insert ObligationSet-04_creator-should-if-known
+//* extension[patient-nationality] insert ObligationSet-04_creator-should-if-known
 * gender insert ObligationSet-01_creator-shall-able
 
 * telecom insert ObligationSet-04_creator-should-if-known

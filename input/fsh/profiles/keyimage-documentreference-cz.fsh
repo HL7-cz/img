@@ -35,6 +35,7 @@ When the resource represents a DICOM instance it SHALL contain a the `SOP Instan
 * extension[basedOn][imorderaccession].value[x] only Reference(CZ_ImagingOrderInformation)
   * identifier 1..1
   * identifier only CZ_AccessionNumberIdentifier 
+* extension[modality].value[x].coding from CZ_ModalityVs (preferred) 
 
 * category 1..*
   * insert SliceElement( #profile, $this )

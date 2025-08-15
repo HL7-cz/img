@@ -105,7 +105,7 @@ Description: "Patient in RTG Imaging report"
 * identifier[RID][+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
 * identifier[RID][=].value = "2066425387"
 
-* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#CZ
+//* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#CZ
 * name.use = #usual
 * name.family = "Pokusný"
 * name.given = "Králík"
@@ -116,12 +116,12 @@ Description: "Patient in RTG Imaging report"
 * address[=].type = #physical
 * address[=].text = "Pod Hroudou 8, 190 00 Praha 9 - Prosek"
 * address[=].line[+] = "Pod Hroudou 8"
-* address[=].line[=].extension[streetName].valueString = "Pod Hroudou"
-* address[=].line[=].extension[houseNumber].valueString = "8"
+//* address[=].line[=].extension[streetName].valueString = "Pod Hroudou"
+//* address[=].line[=].extension[houseNumber].valueString = "8"
 * address[=].city = "Praha"
 * address[=].postalCode = "19000"
 * address[=].country = "CZ"
-  * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
+//  * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
 
 * communication[+].language = urn:ietf:bcp:47#cs
 * communication[=].preferred = true
@@ -200,6 +200,8 @@ Title: "Imaging study: RTG Imaging report"
 * identifier[studyInstanceUid].value = "urn:oid:1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.1"
 * status = #available
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
+* series.uid = "1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.1.1"
+* series.modality = $dcm#DX "Digital Radiography"
 
 Instance: cz-examplertg-observation
 InstanceOf: CZ_ObservationResultImaging
@@ -211,7 +213,7 @@ Title: "Observation: RTG Imaging report"
 * status = #final
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * performer = Reference(urn:uuid:aafd64f9-36ab-4583-8088-efb93b44db9b)
-* code = $sct#715959009 "Imaging of pelvis" 
+* code = $sct#715959009 //"Imaging of pelvis" 
 * valueString = "Bez nálezu."
 * effectiveDateTime = "2025-10-06T09:10:00+01:00"
 

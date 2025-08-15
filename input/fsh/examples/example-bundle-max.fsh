@@ -56,6 +56,9 @@ Usage: #example
 * entry[medication].fullUrl = "urn:uuid:0987d1c9-0d9a-4d33-8efc-eee6a8c63059"
 * entry[medication].resource = cz-examplepetct-medication
 
+* entry[encounter].fullUrl = "urn:uuid:7023b84e-47bb-405c-be46-2c161c6ba8d5"
+* entry[encounter].resource = cz-encounter-example
+
 Instance: cz-examplepetct-composition
 InstanceOf: CZ_CompositionImagingReport
 Description: "Example of Imaging report (Composition) including a PET+CT report"
@@ -69,6 +72,7 @@ Usage: #example
 * author = Reference(urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c)
 * type = $sct#4261000179100 "Computed tomography imaging report"
 * title = "Zpráva z vyšetření PET+CT hlavy"
+* encounter = Reference(urn:uuid:7023b84e-47bb-405c-be46-2c161c6ba8d5)
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:9c23deff-bf1d-46f6-bd0e-005e52b42121)
 * section[order].title = "Requested imaging studies information Document"
 * section[order].code = $loinc#55115-0 "Requested imaging studies information Document"
@@ -101,6 +105,46 @@ Usage: #example
 * section[recommendation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Findings</div>"
 * section[recommendation].text.status = #generated
 * section[recommendation].entry[0] = Reference(urn:uuid:b9af425a-a9d9-4685-800c-d0d661c1b7a4)
+
+Instance: cz-encounter-example
+InstanceOf: CZ_Encounter
+Usage: #example
+Description: "Encounter"
+* id = "7023b84e-47bb-405c-be46-2c161c6ba8d5"
+* identifier[+].system = "http://example.org/hospital"
+* identifier[=].value = "ku-123456790"
+* status = #in-progress
+* class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+* class.code = #AMB
+* type.text = "PET/CT pacientky Jany Example"
+* serviceProvider = Reference(cz-organizationwithlogo-example)
+
+Instance: cz-organizationwithlogo-example
+InstanceOf: cz-organization-core
+Usage: #example
+Description: "An example of the organization with logo extension"
+* contained[+] = attachment-logo-FN-Motol  // Příklad přílohy s logem
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
+* identifier[=].value = "456789655"
+* type[+] = $drzar#101 "Fakultní nemocnice"
+* name = "Fakultní nemocnice Motol"
+* telecom[0].system = #phone
+* telecom[=].value = "+420257216007"
+* telecom[=].use = #work
+* telecom[+].system = #fax
+* telecom[=].value = "+420257216007"
+* telecom[=].use = #work
+
+* address[+].use = #work
+* address[=].type = #both
+* address[=].text = "Plzeňská 951/125, 150 00 Praha 5"
+* address[=].line[+] = "Plzeňská 951/125"
+* address[=].line[=].extension[streetName].valueString = "Plzeňská"
+* address[=].line[=].extension[houseNumber].valueString = "951/125"
+* address[=].city = "Praha"
+* address[=].postalCode = "15000"
+* address[=].country = "CZ"
+* extension[logo].valueReference = Reference(logoFNMotol)
 
 Instance: cz-examplepetct-device
 InstanceOf: CZ_DeviceObserver

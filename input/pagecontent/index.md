@@ -1,5 +1,7 @@
 {% include variable-definitions.md %}
+
 ### Introduction 
+
 This implementation guide is based on [FHIR version R4](https://hl7.org/fhir/R4/). Specify a set of rules that will be used for HL7 FHIR to define how to represent Imaging Report in the Czech national context, in line with European eHN guidelines.
 
 Its main objective is to define the content components and the preferred structure to be used to construct a imaging report.The purpose of this standard is to define the representation of the imaging report as a patient's medical record for the purpose of electronic exchange of health information between individuals, healthcare providers and infrastructure in the Czech Republic. 
@@ -7,6 +9,7 @@ Its main objective is to define the content components and the preferred structu
 This guide does not describe how to exchange this message.
 
 ### Scope
+
 This guide is divided into several pages which are listed at the top of each page in the menu bar.
 
 - [Home](index.html): This page provides the introduction, scope short, references, dependencies, cross version analysis and IP statement for this guide.
@@ -22,6 +25,7 @@ This guide is divided into several pages which are listed at the top of each pag
   - [Mapping to profiles](model-map.html): This segment contains information about logical model maps to profiles.
   - [Examples](examples.html): This segment contains information about examples.
   - [Obligations](obligations.html): This segment contains information about obligations.
+  - [Implementation notes](implementation-notes.html): This segment contains information for implementation.
 - About:
   - [Authors](authors.html): This segment contains informaction about authors.
   - [Downloads](downloads.html): This segment contains informaction about downloads.
@@ -31,7 +35,6 @@ This guide is divided into several pages which are listed at the top of each pag
 
 ### References
 
-
 * Related specifications:
   * {{hl7XtEHR}}
     * This specification has inspired many of the design patterns defined in this IG.
@@ -39,7 +42,6 @@ This guide is divided into several pages which are listed at the top of each pag
     * This specification has many of together design patterns defined in this IG.
   * {{czCore}}
     * Where possible this specification has been aligned with choices made in CZ core.
-
 
 ### Dependencies
 

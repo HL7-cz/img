@@ -23,12 +23,12 @@ Description: "Patient Mracena with contact information and practitioner"
 * address[=].type = #physical
 * address[=].text = "Malé náměstí 13a, 150 00, Praha 5"
 * address[=].line[+] = "Malé náměstí 13a"
-//* address[=].line[=].extension[streetName].valueString = "Malé náměstí"
-//* address[=].line[=].extension[houseNumber].valueString = "13a"
+* address[=].line[=].extension[streetName].valueString = "Malé náměstí"
+* address[=].line[=].extension[houseNumber].valueString = "13a"
 * address[=].city = "Praha"
 * address[=].postalCode = "15000"
-* address[=].country = "CZ"
-//  * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
+* address[=].country = "Česko"
+  * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
 
 * communication[+].language = urn:ietf:bcp:47#cs
 * communication[=].preferred = true

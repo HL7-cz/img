@@ -25,6 +25,7 @@ Tato příručka je rozdělena na několik stránek, které jsou uvedeny v horn�
   - [Mapování logického modelu](model-map-cs.html): Tento segment obsahuje informace o mapování logického modelu na profily obrazové zprávy.
   - [Příklady](examples-cs.html): Tento segment obsahuje informace o příkladech.
   - [Povinnosti](obligations-cs.html): Tento segment obsahuje informace o povinnostech.
+  - [Poznámky k implementaci](implementation-notes-cs.html): Tento segment obsahuje informace pro implementaci.
 - About:
   - [Autoři](authors-cs.html): Tento segment obsahuje informace o autorech.
   - [Downloads](downloads-cs.html): Tento segment obsahuje informace o možnostech stahování obsahu implementační specifikace.

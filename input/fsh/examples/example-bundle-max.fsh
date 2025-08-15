@@ -187,7 +187,7 @@ Description: "Imaging order: PET+CT Imaging report"
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * insurance = Reference(urn:uuid:be4e7f9a-2771-4aa1-bcee-c386f9ba7eaa)
 * bodySite = $sct#69536005 "Head"
-* code.coding = $sct#1655436100011910 "PET CT of brain"
+* code.coding = $sct#16554361000119106 "PET CT of brain"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">PET+CT mozku pro diferenciální dg. tumoru a radiační nekrozy</div>"
 * authoredOn = "2022-10-06T12:02:00+01:00"
@@ -369,7 +369,7 @@ Usage: #example
 Description: "Procedure of PET+CT Imaging report"
 Title: "Procedure: PET+CT Imaging report"
 * id = "74820e62-42c2-4a39-9ded-251f3b8a58d0"
-* code.coding = $sct#1655436100011910 "PET CT of brain"
+* code.coding = $sct#16554361000119106 "PET CT of brain"
 * status = #completed
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * partOf = Reference(urn:uuid:a89a0433-998e-4408-9d7a-560c6d242366)

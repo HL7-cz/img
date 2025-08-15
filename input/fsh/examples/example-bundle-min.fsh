@@ -38,6 +38,9 @@ Usage: #example
 * entry[coverage].fullUrl = "urn:uuid:6a2b30b1-4ba7-4a24-adcf-beefa0eface1"
 * entry[coverage].resource = cz-examplertg-coverage
 
+* entry[encounter].fullUrl = "urn:uuid:20bd86a1-060b-4161-a063-183069efc54b"
+* entry[encounter].resource = cz-encounter-example
+
 Instance: cz-examplertg-composition
 InstanceOf: CZ_CompositionImagingReport
 Title: "Composition: RTG Imaging report"
@@ -52,6 +55,7 @@ Usage: #example
 * title = "Imaging Report - Rentgen Ing. Králíka"
 * confidentiality = #N
 * type = $sct#371527006 "Radiology report"
+* encounter = Reference(urn:uuid:20bd86a1-060b-4161-a063-183069efc54b)
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba)
 * section[order].title = "Requested imaging studies information Document"
 * section[order].code = $loinc#55115-0 "Requested imaging studies information Document"
@@ -77,6 +81,48 @@ Usage: #example
 * section[findings].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Findings</div>" 
 * section[findings].text.status = #generated
 * section[findings].entry[0] = Reference(urn:uuid:eca2bf34-9fa8-4abf-bd98-d8d49bcb1104)
+
+Instance: cz-encounterrtg-example
+InstanceOf: CZ_Encounter
+Usage: #example
+Description: "Encounter"
+* id = "20bd86a1-060b-4161-a063-183069efc54b"
+* identifier[+].system = "http://example.org/hospital"
+* identifier[=].value = "ku-123456790"
+* status = #in-progress
+* class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+* class.code = #AMB
+* type.text = "RTG pacientky Jany Example"
+* serviceProvider = Reference(cz-organizationwithlogo2-example)
+
+Instance: cz-organizationwithlogo2-example
+InstanceOf: cz-organization-core
+Usage: #example
+Description: "An example of the organization with logo extension"
+* contained[+] = attachment-logo-FN-Motol  // Příklad přílohy s logem
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
+* identifier[=].value = "456789655"
+* type[+] = $drzar#101 "Fakultní nemocnice"
+* name = "Fakultní nemocnice Motol"
+* telecom[0].system = #phone
+* telecom[=].value = "+420257216007"
+* telecom[=].use = #work
+* telecom[+].system = #fax
+* telecom[=].value = "+420257216007"
+* telecom[=].use = #work
+
+* address[+].use = #work
+* address[=].type = #both
+* address[=].text = "Plzeňská 951/125, 150 00 Praha 5"
+* address[=].line[+] = "Plzeňská 951/125"
+* address[=].line[=].extension[streetName].valueString = "Plzeňská"
+* address[=].line[=].extension[houseNumber].valueString = "951/125"
+* address[=].city = "Praha"
+* address[=].postalCode = "15000"
+* address[=].country = "CZ"
+// Rozšíření organization-logo aliasované jako cz-organization-logo
+* extension[logo].url = $cz-organization-logo
+* extension[logo].valueReference.reference = "#attachment-logo-FN-Motol"
 
 Instance: cz-examplertg-practitioner
 InstanceOf: CZ_PractitionerCore

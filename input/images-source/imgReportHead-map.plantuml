@@ -17,6 +17,7 @@ note top #EEEEAE [[ConceptMap-HeaderImagingReport2FHIR-cz.html]]
 Concept Map
 endnote
 
+class "cz-encounter" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-encounter.html]]
 class "cz-coverage" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html]]
 class "cz-patient-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html]]
 class "cz-practitioner-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-practitioner-core.html]]
@@ -28,9 +29,11 @@ class "cz-composition-imaging" <<Profile>> [[StructureDefinition-cz-composition-
 "Imaging Report Header" <|. "cz-patient-core"
 "Imaging Report Header" <|. "cz-coverage"
 "Imaging Report Header" <|. "cz-practitioner-core"
+"Imaging Report Header" <|. "cz-encounter"
 
 "cz-bundle-imaging" -d[hidden]-> "cz-composition-imaging"
 "cz-composition-imaging" -d[hidden]-> "cz-patient-core"
 "cz-patient-core" -d[hidden]-> "cz-coverage"
 "cz-coverage" -d[hidden]-> "cz-practitioner-core"
+"cz-practitioner-core" -d[hidden]-> "cz-encounter"
 @enduml

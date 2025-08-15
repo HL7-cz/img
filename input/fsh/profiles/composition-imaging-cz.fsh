@@ -107,6 +107,9 @@ The `text` field of each section SHALL contain a textual representation of all l
   * coding contains loinc 1..1
   * coding[loinc] = $loinc#18748-4 "Diagnostic imaging study"
 
+* encounter 1..1 
+* encounter only Reference(CZ_Encounter)
+  * ^short = "Context that defines the Image Report"
 
 * date MS
   * ^short = "Date the report was last changed."

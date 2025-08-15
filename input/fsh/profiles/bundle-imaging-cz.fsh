@@ -114,6 +114,9 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * entry contains allergyIntolerance 0..*
 * entry[allergyIntolerance].resource only CZ_AllergyIntolerance
 
+* entry contains encounter 1..*
+* entry[encounter].resource only CZ_Encounter
+
 * signature ^short = "Report Digital Signature"
   * type ^short = "Digital Signature Purposes"
   * when ^short = "When was signed"

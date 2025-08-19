@@ -59,6 +59,9 @@ Usage: #example
 * entry[encounter].fullUrl = "urn:uuid:7023b84e-47bb-405c-be46-2c161c6ba8d5"
 * entry[encounter].resource = cz-encounter-example
 
+* entry[logo].fullUrl = "urn:uuid:cc7f61fb-c0a8-4e67-b41a-61a09d42753b"
+* entry[logo].resource = logoFNMotol
+
 Instance: cz-examplepetct-composition
 InstanceOf: CZ_CompositionImagingReport
 Description: "Example of Imaging report (Composition) including a PET+CT report"
@@ -105,6 +108,9 @@ Usage: #example
 * section[recommendation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Findings</div>"
 * section[recommendation].text.status = #generated
 * section[recommendation].entry[0] = Reference(urn:uuid:b9af425a-a9d9-4685-800c-d0d661c1b7a4)
+* section[attachments].title = "Attachments"
+* section[attachments].code = $loinc#34109-9
+* section[attachments].entry[0] = Reference(urn:uuid:cc7f61fb-c0a8-4e67-b41a-61a09d42753b)
 
 Instance: cz-encounter-example
 InstanceOf: CZ_Encounter
@@ -123,7 +129,6 @@ Instance: cz-organizationwithlogo-example
 InstanceOf: cz-organization-core
 Usage: #example
 Description: "An example of the organization with logo extension"
-* contained[+] = attachment-logo-FN-Motol  // Příklad přílohy s logem
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * identifier[=].value = "456789655"
 * type[+] = $drzar#101 "Fakultní nemocnice"
@@ -143,8 +148,9 @@ Description: "An example of the organization with logo extension"
 * address[=].line[=].extension[houseNumber].valueString = "951/125"
 * address[=].city = "Praha"
 * address[=].postalCode = "15000"
-* address[=].country = "CZ"
-* extension[logo].valueReference = Reference(logoFNMotol)
+* address[=].country = "Česko"
+  * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
+* extension[logo].valueReference = Reference(urn:uuid:cc7f61fb-c0a8-4e67-b41a-61a09d42753b)
 
 Instance: cz-examplepetct-device
 InstanceOf: CZ_DeviceObserver

@@ -41,6 +41,10 @@ Usage: #example
 * entry[encounter].fullUrl = "urn:uuid:20bd86a1-060b-4161-a063-183069efc54b"
 * entry[encounter].resource = cz-encounter-example
 
+* entry[logo].fullUrl = "urn:uuid:cc7f61fb-c0a8-4e67-b41a-61a09d42753b"
+* entry[logo].resource = logoFNMotol
+
+
 Instance: cz-examplertg-composition
 InstanceOf: CZ_CompositionImagingReport
 Title: "Composition: RTG Imaging report"
@@ -81,6 +85,10 @@ Usage: #example
 * section[findings].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Findings</div>"
 * section[findings].text.status = #generated
 * section[findings].entry[0] = Reference(urn:uuid:eca2bf34-9fa8-4abf-bd98-d8d49bcb1104)
+* section[attachments].title = "Attachments"
+* section[attachments].code = $loinc#34109-9
+* section[attachments].entry[0] = Reference(urn:uuid:cc7f61fb-c0a8-4e67-b41a-61a09d42753b)
+
 
 Instance: cz-encounterrtg-example
 InstanceOf: CZ_Encounter
@@ -99,7 +107,7 @@ Instance: cz-organizationwithlogo2-example
 InstanceOf: cz-organization-core
 Usage: #example
 Description: "An example of the organization with logo extension"
-* contained[+] = attachment-logo-FN-Motol  // Příklad přílohy s logem
+//* contained[+] = attachment-logo-FN-Motol  // Příklad přílohy s logem
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * identifier[=].value = "456789655"
 * type[+] = $drzar#101 "Fakultní nemocnice"

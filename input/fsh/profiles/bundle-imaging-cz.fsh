@@ -52,13 +52,16 @@ Description: "Clinical document used to represent a Imaging Report for the scope
   * request ..0
   * response ..0
 
-* entry ^slicing.discriminator[0].type = #profile
-* entry ^slicing.discriminator[0].path = "resource"
+* entry ^slicing.discriminator[+].type = #type
+* entry ^slicing.discriminator[=].path = "resource"
+* entry ^slicing.discriminator[+].type = #profile
+* entry ^slicing.discriminator[=].path = "resource"
 * entry ^slicing.ordered = false
 * entry ^slicing.rules = #open
 
 * entry contains composition 1..1
 * entry[composition].resource only CZ_CompositionImagingReport
+//* entry[composition].resource ^type.profile[0] = "https://hl7.cz/fhir/img/StructureDefinition/cz-composition-imaging"
 
 * entry contains diagnosticReport 1..1
 * entry[diagnosticReport].resource only CZ_DiagnosticReport
@@ -66,7 +69,7 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * entry contains serviceRequest 0..*
 * entry[serviceRequest].resource only CZ_ImagingOrderInformation
 
-* entry contains patient 0..*
+* entry contains patient 1..*
 * entry[patient].resource only CZ_PatientCore or CZ_PatientAnimal
 
 * entry contains observation 0..*
@@ -117,8 +120,20 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * entry contains encounter 1..*
 * entry[encounter].resource only CZ_Encounter
 
+* entry contains logo 0..*
+* entry[logo].resource only CZ_Logo
+
+//* entry contains presentedForm 0..*
+//* entry[presentedForm].resource only DocumentReference
+//* entry[presentedForm].resource ^type.profile[0] = "https://hl7.cz/fhir/cz-core/StructureDefinition/cz-presented-form"
+
+* entry contains attachment 0..*
+* entry[attachment].resource only CZ_Attachment
+
+/*
 * signature ^short = "Report Digital Signature"
   * type ^short = "Digital Signature Purposes"
   * when ^short = "When was signed"
   * who ^short = "Who signed."
   * data ^short = "Signature content"
+*/

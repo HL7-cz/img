@@ -42,6 +42,7 @@ dependencies:
 #  hl7.fhir.eu.imaging: current -- nelze je na R5
   hl7.fhir.extensions.r5: 4.0.1
   hl7.fhir.uv.extensions.r4: 5.2.0
+#  hl7.fhir.eu.extensions.r4: 0.1.1-ballot
   hl7.fhir.eu.extensions: 0.1.1-ballot
 #
 #
@@ -167,7 +168,7 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 #    - https://ncez.mzcr.cz/fhir/CodeSystem/contact-role-supplement
 #    - https://ncez.mzcr.cz/fhir/CodeSystem/snomed-supplement-service-type
 #    - http://ncez.mzcr.cz/fhir/StructureDefinition/address-point-cz
-# path-expansion-params: '../../expansion-params.json' # for using SNOMED CT Czech Extension
+  path-expansion-params: '../../expansion-params.json' # for using SNOMED CT Czech Extension
 # path-resource:
 #    - input/resources
 #    - fsh-generated/resources
@@ -183,7 +184,6 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 #  html-template:
 #  active-tables: false
   pin-canonicals: pin-multiples
-  path-expansion-params: '../../expansion-params.json'
   apply-contact: true
   apply-jurisdiction: true
   apply-publisher: true

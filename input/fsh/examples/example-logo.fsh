@@ -3,7 +3,7 @@ InstanceOf: CZ_Logo
 Usage: #example
 Description: "Example of logo as document reference for FN Motol."
 
-* id = "attachment-logo-FN-Motol"
+* id = "cc7f61fb-c0a8-4e67-b41a-61a09d42753b" //"attachment-logo-FN-Motol"
 * status = #current
 * content.attachment
   * contentType = #image/svg+xml

@@ -39,7 +39,22 @@ Usage: #example
 * entry[coverage].resource = cz-examplertg-coverage
 
 * entry[encounter].fullUrl = "urn:uuid:20bd86a1-060b-4161-a063-183069efc54b"
-* entry[encounter].resource = cz-encounter-example
+* entry[encounter].resource = cz-encounterrtg-example
+
+* entry[attachment].fullUrl = "urn:uuid:c23fc55c-e576-4fc4-8526-6f31f0b9377c"
+* entry[attachment].resource = cz-logo-example
+
+* entry[organization].fullUrl = "urn:uuid:e96e9bd5-0695-4725-acb2-c731aa071a55"
+* entry[organization].resource = cz-organizationwithlogo2-example
+
+* entry[organization][+].fullUrl = "urn:uuid:4e0bf3d9-2a90-47bf-b558-c3a64d63baa9"
+* entry[organization][=].resource = cz-examplertg-organization
+
+* entry[condition].fullUrl = "urn:uuid:e20f7fc3-0237-496a-a57a-18acac3776df"
+* entry[condition].resource = cz-examplertg-condition1
+
+* entry[condition][+].fullUrl = "urn:uuid:96b5af8a-9127-45fd-b549-ab79f5c56a41"
+* entry[condition][=].resource = cz-examplertg-condition2
 
 * entry[logo].fullUrl = "urn:uuid:cc7f61fb-c0a8-4e67-b41a-61a09d42753b"
 * entry[logo].resource = logoFNMotol
@@ -51,7 +66,6 @@ Title: "Composition: RTG Imaging report"
 Description: "Minimal composition for RTG Image report"
 Usage: #example
 * id = "dbd426a9-d660-4f97-8656-1e39db4a57c9"
-* meta.profile[0] = "https://hl7.cz/fhir/img/StructureDefinition/cz-composition-imaging"
 * status = #final
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * date = "2025-05-20T12:02:00+01:00"
@@ -101,13 +115,14 @@ Description: "Encounter"
 * class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 * class.code = #AMB
 * type.text = "RTG pacientky Jany Example"
-* serviceProvider = Reference(cz-organizationwithlogo2-example)
+* serviceProvider = Reference(urn:uuid:e96e9bd5-0695-4725-acb2-c731aa071a55)
 
 Instance: cz-organizationwithlogo2-example
 InstanceOf: cz-organization-core
 Usage: #example
 Description: "An example of the organization with logo extension"
 //* contained[+] = attachment-logo-FN-Motol  // Příklad přílohy s logem
+* id = "e96e9bd5-0695-4725-acb2-c731aa071a55"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * identifier[=].value = "456789655"
 * type[+] = $drzar#101 "Fakultní nemocnice"
@@ -128,7 +143,19 @@ Description: "An example of the organization with logo extension"
 * address[=].city = "Praha"
 * address[=].postalCode = "15000"
 * address[=].country = "CZ"
-* extension[logo].valueReference = Reference(logoFNMotol)
+* extension[logo].valueReference = Reference(urn:uuid:c23fc55c-e576-4fc4-8526-6f31f0b9377c)
+
+Instance: cz-logo-example
+InstanceOf: CZ_Logo
+Usage: #example
+Description: "Example of logo as document reference for FN Motol."
+
+* id = "c23fc55c-e576-4fc4-8526-6f31f0b9377c"
+* status = #current
+* content.attachment
+  * contentType = #image/svg+xml
+  * title = "Organization logo"
+  * data = """PHN2ZyBoZWlnaHQ9IjMyNC44OTMxNDUiIHZpZXdCb3g9IjAgMCAzNjAgMzgwIiB3aWR0aD0iMzA3Ljc5MzUwNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGNsaXBQYXRoIGlkPSJhIj48cGF0aCBkPSJtMCA4NDEuODloNTk1LjI4di04NDEuODloLTU5NS4yOHoiLz48L2NsaXBQYXRoPjxnIGNsaXAtcGF0aD0idXJsKCNhKSIgZmlsbD0iIzAwNWZhNiIgdHJhbnNmb3JtPSJtYXRyaXgoMS4zMzMzMzMzIDAgMCAtMS4zMzMzMzMzIC0xNzIuOTE3MDc1Njc3MDcgOTcyLjY1ODUzNzA3OTg3KSI+PHBhdGggZD0ibTAgMC0xMjkuOTk5IDEzMCA5MS43NDEgOTEuNzM1IDM4LjEzNS0zOC4xNDQgMzguMjYzIDM4LjI2NCA5MS44NjMtOTEuODU1em0xOC4zNzkgMTI5LjYwOC0xNy45ODYtMTcuOTg3LTM2LjExNyAzNi4xMDctMTcuNzI1LTE3LjcyOCA1My40NDktNTMuNDU1IDUzLjQ1MyA1My40NTUtMzEuMzc0IDMxLjM4MSAxNy44MzkgMTcuODQ3IDQ5LjIyOS00OS4yMjgtODkuMTQ3LTg5LjE0NS04OS4xNDQgODkuMTQ1IDUzLjIyMSA1My4yMTVjMTguMjk1LTE4LjI4NCAzNi4zNjYtMzUuNjYxIDU0LjMwMi01My42MDciIGZpbGwtcnVsZT0iZXZlbm9kZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjY1Ljc5ODggNTAzLjUzODEpIi8+PHBhdGggZD0ibTAgMGgyMi4wNzh2LTYuNjUxaC0xMy43MThsLS4wOTItNi4xNDNoMTMuNjcxdi02LjM3NGgtMTMuNzE3bC0uMDkzLTEyLjc5NGgtOC40MDZ6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMzguMzMxNSA0ODIuMDg0NSkiLz48cGF0aCBkPSJtMCAwaDEwLjA2OWwxMS4wMzktMjAuOTY5aC4wOTJsLjE4NSAyMC45NjloNy41MjlsLS4yNzctMzEuOTYyaC05LjYwN2wtMTEuNTAxIDIwLjk2OWgtLjA5M2wtLjE4NS0yMC45NjloLTcuNTI4eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTY1LjUzNjYgNDgyLjA4NDUpIi8+PHBhdGggZD0ibTAgMGgxMC40MzhsNC42Mi0yMy4zNzJoLjA5Mmw1LjcyNyAyMy4zNzJoMTAuNDM5bDYuMzI4LTMxLjk2MmgtOC4zMTRsLTMuNTExIDIyLjgxNmgtLjA5MmwtNS42ODEtMjIuODE2aC05LjU2MWwtNS4zMTIgMjIuODE2aC0uMDkybC00LjYxOS0yMi44MTZoLTguMTI5eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjIxLjc0NzYgNDgyLjA4NDUpIi8+PHBhdGggZD0ibTAgMGM0LjgwNCAwIDguNjg0IDMuMjMzIDguNjg0IDEwLjI1MyAwIDcuMDIxLTMuODggMTAuMjU0LTguNjg0IDEwLjI1NC00Ljc1NyAwLTguNjM3LTMuMjMzLTguNjM3LTEwLjI1NCAwLTcuMDIgMy44OC0xMC4yNTMgOC42MzctMTAuMjUzbS4wNDYgMjcuMTU5YzEwLjg1NCAwIDE3LjIyOC03LjYyMSAxNy4yMjgtMTYuOTA2IDAtOS4yODMtNi4zNzQtMTYuOTA0LTE3LjIyOC0xNi45MDQtMTAuOSAwLTE3LjI3NCA3LjYyMS0xNy4yNzQgMTYuOTA0IDAgOS4yODUgNi4zNzQgMTYuOTA2IDE3LjI3NCAxNi45MDYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI3OS44OTg5IDQ1NS44NDk2KSIvPjxwYXRoIGQ9Im0wIDBoMjYuMTQzdi02LjY1MWgtOC42MzhsLS4yNzctMjUuMzExaC04LjMxNGwuMjc3IDI1LjMxMWgtOS4xOTF6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyOTkuMzQ0NyA0ODIuMDg0NSkiLz48cGF0aCBkPSJtMCAwYzQuODAzIDAgOC42ODMgMy4yMzMgOC42ODMgMTAuMjUzIDAgNy4wMjEtMy44OCAxMC4yNTQtOC42ODMgMTAuMjU0LTQuNzU4IDAtOC42MzgtMy4yMzMtOC42MzgtMTAuMjU0IDAtNy4wMiAzLjg4LTEwLjI1MyA4LjYzOC0xMC4yNTNtLjA0NiAyNy4xNTljMTAuODU0IDAgMTcuMjI4LTcuNjIxIDE3LjIyOC0xNi45MDYgMC05LjI4My02LjM3NC0xNi45MDQtMTcuMjI4LTE2LjkwNC0xMC45IDAtMTcuMjc1IDcuNjIxLTE3LjI3NSAxNi45MDQgMCA5LjI4NSA2LjM3NSAxNi45MDYgMTcuMjc1IDE2LjkwNiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzQ0Ljg4NjcgNDU1Ljg0OTYpIi8+PHBhdGggZD0ibTAgMGg4LjMxM2wtLjI3Ny0yNS4wMzRoMTQuNDExbC0uMTM4LTYuOTI4aC0yMi41ODZ6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzNjcuOTgwNSA0ODIuMDg0NSkiLz48L2c+PC9zdmc+"""
 
 Instance: cz-examplertg-practitioner
 InstanceOf: CZ_PractitionerCore
@@ -203,7 +230,7 @@ Description: "Imaging order for Plain X-ray"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">RTG Požadované vyšetření: LS páteř, Noha pravá, Hlezno pravé, Pánev, Koleno pravé, Kyčel levý, Kyčel pravý</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
-* reasonReference = Reference(cz-examplertg-condition1)
+* reasonReference = Reference(urn:uuid:e20f7fc3-0237-496a-a57a-18acac3776df)
 
 Instance: cz-examplertg-condition1
 InstanceOf: CZ_ConditionImage
@@ -231,13 +258,14 @@ Title: "Coverage: RTG Imaging report"
 * id = "6a2b30b1-4ba7-4a24-adcf-beefa0eface1"
 * status = #active
 * beneficiary = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
-* payor = Reference(cz-examplertg-organization)
+* payor = Reference(urn:uuid:4e0bf3d9-2a90-47bf-b558-c3a64d63baa9)
 
 Instance: cz-examplertg-organization
 InstanceOf: CZ_OrganizationCore
 Usage: #example
 Description: "Example of insurance organisation in RTG Imaging report"
 Title: "Organization - Healthcare insurance company: RTG Imaging report"
+* id = "4e0bf3d9-2a90-47bf-b558-c3a64d63baa9"
 * name = "Všeobecná zdravotní pojišťovna ČR"
 * identifier[KP].system =  "https://ncez.mzcr.cz/fhir/sid/kp"
 * identifier[KP].value = "111"
@@ -274,6 +302,7 @@ InstanceOf: CZ_ConditionImage
 Usage: #example
 Description: "Diagnosis for RTG Imaging report"
 Title: "Condition - Diagnosis: RTG Imaging report"
+* id = "96b5af8a-9127-45fd-b549-ab79f5c56a41"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * code.coding[diagnosis] = #T09.3 "Poranění míchy‚ úroveň neurčena"
 * code.text = "Poranění míchy‚ úroveň neurčena"
@@ -287,7 +316,7 @@ Title: "Procedure: RTG Imaging report"
 * code.coding = $sct#168537006 "Plain X-ray"
 * status = #completed
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
-* reasonReference = Reference (cz-examplertg-condition2)
+* reasonReference = Reference (urn:uuid:96b5af8a-9127-45fd-b549-ab79f5c56a41)
 
 Instance: cz-examplertg-diagnosticReport
 InstanceOf: CZ_DiagnosticReport

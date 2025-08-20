@@ -26,6 +26,12 @@ Usage: #example
 * entry[condition].fullUrl = "urn:uuid:9ee22843-2526-436f-bf66-3f9874869c08"
 * entry[condition].resource = cz-examplepetct-clinicalQuestion
 
+* entry[condition][+].fullUrl = "urn:uuid:f06ac619-db0b-47d1-ae16-003a2be66760"
+* entry[condition][=].resource = cz-examplepetct-condition1
+
+* entry[condition][+].fullUrl = "urn:uuid:e040e1b2-9f3f-426c-bc5a-7676abae290a"
+* entry[condition][=].resource = cz-examplepetct-condition3
+
 * entry[imagingStudy].fullUrl = "urn:uuid:e132f687-df35-4174-91bd-fe74cda5ac5d"
 * entry[imagingStudy].resource = cz-examplepetct-imagingStudy
 
@@ -59,8 +65,14 @@ Usage: #example
 * entry[encounter].fullUrl = "urn:uuid:7023b84e-47bb-405c-be46-2c161c6ba8d5"
 * entry[encounter].resource = cz-encounter-example
 
-* entry[logo].fullUrl = "urn:uuid:cc7f61fb-c0a8-4e67-b41a-61a09d42753b"
-* entry[logo].resource = logoFNMotol
+* entry[attachment].fullUrl = "urn:uuid:040eb849-a513-4d74-b3f3-d2f246a26877"
+* entry[attachment].resource = cz-logo2-example
+
+* entry[organization].fullUrl = "urn:uuid:821077d6-ce17-4602-b3ad-d4bef845a950"
+* entry[organization].resource = cz-organizationwithlogo-example
+
+* entry[organization][+].fullUrl = "urn:uuid:3d5262e3-d234-471a-8356-ddf02fce8bb1"
+* entry[organization][=].resource = cz-examplepetct-organization
 
 Instance: cz-examplepetct-composition
 InstanceOf: CZ_CompositionImagingReport
@@ -108,9 +120,6 @@ Usage: #example
 * section[recommendation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Findings</div>"
 * section[recommendation].text.status = #generated
 * section[recommendation].entry[0] = Reference(urn:uuid:b9af425a-a9d9-4685-800c-d0d661c1b7a4)
-* section[attachments].title = "Attachments"
-* section[attachments].code = $loinc#34109-9
-* section[attachments].entry[0] = Reference(urn:uuid:cc7f61fb-c0a8-4e67-b41a-61a09d42753b)
 
 Instance: cz-encounter-example
 InstanceOf: CZ_Encounter
@@ -123,12 +132,13 @@ Description: "Encounter"
 * class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 * class.code = #AMB
 * type.text = "PET/CT pacientky Jany Example"
-* serviceProvider = Reference(cz-organizationwithlogo-example)
+* serviceProvider = Reference(urn:uuid:821077d6-ce17-4602-b3ad-d4bef845a950)
 
 Instance: cz-organizationwithlogo-example
 InstanceOf: cz-organization-core
 Usage: #example
 Description: "An example of the organization with logo extension"
+* id = "821077d6-ce17-4602-b3ad-d4bef845a950"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * identifier[=].value = "456789655"
 * type[+] = $drzar#101 "Fakultní nemocnice"
@@ -150,7 +160,18 @@ Description: "An example of the organization with logo extension"
 * address[=].postalCode = "15000"
 * address[=].country = "Česko"
   * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
-* extension[logo].valueReference = Reference(urn:uuid:cc7f61fb-c0a8-4e67-b41a-61a09d42753b)
+* extension[logo].valueReference = Reference(urn:uuid:040eb849-a513-4d74-b3f3-d2f246a26877)
+
+Instance: cz-logo2-example
+InstanceOf: CZ_Logo
+Usage: #example
+Description: "Example of logo as document reference for FN Motol."
+* id = "040eb849-a513-4d74-b3f3-d2f246a26877"
+* status = #current
+* content.attachment
+  * contentType = #image/svg+xml
+  * title = "Organization logo"
+  * data = """PHN2ZyBoZWlnaHQ9IjMyNC44OTMxNDUiIHZpZXdCb3g9IjAgMCAzNjAgMzgwIiB3aWR0aD0iMzA3Ljc5MzUwNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGNsaXBQYXRoIGlkPSJhIj48cGF0aCBkPSJtMCA4NDEuODloNTk1LjI4di04NDEuODloLTU5NS4yOHoiLz48L2NsaXBQYXRoPjxnIGNsaXAtcGF0aD0idXJsKCNhKSIgZmlsbD0iIzAwNWZhNiIgdHJhbnNmb3JtPSJtYXRyaXgoMS4zMzMzMzMzIDAgMCAtMS4zMzMzMzMzIC0xNzIuOTE3MDc1Njc3MDcgOTcyLjY1ODUzNzA3OTg3KSI+PHBhdGggZD0ibTAgMC0xMjkuOTk5IDEzMCA5MS43NDEgOTEuNzM1IDM4LjEzNS0zOC4xNDQgMzguMjYzIDM4LjI2NCA5MS44NjMtOTEuODU1em0xOC4zNzkgMTI5LjYwOC0xNy45ODYtMTcuOTg3LTM2LjExNyAzNi4xMDctMTcuNzI1LTE3LjcyOCA1My40NDktNTMuNDU1IDUzLjQ1MyA1My40NTUtMzEuMzc0IDMxLjM4MSAxNy44MzkgMTcuODQ3IDQ5LjIyOS00OS4yMjgtODkuMTQ3LTg5LjE0NS04OS4xNDQgODkuMTQ1IDUzLjIyMSA1My4yMTVjMTguMjk1LTE4LjI4NCAzNi4zNjYtMzUuNjYxIDU0LjMwMi01My42MDciIGZpbGwtcnVsZT0iZXZlbm9kZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjY1Ljc5ODggNTAzLjUzODEpIi8+PHBhdGggZD0ibTAgMGgyMi4wNzh2LTYuNjUxaC0xMy43MThsLS4wOTItNi4xNDNoMTMuNjcxdi02LjM3NGgtMTMuNzE3bC0uMDkzLTEyLjc5NGgtOC40MDZ6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMzguMzMxNSA0ODIuMDg0NSkiLz48cGF0aCBkPSJtMCAwaDEwLjA2OWwxMS4wMzktMjAuOTY5aC4wOTJsLjE4NSAyMC45NjloNy41MjlsLS4yNzctMzEuOTYyaC05LjYwN2wtMTEuNTAxIDIwLjk2OWgtLjA5M2wtLjE4NS0yMC45NjloLTcuNTI4eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTY1LjUzNjYgNDgyLjA4NDUpIi8+PHBhdGggZD0ibTAgMGgxMC40MzhsNC42Mi0yMy4zNzJoLjA5Mmw1LjcyNyAyMy4zNzJoMTAuNDM5bDYuMzI4LTMxLjk2MmgtOC4zMTRsLTMuNTExIDIyLjgxNmgtLjA5MmwtNS42ODEtMjIuODE2aC05LjU2MWwtNS4zMTIgMjIuODE2aC0uMDkybC00LjYxOS0yMi44MTZoLTguMTI5eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjIxLjc0NzYgNDgyLjA4NDUpIi8+PHBhdGggZD0ibTAgMGM0LjgwNCAwIDguNjg0IDMuMjMzIDguNjg0IDEwLjI1MyAwIDcuMDIxLTMuODggMTAuMjU0LTguNjg0IDEwLjI1NC00Ljc1NyAwLTguNjM3LTMuMjMzLTguNjM3LTEwLjI1NCAwLTcuMDIgMy44OC0xMC4yNTMgOC42MzctMTAuMjUzbS4wNDYgMjcuMTU5YzEwLjg1NCAwIDE3LjIyOC03LjYyMSAxNy4yMjgtMTYuOTA2IDAtOS4yODMtNi4zNzQtMTYuOTA0LTE3LjIyOC0xNi45MDQtMTAuOSAwLTE3LjI3NCA3LjYyMS0xNy4yNzQgMTYuOTA0IDAgOS4yODUgNi4zNzQgMTYuOTA2IDE3LjI3NCAxNi45MDYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI3OS44OTg5IDQ1NS44NDk2KSIvPjxwYXRoIGQ9Im0wIDBoMjYuMTQzdi02LjY1MWgtOC42MzhsLS4yNzctMjUuMzExaC04LjMxNGwuMjc3IDI1LjMxMWgtOS4xOTF6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyOTkuMzQ0NyA0ODIuMDg0NSkiLz48cGF0aCBkPSJtMCAwYzQuODAzIDAgOC42ODMgMy4yMzMgOC42ODMgMTAuMjUzIDAgNy4wMjEtMy44OCAxMC4yNTQtOC42ODMgMTAuMjU0LTQuNzU4IDAtOC42MzgtMy4yMzMtOC42MzgtMTAuMjU0IDAtNy4wMiAzLjg4LTEwLjI1MyA4LjYzOC0xMC4yNTNtLjA0NiAyNy4xNTljMTAuODU0IDAgMTcuMjI4LTcuNjIxIDE3LjIyOC0xNi45MDYgMC05LjI4My02LjM3NC0xNi45MDQtMTcuMjI4LTE2LjkwNC0xMC45IDAtMTcuMjc1IDcuNjIxLTE3LjI3NSAxNi45MDQgMCA5LjI4NSA2LjM3NSAxNi45MDYgMTcuMjc1IDE2LjkwNiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzQ0Ljg4NjcgNDU1Ljg0OTYpIi8+PHBhdGggZD0ibTAgMGg4LjMxM2wtLjI3Ny0yNS4wMzRoMTQuNDExbC0uMTM4LTYuOTI4aC0yMi41ODZ6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzNjcuOTgwNSA0ODIuMDg0NSkiLz48L2c+PC9zdmc+"""
 
 Instance: cz-examplepetct-device
 InstanceOf: CZ_DeviceObserver
@@ -199,7 +220,7 @@ Title: "Patient Example: PET+CT Imaging report"
 * identifier[RID][+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
 * identifier[RID][=].value = "2066425387"
 
-//* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#SK
+* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#SK
 * name.use = #usual
 * name.family = "Jana"
 * name.given = "Example"
@@ -241,7 +262,7 @@ Description: "Imaging order: PET+CT Imaging report"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">PET+CT mozku pro diferenciální dg. tumoru a radiační nekrozy</div>"
 * authoredOn = "2022-10-06T12:02:00+01:00"
-* reasonReference = Reference(cz-examplepetct-condition1)
+* reasonReference = Reference(urn:uuid:f06ac619-db0b-47d1-ae16-003a2be66760) // Reference to Condition - Reason For Admission
 * requester = Reference(urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c)
 
 Instance: cz-examplepetct-coverage
@@ -252,13 +273,14 @@ Usage: #example
 * id = "be4e7f9a-2771-4aa1-bcee-c386f9ba7eaa"
 * status = #active
 * beneficiary = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
-* payor = Reference(cz-examplepetct-organization)
+* payor = Reference(urn:uuid:3d5262e3-d234-471a-8356-ddf02fce8bb1)
 
 Instance: cz-examplepetct-organization
 InstanceOf: CZ_OrganizationCore
 Usage: #example
 Description: "Example of insurance organisation for PET+CT Imaging report"
 Title: "Organization - Healthcare insurance company: PET+CT Imaging report"
+* id = "3d5262e3-d234-471a-8356-ddf02fce8bb1"
 * name = "Všeobecná zdravotní pojišťovna ČR"
 * identifier[KP].system =  "https://ncez.mzcr.cz/fhir/sid/kp"
 * identifier[KP].value = "111"
@@ -291,6 +313,7 @@ InstanceOf: CZ_ConditionImage
 Usage: #example
 Description: "Reason For Admission of PET+CT Imaging report"
 Title: "Condition - Reason For Admission: PET+CT Imaging report"
+* id = "f06ac619-db0b-47d1-ae16-003a2be66760"
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * code.text = "Pacient po resekci GBM vlevo parietálně 5/18, zevní RT na parietotemporální oblast vlevo pro glioblastom, poté itoterapie temodalem. Nejasný nález vlevo parietálně."
 
@@ -308,6 +331,7 @@ InstanceOf: CZ_ConditionImage
 Usage: #example
 Description: "Second Diagnosis for PET+CT Imaging report"
 Title: "Diagnosis 2: PET+CT Imaging report"
+* id = "e040e1b2-9f3f-426c-bc5a-7676abae290a"
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * code.coding[diagnosis] = #G45.9 "Tranzitorní ischemická ataka (TIA) NS"
 * code.text = "Transitorní ischemická ataka"
@@ -424,4 +448,4 @@ Title: "Procedure: PET+CT Imaging report"
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * partOf = Reference(urn:uuid:a89a0433-998e-4408-9d7a-560c6d242366)
 * reasonReference = Reference (cz-examplepetct-condition2)
-* reasonReference = Reference (cz-examplepetct-condition3)
+* reasonReference = Reference (urn:uuid:e040e1b2-9f3f-426c-bc5a-7676abae290a)

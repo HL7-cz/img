@@ -30,7 +30,6 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * ^copyright = "HL7 CZ"
 * . ^short = "Imaging Report Bundle"
 * . ^definition = "Imaging Report Bundle. \r\nA container for a collection of resources in the inmaging report document."
-* ^language = #cs
 
 * insert SetFmmandStatusRule ( 0, draft )
 
@@ -52,11 +51,17 @@ Description: "Clinical document used to represent a Imaging Report for the scope
   * request ..0
   * response ..0
 
-* entry ^slicing.discriminator[0].type = #profile
-* entry ^slicing.discriminator[0].path = "resource"
+* signature ^short = "Digital Signature of this report"
+* signature only CZ_Signature
+
+* entry ^slicing.discriminator[0].type = #type
+* entry ^slicing.discriminator[=].path = "resource"
+* entry ^slicing.discriminator[+].type = #profile
+* entry ^slicing.discriminator[=].path = "resource"
 * entry ^slicing.ordered = false
 * entry ^slicing.rules = #open
 
+* entry.resource 1..
 * entry contains composition 1..1
 * entry[composition].resource only CZ_CompositionImagingReport
 
@@ -117,8 +122,5 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * entry contains encounter 1..*
 * entry[encounter].resource only CZ_Encounter
 
-* signature ^short = "Report Digital Signature"
-  * type ^short = "Digital Signature Purposes"
-  * when ^short = "When was signed"
-  * who ^short = "Who signed."
-  * data ^short = "Signature content"
+* entry contains attachment 0..*
+* entry[attachment].resource only CZ_Logo or CZ_Attachment

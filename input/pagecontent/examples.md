@@ -33,7 +33,7 @@ There are two examples of imaging reports:
 - Example [Organization 2](Organization-4e0bf3d9-2a90-47bf-b558-c3a64d63baa9.html)
 - Example [Procedure PET+CT](Procedure-74820e62-42c2-4a39-9ded-251f3b8a58d0.html)
 - Example [Procedure X-ray](Procedure-ea2967a5-0d00-461c-8785-b5affef4791c.html)
-- Example [Reason for Admission 1](Condition-cz-examplepetct-condition1.html)
+- Example [Reason for Admission 1](Condition-f06ac619-db0b-47d1-ae16-003a2be66760.html)
 - Example [Reason for Admission 2](Condition-e20f7fc3-0237-496a-a57a-18acac3776df.html)
 - Example [Patient Example](Patient-2ccb472f-5747-4939-a119-5597835ad7da.html)
 - Example [Patient Rabbit](Patient-62d2aa9a-a15f-4e43-9458-fec16c1c4882.html)

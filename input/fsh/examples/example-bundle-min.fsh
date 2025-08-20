@@ -56,9 +56,6 @@ Usage: #example
 * entry[condition][+].fullUrl = "urn:uuid:96b5af8a-9127-45fd-b549-ab79f5c56a41"
 * entry[condition][=].resource = cz-examplertg-condition2
 
-* entry[logo].fullUrl = "urn:uuid:cc7f61fb-c0a8-4e67-b41a-61a09d42753b"
-* entry[logo].resource = logoFNMotol
-
 
 Instance: cz-examplertg-composition
 InstanceOf: CZ_CompositionImagingReport
@@ -99,10 +96,6 @@ Usage: #example
 * section[findings].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Findings</div>"
 * section[findings].text.status = #generated
 * section[findings].entry[0] = Reference(urn:uuid:eca2bf34-9fa8-4abf-bd98-d8d49bcb1104)
-* section[attachments].title = "Attachments"
-* section[attachments].code = $loinc#34109-9
-* section[attachments].entry[0] = Reference(urn:uuid:cc7f61fb-c0a8-4e67-b41a-61a09d42753b)
-
 
 Instance: cz-encounterrtg-example
 InstanceOf: CZ_Encounter

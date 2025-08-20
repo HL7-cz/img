@@ -35,7 +35,7 @@ Existují dva příklady zpráv ze zobrazovacích metod:
 - Příklad [Organizace s logem 2](Organization-e96e9bd5-0695-4725-acb2-c731aa071a55.html)
 - Příklad [Procedura PET+CT](Procedure-74820e62-42c2-4a39-9ded-251f3b8a58d0.html)
 - Příklad [Procedura RTG](Procedure-ea2967a5-0d00-461c-8785-b5affef4791c.html)
-- Příklad [Důvod výkonu 1](Condition-cz-examplepetct-condition1.html)
+- Příklad [Důvod výkonu 1](Condition-f06ac619-db0b-47d1-ae16-003a2be66760.html)
 - Příklad [Důvod výkonu 2](Condition-e20f7fc3-0237-496a-a57a-18acac3776df.html)
 - Příklad [Pacient Example](Patient-2ccb472f-5747-4939-a119-5597835ad7da.html)
 - Příklad [Pacient Králík](Patient-62d2aa9a-a15f-4e43-9458-fec16c1c4882.html)

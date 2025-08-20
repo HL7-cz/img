@@ -26,6 +26,9 @@ Usage: #example
 * entry[condition].fullUrl = "urn:uuid:9ee22843-2526-436f-bf66-3f9874869c08"
 * entry[condition].resource = cz-examplepetct-clinicalQuestion
 
+* entry[condition][+].fullUrl = "urn:uuid:f06ac619-db0b-47d1-ae16-003a2be66760"
+* entry[condition][=].resource = cz-examplepetct-condition1
+
 * entry[condition][+].fullUrl = "urn:uuid:e040e1b2-9f3f-426c-bc5a-7676abae290a"
 * entry[condition][=].resource = cz-examplepetct-condition3
 
@@ -117,9 +120,6 @@ Usage: #example
 * section[recommendation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Findings</div>"
 * section[recommendation].text.status = #generated
 * section[recommendation].entry[0] = Reference(urn:uuid:b9af425a-a9d9-4685-800c-d0d661c1b7a4)
-* section[attachments].title = "Attachments"
-* section[attachments].code = $loinc#34109-9
-* section[attachments].entry[0] = Reference(urn:uuid:cc7f61fb-c0a8-4e67-b41a-61a09d42753b)
 
 Instance: cz-encounter-example
 InstanceOf: CZ_Encounter
@@ -160,7 +160,7 @@ Description: "An example of the organization with logo extension"
 * address[=].postalCode = "15000"
 * address[=].country = "Česko"
   * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
-* extension[logo].valueReference = Reference(urn:uuid:cc7f61fb-c0a8-4e67-b41a-61a09d42753b)
+* extension[logo].valueReference = Reference(urn:uuid:040eb849-a513-4d74-b3f3-d2f246a26877)
 
 Instance: cz-logo2-example
 InstanceOf: CZ_Logo
@@ -262,7 +262,7 @@ Description: "Imaging order: PET+CT Imaging report"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">PET+CT mozku pro diferenciální dg. tumoru a radiační nekrozy</div>"
 * authoredOn = "2022-10-06T12:02:00+01:00"
-* reasonReference = Reference(cz-examplepetct-condition1)
+* reasonReference = Reference(urn:uuid:f06ac619-db0b-47d1-ae16-003a2be66760) // Reference to Condition - Reason For Admission
 * requester = Reference(urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c)
 
 Instance: cz-examplepetct-coverage
@@ -313,6 +313,7 @@ InstanceOf: CZ_ConditionImage
 Usage: #example
 Description: "Reason For Admission of PET+CT Imaging report"
 Title: "Condition - Reason For Admission: PET+CT Imaging report"
+* id = "f06ac619-db0b-47d1-ae16-003a2be66760"
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * code.text = "Pacient po resekci GBM vlevo parietálně 5/18, zevní RT na parietotemporální oblast vlevo pro glioblastom, poté itoterapie temodalem. Nejasný nález vlevo parietálně."
 

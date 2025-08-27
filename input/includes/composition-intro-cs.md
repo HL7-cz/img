@@ -78,11 +78,15 @@ Některé položky ve výsledku mohou být klinicky významné, ale nesouvisely 
 
 Některé položky ve výsledku mohou být kritické, protože představují potenciál pro závažný negativní klinický dopad na pacienta, pokud nebudou neprodleně přijata vhodná opatření. Přítomnost takových položek téměř vždy vede ke komunikaci s ošetřujícím personálem a/nebo pacientem.
 
-**Doporučení**
+**Doporučení (Recommendation)**
 
 Některé položky ve výsledku mohou být považovány za akčovatelné, protože je vhodné provést určitá následná opatření nebo komunikovat. Doporučení mohou, ale nemusí zahrnovat konkrétní odpovídající následná opatření. Během procesu hlášení mohla, ale nemuselo proběhnout odpovídající komunikace s příslušnými osobami a tato komunikace bude ve zprávě uvedena.
 
-**Komunikace**
+**Komplikace (Complication)**
+
+Informace o dalších zdravotních problémech, které se objeví po zákroku, diagnostickém testu nebo studii, léčbě nebo nemoci.
+
+**Komunikace (Communication)**
 
 Toto je volitelná část, protože se nepředpokládalo, že bude často vyžadována.
 

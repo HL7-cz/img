@@ -82,6 +82,10 @@ Some items in the impression may be critical, in that they represent the potenti
 
 Some items in the impression may be considered actionable, in that some follow-up action or communication is advisable. The recommendations may or may not include a specific corresponding follow-up action. A corresponding communication to relevant persons may or may not have taken place during the reporting process and be noted in the report.
 
+**Complication**
+
+Information on additional medical problems that develop following a procedure, diagnostic test or study, treatment, or illness.
+
 **Communication**
 
 This is an optional section as it not anticipated that it is often required.

@@ -1,6 +1,6 @@
 {% include variable-definitions.md %}
 
-Tato stránka uvádí logické modely HL7 FHIR používané k reprezentaci Zprávy ze zobrazovacích metod.
+This page lists the HL7 FHIR logical models used to represent imaging report.
 
 {% sql {
   "query" : "SELECT name AS Name, title AS Title, Type, Description, Web FROM Resources WHERE Type='StructureDefinition' AND Name LIKE 'LogEn%' ORDER BY Title",

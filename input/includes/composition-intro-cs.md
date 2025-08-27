@@ -1,6 +1,6 @@
 ### Sekce a obsah
 
-Dokument je rozdělen do sady povinných sekcí. Sekce jsou povinné, nikoli volitelné, aby bylo jasné, proč nejsou k dispozici žádná data, což je vyjádřeno v `composition.section.emptyReason`.
+Dokument je rozdělen do sady povinných a nepovinných sekcí. V případě, že nejsou pro povinnou sekci k dispozici žádná data, lze odůvodnění vyjádřit v `composition.section.emptyReason`.
 
 ### Struktura dokumentu
 
@@ -10,7 +10,7 @@ Zobrazovací zpráva obsahuje následující sekce v tomto pořadí:
 
 Obecné informace o zprávě. Většina informačních prvků v této části zprávy se překrývá s jinými klinickými zprávami. Záhlaví dokumentu obsahuje informace o pacientovi, zdrojové organizaci, autorovi, ověřovateli a správci zprávy.
 
-**Klinická událost (encounter)**
+**Klinická událost (Encounter)**
 
 Tento profil umožňuje propojení zprávy s jednou konkrétní klinickou událostí, ke které se zpráva vztahuje.
 
@@ -24,14 +24,15 @@ Informace o studiích, o kterých tato zpráva informuje. Zahrnuje například i
 
 Sekce objednávky obsahuje informace o objednávkách, které vedly ke studiím a této zprávě. Zahrnuje informace jako „přístupové číslo“, identitu odesílajícího lékaře nebo organizace, indikaci k vyšetření a ideálně i další kontext pacienta a specifické klinické otázky položené odesílajícím lékařem. Klinické otázky mají někdy tvar „Sledování X“, kde X je existující známý nález (možná z předchozího vyšetření), nebo „Vyloučení X“, kde X je stav, pro jehož vyloučení je zapotřebí zhodnocení obrazové výstupu. Indikace jsou také doufejme uvedeny, aby poskytly zobrazovacímu lékaři důležitý klinický kontext a podpořily posouzení vhodnosti objednávky a/nebo fakturace. Pokud indikace nejsou přítomny, někdy je musí jej nalézt zobrazovací personál.
 
-
 > Poznámka: „Vyloučení X“, ačkoli je pro zobrazovacího lékaře do jisté míry užitečné, může být problematické pro fakturaci, protože příznaky, které naznačují možnou přítomnost onemocnění a prokazují lékařskou nutnost zobrazovacího vyšetření, jsou implicitní, ale nejsou zachyceny. V praxi se na pracovišti tato formuloce stále více odmítá.
-
 
 **Podpůrné klinické údaje (History)**
 
-
 Tato část obsahuje klinické údaje pacienta a další předchozí klinické podrobnosti, které zobrazovací lékař považuje za relevantní pro zobrazovací studii. Některé informace může poskytnout odesílající lékař v objednávce a další jsou extrahovány z lékařské dokumentace zobrazovacím personálem, automatizovanými nástroji nebo samotným radiologem. Tyto informace poskytují základní informace pro zobrazovacího lékaře, kontext pro obsah zprávy a někdy jsou relevantní pro fakturaci a klinické pokyny. Mezi potenciální zdroje patří výsledky nebo shrnutí klinických poznámek ze setkání, kde byla zadána objednávka zobrazovacího vyšetření.
+
+**Klinická otázka (Clinical question)**
+
+Klinická otázka je klíčovým prvkem objednávky na obrazové vyšetření. Měla by být zadána jako věta tázací, měla by končit otazníkem a mělo by možné na ni na základě obrazového vyšetření odpovědět. Dodává provádějícímu pracovníkovi nezbytný kontext a směr. Stručně a výstižně vysvětluje, proč je vyšetření nutné, což například umožňuje radiologovi zvolit  nejvhodnější zobrazovací protokol a zaměřit se na hledání konkrétní patologie. Tím se zvyšuje diagnostická přesnost a efektivita celého procesu, minimalizuje se riziko nejasností v závěrečné zprávě a zároveň se zajišťuje, že je pacient vystaven záření nebo kontrastní látce jen v medicínsky odůvodněných případech. Klinická otázka tak přeměňuje rutinní skenování na cílený diagnostický nástroj.
 
 **Procedura (Procedure)**
 

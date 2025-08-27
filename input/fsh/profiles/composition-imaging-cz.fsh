@@ -134,6 +134,7 @@ The `text` field of each section SHALL contain a textual representation of all l
     impression 0..1 and
     recommendation 0..1 and
     communication 0..1 and
+    complications 0..* and
     attachments 0..*
 
 
@@ -235,6 +236,14 @@ The `text` field of each section SHALL contain a textual representation of all l
   * code = $loinc#73575-3 //"Radiology Consult note"
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
   * extension contains $note-url named note 0..*
+
+// /////////////////// A55109-3 SECTION //////////////////////////
+* section[complications]  // sekce na záznam alergických reakcí
+  * ^short = "Complications Document"
+  * code = $loinc#55109-3 //"Note - asi jen dočasný kód TODO: Najít vhodný kód"
+  * author only Reference(CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
+  * entry 1..*
+  * entry only Reference(CZ_AdverseEvent)
 
 * section[attachments]  // sekce obsahující referenci na DocumentReference
   * ^short = "Attachments"

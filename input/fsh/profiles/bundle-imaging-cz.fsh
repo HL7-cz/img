@@ -29,7 +29,7 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * ^publisher = "HL7 CZ"
 * ^copyright = "HL7 CZ"
 * . ^short = "Imaging Report Bundle"
-* . ^definition = "Imaging Report Bundle. \r\nA container for a collection of resources in the inmaging report document."
+* . ^definition = "Imaging Report Bundle. \r\nA container for a collection of resources in the imaging report document."
 
 * insert SetFmmandStatusRule ( 0, draft )
 
@@ -117,8 +117,8 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * entry contains procedure 0..*
 * entry[procedure].resource only CZ_ProcedureImaging
 
-* entry contains allergyIntolerance 0..*
-* entry[allergyIntolerance].resource only CZ_AllergyIntolerance
+* entry contains adverseEvent 0..*
+* entry[adverseEvent].resource only CZ_AdverseEvent
 
 * entry contains encounter 1..*
 * entry[encounter].resource only CZ_Encounter

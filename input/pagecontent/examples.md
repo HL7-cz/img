@@ -7,7 +7,7 @@ There are two examples of imaging reports:
 - [Example of a PET+CT report](Bundle-cz-examplepetct-bundle.html) - Example of a PET+CT report with maximal filling (SHALL and SHOULD obligations) including PDF file
 
 ### Examples of profiles
-- Example of [Allergy Intolerance](AllergyIntolerance-0bd84e75-9c5e-406b-90a8-e39a615e9cf6.html)
+- Example of [Adverse Event](AdverseEvent-0bd84e75-9c5e-406b-90a8-e39a615e9cf6.html)
 - Example [Care Plan](CarePlan-b9af425a-a9d9-4685-800c-d0d661c1b7a4.html)
 - Example of [Clinical Question 1](Condition-9ee22843-2526-436f-bf66-3f9874869c08.html)
 - Example [Coverage 1](Coverage-be4e7f9a-2771-4aa1-bcee-c386f9ba7eaa.html)

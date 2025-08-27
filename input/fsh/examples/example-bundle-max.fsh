@@ -38,8 +38,8 @@ Usage: #example
 * entry[procedure].fullUrl = "urn:uuid:74820e62-42c2-4a39-9ded-251f3b8a58d0"
 * entry[procedure].resource = cz-examplepetct-procedure
 
-* entry[allergyIntolerance].fullUrl = "urn:uuid:0bd84e75-9c5e-406b-90a8-e39a615e9cf6"
-* entry[allergyIntolerance].resource = cz-examplepetct-allergyIntolerance
+* entry[adverseEvent].fullUrl = "urn:uuid:0bd84e75-9c5e-406b-90a8-e39a615e9cf6"
+* entry[adverseEvent].resource = cz-examplepetct-adverseEvent
 
 * entry[medicationAdministration].fullUrl = "urn:uuid:a89a0433-998e-4408-9d7a-560c6d242366"
 * entry[medicationAdministration].resource = cz-examplepetct-medicationAdministration
@@ -120,6 +120,11 @@ Usage: #example
 * section[recommendation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Findings</div>"
 * section[recommendation].text.status = #generated
 * section[recommendation].entry[0] = Reference(urn:uuid:b9af425a-a9d9-4685-800c-d0d661c1b7a4)
+* section[complications].title = "Complications"
+* section[complications].code = $loinc#55109-3 "Complications Document"
+* section[complications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Complications</div>"
+* section[complications].text.status = #generated
+* section[complications].entry[0] = Reference(urn:uuid:0bd84e75-9c5e-406b-90a8-e39a615e9cf6)
 
 Instance: cz-encounter-example
 InstanceOf: CZ_Encounter
@@ -349,19 +354,18 @@ Title: "Care plan: PET+CT Imaging report"
 * intent = #proposal
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 
-Instance: cz-examplepetct-allergyIntolerance
-InstanceOf: CZ_AllergyIntolerance
+Instance: cz-examplepetct-adverseEvent
+InstanceOf: CZ_AdverseEvent
 Usage: #example
-Description: "Allergy Intolerance during PET+CT Imaging report"
-Title: "AllergyIntolerance: PET+CT Imaging report"
+Description: "Adverse Event during PET+CT Imaging report"
+Title: "Adverse Event: PET+CT Imaging report"
 * id = "0bd84e75-9c5e-406b-90a8-e39a615e9cf6"
-* identifier[+].system = "https://www.nempriklad.cz/"
-* identifier[=].value = "0bd84e75-9c5e-406b-90a8-e39a615e9cf6"
-* clinicalStatus = $hl7-allergyintoleranceclinicalstatus#active
-* patient = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
-* reaction.description = "Lokální zčervenání pokožky po podání Fludeoxythymidinu"
-* reaction.onset = "2022-10-07T08:30:00+01:00"
-* reaction.manifestation.text = "Lokální zčervenání pokožky po podání Fludeoxythymidinu"
+* actuality = $hl7-actstatus#actual
+* subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lokální zčervenání pokožky po podání Fludeoxythymidinu</div>"
+* text.status = #additional
+* detected = "2022-10-07T08:30:00+01:00"
+* suspectEntity[procedure].instance = Reference(urn:uuid:74820e62-42c2-4a39-9ded-251f3b8a58d0)
 
 Instance: cz-examplepetct-medicationAdministration
 InstanceOf: CZ_MedicationAdministration
@@ -400,7 +404,6 @@ Title: "Observation: PET+CT Imaging report"
 * status = #final
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * performer = Reference(urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c)
-* focus = Reference(urn:uuid:0bd84e75-9c5e-406b-90a8-e39a615e9cf6)
 * code = $sct#16554361000119106 //"PET CT of brain"
 * valueString = "Na tomografických řezech nacházíme nehomogenně zvýšenou akumulaci RF při zadním okraji postresekční dutiny vlevo parietotemporálně, maximum akumulace RF resp. FLT je laterálně až do charakteru ložiska výrazně zvýšeného FLT."
 * effectiveDateTime = "2022-10-07T09:10:00+01:00"

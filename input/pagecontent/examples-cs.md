@@ -7,7 +7,7 @@ Existují dva příklady zpráv ze zobrazovacích metod:
 - [Příklad PET+CT zprávy](Bundle-cz-examplepetct-bundle.html) - Příklad PET+CT zprávy s maximálním plněním (povinné i požadované části) včetně PDF souboru
 
 ### Příklady profilů
-- Příklad [Allergy Intolerance](AllergyIntolerance-0bd84e75-9c5e-406b-90a8-e39a615e9cf6.html)
+- Příklad [Nežádoucí událost](AdverseEvent-0bd84e75-9c5e-406b-90a8-e39a615e9cf6.html)
 - Příklad [Plán péče](CarePlan-b9af425a-a9d9-4685-800c-d0d661c1b7a4.html)
 - Příklad [Klinická otázka 1](Condition-9ee22843-2526-436f-bf66-3f9874869c08.html)
 - Příklad [Úhrada 1](Coverage-be4e7f9a-2771-4aa1-bcee-c386f9ba7eaa.html)

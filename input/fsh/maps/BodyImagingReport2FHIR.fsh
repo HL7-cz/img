@@ -327,27 +327,27 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-allergyIntolerance"
 * group[=].element[+].code = #Body.ReportOfImagingMethod.adverseReaction
 * group[=].element[=].display = "A.2.4.8 - Adverse reaction"
-* group[=].element[=].target.code = #Composition.section:findings.focus			
-* group[=].element[=].target.comment = "Composition.section:findings.entry.ofType(CZ_ObservationResultImaging).focus.ofType(CZ_AllergyIntolerance)"
+* group[=].element[=].target.code = #Composition.section:complications			
+* group[=].element[=].target.comment = "Composition.section:findings.entry.ofType(CZ_AdverseEvent)"
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[+].code = #adverseReaction.allergyCode
+* group[=].element[+].code = #adverseReaction.reaction
 * group[=].element[=].display = "A.2.4.8.1 - Allergy code"
-* group[=].element[=].target.code = #CZ_AllergyIntolerance.code
+* group[=].element[=].target.code = #CZ_AdverseEvent.code
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
-* group[=].element[+].code = #adverseReaction.allergyManifestation
+* group[=].element[+].code = #adverseReaction.seriousness
 * group[=].element[=].display = "A.2.4.8.2 - Allergy manifestation"
-* group[=].element[=].target.code = #CZ_AllergyIntolerance.reaction.severity
+* group[=].element[=].target.code = #CZ_AdverseEvent.seriousness
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #adverseReaction.dateTime
 * group[=].element[=].display = "A.2.4.8.3 - Alergy date and time"
-* group[=].element[=].target.code = #CZ_AllergyIntolerance.reaction.onset
+* group[=].element[=].target.code = #CZ_AdverseEvent.detected
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #adverseReaction.allergyDescription
 * group[=].element[=].display = "A.2.4.8.4 - Alergy description"
-* group[=].element[=].target.code = #CZ_AllergyIntolerance.reaction.description
+* group[=].element[=].target.code = #CZ_AdverseEvent.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"

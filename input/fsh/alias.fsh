@@ -15,6 +15,8 @@ Alias: $typeClinicalEvent = https://hl7.cz/fhir/img-order/CodeSystem/cz-typeClin
 Alias: $hl7-allergyintoleranceclinicalstatus = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|4.0.1
 Alias: $dlp_lecivePripravky = https://hl7.cz/fhir/core/CodeSystem/cz-dlplecivepripravky-cs
 Alias: $dlp_formy_cs = https://hl7.cz/fhir/core/CodeSystem/cz-dlpformy-cs
+Alias: $hl7-ev = http://hl7.org/fhir/CodeSystem/event-status
+Alias: $hl7-actstatus = http://hl7.org/fhir/adverse-event-actuality
 
 // ValueSet
 Alias: $hl7MedicationAdminStatus = http://hl7.org/fhir/ValueSet/medication-admin-status

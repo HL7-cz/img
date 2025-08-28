@@ -1,6 +1,6 @@
 ### Sections and content
 
-The document is subdivided in a set of required sections. Sections are required instead of optional to make it clear that when no data is present, why that is the case, which is expressed in `composition.section.emptyReason`.
+The document is divided into a set of mandatory and optional sections. In case no data is available for a mandatory section, the justification can be expressed in `composition.section.emptyReason`.
 
 ### Document structure
 
@@ -29,6 +29,10 @@ The order section contains information on the orders that resulted in the studie
 **History**
 
 This section includes patient history and other prior clinical details deemed relevant to the imaging study by the imaging clinician. Some information may be provided by the referring physician in the order, and more is extracted from the medical record by imaging staff, automated tools, or by the radiologist themselves. This information provides background for the imaging clinician, context for the contents of the report, and is sometimes relevant to billing and clinical guidelines. Potential sources include impressions or summaries of the clinical notes from the encounter where the imaging order was placed.
+
+**Clinical question**
+
+A clinical question is a key element of an imaging order. It should be entered as an interrogative sentence, it should end with a question mark, and it should be possible to answer it based on the imaging examination. It provides the performing professional with the necessary context and direction. It briefly and concisely explains why the examination is necessary, which, for example, allows the radiologist to choose the most appropriate imaging protocol and focus on finding a specific pathology. This increases diagnostic accuracy and the efficiency of the entire process, minimizes the risk of ambiguities in the final report, and at the same time ensures that the patient is exposed to radiation or a contrast agent only in medically justified cases. The clinical question thus transforms a routine scan into a targeted diagnostic tool.
 
 **Procedure**
 
@@ -77,6 +81,10 @@ Some items in the impression may be critical, in that they represent the potenti
 **Recommendation**
 
 Some items in the impression may be considered actionable, in that some follow-up action or communication is advisable. The recommendations may or may not include a specific corresponding follow-up action. A corresponding communication to relevant persons may or may not have taken place during the reporting process and be noted in the report.
+
+**Complication**
+
+Information on additional medical problems that develop following a procedure, diagnostic test or study, treatment, or illness.
 
 **Communication**
 

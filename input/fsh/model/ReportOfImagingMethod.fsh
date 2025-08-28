@@ -78,9 +78,9 @@ Description: """Imaging Report - Imaging Report report of imaging method - A.2.4
 * medication.comment 0..1 string "A.2.4.7.10 - Comment" """Comments on the administration of the medicinal product."""
 * medication.dateTimeOfEntry 1..1 dateTime "A.2.4.7.11 - Entry date and time" """The date on which this information about the administration of the medicinal product is entered."""
 * adverseReaction 0..* Base "A.2.4.8 - Adverse reaction" """Adverse reactions related to medication or procedure."""
-* adverseReaction.allergyCode 1..* CodeableConcept "A.2.4.8.1 - Allergy code" """Reactions that are a manifestation of allergy or intolerance. These are events that may occur or have occurred in the past as a reaction to the cause of the allergy or intolerance.
+* adverseReaction.reaction 1..* CodeableConcept "A.2.4.8.1 - Allergy code" """Reactions that are a manifestation of allergy or intolerance. These are events that may occur or have occurred in the past as a reaction to the cause of the allergy or intolerance.
 - Preferred system(s): SNOMED CT"""
-* adverseReaction.allergyManifestation 0..1 CodeableConcept "A.2.4.8.2 - Allergy manifestation" """Severity of reaction due to medication or exposure.
+* adverseReaction.seriousness 0..1 CodeableConcept "A.2.4.8.2 - Allergy manifestation" """Severity of reaction due to medication or exposure.
 - Preferred system(s): SNOMED CT 'Mírná', 'Středně těžká', 'Těžká'"""
 * adverseReaction.dateTime 0..1 dateTime "A.2.4.8.3 - Alergy date and time" """The date and time the reaction occurred. It can also be just a date or a partial date if the exact date is not known."""
 * adverseReaction.allergyDescription 0..1 string "A.2.4.8.4 - Alergy description" """Text description of the reaction as a whole."""

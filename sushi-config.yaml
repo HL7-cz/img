@@ -339,8 +339,12 @@ groups:
     name:  Actors and Obligations (Informative)
     description: Actors and Obligations used to describe the Imaging Report functional requirements for the specified data elements. Informative for this version of the guide.
     resources:
-      - ActorDefinition/actor-consumer-img
-      - ActorDefinition/actor-creator-img
+      - ActorDefinition/actor-creator-img-L1
+      - ActorDefinition/actor-creator-img-L2
+      - ActorDefinition/actor-creator-img-L3
+      - ActorDefinition/actor-consumer-img-L1
+      - ActorDefinition/actor-consumer-img-L2
+      - ActorDefinition/actor-consumer-img-L3
       - StructureDefinition/cz-diagnosticReport-obl-img
       - StructureDefinition/cz-observationResult-obl-img
       - StructureDefinition/cz-patient-obl-img

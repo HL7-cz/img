@@ -39,6 +39,8 @@ The `text` field of each section SHALL contain a textual representation of all l
 * extension[basedOn-order-or-requisition].valueReference only Reference(CZ_ImagingOrderInformation)
 * extension[diagnosticreport-reference].valueReference only Reference(CZ_DiagnosticReport)
 * extension[informationRecipient].valueReference only Reference(CZ_PractitionerCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_PractitionerRoleCore or CZ_OrganizationCore)
+* extension contains $composition.version-r5 named versionNumber 0..
+* extension[versionNumber].valueString ^short = "Business version"
 
 * status
   * ^short = "Status of the Report"

@@ -58,8 +58,12 @@ Alias: $observation-value-r5              = http://hl7.org/fhir/5.0/StructureDef
 Alias: $service-request-body-structure-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-ServiceRequest.bodyStructure
 Alias: $bodySite-reference                = http://hl7.org/fhir/StructureDefinition/bodySite|5.2.0
 Alias: $cz-organization-logo              = https://hl7.cz/fhir/core/StructureDefinition/cz-organization-logo
-
+Alias: $composition.version-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version
 
 //Alias: $server = http://hl7.cz/fhir/img/actor-server-img
-Alias: $creator = http://hl7.cz/fhir/img/actor-creator-img
-Alias: $consumer = http://hl7.cz/fhir/img/actor-consumer-img
+Alias: $creatorL1 = http://hl7.cz/fhir/img/actor-creator-img-L1
+Alias: $consumerL1 = http://hl7.cz/fhir/img/actor-consumer-img-L1
+Alias: $creatorL2 = http://hl7.cz/fhir/img/actor-creator-img-L2
+Alias: $consumerL2 = http://hl7.cz/fhir/img/actor-consumer-img-L2
+Alias: $creatorL3 = http://hl7.cz/fhir/img/actor-creator-img-L3
+Alias: $consumerL3 = http://hl7.cz/fhir/img/actor-consumer-img-L3

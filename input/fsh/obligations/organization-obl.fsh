@@ -1,0 +1,27 @@
+Profile: CZ_OrganizationObligationsImg
+Parent: CZ_OrganizationCore
+Id: cz-organization-obl-img
+Title:    "Organization: Obligations"
+Description: "This profile defines obligations for an organization in FHIR for the purpose of this guide."
+
+* insert SetFmmandStatusRule ( 0, informative)
+
+// L2 Creator Obligations ============>
+* identifier insert OblCreator(#SHALL:populate-if-known,L2)
+* name insert OblCreator(#SHALL:able-to-populate,L2) 
+* address insert OblCreator(#SHALL:able-to-populate,L2)
+
+// L2 Consumer Obligations ============>
+* identifier insert OblConsumer(#SHALL:display,L2)
+* name insert OblConsumer(#SHALL:display,L2) 
+* address insert OblConsumer(#SHALL:display,L2)
+
+// L3 Creator Obligations ============>
+* identifier insert OblCreator(#SHALL:populate-if-known,L3)
+* name insert OblCreator(#SHALL:able-to-populate,L3) 
+* address insert OblCreator(#SHALL:able-to-populate,L3)
+
+// L3 Consumer Obligations ============>
+* identifier insert OblConsumer(#SHALL:display,L3)
+* name insert OblConsumer(#SHALL:display,L3) 
+* address insert OblConsumer(#SHALL:display,L3)

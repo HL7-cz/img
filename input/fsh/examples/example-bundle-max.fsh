@@ -20,6 +20,9 @@ Usage: #example
 * entry[practitioner].fullUrl = "urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c"
 * entry[practitioner].resource = cz-examplepetct-practitioner2
 
+* entry[practitionerRole].fullUrl = "urn:uuid:792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0"
+* entry[practitionerRole].resource = cz-examplepetct-practitionerRole
+
 * entry[serviceRequest].fullUrl = "urn:uuid:5be5b9c2-5ca6-4f2e-b3e2-47dc9b334a22"
 * entry[serviceRequest].resource = cz-examplepetct-order
 
@@ -212,6 +215,16 @@ Usage: #example
 * name.family = "Jan"
 * name.given = "Blažejovský"
 * gender = #male
+
+Instance: cz-examplepetct-practitionerRole
+InstanceOf: CZ_PractitionerRoleCore
+Description: "Example of requesting practitioner for PET+CT Imaging report"
+Title: "Practitioner Blažejovský:PET+CT Imaging report"
+Usage: #example
+* id = "792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0"
+* specialty = $sct#394577000 "Radiology"
+* practitioner = Reference(urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c)
+* organization = Reference(urn:uuid:821077d6-ce17-4602-b3ad-d4bef845a950)
 
 Instance: cz-examplepetct-patient
 InstanceOf: CZ_PatientCore

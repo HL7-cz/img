@@ -42,5 +42,7 @@ Existují dva příklady zpráv ze zobrazovacích metod:
 - Příklad [Pacient Mracena](Patient-cz-examplebase-patient.html)
 - Příklad [Pracovník 1](Practitioner-cz-examplepetct-practitioner1.html)
 - Příklad [Pracovník 2](Practitioner-7ac8dfd6-d559-467b-b5ef-a05198a3ea2c.html)
-- Příklad [Pracovník 3](Practitioner-aafd64f9-36ab-4583-8088-efb93b44db9b.html)
+- Příklad [Pracovník 3](Practitioner-0b00169f-4815-41da-9814-cd3d7504344d.html)
+- Příklad [Role zdravotního pracovníka 1](PractitionerRole-aafd64f9-36ab-4583-8088-efb93b44db9b.html)
+- Příklad [Role zdravotního pracovníka 2](PractitionerRole-792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0.html)
 - Příklad [Objednávka vyšetření 1](ServiceRequest-cz-examplebase-imagingorder.html)

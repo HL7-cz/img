@@ -17,8 +17,11 @@ Usage: #example
 * entry[patient].fullUrl = "urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882"
 * entry[patient].resource = cz-examplertg-patient
 
-* entry[practitioner].fullUrl = "urn:uuid:aafd64f9-36ab-4583-8088-efb93b44db9b"
+* entry[practitioner].fullUrl = "urn:uuid:0b00169f-4815-41da-9814-cd3d7504344d"
 * entry[practitioner].resource = cz-examplertg-practitioner
+
+* entry[practitionerRole].fullUrl = "urn:uuid:aafd64f9-36ab-4583-8088-efb93b44db9b"
+* entry[practitionerRole].resource = cz-examplertg-practitionerRole
 
 * entry[serviceRequest].fullUrl = "urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04"
 * entry[serviceRequest].resource = cz-examplertg-order
@@ -142,7 +145,6 @@ Instance: cz-logo-example
 InstanceOf: CZ_Logo
 Usage: #example
 Description: "Example of logo as document reference for FN Motol."
-
 * id = "c23fc55c-e576-4fc4-8526-6f31f0b9377c"
 * status = #current
 * content.attachment
@@ -155,7 +157,7 @@ InstanceOf: CZ_PractitionerCore
 Title: "Practitioner Keller"
 Description: "Author of RTG Imaging report"
 Usage: #example
-* id = "aafd64f9-36ab-4583-8088-efb93b44db9b"
+* id = "0b00169f-4815-41da-9814-cd3d7504344d"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "123456789"
 * name.use = #usual
@@ -164,6 +166,16 @@ Usage: #example
 * name.given = "Keller"
 * name.suffix = "PhD."
 * gender = #male
+
+Instance: cz-examplertg-practitionerRole
+InstanceOf: CZ_PractitionerRoleCore
+Title: "Practitioner Keller"
+Description: "Author of RTG Imaging report"
+Usage: #example
+* id = "aafd64f9-36ab-4583-8088-efb93b44db9b"
+* specialty = $sct#394577000 "Radiology"
+* practitioner = Reference(urn:uuid:0b00169f-4815-41da-9814-cd3d7504344d)
+* organization = Reference(urn:uuid:e96e9bd5-0695-4725-acb2-c731aa071a55)
 
 Instance: cz-examplertg-patient
 InstanceOf: CZ_PatientCore

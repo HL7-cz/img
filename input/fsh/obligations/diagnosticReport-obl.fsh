@@ -7,14 +7,20 @@ Description: "This profile defines obligations for an Diagnostic report in FHIR 
 // * ^copyright = "HL7 Europe"
 * insert SetFmmandStatusRule ( 0, informative)
 
-* text insert ObligationSet-01_creator-shall-able
-* effectiveDateTime insert ObligationSet-03_creator-shall-if-known
-* performer insert ObligationSet-03_creator-shall-if-known
-* conclusion insert ObligationSet-01_creator-shall-able
-* conclusionCode insert ObligationSet-04_creator-should-if-known
-* extension[composition] insert ObligationSet-02_creator-should-able
-* status insert ObligationSet-02_creator-should-able
-* category insert ObligationSet-02_creator-should-able
-* code insert ObligationSet-02_creator-should-able
-* subject insert ObligationSet-02_creator-should-able
-* presentedForm insert ObligationSet-01_creator-shall-able
+* presentedForm insert OblCreator(#SHALL:able-to-populate,L1)
+* media insert OblCreator(#SHOULD:able-to-populate,L1)
+
+* presentedForm insert OblCreator(#SHALL:able-to-populate,L2)
+* media insert OblCreator(#SHOULD:able-to-populate,L2)
+
+* presentedForm insert OblCreator(#SHALL:able-to-populate,L3)
+* media insert OblCreator(#SHALL:able-to-populate,L3)
+
+* presentedForm insert OblConsumer(#SHALL:display,L1)
+* media insert OblConsumer(#SHOULD:display,L1)
+
+* presentedForm insert OblConsumer(#SHALL:display,L2)
+* media insert OblConsumer(#SHOULD:display,L2)
+
+* presentedForm insert OblConsumer(#SHALL:display,L3)
+* media insert OblConsumer(#SHALL:display,L3)

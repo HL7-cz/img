@@ -59,6 +59,7 @@ Alias: $service-request-body-structure-r5 = http://hl7.org/fhir/5.0/StructureDef
 Alias: $bodySite-reference                = http://hl7.org/fhir/StructureDefinition/bodySite|5.2.0
 Alias: $cz-organization-logo              = https://hl7.cz/fhir/core/StructureDefinition/cz-organization-logo
 Alias: $composition.version-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version
+Alias: $patient-animal = http://hl7.org/fhir/StructureDefinition/patient-animal
 
 //Alias: $server = http://hl7.cz/fhir/img/actor-server-img
 Alias: $creatorL1 = http://hl7.cz/fhir/img/actor-creator-img-L1

@@ -213,7 +213,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * code = $loinc#59776-5 //"Procedure findings Narrative"
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
   * entry 0..*
-  * entry only Reference(CZ_ObservationResultImaging or CZ_KeyImageDocumentReference)
+  * entry only Reference(CZ_ObservationResultImaging or CZ_KeyImageDocumentReference or CZ_AttachmentImg)
 
 /////////////////// IMPRESSION SECTION //////////////////////////
 * section[impression]

@@ -1,6 +1,6 @@
-Profile: CZ_Attachment
+Profile: CZ_AttachmentImg
 Parent: Media
-Id: cz-attachment
+Id: cz-attachment-img
 Title: "Attachment: Imaging Report (CZ)"
 Description: "Czech profile for attachment. "
 
@@ -15,6 +15,11 @@ Description: "Czech profile for attachment. "
 * content.url MS
 * content.title MS
 * content.creation MS
+
+* height
+* width
+* frames
+* duration
 
 * basedOn only Reference(CZ_ImagingOrderInformation or CarePlan)
 * subject only Reference(CZ_PatientCore or CZ_PractitionerCore or CZ_PractitionerRoleCore or Group or CZ_DeviceObserver or CZ_MedicalDevice or CZ_Specimen or CZ_LocationCore)

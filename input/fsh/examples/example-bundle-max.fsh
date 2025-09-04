@@ -325,6 +325,7 @@ Title: "Imaging study: PET+CT Imaging report"
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * series.uid = "1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.2.1"
 * series.modality = $dcm#CT "Computed Tomography"
+* modality = $dcm#CT "Computed Tomography"
 
 Instance: cz-examplepetct-condition1
 InstanceOf: CZ_ConditionImage

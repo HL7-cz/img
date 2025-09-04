@@ -287,6 +287,7 @@ Title: "Imaging study: RTG Imaging report"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * series.uid = "1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.1.1"
 * series.modality = $dcm#DX "Digital Radiography"
+* modality = $dcm#DX "Digital Radiography"
 
 Instance: cz-examplertg-observation
 InstanceOf: CZ_ObservationResultImaging

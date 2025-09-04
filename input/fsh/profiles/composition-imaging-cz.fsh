@@ -113,6 +113,10 @@ The `text` field of each section SHALL contain a textual representation of all l
 * date MS
   * ^short = "Date the report was last changed."
 
+* confidentiality 1..1
+* language 1..1
+* title 1..1
+
 * section 1..
   * ^short = "Sections of the report"
   * ^slicing.discriminator.type = #value

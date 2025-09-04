@@ -72,6 +72,7 @@ Usage: #example
 * author = Reference(urn:uuid:aafd64f9-36ab-4583-8088-efb93b44db9b)
 * title = "Imaging Report - Rentgen Ing. Králíka"
 * confidentiality = #N
+* language = #cs
 * type = $sct#371527006 "Radiology report"
 * encounter = Reference(urn:uuid:20bd86a1-060b-4161-a063-183069efc54b)
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba)

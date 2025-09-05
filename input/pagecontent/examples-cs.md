@@ -3,6 +3,7 @@ Všechny příklady lze nalézt na stránce [artifacts](artifacts.html).
 ### Příklady zprávy ze zobrazovacích metod
 
 Existují dva příklady zpráv ze zobrazovacích metod:
+- [Příklad zprávy úrovně L1](Bundle-cz-examplel1-bundle.html) - Příklad zprávy úrovně L1 obligations včetně PDF souboru
 - [Příklad RTG zprávy](Bundle-cz-examplertg-bundle.html) - Příklad RTG zprávy s minimálním plněním (povinné části) včetně PDF souboru
 - [Příklad PET+CT zprávy](Bundle-cz-examplepetct-bundle.html) - Příklad PET+CT zprávy s maximálním plněním (povinné i požadované části) včetně PDF souboru
 

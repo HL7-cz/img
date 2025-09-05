@@ -345,10 +345,31 @@ groups:
       - ActorDefinition/actor-consumer-img-L1
       - ActorDefinition/actor-consumer-img-L2
       - ActorDefinition/actor-consumer-img-L3
+      - StructureDefinition/cz-adverseEvent-obl-img
+      - StructureDefinition/cz-attachment-obl-img
+      - StructureDefinition/cz-bundle-obl-img
+      - StructureDefinition/cz-carePlan-obl-img
+      - StructureDefinition/cz-composition-obl-img
+      - StructureDefinition/cz-condition-obl-img
+      - StructureDefinition/cz-coverage-obl-img
+      - StructureDefinition/cz-medicalDevice-obl-img
       - StructureDefinition/cz-diagnosticReport-obl-img
+      - StructureDefinition/cz-encounter-obl-img
+      - StructureDefinition/cz-keyImageDocumentReference-obl-img
+      - StructureDefinition/cz-medication-obl-img
+      - StructureDefinition/cz-medicationAdministration-obl-img
       - StructureDefinition/cz-observationResult-obl-img
+      - StructureDefinition/cz-organization-obl-img
       - StructureDefinition/cz-patient-obl-img
+      - StructureDefinition/cz-patientAnimal-obl-img
+      - StructureDefinition/cz-practitioner-obl-img
+      - StructureDefinition/cz-practitionerRole-obl-img
+      - StructureDefinition/cz-procedure-obl-img
+      - StructureDefinition/cz-radiationDoseObservation-obl-img
+      - StructureDefinition/cz-relatedPerson-obl-img
       - StructureDefinition/cz-serviceRequest-obl-img
+      - StructureDefinition/cz-specimen-obl-img
+      - StructureDefinition/cz-studyImaging-obl-img
 
   czech-logical-model:
     name:  Czech logical model (Informative)

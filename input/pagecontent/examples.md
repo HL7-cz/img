@@ -3,6 +3,7 @@ All examples can be found on the [artifacts] page (artifacts.html).
 ### Examples of imaging reports
 
 There are two examples of imaging reports:
+- [Example of an RTG report](Bundle-cz-examplertg-bundle.html) - Example of a report with L1 obligations including PDF file
 - [Example of an RTG report](Bundle-cz-examplertg-bundle.html) - Example of an X-ray report with minimal filling (SHALL obligations) including PDF file
 - [Example of a PET+CT report](Bundle-cz-examplepetct-bundle.html) - Example of a PET+CT report with maximal filling (SHALL and SHOULD obligations) including PDF file
 

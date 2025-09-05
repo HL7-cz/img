@@ -48,6 +48,8 @@ Usage: #example
 * type = $sct#371527006 "Radiology report"
 * encounter = Reference(urn:uuid:4d2447db-6692-40cd-a440-7544d48caa07)
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba)
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Imaging Report - Rentgen Ing. Králíka</h2><p>RTG pacienta Ing. Králíka v L1 úrovni</p></div>"
 
 Instance: cz-encounterl1-example
 InstanceOf: CZ_Encounter
@@ -169,7 +171,7 @@ Title: "Diagnostic report: L1 Imaging report"
 * category[imaging] = $loinc#18748-4 "Diagnostic imaging study"
 * status = #final
 * code = $sct#168500000 "Radiology result normal"
-* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
+* subject = Reference(urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57)
 * result.display = "Bez nálezu"
 * presentedForm.contentType = #application/pdf
 * presentedForm.language = #cs-CZ

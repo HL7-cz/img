@@ -17,7 +17,7 @@ Description: "This profile defines obligations for a medication administration i
 
 * medicationReference insert OblCreator(#SHALL:able-to-populate,L3)
 * dosage insert OblCreator(#SHALL:able-to-populate,L3)
-* effective[x] insert OblCreator(#SHALLD:able-to-populate,L3)
+* effective[x] insert OblCreator(#SHALL:able-to-populate,L3)
 * device insert OblCreator(#SHALL:able-to-populate,L3)
 * note insert OblCreator(#SHALL:able-to-populate,L3)
 * reasonCode insert OblCreator(#SHALL:able-to-populate,L3)

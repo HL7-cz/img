@@ -117,7 +117,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 * language 1..1
 * title 1..1
 
-* section 1..
+* section 0..
   * ^short = "Sections of the report"
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "code"
@@ -130,13 +130,13 @@ The `text` field of each section SHALL contain a textual representation of all l
 * obeys text-or-section
 
 * section contains
-    imagingstudy 1..1 and
-    order 1..1 and
+    imagingstudy 0..1 and
+    order 0..1 and
     clinicalQuestion 0..* and
     history 0..1 and
-    procedure 1..1 and
+    procedure 0..1 and
     comparison 0..1 and
-    findings 1..1 and
+    findings 0..1 and
     impression 0..1 and
     recommendation 0..1 and
     communication 0..1 and

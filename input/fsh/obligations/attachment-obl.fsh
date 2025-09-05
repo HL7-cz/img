@@ -2,7 +2,7 @@ Profile: CZ_AttachmentObligationsImg
 Parent: CZ_AttachmentImg
 Id: cz-attachment-obl-img
 Title:    "Attachment: Obligations"
-Description: "This profile defines obligations for a attachment in FHIR for the purpose of this guide."
+Description: "This profile defines obligations for an attachment in FHIR for the purpose of this guide."
 
 * height insert OblCreator(#SHOULD:populate-if-known,L2)
 * width insert OblCreator(#SHOULD:populate-if-known,L2)

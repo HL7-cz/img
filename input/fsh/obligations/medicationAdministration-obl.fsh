@@ -1,7 +1,7 @@
 Profile: CZ_MedicationAdministrationObligationsImg
 Parent: CZ_MedicationAdministration
 Id: cz-medicationAdministration-obl-img
-Title:    "Medication: Obligations"
+Title:    "Medication Administration: Obligations"
 Description: "This profile defines obligations for a medication administration in FHIR for the purpose of this guide."
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"

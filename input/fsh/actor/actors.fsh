@@ -1,7 +1,7 @@
 Instance: actor-creator-img-L1
 InstanceOf: ActorDefinition
-Title: "Actor Imaging report Creator"
-Description: """Imaging report Creator: a system generating and sending/providing a Imaging report to a Consumer for report storage and sharing."""
+Title: "Actor Imaging report Creator L1"
+Description: """A system generating and sending/providing a L1 Imaging report to a Consumer for report storage and sharing."""
 Usage: #example
 
 * url = "http://hl7.cz/fhir/img/actor-creator-img-L1"
@@ -13,8 +13,8 @@ Usage: #example
 
 Instance: actor-consumer-img-L1
 InstanceOf: ActorDefinition
-Title: "Actor Imaging report Consumer"
-Description: """Imaging report Consumer: a system receiving/querying and using a Imaging report."""
+Title: "Actor Imaging report Consumer L1"
+Description: """A system receiving/querying and using a L1 Imaging report."""
 Usage: #example
 
 * url = "http://hl7.cz/fhir/img/actor-consumer-img-L1"
@@ -27,8 +27,8 @@ Using includes, but is not limited to, the report display, storage or processing
 
 Instance: actor-creator-img-L2
 InstanceOf: ActorDefinition
-Title: "Actor Imaging report Creator"
-Description: """Imaging report Creator: a system generating and sending/providing a Imaging report to a Consumer for report storage and sharing."""
+Title: "Actor Imaging report Creator L2"
+Description: """A system generating and sending/providing a L2 Imaging report to a Consumer for report storage and sharing."""
 Usage: #example
 
 * url = "http://hl7.cz/fhir/img/actor-creator-img-L2"
@@ -40,8 +40,8 @@ Usage: #example
 
 Instance: actor-consumer-img-L2
 InstanceOf: ActorDefinition
-Title: "Actor Imaging report Consumer"
-Description: """Imaging report Consumer: a system receiving/querying and using a Imaging report."""
+Title: "Actor Imaging report Consumer L2"
+Description: """S system receiving/querying and using a L2 Imaging report."""
 Usage: #example
 
 * url = "http://hl7.cz/fhir/img/actor-consumer-img-L2"
@@ -54,8 +54,8 @@ Using includes, but is not limited to, the report display, storage or processing
 
 Instance: actor-creator-img-L3
 InstanceOf: ActorDefinition
-Title: "Actor Imaging report Creator"
-Description: """Imaging report Creator: a system generating and sending/providing a Imaging report to a Consumer for report storage and sharing."""
+Title: "Actor Imaging report Creator L3"
+Description: """A system generating and sending/providing a L3 Imaging report to a Consumer for report storage and sharing."""
 Usage: #example
 
 * url = "http://hl7.cz/fhir/img/actor-creator-img-L3"
@@ -67,8 +67,8 @@ Usage: #example
 
 Instance: actor-consumer-img-L3
 InstanceOf: ActorDefinition
-Title: "Actor Imaging report Consumer"
-Description: """Imaging report Consumer: a system receiving/querying and using a Imaging report."""
+Title: "Actor Imaging report Consumer L3"
+Description: """A system receiving/querying and using a L3 Imaging report."""
 Usage: #example
 
 * url = "http://hl7.cz/fhir/img/actor-consumer-img-L3"

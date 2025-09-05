@@ -1,7 +1,7 @@
 Profile: CZ_DiagnosticReportObligationsImg
 Parent: CZ_DiagnosticReport
 Id: cz-diagnosticReport-obl-img
-Title:    "Diagnostic Report (Imaging Report): Obligations"
+Title:    "Diagnostic Report: Obligations"
 Description: "This profile defines obligations for a diagnostic report in FHIR for the purpose of this guide."
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"

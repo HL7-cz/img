@@ -2,7 +2,7 @@ Profile: CZ_RelatedPersonObligationsImg
 Parent: CZ_RelatedPersonCore
 Id: cz-relatedPerson-obl-img
 Title:    "Related Person: Obligations"
-Description: "This profile defines obligations for an related person in FHIR for the purpose of this guide."
+Description: "This profile defines obligations for a related person in FHIR for the purpose of this guide."
 
 * insert SetFmmandStatusRule ( 0, informative)
 

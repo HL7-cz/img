@@ -8,7 +8,7 @@ Description: "This profile defines obligations for an human Patient in FHIR for 
 
 // TEST OBLIGATIONS  ====>
 // Creator Obligations L1 ============>
-* identifier insert OblCreator(#SHALL:able-to-populate,L1)
+* identifier[RID] insert OblCreator(#SHALL:able-to-populate,L1)
 * name.given insert OblCreator(#SHALL:able-to-populate,L1)
 * name.family insert OblCreator(#SHALL:able-to-populate,L1)
 * name.text insert OblCreator(#SHALL:able-to-populate,L1) //can-send
@@ -19,7 +19,7 @@ Description: "This profile defines obligations for an human Patient in FHIR for 
 * address insert OblCreator(#SHALL:able-to-populate,L1) //can-send
 
 // Consumer obligations L1
-* identifier insert OblConsumer(#SHALL:display,L1)
+* identifier[RID] insert OblConsumer(#SHALL:process,L1)
 * name.given insert OblConsumer(#SHALL:display,L1)
 * name.family insert OblConsumer(#SHALL:display,L1)
 * name.text insert OblConsumer(#SHOULD:display,L1)
@@ -30,7 +30,7 @@ Description: "This profile defines obligations for an human Patient in FHIR for 
 * address insert OblConsumer(#SHALL:display,L1)
 
 // Creator Obligations L2 ============>
-* identifier insert OblCreator(#SHALL:able-to-populate,L2)
+* identifier[RID] insert OblCreator(#SHALL:able-to-populate,L2)
 * name.given insert OblCreator(#SHALL:able-to-populate,L2)
 * name.family insert OblCreator(#SHALL:able-to-populate,L2)
 * name.text insert OblCreator(#SHALL:able-to-populate,L2) //can-send
@@ -44,7 +44,7 @@ Description: "This profile defines obligations for an human Patient in FHIR for 
 * contact insert OblCreator(#SHOULD:able-to-populate,L2)   
 
 // Consumer obligations L2
-* identifier insert OblConsumer(#SHALL:display,L2)
+* identifier[RID] insert OblConsumer(#SHALL:process,L2)
 * name.given insert OblConsumer(#SHALL:display,L2)
 * name.family insert OblConsumer(#SHALL:display,L2)
 * name.text insert OblConsumer(#SHOULD:display,L2)
@@ -56,7 +56,7 @@ Description: "This profile defines obligations for an human Patient in FHIR for 
 * contact insert OblConsumer(#SHOULD:display,L2)
 
 // Creator Obligations L3 ============>
-* identifier insert OblCreator(#SHALL:able-to-populate,L3)
+* identifier[RID] insert OblCreator(#SHALL:able-to-populate,L3)
 * name.given insert OblCreator(#SHALL:able-to-populate,L3)
 * name.family insert OblCreator(#SHALL:able-to-populate,L3)
 * name.text insert OblCreator(#SHALL:able-to-populate,L3) //can-send
@@ -70,7 +70,7 @@ Description: "This profile defines obligations for an human Patient in FHIR for 
 * contact insert OblCreator(#SHOULD:able-to-populate,L3)
 
 // Consumer obligations L3
-* identifier insert OblConsumer(#SHALL:display,L3)
+* identifier[RID] insert OblConsumer(#SHALL:process,L3)
 * name.given insert OblConsumer(#SHALL:display,L3)
 * name.family insert OblConsumer(#SHALL:display,L3)
 * name.text insert OblConsumer(#SHOULD:display,L3)

@@ -335,9 +335,9 @@ menu:
 #     - StructureDefinition/bark-control
 #     - StructureDefinition/bee-sting
 groups:
-  obligations:
-    name:  Actors and Obligations (Informative)
-    description: Actors and Obligations used to describe the Imaging Report functional requirements for the specified data elements. Informative for this version of the guide.
+  actors:
+    name:  Actors
+    description: Actors used to describe the Imaging Report functional requirements for the specified data elements. Informative for this version of the guide.
     resources:
       - ActorDefinition/actor-creator-img-L1
       - ActorDefinition/actor-creator-img-L2
@@ -345,6 +345,11 @@ groups:
       - ActorDefinition/actor-consumer-img-L1
       - ActorDefinition/actor-consumer-img-L2
       - ActorDefinition/actor-consumer-img-L3
+
+  obligations:
+    name:  Obligations
+    description: Obligations used to describe the Imaging Report functional requirements for the specified data elements. Informative for this version of the guide.
+    resources:
       - StructureDefinition/cz-adverseEvent-obl-img
       - StructureDefinition/cz-attachment-obl-img
       - StructureDefinition/cz-bundle-obl-img

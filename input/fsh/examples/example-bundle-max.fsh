@@ -106,18 +106,13 @@ Usage: #example
 * section[clinicalQuestion].entry[0] = Reference(urn:uuid:9ee22843-2526-436f-bf66-3f9874869c08)
 * section[imagingstudy].title = "Zobrazovací studie"
 * section[imagingstudy].code = $loinc#18726-0 "Radiology studies (set)"
-* section[imagingstudy].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Zobrazovací studie Study Instance UID: 1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.2</div>"
-* section[imagingstudy].text.status = #additional
 * section[imagingstudy].entry[0] = Reference(urn:uuid:e132f687-df35-4174-91bd-fe74cda5ac5d)
 * section[procedure].title = "Procedura"
 * section[procedure].code = $loinc#55111-9 "Current imaging procedure descriptions Document"
-* section[procedure].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient byl informován o způsobu vyšetření a podepsal informovaný souhlas s lékařskýmozářením. Pacientovi bylo i.v. podáno radiofarmakum (RF) s ohledem na jeho hmotnost 72 kg.PET skenování bylo zahájeno v 8:15 v rozsahu hlavy s přiloženými horními končetinami. Tomubezprostředně předcházelo nativní nízkodávkové CT vyšetření ve stejném rozsahu ke korekciabsorpce PET obrazu. Použité lékařské přístroje: PET / CT systém Biograph mCT Flow, Siemens,ev. č. XXXXXX. Pacientovi byla doporučena režimová opatření a po vyšetření byl propuštěn zoddělení v nezměněném zdravotním stavu. Byla provedena fúze se snímky magnetickérezonance z roku 2020 a 2019.</div>"
-* section[procedure].text.status = #additional
 * section[procedure].entry[0] = Reference(urn:uuid:74820e62-42c2-4a39-9ded-251f3b8a58d0)
 * section[findings].title = "Nálezy"
 * section[findings].code = $loinc#59776-5 "Procedure findings Narrative"
-* section[findings].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Na tomografických řezech nacházíme nehomogenně zvýšenou akumulaci RF při zadním okraji postresekční dutiny vlevo parietotemporálně, maximum akumulace RF resp. FLT je laterálně až do charakteru ložiska výrazně zvýšeného FLT.
-Odkaz na snímky: /viewer/KOS.dcm</div>"
+* section[findings].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Na tomografických řezech nacházíme nehomogenně zvýšenou akumulaci RF při zadním okraji postresekční dutiny vlevo parietotemporálně, maximum akumulace RF resp. FLT je laterálně až do charakteru ložiska výrazně zvýšeného FLT.</div>"
 * section[findings].text.status = #additional
 * section[findings].entry[0] = Reference(urn:uuid:1bcd2d5a-e401-4ac2-80d0-7ec558d6b250)
 * section[findings].entry[+] = Reference(urn:uuid:2a00895f-9e01-4467-bf75-4f0c3552afa4)

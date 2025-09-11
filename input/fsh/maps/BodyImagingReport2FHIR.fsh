@@ -562,16 +562,6 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
-* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-observation-result-imaging"
-* group[=].element[+].code = #resultOfImagingMethod.conclusion.text
-* group[=].element[=].display = "A.2.4.10.1 - Conclusion text"
-* group[=].element[=].target.code = #Composition.section:impression.text
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #resultOfImagingMethod.conclusion.text
-* group[=].element[=].display = "A.2.4.10.2 - Conclusion code"
-* group[=].element[=].target.code = #Composition.section:impression.entry.ofType(CZ_ObservationResultImaging).code
-* group[=].element[=].target.equivalence = #equivalent
-* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
 * group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-carePlanImage"
 * group[=].element[+].code = #Body.ReportOfImagingMethod.recommendation
 * group[=].element[=].display = "A.2.4.11 - Recommendation"
@@ -594,6 +584,27 @@ Usage: #definition
 * group[=].element[=].display = "A.2.4.12.2 - Comments, interpretations and recommendations"
 * group[=].element[=].target.code = #Composition.text
 * group[=].element[=].target.display = "Add to the Composition.text section as separate div"
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #resultOfImagingMethod.narrativeText
+* group[=].element[=].display = "A.2.4.9.1 - Narrative text"
+* group[=].element[=].target.code = #Composition.section:findings.text
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #resultOfImagingMethod.conclusion.text
+* group[=].element[=].display = "A.2.4.10.1 - Conclusion text"
+* group[=].element[=].target.code = #Composition.section:impression.text
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #resultOfImagingMethod.conclusion.text
+* group[=].element[=].display = "A.2.4.10.2 - Conclusion code"
+* group[=].element[=].target.code = #Composition.section:impression.entry.ofType(CZ_ObservationResultImaging).code
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Body.ReportOfImagingMethod.recommendation
+* group[=].element[=].display = "A.2.4.11 - Recommendation"
+* group[=].element[=].target.code = #Composition.section:recommendation.text
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #adverseReaction.allergyDescription
+* group[=].element[=].display = "A.2.4.8.4 - Alergy description"
+* group[=].element[=].target.code = #Composition.section:complications.text
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/LinkToRelatedReport"
 * group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-study-imaging"

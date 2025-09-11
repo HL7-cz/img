@@ -78,28 +78,24 @@ Usage: #example
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba)
 * section[order].title = "Requested imaging studies information Document"
 * section[order].code = $loinc#55115-0 "Requested imaging studies information Document"
-* section[order].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Order information</div>"
-* section[order].text.status = #generated
 * section[order].entry[0] = Reference(urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04)
-* section[clinicalQuestion].title = "Clinical question"
+* section[clinicalQuestion].title = "Klinická otázka"
 * section[clinicalQuestion].code = $loinc#18785-6	"Radiology Reason for study (narrative)"
-* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Clinical question: Trauma skeletu?</div>"
+* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Klinická otázka: Trauma skeletu?</div>"
 * section[clinicalQuestion].text.status = #additional
-* section[imagingstudy].title = "Imaging Study"
+* section[imagingstudy].title = "Obrazová studie"
 * section[imagingstudy].code = $loinc#18726-0 "Radiology studies (set)"
-* section[imagingstudy].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Imaging Study</div>"
-* section[imagingstudy].text.status = #generated
 * section[imagingstudy].entry[0] = Reference(urn:uuid:fc79917b-b1b0-44a6-beaa-e9715322c834)
-* section[procedure].title = "Procedure"
+* section[procedure].title = "Procedura"
 * section[procedure].code = $loinc#55111-9 "Current imaging procedure descriptions Document"
-* section[procedure].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Procedure</div>"
-* section[procedure].text.status = #generated
 * section[procedure].entry[0] = Reference(urn:uuid:ea2967a5-0d00-461c-8785-b5affef4791c)
-* section[findings].title = "Findings"
+* section[findings].title = "Nálezy"
 * section[findings].code = $loinc#59776-5 "Procedure findings Narrative"
-* section[findings].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Findings</div>"
-* section[findings].text.status = #generated
 * section[findings].entry[0] = Reference(urn:uuid:eca2bf34-9fa8-4abf-bd98-d8d49bcb1104)
+* section[impression].title = "Výsledek"
+* section[impression].code = $loinc#19005-8 "Radiology Imaging study [Impression] (narrative)"
+* section[impression].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Nález byl negativní. Trauma skeletu nepotrvzeno.</div>"
+* section[impression].text.status = #additional
 
 Instance: cz-encounterrtg-example
 InstanceOf: CZ_Encounter

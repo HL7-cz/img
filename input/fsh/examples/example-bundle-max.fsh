@@ -94,42 +94,48 @@ Usage: #example
 * language = #cs
 * confidentiality = #N
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:9c23deff-bf1d-46f6-bd0e-005e52b42121)
-* section[order].title = "Requested imaging studies information Document"
+* section[order].title = "Žádanka na obrazové vyšetření"
 * section[order].code = $loinc#55115-0 "Requested imaging studies information Document"
-* section[order].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Order information</div>"
-* section[order].text.status = #generated
+* section[order].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Žádanka na PET+CT pacientky Jany Example</div>"
+* section[order].text.status = #additional
 * section[order].entry[0] = Reference(urn:uuid:5be5b9c2-5ca6-4f2e-b3e2-47dc9b334a22)
-* section[clinicalQuestion].title = "Clinical question"
+* section[clinicalQuestion].title = "Klinická otázka"
 * section[clinicalQuestion].code = $loinc#18785-6	"Radiology Reason for study (narrative)"
-* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Clinical question: Recidiva?</div>"
+* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Klinická otázka: Recidiva?</div>"
 * section[clinicalQuestion].text.status = #additional
 * section[clinicalQuestion].entry[0] = Reference(urn:uuid:9ee22843-2526-436f-bf66-3f9874869c08)
-* section[imagingstudy].title = "Imaging Study"
+* section[imagingstudy].title = "Zobrazovací studie"
 * section[imagingstudy].code = $loinc#18726-0 "Radiology studies (set)"
-* section[imagingstudy].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Imaging Study</div>"
-* section[imagingstudy].text.status = #generated
+* section[imagingstudy].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Zobrazovací studie Study Instance UID: 1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.2</div>"
+* section[imagingstudy].text.status = #additional
 * section[imagingstudy].entry[0] = Reference(urn:uuid:e132f687-df35-4174-91bd-fe74cda5ac5d)
-* section[procedure].title = "Procedure"
+* section[procedure].title = "Procedura"
 * section[procedure].code = $loinc#55111-9 "Current imaging procedure descriptions Document"
-* section[procedure].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Procedure</div>"
-* section[procedure].text.status = #generated
+* section[procedure].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Pacient byl informován o způsobu vyšetření a podepsal informovaný souhlas s lékařskýmozářením. Pacientovi bylo i.v. podáno radiofarmakum (RF) s ohledem na jeho hmotnost 72 kg.PET skenování bylo zahájeno v 8:15 v rozsahu hlavy s přiloženými horními končetinami. Tomubezprostředně předcházelo nativní nízkodávkové CT vyšetření ve stejném rozsahu ke korekciabsorpce PET obrazu. Použité lékařské přístroje: PET / CT systém Biograph mCT Flow, Siemens,ev. č. XXXXXX. Pacientovi byla doporučena režimová opatření a po vyšetření byl propuštěn zoddělení v nezměněném zdravotním stavu. Byla provedena fúze se snímky magnetickérezonance z roku 2020 a 2019.</div>"
+* section[procedure].text.status = #additional
 * section[procedure].entry[0] = Reference(urn:uuid:74820e62-42c2-4a39-9ded-251f3b8a58d0)
-* section[findings].title = "Findings"
+* section[findings].title = "Nálezy"
 * section[findings].code = $loinc#59776-5 "Procedure findings Narrative"
-* section[findings].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Findings</div>"
-* section[findings].text.status = #generated
+* section[findings].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Na tomografických řezech nacházíme nehomogenně zvýšenou akumulaci RF při zadním okraji postresekční dutiny vlevo parietotemporálně, maximum akumulace RF resp. FLT je laterálně až do charakteru ložiska výrazně zvýšeného FLT.
+Odkaz na snímky: /viewer/KOS.dcm</div>"
+* section[findings].text.status = #additional
 * section[findings].entry[0] = Reference(urn:uuid:1bcd2d5a-e401-4ac2-80d0-7ec558d6b250)
 * section[findings].entry[+] = Reference(urn:uuid:2a00895f-9e01-4467-bf75-4f0c3552afa4)
-* section[recommendation].title = "Recommendation"
+* section[recommendation].title = "Doporučení"
 * section[recommendation].code = $loinc#18783-1 "Radiology Study recommendation (narrative)"
-* section[recommendation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Findings</div>"
-* section[recommendation].text.status = #generated
+* section[recommendation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dále podle vývoje MRI.</div>"
+* section[recommendation].text.status = #additional
 * section[recommendation].entry[0] = Reference(urn:uuid:b9af425a-a9d9-4685-800c-d0d661c1b7a4)
-* section[complications].title = "Complications"
+* section[complications].title = "Komplikace"
 * section[complications].code = $loinc#55109-3 "Complications Document"
-* section[complications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Complications</div>"
-* section[complications].text.status = #generated
+* section[complications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lokální zčervenání pokožky po podání Fludeoxythymidinu</div>"
+* section[complications].text.status = #additional
 * section[complications].entry[0] = Reference(urn:uuid:0bd84e75-9c5e-406b-90a8-e39a615e9cf6)
+* section[impression].title = "Výsledek"
+* section[impression].code = $loinc#19005-8 "Radiology Imaging study [Impression] (narrative)"
+* section[impression].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Zvýšená mitotická aktivita dorzálně za postresekční dutinou až fokálního charakteru při jejím laterálním okraji - nález vzbuzuje podezření na viabilní neoplazii.
+Nenalézáme žádná další jasná ložiska porušené hematoencefalické bariéry nebo zvýšené mitotické aktivity svědčící pro přítomnost viabilní neoplazie v mozku.</div>"
+* section[impression].text.status = #additional
 
 Instance: cz-encounter-example
 InstanceOf: CZ_Encounter
@@ -467,6 +473,7 @@ Title: "Procedure: PET+CT Imaging report"
 * status = #completed
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * partOf = Reference(urn:uuid:a89a0433-998e-4408-9d7a-560c6d242366)
+* note.text = "Pacient byl informován o způsobu vyšetření a podepsal informovaný souhlas s lékařskýmozářením. Pacientovi bylo i.v. podáno radiofarmakum (RF) s ohledem na jeho hmotnost 72 kg.PET skenování bylo zahájeno v 8:15 v rozsahu hlavy s přiloženými horními končetinami. Tomubezprostředně předcházelo nativní nízkodávkové CT vyšetření ve stejném rozsahu ke korekciabsorpce PET obrazu. Použité lékařské přístroje: PET / CT systém Biograph mCT Flow, Siemens,ev. č. XXXXXX. Pacientovi byla doporučena režimová opatření a po vyšetření byl propuštěn zoddělení v nezměněném zdravotním stavu. Byla provedena fúze se snímky magnetické rezonance z roku 2020 a 2019."
 * complication.coding = $sct#19887002 "Claustrophobia"
 * complication.text = "Klaustrofobie"
 * reasonReference = Reference (cz-examplepetct-condition2)

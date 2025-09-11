@@ -225,17 +225,17 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Procedure.complication
 * group[=].element[=].display = "A.2.4.6.8 - Complications during the procedure"
-* group[=].element[=].target.code = #CZ_ProcedureImaging.complication.ofType(CZ_ConditionImage)
+* group[=].element[=].target.code = #CZ_ProcedureImaging.complication
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Procedure.complication.code
 * group[=].element[=].display = "A.2.4.6.8.1 - Complications formalized"
-* group[=].element[=].target.code = #CZ_ConditionImage.coding.code
+* group[=].element[=].target.code = #CZ_ProcedureImaging.complication.code
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Procedure.complication.description
 * group[=].element[=].display = "A.2.4.6.8.2 - Description of complications"
-* group[=].element[=].target.code = #CZ_ConditionImage.coding.text
+* group[=].element[=].target.code = #CZ_ProcedureImaging.complication.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Procedure.comment
@@ -332,7 +332,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[+].code = #adverseReaction.reaction
 * group[=].element[=].display = "A.2.4.8.1 - Allergy code"
-* group[=].element[=].target.code = #CZ_AdverseEvent.suspectEntity[procedure].instance.code
+* group[=].element[=].target.code = #CZ_AdverseEvent.event
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #adverseReaction.seriousness

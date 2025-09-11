@@ -378,6 +378,7 @@ Title: "Adverse Event: PET+CT Imaging report"
 * id = "0bd84e75-9c5e-406b-90a8-e39a615e9cf6"
 * actuality = $hl7-actstatus#actual
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
+* event = $sct#863892004 "Application site erythema"
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lokální zčervenání pokožky po podání Fludeoxythymidinu</div>"
 * text.status = #additional
 * detected = "2022-10-07T08:30:00+01:00"
@@ -466,5 +467,7 @@ Title: "Procedure: PET+CT Imaging report"
 * status = #completed
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * partOf = Reference(urn:uuid:a89a0433-998e-4408-9d7a-560c6d242366)
+* complication.coding = $sct#19887002 "Claustrophobia"
+* complication.text = "Klaustrofobie"
 * reasonReference = Reference (cz-examplepetct-condition2)
 * reasonReference = Reference (urn:uuid:e040e1b2-9f3f-426c-bc5a-7676abae290a)

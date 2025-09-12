@@ -202,23 +202,23 @@ Usage: #definition
 * group[=].element[=].target.comment = "Composition.extension:informationRecipient.valueReference.resolve()"
 * group[=].element[+].code = #InformationRecipientCz.identifier
 * group[=].element[=].display = "A.1.4.1 - Recipient identifier"
-* group[=].element[=].target.code = #CZ_PractitionerCore.identifier					
+* group[=].element[=].target.code = #CZ_PractitionerRoleCore.identifier					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #InformationRecipientCz.name
 * group[=].element[=].display = "A.1.4.2 - Recipient name"
-* group[=].element[=].target.code = #CZ_PractitionerCore.practictioner.name					
+* group[=].element[=].target.code = #CZ_PractitionerRoleCore.practictioner.name					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #InformationRecipientCz.organizationID
 * group[=].element[=].display = "A.1.4.3 - Recipient organisation ID"
-* group[=].element[=].target.code = #CZ_PractitionerCore.organization.identifier					
+* group[=].element[=].target.code = #CZ_PractitioneRolerCore.organization.identifier					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "ID Organization"
 * group[=].element[+].code = #InformationRecipientCz.organization
 * group[=].element[=].display = "A.1.4.4 - Recipient organisation"
-* group[=].element[=].target.code = #CZ_PractitionerCore.organization					
+* group[=].element[=].target.code = #CZ_PractitioneRoleCore.organization					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent				
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/AuthorCz"
@@ -228,26 +228,26 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.author
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "Composition.author.resolve().ofType(CZ_PractitionerCore)"
+* group[=].element[=].target.comment = "Composition.author.resolve().ofType(CZ_PractitionerRoleCore)"
 * group[=].element[+].code = #AuthorCz.identifier
 * group[=].element[=].display = "A.1.5.1 - Author identifier"
-* group[=].element[=].target.code = #CZ_PractitionerCore.identifier					
+* group[=].element[=].target.code = #CZ_PractitionerRoleCore.practictioner.identifier					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #AuthorCz.name
 * group[=].element[=].display = "A.1.5.2 - Author name"
-* group[=].element[=].target.code = #CZ_PractitionerCore.practictioner.name					
+* group[=].element[=].target.code = #CZ_PractitionerRoleCore.practictioner.name					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #AuthorCz.organizationID
 * group[=].element[=].display = "A.1.5.3 - Author organisation ID"
-* group[=].element[=].target.code = #CZ_PractitionerCore.organization.identifier					
+* group[=].element[=].target.code = #CZ_PractitionerRoleCore.organization.identifier					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "If Organization"
 * group[=].element[+].code = #AuthorCz.organization
 * group[=].element[=].display = "A.1.5.4 - Author organisation"
-* group[=].element[=].target.code = #CZ_PractitionerCore.organization					
+* group[=].element[=].target.code = #CZ_PractitionerRoleCore.organization					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/AuthorCz"
@@ -261,59 +261,59 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"					
 * group[=].element[+].code = #Header.attester
 * group[=].element[=].display = "A.1.6 - Attester (multiple attesters could be provided)"
-* group[=].element[=].target.code = #CZ_PractitionerCore
+* group[=].element[=].target.code = #Composition.attester
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "where attester.mode = 'professional' AND Composition.attester.party.resolve().ofType(CZ_PractitionerCore)"
+* group[=].element[=].target.comment = "where attester.mode = 'professional' AND Composition.attester.party.resolve().ofType(CZ_PractitionerRoleCore)"
 * group[=].element[+].code = #AttesterCz.identifier
 * group[=].element[=].display = "A.1.6.1 - Attester identifier"
-* group[=].element[=].target.code = #CZ_PractitionerCore.identifier					
+* group[=].element[=].target.code = #CZ_PractitionerRoleCore.practictioner.identifier					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #AttesterCz.name
 * group[=].element[=].display = "A.1.6.2 - Attester name"
-* group[=].element[=].target.code = #CZ_PractitionerCore.practictioner.name					
+* group[=].element[=].target.code = #CZ_PractitionerRoleCore.practictioner.name					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #AttesterCz.organizationID
 * group[=].element[=].display = "A.1.6.3 - Attester organisation ID"
-* group[=].element[=].target.code = #CZ_PractitionerCore.organization.identifier					
+* group[=].element[=].target.code = #CZ_PractitionerRoleCore.organization.identifier					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #AttesterCz.organization
 * group[=].element[=].display = "A.1.6.4 - Attester organisation"
-* group[=].element[=].target.code = #CZ_PractitionerCore.organization					
+* group[=].element[=].target.code = #CZ_PractitionerRoleCore.organization					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/LegalAuthenticatorCz"
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"						
 * group[=].element[+].code = #Header.legalAuthenticator
 * group[=].element[=].display = "A.1.7 - Legal authenticator (The person taking responsibility for the medical content of the document)"
-* group[=].element[=].target.code = #CZ_PractitionerCore					
+* group[=].element[=].target.code = #Composition.attester					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "where attester.mode = 'legal' AND Composition.attester.party.resolve().ofType(CZ_PractitionerCore)"
+* group[=].element[=].target.comment = "where attester.mode = 'legal' AND Composition.attester.party.resolve().ofType(CZ_PractitionerRoleCore)"
 * group[=].element[+].code = #LegalAuthenticatorCz.identifier
 * group[=].element[=].display = "A.1.7.1 - Legal authenticator identifier"
-* group[=].element[=].target.code = #CZ_PractitionerCore.identifier					
+* group[=].element[=].target.code = #CZ_PractitionerRoleCore.practictioner.identifier					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "where attester.mode = 'legal'"
 * group[=].element[+].code = #LegalAuthenticatorCz.name
 * group[=].element[=].display = "A.1.7.2 - Legal authenticator name"
-* group[=].element[=].target.code = #CZ_PractitionerCore.practictioner.name					
+* group[=].element[=].target.code = #CZ_PractitionerRoleCore.practictioner.name					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "where attester.mode = 'legal'"
 * group[=].element[+].code = #LegalAuthenticatorCz.organizationID
 * group[=].element[=].display = "A.1.7.3 - Legal authenticator organisation ID"
-* group[=].element[=].target.code = #CZ_PractitionerCore.organization.identifier					
+* group[=].element[=].target.code = #CZ_PractitionerRoleCore.organization.identifier					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "where attester.mode = 'legal'"
 * group[=].element[+].code = #LegalAuthenticatorCz.organization
 * group[=].element[=].display = "A.1.7.4 - Legal authenticator organisation"
-* group[=].element[=].target.code = #CZ_PractitionerCore.organization					
+* group[=].element[=].target.code = #CZ_PractitionerRoleCore.organization					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "where attester.mode = 'legal'"
@@ -348,12 +348,12 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.meta					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[+].code = #Header.documentMetadata.identifier
-* group[=].element[=].display = "A.1.8.1 - Document ID"
-* group[=].element[=].target.code = #Composition.identifier					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "If it is the identifer of the document (indipendently by its versions) and not of this particular document instance."
+//* group[=].element[+].code = #Header.documentMetadata.identifier
+//* group[=].element[=].display = "A.1.8.1 - Document ID"
+//* group[=].element[=].target.code = #Composition.identifier					
+//* group[=].element[=].target.display = ""
+//* group[=].element[=].target.equivalence = #equivalent					
+//* group[=].element[=].target.comment = "If it is the identifer of the document (indipendently by its versions) and not of this particular document instance."
 * group[=].element[+].code = #Header.documentMetadata.category
 * group[=].element[=].display = "A.1.8.2 - Document category"
 * group[=].element[=].target.code = #Composition.category					

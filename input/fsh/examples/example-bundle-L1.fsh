@@ -1,121 +1,75 @@
-Instance: cz-examplertg-bundle
+Instance: cz-examplel1-bundle
 InstanceOf: CZ_BundleImagingReport
-Title: "Bundle: RTG Imaging report"
-Description: "Example of Imaging report (Bundle) including a RTG report"
+Title: "Bundle: L1 Imaging report"
+Description: "Example of Imaging report (Bundle) in level L1"
 Usage: #example
 * identifier[+].system = "http://example.org"
-* identifier[=].value = "CZEXIR0001"
+* identifier[=].value = "CZEXIR0003"
 * type = #document
 * timestamp = "2025-06-20T12:02:00+01:00"
 
-* entry[composition].fullUrl = "urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9"
-* entry[composition].resource = cz-examplertg-composition
+* entry[composition].fullUrl = "urn:uuid:6390b57a-0fe7-488b-b948-eda546875bc0"
+* entry[composition].resource = cz-examplel1-composition
 
-* entry[diagnosticReport].fullUrl = "urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba"
-* entry[diagnosticReport].resource = cz-examplertg-diagnosticReport
+* entry[diagnosticReport].fullUrl = "urn:uuid:8a4c6711-6192-4519-a085-77fcf36d81c3"
+* entry[diagnosticReport].resource = cz-examplel1-diagnosticReport
 
-* entry[patient].fullUrl = "urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882"
-* entry[patient].resource = cz-examplertg-patient
+* entry[patient].fullUrl = "urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57"
+* entry[patient].resource = cz-examplel1-patient
 
-* entry[practitioner].fullUrl = "urn:uuid:0b00169f-4815-41da-9814-cd3d7504344d"
-* entry[practitioner].resource = cz-examplertg-practitioner
+* entry[practitioner].fullUrl = "urn:uuid:fe8d7386-1b5c-493c-9f83-d2be26291fa8"
+* entry[practitioner].resource = cz-examplel1-practitioner
 
-* entry[practitionerRole].fullUrl = "urn:uuid:aafd64f9-36ab-4583-8088-efb93b44db9b"
-* entry[practitionerRole].resource = cz-examplertg-practitionerRole
+* entry[practitionerRole].fullUrl = "urn:uuid:daa3335b-db80-41a5-897e-ec0dd615ee9d"
+* entry[practitionerRole].resource = cz-examplel1-practitionerRole
 
-* entry[serviceRequest].fullUrl = "urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04"
-* entry[serviceRequest].resource = cz-examplertg-order
+* entry[encounter].fullUrl = "urn:uuid:4d2447db-6692-40cd-a440-7544d48caa07"
+* entry[encounter].resource = cz-encounterl1-example
 
-* entry[imagingStudy].fullUrl = "urn:uuid:fc79917b-b1b0-44a6-beaa-e9715322c834"
-* entry[imagingStudy].resource = cz-examplertg-imagingStudy
+* entry[attachment].fullUrl = "urn:uuid:38282c81-1026-410b-a2a2-157667ca24e1"
+* entry[attachment].resource = cz-logol1-example
 
-* entry[procedure].fullUrl = "urn:uuid:ea2967a5-0d00-461c-8785-b5affef4791c"
-* entry[procedure].resource = cz-examplertg-procedure
+* entry[organization].fullUrl = "urn:uuid:fe9e7a29-ec24-4d54-8c7f-52a4aba7b7b4"
+* entry[organization].resource = cz-organizationwithlogo3-example
 
-* entry[observation].fullUrl = "urn:uuid:eca2bf34-9fa8-4abf-bd98-d8d49bcb1104"
-* entry[observation].resource = cz-examplertg-observation
-
-* entry[device].fullUrl = "urn:uuid:03903bc5-4ca0-4c55-8e4a-b256da9f788d"
-* entry[device].resource = cz-examplertg-device
-
-* entry[coverage].fullUrl = "urn:uuid:6a2b30b1-4ba7-4a24-adcf-beefa0eface1"
-* entry[coverage].resource = cz-examplertg-coverage
-
-* entry[encounter].fullUrl = "urn:uuid:20bd86a1-060b-4161-a063-183069efc54b"
-* entry[encounter].resource = cz-encounterrtg-example
-
-* entry[attachment].fullUrl = "urn:uuid:c23fc55c-e576-4fc4-8526-6f31f0b9377c"
-* entry[attachment].resource = cz-logo-example
-
-* entry[organization].fullUrl = "urn:uuid:e96e9bd5-0695-4725-acb2-c731aa071a55"
-* entry[organization].resource = cz-organizationwithlogo2-example
-
-* entry[organization][+].fullUrl = "urn:uuid:4e0bf3d9-2a90-47bf-b558-c3a64d63baa9"
-* entry[organization][=].resource = cz-examplertg-organization
-
-* entry[condition].fullUrl = "urn:uuid:e20f7fc3-0237-496a-a57a-18acac3776df"
-* entry[condition].resource = cz-examplertg-condition1
-
-* entry[condition][+].fullUrl = "urn:uuid:96b5af8a-9127-45fd-b549-ab79f5c56a41"
-* entry[condition][=].resource = cz-examplertg-condition2
-
-
-Instance: cz-examplertg-composition
+Instance: cz-examplel1-composition
 InstanceOf: CZ_CompositionImagingReport
-Title: "Composition: RTG Imaging report"
-Description: "Minimal composition for RTG Image report"
+Title: "Composition: L1 Imaging report"
+Description: "Minimal composition for L1 Image report"
 Usage: #example
-* id = "dbd426a9-d660-4f97-8656-1e39db4a57c9"
+* id = "6390b57a-0fe7-488b-b948-eda546875bc0"
 * status = #final
-* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
+* subject = Reference(urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57)
 * date = "2025-05-20T12:02:00+01:00"
-* author = Reference(urn:uuid:aafd64f9-36ab-4583-8088-efb93b44db9b)
+* author = Reference(urn:uuid:daa3335b-db80-41a5-897e-ec0dd615ee9d)
 * title = "Imaging Report - Rentgen Ing. Králíka"
 * confidentiality = #N
 * language = #cs
 * type = $sct#371527006 "Radiology report"
-* encounter = Reference(urn:uuid:20bd86a1-060b-4161-a063-183069efc54b)
+* encounter = Reference(urn:uuid:4d2447db-6692-40cd-a440-7544d48caa07)
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba)
-* section[order].title = "Requested imaging studies information Document"
-* section[order].code = $loinc#55115-0 "Requested imaging studies information Document"
-* section[order].entry[0] = Reference(urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04)
-* section[clinicalQuestion].title = "Klinická otázka"
-* section[clinicalQuestion].code = $loinc#18785-6	"Radiology Reason for study (narrative)"
-* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Klinická otázka: Trauma skeletu?</div>"
-* section[clinicalQuestion].text.status = #additional
-* section[imagingstudy].title = "Obrazová studie"
-* section[imagingstudy].code = $loinc#18726-0 "Radiology studies (set)"
-* section[imagingstudy].entry[0] = Reference(urn:uuid:fc79917b-b1b0-44a6-beaa-e9715322c834)
-* section[procedure].title = "Procedura"
-* section[procedure].code = $loinc#55111-9 "Current imaging procedure descriptions Document"
-* section[procedure].entry[0] = Reference(urn:uuid:ea2967a5-0d00-461c-8785-b5affef4791c)
-* section[findings].title = "Nálezy"
-* section[findings].code = $loinc#59776-5 "Procedure findings Narrative"
-* section[findings].entry[0] = Reference(urn:uuid:eca2bf34-9fa8-4abf-bd98-d8d49bcb1104)
-* section[impression].title = "Výsledek"
-* section[impression].code = $loinc#19005-8 "Radiology Imaging study [Impression] (narrative)"
-* section[impression].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Nález byl negativní. Trauma skeletu nepotrvzeno.</div>"
-* section[impression].text.status = #additional
+* text.status = #additional
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Imaging Report - Rentgen Ing. Králíka</h2><p>RTG pacienta Ing. Králíka v L1 úrovni</p></div>"
 
-Instance: cz-encounterrtg-example
+Instance: cz-encounterl1-example
 InstanceOf: CZ_Encounter
 Usage: #example
 Description: "Encounter"
-* id = "20bd86a1-060b-4161-a063-183069efc54b"
+* id = "4d2447db-6692-40cd-a440-7544d48caa07"
 * identifier[+].system = "http://example.org/hospital"
 * identifier[=].value = "ku-123456790"
 * status = #in-progress
 * class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 * class.code = #AMB
 * type.text = "RTG pacientky Jany Example"
-* serviceProvider = Reference(urn:uuid:e96e9bd5-0695-4725-acb2-c731aa071a55)
+* serviceProvider = Reference(urn:uuid:fe9e7a29-ec24-4d54-8c7f-52a4aba7b7b4)
 
-Instance: cz-organizationwithlogo2-example
+Instance: cz-organizationwithlogo3-example
 InstanceOf: cz-organization-core
 Usage: #example
 Description: "An example of the organization with logo extension"
 //* contained[+] = attachment-logo-FN-Motol  // Příklad přílohy s logem
-* id = "e96e9bd5-0695-4725-acb2-c731aa071a55"
+* id = "fe9e7a29-ec24-4d54-8c7f-52a4aba7b7b4"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * identifier[=].value = "456789655"
 * type[+] = $drzar#101 "Fakultní nemocnice"
@@ -136,25 +90,25 @@ Description: "An example of the organization with logo extension"
 * address[=].city = "Praha"
 * address[=].postalCode = "15000"
 * address[=].country = "CZ"
-* extension[logo].valueReference = Reference(urn:uuid:c23fc55c-e576-4fc4-8526-6f31f0b9377c)
+* extension[logo].valueReference = Reference(urn:uuid:38282c81-1026-410b-a2a2-157667ca24e1)
 
-Instance: cz-logo-example
+Instance: cz-logol1-example
 InstanceOf: CZ_Logo
 Usage: #example
 Description: "Example of logo as document reference for FN Motol."
-* id = "c23fc55c-e576-4fc4-8526-6f31f0b9377c"
+* id = "38282c81-1026-410b-a2a2-157667ca24e1"
 * status = #current
 * content.attachment
   * contentType = #image/svg+xml
   * title = "Organization logo"
   * data = """PHN2ZyBoZWlnaHQ9IjMyNC44OTMxNDUiIHZpZXdCb3g9IjAgMCAzNjAgMzgwIiB3aWR0aD0iMzA3Ljc5MzUwNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGNsaXBQYXRoIGlkPSJhIj48cGF0aCBkPSJtMCA4NDEuODloNTk1LjI4di04NDEuODloLTU5NS4yOHoiLz48L2NsaXBQYXRoPjxnIGNsaXAtcGF0aD0idXJsKCNhKSIgZmlsbD0iIzAwNWZhNiIgdHJhbnNmb3JtPSJtYXRyaXgoMS4zMzMzMzMzIDAgMCAtMS4zMzMzMzMzIC0xNzIuOTE3MDc1Njc3MDcgOTcyLjY1ODUzNzA3OTg3KSI+PHBhdGggZD0ibTAgMC0xMjkuOTk5IDEzMCA5MS43NDEgOTEuNzM1IDM4LjEzNS0zOC4xNDQgMzguMjYzIDM4LjI2NCA5MS44NjMtOTEuODU1em0xOC4zNzkgMTI5LjYwOC0xNy45ODYtMTcuOTg3LTM2LjExNyAzNi4xMDctMTcuNzI1LTE3LjcyOCA1My40NDktNTMuNDU1IDUzLjQ1MyA1My40NTUtMzEuMzc0IDMxLjM4MSAxNy44MzkgMTcuODQ3IDQ5LjIyOS00OS4yMjgtODkuMTQ3LTg5LjE0NS04OS4xNDQgODkuMTQ1IDUzLjIyMSA1My4yMTVjMTguMjk1LTE4LjI4NCAzNi4zNjYtMzUuNjYxIDU0LjMwMi01My42MDciIGZpbGwtcnVsZT0iZXZlbm9kZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjY1Ljc5ODggNTAzLjUzODEpIi8+PHBhdGggZD0ibTAgMGgyMi4wNzh2LTYuNjUxaC0xMy43MThsLS4wOTItNi4xNDNoMTMuNjcxdi02LjM3NGgtMTMuNzE3bC0uMDkzLTEyLjc5NGgtOC40MDZ6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMzguMzMxNSA0ODIuMDg0NSkiLz48cGF0aCBkPSJtMCAwaDEwLjA2OWwxMS4wMzktMjAuOTY5aC4wOTJsLjE4NSAyMC45NjloNy41MjlsLS4yNzctMzEuOTYyaC05LjYwN2wtMTEuNTAxIDIwLjk2OWgtLjA5M2wtLjE4NS0yMC45NjloLTcuNTI4eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTY1LjUzNjYgNDgyLjA4NDUpIi8+PHBhdGggZD0ibTAgMGgxMC40MzhsNC42Mi0yMy4zNzJoLjA5Mmw1LjcyNyAyMy4zNzJoMTAuNDM5bDYuMzI4LTMxLjk2MmgtOC4zMTRsLTMuNTExIDIyLjgxNmgtLjA5MmwtNS42ODEtMjIuODE2aC05LjU2MWwtNS4zMTIgMjIuODE2aC0uMDkybC00LjYxOS0yMi44MTZoLTguMTI5eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjIxLjc0NzYgNDgyLjA4NDUpIi8+PHBhdGggZD0ibTAgMGM0LjgwNCAwIDguNjg0IDMuMjMzIDguNjg0IDEwLjI1MyAwIDcuMDIxLTMuODggMTAuMjU0LTguNjg0IDEwLjI1NC00Ljc1NyAwLTguNjM3LTMuMjMzLTguNjM3LTEwLjI1NCAwLTcuMDIgMy44OC0xMC4yNTMgOC42MzctMTAuMjUzbS4wNDYgMjcuMTU5YzEwLjg1NCAwIDE3LjIyOC03LjYyMSAxNy4yMjgtMTYuOTA2IDAtOS4yODMtNi4zNzQtMTYuOTA0LTE3LjIyOC0xNi45MDQtMTAuOSAwLTE3LjI3NCA3LjYyMS0xNy4yNzQgMTYuOTA0IDAgOS4yODUgNi4zNzQgMTYuOTA2IDE3LjI3NCAxNi45MDYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI3OS44OTg5IDQ1NS44NDk2KSIvPjxwYXRoIGQ9Im0wIDBoMjYuMTQzdi02LjY1MWgtOC42MzhsLS4yNzctMjUuMzExaC04LjMxNGwuMjc3IDI1LjMxMWgtOS4xOTF6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyOTkuMzQ0NyA0ODIuMDg0NSkiLz48cGF0aCBkPSJtMCAwYzQuODAzIDAgOC42ODMgMy4yMzMgOC42ODMgMTAuMjUzIDAgNy4wMjEtMy44OCAxMC4yNTQtOC42ODMgMTAuMjU0LTQuNzU4IDAtOC42MzgtMy4yMzMtOC42MzgtMTAuMjU0IDAtNy4wMiAzLjg4LTEwLjI1MyA4LjYzOC0xMC4yNTNtLjA0NiAyNy4xNTljMTAuODU0IDAgMTcuMjI4LTcuNjIxIDE3LjIyOC0xNi45MDYgMC05LjI4My02LjM3NC0xNi45MDQtMTcuMjI4LTE2LjkwNC0xMC45IDAtMTcuMjc1IDcuNjIxLTE3LjI3NSAxNi45MDQgMCA5LjI4NSA2LjM3NSAxNi45MDYgMTcuMjc1IDE2LjkwNiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzQ0Ljg4NjcgNDU1Ljg0OTYpIi8+PHBhdGggZD0ibTAgMGg4LjMxM2wtLjI3Ny0yNS4wMzRoMTQuNDExbC0uMTM4LTYuOTI4aC0yMi41ODZ6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzNjcuOTgwNSA0ODIuMDg0NSkiLz48L2c+PC9zdmc+"""
 
-Instance: cz-examplertg-practitioner
+Instance: cz-examplel1-practitioner
 InstanceOf: CZ_PractitionerCore
 Title: "Practitioner Keller"
 Description: "Author of RTG Imaging report"
 Usage: #example
-* id = "0b00169f-4815-41da-9814-cd3d7504344d"
+* id = "fe8d7386-1b5c-493c-9f83-d2be26291fa8"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "123456789"
 * name.use = #usual
@@ -164,22 +118,22 @@ Usage: #example
 * name.suffix = "PhD."
 * gender = #male
 
-Instance: cz-examplertg-practitionerRole
+Instance: cz-examplel1-practitionerRole
 InstanceOf: CZ_PractitionerRoleCore
 Title: "Practitioner Keller"
 Description: "Author of RTG Imaging report"
 Usage: #example
-* id = "aafd64f9-36ab-4583-8088-efb93b44db9b"
+* id = "daa3335b-db80-41a5-897e-ec0dd615ee9d"
 * specialty = $sct#394577000 "Radiology"
-* practitioner = Reference(urn:uuid:0b00169f-4815-41da-9814-cd3d7504344d)
-* organization = Reference(urn:uuid:e96e9bd5-0695-4725-acb2-c731aa071a55)
+* practitioner = Reference(urn:uuid:fe8d7386-1b5c-493c-9f83-d2be26291fa8)
+* organization = Reference(urn:uuid:fe9e7a29-ec24-4d54-8c7f-52a4aba7b7b4)
 
-Instance: cz-examplertg-patient
+Instance: cz-examplel1-patient
 InstanceOf: CZ_PatientCore
 Usage: #example
 Title: "Patient Králík"
 Description: "Patient in RTG Imaging report"
-* id = "62d2aa9a-a15f-4e43-9458-fec16c1c4882"
+* id = "3c137453-0de8-4e1a-be72-9dc55f500d57"
 * identifier[CPOJ][+].system = "https://ncez.mzcr.cz/fhir/sid/cpoj"
 * identifier[CPOJ][=].value = "0551621110"
 * identifier[CPOJ][=].use = #official
@@ -207,131 +161,17 @@ Description: "Patient in RTG Imaging report"
 * communication[+].language = urn:ietf:bcp:47#cs
 * communication[=].preferred = true
 
-Instance: cz-examplertg-order
-InstanceOf: CZ_ImagingOrderInformation
-Usage: #example
-Title: "Imaging order: RTG Imaging report"
-Description: "Imaging order for Plain X-ray"
-* id = "d6784779-d008-447d-90cf-89d5d53a0f04"
-* identifier[+].system = "https://www.homolka.cz/"
-* identifier[=].value = "6609024"
-* status = #active
-* intent = #order
-* category = $sct#363679005 	"Imaging" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
-* performer = Reference(urn:uuid:03903bc5-4ca0-4c55-8e4a-b256da9f788d)
-* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
-* insurance = Reference(urn:uuid:6a2b30b1-4ba7-4a24-adcf-beefa0eface1)
-* bodySite = $sct#6757004 "Right knee"
-* bodySite = $sct#62175007 "Right leg"
-* bodySite = $sct#731788002 "LS Spine"
-* bodySite = $sct#737406006 "Right talus"
-* bodySite = $sct#12921003 "Pelvis"
-* bodySite = $sct#287579007 "Right hip"
-* bodySite = $sct#287679003 "Left hip"
-* code.coding = $sct#168537006 "Plain X-ray"
-* text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">RTG Požadované vyšetření: LS páteř, Noha pravá, Hlezno pravé, Pánev, Koleno pravé, Kyčel levý, Kyčel pravý</div>"
-* authoredOn = "2025-05-20T12:02:00+01:00"
-* reasonReference = Reference(urn:uuid:e20f7fc3-0237-496a-a57a-18acac3776df)
-
-Instance: cz-examplertg-condition1
-InstanceOf: CZ_ConditionImage
-Usage: #example
-Description: "Reason For Admission of RTG Imaging report"
-Title: "Condition - Reason For Admission: RTG Imaging report"
-* id = "e20f7fc3-0237-496a-a57a-18acac3776df"
-* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
-* code.coding = $mkn-10#S01.8 "Otevřená rána jiných částí hlavy"
-* code.text = "vyskočil z okna, pád ze 3 metrů na nohy (na hlavě jen exkoriace), v bezvědomí nebyl, kulhá, z hlavy mu teče krev, stěžuje si na bolest dolní části zad."
-
-Instance: cz-examplertg-device
-InstanceOf: CZ_DeviceObserver
-Usage: #example
-Description: "Radiographic imaging device used in RTG Imaging report"
-Title: "Device - Radiographic unit: RTG Imaging report"
-* id = "03903bc5-4ca0-4c55-8e4a-b256da9f788d"
-* type = $sct#68080007 "Radiographic unit"
-
-Instance: cz-examplertg-coverage
-InstanceOf: CZ_Coverage
-Description: "Example of coverage in RTG Imaging report"
-Usage: #example
-Title: "Coverage: RTG Imaging report"
-* id = "6a2b30b1-4ba7-4a24-adcf-beefa0eface1"
-* status = #active
-* beneficiary = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
-* payor = Reference(urn:uuid:4e0bf3d9-2a90-47bf-b558-c3a64d63baa9)
-
-Instance: cz-examplertg-organization
-InstanceOf: CZ_OrganizationCore
-Usage: #example
-Description: "Example of insurance organisation in RTG Imaging report"
-Title: "Organization - Healthcare insurance company: RTG Imaging report"
-* id = "4e0bf3d9-2a90-47bf-b558-c3a64d63baa9"
-* name = "Všeobecná zdravotní pojišťovna ČR"
-* identifier[KP].system =  "https://ncez.mzcr.cz/fhir/sid/kp"
-* identifier[KP].value = "111"
-
-Instance: cz-examplertg-imagingStudy
-InstanceOf: CZ_StudyImaging
-Usage: #example
-Description: "Imaging study of RTG Imaging report"
-Title: "Imaging study: RTG Imaging report"
-* id = "fc79917b-b1b0-44a6-beaa-e9715322c834"
-* identifier[studyInstanceUid].system = "urn:dicom:uid"
-* identifier[studyInstanceUid].value = "urn:oid:1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.1"
-* status = #available
-* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
-* series.uid = "1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.1.1"
-* series.modality = $dcm#DX "Digital Radiography"
-* modality = $dcm#DX "Digital Radiography"
-
-Instance: cz-examplertg-observation
-InstanceOf: CZ_ObservationResultImaging
-Usage: #example
-Description: "Observation of RTG Imaging report"
-Title: "Observation: RTG Imaging report"
-* id = "eca2bf34-9fa8-4abf-bd98-d8d49bcb1104"
-* language = #cs-CZ
-* status = #final
-* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
-* performer = Reference(urn:uuid:aafd64f9-36ab-4583-8088-efb93b44db9b)
-* code = $sct#715959009 //"Imaging of pelvis"
-* valueString = "Bez nálezu."
-* effectiveDateTime = "2025-10-06T09:10:00+01:00"
-
-Instance: cz-examplertg-condition2
-InstanceOf: CZ_ConditionImage
-Usage: #example
-Description: "Diagnosis for RTG Imaging report"
-Title: "Condition - Diagnosis: RTG Imaging report"
-* id = "96b5af8a-9127-45fd-b549-ab79f5c56a41"
-* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
-* code.coding[diagnosis] = #T09.3 "Poranění míchy‚ úroveň neurčena"
-* code.text = "Poranění míchy‚ úroveň neurčena"
-
-Instance: cz-examplertg-procedure
-InstanceOf: CZ_ProcedureImaging
-Usage: #example
-Description: "Procedure of RTG Imaging report"
-Title: "Procedure: RTG Imaging report"
-* id = "ea2967a5-0d00-461c-8785-b5affef4791c"
-* code.coding = $sct#168537006 "Plain X-ray"
-* status = #completed
-* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
-* reasonReference = Reference (urn:uuid:96b5af8a-9127-45fd-b549-ab79f5c56a41)
-
-Instance: cz-examplertg-diagnosticReport
+Instance: cz-examplel1-diagnosticReport
 InstanceOf: CZ_DiagnosticReport
 Usage: #example
-Description: "Diagnostic report of RTG Imaging report"
-Title: "Diagnostic report: RTG Imaging report"
-* id = "bd3e7b78-bfaa-428e-9168-8cd29cf54aba"
-* extension[composition].valueReference = Reference(urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9)
+Description: "Diagnostic report of L1 Imaging report"
+Title: "Diagnostic report: L1 Imaging report"
+* id = "8a4c6711-6192-4519-a085-77fcf36d81c3"
+* extension[composition].valueReference = Reference(urn:uuid:6390b57a-0fe7-488b-b948-eda546875bc0)
 * category[imaging] = $loinc#18748-4 "Diagnostic imaging study"
 * status = #final
 * code = $sct#168500000 "Radiology result normal"
-* subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
+* subject = Reference(urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57)
 * result.display = "Bez nálezu"
 * presentedForm.contentType = #application/pdf
 * presentedForm.language = #cs-CZ

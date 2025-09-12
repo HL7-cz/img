@@ -20,6 +20,9 @@ Usage: #example
 * entry[practitioner].fullUrl = "urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c"
 * entry[practitioner].resource = cz-examplepetct-practitioner2
 
+* entry[practitionerRole].fullUrl = "urn:uuid:792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0"
+* entry[practitionerRole].resource = cz-examplepetct-practitionerRole
+
 * entry[serviceRequest].fullUrl = "urn:uuid:5be5b9c2-5ca6-4f2e-b3e2-47dc9b334a22"
 * entry[serviceRequest].resource = cz-examplepetct-order
 
@@ -88,43 +91,46 @@ Usage: #example
 * type = $sct#4261000179100 "Computed tomography imaging report"
 * title = "Zpráva z vyšetření PET+CT hlavy"
 * encounter = Reference(urn:uuid:7023b84e-47bb-405c-be46-2c161c6ba8d5)
+* language = #cs
+* confidentiality = #N
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:9c23deff-bf1d-46f6-bd0e-005e52b42121)
-* section[order].title = "Requested imaging studies information Document"
+* section[order].title = "Žádanka na obrazové vyšetření"
 * section[order].code = $loinc#55115-0 "Requested imaging studies information Document"
-* section[order].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Order information</div>"
-* section[order].text.status = #generated
+* section[order].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Žádanka na PET+CT pacientky Jany Example</div>"
+* section[order].text.status = #additional
 * section[order].entry[0] = Reference(urn:uuid:5be5b9c2-5ca6-4f2e-b3e2-47dc9b334a22)
-* section[clinicalQuestion].title = "Clinical question"
+* section[clinicalQuestion].title = "Klinická otázka"
 * section[clinicalQuestion].code = $loinc#18785-6	"Radiology Reason for study (narrative)"
-* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Clinical question: Recidiva?</div>"
+* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Klinická otázka: Recidiva?</div>"
 * section[clinicalQuestion].text.status = #additional
 * section[clinicalQuestion].entry[0] = Reference(urn:uuid:9ee22843-2526-436f-bf66-3f9874869c08)
-* section[imagingstudy].title = "Imaging Study"
+* section[imagingstudy].title = "Zobrazovací studie"
 * section[imagingstudy].code = $loinc#18726-0 "Radiology studies (set)"
-* section[imagingstudy].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Imaging Study</div>"
-* section[imagingstudy].text.status = #generated
 * section[imagingstudy].entry[0] = Reference(urn:uuid:e132f687-df35-4174-91bd-fe74cda5ac5d)
-* section[procedure].title = "Procedure"
+* section[procedure].title = "Procedura"
 * section[procedure].code = $loinc#55111-9 "Current imaging procedure descriptions Document"
-* section[procedure].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Procedure</div>"
-* section[procedure].text.status = #generated
 * section[procedure].entry[0] = Reference(urn:uuid:74820e62-42c2-4a39-9ded-251f3b8a58d0)
-* section[findings].title = "Findings"
+* section[findings].title = "Nálezy"
 * section[findings].code = $loinc#59776-5 "Procedure findings Narrative"
-* section[findings].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Findings</div>"
-* section[findings].text.status = #generated
+* section[findings].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Na tomografických řezech nacházíme nehomogenně zvýšenou akumulaci RF při zadním okraji postresekční dutiny vlevo parietotemporálně, maximum akumulace RF resp. FLT je laterálně až do charakteru ložiska výrazně zvýšeného FLT.</div>"
+* section[findings].text.status = #additional
 * section[findings].entry[0] = Reference(urn:uuid:1bcd2d5a-e401-4ac2-80d0-7ec558d6b250)
 * section[findings].entry[+] = Reference(urn:uuid:2a00895f-9e01-4467-bf75-4f0c3552afa4)
-* section[recommendation].title = "Recommendation"
+* section[recommendation].title = "Doporučení"
 * section[recommendation].code = $loinc#18783-1 "Radiology Study recommendation (narrative)"
-* section[recommendation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Findings</div>"
-* section[recommendation].text.status = #generated
+* section[recommendation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dále podle vývoje MRI.</div>"
+* section[recommendation].text.status = #additional
 * section[recommendation].entry[0] = Reference(urn:uuid:b9af425a-a9d9-4685-800c-d0d661c1b7a4)
-* section[complications].title = "Complications"
+* section[complications].title = "Komplikace"
 * section[complications].code = $loinc#55109-3 "Complications Document"
-* section[complications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Complications</div>"
-* section[complications].text.status = #generated
+* section[complications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lokální zčervenání pokožky po podání Fludeoxythymidinu</div>"
+* section[complications].text.status = #additional
 * section[complications].entry[0] = Reference(urn:uuid:0bd84e75-9c5e-406b-90a8-e39a615e9cf6)
+* section[impression].title = "Výsledek"
+* section[impression].code = $loinc#19005-8 "Radiology Imaging study [Impression] (narrative)"
+* section[impression].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Zvýšená mitotická aktivita dorzálně za postresekční dutinou až fokálního charakteru při jejím laterálním okraji - nález vzbuzuje podezření na viabilní neoplazii.
+Nenalézáme žádná další jasná ložiska porušené hematoencefalické bariéry nebo zvýšené mitotické aktivity svědčící pro přítomnost viabilní neoplazie v mozku.</div>"
+* section[impression].text.status = #additional
 
 Instance: cz-encounter-example
 InstanceOf: CZ_Encounter
@@ -212,6 +218,16 @@ Usage: #example
 * name.family = "Jan"
 * name.given = "Blažejovský"
 * gender = #male
+
+Instance: cz-examplepetct-practitionerRole
+InstanceOf: CZ_PractitionerRoleCore
+Description: "Example of requesting practitioner for PET+CT Imaging report"
+Title: "Practitioner Blažejovský:PET+CT Imaging report"
+Usage: #example
+* id = "792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0"
+* specialty = $sct#394577000 "Radiology"
+* practitioner = Reference(urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c)
+* organization = Reference(urn:uuid:821077d6-ce17-4602-b3ad-d4bef845a950)
 
 Instance: cz-examplepetct-patient
 InstanceOf: CZ_PatientCore
@@ -312,6 +328,7 @@ Title: "Imaging study: PET+CT Imaging report"
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * series.uid = "1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.2.1"
 * series.modality = $dcm#CT "Computed Tomography"
+* modality = $dcm#CT "Computed Tomography"
 
 Instance: cz-examplepetct-condition1
 InstanceOf: CZ_ConditionImage
@@ -362,6 +379,7 @@ Title: "Adverse Event: PET+CT Imaging report"
 * id = "0bd84e75-9c5e-406b-90a8-e39a615e9cf6"
 * actuality = $hl7-actstatus#actual
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
+* event = $sct#863892004 "Application site erythema"
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lokální zčervenání pokožky po podání Fludeoxythymidinu</div>"
 * text.status = #additional
 * detected = "2022-10-07T08:30:00+01:00"
@@ -450,5 +468,8 @@ Title: "Procedure: PET+CT Imaging report"
 * status = #completed
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * partOf = Reference(urn:uuid:a89a0433-998e-4408-9d7a-560c6d242366)
+* note.text = "Pacient byl informován o způsobu vyšetření a podepsal informovaný souhlas s lékařskýmozářením. Pacientovi bylo i.v. podáno radiofarmakum (RF) s ohledem na jeho hmotnost 72 kg.PET skenování bylo zahájeno v 8:15 v rozsahu hlavy s přiloženými horními končetinami. Tomubezprostředně předcházelo nativní nízkodávkové CT vyšetření ve stejném rozsahu ke korekciabsorpce PET obrazu. Použité lékařské přístroje: PET / CT systém Biograph mCT Flow, Siemens,ev. č. XXXXXX. Pacientovi byla doporučena režimová opatření a po vyšetření byl propuštěn zoddělení v nezměněném zdravotním stavu. Byla provedena fúze se snímky magnetické rezonance z roku 2020 a 2019."
+* complication.coding = $sct#19887002 "Claustrophobia"
+* complication.text = "Klaustrofobie"
 * reasonReference = Reference (cz-examplepetct-condition2)
 * reasonReference = Reference (urn:uuid:e040e1b2-9f3f-426c-bc5a-7676abae290a)

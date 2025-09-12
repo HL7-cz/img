@@ -3,6 +3,7 @@ All examples can be found on the [artifacts] page (artifacts.html).
 ### Examples of imaging reports
 
 There are two examples of imaging reports:
+- [Example of an RTG report](Bundle-cz-examplertg-bundle.html) - Example of a report with L1 obligations including PDF file
 - [Example of an RTG report](Bundle-cz-examplertg-bundle.html) - Example of an X-ray report with minimal filling (SHALL obligations) including PDF file
 - [Example of a PET+CT report](Bundle-cz-examplepetct-bundle.html) - Example of a PET+CT report with maximal filling (SHALL and SHOULD obligations) including PDF file
 
@@ -40,5 +41,7 @@ There are two examples of imaging reports:
 - Example [Patient Mracena](Patient-cz-examplebase-patient.html)
 - Example [Practitioner 1](Practitioner-cz-examplepetct-practitioner1.html)
 - Example [Practitioner 2](Practitioner-7ac8dfd6-d559-467b-b5ef-a05198a3ea2c.html)
-- Example [Practitioner 3](Practitioner-aafd64f9-36ab-4583-8088-efb93b44db9b.html)
+- Example [Practitioner 3](Practitioner-0b00169f-4815-41da-9814-cd3d7504344d.html)
+- Example [Practitioner Role 1](PractitionerRole-aafd64f9-36ab-4583-8088-efb93b44db9b.html)
+- Example [Practitioner Role 2](PractitionerRole-792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0.html)
 - Example [Service Request 1](ServiceRequest-cz-examplebase-imagingorder.html)

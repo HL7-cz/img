@@ -38,12 +38,12 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #ReasonForAdmission
 * group[=].element[=].display = "A.2.2 - Order reason"
-* group[=].element[=].target.code = #CZ_ImagingOrderInformation.reason.ofType(CZ_Condition)
+* group[=].element[=].target.code = #CZ_ImagingOrderInformation.reasonReference.ofType(CZ_Condition)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #ReasonForAdmission.problem
 * group[=].element[=].display = "A.2.2.1 -  Problem / diagnosis / condition description"
-* group[=].element[=].target.code = #CZ_ImagingOrderInformation.reason.ofType(CZ_Condition).code
+* group[=].element[=].target.code = #CZ_ImagingOrderInformation.reasonReference.ofType(CZ_Condition).code
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReasonForAdmission"
@@ -82,7 +82,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #SpecimenInformation.collectionDate	
 * group[=].element[=].display = "A.2.3.4 - Date and time of collection"
-* group[=].element[=].target.code = #CZ_Specimen.collection.collectionDate
+* group[=].element[=].target.code = #CZ_Specimen.collection.collectedDateTime
 * group[=].element[=].target.display = "Date and time of collection"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #SpecimenInformation.anatomicLocation
@@ -107,14 +107,14 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #SpecimenInformation.receivedDateTime	
 * group[=].element[=].display = "A.2.3.9 - Receive Date and time"
-* group[=].element[=].target.code = #CZ_Specimen.collection.collectionDate
+* group[=].element[=].target.code = #CZ_Specimen.receivedTime
 * group[=].element[=].target.display = "Date and time the Specimen is received by the facility performing the examination."
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
 * group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-study-imaging"
 * group[=].element[+].code = #Body.ReportOfImagingMethod.typeOfModality
 * group[=].element[=].display = "A.2.4.1 - Modality type"
-* group[=].element[=].target.code = #Composition.section:findings.entry.ofType(CZ_StudyImaging).series.modality
+* group[=].element[=].target.code = #Composition.section:findings.entry.ofType(CZ_StudyImaging).modality
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Body.ReportOfImagingMethod.partOfBody
@@ -180,12 +180,12 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Procedure.start
 * group[=].element[=].display = "A.2.4.6.2 - Start of the procedure"
-* group[=].element[=].target.code = #CZ_ProcedureImaging.occurrencePeriod.start
+* group[=].element[=].target.code = #CZ_ProcedureImaging.performancePeriod.start
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Procedure.end
 * group[=].element[=].display = "A.2.4.6.3 - End of the procedure"
-* group[=].element[=].target.code = #CZ_ProcedureImaging.occurrencePeriod.end
+* group[=].element[=].target.code = #CZ_ProcedureImaging.performancePeriod.end
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Procedure.performedBy
@@ -225,17 +225,17 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Procedure.complication
 * group[=].element[=].display = "A.2.4.6.8 - Complications during the procedure"
-* group[=].element[=].target.code = #CZ_ProcedureImaging.complication.ofType(CZ_ConditionImage)
+* group[=].element[=].target.code = #CZ_ProcedureImaging.complication
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Procedure.complication.code
 * group[=].element[=].display = "A.2.4.6.8.1 - Complications formalized"
-* group[=].element[=].target.code = #CZ_ConditionImage.coding.code
+* group[=].element[=].target.code = #CZ_ProcedureImaging.complication.code
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Procedure.complication.description
 * group[=].element[=].display = "A.2.4.6.8.2 - Description of complications"
-* group[=].element[=].target.code = #CZ_ConditionImage.coding.text
+* group[=].element[=].target.code = #CZ_ProcedureImaging.complication.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Procedure.comment
@@ -265,7 +265,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Procedure.usedDevice.name
 * group[=].element[=].display = "A.2.4.6.10.1 - Name of medical device"
-* group[=].element[=].target.code = #CZ_ProcedureImaging.used[device].displayName
+* group[=].element[=].target.code = #CZ_ProcedureImaging.used[device].deviceName.name
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Procedure.usedDevice.model
@@ -315,7 +315,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Procedure.illnessCode
 * group[=].element[=].display = "A.2.4.6.14 - Illness - reason for the procedure"
-* group[=].element[=].target.code = #CZ_ProcedureImaging.reason
+* group[=].element[=].target.code = #CZ_ProcedureImaging.reasonCode
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Procedure.relatedDevice
@@ -332,7 +332,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[+].code = #adverseReaction.reaction
 * group[=].element[=].display = "A.2.4.8.1 - Allergy code"
-* group[=].element[=].target.code = #CZ_AdverseEvent.code
+* group[=].element[=].target.code = #CZ_AdverseEvent.event
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #adverseReaction.seriousness
@@ -384,32 +384,32 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Medication.dateTimeStart
 * group[=].element[=].display = "A.2.4.7.6 - Start date and time"
-* group[=].element[=].target.code = #CZ_MedicationAdministration.occurrencePeriod.start
+* group[=].element[=].target.code = #CZ_MedicationAdministration.effectivePeriod.start
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Medication.dateTimeEnd
 * group[=].element[=].display = "A.2.4.7.7 - End date and time"
-* group[=].element[=].target.code = #CZ_MedicationAdministration.occurrencePeriod.end
+* group[=].element[=].target.code = #CZ_MedicationAdministration.effectivePeriod.end
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Medication.administrator
 * group[=].element[=].display = "A.2.4.7.8 - Administrator"
-* group[=].element[=].target.code = #CZ_Medication.performer
+* group[=].element[=].target.code = #CZ_MedicationAdministration.performer
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Medication.reasonForSubmission
 * group[=].element[=].display = "A.2.4.7.9 - Reason for submission"
-* group[=].element[=].target.code = #CZ_Medication.reason
+* group[=].element[=].target.code = #CZ_MedicationAdministration.reasonCode
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Medication.comment
 * group[=].element[=].display = "A.2.4.7.10 - Comment"
-* group[=].element[=].target.code = #CZ_Medication.note
+* group[=].element[=].target.code = #CZ_MedicationAdministration.note
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Medication.dateTimeOfEntry
 * group[=].element[=].display = "A.2.4.7.11 - Entry date and time"
-* group[=].element[=].target.code = #CZ_Medication.occurrenceDateTime
+* group[=].element[=].target.code = #CZ_MedicationAdministration.effectiveDateTime
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
@@ -424,7 +424,7 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_DiagnosticReport.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #resultOfImagingMethod.author
+* group[=].element[+].code = #resultOfImagingMethod.dateTimeResult
 * group[=].element[=].display = "A.2.4.9.3 - Result release date and time"
 * group[=].element[=].target.code = #CZ_DiagnosticReport.effectiveDateTime
 * group[=].element[=].target.display = ""
@@ -558,18 +558,8 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #resultOfImagingMethod.formalizedText.dateTimeObservation
 * group[=].element[=].display = "A.2.4.9.2.16 - Observation date and time"
-* group[=].element[=].target.code = #CZ_ObservationResultImaging.valueDateTime
+* group[=].element[=].target.code = #CZ_ObservationResultImaging.effectiveDateTime
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent
-* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
-* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-observation-result-imaging"
-* group[=].element[+].code = #resultOfImagingMethod.conclusion.text
-* group[=].element[=].display = "A.2.4.10.1 - Conclusion text"
-* group[=].element[=].target.code = #Composition.section:impression.text
-* group[=].element[=].target.equivalence = #equivalent
-* group[=].element[+].code = #resultOfImagingMethod.conclusion.text
-* group[=].element[=].display = "A.2.4.10.2 - Conclusion code"
-* group[=].element[=].target.code = #Composition.section:impression.entry.ofType(CZ_ObservationResultImaging).code
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
 * group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-carePlanImage"
@@ -592,8 +582,29 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #resultOfImagingMethod.textPartsOfDocument.comments
 * group[=].element[=].display = "A.2.4.12.2 - Comments, interpretations and recommendations"
-* group[=].element[=].target.code = #Composition.note
+* group[=].element[=].target.code = #Composition.text
+* group[=].element[=].target.display = "Add to the Composition.text section as separate div"
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #resultOfImagingMethod.narrativeText
+* group[=].element[=].display = "A.2.4.9.1 - Narrative text"
+* group[=].element[=].target.code = #Composition.section:findings.text
 * group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #resultOfImagingMethod.conclusion.text
+* group[=].element[=].display = "A.2.4.10.1 - Conclusion text"
+* group[=].element[=].target.code = #Composition.section:impression.text
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #resultOfImagingMethod.conclusion.text
+* group[=].element[=].display = "A.2.4.10.2 - Conclusion code"
+* group[=].element[=].target.code = #Composition.section:impression.entry.ofType(CZ_ObservationResultImaging).code
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Body.ReportOfImagingMethod.recommendation
+* group[=].element[=].display = "A.2.4.11 - Recommendation"
+* group[=].element[=].target.code = #Composition.section:recommendation.text
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #adverseReaction.allergyDescription
+* group[=].element[=].display = "A.2.4.8.4 - Alergy description"
+* group[=].element[=].target.code = #Composition.section:complications.text
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/LinkToRelatedReport"
 * group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-study-imaging"
@@ -611,49 +622,19 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #relatedto			
 * group[=].element[+].code = #AttachmentsCz.created
 * group[=].element[=].display = "A.2.6.1 - Date and time of creation"
-* group[=].element[=].target.code = #CZ_KeyImageDocumentReference.date					
+* group[=].element[=].target.code = #CZ_KeyImageDocumentReference.context.period					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #AttachmentsCz.issued
 * group[=].element[=].display = "A.2.6.2 - Date and time of issuances"
-* group[=].element[=].target.code = #CZ_KeyImageDocumentReference.attester.time					
+* group[=].element[=].target.code = #CZ_KeyImageDocumentReference.date					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #AttachmentsCz.author
 * group[=].element[=].display = "A.2.6.3 - Created by"
 * group[=].element[=].target.code = #CZ_KeyImageDocumentReference.author					
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #AttachmentsCz.bodyPart
-* group[=].element[=].display = "A.2.6.4 - Body part"
-* group[=].element[=].target.code = #CZ_KeyImageDocumentReference.bodySite					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #AttachmentsCz.AttachmentsHeight
-* group[=].element[=].display = "A.2.6.5 - Media height"
-* group[=].element[=].target.code = #CZ_KeyImageDocumentReference.attachment.height					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent	
-* group[=].element[+].code = #AttachmentsCz.AttachmentsWidth
-* group[=].element[=].display = "A.2.6.6 - Media width"
-* group[=].element[=].target.code = #CZ_KeyImageDocumentReference.attachment.width			
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent	
-* group[=].element[+].code = #AttachmentsCz.AttachmentsFrames
-* group[=].element[=].display = "A.2.6.7 - Media frames"
-* group[=].element[=].target.code = #CZ_KeyImageDocumentReference.attachment.frames				
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent	
-* group[=].element[+].code = #AttachmentsCz.recordingDuration
-* group[=].element[=].display = "A.2.6.8 - Recording duration"
-* group[=].element[=].target.code = #CZ_KeyImageDocumentReference.attachment.duration				
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent	
-* group[=].element[+].code = #AttachmentsCz.attachment
-* group[=].element[=].display = "A.2.6.9 - Attachment"
-* group[=].element[=].target.code = #CZ_KeyImageDocumentReference.content.attachment.ofType(CZ_Attachment)				
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent	
+* group[=].element[=].target.equivalence = #equivalent										
 * group[=].element[+].code = #AttachmentsCz.note
 * group[=].element[=].display = "A.2.6.10 - Note"
 * group[=].element[=].target.code = #CZ_KeyImageDocumentReference.note				
@@ -674,9 +655,41 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_KeyImageDocumentReference.author				
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/DcmMetadata"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-attachment-img"
+* group[=].element[+].code = #AttachmentsCz.attachment
+* group[=].element[=].display = "A.2.6.9 - Attachment"
+* group[=].element[=].target.code = #Composition.section:findings
+* group[=].element[=].target.comment = "Composition.section:findings.entry.ofType(CZ_AttachmentImg)"				
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #AttachmentsCz.AttachmentsHeight
+* group[=].element[=].display = "A.2.6.5 - Media height"
+* group[=].element[=].target.code = #CZ_AttachmentImg.height					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent	
+* group[=].element[+].code = #AttachmentsCz.AttachmentsWidth
+* group[=].element[=].display = "A.2.6.6 - Media width"
+* group[=].element[=].target.code = #CZ_AttachmentImg.width			
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent	
+* group[=].element[+].code = #AttachmentsCz.AttachmentsFrames
+* group[=].element[=].display = "A.2.6.7 - Media frames"
+* group[=].element[=].target.code = #CZ_Attachment.frames				
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent	
+* group[=].element[+].code = #AttachmentsCz.recordingDuration
+* group[=].element[=].display = "A.2.6.8 - Recording duration"
+* group[=].element[=].target.code = #CZ_AttachmentImg.duration				
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent	
+* group[=].element[+].code = #AttachmentsCz.bodyPart
+* group[=].element[=].display = "A.2.6.4 - Body part"
+* group[=].element[=].target.code = #CZ_AttachmentImg.bodySite					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #AttachmentsCz.AttachmentsType
 * group[=].element[=].display = "A.2.6.14 - Attachments type"
-* group[=].element[=].target.code = #CZ_KeyImageDocumentReference.attachment.contentType				
+* group[=].element[=].target.code = #CZ_AttachmentImg.attachment.contentType				
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/DcmMetadata"
@@ -718,17 +731,17 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #DcmMetadata.procedure
 * group[=].element[=].display = "A.2.7.7 - Scheduled Procedure Step Description"
-* group[=].element[=].target.code = #CZ_StudyImaging.procedure
+* group[=].element[=].target.code = #CZ_StudyImaging.procedureCode
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #DcmMetadata.performingPhysician
 * group[=].element[=].display = "A.2.7.8 - Performing Physicians"
-* group[=].element[=].target.code = #CZ_StudyImaging.performer
+* group[=].element[=].target.code = #CZ_StudyImaging.series.performer
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #DcmMetadata.institutionalDepartName
 * group[=].element[=].display = "A.2.7.9 - Institutional Department Name"
-* group[=].element[=].target.code = #CZ_StudyImaging.performer.actor.ofType(CZ_OrganizationCore).name
+* group[=].element[=].target.code = #CZ_StudyImaging.series.performer.actor.ofType(CZ_OrganizationCore).name
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #DcmMetadata.series
@@ -753,7 +766,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #DcmMetadata.studyReason
 * group[=].element[=].display = "A.2.7.14 - Reason for Study"
-* group[=].element[=].target.code = #CZ_StudyImaging.reason
+* group[=].element[=].target.code = #CZ_StudyImaging.reasonCode
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #DcmMetadata.studyComments

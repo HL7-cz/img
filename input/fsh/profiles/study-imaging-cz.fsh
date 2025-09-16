@@ -15,6 +15,8 @@ Description: """This profile represents an imaging study instance."""
 * subject 1..1
 * subject only Reference(CZ_PatientCore or CZ_DeviceObserver)
 
+* modality from CZ_ModalityVs (preferred)
+
 * basedOn
   * insert SliceElement( #type, $this )
 * basedOn contains orderaccession 0..1

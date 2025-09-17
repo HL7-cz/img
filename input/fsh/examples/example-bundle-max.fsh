@@ -295,6 +295,7 @@ Usage: #example
 * status = #active
 * beneficiary = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * payor = Reference(urn:uuid:3d5262e3-d234-471a-8356-ddf02fce8bb1)
+* subscriberId = "9999999999"
 
 Instance: cz-examplepetct-organization
 InstanceOf: CZ_OrganizationCore

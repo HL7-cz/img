@@ -1,7 +1,7 @@
 
-Na následující stránce naleznete poznámky k implementaci zprávy z obrazového vyšetření. Týkají se tvorby kompozice a naplnění tohoto profilu příslušnými daty.
+Na následující stránce naleznete poznámky k implementaci zprávy z obrazového vyšetření. Týkají se tvorby bundlu, kompozice a naplnění těchto profilů příslušnými daty.
 
-### Přehled
+### Přehled obsahu
 
 ```mermaid
 classDiagram
@@ -49,7 +49,7 @@ classDiagram
   CZ_CompositionImagingReport --> CZ_CarePlanImage: section[recommendation]
 
 ```
-Obrazová zpráva je reprezentována jako FHIR bundle, který obsahuje zdroje CZ_CompositionImagingReport a CZ_DiagnosticReport a všechny zdroje ve stromové struktuře zdrojů, na které se odkazovalo (viz [$document operation](https://www.hl7.org/fhir/composition-operation-document.html)).
+Obrazová zpráva je reprezentována jako FHIR bundle, který obsahuje zdroje CZ_CompositionImagingReport a CZ_DiagnosticReport a všechny zdroje ve stromové struktuře zdrojů, na které se odkazovalo (viz [$document operation](https://www.hl7.org/fhir/composition-operation-document.html)). Při implementaci je nutné se řídit závaznými pravidly, které jsou popsány v sekci [Obligations](obligations-cs.html)
 
 ### Popis obsahu CZ_CompositionImagingReport
 

@@ -1,20 +1,20 @@
 ### Sekce a obsah
 
-Dokument je rozdělen do sady povinných a nepovinných sekcí. V případě, že nejsou pro povinnou sekci k dispozici žádná data, lze odůvodnění vyjádřit v `composition.section.emptyReason`.
+Kompozice obsahuje základní komponenty a sekce. V rámci sekcí je rozdělena do sady povinných a nepovinných sekcí. V případě, že nejsou pro povinnou sekci k dispozici žádná data, lze odůvodnění vyjádřit v `composition.section.emptyReason`.
 
-### Struktura dokumentu
+### Struktura kompozice
 
-Zobrazovací zpráva obsahuje následující sekce v tomto pořadí:
+Zobrazovací zpráva obsahuje základní elementy a následující sekce v pořadí v němž jsou popsány:
 
-#### Hlavička zprávy
+#### Základní elementy
 
-Obecné informace o zprávě. Většina informačních prvků v této části zprávy se překrývá s jinými klinickými zprávami. Záhlaví dokumentu obsahuje informace o pacientovi, zdrojové organizaci, autorovi, ověřovateli a správci zprávy.
+Obecné informace o zprávě. Většina informačních prvků v této části kompozice je vyplněna podobně jako v ostatních typech zpráv. Obsahuje informace o pacientovi, zdrojové organizaci, autorovi, ověřovateli a správci zprávy.
 
 **Klinická událost (Encounter)**
 
 Tento profil umožňuje propojení zprávy s jednou konkrétní klinickou událostí, ke které se zpráva vztahuje.
 
-#### Tělo zprávy
+#### Sekce kompozice
 
 **Zobrazovací studie (Imaging study)**
 

@@ -43,7 +43,7 @@ Byli specifikováni aktéři ve těchto rolích:
 4. Pravidla pro profil kompozice ([CZ_CompositionObligationsImg](StructureDefinition-cz-composition-obl-img.html))
 5. Pravidla pro profil poskytovatel zdravotních služeb ([CZ_OrganizationObligationsImg](StructureDefinition-cz-organization-obl-img.html))
 6. Pravidla pro profil zdravotního pracovníka ([CZ_PractitionerObligationsImg](StructureDefinition-cz-practitioner-obl-img.html))
-7. Pravidla pro profil role zdravotního pracovníka ([CZ_PractitionerRoledObligationsImg](StructureDefinition-cz-practitionerRole-obl-img.html))
+7. Pravidla pro profil role zdravotního pracovníka ([CZ_PractitionerRoleObligationsImg](StructureDefinition-cz-practitionerRole-obl-img.html))
 8. Pravidla pro profil související osoba ([CZ_RelatedPersonObligationsImg](StructureDefinition-cz-relatedPerson-obl-img.html))
 9. Pravidla pro profil úhrada ([CZ_CoverageObligationsImg](StructureDefinition-cz-coverage-obl-img.html))
 10. Pravidla pro profil informací o žádance ([CZ_ServiceRequestObligationsImg](StructureDefinition-cz-serviceRequest-obl-img.html))

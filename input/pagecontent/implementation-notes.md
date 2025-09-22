@@ -1,7 +1,7 @@
 
-The following page contains notes on implementing the image report. They relate to creating the composition and filling this profile with the appropriate data.
+On the following page, you will find notes on implementing the image report. They concern the creation of a bundle, its composition, and filling these profiles with the relevant data.
 
-### Overview
+### Contents overview 
 
 ```mermaid
 classDiagram
@@ -48,7 +48,7 @@ classDiagram
 
 ```
 
-The report is a FHIR bundle that includes CZ_CompositionImagingReport and CZ_DiagnosticReport resources and all resources in the tree of resources that referred to (see [$document operation](https://www.hl7.org/fhir/composition-operation-document.html)).
+The report is a FHIR bundle that includes CZ_CompositionImagingReport and CZ_DiagnosticReport resources and all resources in the tree of resources that referred to (see [$document operation](https://www.hl7.org/fhir/composition-operation-document.html)). During implementation, it is necessary to follow the obligatory rules described in the [Obligations](obligations.html) section.
 
 ### Description of content CZ_CompositionImagingReport
 

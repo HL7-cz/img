@@ -295,6 +295,7 @@ Usage: #example
 * status = #active
 * beneficiary = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * payor = Reference(urn:uuid:3d5262e3-d234-471a-8356-ddf02fce8bb1)
+* subscriberId = "9999999999"
 
 Instance: cz-examplepetct-organization
 InstanceOf: CZ_OrganizationCore
@@ -469,7 +470,7 @@ Title: "Procedure: PET+CT Imaging report"
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * partOf = Reference(urn:uuid:a89a0433-998e-4408-9d7a-560c6d242366)
 * note.text = "Pacient byl informován o způsobu vyšetření a podepsal informovaný souhlas s lékařskýmozářením. Pacientovi bylo i.v. podáno radiofarmakum (RF) s ohledem na jeho hmotnost 72 kg.PET skenování bylo zahájeno v 8:15 v rozsahu hlavy s přiloženými horními končetinami. Tomubezprostředně předcházelo nativní nízkodávkové CT vyšetření ve stejném rozsahu ke korekciabsorpce PET obrazu. Použité lékařské přístroje: PET / CT systém Biograph mCT Flow, Siemens,ev. č. XXXXXX. Pacientovi byla doporučena režimová opatření a po vyšetření byl propuštěn zoddělení v nezměněném zdravotním stavu. Byla provedena fúze se snímky magnetické rezonance z roku 2020 a 2019."
-* complication.coding = $sct#19887002 "Claustrophobia"
-* complication.text = "Klaustrofobie"
+* complication.coding = $sct#49727002 "Cough"
+* complication.text = "Kašel"
 * reasonReference = Reference (cz-examplepetct-condition2)
 * reasonReference = Reference (urn:uuid:e040e1b2-9f3f-426c-bc5a-7676abae290a)

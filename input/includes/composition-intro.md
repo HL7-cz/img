@@ -1,14 +1,14 @@
 ### Sections and content
 
-The document is divided into a set of mandatory and optional sections. In case no data is available for a mandatory section, the justification can be expressed in `composition.section.emptyReason`.
+The composition contains basic elements and sections. Within the sections, it is divided into a set of mandatory and optional sections. If no data is available for a mandatory section, the reason can be stated in `composition.section.emptyReason`.
 
-### Document structure
+### Composition structure
 
-The Imaging Report holds the following sections in this order:
+The image report contains basic elements and the following sections in the order in which they are described:
 
-#### Header
+#### Basic elements
 
-General information on the report. Most of the information elements in this part of the report overlap with other clinical reports. The document header includes information on the patient, source organization, author, attester and custodian of the report. 
+General information about the report. Most of the information elements in this part of the composition are filled in similarly to other types of reports. It contains information about the patient, source organization, author, verifier, and report administrator.
 
 **Encounter**
 

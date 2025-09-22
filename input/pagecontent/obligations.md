@@ -41,7 +41,7 @@ Actors were specified in these roles:
 4. Obligations for profile Composition ([CZ_CompositionObligationsImg](StructureDefinition-cz-composition-obl-img.html))
 5. Obligations for profile Organisation ([CZ_OrganizationObligationsImg](StructureDefinition-cz-organization-obl-img.html))
 6. Obligations for profile Practitioner ([CZ_PractitionerObligationsImg](StructureDefinition-cz-practitioner-obl-img.html))
-7. Obligations for profile Practitioner Role ([CZ_PractitionerRoledObligationsImg](StructureDefinition-cz-practitionerRole-obl-img.html))
+7. Obligations for profile Practitioner Role ([CZ_PractitionerRoleObligationsImg](StructureDefinition-cz-practitionerRole-obl-img.html))
 8. Obligations for profile Related Person ([CZ_RelatedPersonObligationsImg](StructureDefinition-cz-relatedPerson-obl-img.html))
 9. Obligations for profile Coverage ([CZ_CoverageObligationsImg](StructureDefinition-cz-coverage-obl-img.html))
 10. Obligations for profile Service request ([CZ_ServiceRequestObligationsImg](StructureDefinition-cz-serviceRequest-obl-img.html))

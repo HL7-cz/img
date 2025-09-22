@@ -189,7 +189,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Header.payer.insuranceNumber
 * group[=].element[=].display = "A.1.3.3 - Health insurance number"
-* group[=].element[=].target.code = #CZ_Coverage.identifier
+* group[=].element[=].target.code = #CZ_Coverage.subscriberID
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/InformationRecipientCz"

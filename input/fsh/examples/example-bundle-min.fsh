@@ -261,6 +261,7 @@ Title: "Coverage: RTG Imaging report"
 * status = #active
 * beneficiary = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * payor = Reference(urn:uuid:4e0bf3d9-2a90-47bf-b558-c3a64d63baa9)
+* subscriberId = "0551621110"
 
 Instance: cz-examplertg-organization
 InstanceOf: CZ_OrganizationCore

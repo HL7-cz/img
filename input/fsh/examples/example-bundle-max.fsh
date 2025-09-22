@@ -225,7 +225,7 @@ Description: "Example of requesting practitioner for PET+CT Imaging report"
 Title: "Practitioner Blažejovský:PET+CT Imaging report"
 Usage: #example
 * id = "792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0"
-* specialty = $sct#394577000 "Radiology"
+* specialty = $sct#394914008 "Radiology"
 * practitioner = Reference(urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c)
 * organization = Reference(urn:uuid:821077d6-ce17-4602-b3ad-d4bef845a950)
 

@@ -124,7 +124,7 @@ Title: "Practitioner Keller"
 Description: "Author of RTG Imaging report"
 Usage: #example
 * id = "daa3335b-db80-41a5-897e-ec0dd615ee9d"
-* specialty = $sct#394577000 "Radiology"
+* specialty = $sct#394914008 "Radiology"
 * practitioner = Reference(urn:uuid:fe8d7386-1b5c-493c-9f83-d2be26291fa8)
 * organization = Reference(urn:uuid:fe9e7a29-ec24-4d54-8c7f-52a4aba7b7b4)
 

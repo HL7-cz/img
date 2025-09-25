@@ -3,6 +3,7 @@ InstanceOf: CZ_BundleImagingReport
 Title: "Bundle: RTG Imaging report"
 Description: "Example of Imaging report (Bundle) including a RTG report"
 Usage: #example
+* id = "08bbe654-d7d8-429c-a2b1-ac1f5f522cf2"
 * identifier[+].system = "http://example.org"
 * identifier[=].value = "CZEXIR0001"
 * type = #document

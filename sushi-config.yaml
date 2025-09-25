@@ -335,17 +335,6 @@ menu:
 #     - StructureDefinition/bark-control
 #     - StructureDefinition/bee-sting
 groups:
-  actors:
-    name:  Actors
-    description: Actors used to describe the Imaging Report functional requirements for the specified data elements. Informative for this version of the guide.
-    resources:
-      - ActorDefinition/actor-creator-img-L1
-      - ActorDefinition/actor-creator-img-L2
-      - ActorDefinition/actor-creator-img-L3
-      - ActorDefinition/actor-consumer-img-L1
-      - ActorDefinition/actor-consumer-img-L2
-      - ActorDefinition/actor-consumer-img-L3
-
   obligations:
     name:  Obligations
     description: Obligations used to describe the Imaging Report functional requirements for the specified data elements. Informative for this version of the guide.

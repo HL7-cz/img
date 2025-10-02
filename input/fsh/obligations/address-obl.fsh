@@ -1,7 +1,7 @@
 
-Profile: CZ_AddressObligationsHdr
+Profile: CZ_AddressObligationsImg
 Parent: CZ_Address
-Id: cz-address-obl-hdr
+Id: cz-address-obl-img
 Title:    "Address: Obligations"
 Description: "This profile defines obligations for an address in FHIR for the purpose of this guide."
 

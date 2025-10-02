@@ -339,6 +339,7 @@ groups:
     name:  Obligations
     description: Obligations used to describe the Imaging Report functional requirements for the specified data elements. Informative for this version of the guide.
     resources:
+      - StructureDefinition/cz-address-obl-img
       - StructureDefinition/cz-adverseEvent-obl-img
       - StructureDefinition/cz-attachment-obl-img
       - StructureDefinition/cz-bundle-obl-img

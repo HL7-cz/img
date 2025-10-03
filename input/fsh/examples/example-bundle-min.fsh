@@ -3,6 +3,7 @@ InstanceOf: CZ_BundleImagingReport
 Title: "Bundle: RTG Imaging report"
 Description: "Example of Imaging report (Bundle) including a RTG report"
 Usage: #example
+* id = "08bbe654-d7d8-429c-a2b1-ac1f5f522cf2"
 * identifier[+].system = "http://example.org"
 * identifier[=].value = "CZEXIR0001"
 * type = #document
@@ -170,7 +171,7 @@ Title: "Practitioner Keller"
 Description: "Author of RTG Imaging report"
 Usage: #example
 * id = "aafd64f9-36ab-4583-8088-efb93b44db9b"
-* specialty = $sct#394577000 "Radiology"
+* specialty = $sct#394914008 "Radiology"
 * practitioner = Reference(urn:uuid:0b00169f-4815-41da-9814-cd3d7504344d)
 * organization = Reference(urn:uuid:e96e9bd5-0695-4725-acb2-c731aa071a55)
 

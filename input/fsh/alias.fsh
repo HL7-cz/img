@@ -17,6 +17,7 @@ Alias: $dlp_lecivePripravky = https://hl7.cz/fhir/core/CodeSystem/cz-dlplecivepr
 Alias: $dlp_formy_cs = https://hl7.cz/fhir/core/CodeSystem/cz-dlpformy-cs
 Alias: $hl7-ev = http://hl7.org/fhir/CodeSystem/event-status
 Alias: $hl7-actstatus = http://hl7.org/fhir/adverse-event-actuality
+Alias: $v3-ParticipationType = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
 
 // ValueSet
 Alias: $hl7MedicationAdminStatus = http://hl7.org/fhir/ValueSet/medication-admin-status
@@ -62,9 +63,9 @@ Alias: $composition.version-r5 = http://hl7.org/fhir/5.0/StructureDefinition/ext
 Alias: $patient-animal = http://hl7.org/fhir/StructureDefinition/patient-animal
 
 //Alias: $server = http://hl7.cz/fhir/img/actor-server-img
-Alias: $creatorL1 = http://hl7.cz/fhir/img/actor-creator-img-L1
-Alias: $consumerL1 = http://hl7.cz/fhir/img/actor-consumer-img-L1
-Alias: $creatorL2 = http://hl7.cz/fhir/img/actor-creator-img-L2
-Alias: $consumerL2 = http://hl7.cz/fhir/img/actor-consumer-img-L2
-Alias: $creatorL3 = http://hl7.cz/fhir/img/actor-creator-img-L3
-Alias: $consumerL3 = http://hl7.cz/fhir/img/actor-consumer-img-L3
+Alias: $creatorL1 = https://hl7.cz/fhir/core/ActorDefinition/actor-creator-L1
+Alias: $consumerL1 = https://hl7.cz/fhir/core/ActorDefinition/actor-consumer-L1
+Alias: $creatorL2 = https://hl7.cz/fhir/core/ActorDefinition/actor-creator-L2
+Alias: $consumerL2 = https://hl7.cz/fhir/core/ActorDefinition/actor-consumer-L2
+Alias: $creatorL3 = https://hl7.cz/fhir/core/ActorDefinition/actor-creator-L3
+Alias: $consumerL3 = https://hl7.cz/fhir/core/ActorDefinition/actor-consumer-L3

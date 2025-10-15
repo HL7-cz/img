@@ -64,7 +64,7 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * entry.resource 1..
 * entry contains composition 1..1
 * entry[composition].resource only CZ_CompositionImagingReport
-//* entry[composition].resource ^type.profile[0] = "https://hl7.cz/fhir/img/StructureDefinition/cz-composition-imaging"
+//* entry[composition].resource ^type.profile[0] = "https://fhir.hl7cr.eu/img/StructureDefinition/cz-composition-imaging"
 
 * entry contains diagnosticReport 1..1
 * entry[diagnosticReport].resource only CZ_DiagnosticReport

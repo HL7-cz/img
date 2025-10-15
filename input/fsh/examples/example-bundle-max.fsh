@@ -83,7 +83,7 @@ Description: "Example of Imaging report (Composition) including a PET+CT report"
 Title: "Composition: PET+CT Imaging report"
 Usage: #example
 * id = "a84899f0-a241-4f15-b5fd-47e8c9dbdc35"
-* meta.profile[0] = "https://hl7.cz/fhir/img/StructureDefinition/cz-composition-imaging"
+* meta.profile[0] = "https://fhir.hl7cr.eu/img/StructureDefinition/cz-composition-imaging"
 * status = #final
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * date = "2025-05-20T12:02:00+01:00"

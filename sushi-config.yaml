@@ -4,7 +4,7 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.cz.img
-canonical: https://hl7.cz/fhir/img #!!change here!!
+canonical: https://fhir.hl7cr.eu/img 
 name: HL7CzImagingReportImplementationGuide
 title: HL7 Czech Imaging Report IG
 description: Czech Imaging Report Implementation Guide

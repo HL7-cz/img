@@ -16,7 +16,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/PresentedFormCz"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-presented-form"				
+* group[=].target = "https://fhir.hl7cr.eu/core/StructureDefinition/cz-presented-form"				
 * group[=].element[+].code = #PresentedForm.contentType
 * group[=].element[=].display = "A.3.1 - Content type of presented form"
 * group[=].element[=].target.code = #content.contentType					
@@ -56,7 +56,7 @@ Usage: #definition
 * group[=].element[=].target.display = "If it is additional MEDIA attachments"
 * group[=].element[=].target.equivalence = #equivalent		
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/AttachmentsCz"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-attachment"			
+* group[=].target = "https://fhir.hl7cr.eu/core/StructureDefinition/cz-attachment"			
 * group[=].element[+].code = #Attachments.contentType
 * group[=].element[=].display = "A.4.1 - Content type of media attachments"
 * group[=].element[=].target.code = #content.contentType					

@@ -9,7 +9,7 @@ Usage: #definition
 * description = """CZ Imaging Report Header Model to this guide mapping"""
 
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/SubjectCz"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-patient-core"
+* group[=].target = "https://fhir.hl7cr.eu/core/StructureDefinition/cz-patient-core"
 * group[=].element[+].code = #Subject.identification					
 * group[=].element[=].display = "A.1.1 Identification of the patient/subject"					
 * group[=].element[=].target.code = #Patient					
@@ -111,7 +111,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent	
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/SubjectCz"					
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"	
+* group[=].target = "https://fhir.hl7cr.eu/core/StructureDefinition/cz-practitioner-core"	
 * group[=].element[+].code = #Subject.contactInfo.preferedPhysician					
 * group[=].element[=].display = "A.1.2.3 Prefered physician"					
 * group[=].element[=].target.code = #Practitioner					
@@ -133,7 +133,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent		
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/SubjectCz"					
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core"	
+* group[=].target = "https://fhir.hl7cr.eu/core/StructureDefinition/cz-practitionerrole-core"	
 * group[=].element[+].code = #Subject.contactInfo.preferedPhysician					
 * group[=].element[=].display = "A.1.2.3 Prefered physician"					
 * group[=].element[=].target.code = #PractitionerRole					
@@ -170,7 +170,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""					
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/PayerCz"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-coverage"
+* group[=].target = "https://fhir.hl7cr.eu/core/StructureDefinition/cz-coverage"
 * group[=].element[+].code = #Header.payer
 * group[=].element[=].display = "A.1.3 - Health insurance and payment information - Health insurance information is not always required, however, in some jurisdictions, the insurance number is also used as the patient identifier. It is necessary not just for identification but also forms access to funding for care."
 * group[=].element[=].target.code = #Composition.section:order.insurance		
@@ -193,7 +193,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/InformationRecipientCz"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerRole-core"
+* group[=].target = "https://fhir.hl7cr.eu/core/StructureDefinition/cz-practitionerRole-core"
 * group[=].element[+].code = #Header.informationRecipient
 * group[=].element[=].display = "A.1.4 - Recipient identifier"
 * group[=].element[=].target.code = #Composition.recipient
@@ -222,7 +222,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent				
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/AuthorCz"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerRole-core"
+* group[=].target = "https://fhir.hl7cr.eu/core/StructureDefinition/cz-practitionerRole-core"
 * group[=].element[+].code = #Header.author
 * group[=].element[=].display = "A.1.5 - Author (by whom the Hospital discharge report was/were authored). Multiple authors could be provided."
 * group[=].element[=].target.code = #Composition.author
@@ -251,14 +251,14 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/AuthorCz"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-encounter"					
+* group[=].target = "https://fhir.hl7cr.eu/core/StructureDefinition/cz-encounter"					
 * group[=].element[+].code = #AuthorCz.organization
 * group[=].element[=].display = "A.1.5.4 - Author organisation"
 * group[=].element[=].target.code = #CZ_Encounter.serviceProvider					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/AttesterCz"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerRole-core"					
+* group[=].target = "https://fhir.hl7cr.eu/core/StructureDefinition/cz-practitionerRole-core"					
 * group[=].element[+].code = #Header.attester
 * group[=].element[=].display = "A.1.6 - Attester (multiple attesters could be provided)"
 * group[=].element[=].target.code = #Composition.attester
@@ -286,7 +286,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/LegalAuthenticatorCz"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitioner-core"						
+* group[=].target = "https://fhir.hl7cr.eu/core/StructureDefinition/cz-practitioner-core"						
 * group[=].element[+].code = #Header.legalAuthenticator
 * group[=].element[=].display = "A.1.7 - Legal authenticator (The person taking responsibility for the medical content of the document)"
 * group[=].element[=].target.code = #Composition.attester					

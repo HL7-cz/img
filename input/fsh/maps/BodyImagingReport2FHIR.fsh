@@ -59,7 +59,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/SpecimenInformation"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-specimen"
+* group[=].target = "https://fhir.hl7cr.eu/core/StructureDefinition/cz-specimen"
 * group[=].element[+].code = #Body.SpecimenInformation
 * group[=].element[=].display = "A.2.3 - Speciment information"
 * group[=].element[=].target.code = #Composition.section:order.specimen				
@@ -324,7 +324,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-allergyIntolerance"
+* group[=].target = "https://fhir.hl7cr.eu/core/StructureDefinition/cz-allergyIntolerance"
 * group[=].element[+].code = #Body.ReportOfImagingMethod.adverseReaction
 * group[=].element[=].display = "A.2.4.8 - Adverse reaction"
 * group[=].element[=].target.code = #Composition.section:complications			
@@ -459,7 +459,14 @@ Usage: #definition
 * group[=].element[+].code = #resultOfImagingMethod.formalizedText
 * group[=].element[=].display = "A.2.4.9.2 - Formalized text"
 * group[=].element[=].target.code = #CZ_DiagnosticReport.result
-* group[=].element[=].target.comment = "CZ_DiagnosticReport.result.ofType(CZ_ObservationResultImaging)"
+* group[=].element[=].target.comment = "CZ_DiagnosticReport.result.ofType(CZ_ObservationResultImaging)
+This option is selected if the finding relates to the overall examination."
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[+].code = #resultOfImagingMethod.formalizedText
+* group[=].element[=].display = "A.2.4.9.2 - Formalized text"
+* group[=].element[=].target.code = ##CZ_ObservationResultImaging.partOf
+* group[=].element[=].target.comment = "CZ_ObservationResultImaging.partOf.ofType(CZ_ProcedureImaging)
+This option is filled in if the finding relates to a specific procedure."
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #resultOfImagingMethod.formalizedText
 * group[=].element[=].display = "A.2.4.9.2 - Formalized text"

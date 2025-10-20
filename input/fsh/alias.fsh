@@ -11,7 +11,7 @@ Alias: $ucum = http://unitsofmeasure.org
 Alias: $mkn-10 = https://terminology.uzis.cz/CodeSystem/Mkn10_5
 Alias: $drzar = https://ncez.mzcr.cz/fhir/CodeSystem/cz-drzar
 Alias: $hl7-condition-category-cs =  http://terminology.hl7.org/CodeSystem/condition-category
-Alias: $typeClinicalEvent = https://fhir.hl7cr.eu/img-order/CodeSystem/cz-typeClinicalEvent-cs
+Alias: $typeClinicalEvent = https://hl7.cz/fhir/img-order/CodeSystem/cz-typeClinicalEvent-cs
 Alias: $hl7-allergyintoleranceclinicalstatus = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|4.0.1
 Alias: $dlp_lecivePripravky = https://fhir.hl7cr.eu/core/CodeSystem/cz-dlplecivepripravky-cs
 Alias: $dlp_formy_cs = https://fhir.hl7cr.eu/core/CodeSystem/cz-dlpformy-cs
@@ -62,7 +62,7 @@ Alias: $cz-organization-logo              = https://fhir.hl7cr.eu/core/Structure
 Alias: $composition.version-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version
 Alias: $patient-animal = http://hl7.org/fhir/StructureDefinition/patient-animal
 
-//Alias: $server = http://fhir.hl7cr.eu/img/actor-server-img
+//Alias: $server = http://hl7.cz/fhir/img/actor-server-img
 Alias: $creatorL1 = https://fhir.hl7cr.eu/core/ActorDefinition/actor-creator-L1
 Alias: $consumerL1 = https://fhir.hl7cr.eu/core/ActorDefinition/actor-consumer-L1
 Alias: $creatorL2 = https://fhir.hl7cr.eu/core/ActorDefinition/actor-creator-L2

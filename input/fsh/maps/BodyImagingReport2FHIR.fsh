@@ -1,15 +1,15 @@
 Instance: BodyImagingReport2FHIR-cz
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "https://fhir.hl7cr.eu/img/ConceptMap/BodyImagingReport2FHIR-cz"
+* url = "https://hl7.cz/fhir/img/ConceptMap/BodyImagingReport2FHIR-cz"
 * name = "BodyImagingReport2FHIRcz"
 * title = "CZ Body Model to this guide Map"
 * status = #draft
 * experimental = true
 * description = """CZ Imaging Report Body Model to this guide mapping"""
 
-* group[+].source = "https://fhir.hl7cr.eu/img/StructureDefinition/InformationAboutOrder"
-* group[=].target = "https://fhir.hl7cr.eu/img/StructureDefinition/cz-imagingOrderInformation"
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/InformationAboutOrder"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-imagingOrderInformation"
 * group[=].element[+].code = #Body.InformationAboutOrder
 * group[=].element[=].display = "A.2.1 and A.2.2 - Information about order"
 * group[=].element[=].target.code = #Composition.section:order					
@@ -46,8 +46,8 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_ImagingOrderInformation.reasonReference.ofType(CZ_Condition).code
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[+].source = "https://fhir.hl7cr.eu/img/StructureDefinition/ReasonForAdmission"
-* group[=].target = "https://fhir.hl7cr.eu/img/StructureDefinition/cz-imagingOrderInformation"
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReasonForAdmission"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-imagingOrderInformation"
 * group[=].element[+].code = #ReasonForAdmission
 * group[=].element[=].display = "A.2.2 - Order reason"
 * group[=].element[=].target.code = #Composition.section:clinicalQuestion.text
@@ -58,7 +58,7 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.section:clinicalQuestion.entry.ofType(CZ_Condition).code
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[+].source = "https://fhir.hl7cr.eu/img/StructureDefinition/SpecimenInformation"
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/SpecimenInformation"
 * group[=].target = "https://fhir.hl7cr.eu/core/StructureDefinition/cz-specimen"
 * group[=].element[+].code = #Body.SpecimenInformation
 * group[=].element[=].display = "A.2.3 - Speciment information"
@@ -110,8 +110,8 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_Specimen.receivedTime
 * group[=].element[=].target.display = "Date and time the Specimen is received by the facility performing the examination."
 * group[=].element[=].target.equivalence = #equivalent
-* group[+].source = "https://fhir.hl7cr.eu/img/StructureDefinition/ReportOfImagingMethod"
-* group[=].target = "https://fhir.hl7cr.eu/img/StructureDefinition/cz-study-imaging"
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-study-imaging"
 * group[=].element[+].code = #Body.ReportOfImagingMethod.typeOfModality
 * group[=].element[=].display = "A.2.4.1 - Modality type"
 * group[=].element[=].target.code = #Composition.section:findings.entry.ofType(CZ_StudyImaging).modality
@@ -137,8 +137,8 @@ Usage: #definition
 * group[=].element[=].target.code = #bodyStructure.description
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[+].source = "https://fhir.hl7cr.eu/img/StructureDefinition/ReportOfImagingMethod"
-* group[=].target = "https://fhir.hl7cr.eu/img/StructureDefinition/cz-conditionImage"
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-conditionImage"
 * group[=].element[+].code = #Body.ReportOfImagingMethod.reason
 * group[=].element[=].display = "A.2.4.3 - Reason (indication)"
 * group[=].element[=].target.code = #Composition.section:procedure.reason 
@@ -154,8 +154,8 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_ConditionImage.code.coding 
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[+].source = "https://fhir.hl7cr.eu/img/StructureDefinition/ReportOfImagingMethod"
-* group[=].target = "https://fhir.hl7cr.eu/img/StructureDefinition/cz-conditionImage"
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-conditionImage"
 * group[=].element[+].code = #Body.ReportOfImagingMethod.clinicalQuestion
 * group[=].element[=].display = "A.2.4.4 - A clinical question in text form"
 * group[=].element[=].target.code = #Composition.section:clinicalQuestion.text
@@ -166,8 +166,8 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.section:clinicalQuestion.entry.ofType(CZ_Condition).code
 * group[=].element[=].target.display = "In code form"
 * group[=].element[=].target.equivalence = #equivalent
-* group[+].source = "https://fhir.hl7cr.eu/img/StructureDefinition/ReportOfImagingMethod"
-* group[=].target = "https://fhir.hl7cr.eu/img/StructureDefinition/cz-procedure-imaging"
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-procedure-imaging"
 * group[=].element[+].code = #Body.ReportOfImagingMethod.Procedure
 * group[=].element[=].display = "A.2.4.6 - Performance (procedure)"
 * group[=].element[=].target.comment = "Composition.section:procedure.entry.ofType(CZ_ProcedureImaging)"				
@@ -323,7 +323,7 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_ProcedureImaging.used[device]
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
-* group[+].source = "https://fhir.hl7cr.eu/img/StructureDefinition/ReportOfImagingMethod"
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
 * group[=].target = "https://fhir.hl7cr.eu/core/StructureDefinition/cz-allergyIntolerance"
 * group[=].element[+].code = #Body.ReportOfImagingMethod.adverseReaction
 * group[=].element[=].display = "A.2.4.8 - Adverse reaction"
@@ -350,8 +350,8 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_AdverseEvent.text
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[+].source = "https://fhir.hl7cr.eu/img/StructureDefinition/ReportOfImagingMethod"
-* group[=].target = "https://fhir.hl7cr.eu/img/StructureDefinition/cz-MedicationAdministration"
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-MedicationAdministration"
 * group[=].element[+].code = #Body.ReportOfImagingMethod.Medication
 * group[=].element[=].display = "A.2.4.7 - Medication"
 * group[=].element[=].target.code = #Composition.section:procedure.partOf			
@@ -412,8 +412,8 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_MedicationAdministration.effectiveDateTime
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[+].source = "https://fhir.hl7cr.eu/img/StructureDefinition/ReportOfImagingMethod"
-* group[=].target = "https://fhir.hl7cr.eu/img/StructureDefinition/cz-diagnostic-report"
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-diagnostic-report"
 * group[=].element[+].code = #resultOfImagingMethod
 * group[=].element[=].display = "A.2.4.9 - Result of the imaging method"
 * group[=].element[=].target.code = #Composition.extension[diagnosticreport-reference]
@@ -454,8 +454,8 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_DiagnosticReport.presentedForm
 * group[=].element[=].target.display = "This is another representative form of the document, in addition to the PDF version, which must be saved as a text/plain document."
 * group[=].element[=].target.equivalence = #relatedto
-* group[+].source = "https://fhir.hl7cr.eu/img/StructureDefinition/ReportOfImagingMethod"
-* group[=].target = "https://fhir.hl7cr.eu/img/StructureDefinition/cz-observation-result-imaging"
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-observation-result-imaging"
 * group[=].element[+].code = #resultOfImagingMethod.formalizedText
 * group[=].element[=].display = "A.2.4.9.2 - Formalized text"
 * group[=].element[=].target.code = #CZ_DiagnosticReport.result
@@ -568,15 +568,15 @@ This option is filled in if the finding relates to a specific procedure."
 * group[=].element[=].target.code = #CZ_ObservationResultImaging.effectiveDateTime
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[+].source = "https://fhir.hl7cr.eu/img/StructureDefinition/ReportOfImagingMethod"
-* group[=].target = "https://fhir.hl7cr.eu/img/StructureDefinition/cz-carePlanImage"
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-carePlanImage"
 * group[=].element[+].code = #Body.ReportOfImagingMethod.recommendation
 * group[=].element[=].display = "A.2.4.11 - Recommendation"
 * group[=].element[=].target.code = #Composition.section:recommendation.entry.ofType(CZ_Careplan).description
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[+].source = "https://fhir.hl7cr.eu/img/StructureDefinition/ReportOfImagingMethod"
-* group[=].target = "https://fhir.hl7cr.eu/img/StructureDefinition/cz-composition-imaging"
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-composition-imaging"
 * group[=].element[+].code = #Body.ReportOfImagingMethod.typeOfImagingMethod
 * group[=].element[=].display = "A.2.4.2 - Type of imaging method"
 * group[=].element[=].target.code = #Composition.type
@@ -613,15 +613,15 @@ This option is filled in if the finding relates to a specific procedure."
 * group[=].element[=].display = "A.2.4.8.4 - Alergy description"
 * group[=].element[=].target.code = #Composition.section:complications.text
 * group[=].element[=].target.equivalence = #equivalent
-* group[+].source = "https://fhir.hl7cr.eu/img/StructureDefinition/LinkToRelatedReport"
-* group[=].target = "https://fhir.hl7cr.eu/img/StructureDefinition/cz-study-imaging"
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/LinkToRelatedReport"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-study-imaging"
 * group[=].element[+].code = #Body.LinkToRelatedReport.documentReference
 * group[=].element[=].display = "A.2.5.1 DocumentReference"
 * group[=].element[=].target.code = #Composition.section:comparison
 * group[=].element[=].target.comment = "Composition.section:comparison.entry.ofType(CZ_StudyImaging)"
 * group[=].element[=].target.equivalence = #relatedto
-* group[+].source = "https://fhir.hl7cr.eu/img/StructureDefinition/AttachmentsCz"
-* group[=].target = "https://fhir.hl7cr.eu/img/StructureDefinition/cz-keyImage-documentReference"
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/AttachmentsCz"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-keyImage-documentReference"
 * group[=].element[+].code = #AttachmentsCz
 * group[=].element[=].display = "A.2.6 - Media (attachments)"
 * group[=].element[=].target.code = #Composition.section:findings
@@ -662,8 +662,8 @@ This option is filled in if the finding relates to a specific procedure."
 * group[=].element[=].target.code = #CZ_KeyImageDocumentReference.author				
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
-* group[+].source = "https://fhir.hl7cr.eu/img/StructureDefinition/DcmMetadata"
-* group[=].target = "https://fhir.hl7cr.eu/img/StructureDefinition/cz-attachment-img"
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/DcmMetadata"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-attachment-img"
 * group[=].element[+].code = #AttachmentsCz.attachment
 * group[=].element[=].display = "A.2.6.9 - Attachment"
 * group[=].element[=].target.code = #Composition.section:findings
@@ -699,8 +699,8 @@ This option is filled in if the finding relates to a specific procedure."
 * group[=].element[=].target.code = #CZ_AttachmentImg.attachment.contentType				
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
-* group[+].source = "https://fhir.hl7cr.eu/img/StructureDefinition/DcmMetadata"
-* group[=].target = "https://fhir.hl7cr.eu/img/StructureDefinition/cz-study-imaging"
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/DcmMetadata"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-study-imaging"
 * group[=].element[+].code = #DcmMetadata
 * group[=].element[=].display = "A.2.7 - DICOM metadata"
 * group[=].element[=].target.code = #Composition.section:imagingstudy
@@ -806,14 +806,14 @@ This option is filled in if the finding relates to a specific procedure."
 * group[=].element[=].target.code = #CZ_StudyImaging.started
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
-* group[+].source = "https://fhir.hl7cr.eu/img/StructureDefinition/DcmMetadata"
-* group[=].target = "https://fhir.hl7cr.eu/img/StructureDefinition/cz-radiationDoseObservation"
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/DcmMetadata"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-radiationDoseObservation"
 * group[=].element[+].code = #DcmMetadata.radiopharmaInfoSeq
 * group[=].element[=].display = "A.2.7.10 - Radiopharmaceutical Information Sequence - DICOM tag (0054,0016)"
 * group[=].element[=].target.code = #Composition.section:imagingstudy.entry.ofType(CZ_RadiationDoseObservation)
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
-* group[+].source = "https://fhir.hl7cr.eu/img/StructureDefinition/DcmMetadata"	
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/DcmMetadata"	
 * group[=].element[+].code = #DcmMetadata.studyPhase
 * group[=].element[=].display = "A.2.7.13 - Study Phase"
 * group[=].element[=].target.display = ""

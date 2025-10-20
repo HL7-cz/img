@@ -1,21 +1,21 @@
 Instance: AttachmentImagingReport2FHIR-cz
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "https://fhir.hl7cr.eu/img/ConceptMap/AttachmentImagingReport2FHIR-cz"
+* url = "https://hl7.cz/fhir/img/ConceptMap/AttachmentImagingReport2FHIR-cz"
 * name = "AttachmentImagingReport2FHIRcz"
 * title = "CZ Attachment Model to this guide Map"
 * status = #draft
 * experimental = true
 * description = """CZ Imaging Report Attachment Model to this guide mapping"""
 
-* group[+].source = "https://fhir.hl7cr.eu/img/StructureDefinition/PresentedFormCz"
-* group[=].target = "https://fhir.hl7cr.eu/img/StructureDefinition/cz-diagnostic-report"	
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/PresentedFormCz"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-diagnostic-report"	
 * group[=].element[+].code = #PresentedForm
 * group[=].element[=].display = "A.3 - Presented Form"
 * group[=].element[=].target.code = #DiagnosticReport.presentedForm
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
-* group[+].source = "https://fhir.hl7cr.eu/img/StructureDefinition/PresentedFormCz"
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/PresentedFormCz"
 * group[=].target = "https://fhir.hl7cr.eu/core/StructureDefinition/cz-presented-form"				
 * group[=].element[+].code = #PresentedForm.contentType
 * group[=].element[=].display = "A.3.1 - Content type of presented form"
@@ -48,14 +48,14 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 
-* group[+].source = "https://fhir.hl7cr.eu/img/StructureDefinition/AttachmentsCz"
-* group[=].target = "https://fhir.hl7cr.eu/img/StructureDefinition/cz-diagnostic-report"	
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/AttachmentsCz"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-diagnostic-report"	
 * group[=].element[+].code = #Attachments
 * group[=].element[=].display = "A.4 - Attachments"
 * group[=].element[=].target.code = #DiagnosticReport.media.link.content.attachment
 * group[=].element[=].target.display = "If it is additional MEDIA attachments"
 * group[=].element[=].target.equivalence = #equivalent		
-* group[+].source = "https://fhir.hl7cr.eu/img/StructureDefinition/AttachmentsCz"
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/AttachmentsCz"
 * group[=].target = "https://fhir.hl7cr.eu/core/StructureDefinition/cz-attachment"			
 * group[=].element[+].code = #Attachments.contentType
 * group[=].element[=].display = "A.4.1 - Content type of media attachments"

@@ -77,6 +77,15 @@ Usage: #example
 * entry[organization][+].fullUrl = "urn:uuid:3d5262e3-d234-471a-8356-ddf02fce8bb1"
 * entry[organization][=].resource = cz-examplepetct-organization
 
+* entry[organization][+].fullUrl = "urn:uuid:a4641bd0-34af-4038-a7db-872d08a54df9" 
+* entry[organization][=].resource = Organization-L1-HOSP
+
+* entry[organization][+].fullUrl = "urn:uuid:af2b3114-e872-43b9-9875-cceb39122f7f" 
+* entry[organization][=].resource = Organization-L1-Odd
+
+* entry[organization][+].fullUrl = "urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1" 
+* entry[organization][=].resource = Organization-L1
+
 Instance: cz-examplepetct-composition
 InstanceOf: CZ_CompositionImagingReport
 Description: "Example of Imaging report (Composition) including a PET+CT report"
@@ -91,6 +100,7 @@ Usage: #example
 * type = $sct#4261000179100 "Computed tomography imaging report"
 * title = "Zpráva z vyšetření PET+CT hlavy"
 * encounter = Reference(urn:uuid:7023b84e-47bb-405c-be46-2c161c6ba8d5)
+* custodian = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1)
 * language = #cs
 * confidentiality = #N
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:9c23deff-bf1d-46f6-bd0e-005e52b42121)

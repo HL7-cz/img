@@ -32,6 +32,15 @@ Usage: #example
 * entry[organization].fullUrl = "urn:uuid:fe9e7a29-ec24-4d54-8c7f-52a4aba7b7b4"
 * entry[organization].resource = cz-organizationwithlogo3-example
 
+* entry[organization][+].fullUrl = "urn:uuid:a4641bd0-34af-4038-a7db-872d08a54df9" 
+* entry[organization][=].resource = Organization-L1-HOSP
+
+* entry[organization][+].fullUrl = "urn:uuid:af2b3114-e872-43b9-9875-cceb39122f7f" 
+* entry[organization][=].resource = Organization-L1-Odd
+
+* entry[organization][+].fullUrl = "urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1" 
+* entry[organization][=].resource = Organization-L1
+
 Instance: cz-examplel1-composition
 InstanceOf: CZ_CompositionImagingReport
 Title: "Composition: L1 Imaging report"
@@ -43,6 +52,7 @@ Usage: #example
 * date = "2025-05-20T12:02:00+01:00"
 * author = Reference(urn:uuid:daa3335b-db80-41a5-897e-ec0dd615ee9d)
 * title = "Imaging Report - Rentgen Ing. Králíka"
+* custodian = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1)
 * confidentiality = #N
 * language = #cs
 * type = $sct#371527006 "Radiology report"

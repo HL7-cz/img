@@ -59,7 +59,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/SpecimenInformation"
-* group[=].target = "https://fhir.hl7cr.eu/core/StructureDefinition/cz-specimen"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-specimen"
 * group[=].element[+].code = #Body.SpecimenInformation
 * group[=].element[=].display = "A.2.3 - Speciment information"
 * group[=].element[=].target.code = #Composition.section:order.specimen				
@@ -324,7 +324,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
-* group[=].target = "https://fhir.hl7cr.eu/core/StructureDefinition/cz-allergyIntolerance"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-allergyIntolerance"
 * group[=].element[+].code = #Body.ReportOfImagingMethod.adverseReaction
 * group[=].element[=].display = "A.2.4.8 - Adverse reaction"
 * group[=].element[=].target.code = #Composition.section:complications			

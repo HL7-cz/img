@@ -60,6 +60,15 @@ Usage: #example
 * entry[condition][+].fullUrl = "urn:uuid:96b5af8a-9127-45fd-b549-ab79f5c56a41"
 * entry[condition][=].resource = cz-examplertg-condition2
 
+* entry[organization][+].fullUrl = "urn:uuid:a4641bd0-34af-4038-a7db-872d08a54df9" 
+* entry[organization][=].resource = Organization-L1-HOSP
+
+* entry[organization][+].fullUrl = "urn:uuid:af2b3114-e872-43b9-9875-cceb39122f7f" 
+* entry[organization][=].resource = Organization-L1-Odd
+
+* entry[organization][+].fullUrl = "urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1" 
+* entry[organization][=].resource = Organization-L1
+
 
 Instance: cz-examplertg-composition
 InstanceOf: CZ_CompositionImagingReport
@@ -74,6 +83,7 @@ Usage: #example
 * title = "Imaging Report - Rentgen Ing. Králíka"
 * confidentiality = #N
 * language = #cs
+* custodian = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1)
 * type = $sct#371527006 "Radiology report"
 * encounter = Reference(urn:uuid:20bd86a1-060b-4161-a063-183069efc54b)
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba)

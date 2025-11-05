@@ -115,7 +115,7 @@ Description: "Example of logo as document reference for FN Motol."
 
 Instance: cz-examplel1-practitioner
 InstanceOf: CZ_PractitionerCore
-Title: "Practitioner Keller"
+Title: "Practitioner Testovací"
 Description: "Author of RTG Imaging report"
 Usage: #example
 * id = "fe8d7386-1b5c-493c-9f83-d2be26291fa8"
@@ -123,14 +123,14 @@ Usage: #example
 * identifier[=].value = "123456789"
 * name.use = #usual
 * name.prefix = "doc. MUDr."
-* name.family = "Jiří"
-* name.given = "Keller"
+* name.family = "Jan"
+* name.given = "Testovací"
 * name.suffix = "PhD."
 * gender = #male
 
 Instance: cz-examplel1-practitionerRole
 InstanceOf: CZ_PractitionerRoleCore
-Title: "Practitioner Keller"
+Title: "PractitionerRole Testovací"
 Description: "Author of RTG Imaging report"
 Usage: #example
 * id = "daa3335b-db80-41a5-897e-ec0dd615ee9d"

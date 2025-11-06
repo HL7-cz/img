@@ -23,14 +23,15 @@ note top #EEEEAE [[ConceptMap-AttachmentImagingReport2FHIR-cz.html]]
 Concept Mapa
 endnote
 
+class "cz-diagnosticReport.presentedForm" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/img-order/StructureDefinition-cz-compositionImageOrder.html#an]]
 class "cz-attachment" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-attachment.html]]
 
 "Vizuální podoba dokumentu" -- "Přílohy"
-"Vizuální podoba dokumentu" <|. "cz-attachment"
+"Vizuální podoba dokumentu" <|. "cz-diagnosticReport.presentedForm"
 "Přílohy" <|. "cz-attachment"
 
 "Vizuální podoba dokumentu" -r[hidden]-> "Přílohy"
-"Vizuální podoba dokumentu" -d[hidden]-> "cz-attachment"
+"Vizuální podoba dokumentu" -d[hidden]-> "cz-diagnosticReport.presentedForm"
 "Přílohy" -d[hidden]-> "cz-attachment"
 
 @enduml

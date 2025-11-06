@@ -23,14 +23,15 @@ note top #EEEEAE [[ConceptMap-AttachmentImagingReport2FHIR-cz.html]]
 Concept Map
 endnote
 
+class "cz-diagnosticReport.presentedForm" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/img-order/StructureDefinition-cz-compositionImageOrder.html#an]]
 class "cz-attachment" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-attachment.html]]
 
 "Presented Form" -- "Attachments"
-"Presented Form" <|. "cz-attachment"
+"Presented Form" <|. "cz-diagnosticReport.presentedForm"
 "Attachments" <|. "cz-attachment"
 
 "Presented Form" -r[hidden]-> "Attachments"
-"Presented Form" -d[hidden]-> "cz-attachment"
+"Presented Form" -d[hidden]-> "cz-diagnosticReport.presentedForm"
 "Attachments" -d[hidden]-> "cz-attachment"
 
 @enduml

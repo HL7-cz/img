@@ -32,6 +32,15 @@ Usage: #example
 * entry[organization].fullUrl = "urn:uuid:fe9e7a29-ec24-4d54-8c7f-52a4aba7b7b4"
 * entry[organization].resource = cz-organizationwithlogo3-example
 
+* entry[organization][+].fullUrl = "urn:uuid:a4641bd0-34af-4038-a7db-872d08a54df9" 
+* entry[organization][=].resource = Organization-L1-HOSP
+
+* entry[organization][+].fullUrl = "urn:uuid:af2b3114-e872-43b9-9875-cceb39122f7f" 
+* entry[organization][=].resource = Organization-L1-Odd
+
+* entry[organization][+].fullUrl = "urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1" 
+* entry[organization][=].resource = Organization-L1
+
 Instance: cz-examplel1-composition
 InstanceOf: CZ_CompositionImagingReport
 Title: "Composition: L1 Imaging report"
@@ -43,6 +52,7 @@ Usage: #example
 * date = "2025-05-20T12:02:00+01:00"
 * author = Reference(urn:uuid:daa3335b-db80-41a5-897e-ec0dd615ee9d)
 * title = "Imaging Report - Rentgen Ing. Králíka"
+* custodian = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1)
 * confidentiality = #N
 * language = #cs
 * type = $sct#371527006 "Radiology report"
@@ -105,7 +115,7 @@ Description: "Example of logo as document reference for FN Motol."
 
 Instance: cz-examplel1-practitioner
 InstanceOf: CZ_PractitionerCore
-Title: "Practitioner Keller"
+Title: "Practitioner Testovací"
 Description: "Author of RTG Imaging report"
 Usage: #example
 * id = "fe8d7386-1b5c-493c-9f83-d2be26291fa8"
@@ -113,14 +123,14 @@ Usage: #example
 * identifier[=].value = "123456789"
 * name.use = #usual
 * name.prefix = "doc. MUDr."
-* name.family = "Jiří"
-* name.given = "Keller"
+* name.family = "Jan"
+* name.given = "Testovací"
 * name.suffix = "PhD."
 * gender = #male
 
 Instance: cz-examplel1-practitionerRole
 InstanceOf: CZ_PractitionerRoleCore
-Title: "Practitioner Keller"
+Title: "PractitionerRole Testovací"
 Description: "Author of RTG Imaging report"
 Usage: #example
 * id = "daa3335b-db80-41a5-897e-ec0dd615ee9d"

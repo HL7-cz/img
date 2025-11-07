@@ -193,7 +193,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/InformationRecipientCz"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerRole-core"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core"
 * group[=].element[+].code = #Header.informationRecipient
 * group[=].element[=].display = "A.1.4 - Recipient identifier"
 * group[=].element[=].target.code = #Composition.recipient
@@ -222,7 +222,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent				
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/AuthorCz"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerRole-core"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core"
 * group[=].element[+].code = #Header.author
 * group[=].element[=].display = "A.1.5 - Author (by whom the Hospital discharge report was/were authored). Multiple authors could be provided."
 * group[=].element[=].target.code = #Composition.author
@@ -258,7 +258,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/AttesterCz"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerRole-core"					
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core"					
 * group[=].element[+].code = #Header.attester
 * group[=].element[=].display = "A.1.6 - Attester (multiple attesters could be provided)"
 * group[=].element[=].target.code = #Composition.attester

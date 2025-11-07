@@ -13,7 +13,7 @@ Alias: $drzar = https://ncez.mzcr.cz/fhir/CodeSystem/cz-drzar
 Alias: $hl7-condition-category-cs =  http://terminology.hl7.org/CodeSystem/condition-category
 Alias: $typeClinicalEvent = https://hl7.cz/fhir/img-order/CodeSystem/cz-typeClinicalEvent-cs
 Alias: $hl7-allergyintoleranceclinicalstatus = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical|4.0.1
-Alias: $dlp_lecivePripravky = https://hl7.cz/fhir/core/CodeSystem/cz-dlplecivepripravky-cs
+Alias: $dlp_lecivePripravky = https://ncez.mzcr.cz/fhir/CodeSystem/dlp-lecive-pripravky-cs
 Alias: $dlp_formy_cs = https://hl7.cz/fhir/core/CodeSystem/cz-dlpformy-cs
 Alias: $hl7-ev = http://hl7.org/fhir/CodeSystem/event-status
 Alias: $hl7-actstatus = http://hl7.org/fhir/adverse-event-actuality
@@ -29,8 +29,8 @@ Alias: $mkn-10-problem-list = https://terminology.uzis.cz/ValueSet/mkn-10
 Alias: $sct-device-type = http://hl7.org/fhir/ValueSet/device-type
 Alias: $sctBodySite = http://hl7.org/fhir/ValueSet/body-site
 Alias: $hl7-diagnostic-category = http://hl7.org/fhir/ValueSet/diagnostic-service-sections
-Alias: $dlp_lecprip = https://hl7.cz/fhir/core/ValueSet/cz-dlplecivepripravky-vs
-Alias: $dlp_formy = https://hl7.cz/fhir/core/ValueSet/cz-dlpformy-vs
+Alias: $dlp_lecprip = https://ncez.mzcr.cz/fhir/ValueSet/dlp-lecive-pripravky-vs
+Alias: $dlp_formy = https://ncez.mzcr.cz/fhir/ValueSet/cz-dlpformy-vs
 Alias: $hl7eu_document-type = http://hl7.eu/fhir/imaging-r5/ValueSet/ImImagingReportTypesEuVS
 
 // Extensions

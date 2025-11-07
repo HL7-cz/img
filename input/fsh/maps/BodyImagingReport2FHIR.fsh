@@ -459,7 +459,14 @@ Usage: #definition
 * group[=].element[+].code = #resultOfImagingMethod.formalizedText
 * group[=].element[=].display = "A.2.4.9.2 - Formalized text"
 * group[=].element[=].target.code = #CZ_DiagnosticReport.result
-* group[=].element[=].target.comment = "CZ_DiagnosticReport.result.ofType(CZ_ObservationResultImaging)"
+* group[=].element[=].target.comment = "CZ_DiagnosticReport.result.ofType(CZ_ObservationResultImaging)
+This option is selected if the finding relates to the overall examination."
+* group[=].element[=].target.equivalence = #relatedto
+* group[=].element[+].code = #resultOfImagingMethod.formalizedText
+* group[=].element[=].display = "A.2.4.9.2 - Formalized text"
+* group[=].element[=].target.code = ##CZ_ObservationResultImaging.partOf
+* group[=].element[=].target.comment = "CZ_ObservationResultImaging.partOf.ofType(CZ_ProcedureImaging)
+This option is filled in if the finding relates to a specific procedure."
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #resultOfImagingMethod.formalizedText
 * group[=].element[=].display = "A.2.4.9.2 - Formalized text"

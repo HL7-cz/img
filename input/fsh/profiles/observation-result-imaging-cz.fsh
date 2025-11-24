@@ -55,7 +55,8 @@ This observation may represent the result of a imaging report
 * performer only Reference(CareTeam or RelatedPerson or CZ_PatientCore or CZ_OrganizationCore or CZ_PractitionerRoleCore or CZ_PractitionerCore)
 * performer MS
 * performer ^short = "In the initial iteration of the Czech interoperability project: this is Organization (CZ) or Practitioner (CZ)"
-* value[x] MS
+* value[x] 
+* valueCodeableConcept from CZ_ObservationValueVs (preferred)
 * dataAbsentReason MS
 * interpretation MS
 

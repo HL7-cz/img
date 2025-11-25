@@ -5,7 +5,7 @@ Id: cz-patientAnimal-obl-img
 Title:    "Patient Animal: Obligations"
 Description: "This profile defines obligations for an animal Patient in FHIR for the purpose of this guide."
 
-* insert SetFmmandStatusRule ( 0, informative)
+
 
 // TEST OBLIGATIONS  ====>
 // Creator Obligations L1 ============>

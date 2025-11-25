@@ -56,6 +56,12 @@ Usage: #example
 * entry[observation].fullUrl = "urn:uuid:1bcd2d5a-e401-4ac2-80d0-7ec558d6b250"
 * entry[observation].resource = cz-examplepetct-observation
 
+* entry[observation][+].fullUrl = "urn:uuid:9f79ad8f-056e-4931-ae19-810064de607b"
+* entry[observation][=].resource = cz-examplepetct-weightObservation
+
+* entry[observation][+].fullUrl = "urn:uuid:40fb226b-e11f-4d02-aa30-97ba51ab4ff6"
+* entry[observation][=].resource = cz-examplepetct-heightObservation
+
 * entry[device].fullUrl = "urn:uuid:723b5e24-133c-4e9a-aefb-5c14f5b2eac3"
 * entry[device].resource = cz-examplepetct-device
 
@@ -92,12 +98,16 @@ Description: "Example of Imaging report (Composition) including a PET+CT report"
 Title: "Composition: PET+CT Imaging report"
 Usage: #example
 * id = "a84899f0-a241-4f15-b5fd-47e8c9dbdc35"
+* identifier
+  * system = "http://example.org/myhospital/reportidentifiers"
+  * value = "dfkjewoieoijwoskdje"  
 * meta.profile[0] = "https://hl7.cz/fhir/img/StructureDefinition/cz-composition-imaging"
 * status = #final
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * date = "2025-05-20T12:02:00+01:00"
 * author = Reference(urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c)
-* type = $sct#4261000179100 "Computed tomography imaging report"
+* type = $loinc#87905-6
+* category = $loinc#18726-0
 * title = "Zpráva z vyšetření PET+CT hlavy"
 * encounter = Reference(urn:uuid:7023b84e-47bb-405c-be46-2c161c6ba8d5)
 * custodian = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1)
@@ -141,6 +151,17 @@ Usage: #example
 * section[impression].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Zvýšená mitotická aktivita dorzálně za postresekční dutinou až fokálního charakteru při jejím laterálním okraji - nález vzbuzuje podezření na viabilní neoplazii.
 Nenalézáme žádná další jasná ložiska porušené hematoencefalické bariéry nebo zvýšené mitotické aktivity svědčící pro přítomnost viabilní neoplazie v mozku.</div>"
 * section[impression].text.status = #additional
+* section[history].title = "History"
+* section[history].code = $loinc#11329-0 "History general Narrative - Reported"
+* section[history].entry[+] = Reference(urn:uuid:9f79ad8f-056e-4931-ae19-810064de607b)
+* section[history].entry[+] = Reference(urn:uuid:40fb226b-e11f-4d02-aa30-97ba51ab4ff6)
+* section[comparison]
+  * title = "Comparison"
+  * code = $loinc#18834-2 "Radiology Comparison study (narrative)"
+  * emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#nilknown "Nil Known"
+  * text.status = #generated
+  * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Unavailable</div>"
+
 
 Instance: cz-encounter-example
 InstanceOf: CZ_Encounter
@@ -294,6 +315,40 @@ Description: "Imaging order: PET+CT Imaging report"
 * authoredOn = "2022-10-06T12:02:00+01:00"
 * reasonReference = Reference(urn:uuid:f06ac619-db0b-47d1-ae16-003a2be66760) // Reference to Condition - Reason For Admission
 * requester = Reference(urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c)
+
+Instance: cz-examplepetct-weightObservation
+InstanceOf: Observation
+Title: "Observation: patient weight"
+Description: "Patient weight in echo report history section"
+Usage: #example
+* id = "9f79ad8f-056e-4931-ae19-810064de607b"
+* status = #final
+* effectiveDateTime = "2023-06-01"
+* code = $loinc#29463-7 "Body weight"
+* category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
+* subject =  Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
+* valueQuantity
+  * value = 65
+  * unit = "kg"
+  * code = #kg
+  * system = "http://unitsofmeasure.org"
+
+Instance: cz-examplepetct-heightObservation
+InstanceOf: Observation
+Title: "Observation: patient height"
+Description: "Patient height in echo report history section"
+Usage: #example
+* id = "40fb226b-e11f-4d02-aa30-97ba51ab4ff6"
+* status = #final
+* effectiveDateTime = "2023-06-01"
+* code = $loinc#8302-2 "Body height"
+* category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
+* subject =  Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
+* valueQuantity
+  * value = 163
+  * unit = "cm"
+  * code = #cm
+  * system = "http://unitsofmeasure.org"
 
 Instance: cz-examplepetct-coverage
 InstanceOf: CZ_Coverage

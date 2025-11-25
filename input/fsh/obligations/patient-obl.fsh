@@ -4,7 +4,7 @@ Id: cz-patient-obl-img
 Title:    "Patient: Obligations"
 Description: "This profile defines obligations for an human Patient in FHIR for the purpose of this guide."
 
-* insert SetFmmandStatusRule ( 0, informative)
+
 
 // TEST OBLIGATIONS  ====>
 // Creator Obligations L1 ============>

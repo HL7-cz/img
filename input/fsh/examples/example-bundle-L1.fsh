@@ -47,6 +47,9 @@ Title: "Composition: L1 Imaging report"
 Description: "Minimal composition for L1 Image report"
 Usage: #example
 * id = "6390b57a-0fe7-488b-b948-eda546875bc0"
+* identifier
+  * system = "http://example.org/myhospital/reportidentifiers"
+  * value = "dfkjewoieoijwoskdjf"  
 * status = #final
 * subject = Reference(urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57)
 * date = "2025-05-20T12:02:00+01:00"
@@ -55,11 +58,63 @@ Usage: #example
 * custodian = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1)
 * confidentiality = #N
 * language = #cs
-* type = $sct#371527006 "Radiology report"
+* type = $loinc#24686-8 
+* category = $loinc#18726-0
 * encounter = Reference(urn:uuid:4d2447db-6692-40cd-a440-7544d48caa07)
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba)
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Imaging Report - Rentgen Ing. Králíka</h2><p>RTG pacienta Ing. Králíka v L1 úrovni</p></div>"
+* section[history]
+  * title = "History"
+  * code = $loinc#11329-0 "History general Narrative - Reported"
+  * emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#nilknown "Nil Known"
+  * text.status = #generated
+  * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Nil known</div>"
+* section[comparison]
+  * title = "Comparison"
+  * code = $loinc#18834-2 "Radiology Comparison study (narrative)"
+  * emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#nilknown "Nil Known"
+  * text.status = #generated
+  * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Unavailable</div>"
+* section[order]
+  * title = "Order"
+  * code = $loinc#55115-0 "Requested imaging studies information Document"
+  * emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#nilknown "Nil Known"
+  * text.status = #generated
+  * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Nil known</div>"
+* section[procedure]
+  * title = "Procedure"
+  * code = $loinc#55111-9 "Current imaging procedure descriptions Document"
+  * emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#unavailable "Unavailable"
+  * text.status = #generated
+  * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Unavailable</div>"
+* section[recommendation]
+  * title = "Recommendations"
+  * code = $loinc#18783-1 "Radiology Study recommendation (narrative)"
+  * emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#nilknown "Nil Known"
+  * text
+    * status = #generated
+    * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Nil Known</div>"
+* section[impression]
+  * title = "Impression"
+  * code = $loinc#19005-8 "Radiology Imaging study [Impression] (narrative)"
+  * emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#unavailable "Unavailable"
+  * text.status = #generated
+  * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Unavailable</div>"
+* section[findings]
+  * title = "Findings"
+  * code = $loinc#59776-5 "Procedure findings Narrative"
+  * emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#unavailable "Unavailable"
+  * text.status = #generated
+  * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Unavailable</div>"
+* section[imagingstudy]
+  * title = "Imaging Study"
+  * code = $loinc#18726-0 "Radiology studies (set)"
+  * emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#unavailable "Unavailable"
+  * text.status = #generated
+  * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Unavailable</div>"
+
+
 
 Instance: cz-encounterl1-example
 InstanceOf: CZ_Encounter

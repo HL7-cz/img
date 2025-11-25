@@ -3,7 +3,7 @@ Id: logDcmMetadata
 Title: "A.2.7 - DICOM metadata"
 Description: """Vybrané relevantní údaje z DICOM studie."""
 
-* insert SetFmmandStatusRule ( 1, draft )
+
 * ^language = #cs
 
 * studyInstanceUID 1..1 id "A.2.7.1 - Study Instance UID - DICOM tag (0020,000D)" """Celosvětově jedinečný identifikátor studie. Pokud je v ImagingStudy přítomen jeden nebo více prvků série, musí existovat jeden identifikátor DICOM Study UID."""

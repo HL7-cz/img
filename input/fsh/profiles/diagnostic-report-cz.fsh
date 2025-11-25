@@ -8,7 +8,7 @@ Description: "Diagnostic Report used to represent an entry of a Imaging Report, 
 * . ^short = "Imaging Report DiagnosticReport"
 * . ^definition = "Imaging Report DiagnosticReport"
 
-* insert SetFmmandStatusRule ( 0, draft )
+* insert ImposeProfile($DiagnosticReport-eu-img,0)
 
 * extension contains
   $artifact-version-url-5 named artifactVersion 0..1

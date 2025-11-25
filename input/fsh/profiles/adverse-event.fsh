@@ -12,7 +12,7 @@ Description: "Czech profile for adverse event. "
 * suspectEntity ^slicing.discriminator[=].path = "instance"
 * suspectEntity ^slicing.ordered = false
 * suspectEntity ^slicing.rules = #open
-* suspectEntity.instance 1..
+//* suspectEntity.instance 1..
 * suspectEntity contains procedure 0..*
 * suspectEntity[procedure].instance only Reference(CZ_ProcedureImaging)
 

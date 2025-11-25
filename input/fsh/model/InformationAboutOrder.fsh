@@ -3,7 +3,7 @@ Id: InformationAboutOrder
 Title: "A.2.1 - Information about the order"
 Description: """Imaging Report - Imaging Report information about the order - A.2.1"""
 
-* insert SetFmmandStatusRule ( 1, draft )
+
 * ^language = #cs
 
 * identifierOrder 0..1 Identifier "A.2.1.1 - Identifier of request (order)" """Identifier of the health service request (order)."""

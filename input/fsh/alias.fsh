@@ -5,7 +5,7 @@ Alias: $orpha = https://www.orpha.net
 Alias: $loinc =  http://loinc.org
 Alias: $iso3166 = urn:iso:std:iso:3166
 Alias: $media-category = http://terminology.hl7.org/CodeSystem/media-category|4.0.0
-Alias: $dicom = http://dicom.nema.org/resources/ontology/DCM|2022.4.20221006
+Alias: $dicom = http://dicom.nema.org/resources/ontology/DCM|2025.2.20250411
 Alias: $dcm = http://dicom.nema.org/resources/ontology/DCM
 Alias: $ucum = http://unitsofmeasure.org
 Alias: $mkn-10 = https://terminology.uzis.cz/CodeSystem/Mkn10_5
@@ -32,6 +32,8 @@ Alias: $hl7-diagnostic-category = http://hl7.org/fhir/ValueSet/diagnostic-servic
 Alias: $dlp_lecprip = https://ncez.mzcr.cz/fhir/ValueSet/dlp-lecive-pripravky-vs
 Alias: $dlp_formy = https://ncez.mzcr.cz/fhir/ValueSet/cz-dlpformy-vs
 Alias: $hl7eu_document-type = http://hl7.eu/fhir/imaging-r5/ValueSet/ImImagingReportTypesEuVS
+Alias: $diagnostic-service-sections = http://hl7.org/fhir/ValueSet/diagnostic-service-sections
+//Alias: $diagnostic-service-sections = http://hl7.org/fhir/ValueSet/diagnostic-service-sections
 
 // Extensions
 Alias: $event-basedOn = http://hl7.org/fhir/StructureDefinition/event-basedOn
@@ -61,6 +63,8 @@ Alias: $bodySite-reference                = http://hl7.org/fhir/StructureDefinit
 Alias: $cz-organization-logo              = https://hl7.cz/fhir/core/StructureDefinition/cz-organization-logo
 Alias: $composition.version-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version
 Alias: $patient-animal = http://hl7.org/fhir/StructureDefinition/patient-animal
+Alias: $hl7euDiagnosticReference = http://hl7.eu/fhir/extensions/StructureDefinition/composition-diagnosticReportReference
+Alias: $CrossVersion-Composition.version = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version
 
 //Alias: $server = http://hl7.cz/fhir/img/actor-server-img
 Alias: $creatorL1 = https://hl7.cz/fhir/core/ActorDefinition/actor-creator-L1
@@ -69,3 +73,7 @@ Alias: $creatorL2 = https://hl7.cz/fhir/core/ActorDefinition/actor-creator-L2
 Alias: $consumerL2 = https://hl7.cz/fhir/core/ActorDefinition/actor-consumer-L2
 Alias: $creatorL3 = https://hl7.cz/fhir/core/ActorDefinition/actor-creator-L3
 Alias: $consumerL3 = https://hl7.cz/fhir/core/ActorDefinition/actor-consumer-L3
+
+// EU R4 imaging profiles
+Alias: $Composition-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/CompositionEuImaging
+Alias: $DiagnosticReport-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/DiagnosticReportEuImaging

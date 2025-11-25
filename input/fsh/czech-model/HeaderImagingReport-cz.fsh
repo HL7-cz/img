@@ -3,7 +3,7 @@ Id: logHeaderImagingReportCz
 Title: "A.1 - Hlavička dokumentu"
 Description: """Záhlaví dokumentu s administrativními údaji"""
 
-* insert SetFmmandStatusRule ( 1, draft )
+
 * ^language = #cs
 
 * subjekt 1..1 logSubjectCz "A.1.1 - Identifikace a A.1.2 - Kontaktní informace pacienta" """Identifikace pacienta a kontaktní informace pacienta"""

@@ -76,6 +76,9 @@ Title: "Composition: RTG Imaging report"
 Description: "Minimal composition for RTG Image report"
 Usage: #example
 * id = "dbd426a9-d660-4f97-8656-1e39db4a57c9"
+* identifier
+  * system = "http://example.org/myhospital/reportidentifiers"
+  * value = "dfkjewoieoijwoskdjg"  
 * status = #final
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * date = "2025-05-20T12:02:00+01:00"
@@ -84,7 +87,8 @@ Usage: #example
 * confidentiality = #N
 * language = #cs
 * custodian = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1)
-* type = $sct#371527006 "Radiology report"
+* type = $loinc#24686-8 
+* category = $loinc#18726-0
 * encounter = Reference(urn:uuid:20bd86a1-060b-4161-a063-183069efc54b)
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba)
 * section[order].title = "Requested imaging studies information Document"
@@ -107,6 +111,18 @@ Usage: #example
 * section[impression].code = $loinc#19005-8 "Radiology Imaging study [Impression] (narrative)"
 * section[impression].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Nález byl negativní. Trauma skeletu nepotrvzeno.</div>"
 * section[impression].text.status = #additional
+* section[history]
+  * title = "History"
+  * code = $loinc#11329-0 "History general Narrative - Reported"
+  * emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#nilknown "Nil Known"
+  * text.status = #generated
+  * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Nil known</div>"
+* section[comparison]
+  * title = "Comparison"
+  * code = $loinc#18834-2 "Radiology Comparison study (narrative)"
+  * emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#nilknown "Nil Known"
+  * text.status = #generated
+  * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Unavailable</div>"
 
 Instance: cz-encounterrtg-example
 InstanceOf: CZ_Encounter

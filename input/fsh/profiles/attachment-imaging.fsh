@@ -7,7 +7,7 @@ Description: "Czech profile for attachment. "
 * . ^short = "Imaging Report"
 * . ^definition = "Imaging Report composition."
 
-* insert SetFmmandStatusRule ( 0, draft )
+
 
 * content
 * content.contentType MS

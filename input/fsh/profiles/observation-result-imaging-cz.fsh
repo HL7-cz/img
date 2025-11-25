@@ -7,7 +7,7 @@ Description: """This profile constrains the Observation resource to represent re
 This observation may represent the result of a imaging report
 """
 
-* insert SetFmmandStatusRule ( 0, draft )
+
 
 * ^purpose = "This profile constrains the Observation resource to represent a imaging report."
 * . ^short = "Imaging result for a imaging report"

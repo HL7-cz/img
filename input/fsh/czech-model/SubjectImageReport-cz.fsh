@@ -3,7 +3,7 @@ Id: logSubjectCz
 Title: "A.1.1 - Identifikace a A.1.2 - Kontaktní informace Pacienta/subjektu"
 Description: """Identifikace pacienta a kontaktní informace pacienta"""
 
-* insert SetFmmandStatusRule ( 1, draft )
+
 * ^language = #cs
 
 * identifikace 1..1 Base "A.1.1 - Identifikace pacienta/subjektu" """Identifikace pacienta/subjektu"""

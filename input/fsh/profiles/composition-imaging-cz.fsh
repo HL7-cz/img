@@ -20,27 +20,24 @@ of which the Composition is the first resource contained.\n
 \n
 The `text` field of each section SHALL contain a textual representation of all listed entries.
 """
-* insert SetFmmandStatusRule ( 0, draft )
+* insert ImposeProfile($Composition-eu-img,0)
 
-* meta
-  * security 0..* MS
 
-* identifier
+* identifier 1..1
   * ^short = "Report identifier"
   * ^definition = "Identifiers assigned to this Imaging Report by the performer or other systems. It shall be common to several report versions"
   * ^comment = "Composition.identifier SHALL be equal to one of the DiagnosticReport.identifier, if at least one exists"
 
 * extension contains
-    ImDiagnosticReportReference named diagnosticreport-reference 1..1 and
-    CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..* and
     $event-basedOn-url          named basedOn 0..* and
-    $information-recipient-url  named informationRecipient 0..*
+    $information-recipient-url  named informationRecipient 0..* and
+    $hl7euDiagnosticReference   named diagnosticreport-reference 0..1
 
-* extension[basedOn-order-or-requisition].valueReference only Reference(CZ_ImagingOrderInformation)
+* extension[basedOn].valueReference only Reference(CZ_ImagingOrderInformation)
 * extension[diagnosticreport-reference].valueReference only Reference(CZ_DiagnosticReport)
 * extension[informationRecipient].valueReference only Reference(CZ_PractitionerCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_PractitionerRoleCore or CZ_OrganizationCore)
-* extension contains $composition.version-r5 named versionNumber 0..
-* extension[versionNumber].valueString ^short = "Business version"
+
+* extension contains $CrossVersion-Composition.version named version 0..1
 
 * status
   * ^short = "Status of the Report"
@@ -65,18 +62,18 @@ The `text` field of each section SHALL contain a textual representation of all l
 * subject 1..1 MS
 * subject only Reference(CZ_PatientCore)
 
-* custodian MS
 * custodian only Reference(CZ_OrganizationCore)
   * ^short = "Organization that manages the Imaging Report"
 
-//TODO - pokusit se opravit!
-//* relatesTo.target[x].targetReference only Reference(DocumentReference or CZ_CompositionImagingReport or Composition)
-//* relatesTo.target[x] only Reference(DocumentReference or CZ_CompositionImagingReport or Composition)
-
-* author
-//* author only Reference(CZ_PractitionerCore or CZ_DeviceObserver)
-* author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
-  * ^short = "Who and/or what authored the Imaging order"
+* author 1..*
+  * insert SliceElement( #profile, [[$this.resolve()]] )
+* author contains 
+    author 0..* and 
+    authoringDevice 0..* and
+    organization 0..*
+* author[author] only Reference( CZ_PractitionerRoleCore )
+* author[authoringDevice] only Reference( CZ_DeviceObserver )
+* author[organization] only Reference( CZ_OrganizationCore )
 
 * attester 0..* MS
   * ^slicing.discriminator[+].type = #value
@@ -84,27 +81,35 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^slicing.rules = #open
   * ^slicing.ordered = false
 
-  * party only Reference(CZ_PatientCore or CZ_RelatedPersonCore or CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore)
+//  * party only Reference(CZ_PatientCore or CZ_RelatedPersonCore or CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore)
 
 * attester contains
-    legalAuthenticator 0..* MS and
-    resultValidator 0..* MS
+    legalAuthenticator 0..* and
+    resultValidator 0..*
 * attester[legalAuthenticator]
-  * mode 1..1 MS
-  * mode = #legal
+  * mode 1..1 
+  * mode = http://hl7.org/fhir/composition-attestation-mode#legal
   * party only Reference(CZ_PractitionerRoleCore)
+  * time 1..1
 * attester[resultValidator]
-  * mode 1..1 MS
-  * mode = #professional
+  * mode 1..1 
+  * mode = http://hl7.org/fhir/composition-attestation-mode#professional
   * party only Reference(CZ_PractitionerRoleCore)
+  * time 1..1
 
-
-* type 1..
-* type from CZ_CompositionTypeVs (preferred) // valueset to be revised.
-  * coding 1..*
-    * insert SliceElement( #value, $this )
-  * coding contains loinc 1..1
-  * coding[loinc] = $loinc#18748-4 //"Diagnostic imaging study"
+* type from ImagingDocumentTypes (preferred) 
+  * ^short = "Type of Imaging Diagnostic Report"
+  * ^definition = "Defines the document type, it is recommended to take this from the suggested LOINC set."
+* category 1..*  
+  * insert SliceElement( #value, $this )
+* category contains
+  diagnostic-service 0..1 and
+  document-category 1..1
+* category[diagnostic-service] from $diagnostic-service-sections (required)
+* category[document-category] from DocumentCategory (required)
+  * ^short = "Document Category"
+  * ^definition = "A categorization for the type of document."
+  * coding = $loinc#18726-0
 
 * encounter 1..1
 * encounter only Reference(CZ_Encounter)
@@ -272,5 +277,4 @@ Description: """
     """
 // publisher, contact, and other metadata here using caret (^) syntax (omitted)
 * insert ExtensionContext(Composition)
-* insert SetFmmandStatusRule ( 2, trial-use)
 * value[x] only Reference (CZ_DiagnosticReport)

@@ -77,13 +77,13 @@ Usage: #example
 * entry[organization][+].fullUrl = "urn:uuid:3d5262e3-d234-471a-8356-ddf02fce8bb1"
 * entry[organization][=].resource = cz-examplepetct-organization
 
-* entry[organization][+].fullUrl = "urn:uuid:a4641bd0-34af-4038-a7db-872d08a54df9" 
+* entry[organization][+].fullUrl = "urn:uuid:a4641bd0-34af-4038-a7db-872d08a54df9"
 * entry[organization][=].resource = Organization-L1-HOSP
 
-* entry[organization][+].fullUrl = "urn:uuid:af2b3114-e872-43b9-9875-cceb39122f7f" 
+* entry[organization][+].fullUrl = "urn:uuid:af2b3114-e872-43b9-9875-cceb39122f7f"
 * entry[organization][=].resource = Organization-L1-Odd
 
-* entry[organization][+].fullUrl = "urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1" 
+* entry[organization][+].fullUrl = "urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1"
 * entry[organization][=].resource = Organization-L1
 
 Instance: cz-examplepetct-composition
@@ -97,7 +97,8 @@ Usage: #example
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * date = "2025-05-20T12:02:00+01:00"
 * author = Reference(urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c)
-* type = $sct#4261000179100 "Computed tomography imaging report"
+* category[imaging] = $loinc#18726-0 "Nálezy zobrazovacího komplementu"
+* type = $loinc#24725-4 "CT hlavy" //$sct#4261000179100 "Computed tomography imaging report"
 * title = "Zpráva z vyšetření PET+CT hlavy"
 * encounter = Reference(urn:uuid:7023b84e-47bb-405c-be46-2c161c6ba8d5)
 * custodian = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1)
@@ -442,9 +443,11 @@ Usage: #example
 Description: "Diagnostic report of PET+CT Imaging report"
 Title: "Diagnostic report: PET+CT Imaging report"
 * id = "9c23deff-bf1d-46f6-bd0e-005e52b42121"
-* category[imaging] = $loinc#18748-4 "Diagnostic imaging study"
+* category[imaging] = $loinc#18726-0 "Nálezy zobrazovacího komplementu" //$loinc#18748-4 "Diagnostic imaging study"
 * status = #final
-* code = $sct#168500000 "Radiology result normal"
+//* code = $sct#168500000 "Radiology result normal"
+//* code = $loinc#18748-4 "Diagnostic imaging study"
+* code = $loinc#24725-4 "CT hlavy"
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * conclusion = "Zvýšená mitotická aktivita dorzálně za postresekční dutinou až fokálního charakteru při jejím laterálním okraji - nález vzbuzuje podezření na viabilní neoplazii.
 Nenalézáme žádná další jasná ložiska porušené hematoencefalické bariéry nebo zvýšené mitotické aktivity svědčící pro přítomnost viabilní neoplazie v mozku."

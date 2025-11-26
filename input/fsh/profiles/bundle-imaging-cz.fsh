@@ -111,8 +111,8 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * entry contains imagingStudy 0..*
 * entry[imagingStudy].resource only CZ_StudyImaging
 
-* entry contains keyImageReference 0..*
-* entry[keyImageReference].resource only CZ_KeyImageDocumentReference
+* entry contains documentReference 0..*
+* entry[documentReference].resource only CZ_KeyImageDocumentReference or CZ_Logo or CZ_Attachment
 
 * entry contains procedure 0..*
 * entry[procedure].resource only CZ_ProcedureImaging
@@ -134,7 +134,4 @@ Description: "Clinical document used to represent a Imaging Report for the scope
   * who ^short = "Who signed."
   * data ^short = "Signature content"
 */
-
-* entry contains attachment 0..*
-* entry[attachment].resource only CZ_Logo or CZ_Attachment
 

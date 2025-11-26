@@ -18,6 +18,7 @@ Alias: $dlp_formy_cs = https://hl7.cz/fhir/core/CodeSystem/cz-dlpformy-cs
 Alias: $hl7-ev = http://hl7.org/fhir/CodeSystem/event-status
 Alias: $hl7-actstatus = http://hl7.org/fhir/adverse-event-actuality
 Alias: $v3-ParticipationType = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
+Alias: $hl7-diagnostic-service-sections = http://terminology.hl7.org/CodeSystem/v2-0074
 
 // ValueSet
 Alias: $hl7MedicationAdminStatus = http://hl7.org/fhir/ValueSet/medication-admin-status
@@ -36,10 +37,10 @@ Alias: $diagnostic-service-sections = http://hl7.org/fhir/ValueSet/diagnostic-se
 //Alias: $diagnostic-service-sections = http://hl7.org/fhir/ValueSet/diagnostic-service-sections
 
 // Extensions
-Alias: $event-basedOn = http://hl7.org/fhir/StructureDefinition/event-basedOn
-Alias: $composition.version-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version
-Alias: $information-recipient = http://hl7.eu/fhir/StructureDefinition/information-recipient
-Alias: $diagnostic-report-composition-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
+Alias: $event-basedOn                     = http://hl7.org/fhir/StructureDefinition/event-basedOn
+Alias: $composition.version-r5            = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version
+Alias: $information-recipient             = http://hl7.eu/fhir/StructureDefinition/information-recipient
+Alias: $diagnostic-report-composition-r5  = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
 Alias: $allergy-intolerance-certainty-url = http://hl7.org/fhir/StructureDefinition/allergyintolerance-certainty
 Alias: $artifact-title-url                = http://hl7.org/fhir/StructureDefinition/artifact-description
 Alias: $artifact-description-url          = http://hl7.org/fhir/StructureDefinition/artifact-title
@@ -50,21 +51,22 @@ Alias: $event-basedOn-url                 = http://hl7.org/fhir/StructureDefinit
 Alias: $individual-genderIdentity         = http://hl7.org/fhir/StructureDefinition/individual-genderIdentity
 Alias: $information-recipient-url         = http://hl7.eu/fhir/StructureDefinition/information-recipient
 Alias: $document-reference-thumbnail-url  = http://hl7.org/fhir/StructureDefinition/documentreference-thumbnail
-Alias: $note-url                          = http://hl7.org/fhir/StructureDefinition/note|5.2.0
 Alias: $cvDocumentReference-basedOn       = http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.basedOn
 Alias: $obligation                        = http://hl7.org/fhir/StructureDefinition/obligation
 Alias: $cvDiagnosticReport-supportingInfo = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.supportingInfo
 Alias: $cvDiagnosticReport-composition    = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
-Alias: $artifact-version-url-5            = http://hl7.org/fhir/StructureDefinition/artifact-version|5.2.0
+Alias: $artifact-version-url-5            = http://hl7.org/fhir/StructureDefinition/artifact-version|5.3.0-ballot
 Alias: $observation-triggeredBy-r5        = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
 Alias: $observation-value-r5              = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x]
 Alias: $service-request-body-structure-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-ServiceRequest.bodyStructure
 Alias: $bodySite-reference                = http://hl7.org/fhir/StructureDefinition/bodySite|5.2.0
 Alias: $cz-organization-logo              = https://hl7.cz/fhir/core/StructureDefinition/cz-organization-logo
-Alias: $composition.version-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version
-Alias: $patient-animal = http://hl7.org/fhir/StructureDefinition/patient-animal
-Alias: $hl7euDiagnosticReference = http://hl7.eu/fhir/extensions/StructureDefinition/composition-diagnosticReportReference
-Alias: $CrossVersion-Composition.version = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version
+Alias: $composition.version-r5            = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version
+Alias: $patient-animal                    = http://hl7.org/fhir/StructureDefinition/patient-animal
+Alias: $hl7euDiagnosticReference          = http://hl7.eu/fhir/extensions/StructureDefinition/composition-diagnosticReportReference
+Alias: $CrossVersion-Composition.version  = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version
+Alias: $textLink                          = http://hl7.org/fhir/StructureDefinition/textLink
+Alias: $note-url                          = http://hl7.org/fhir/StructureDefinition/note|5.3.0-ballot
 
 //Alias: $server = http://hl7.cz/fhir/img/actor-server-img
 Alias: $creatorL1 = https://hl7.cz/fhir/core/ActorDefinition/actor-creator-L1

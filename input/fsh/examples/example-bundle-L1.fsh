@@ -26,8 +26,11 @@ Usage: #example
 * entry[encounter].fullUrl = "urn:uuid:4d2447db-6692-40cd-a440-7544d48caa07"
 * entry[encounter].resource = cz-encounterl1-example
 
-* entry[attachment].fullUrl = "urn:uuid:38282c81-1026-410b-a2a2-157667ca24e1"
-* entry[attachment].resource = cz-logol1-example
+* entry[imagingStudy].fullUrl = "urn:uuid:f5e876ca-1bbe-47a1-9bc5-b725b68a5ef8"
+* entry[imagingStudy].resource = cz-examplel1-imagingStudy
+
+* entry[documentReference].fullUrl = "urn:uuid:38282c81-1026-410b-a2a2-157667ca24e1"
+* entry[documentReference].resource = cz-logol1-example
 
 * entry[organization].fullUrl = "urn:uuid:fe9e7a29-ec24-4d54-8c7f-52a4aba7b7b4"
 * entry[organization].resource = cz-organizationwithlogo3-example
@@ -59,7 +62,8 @@ Usage: #example
 * confidentiality = #N
 * language = #cs
 * type = $loinc#24686-8 
-* category = $loinc#18726-0
+* category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
+* category[document-category] = $loinc#18726-0
 * encounter = Reference(urn:uuid:4d2447db-6692-40cd-a440-7544d48caa07)
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba)
 * text.status = #additional
@@ -108,13 +112,23 @@ Usage: #example
   * text.status = #generated
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Unavailable</div>"
 * section[imagingstudy]
-  * title = "Imaging Study"
-  * code = $loinc#18726-0 "Radiology studies (set)"
-  * emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#unavailable "Unavailable"
-  * text.status = #generated
-  * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Unavailable</div>"
+* section[imagingstudy].title = "Obrazová studie"
+* section[imagingstudy].code = $loinc#18726-0 "Radiology studies (set)"
+* section[imagingstudy].entry[0] = Reference(urn:uuid:f5e876ca-1bbe-47a1-9bc5-b725b68a5ef8)
 
-
+Instance: cz-examplel1-imagingStudy
+InstanceOf: CZ_StudyImaging
+Usage: #example
+Description: "Imaging study of RTG Imaging report"
+Title: "Imaging study: RTG Imaging report"
+* id = "f5e876ca-1bbe-47a1-9bc5-b725b68a5ef8"
+* identifier[studyInstanceUid].system = "urn:dicom:uid"
+* identifier[studyInstanceUid].value = "urn:oid:1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.1"
+* status = #available
+* subject = Reference(urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57)
+* series.uid = "1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.1.1"
+* series.modality = $dcm#DX "Digital Radiography"
+* modality = $dcm#DX "Digital Radiography"
 
 Instance: cz-encounterl1-example
 InstanceOf: CZ_Encounter
@@ -126,7 +140,7 @@ Description: "Encounter"
 * status = #in-progress
 * class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 * class.code = #AMB
-* type.text = "RTG pacientky Jany Example"
+* type.text = "RTG pacienta Kralika"
 * serviceProvider = Reference(urn:uuid:fe9e7a29-ec24-4d54-8c7f-52a4aba7b7b4)
 
 Instance: cz-organizationwithlogo3-example
@@ -232,8 +246,12 @@ Usage: #example
 Description: "Diagnostic report of L1 Imaging report"
 Title: "Diagnostic report: L1 Imaging report"
 * id = "8a4c6711-6192-4519-a085-77fcf36d81c3"
+* identifier
+  * system = "http://example.org/myhospital/reportidentifiers"
+  * value = "o32u4js8492ff" // invented - not there in the report* 
 * extension[composition].valueReference = Reference(urn:uuid:6390b57a-0fe7-488b-b948-eda546875bc0)
-* category[imaging] = $loinc#18748-4 "Diagnostic imaging study"
+* category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
+* category[document-category] = $loinc#18726-0
 * status = #final
 * code = $sct#168500000 "Radiology result normal"
 * subject = Reference(urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57)

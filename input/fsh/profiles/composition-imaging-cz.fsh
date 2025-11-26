@@ -135,7 +135,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 * obeys text-or-section
 
 * section contains
-    imagingstudy 0..1 and
+    imagingstudy 1..1 and
     order 0..1 and
     clinicalQuestion 0..* and
     history 0..1 and
@@ -187,6 +187,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^extension[0].valueString = "Section"
   * code = $loinc#18785-6	//"Radiology Reason for study (narrative)"
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
+  * extension contains $note-url named note 0..*
   * text 1..
   * entry 0..
   * entry only Reference(CZ_ConditionImage)
@@ -228,6 +229,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section[impression]
   * ^short = "Impressions"
   * code = $loinc#19005-8 //"Radiology Imaging study [Impression] (narrative)"
+  * extension contains $note-url named note 0..*
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
   * entry 0..*
   * entry only Reference(CZ_ObservationResultImaging or CZ_ConditionImage or CZ_KeyImageDocumentReference)

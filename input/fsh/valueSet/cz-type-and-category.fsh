@@ -3,9 +3,6 @@ Id: cz-imaging-document-types-vs
 Title: "Types of image complement documents"
 Description: "Types of image complement documents"
 * ^language = #cs
-* ^extension.url = "http://hl7.org/fhir/tools/StructureDefinition/web-source"
-* ^extension.valueUrl = "https://termtest.mzcr.cz/fhir/ValueSet/imaging-document-types"
-* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/imaging-document-types"
 * ^version = "1.0.0"
 * ^status = #draft
 * ^experimental = false
@@ -13,16 +10,13 @@ Description: "Types of image complement documents"
 * ^publisher = "National eHealth Center (NCEZ)"
 * ^compose.inactive = false
 
-* include codes from system $loinc where STATUS = "ACTIVE" and SCALE_TYP = "Doc" and CLASS = "RAD"
+* include codes from system $loinc where STATUS = "ACTIVE" and SCALE_TYP = $loinc#LP32888-7 and CLASS = $loinc#LP29684-5
 
 ValueSet: DocumentCategory
 Id: cz-document-category-vs
 Title: "Categories of image complement documents"
 Description: "Categories of image complement documents"
 * ^language = #cs
-* ^extension.url = "http://hl7.org/fhir/tools/StructureDefinition/web-source"
-* ^extension.valueUrl = "https://termtest.mzcr.cz/fhir/ValueSet/document-category"
-* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/document-category"
 * ^version = "1.0.0"
 * ^status = #draft
 * ^experimental = false

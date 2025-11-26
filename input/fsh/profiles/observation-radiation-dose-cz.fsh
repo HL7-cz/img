@@ -6,8 +6,6 @@ Description: """
 A record for the radiation dose the subject has been exposed to during an imaging procedure.
 E.g. based on information from https://dicom.nema.org/medical/dicom/current/output/html/part16.html and https://build.fhir.org/ig/HL7/fhir-radiation-dose-summary-ig/index.html
 """
-* insert SetFmmandStatusRule( 1, draft )
-
 * basedOn only Reference(CZ_CarePlanImage or DeviceRequest or ImmunizationRecommendation or MedicationRequest or NutritionOrder or CZ_ImagingOrderInformation)
 * basedOn
   * insert SliceElement( #type, $this )

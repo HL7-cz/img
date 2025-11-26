@@ -45,8 +45,8 @@ Usage: #example
 * entry[encounter].fullUrl = "urn:uuid:20bd86a1-060b-4161-a063-183069efc54b"
 * entry[encounter].resource = cz-encounterrtg-example
 
-* entry[attachment].fullUrl = "urn:uuid:c23fc55c-e576-4fc4-8526-6f31f0b9377c"
-* entry[attachment].resource = cz-logo-example
+* entry[documentReference].fullUrl = "urn:uuid:c23fc55c-e576-4fc4-8526-6f31f0b9377c"
+* entry[documentReference].resource = cz-logo-example
 
 * entry[organization].fullUrl = "urn:uuid:e96e9bd5-0695-4725-acb2-c731aa071a55"
 * entry[organization].resource = cz-organizationwithlogo2-example
@@ -88,15 +88,26 @@ Usage: #example
 * language = #cs
 * custodian = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1)
 * type = $loinc#24686-8 
-* category = $loinc#18726-0
+* category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
+* category[document-category] = $loinc#18726-0
 * encounter = Reference(urn:uuid:20bd86a1-060b-4161-a063-183069efc54b)
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba)
 * section[order].title = "Requested imaging studies information Document"
 * section[order].code = $loinc#55115-0 "Requested imaging studies information Document"
 * section[order].entry[0] = Reference(urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04)
-* section[clinicalQuestion].title = "Klinická otázka"
-* section[clinicalQuestion].code = $loinc#18785-6	"Radiology Reason for study (narrative)"
-* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Klinická otázka: Trauma skeletu?</div>"
+* section[clinicalQuestion]
+  * title = "Klinická otázka"
+  * code = $loinc#18785-6	"Radiology Reason for study (narrative)"
+  * extension[note][+]
+    * valueAnnotation
+      * id = "clinical-question-note"
+      * text = "Trauma skeletu?" 
+  * text
+    * status = #additional
+    * extension[$textLink][+]
+      * extension[htmlid].valueString = "note"
+      * extension[data].valueUri = "#clinical-question-note"
+    * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Note:</b></td><td id=\"note\"><p>Klinická otázka: Trauma skeletu?</p></td></tr></table></div>"
 * section[clinicalQuestion].text.status = #additional
 * section[imagingstudy].title = "Obrazová studie"
 * section[imagingstudy].code = $loinc#18726-0 "Radiology studies (set)"
@@ -107,10 +118,19 @@ Usage: #example
 * section[findings].title = "Nálezy"
 * section[findings].code = $loinc#59776-5 "Procedure findings Narrative"
 * section[findings].entry[0] = Reference(urn:uuid:eca2bf34-9fa8-4abf-bd98-d8d49bcb1104)
-* section[impression].title = "Výsledek"
-* section[impression].code = $loinc#19005-8 "Radiology Imaging study [Impression] (narrative)"
-* section[impression].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Nález byl negativní. Trauma skeletu nepotrvzeno.</div>"
-* section[impression].text.status = #additional
+* section[impression]
+  * title = "Výsledek"
+  * code = $loinc#19005-8 "Radiology Imaging study [Impression] (narrative)"
+  * extension[note][+]
+    * valueAnnotation
+      * id = "impression-note"
+      * text = "Nález byl negativní. Trauma skeletu nepotrvzeno." 
+  * text
+    * status = #additional
+    * extension[$textLink][+]
+      * extension[htmlid].valueString = "note"
+      * extension[data].valueUri = "#impression-note"
+    * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Note:</b></td><td id=\"note\"><p>Nález byl negativní. Trauma skeletu nepotrvzeno.</p></td></tr></table></div>"
 * section[history]
   * title = "History"
   * code = $loinc#11329-0 "History general Narrative - Reported"
@@ -123,6 +143,13 @@ Usage: #example
   * emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#nilknown "Nil Known"
   * text.status = #generated
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Unavailable</div>"
+* section[recommendation]
+  * title = "Recommendations"
+  * code = $loinc#18783-1 "Radiology Study recommendation (narrative)"
+  * emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#nilknown "Nil Known"
+  * text
+    * status = #generated
+    * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Nil Known</div>"
 
 Instance: cz-encounterrtg-example
 InstanceOf: CZ_Encounter
@@ -354,8 +381,12 @@ Usage: #example
 Description: "Diagnostic report of RTG Imaging report"
 Title: "Diagnostic report: RTG Imaging report"
 * id = "bd3e7b78-bfaa-428e-9168-8cd29cf54aba"
+* identifier
+  * system = "http://example.org/myhospital/reportidentifiers"
+  * value = "o32u4js8492fs" // invented - not there in the report* 
 * extension[composition].valueReference = Reference(urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9)
-* category[imaging] = $loinc#18748-4 "Diagnostic imaging study"
+* category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
+* category[document-category] = $loinc#18726-0
 * status = #final
 * code = $sct#168500000 "Radiology result normal"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)

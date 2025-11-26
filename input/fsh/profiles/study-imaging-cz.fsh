@@ -4,7 +4,6 @@ Id: cz-study-imaging
 Title: "Imaging Study (CZ)"
 Description: """This profile represents an imaging study instance."""
 
-* insert SetFmmandStatusRule( 1, draft )
 * obeys imagingstudy-01
 
 * identifier
@@ -57,7 +56,7 @@ Parent: Identifier
 Id: accession-number-identifier
 Title: "Imaging Accession Number Identifier"
 Description: "This profile on Identifier represents the Accession Number for the Imaging Order."
-* insert SetFmmandStatusRule( 1, draft )
+
 * system 1..1
 * value 1..1
 * type 1..1

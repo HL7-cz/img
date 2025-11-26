@@ -19,11 +19,16 @@ Description: "Diagnostic Report used to represent an entry of a Imaging Report, 
 * basedOn only Reference(CZ_ImagingOrderInformation)
 //* basedOn.extension contains DiagnosticReportBasedOnRequisition named basedOn-requisition 0..*
 * status ^short = "Status of this report"
-* category 1..*
+* category 1..*  
   * insert SliceElement( #value, $this )
-* category contains imaging 1..1
-* category[imaging] = $loinc#18748-4 "Diagnostic imaging study"
-* category[imaging].coding 1..1
+* category contains
+  diagnostic-service 0..1 and
+  document-category 1..1
+* category[diagnostic-service] from $diagnostic-service-sections (required)
+* category[document-category] from DocumentCategory (required)
+  * ^short = "Document Category"
+  * ^definition = "A categorization for the type of document."
+  * coding = $loinc#18726-0
 * code 1..
 * subject 1..
 * subject only Reference(CZ_PatientCore or Patient or Group or Location or CZ_DeviceObserver or CZ_MedicalDevice)

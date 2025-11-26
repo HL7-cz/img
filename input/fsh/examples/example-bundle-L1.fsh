@@ -32,13 +32,13 @@ Usage: #example
 * entry[organization].fullUrl = "urn:uuid:fe9e7a29-ec24-4d54-8c7f-52a4aba7b7b4"
 * entry[organization].resource = cz-organizationwithlogo3-example
 
-* entry[organization][+].fullUrl = "urn:uuid:a4641bd0-34af-4038-a7db-872d08a54df9" 
+* entry[organization][+].fullUrl = "urn:uuid:a4641bd0-34af-4038-a7db-872d08a54df9"
 * entry[organization][=].resource = Organization-L1-HOSP
 
-* entry[organization][+].fullUrl = "urn:uuid:af2b3114-e872-43b9-9875-cceb39122f7f" 
+* entry[organization][+].fullUrl = "urn:uuid:af2b3114-e872-43b9-9875-cceb39122f7f"
 * entry[organization][=].resource = Organization-L1-Odd
 
-* entry[organization][+].fullUrl = "urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1" 
+* entry[organization][+].fullUrl = "urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1"
 * entry[organization][=].resource = Organization-L1
 
 Instance: cz-examplel1-composition
@@ -178,7 +178,7 @@ Description: "Diagnostic report of L1 Imaging report"
 Title: "Diagnostic report: L1 Imaging report"
 * id = "8a4c6711-6192-4519-a085-77fcf36d81c3"
 * extension[composition].valueReference = Reference(urn:uuid:6390b57a-0fe7-488b-b948-eda546875bc0)
-* category[imaging] = $loinc#18748-4 "Diagnostic imaging study"
+* category[imaging] = $loinc#18726-0 "Nálezy zobrazovacího komplementu"
 * status = #final
 * code = $sct#168500000 "Radiology result normal"
 * subject = Reference(urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57)

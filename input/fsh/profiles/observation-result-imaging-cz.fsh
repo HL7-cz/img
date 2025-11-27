@@ -7,7 +7,7 @@ Description: """This profile constrains the Observation resource to represent re
 This observation may represent the result of a imaging report
 """
 
-
+* insert ImposeProfile($Observation-eu-img,0)
 
 * ^purpose = "This profile constrains the Observation resource to represent a imaging report."
 * . ^short = "Imaging result for a imaging report"
@@ -26,20 +26,20 @@ This observation may represent the result of a imaging report
 * partOf ^mustSupport = false
 * status MS
 
-* extension contains $observation-triggeredBy-r5 named triggeredBy-r5 0..*
-* extension[triggeredBy-r5].extension[observation] ^short = "Triggering observation."
-* extension[triggeredBy-r5].extension[type] ^short = "The type of trigger" // from http://hl7.org/fhir/ValueSet/observation-triggeredbytype
+//* extension contains $observation-triggeredBy-r5 named triggeredBy-r5 0..*
+//* extension[triggeredBy-r5].extension[observation] ^short = "Triggering observation."
+//* extension[triggeredBy-r5].extension[type] ^short = "The type of trigger" // from http://hl7.org/fhir/ValueSet/observation-triggeredbytype
 
-* extension contains $observation-value-r5 named value-r5 0..1
-* extension[value-r5]
-  * value[x] only Attachment
-  * ^short = "only for result of type Attachment"
+//* extension contains $observation-value-r5 named value-r5 0..1
+//* extension[value-r5]
+//  * value[x] only Attachment
+ // * ^short = "only for result of type Attachment"
 
 * basedOn
   * insert SliceElement( #type, $this )
 * basedOn only Reference(CarePlan or DeviceRequest or ImmunizationRecommendation or MedicationRequest or NutritionOrder or ServiceRequest or CZ_ImagingOrderInformation)
-* basedOn contains imorderaccession 0..1
-* basedOn[imorderaccession] only Reference( CZ_ImagingOrderInformation )
+* basedOn contains ServiceRequestOrderImagingAccession 0..*
+* basedOn[ServiceRequestOrderImagingAccession] only Reference( CZ_ImagingOrderInformation )
   * identifier 1..1
   * identifier only CZ_AccessionNumberIdentifier
 

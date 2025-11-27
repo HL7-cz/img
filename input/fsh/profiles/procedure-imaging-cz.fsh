@@ -3,7 +3,8 @@ Parent: Procedure
 Id: cz-procedure-imaging
 Title: "Procedure: Imaging Report (CZ)"
 Description: "This profile on Procedure represents the imaging procedure for the scope of the Czech national interoperability project."
-* insert SetFmmandStatusRule( 1, draft )
+
+* insert ImposeProfile($Procedure-eu-img,0)
 
 * code 1..1
 * code from CZ_ProcedureTypeVs (extensible)

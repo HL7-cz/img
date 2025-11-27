@@ -58,14 +58,14 @@ Usage: #example
 * date = "2025-05-20T12:02:00+01:00"
 * author = Reference(urn:uuid:daa3335b-db80-41a5-897e-ec0dd615ee9d)
 * title = "Imaging Report - Rentgen Ing. Králíka"
-* custodian = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1)
+* custodian = Reference(urn:uuid:a4641bd0-34af-4038-a7db-872d08a54df9)
 * confidentiality = #N
 * language = #cs
 * type = $loinc#24686-8 
 * category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
 * category[document-category] = $loinc#18726-0
 * encounter = Reference(urn:uuid:4d2447db-6692-40cd-a440-7544d48caa07)
-* extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba)
+* extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:8a4c6711-6192-4519-a085-77fcf36d81c3)
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Imaging Report - Rentgen Ing. Králíka</h2><p>RTG pacienta Ing. Králíka v L1 úrovni</p></div>"
 * section[history]

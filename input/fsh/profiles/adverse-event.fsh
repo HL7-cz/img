@@ -4,6 +4,8 @@ Id: cz-adverseEvent
 Title: "Adverse event: Imaging Report (CZ)"
 Description: "Czech profile for adverse event. "
 
+* insert ImposeProfile($AdverseEvent-eu-img,0)
+
 * subject only Reference(CZ_PatientCore or CZ_PractitionerCore or Group or CZ_RelatedPersonCore)
 * location only Reference(CZ_LocationCore)
 * recorder only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore)

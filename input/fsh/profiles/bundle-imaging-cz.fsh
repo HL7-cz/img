@@ -31,7 +31,7 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * . ^short = "Imaging Report Bundle"
 * . ^definition = "Imaging Report Bundle. \r\nA container for a collection of resources in the imaging report document."
 
-
+* insert ImposeProfile($Bundle-eu-img,0)
 
 * obeys dr-comp-subj
 * obeys one-comp

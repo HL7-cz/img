@@ -105,13 +105,13 @@ Usage: #example
 * status = #final
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * date = "2025-05-20T12:02:00+01:00"
-* author = Reference(urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c)
+* author = Reference(urn:uuid:792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0)
 * type = $loinc#87905-6
 * category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
 * category[document-category] = $loinc#18726-0
 * title = "Zpráva z vyšetření PET+CT hlavy"
 * encounter = Reference(urn:uuid:7023b84e-47bb-405c-be46-2c161c6ba8d5)
-* custodian = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1)
+* custodian = Reference(urn:uuid:a4641bd0-34af-4038-a7db-872d08a54df9)
 * language = #cs
 * confidentiality = #N
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:9c23deff-bf1d-46f6-bd0e-005e52b42121)
@@ -325,7 +325,7 @@ Description: "Imaging order: PET+CT Imaging report"
 * identifier[=].value = "OBJ123456"
 * status = #active
 * intent = #order
-* category = $sct#363679005 	"Imaging" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category[imaging] = $sct#363679005
 * performer = Reference(urn:uuid:723b5e24-133c-4e9a-aefb-5c14f5b2eac3)
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * insurance = Reference(urn:uuid:be4e7f9a-2771-4aa1-bcee-c386f9ba7eaa)
@@ -335,7 +335,7 @@ Description: "Imaging order: PET+CT Imaging report"
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">PET+CT mozku pro diferenciální dg. tumoru a radiační nekrozy</div>"
 * authoredOn = "2022-10-06T12:02:00+01:00"
 * reasonReference = Reference(urn:uuid:f06ac619-db0b-47d1-ae16-003a2be66760) // Reference to Condition - Reason For Admission
-* requester = Reference(urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c)
+* requester = Reference(urn:uuid:792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0)
 
 Instance: cz-examplepetct-weightObservation
 InstanceOf: Observation
@@ -348,6 +348,7 @@ Usage: #example
 * code = $loinc#29463-7 "Body weight"
 * category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 * subject =  Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
+* performer = Reference(urn:uuid:792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0)
 * valueQuantity
   * value = 65
   * unit = "kg"
@@ -365,6 +366,7 @@ Usage: #example
 * code = $loinc#8302-2 "Body height"
 * category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 * subject =  Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
+* performer = Reference(urn:uuid:792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0)
 * valueQuantity
   * value = 163
   * unit = "cm"

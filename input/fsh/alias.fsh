@@ -42,9 +42,10 @@ Alias: $composition.version-r5            = http://hl7.org/fhir/5.0/StructureDef
 Alias: $information-recipient             = http://hl7.eu/fhir/StructureDefinition/information-recipient
 Alias: $diagnostic-report-composition-r5  = http://hl7.org/fhir/5.0/StructureDefinition/extension-DiagnosticReport.composition
 Alias: $allergy-intolerance-certainty-url = http://hl7.org/fhir/StructureDefinition/allergyintolerance-certainty
-Alias: $artifact-title-url                = http://hl7.org/fhir/StructureDefinition/artifact-description
-Alias: $artifact-description-url          = http://hl7.org/fhir/StructureDefinition/artifact-title
-Alias: $artifact-version-url              = http://hl7.org/fhir/StructureDefinition/artifact-version
+Alias: $artifact-description-url              = http://hl7.org/fhir/StructureDefinition/artifact-title
+Alias: $artifact-related-artifact-url         = http://hl7.org/fhir/StructureDefinition/artifact-relatedArtifact
+Alias: $artifact-title-url                    = http://hl7.org/fhir/StructureDefinition/artifact-description
+Alias: $artifact-version-url                  = http://hl7.org/fhir/StructureDefinition/artifact-version|5.3.0-ballot
 Alias: $data-absent-reason-url            = http://hl7.org/fhir/StructureDefinition/data-absent-reason
 Alias: $diagnostic-report-composition-url = http://hl7.org/fhir/StructureDefinition/extension-DiagnosticReport.composition
 Alias: $event-basedOn-url                 = http://hl7.org/fhir/StructureDefinition/event-basedOn|4.0.1
@@ -59,7 +60,7 @@ Alias: $artifact-version-url-5            = http://hl7.org/fhir/StructureDefinit
 Alias: $observation-triggeredBy-r5        = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.triggeredBy
 Alias: $observation-value-r5              = http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.value[x]
 Alias: $service-request-body-structure-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-ServiceRequest.bodyStructure
-Alias: $bodySite-reference                = http://hl7.org/fhir/StructureDefinition/bodySite|5.2.0
+Alias: $bodySite-reference                = http://hl7.org/fhir/StructureDefinition/bodySite
 Alias: $cz-organization-logo              = https://hl7.cz/fhir/core/StructureDefinition/cz-organization-logo
 Alias: $composition.version-r5            = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version
 Alias: $patient-animal                    = http://hl7.org/fhir/StructureDefinition/patient-animal
@@ -67,6 +68,8 @@ Alias: $hl7euDiagnosticReference          = http://hl7.eu/fhir/extensions/Struct
 Alias: $CrossVersion-Composition.version  = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version
 Alias: $textLink                          = http://hl7.org/fhir/StructureDefinition/textLink
 Alias: $note-url                          = http://hl7.org/fhir/StructureDefinition/note|5.3.0-ballot
+
+Alias: $CrossVersion-R5-ImagingSelection-for-R4 = http://hl7.org/fhir/4.0/StructureDefinition/R5-ImagingSelection-for-R4
 
 //Alias: $server = http://hl7.cz/fhir/img/actor-server-img
 Alias: $creatorL1 = https://hl7.cz/fhir/core/ActorDefinition/actor-creator-L1
@@ -79,3 +82,15 @@ Alias: $consumerL3 = https://hl7.cz/fhir/core/ActorDefinition/actor-consumer-L3
 // EU R4 imaging profiles
 Alias: $Composition-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/CompositionEuImaging
 Alias: $DiagnosticReport-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/DiagnosticReportEuImaging
+Alias: $Observation-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/ObservationFindingEuImaging
+Alias: $AdverseEvent-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/AdverseEventEuImaging
+Alias: $ServiceRequest-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/ServiceRequestOrderEuImaging
+Alias: $Bundle-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/BundleReportEuImaging
+Alias: $ObservationRadition-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/ObservationRadiationDoseEuImaging
+Alias: $ImagingStudy-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImagingStudyEuImaging
+Alias: $ImagingSelection-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImagingSelectionEuImaging
+Alias: $SRImagingSelection-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/SrInstanceImagingSelectionEuImaging
+Alias: $ImagingSelectionKeyImage-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImagingSelectionKeyImageEuImaging
+Alias: $KeyImageDocumentReference-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/DocumentReferenceKeyImageEuImaging
+Alias: $Procedure-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/ProcedureEuImaging
+

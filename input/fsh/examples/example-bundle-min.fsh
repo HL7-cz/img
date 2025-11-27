@@ -86,7 +86,7 @@ Usage: #example
 * title = "Imaging Report - Rentgen Ing. Králíka"
 * confidentiality = #N
 * language = #cs
-* custodian = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1)
+* custodian = Reference(urn:uuid:a4641bd0-34af-4038-a7db-872d08a54df9)
 * type = $loinc#24686-8 
 * category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
 * category[document-category] = $loinc#18726-0
@@ -270,7 +270,7 @@ Description: "Imaging order for Plain X-ray"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category = $sct#363679005 	"Imaging" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category[imaging] = $sct#363679005
 * performer = Reference(urn:uuid:03903bc5-4ca0-4c55-8e4a-b256da9f788d)
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * insurance = Reference(urn:uuid:6a2b30b1-4ba7-4a24-adcf-beefa0eface1)

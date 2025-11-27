@@ -4,6 +4,8 @@ Id: cz-study-imaging
 Title: "Imaging Study (CZ)"
 Description: """This profile represents an imaging study instance."""
 
+* insert ImposeProfile($ImagingStudy-eu-img,0)
+
 * obeys imagingstudy-01
 
 * identifier

@@ -120,13 +120,6 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * entry contains adverseEvent 0..*
 * entry[adverseEvent].resource only CZ_AdverseEvent
 
-* entry contains encounter 1..*
-* entry[encounter].resource only CZ_Encounter
-
-//* entry contains presentedForm 0..*
-//* entry[presentedForm].resource only DocumentReference
-//* entry[presentedForm].resource ^type.profile[0] = "https://hl7.cz/fhir/cz-core/StructureDefinition/cz-presented-form"
-
 /*
 * signature ^short = "Report Digital Signature"
   * type ^short = "Digital Signature Purposes"

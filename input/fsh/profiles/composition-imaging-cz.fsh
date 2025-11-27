@@ -111,7 +111,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^definition = "A categorization for the type of document."
   * coding = $loinc#18726-0
 
-* encounter 1..1
+* encounter 0..1
 * encounter only Reference(CZ_Encounter)
   * ^short = "Context that defines the Image Report"
 

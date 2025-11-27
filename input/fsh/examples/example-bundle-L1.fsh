@@ -23,9 +23,6 @@ Usage: #example
 * entry[practitionerRole].fullUrl = "urn:uuid:daa3335b-db80-41a5-897e-ec0dd615ee9d"
 * entry[practitionerRole].resource = cz-examplel1-practitionerRole
 
-* entry[encounter].fullUrl = "urn:uuid:4d2447db-6692-40cd-a440-7544d48caa07"
-* entry[encounter].resource = cz-encounterl1-example
-
 * entry[imagingStudy].fullUrl = "urn:uuid:f5e876ca-1bbe-47a1-9bc5-b725b68a5ef8"
 * entry[imagingStudy].resource = cz-examplel1-imagingStudy
 
@@ -56,7 +53,8 @@ Usage: #example
 * status = #final
 * subject = Reference(urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57)
 * date = "2025-05-20T12:02:00+01:00"
-* author = Reference(urn:uuid:daa3335b-db80-41a5-897e-ec0dd615ee9d)
+* author[author] = Reference(urn:uuid:daa3335b-db80-41a5-897e-ec0dd615ee9d)
+* author[organization] = Reference(urn:uuid:fe9e7a29-ec24-4d54-8c7f-52a4aba7b7b4)
 * title = "Imaging Report - Rentgen Ing. Králíka"
 * custodian = Reference(urn:uuid:a4641bd0-34af-4038-a7db-872d08a54df9)
 * confidentiality = #N
@@ -64,7 +62,6 @@ Usage: #example
 * type = $loinc#24686-8 
 * category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
 * category[document-category] = $loinc#18726-0
-* encounter = Reference(urn:uuid:4d2447db-6692-40cd-a440-7544d48caa07)
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:8a4c6711-6192-4519-a085-77fcf36d81c3)
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Imaging Report - Rentgen Ing. Králíka</h2><p>RTG pacienta Ing. Králíka v L1 úrovni</p></div>"
@@ -129,19 +126,6 @@ Title: "Imaging study: RTG Imaging report"
 * series.uid = "1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.1.1"
 * series.modality = $dcm#DX "Digital Radiography"
 * modality = $dcm#DX "Digital Radiography"
-
-Instance: cz-encounterl1-example
-InstanceOf: CZ_Encounter
-Usage: #example
-Description: "Encounter"
-* id = "4d2447db-6692-40cd-a440-7544d48caa07"
-* identifier[+].system = "http://example.org/hospital"
-* identifier[=].value = "ku-123456790"
-* status = #in-progress
-* class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-* class.code = #AMB
-* type.text = "RTG pacienta Kralika"
-* serviceProvider = Reference(urn:uuid:fe9e7a29-ec24-4d54-8c7f-52a4aba7b7b4)
 
 Instance: cz-organizationwithlogo3-example
 InstanceOf: cz-organization-core

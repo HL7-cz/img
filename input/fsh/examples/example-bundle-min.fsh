@@ -42,9 +42,6 @@ Usage: #example
 * entry[coverage].fullUrl = "urn:uuid:6a2b30b1-4ba7-4a24-adcf-beefa0eface1"
 * entry[coverage].resource = cz-examplertg-coverage
 
-* entry[encounter].fullUrl = "urn:uuid:20bd86a1-060b-4161-a063-183069efc54b"
-* entry[encounter].resource = cz-encounterrtg-example
-
 * entry[documentReference].fullUrl = "urn:uuid:c23fc55c-e576-4fc4-8526-6f31f0b9377c"
 * entry[documentReference].resource = cz-logo-example
 
@@ -82,7 +79,8 @@ Usage: #example
 * status = #final
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * date = "2025-05-20T12:02:00+01:00"
-* author = Reference(urn:uuid:aafd64f9-36ab-4583-8088-efb93b44db9b)
+* author[author] = Reference(urn:uuid:aafd64f9-36ab-4583-8088-efb93b44db9b)
+* author[organization] = Reference(urn:uuid:e96e9bd5-0695-4725-acb2-c731aa071a55)
 * title = "Imaging Report - Rentgen Ing. Králíka"
 * confidentiality = #N
 * language = #cs
@@ -90,7 +88,6 @@ Usage: #example
 * type = $loinc#24686-8 
 * category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
 * category[document-category] = $loinc#18726-0
-* encounter = Reference(urn:uuid:20bd86a1-060b-4161-a063-183069efc54b)
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba)
 * section[order].title = "Requested imaging studies information Document"
 * section[order].code = $loinc#55115-0 "Requested imaging studies information Document"
@@ -150,19 +147,6 @@ Usage: #example
   * text
     * status = #generated
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Nil Known</div>"
-
-Instance: cz-encounterrtg-example
-InstanceOf: CZ_Encounter
-Usage: #example
-Description: "Encounter"
-* id = "20bd86a1-060b-4161-a063-183069efc54b"
-* identifier[+].system = "http://example.org/hospital"
-* identifier[=].value = "ku-123456790"
-* status = #in-progress
-* class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-* class.code = #AMB
-* type.text = "RTG pacientky Jany Example"
-* serviceProvider = Reference(urn:uuid:e96e9bd5-0695-4725-acb2-c731aa071a55)
 
 Instance: cz-organizationwithlogo2-example
 InstanceOf: cz-organization-core

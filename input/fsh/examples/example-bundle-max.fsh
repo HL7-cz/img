@@ -71,9 +71,6 @@ Usage: #example
 * entry[medication].fullUrl = "urn:uuid:0987d1c9-0d9a-4d33-8efc-eee6a8c63059"
 * entry[medication].resource = cz-examplepetct-medication
 
-* entry[encounter].fullUrl = "urn:uuid:7023b84e-47bb-405c-be46-2c161c6ba8d5"
-* entry[encounter].resource = cz-encounter-example
-
 * entry[documentReference][+].fullUrl = "urn:uuid:040eb849-a513-4d74-b3f3-d2f246a26877"
 * entry[documentReference][=].resource = cz-logo2-example
 
@@ -105,12 +102,12 @@ Usage: #example
 * status = #final
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * date = "2025-05-20T12:02:00+01:00"
-* author = Reference(urn:uuid:792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0)
+* author[author] = Reference(urn:uuid:792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0)
+* author[organization] = Reference(urn:uuid:821077d6-ce17-4602-b3ad-d4bef845a950)
 * type = $loinc#87905-6
 * category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
 * category[document-category] = $loinc#18726-0
 * title = "Zpráva z vyšetření PET+CT hlavy"
-* encounter = Reference(urn:uuid:7023b84e-47bb-405c-be46-2c161c6ba8d5)
 * custodian = Reference(urn:uuid:a4641bd0-34af-4038-a7db-872d08a54df9)
 * language = #cs
 * confidentiality = #N
@@ -182,20 +179,6 @@ Nenalézáme žádná další jasná ložiska porušené hematoencefalické bari
   * emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#nilknown "Nil Known"
   * text.status = #generated
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Unavailable</div>"
-
-
-Instance: cz-encounter-example
-InstanceOf: CZ_Encounter
-Usage: #example
-Description: "Encounter"
-* id = "7023b84e-47bb-405c-be46-2c161c6ba8d5"
-* identifier[+].system = "http://example.org/hospital"
-* identifier[=].value = "ku-123456790"
-* status = #in-progress
-* class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-* class.code = #AMB
-* type.text = "PET/CT pacientky Jany Example"
-* serviceProvider = Reference(urn:uuid:821077d6-ce17-4602-b3ad-d4bef845a950)
 
 Instance: cz-organizationwithlogo-example
 InstanceOf: cz-organization-core

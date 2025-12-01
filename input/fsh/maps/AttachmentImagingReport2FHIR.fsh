@@ -54,7 +54,7 @@ Usage: #definition
 * group[=].element[=].display = "A.4 - Attachments"
 * group[=].element[=].target.code = #DiagnosticReport.media.link
 * group[=].element[=].target.display = "If it is additional MEDIA attachments"
-* group[=].element[=].target.equivalence = #realtedto		
+* group[=].element[=].target.equivalence = #relatedto		
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/AttachmentsCz"
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-media-img"			
 * group[=].element[+].code = #Attachments.contentType

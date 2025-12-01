@@ -146,7 +146,6 @@ The `text` field of each section SHALL contain a textual representation of all l
     recommendation 0..1 and
     communication 0..1 and
     complications 0..* and
-    attachments 0..* and
     report 0..1
 
 
@@ -296,13 +295,14 @@ The `text` field of each section SHALL contain a textual representation of all l
   * author only Reference(CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
   * entry 1..*
   * entry only Reference(CZ_AdverseEvent)
-
-* section[attachments]  // sekce obsahující referenci na DocumentReference
+/*
+  * section[attachments]  // sekce obsahující referenci na DocumentReference
   * ^short = "Attachments"
   * code = $loinc#34109-9 //"Note - asi jen dočasný kód TODO: Najít vhodný kód"
   * author only Reference(CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
   * entry 1..*
   * entry only Reference(CZ_Logo or DocumentReference)
+*/
 
 Invariant: text-or-section
 Description: "A Composition SHALL have either text, at least one section, or both."

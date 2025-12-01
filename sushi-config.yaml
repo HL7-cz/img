@@ -344,7 +344,6 @@ groups:
     resources:
       - StructureDefinition/cz-address-obl-img
       - StructureDefinition/cz-adverseEvent-obl-img
-      - StructureDefinition/cz-attachment-obl-img
       - StructureDefinition/cz-bundle-obl-img
       - StructureDefinition/cz-carePlan-obl-img
       - StructureDefinition/cz-composition-obl-img
@@ -353,6 +352,7 @@ groups:
       - StructureDefinition/cz-medicalDevice-obl-img
       - StructureDefinition/cz-diagnosticReport-obl-img
       - StructureDefinition/cz-keyImageDocumentReference-obl-img
+      - StructureDefinition/cz-media-obl-img
       - StructureDefinition/cz-medication-obl-img
       - StructureDefinition/cz-medicationAdministration-obl-img
       - StructureDefinition/cz-observationResult-obl-img

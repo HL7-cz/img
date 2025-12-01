@@ -42,7 +42,6 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * section[recommendation] insert OblCreator(#SHALL:able-to-populate,L2)
 * section[communication] insert OblCreator(#MAY:able-to-populate,L2)
 * section[complications] insert OblCreator(#SHOULD:able-to-populate,L2)
-* section[attachments] insert OblCreator(#SHOULD:able-to-populate,L2)
 * type insert OblCreator(#SHALL:able-to-populate,L2)
 * text insert OblCreator(#SHALL:able-to-populate,L2)
 
@@ -69,7 +68,6 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * section[recommendation] insert OblCreator(#SHALL:able-to-populate,L3)
 * section[communication] insert OblCreator(#MAY:able-to-populate,L3)
 * section[complications] insert OblCreator(#SHOULD:able-to-populate,L3)
-* section[attachments] insert OblCreator(#SHALL:able-to-populate,L3)
 * type insert OblCreator(#SHALL:able-to-populate,L3)
 * text insert OblCreator(#SHALL:able-to-populate,L3)
 
@@ -109,7 +107,6 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * section[recommendation] insert OblConsumer(#SHALL:display,L2)
 * section[communication] insert OblConsumer(#SHOULD:display,L2)
 * section[complications] insert OblConsumer(#SHOULD:display,L2)
-* section[attachments] insert OblConsumer(#SHALL:display,L2)
 * type insert OblConsumer(#SHALL:display,L2)
 * text insert OblConsumer(#SHALL:display,L2)
 
@@ -135,6 +132,5 @@ Description: "This profile defines obligations for a composition in FHIR for the
 * section[recommendation] insert OblConsumer(#SHALL:display,L3)
 * section[communication] insert OblConsumer(#SHOULD:display,L3)
 * section[complications] insert OblConsumer(#SHOULD:display,L3)
-* section[attachments] insert OblConsumer(#SHALL:display,L3)
 * type insert OblConsumer(#SHALL:display,L3)
 * text insert OblConsumer(#SHALL:display,L3)

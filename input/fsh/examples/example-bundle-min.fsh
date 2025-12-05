@@ -372,6 +372,7 @@ Title: "Diagnostic report: RTG Imaging report"
 * category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
 * category[document-category] = $loinc#18726-0
 * status = #final
+* performer = Reference(urn:uuid:e96e9bd5-0695-4725-acb2-c731aa071a55)
 * code = $sct#168500000 "Radiology result normal"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * result.display = "Bez nálezu"

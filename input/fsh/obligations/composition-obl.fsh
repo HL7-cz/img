@@ -6,8 +6,6 @@ Description: "This profile defines obligations for a composition in FHIR for the
 
 * subject insert OblCreator(#SHALL:able-to-populate,L1)
 * date insert OblCreator(#SHALL:able-to-populate,L1)
-* meta insert OblCreator(#SHALL:able-to-populate,L1)
-//* identifier insert OblCreator(#SHALL:able-to-populate,L1)
 * category insert OblCreator(#SHALL:able-to-populate,L1)
 * status insert OblCreator(#SHALL:able-to-populate,L1)
 * title insert OblCreator(#SHALL:able-to-populate,L1)
@@ -21,8 +19,6 @@ Description: "This profile defines obligations for a composition in FHIR for the
 
 * subject insert OblCreator(#SHALL:able-to-populate,L2)
 * date insert OblCreator(#SHALL:able-to-populate,L2)
-* meta insert OblCreator(#SHALL:able-to-populate,L2)
-//* identifier insert OblCreator(#SHALL:able-to-populate,L2)
 * category insert OblCreator(#SHALL:able-to-populate,L2)
 * status insert OblCreator(#SHALL:able-to-populate,L2)
 * title insert OblCreator(#SHALL:able-to-populate,L2)
@@ -47,8 +43,6 @@ Description: "This profile defines obligations for a composition in FHIR for the
 
 * subject insert OblCreator(#SHALL:able-to-populate,L3)
 * date insert OblCreator(#SHALL:able-to-populate,L3)
-* meta insert OblCreator(#SHALL:able-to-populate,L3)
-//* identifier insert OblCreator(#SHALL:able-to-populate,L3)
 * category insert OblCreator(#SHALL:able-to-populate,L3)
 * status insert OblCreator(#SHALL:able-to-populate,L3)
 * title insert OblCreator(#SHALL:able-to-populate,L3)
@@ -73,8 +67,6 @@ Description: "This profile defines obligations for a composition in FHIR for the
 
 * subject insert OblConsumer(#SHALL:display,L1)
 * date insert OblConsumer(#SHALL:display,L1)
-* meta insert OblConsumer(#SHALL:display,L1)
-//* identifier insert OblConsumer(#SHALL:display,L1)
 * category insert OblConsumer(#SHALL:display,L1)
 * status insert OblConsumer(#SHALL:display,L1)
 * title insert OblConsumer(#SHALL:display,L1)
@@ -87,8 +79,6 @@ Description: "This profile defines obligations for a composition in FHIR for the
 
 * subject insert OblConsumer(#SHALL:display,L2)
 * date insert OblConsumer(#SHALL:display,L2)
-* meta insert OblConsumer(#SHALL:display,L2)
-//* identifier insert OblConsumer(#SHALL:display,L2)
 * category insert OblConsumer(#SHALL:display,L2)
 * status insert OblConsumer(#SHALL:display,L2)
 * title insert OblConsumer(#SHALL:display,L2)
@@ -112,8 +102,6 @@ Description: "This profile defines obligations for a composition in FHIR for the
 
 * subject insert OblConsumer(#SHALL:display,L3)
 * date insert OblConsumer(#SHALL:display,L3)
-* meta insert OblConsumer(#SHALL:display,L3)
-//* identifier insert OblConsumer(#SHALL:display,L3)
 * category insert OblConsumer(#SHALL:display,L3)
 * status insert OblConsumer(#SHALL:display,L3)
 * title insert OblConsumer(#SHALL:display,L3)

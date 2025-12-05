@@ -255,7 +255,7 @@ menu:
     Copyright (en): copyright.html
     Copyright (cs): copyright-cs.html
   Artifacts: artifacts.html
-  IG IMG EU: https://build.fhir.org/ig/hl7-eu/imaging/index.html
+  IG IMG EU: https://build.fhir.org/ig/hl7-eu/imaging-r4/en/
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

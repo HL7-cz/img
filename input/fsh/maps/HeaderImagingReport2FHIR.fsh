@@ -404,3 +404,10 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = ""
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/HeaderImagingReportCz"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-diagnostic-report"
+* group[=].element[+].code = #AuthorCz.organization
+* group[=].element[=].display = "A.1.5.4 - Author organisation"
+* group[=].element[=].target.code = #CZ_DiagnosticReport.performer					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto	

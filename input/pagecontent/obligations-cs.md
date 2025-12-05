@@ -49,7 +49,7 @@ Byli specifikováni aktéři ve těchto rolích:
 10. Pravidla pro profil zprávy ze zobrazovacích metod ([CZ_DiagnosticReportObligationsImg](StructureDefinition-cz-diagnosticReport-obl-img.html))
 11. Pravidla pro profil výsledku vyšetření ([CZ_ObservationResultObligationsImg](StructureDefinition-cz-observationResult-obl-img.html))
 12. Pravidla pro profil Reakce ([CZ_AdverseEventObligationsImg](StructureDefinition-cz-adverseEvent-obl-img.html))
-13. Pravidla pro profil Příloha ([CZ_AttachmentObligationsImg](StructureDefinition-cz-attachment-obl-img.html))
+13. Pravidla pro profil Příloha ([CZ_MediaObligationsImg](StructureDefinition-cz-media-obl-img.html))
 14. Pravidla pro profil Plán péče ([CZ_CarePlanObligationsImg](StructureDefinition-cz-carePlan-obl-img.html))
 15. Pravidla pro profil Stav ([CZ_ConditionObligationsImg](StructureDefinition-cz-condition-obl-img.html))
 16. Pravidla pro profil Zdravotnický prostředek ([CZ_MedicalDeviceObligationsImg](StructureDefinition-cz-medicalDevice-obl-img.html))

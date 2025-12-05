@@ -47,7 +47,7 @@ Actors were specified in these roles:
 10. Obligations for profile Diagnostic Report ([CZ_DiagnosticReportObligationsImg](StructureDefinition-cz-diagnosticReport-obl-img.html))
 11. Obligations for profile Observation Result ([CZ_ObservationResultObligationsImg](StructureDefinition-cz-observationResult-obl-img.html))
 12. Obligations for profile Adverse Reaction ([CZ_AdverseEventObligationsImg](StructureDefinition-cz-adverseEvent-obl-img.html))
-13. Obligations for profile Attachment ([CZ_AttachmentObligationsImg](StructureDefinition-cz-attachment-obl-img.html))
+13. Obligations for profile Media ([CZ_MediaObligationsImg](StructureDefinition-cz-media-obl-img.html))
 14. Obligations for profile Care plan ([CZ_CarePlanObligationsImg](StructureDefinition-cz-carePlan-obl-img.html))
 15. Obligations for profile Condition ([CZ_ConditionObligationsImg](StructureDefinition-cz-condition-obl-img.html))
 16. Obligations for profile Medical device ([CZ_MedicalDeviceObligationsImg](StructureDefinition-cz-medicalDevice-obl-img.html))

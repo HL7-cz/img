@@ -5,7 +5,7 @@ Title:    "Specimen: Obligations"
 Description: "This profile defines obligations for a specimen in FHIR for the purpose of this guide."
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
-* insert SetFmmandStatusRule ( 0, informative)
+
 
 * identifier insert OblCreator(#SHOULD:able-to-populate,L2)
 * subject insert OblCreator(#SHOULD:able-to-populate,L2)

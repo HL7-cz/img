@@ -52,38 +52,38 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-diagnostic-report"	
 * group[=].element[+].code = #Attachments
 * group[=].element[=].display = "A.4 - Attachments"
-* group[=].element[=].target.code = #DiagnosticReport.media.link.content.attachment
+* group[=].element[=].target.code = #DiagnosticReport.media.link
 * group[=].element[=].target.display = "If it is additional MEDIA attachments"
-* group[=].element[=].target.equivalence = #equivalent		
+* group[=].element[=].target.equivalence = #relatedto		
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/AttachmentsCz"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-attachment"			
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-media-img"			
 * group[=].element[+].code = #Attachments.contentType
 * group[=].element[=].display = "A.4.1 - Content type of media attachments"
-* group[=].element[=].target.code = #content.contentType					
+* group[=].element[=].target.code = #CZ_MediaImg.contentType					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #Attachments.language
 * group[=].element[=].display = "A.4.2 - Language of media attachments"
-* group[=].element[=].target.code = #content.language					
+* group[=].element[=].target.code = #CZ_MediaImg.language					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Attachments.data
 * group[=].element[=].display = "A.4.3 - Data of media attachments"
-* group[=].element[=].target.code = #content.data					
+* group[=].element[=].target.code = #CZ_MediaImg.content.data					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #Attachments.url
 * group[=].element[=].display = "A.4.4 - URL of media attachments"
-* group[=].element[=].target.code = #content.url					
+* group[=].element[=].target.code = #CZ_MediaImg.url					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #Attachments.title
 * group[=].element[=].display = "A.4.5 - Title of media attachments"
-* group[=].element[=].target.code = #content.title					
+* group[=].element[=].target.code = #CZ_MediaImg.title					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Attachments.creation
 * group[=].element[=].display = "A.4.6 - Date and time of creation"
-* group[=].element[=].target.code = #content.creation				
+* group[=].element[=].target.code = #CZ_MediaImg.creation				
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	

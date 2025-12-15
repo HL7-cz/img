@@ -223,12 +223,6 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent				
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/AuthorCz"
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core"
-* group[=].element[+].code = #Header.author
-* group[=].element[=].display = "A.1.5 - Author (by whom the Hospital discharge report was/were authored). Multiple authors could be provided."
-* group[=].element[=].target.code = #Composition.author
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "Composition.author.resolve().ofType(CZ_PractitionerRoleCore)"
 * group[=].element[+].code = #AuthorCz.identifier
 * group[=].element[=].display = "A.1.5.1 - Author identifier"
 * group[=].element[=].target.code = #CZ_PractitionerRoleCore.practictioner.identifier					
@@ -239,22 +233,17 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_PractitionerRoleCore.practictioner.name					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #AuthorCz.organizationID
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/AuthorCz"
+* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-organization-core"		
+* group[=].element[+].code = #AuthorCz.organizationID			
 * group[=].element[=].display = "A.1.5.3 - Author organisation ID"
-* group[=].element[=].target.code = #CZ_PractitionerRoleCore.organization.identifier					
+* group[=].element[=].target.code = #CZ_OrganizationCore.identifier					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "If Organization"
 * group[=].element[+].code = #AuthorCz.organization
 * group[=].element[=].display = "A.1.5.4 - Author organisation"
-* group[=].element[=].target.code = #CZ_PractitionerRoleCore.organization					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto
-* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/AuthorCz"
-* group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-encounter"					
-* group[=].element[+].code = #AuthorCz.organization
-* group[=].element[=].display = "A.1.5.4 - Author organisation"
-* group[=].element[=].target.code = #CZ_Encounter.serviceProvider					
+* group[=].element[=].target.code = #CZ_OrganizationCore					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/AttesterCz"
@@ -337,23 +326,29 @@ Usage: #definition
 * group[=].element[=].display = "A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject"
 * group[=].element[=].target.code = #Composition.subject		
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent		
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Header.author
+* group[=].element[=].display = "A.1.5 - Author (by whom the Image report was/were authored). Multiple authors could be provided."
+* group[=].element[=].target.code = #Composition.author:author
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "Composition.author.resolve().ofType(CZ_PractitionerRoleCore)"
+* group[=].element[+].code = #AuthorCz.organization
+* group[=].element[=].display = "A.1.5.4 - Author organisation"
+* group[=].element[=].target.code = #CZ_Composition.author:organization					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto		
 * group[=].element[+].code = #Header.author.dateTime
 * group[=].element[=].display = "A.1.5.5 - Date Time"
 * group[=].element[=].target.code = #Composition.date					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent													
-* group[=].element[+].code = #Header.documentMetadata
-* group[=].element[=].display = "A.1.8 - Document metadata"
-* group[=].element[=].target.code = #Composition.meta					
+* group[=].element[+].code = #Header.documentMetadata.identifier
+* group[=].element[=].display = "A.1.8.1 - Document ID"
+* group[=].element[=].target.code = #Composition.identifier					
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto					
-//* group[=].element[+].code = #Header.documentMetadata.identifier
-//* group[=].element[=].display = "A.1.8.1 - Document ID"
-//* group[=].element[=].target.code = #Composition.identifier					
-//* group[=].element[=].target.display = ""
-//* group[=].element[=].target.equivalence = #equivalent					
-//* group[=].element[=].target.comment = "If it is the identifer of the document (indipendently by its versions) and not of this particular document instance."
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "If it is the identifer of the document (indipendently by its versions) and not of this particular document instance."
 * group[=].element[+].code = #Header.documentMetadata.category
 * group[=].element[=].display = "A.1.8.2 - Document category"
 * group[=].element[=].target.code = #Composition.category					
@@ -409,3 +404,10 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = ""
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/HeaderImagingReportCz"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-diagnostic-report"
+* group[=].element[+].code = #AuthorCz.organization
+* group[=].element[=].display = "A.1.5.4 - Author organisation"
+* group[=].element[=].target.code = #CZ_DiagnosticReport.performer					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto	

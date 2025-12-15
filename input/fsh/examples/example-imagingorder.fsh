@@ -8,7 +8,7 @@ Description: "Imaging order for Magnetic Resonance"
 * identifier[=].value = "27520536"
 * status = #active
 * intent = #order
-* category = $sct#363679005 	"Imaging"
+* category[imaging] = $sct#363679005
 * performer = Reference(cz-examplebase-device)
 * subject = Reference(cz-examplebase-patient)
 * bodySite = $sct#72696002

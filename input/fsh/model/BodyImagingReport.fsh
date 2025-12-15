@@ -3,7 +3,7 @@ Id: BodyImagingReportCz
 Title: "A.2 - Imaging Report body data element"
 Description: """Imaging Report body data element"""
 
-* insert SetFmmandStatusRule ( 1, draft )
+
 
 * informationAboutOrder 0..* InformationAboutOrder "A.2.1 - Information about the order" """Information about the order"""
 * reasonForAdmission 0..1 ReasonForAdmission "A.2.2 - Reason for Admission" """Reason for Admission"""

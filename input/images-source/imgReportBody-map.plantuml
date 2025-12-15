@@ -20,7 +20,6 @@ endnote
 class "cz-composition-imaging" <<Profile>> [[StructureDefinition-cz-composition-imaging.html]]
 class "cz-imagingOrderInformation" <<Profile>> [[StructureDefinition-cz-imagingOrderInformation.html]]
 class "cz-conditionImage" <<Profile>> [[StructureDefinition-cz-conditionImage.html]]
-'class "cz-encounter" <<Profile>> [[StructureDefinition-cz-encounter.html]]
 class "cz-study-imaging" <<Profile>> [[StructureDefinition-cz-study-imaging.html]]
 class "cz-procedure-imaging" <<Profile>> [[StructureDefinition-cz-procedure-imaging.html]]
 class "cz-diagnostic-report" <<Profile>> [[StructureDefinition-cz-diagnostic-report.html]]
@@ -49,7 +48,6 @@ class "cz-carePlanImage" <<Profile>> [[StructureDefinition-cz-carePlanImage.html
 '"Imaging Report Body" <|. "cz-appointment"
 '"Imaging Report Body" <|. "cz-coverage"
 "Imaging Report Body" <|. "cz-conditionImage"
-'"Imaging Report Body" <|. "cz-encounter"
 "Imaging Report Body" <|. "cz-specimen"
 '"Imaging Report Body" <|. "cz-observationImage"
 '"Imaging Report Body" <|. "cz-bodyweight"

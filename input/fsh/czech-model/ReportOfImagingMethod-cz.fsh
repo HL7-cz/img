@@ -3,7 +3,7 @@ Id: logReportOfImagingMethod
 Title: "A.2.4 - Zpráva ze zobrazovacích metod"
 Description: """Datové elementy Zprávy ze zobrazovacích metod"""
 
-* insert SetFmmandStatusRule ( 1, draft )
+
 * ^language = #cs
 
 * typModality 0..* CodeableConcept "A.2.4.1 - Typ modality" """Typ modality, která byla použita.

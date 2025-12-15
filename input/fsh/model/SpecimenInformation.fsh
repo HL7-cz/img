@@ -3,7 +3,7 @@ Id: SpecimenInformation
 Title: "A.2.3 - Sample information"
 Description: """Imaging Report - Imaging Report sample information - A.2.3 \r\nInformation about the sample if the subject of the examination is a sample."""
 
-* insert SetFmmandStatusRule ( 1, draft )
+
 * ^language = #cs
 
 * identifier 1..* Identifier "A.2.3.1 - Specimen identifier" """Sample identifier that is unique within a defined scope, e.g., identifier assigned by an ordering system, collection site, receiving site, etc."""				

@@ -5,7 +5,7 @@ Title:    "Study Imaging: Obligations"
 Description: "This profile defines obligations for a study imaging in FHIR for the purpose of this guide."
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
-* insert SetFmmandStatusRule ( 0, informative)
+
 
 * modality insert OblCreator(#SHALL:able-to-populate,L2)
 * series.bodySite insert OblCreator(#SHALL:able-to-populate,L2)

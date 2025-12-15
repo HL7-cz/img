@@ -5,7 +5,7 @@ Title:    "Care Plan: Obligations"
 Description: "This profile defines obligations for a medication in FHIR for the purpose of this guide."
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
-* insert SetFmmandStatusRule ( 0, informative)
+
 
 * title insert OblCreator(#SHALL:able-to-populate,L2)
 * description insert OblCreator(#SHALL:able-to-populate,L2) 

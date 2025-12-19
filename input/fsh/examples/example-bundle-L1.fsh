@@ -187,7 +187,7 @@ Title: "PractitionerRole Testovací"
 Description: "Author of RTG Imaging report"
 Usage: #example
 * id = "daa3335b-db80-41a5-897e-ec0dd615ee9d"
-* specialty = $sct#394914008 "Radiology"
+* specialty = $sctCZ#394914008 "Radiology"
 * practitioner = Reference(urn:uuid:fe8d7386-1b5c-493c-9f83-d2be26291fa8)
 * organization = Reference(urn:uuid:fe9e7a29-ec24-4d54-8c7f-52a4aba7b7b4)
 
@@ -237,7 +237,7 @@ Title: "Diagnostic report: L1 Imaging report"
 * category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
 * category[document-category] = $loinc#18726-0
 * status = #final
-* code = $sct#168500000 "Radiology result normal"
+* code = $sctCZ#168500000 "Radiology result normal"
 * subject = Reference(urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57)
 * result.display = "Bez nálezu"
 * performer = Reference(urn:uuid:fe9e7a29-ec24-4d54-8c7f-52a4aba7b7b4)

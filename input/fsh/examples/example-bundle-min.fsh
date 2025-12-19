@@ -84,11 +84,11 @@ Usage: #example
 * title = "Imaging Report - Rentgen Ing. Králíka"
 * confidentiality = #N
 * language = #cs
-* custodian = Reference(urn:uuid:a4641bd0-34af-4038-a7db-872d08a54df9)
-* type = $loinc#24686-8
-* category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
-* category[document-category] = $loinc#18726-0
+* custodian = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1)
+* type = $sctCZ#371527006 "Radiology report"
+* encounter = Reference(urn:uuid:20bd86a1-060b-4161-a063-183069efc54b)
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba)
+* category[document-category] = $loinc#18726-0 "Nálezy zobrazovacího komplementu"
 * section[order].title = "Requested imaging studies information Document"
 * section[order].code = $loinc#55115-0 "Requested imaging studies information Document"
 * section[order].entry[0] = Reference(urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04)
@@ -207,7 +207,7 @@ Title: "PractitionerRole Testovací"
 Description: "Author of RTG Imaging report"
 Usage: #example
 * id = "aafd64f9-36ab-4583-8088-efb93b44db9b"
-* specialty = $sct#394914008 "Radiology"
+* specialty = $sctCZ#394914008 "Radiology"
 * practitioner = Reference(urn:uuid:0b00169f-4815-41da-9814-cd3d7504344d)
 * organization = Reference(urn:uuid:e96e9bd5-0695-4725-acb2-c731aa071a55)
 
@@ -254,18 +254,18 @@ Description: "Imaging order for Plain X-ray"
 * identifier[=].value = "6609024"
 * status = #active
 * intent = #order
-* category[imaging] = $sct#363679005
+* category[imaging] = $sctCZ#363679005
 * performer = Reference(urn:uuid:03903bc5-4ca0-4c55-8e4a-b256da9f788d)
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * insurance = Reference(urn:uuid:6a2b30b1-4ba7-4a24-adcf-beefa0eface1)
-* bodySite = $sct#6757004 "Right knee"
-* bodySite = $sct#62175007 "Right leg"
-* bodySite = $sct#731788002 "LS Spine"
-* bodySite = $sct#737406006 "Right talus"
-* bodySite = $sct#12921003 "Pelvis"
-* bodySite = $sct#287579007 "Right hip"
-* bodySite = $sct#287679003 "Left hip"
-* code.coding = $sct#168537006 "Plain X-ray"
+* bodySite = $sctCZ#6757004 "Right knee"
+* bodySite = $sctCZ#62175007 "Right leg"
+* bodySite = $sctCZ#731788002 "LS Spine"
+* bodySite = $sctCZ#737406006 "Right talus"
+* bodySite = $sctCZ#12921003 "Pelvis"
+* bodySite = $sctCZ#287579007 "Right hip"
+* bodySite = $sctCZ#287679003 "Left hip"
+* code.coding = $sctCZ#168537006 "Plain X-ray"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">RTG Požadované vyšetření: LS páteř, Noha pravá, Hlezno pravé, Pánev, Koleno pravé, Kyčel levý, Kyčel pravý</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
@@ -287,7 +287,7 @@ Usage: #example
 Description: "Radiographic imaging device used in RTG Imaging report"
 Title: "Device - Radiographic unit: RTG Imaging report"
 * id = "03903bc5-4ca0-4c55-8e4a-b256da9f788d"
-* type = $sct#68080007 "Radiographic unit"
+* type = $sctCZ#68080007 "Radiographic unit"
 
 Instance: cz-examplertg-coverage
 InstanceOf: CZ_Coverage
@@ -334,7 +334,7 @@ Title: "Observation: RTG Imaging report"
 * status = #final
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * performer = Reference(urn:uuid:aafd64f9-36ab-4583-8088-efb93b44db9b)
-* code = $sct#715959009 //"Imaging of pelvis"
+* code = $sctCZ#715959009 //"Imaging of pelvis"
 * valueString = "Bez nálezu."
 * effectiveDateTime = "2025-10-06T09:10:00+01:00"
 
@@ -354,7 +354,7 @@ Usage: #example
 Description: "Procedure of RTG Imaging report"
 Title: "Procedure: RTG Imaging report"
 * id = "ea2967a5-0d00-461c-8785-b5affef4791c"
-* code.coding = $sct#168537006 "Plain X-ray"
+* code.coding = $sctCZ#168537006 "Plain X-ray"
 * status = #completed
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * reasonReference = Reference (urn:uuid:96b5af8a-9127-45fd-b549-ab79f5c56a41)
@@ -369,11 +369,9 @@ Title: "Diagnostic report: RTG Imaging report"
   * system = "http://example.org/myhospital/reportidentifiers"
   * value = "o32u4js8492fs" // invented - not there in the report*
 * extension[composition].valueReference = Reference(urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9)
-* category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
-* category[document-category] = $loinc#18726-0
+* category[document-category] = $loinc#18726-0 "Nálezy zobrazovacího komplementu"
 * status = #final
-* performer = Reference(urn:uuid:e96e9bd5-0695-4725-acb2-c731aa071a55)
-* code = $sct#168500000 "Radiology result normal"
+* code = $loinc#18748-4 "Zobrazovací vyšetření"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * result.display = "Bez nálezu"
 * presentedForm.contentType = #application/pdf

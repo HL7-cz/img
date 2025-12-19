@@ -224,7 +224,7 @@ Usage: #example
 Description: "Positron emission tomography/computed tomography system device used in PET+CT Imaging report"
 Title: "Device - PET/CT system: PET+CT Imaging report"
 * id = "723b5e24-133c-4e9a-aefb-5c14f5b2eac3"
-* type = $sct#717326002 "PET/CT system"
+* type = $sctCZ#717326002 "PET/CT system"
 
 Instance: cz-examplepetct-practitioner1
 InstanceOf: CZ_PractitionerCore
@@ -259,7 +259,7 @@ Description: "Example of requesting practitioner for PET+CT Imaging report"
 Title: "Practitioner Blažejovský:PET+CT Imaging report"
 Usage: #example
 * id = "792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0"
-* specialty = $sct#394914008 "Radiology"
+* specialty = $sctCZ#394914008 "Radiology"
 * practitioner = Reference(urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c)
 * organization = Reference(urn:uuid:821077d6-ce17-4602-b3ad-d4bef845a950)
 
@@ -308,12 +308,12 @@ Description: "Imaging order: PET+CT Imaging report"
 * identifier[=].value = "OBJ123456"
 * status = #active
 * intent = #order
-* category[imaging] = $sct#363679005
+* category[imaging] = $sctCZ#363679005
 * performer = Reference(urn:uuid:723b5e24-133c-4e9a-aefb-5c14f5b2eac3)
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * insurance = Reference(urn:uuid:be4e7f9a-2771-4aa1-bcee-c386f9ba7eaa)
-* bodySite = $sct#69536005 "Head"
-* code.coding = $sct#16554361000119106 "PET CT of brain"
+* bodySite = $sctCZ#69536005 "Head"
+* code.coding = $sctCZ#16554361000119106 "PET CT of brain"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">PET+CT mozku pro diferenciální dg. tumoru a radiační nekrozy</div>"
 * authoredOn = "2022-10-06T12:02:00+01:00"
@@ -385,7 +385,7 @@ Title: "Clinical question: PET+CT Imaging report"
 * id = "9ee22843-2526-436f-bf66-3f9874869c08"
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * category = $hl7-condition-category-cs#encounter-diagnosis
-* code.coding[condition] = $sct#126952004
+* code.coding[condition] = $sctCZ#126952004
 
 Instance: cz-examplepetct-imagingStudy
 InstanceOf: CZ_StudyImaging
@@ -450,7 +450,7 @@ Title: "Adverse Event: PET+CT Imaging report"
 * id = "0bd84e75-9c5e-406b-90a8-e39a615e9cf6"
 * actuality = $hl7-actstatus#actual
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
-* event = $sct#863892004 "Application site erythema"
+* event = $sctCZ#863892004 "Application site erythema"
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lokální zčervenání pokožky po podání Fludeoxythymidinu</div>"
 * text.status = #additional
 * detected = "2022-10-07T08:30:00+01:00"
@@ -468,7 +468,7 @@ Title: "Medication Administration: PET+CT Imaging report"
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * medicationReference = Reference (urn:uuid:0987d1c9-0d9a-4d33-8efc-eee6a8c63059)
 * dosage.dose = 260000 'ul' "ul"
-* dosage.route = $sct#47625008 "Intravenous route"
+* dosage.route = $sctCZ#47625008 "Intravenous route"
 * effectiveDateTime = "2022-10-07T08:15:00+01:00"
 
 Instance: cz-examplepetct-medication
@@ -493,7 +493,7 @@ Title: "Observation: PET+CT Imaging report"
 * status = #final
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * performer = Reference(urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c)
-* code = $sct#16554361000119106 //"PET CT of brain"
+* code = $sctCZ#16554361000119106 //"PET CT of brain"
 * valueString = "Na tomografických řezech nacházíme nehomogenně zvýšenou akumulaci RF při zadním okraji postresekční dutiny vlevo parietotemporálně, maximum akumulace RF resp. FLT je laterálně až do charakteru ložiska výrazně zvýšeného FLT."
 * effectiveDateTime = "2022-10-07T09:10:00+01:00"
 
@@ -509,7 +509,7 @@ Title: "Diagnostic report: PET+CT Imaging report"
 * category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
 * category[document-category] = $loinc#18726-0
 * status = #final
-* code = $sct#168500000 "Radiology result normal"
+* code = $sctCZ#168500000 "Radiology result normal"
 * performer = Reference(urn:uuid:821077d6-ce17-4602-b3ad-d4bef845a950)
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * conclusion = "Zvýšená mitotická aktivita dorzálně za postresekční dutinou až fokálního charakteru při jejím laterálním okraji - nález vzbuzuje podezření na viabilní neoplazii.
@@ -540,12 +540,12 @@ Usage: #example
 Description: "Procedure of PET+CT Imaging report"
 Title: "Procedure: PET+CT Imaging report"
 * id = "74820e62-42c2-4a39-9ded-251f3b8a58d0"
-* code.coding = $sct#16554361000119106 "PET CT of brain"
+* code.coding = $sctCZ#16554361000119106 "PET CT of brain"
 * status = #completed
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * partOf = Reference(urn:uuid:a89a0433-998e-4408-9d7a-560c6d242366)
 * note.text = "Pacient byl informován o způsobu vyšetření a podepsal informovaný souhlas s lékařskýmozářením. Pacientovi bylo i.v. podáno radiofarmakum (RF) s ohledem na jeho hmotnost 72 kg.PET skenování bylo zahájeno v 8:15 v rozsahu hlavy s přiloženými horními končetinami. Tomubezprostředně předcházelo nativní nízkodávkové CT vyšetření ve stejném rozsahu ke korekciabsorpce PET obrazu. Použité lékařské přístroje: PET / CT systém Biograph mCT Flow, Siemens,ev. č. XXXXXX. Pacientovi byla doporučena režimová opatření a po vyšetření byl propuštěn zoddělení v nezměněném zdravotním stavu. Byla provedena fúze se snímky magnetické rezonance z roku 2020 a 2019."
-* complication.coding = $sct#49727002 "Cough"
+* complication.coding = $sctCZ#49727002 "Cough"
 * complication.text = "Kašel"
 * reasonReference = Reference (cz-examplepetct-condition2)
 * reasonReference = Reference (urn:uuid:e040e1b2-9f3f-426c-bc5a-7676abae290a)

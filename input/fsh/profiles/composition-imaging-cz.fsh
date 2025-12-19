@@ -67,8 +67,8 @@ The `text` field of each section SHALL contain a textual representation of all l
 
 * author 1..*
   * insert SliceElement( #profile, [[$this.resolve()]] )
-* author contains 
-    author 0..* and 
+* author contains
+    author 0..* and
     authoringDevice 0..* and
     organization 0..*
 * author[author] only Reference( CZ_PractitionerRoleCore )
@@ -87,26 +87,26 @@ The `text` field of each section SHALL contain a textual representation of all l
     legalAuthenticator 0..* and
     resultValidator 0..*
 * attester[legalAuthenticator]
-  * mode 1..1 
+  * mode 1..1
   * mode = http://hl7.org/fhir/composition-attestation-mode#legal
   * party only Reference(CZ_PractitionerRoleCore)
   * time 1..1
 * attester[resultValidator]
-  * mode 1..1 
+  * mode 1..1
   * mode = http://hl7.org/fhir/composition-attestation-mode#professional
   * party only Reference(CZ_PractitionerRoleCore)
   * time 1..1
 
-* type from ImagingDocumentTypes (preferred) 
+* type from $ImagingDocumentTypes (preferred)
   * ^short = "Type of Imaging Diagnostic Report"
   * ^definition = "Defines the document type, it is recommended to take this from the suggested LOINC set."
-* category 1..*  
+* category 1..*
   * insert SliceElement( #value, $this )
 * category contains
   diagnostic-service 0..1 and
   document-category 1..1
 * category[diagnostic-service] from $diagnostic-service-sections (required)
-* category[document-category] from DocumentCategory (required)
+* category[document-category] from $DocumentCategory (required)
   * ^short = "Document Category"
   * ^definition = "A categorization for the type of document."
   * coding = $loinc#18726-0
@@ -156,13 +156,13 @@ The `text` field of each section SHALL contain a textual representation of all l
   // * title = "Imaging Studies"
   * code = $loinc#18726-0 //"Radiology studies (set)"
   * extension contains $note-url named note 0..*
-  * entry 
+  * entry
     * insert SliceElement( #profile, $this )
   * entry contains imagingstudy 1..*
   * entry[imagingstudy]
     * ^short = "Imaging Study Reference"
     * ^definition = "This entry holds a reference to the Imaging Study instance that is associated with this Composition."
-  * entry[imagingstudy] only Reference(CZ_StudyImaging) 
+  * entry[imagingstudy] only Reference(CZ_StudyImaging)
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
 
 
@@ -179,13 +179,13 @@ The `text` field of each section SHALL contain a textual representation of all l
 
   * entry
     * insert SliceElement( #profile, $this )
-  * entry contains 
+  * entry contains
       order 0..*
 
   * entry[order]
     * ^short = "Order reference"
     * ^definition = "This entry holds a reference to the order for the Imaging Study and report."
-  * entry[order] only Reference(CZ_ImagingOrderInformation)  
+  * entry[order] only Reference(CZ_ImagingOrderInformation)
 
 ///////////////////////////////// Clinical question SECTION ///////////////////////////////////////
 * section[clinicalQuestion]
@@ -215,9 +215,9 @@ The `text` field of each section SHALL contain a textual representation of all l
   * code = $loinc#55111-9 //"Current imaging procedure descriptions Document"
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
   * extension contains $note-url named note 0..*
-  * entry 
+  * entry
     * insert SliceElement( #profile, $this )
-  * entry contains 
+  * entry contains
       procedure 0..*
   * entry[procedure] only Reference(CZ_ProcedureImaging)
 
@@ -229,7 +229,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * extension contains $note-url named note 0..*
   * entry
     * insert SliceElement( #profile, [[resolve()]] )
-  * entry contains 
+  * entry contains
       comparedstudy 0..*
   * entry[comparedstudy] only Reference( CZ_StudyImaging or CZ_ImagingSelectionImaging )
 
@@ -240,7 +240,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
   * entry
     * insert SliceElement( #profile, [[resolve()]] )
-  * entry contains 
+  * entry contains
       finding 0..* and
       keyimage 0..*
   * entry[finding] only Reference(CZ_ObservationResultImaging)
@@ -254,7 +254,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
   * entry
     * insert SliceElement( #profile, $this )
-  * entry contains 
+  * entry contains
       finding 0..* and
       impression 0..* and
       keyimage 0..*

@@ -1,6 +1,7 @@
 //============== ALIAS ===============
 // Code systems
 Alias: $sct =  http://snomed.info/sct
+Alias: $sctCZ = http://snomed.info/sct|http://snomed.info/sct/11000279109
 Alias: $orpha = https://www.orpha.net
 Alias: $loinc =  http://loinc.org
 Alias: $iso3166 = urn:iso:std:iso:3166
@@ -34,7 +35,8 @@ Alias: $dlp_lecprip = https://ncez.mzcr.cz/fhir/ValueSet/dlp-lecive-pripravky-vs
 Alias: $dlp_formy = https://ncez.mzcr.cz/fhir/ValueSet/cz-dlpformy-vs
 Alias: $hl7eu_document-type = http://hl7.eu/fhir/imaging-r5/ValueSet/ImImagingReportTypesEuVS
 Alias: $diagnostic-service-sections = http://hl7.org/fhir/ValueSet/diagnostic-service-sections
-//Alias: $diagnostic-service-sections = http://hl7.org/fhir/ValueSet/diagnostic-service-sections
+Alias: $ImagingDocumentTypes = https://ncez.mzcr.cz/terminology/ValueSet/imaging-document-types
+Alias: $DocumentCategory = https://ncez.mzcr.cz/terminology/ValueSet/document-category
 
 // Extensions
 Alias: $event-basedOn                     = http://hl7.org/fhir/StructureDefinition/event-basedOn

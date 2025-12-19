@@ -3,7 +3,7 @@ Id: SubjectCz
 Title: "A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject"
 Description: """Imaging Report - Imaging Report subject data element - A.1.1 and A.1.2"""
 
-* insert SetFmmandStatusRule ( 1, draft )
+
 * ^language = #cs
 
 * subjectIdentification 1..1 Base "A.1.1 - Identification of the patient/subject" """Identification of the patient/subject"""

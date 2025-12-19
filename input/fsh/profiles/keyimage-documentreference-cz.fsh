@@ -4,7 +4,8 @@ Parent: DocumentReference
 Title: "Imaging Key Image Document Reference: Imaging Report (CZ)"
 Description: """A document containing key images for a patient.It can refer to a `DICOM` or `non-DICOM` image. When referring to a DICOM image, the DocumentReference.content.attachment.url should be a WADO-URI. When referring to a non-DICOM image, the DocumentReference.content.attachment.url should be a direct URL to the image.\n
 When the resource represents a DICOM instance it SHALL contain a the `SOP Instance UID` in the identifier element. When the resource represents a DICOM series it SHALL contain the `Series Instance UID` in the identifier element."""
-* insert SetFmmandStatusRule( 1, draft )
+
+* insert ImposeProfile($KeyImageDocumentReference-eu-img,0)
 
 * identifier 
   * insert SliceElement( #value, $this )
@@ -25,8 +26,8 @@ When the resource represents a DICOM instance it SHALL contain a the `SOP Instan
   * assigner only Reference(CZ_OrganizationCore)
 
 * extension contains
-  $cvDocumentReference-basedOn named basedOn 0..1
-  and ModalityCz named modality 1..1
+  http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.basedOn named basedOn 0..1 and
+  http://hl7.org/fhir/5.0/StructureDefinition/extension-DocumentReference.modality named modality 1..1
 * extension
   * ^slicing.discriminator[1].type = #value
   * ^slicing.discriminator[=].path = "value"
@@ -35,7 +36,6 @@ When the resource represents a DICOM instance it SHALL contain a the `SOP Instan
 * extension[basedOn][imorderaccession].value[x] only Reference(CZ_ImagingOrderInformation)
   * identifier 1..1
   * identifier only CZ_AccessionNumberIdentifier 
-* extension[modality].value[x].coding from CZ_ModalityVs (preferred) 
 
 * category 1..*
   * insert SliceElement( #profile, $this )

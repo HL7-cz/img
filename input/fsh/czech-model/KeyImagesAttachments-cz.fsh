@@ -3,7 +3,7 @@ Id: logKeyImagesAttachment
 Title: "A.2.6 - Média (přílohy)"
 Description: """Klíčové snímky související s touto zprávou."""
 
-* insert SetFmmandStatusRule ( 1, draft )
+
 * ^language = #cs
 
 * vytvoreni 0..1 dateTime "A.2.6.1 - Datum a čas vytvoření" """Datum a čas vytvoření nebo období, ve kterém byla média vytvořena."""

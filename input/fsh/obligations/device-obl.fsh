@@ -5,7 +5,7 @@ Title:    "Medical Device: Obligations"
 Description: "This profile defines obligations for a medical device result in FHIR for the purpose of this guide."
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
-* insert SetFmmandStatusRule ( 0, informative)
+
 
 * type insert OblCreator(#SHOULD:able-to-populate,L2)
 * deviceName.name insert OblCreator(#SHOULD:able-to-populate,L2)

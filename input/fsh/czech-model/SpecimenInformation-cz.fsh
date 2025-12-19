@@ -3,7 +3,7 @@ Id: logSpecimenInformation
 Title: "A.2.3 - Informace o vzorku"
 Description: """Informace o vzorku, pokud je předmětem vyšetření vzorek."""
 
-* insert SetFmmandStatusRule ( 1, draft )
+
 
 * identifikator 1..* Identifier "A.2.3.1 - ID vzorku" """Identifikátor vzorku, který je jedinečný v definovaném rozsahu. Např. identifikátor přidělený objednávkovým systémem, odběrovým místem, příjmovým místem apod."""				
 * biologickyDruh 0..1 CodeableConcept "A.2.3.2 - Biologický druh" """Biologický druh se týká vzorků odebraných jiným než lidským subjektům."""				

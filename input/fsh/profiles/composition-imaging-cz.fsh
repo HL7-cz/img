@@ -20,27 +20,24 @@ of which the Composition is the first resource contained.\n
 \n
 The `text` field of each section SHALL contain a textual representation of all listed entries.
 """
-* insert SetFmmandStatusRule ( 0, draft )
+* insert ImposeProfile($Composition-eu-img,0)
 
-* meta
-  * security 0..* MS
 
-* identifier
+* identifier 1..1
   * ^short = "Report identifier"
   * ^definition = "Identifiers assigned to this Imaging Report by the performer or other systems. It shall be common to several report versions"
   * ^comment = "Composition.identifier SHALL be equal to one of the DiagnosticReport.identifier, if at least one exists"
 
 * extension contains
-    ImDiagnosticReportReference named diagnosticreport-reference 1..1 and
-    CompositionBasedOnOrderOrRequisition named basedOn-order-or-requisition 0..* and
     $event-basedOn-url          named basedOn 0..* and
-    $information-recipient-url  named informationRecipient 0..*
+    $information-recipient-url  named informationRecipient 0..* and
+    $hl7euDiagnosticReference   named diagnosticreport-reference 0..1
 
-* extension[basedOn-order-or-requisition].valueReference only Reference(CZ_ImagingOrderInformation)
+* extension[basedOn].valueReference only Reference(CZ_ImagingOrderInformation)
 * extension[diagnosticreport-reference].valueReference only Reference(CZ_DiagnosticReport)
 * extension[informationRecipient].valueReference only Reference(CZ_PractitionerCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_PractitionerRoleCore or CZ_OrganizationCore)
-* extension contains $composition.version-r5 named versionNumber 0..
-* extension[versionNumber].valueString ^short = "Business version"
+
+* extension contains $CrossVersion-Composition.version named version 0..1
 
 * status
   * ^short = "Status of the Report"
@@ -65,18 +62,18 @@ The `text` field of each section SHALL contain a textual representation of all l
 * subject 1..1 MS
 * subject only Reference(CZ_PatientCore)
 
-* custodian MS
 * custodian only Reference(CZ_OrganizationCore)
   * ^short = "Organization that manages the Imaging Report"
 
-//TODO - pokusit se opravit!
-//* relatesTo.target[x].targetReference only Reference(DocumentReference or CZ_CompositionImagingReport or Composition)
-//* relatesTo.target[x] only Reference(DocumentReference or CZ_CompositionImagingReport or Composition)
-
-* author
-//* author only Reference(CZ_PractitionerCore or CZ_DeviceObserver)
-* author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
-  * ^short = "Who and/or what authored the Imaging order"
+* author 1..*
+  * insert SliceElement( #profile, [[$this.resolve()]] )
+* author contains 
+    author 0..* and 
+    authoringDevice 0..* and
+    organization 0..*
+* author[author] only Reference( CZ_PractitionerRoleCore )
+* author[authoringDevice] only Reference( CZ_DeviceObserver )
+* author[organization] only Reference( CZ_OrganizationCore )
 
 * attester 0..* MS
   * ^slicing.discriminator[+].type = #value
@@ -84,29 +81,37 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^slicing.rules = #open
   * ^slicing.ordered = false
 
-  * party only Reference(CZ_PatientCore or CZ_RelatedPersonCore or CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore)
+//  * party only Reference(CZ_PatientCore or CZ_RelatedPersonCore or CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore)
 
 * attester contains
-    legalAuthenticator 0..* MS and
-    resultValidator 0..* MS
+    legalAuthenticator 0..* and
+    resultValidator 0..*
 * attester[legalAuthenticator]
-  * mode 1..1 MS
-  * mode = #legal
+  * mode 1..1 
+  * mode = http://hl7.org/fhir/composition-attestation-mode#legal
   * party only Reference(CZ_PractitionerRoleCore)
+  * time 1..1
 * attester[resultValidator]
-  * mode 1..1 MS
-  * mode = #professional
+  * mode 1..1 
+  * mode = http://hl7.org/fhir/composition-attestation-mode#professional
   * party only Reference(CZ_PractitionerRoleCore)
+  * time 1..1
 
+* type from ImagingDocumentTypes (preferred) 
+  * ^short = "Type of Imaging Diagnostic Report"
+  * ^definition = "Defines the document type, it is recommended to take this from the suggested LOINC set."
+* category 1..*  
+  * insert SliceElement( #value, $this )
+* category contains
+  diagnostic-service 0..1 and
+  document-category 1..1
+* category[diagnostic-service] from $diagnostic-service-sections (required)
+* category[document-category] from DocumentCategory (required)
+  * ^short = "Document Category"
+  * ^definition = "A categorization for the type of document."
+  * coding = $loinc#18726-0
 
-* type 1..
-* type from CZ_CompositionTypeVs (preferred) // valueset to be revised.
-  * coding 1..*
-    * insert SliceElement( #value, $this )
-  * coding contains loinc 1..1
-  * coding[loinc] = $loinc#18748-4 //"Diagnostic imaging study"
-
-* encounter 1..1
+* encounter 0..1
 * encounter only Reference(CZ_Encounter)
   * ^short = "Context that defines the Image Report"
 
@@ -130,7 +135,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 * obeys text-or-section
 
 * section contains
-    imagingstudy 0..1 and
+    imagingstudy 1..1 and
     order 0..1 and
     clinicalQuestion 0..* and
     history 0..1 and
@@ -141,7 +146,7 @@ The `text` field of each section SHALL contain a textual representation of all l
     recommendation 0..1 and
     communication 0..1 and
     complications 0..* and
-    attachments 0..*
+    report 0..1
 
 
 ///////////////////////////////// IMAGING STUDY SECTION ///////////////////////////////////////
@@ -150,11 +155,14 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^definition = "This section holds information related to the imaging studies covered by this report."
   // * title = "Imaging Studies"
   * code = $loinc#18726-0 //"Radiology studies (set)"
-  * entry 0..*
-  * entry
+  * extension contains $note-url named note 0..*
+  * entry 
+    * insert SliceElement( #profile, $this )
+  * entry contains imagingstudy 1..*
+  * entry[imagingstudy]
     * ^short = "Imaging Study Reference"
     * ^definition = "This entry holds a reference to the Imaging Study instance that is associated with this Composition."
-  * entry only Reference(CZ_StudyImaging)
+  * entry[imagingstudy] only Reference(CZ_StudyImaging) 
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
 
 
@@ -167,12 +175,17 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^extension[0].valueString = "Section"
   * code = $loinc#55115-0 //"Requested imaging studies information Document"
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
-  * entry 0..*
+  * extension contains $note-url named note 0..*
 
   * entry
+    * insert SliceElement( #profile, $this )
+  * entry contains 
+      order 0..*
+
+  * entry[order]
     * ^short = "Order reference"
     * ^definition = "This entry holds a reference to the order for the Imaging Study and report."
-  * entry only Reference(CZ_ImagingOrderInformation)
+  * entry[order] only Reference(CZ_ImagingOrderInformation)  
 
 ///////////////////////////////// Clinical question SECTION ///////////////////////////////////////
 * section[clinicalQuestion]
@@ -182,6 +195,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^extension[0].valueString = "Section"
   * code = $loinc#18785-6	//"Radiology Reason for study (narrative)"
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
+  * extension contains $note-url named note 0..*
   * text 1..
   * entry 0..
   * entry only Reference(CZ_ConditionImage)
@@ -200,40 +214,64 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^definition = "This section contains information such as the procedure type, the anatomy imaged, the date and time of the imaging examination, and the facility that performed it."
   * code = $loinc#55111-9 //"Current imaging procedure descriptions Document"
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
-  * entry 0..*
-  * entry only Reference(CZ_ProcedureImaging)
+  * extension contains $note-url named note 0..*
+  * entry 
+    * insert SliceElement( #profile, $this )
+  * entry contains 
+      procedure 0..*
+  * entry[procedure] only Reference(CZ_ProcedureImaging)
 
 ////////////////// COMPARISON SECTION //////////////////////////
 * section[comparison]
   * ^short = "Comparison"
   * code = $loinc#18834-2 //"Radiology Comparison study (narrative)"
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
-  * entry 0..*
-  * entry only Reference(CZ_StudyImaging) //or CZ_SelectionImaging
+  * extension contains $note-url named note 0..*
+  * entry
+    * insert SliceElement( #profile, [[resolve()]] )
+  * entry contains 
+      comparedstudy 0..*
+  * entry[comparedstudy] only Reference( CZ_StudyImaging or CZ_ImagingSelectionImaging )
 
 /////////////////// FINDINGS SECTION //////////////////////////
 * section[findings]
   * ^short = "Findings"
   * code = $loinc#59776-5 //"Procedure findings Narrative"
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
-  * entry 0..*
-  * entry only Reference(CZ_ObservationResultImaging or CZ_KeyImageDocumentReference or CZ_AttachmentImg)
+  * entry
+    * insert SliceElement( #profile, [[resolve()]] )
+  * entry contains 
+      finding 0..* and
+      keyimage 0..*
+  * entry[finding] only Reference(CZ_ObservationResultImaging)
+  * entry[keyimage] only Reference(CZ_KeyImageDocumentReference or CZ_ImagingSelectionKeyImageImaging)
 
 /////////////////// IMPRESSION SECTION //////////////////////////
 * section[impression]
   * ^short = "Impressions"
   * code = $loinc#19005-8 //"Radiology Imaging study [Impression] (narrative)"
+  * extension contains $note-url named note 0..*
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
-  * entry 0..*
-  * entry only Reference(CZ_ObservationResultImaging or CZ_ConditionImage or CZ_KeyImageDocumentReference)
+  * entry
+    * insert SliceElement( #profile, $this )
+  * entry contains 
+      finding 0..* and
+      impression 0..* and
+      keyimage 0..*
+  * entry[finding] only Reference(CZ_ObservationResultImaging)
+  * entry[impression] only Reference(CZ_ConditionImage)
+  * entry[keyimage] only Reference(CZ_KeyImageDocumentReference or CZ_ImagingSelectionKeyImageImaging)
 
 /////////////////// RECOMMENDATION SECTION //////////////////////////
 * section[recommendation]
   * ^short = "Recommendations"
   * code = $loinc#18783-1 //"Radiology Study recommendation (narrative)"
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
-  * entry 0..*
-  * entry only Reference(CZ_CarePlanImage)
+  * extension contains $note-url named note 0..*
+  * entry
+    * insert SliceElement( #profile, $this )
+  * entry contains suggestion 0..*
+  * entry[suggestion] only Reference(CZ_CarePlanImage or CZ_ImagingOrderInformation)
 
 // /////////////////// COMMUNICATION SECTION //////////////////////////
 * section[communication]
@@ -243,20 +281,28 @@ The `text` field of each section SHALL contain a textual representation of all l
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
   * extension contains $note-url named note 0..*
 
-// /////////////////// A55109-3 SECTION //////////////////////////
+//// /////////////////// REPORT SECTION //////////////////////////
+* section[report]
+  * ^short = "Report - all content in one section"
+// a proper code is needed
+  * code = $loinc#LP173421-1 // "Report"
+  * extension contains $note-url named note 0..*
+
+// /////////////////// CZECH SECTION //////////////////////////
 * section[complications]  // sekce na záznam alergických reakcí
   * ^short = "Complications Document"
   * code = $loinc#55109-3 //"Note - asi jen dočasný kód TODO: Najít vhodný kód"
   * author only Reference(CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
   * entry 1..*
   * entry only Reference(CZ_AdverseEvent)
-
-* section[attachments]  // sekce obsahující referenci na DocumentReference
+/*
+  * section[attachments]  // sekce obsahující referenci na DocumentReference
   * ^short = "Attachments"
   * code = $loinc#34109-9 //"Note - asi jen dočasný kód TODO: Najít vhodný kód"
   * author only Reference(CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
   * entry 1..*
   * entry only Reference(CZ_Logo or DocumentReference)
+*/
 
 Invariant: text-or-section
 Description: "A Composition SHALL have either text, at least one section, or both."
@@ -272,5 +318,4 @@ Description: """
     """
 // publisher, contact, and other metadata here using caret (^) syntax (omitted)
 * insert ExtensionContext(Composition)
-* insert SetFmmandStatusRule ( 2, trial-use)
 * value[x] only Reference (CZ_DiagnosticReport)

@@ -3,7 +3,7 @@ Id: logAuthorCz
 Title: "A.1.5 - Autor dokumentu"
 Description: """Autor (zprávy z obrazového vyšetření). Lze vložit i více autorů dokumentu."""
 
-* insert SetFmmandStatusRule ( 1, draft )
+
 
 * identifikator 1..* Identifier "A.1.5.1 - Identifikátor autora" """Identifikační číslo zdravotnického pracovníka (nebo informačního systému), který provedl zápis do zdravotnické dokumentace. Buď interní identifikátor přidělený institucí poskytovatele zdravotní péče, nebo (nejlépe) národní resortní ID zdravotnického pracovníka."""
 * jmeno 1..1 HumanName "A.1.5.2 - Jméno autora" """Jméno autora či informačního systému (např. software, který dokument automatizovaně sestavil)."""

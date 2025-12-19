@@ -3,7 +3,7 @@ Id: ReportOfImagingMethod
 Title: "A.2.4 - Report of imaging method"
 Description: """Imaging Report - Imaging Report report of imaging method - A.2.4"""
 
-* insert SetFmmandStatusRule ( 1, draft )
+
 * ^language = #cs
 
 * typeOfModality 0..* CodeableConcept "A.2.4.1 - Modality type" """The type of modality that was used.

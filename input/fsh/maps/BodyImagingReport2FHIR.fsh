@@ -47,7 +47,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReasonForAdmission"
-* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-imagingOrderInformation"
+* group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-conditionImage"
 * group[=].element[+].code = #ReasonForAdmission
 * group[=].element[=].display = "A.2.2 - Order reason"
 * group[=].element[=].target.code = #Composition.section:clinicalQuestion.text
@@ -156,11 +156,6 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
 * group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-conditionImage"
-* group[=].element[+].code = #Body.ReportOfImagingMethod.clinicalQuestion
-* group[=].element[=].display = "A.2.4.4 - A clinical question in text form"
-* group[=].element[=].target.code = #Composition.section:clinicalQuestion.text
-* group[=].element[=].target.display = "In text form"
-* group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Body.ReportOfImagingMethod.clinicalQuestion
 * group[=].element[=].display = "A.2.4.4 - A clinical question in code form"
 * group[=].element[=].target.code = #Composition.section:clinicalQuestion.entry.ofType(CZ_Condition).code
@@ -577,10 +572,20 @@ This option is filled in if the finding relates to a specific procedure."
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingMethod"
 * group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-composition-imaging"
+* group[=].element[+].code = #ReasonForAdmission
+* group[=].element[=].display = "A.2.2 - Order reason"
+* group[=].element[=].target.code = #Composition.section:clinicalQuestion.text
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Body.ReportOfImagingMethod.typeOfImagingMethod
 * group[=].element[=].display = "A.2.4.2 - Type of imaging method"
 * group[=].element[=].target.code = #Composition.type
 * group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent
+* group[=].element[+].code = #Body.ReportOfImagingMethod.clinicalQuestion
+* group[=].element[=].display = "A.2.4.4 - A clinical question in code form"
+* group[=].element[=].target.code = #Composition.section:clinicalQuestion.entry.ofType(CZ_Condition).code
+* group[=].element[=].target.display = "In code form"
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #resultOfImagingMethod.textPartsOfDocument.completeExaminationReport
 * group[=].element[=].display = "A.2.4.12.1 - Complete examination report"

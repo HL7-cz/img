@@ -3,7 +3,7 @@ Id: logAttesterCz
 Title: "A.1.6 - Ověřil (může být vloženo i více ověřovatelů)"
 Description: """Ověřil (může být vloženo i více ověřovatelů)"""
 
-* insert SetFmmandStatusRule ( 1, draft )
+
 
 * identifikator 1..* Identifier "A.1.6.1 - Identifikátor ověřovatele" """Identifikační číslo zdravotnického pracovníka, který ověřil dokument. Buď interní identifikátor přidělený institucí poskytovatele zdravotní péče, nebo (nejlépe) národní resortní ID zdravotnického pracovníka."""
 * jmeno 1..1 HumanName "A.1.6.2 - Jméno ověřovatele" """Plné jméno a identifikační údaje osoby, která dokument ověřila."""

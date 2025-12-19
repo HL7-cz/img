@@ -47,14 +47,20 @@ Usage: #example
 * entry[medicationAdministration].fullUrl = "urn:uuid:a89a0433-998e-4408-9d7a-560c6d242366"
 * entry[medicationAdministration].resource = cz-examplepetct-medicationAdministration
 
-* entry[keyImageReference].fullUrl = "urn:uuid:2a00895f-9e01-4467-bf75-4f0c3552afa4"
-* entry[keyImageReference].resource = cz-examplepetct-keyImageReference
+* entry[documentReference].fullUrl = "urn:uuid:2a00895f-9e01-4467-bf75-4f0c3552afa4"
+* entry[documentReference].resource = cz-examplepetct-keyImageReference
 
 * entry[carePlan].fullUrl = "urn:uuid:b9af425a-a9d9-4685-800c-d0d661c1b7a4"
 * entry[carePlan].resource = cz-examplepetct-carePlan
 
 * entry[observation].fullUrl = "urn:uuid:1bcd2d5a-e401-4ac2-80d0-7ec558d6b250"
 * entry[observation].resource = cz-examplepetct-observation
+
+* entry[observation][+].fullUrl = "urn:uuid:9f79ad8f-056e-4931-ae19-810064de607b"
+* entry[observation][=].resource = cz-examplepetct-weightObservation
+
+* entry[observation][+].fullUrl = "urn:uuid:40fb226b-e11f-4d02-aa30-97ba51ab4ff6"
+* entry[observation][=].resource = cz-examplepetct-heightObservation
 
 * entry[device].fullUrl = "urn:uuid:723b5e24-133c-4e9a-aefb-5c14f5b2eac3"
 * entry[device].resource = cz-examplepetct-device
@@ -65,11 +71,8 @@ Usage: #example
 * entry[medication].fullUrl = "urn:uuid:0987d1c9-0d9a-4d33-8efc-eee6a8c63059"
 * entry[medication].resource = cz-examplepetct-medication
 
-* entry[encounter].fullUrl = "urn:uuid:7023b84e-47bb-405c-be46-2c161c6ba8d5"
-* entry[encounter].resource = cz-encounter-example
-
-* entry[attachment].fullUrl = "urn:uuid:040eb849-a513-4d74-b3f3-d2f246a26877"
-* entry[attachment].resource = cz-logo2-example
+* entry[documentReference][+].fullUrl = "urn:uuid:040eb849-a513-4d74-b3f3-d2f246a26877"
+* entry[documentReference][=].resource = cz-logo2-example
 
 * entry[organization].fullUrl = "urn:uuid:821077d6-ce17-4602-b3ad-d4bef845a950"
 * entry[organization].resource = cz-organizationwithlogo-example
@@ -92,16 +95,20 @@ Description: "Example of Imaging report (Composition) including a PET+CT report"
 Title: "Composition: PET+CT Imaging report"
 Usage: #example
 * id = "a84899f0-a241-4f15-b5fd-47e8c9dbdc35"
+* identifier
+  * system = "http://example.org/myhospital/reportidentifiers"
+  * value = "dfkjewoieoijwoskdje"
 * meta.profile[0] = "https://hl7.cz/fhir/img/StructureDefinition/cz-composition-imaging"
 * status = #final
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * date = "2025-05-20T12:02:00+01:00"
-* author = Reference(urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c)
-* category[imaging] = $loinc#18726-0 "Nálezy zobrazovacího komplementu"
-* type = $loinc#24725-4 "CT hlavy" //$sct#4261000179100 "Computed tomography imaging report"
+* author[author] = Reference(urn:uuid:792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0)
+* author[organization] = Reference(urn:uuid:821077d6-ce17-4602-b3ad-d4bef845a950)
+* type = $loinc#87905-6
+* category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
+* category[document-category] = $loinc#18726-0
 * title = "Zpráva z vyšetření PET+CT hlavy"
-* encounter = Reference(urn:uuid:7023b84e-47bb-405c-be46-2c161c6ba8d5)
-* custodian = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1)
+* custodian = Reference(urn:uuid:a4641bd0-34af-4038-a7db-872d08a54df9)
 * language = #cs
 * confidentiality = #N
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:9c23deff-bf1d-46f6-bd0e-005e52b42121)
@@ -110,11 +117,20 @@ Usage: #example
 * section[order].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Žádanka na PET+CT pacientky Jany Example</div>"
 * section[order].text.status = #additional
 * section[order].entry[0] = Reference(urn:uuid:5be5b9c2-5ca6-4f2e-b3e2-47dc9b334a22)
-* section[clinicalQuestion].title = "Klinická otázka"
-* section[clinicalQuestion].code = $loinc#18785-6	"Radiology Reason for study (narrative)"
-* section[clinicalQuestion].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Klinická otázka: Recidiva?</div>"
-* section[clinicalQuestion].text.status = #additional
-* section[clinicalQuestion].entry[0] = Reference(urn:uuid:9ee22843-2526-436f-bf66-3f9874869c08)
+* section[clinicalQuestion]
+  * title = "Klinická otázka"
+  * code = $loinc#18785-6	"Radiology Reason for study (narrative)"
+  * extension[note][+]
+    * valueAnnotation
+      * id = "clinical-question-note"
+      * text = "Recidiva?"
+  * text
+    * status = #additional
+    * extension[$textLink][+]
+      * extension[htmlid].valueString = "note"
+      * extension[data].valueUri = "#clinical-question-note"
+    * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Note:</b></td><td id=\"note\"><p>Klinická otázka: Recidiva?</p></td></tr></table></div>"
+  * entry[0] = Reference(urn:uuid:9ee22843-2526-436f-bf66-3f9874869c08)
 * section[imagingstudy].title = "Zobrazovací studie"
 * section[imagingstudy].code = $loinc#18726-0 "Radiology studies (set)"
 * section[imagingstudy].entry[0] = Reference(urn:uuid:e132f687-df35-4174-91bd-fe74cda5ac5d)
@@ -137,24 +153,32 @@ Usage: #example
 * section[complications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lokální zčervenání pokožky po podání Fludeoxythymidinu</div>"
 * section[complications].text.status = #additional
 * section[complications].entry[0] = Reference(urn:uuid:0bd84e75-9c5e-406b-90a8-e39a615e9cf6)
-* section[impression].title = "Výsledek"
-* section[impression].code = $loinc#19005-8 "Radiology Imaging study [Impression] (narrative)"
-* section[impression].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Zvýšená mitotická aktivita dorzálně za postresekční dutinou až fokálního charakteru při jejím laterálním okraji - nález vzbuzuje podezření na viabilní neoplazii.
-Nenalézáme žádná další jasná ložiska porušené hematoencefalické bariéry nebo zvýšené mitotické aktivity svědčící pro přítomnost viabilní neoplazie v mozku.</div>"
+* section[impression]
+  * title = "Výsledek"
+  * code = $loinc#19005-8 "Radiology Imaging study [Impression] (narrative)"
+  * extension[note][+]
+    * valueAnnotation
+      * id = "impression-note"
+      * text = "Zvýšená mitotická aktivita dorzálně za postresekční dutinou až fokálního charakteru při jejím laterálním okraji - nález vzbuzuje podezření na viabilní neoplazii.
+Nenalézáme žádná další jasná ložiska porušené hematoencefalické bariéry nebo zvýšené mitotické aktivity svědčící pro přítomnost viabilní neoplazie v mozku."
+  * text
+    * status = #additional
+    * extension[$textLink][+]
+      * extension[htmlid].valueString = "note"
+      * extension[data].valueUri = "#impression-note"
+    * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Note:</b></td><td id=\"note\"><p>Zvýšená mitotická aktivita dorzálně za postresekční dutinou až fokálního charakteru při jejím laterálním okraji - nález vzbuzuje podezření na viabilní neoplazii.
+Nenalézáme žádná další jasná ložiska porušené hematoencefalické bariéry nebo zvýšené mitotické aktivity svědčící pro přítomnost viabilní neoplazie v mozku.</p></td></tr></table></div>"
 * section[impression].text.status = #additional
-
-Instance: cz-encounter-example
-InstanceOf: CZ_Encounter
-Usage: #example
-Description: "Encounter"
-* id = "7023b84e-47bb-405c-be46-2c161c6ba8d5"
-* identifier[+].system = "http://example.org/hospital"
-* identifier[=].value = "ku-123456790"
-* status = #in-progress
-* class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-* class.code = #AMB
-* type.text = "PET/CT pacientky Jany Example"
-* serviceProvider = Reference(urn:uuid:821077d6-ce17-4602-b3ad-d4bef845a950)
+* section[history].title = "History"
+* section[history].code = $loinc#11329-0 "History general Narrative - Reported"
+* section[history].entry[+] = Reference(urn:uuid:9f79ad8f-056e-4931-ae19-810064de607b)
+* section[history].entry[+] = Reference(urn:uuid:40fb226b-e11f-4d02-aa30-97ba51ab4ff6)
+* section[comparison]
+  * title = "Comparison"
+  * code = $loinc#18834-2 "Radiology Comparison study (narrative)"
+  * emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#nilknown "Nil Known"
+  * text.status = #generated
+  * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Unavailable</div>"
 
 Instance: cz-organizationwithlogo-example
 InstanceOf: cz-organization-core
@@ -284,7 +308,7 @@ Description: "Imaging order: PET+CT Imaging report"
 * identifier[=].value = "OBJ123456"
 * status = #active
 * intent = #order
-* category = $sct#363679005 	"Imaging" //* category = http://snomed.info/sct#103693007 "Diagnostic procedure (procedure)"
+* category[imaging] = $sct#363679005
 * performer = Reference(urn:uuid:723b5e24-133c-4e9a-aefb-5c14f5b2eac3)
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * insurance = Reference(urn:uuid:be4e7f9a-2771-4aa1-bcee-c386f9ba7eaa)
@@ -294,7 +318,43 @@ Description: "Imaging order: PET+CT Imaging report"
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">PET+CT mozku pro diferenciální dg. tumoru a radiační nekrozy</div>"
 * authoredOn = "2022-10-06T12:02:00+01:00"
 * reasonReference = Reference(urn:uuid:f06ac619-db0b-47d1-ae16-003a2be66760) // Reference to Condition - Reason For Admission
-* requester = Reference(urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c)
+* requester = Reference(urn:uuid:792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0)
+
+Instance: cz-examplepetct-weightObservation
+InstanceOf: Observation
+Title: "Observation: patient weight"
+Description: "Patient weight in echo report history section"
+Usage: #example
+* id = "9f79ad8f-056e-4931-ae19-810064de607b"
+* status = #final
+* effectiveDateTime = "2023-06-01"
+* code = $loinc#29463-7 "Body weight"
+* category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
+* subject =  Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
+* performer = Reference(urn:uuid:792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0)
+* valueQuantity
+  * value = 65
+  * unit = "kg"
+  * code = #kg
+  * system = "http://unitsofmeasure.org"
+
+Instance: cz-examplepetct-heightObservation
+InstanceOf: Observation
+Title: "Observation: patient height"
+Description: "Patient height in echo report history section"
+Usage: #example
+* id = "40fb226b-e11f-4d02-aa30-97ba51ab4ff6"
+* status = #final
+* effectiveDateTime = "2023-06-01"
+* code = $loinc#8302-2 "Body height"
+* category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
+* subject =  Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
+* performer = Reference(urn:uuid:792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0)
+* valueQuantity
+  * value = 163
+  * unit = "cm"
+  * code = #cm
+  * system = "http://unitsofmeasure.org"
 
 Instance: cz-examplepetct-coverage
 InstanceOf: CZ_Coverage
@@ -443,11 +503,14 @@ Usage: #example
 Description: "Diagnostic report of PET+CT Imaging report"
 Title: "Diagnostic report: PET+CT Imaging report"
 * id = "9c23deff-bf1d-46f6-bd0e-005e52b42121"
-* category[imaging] = $loinc#18726-0 "Nálezy zobrazovacího komplementu" //$loinc#18748-4 "Diagnostic imaging study"
+* identifier
+  * system = "http://example.org/myhospital/reportidentifiers"
+  * value = "o32u4js8492fe" // invented - not there in the report*
+* category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
+* category[document-category] = $loinc#18726-0
 * status = #final
-//* code = $sct#168500000 "Radiology result normal"
-//* code = $loinc#18748-4 "Diagnostic imaging study"
-* code = $loinc#24725-4 "CT hlavy"
+* code = $sct#168500000 "Radiology result normal"
+* performer = Reference(urn:uuid:821077d6-ce17-4602-b3ad-d4bef845a950)
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * conclusion = "Zvýšená mitotická aktivita dorzálně za postresekční dutinou až fokálního charakteru při jejím laterálním okraji - nález vzbuzuje podezření na viabilní neoplazii.
 Nenalézáme žádná další jasná ložiska porušené hematoencefalické bariéry nebo zvýšené mitotické aktivity svědčící pro přítomnost viabilní neoplazie v mozku."

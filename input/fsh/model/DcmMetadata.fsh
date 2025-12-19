@@ -3,7 +3,7 @@ Id: DcmMetadata
 Title: "A.2.7 - DICOM metadata"
 Description: """Imaging Report - Imaging Report DICOM metadata - A.2.7"""
 
-* insert SetFmmandStatusRule ( 1, draft )
+
 * ^language = #cs
 
 * studyInstUID 1..1 id "A.2.7.1 - Study Instance UID - DICOM tag (0020,000D)" """A globally unique study identifier. If one or more series elements are present in the ImagingStudy, there must be one DICOM Study UID identifier."""

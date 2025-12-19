@@ -3,7 +3,7 @@ Id: logHeaderImagingReportCz
 Title: "A.1 - Hlavička dokumentu"
 Description: """Záhlaví dokumentu s administrativními údaji"""
 
-* insert SetFmmandStatusRule ( 1, draft )
+
 * ^language = #cs
 
 * subjekt 1..1 logSubjectCz "A.1.1 - Identifikace a A.1.2 - Kontaktní informace pacienta" """Identifikace pacienta a kontaktní informace pacienta"""
@@ -12,5 +12,5 @@ Description: """Záhlaví dokumentu s administrativními údaji"""
 * autor 1..* logAuthorCz "A.1.5 - Autor dokumentu" """Autor dokumentu dle zákona 372/2011 §54 odst. (3)."""
 * overil 0..* logAttesterCz "A.1.6 - Ověřil" """Ověřil"""
 * zodpovida 0..1 logLegalAuthenticatorCz "A.1.7 - Zodpovídá" """Zodpovídá"""
-* metadataDokumnetu 1..1 logDocumentMetadataCz "A.1.8 - Metadata dokumentu" """Metadata dokumentu"""
+* metadataDokumentu 1..1 logDocumentMetadataCz "A.1.8 - Metadata dokumentu" """Metadata dokumentu"""
 * elektronickyPodpis 1..* logDigitalSignatureCz "A.1.9 - Elektronické podpisy" """Elektronické podpisy dle zákona 327/2011 §54a"""

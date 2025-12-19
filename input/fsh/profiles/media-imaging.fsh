@@ -1,13 +1,13 @@
-Profile: CZ_AttachmentImg
+Profile: CZ_MediaImg
 Parent: Media
-Id: cz-attachment-img
+Id: cz-media-img
 Title: "Attachment: Imaging Report (CZ)"
 Description: "Czech profile for attachment. "
 
 * . ^short = "Imaging Report"
 * . ^definition = "Imaging Report composition."
 
-* insert SetFmmandStatusRule ( 0, draft )
+
 
 * content
 * content.contentType MS
@@ -15,6 +15,7 @@ Description: "Czech profile for attachment. "
 * content.url MS
 * content.title MS
 * content.creation MS
+* content.data MS
 
 * height
 * width

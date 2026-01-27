@@ -85,10 +85,9 @@ Usage: #example
 * confidentiality = #N
 * language = #cs
 * custodian = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1)
-* type = $sctCZ#371527006 "Radiology report"
-* encounter = Reference(urn:uuid:20bd86a1-060b-4161-a063-183069efc54b)
+* type = $loinc#43468-8
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba)
-* category[document-category] = $loinc#18726-0 "Nálezy zobrazovacího komplementu"
+* category[document-category] = $loinc#18726-0
 * section[order].title = "Requested imaging studies information Document"
 * section[order].code = $loinc#55115-0 "Requested imaging studies information Document"
 * section[order].entry[0] = Reference(urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04)
@@ -369,10 +368,11 @@ Title: "Diagnostic report: RTG Imaging report"
   * system = "http://example.org/myhospital/reportidentifiers"
   * value = "o32u4js8492fs" // invented - not there in the report*
 * extension[composition].valueReference = Reference(urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9)
-* category[document-category] = $loinc#18726-0 "Nálezy zobrazovacího komplementu"
+* category[document-category] = $loinc#18726-0
 * status = #final
-* code = $loinc#18748-4 "Zobrazovací vyšetření"
+* code = $loinc#43468-8
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
+* performer = Reference(urn:uuid:e96e9bd5-0695-4725-acb2-c731aa071a55)
 * result.display = "Bez nálezu"
 * presentedForm.contentType = #application/pdf
 * presentedForm.language = #cs-CZ

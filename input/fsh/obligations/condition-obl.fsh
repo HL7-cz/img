@@ -5,7 +5,7 @@ Title:    "Condition: Obligations"
 Description: "This profile defines obligations for a condition in FHIR for the purpose of this guide."
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
-* insert SetFmmandStatusRule ( 0, informative)
+
 
 * code insert OblCreator(#SHOULD:able-to-populate,L2)
 

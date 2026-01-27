@@ -12,7 +12,6 @@ classDiagram
   CZ_BundleImagingReport *-- "1" CZ_CompositionImagingReport
   CZ_BundleImagingReport *-- "1" CZ_DiagnosticReport
   CZ_BundleImagingReport *-- "1" CZ_PatientCore
-  CZ_BundleImageOrder *-- "0..*" CZ_Encounter
   CZ_BundleImagingReport *-- "0..*" CZ_ImagingOrderInformation
   CZ_BundleImagingReport *-- "0..*" CZ_Practioner
   CZ_BundleImagingReport *-- "0..*" CZ_DeviceObserver
@@ -30,7 +29,6 @@ classDiagram
   CZ_CompositionImagingReport --> CZ_ImagingOrderInformation: extension[basedOn]  
   CZ_CompositionImagingReport --> CZ_DiagnosticReport: extension[diagnosticreport-reference]
   CZ_CompositionImagingReport --> CZ_Practioner: author[author]
-  CZ_CompositionImagingReport --> CZ_Encounter: encounter
   CZ_CompositionImagingReport --> CZ_DeviceObserver: author[authoring-device]
   CZ_CompositionImagingReport --> CZ_Practioner: attester[legalAuthenticator]
   CZ_CompositionImagingReport --> CZ_Practioner: attester[resultValidator]

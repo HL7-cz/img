@@ -3,7 +3,7 @@ Id: logBodyImagingReportCz
 Title: "A.2 - Tělo dokumentu"
 Description: """Tělo dokumentu"""
 
-* insert SetFmmandStatusRule ( 1, draft )
+
 
 * informaceOZadance 0..* logInformationAboutOrder "A.2.1 - Informace o žádance (objednávce)" """Informace o žádance (objednávce) na zdravotní službu. """
 * duvodVyzadani 0..1 logReasonForAdmission "A.2.2 - Důvod vyžádání (objednání)" """Důvod vyžádání (objednání)"""

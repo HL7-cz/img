@@ -4,14 +4,22 @@ Id: cz-imagingOrderInformation
 Title: "Service Request: Imaging Report (CZ)"
 Description: "Order information for the scope of the Czech national interoperability project."
 
+* insert ImposeProfile($ServiceRequest-eu-img,0)
+
 * extension contains $bodySite-reference named bodySite 0..1
 * extension[bodySite].valueReference only Reference(BodyStructureCz)
-* identifier 0..1
+* identifier
+  * insert SliceElement( #value, type )
+* identifier contains accessionNumber 0..1
+* identifier[accessionNumber] only CZ_AccessionNumberIdentifier
 
 * basedOn only Reference(CZ_CarePlanImage or CarePlan or CZ_ImagingOrderInformation or ServiceRequest or MedicationRequest)
 * replaces only Reference(CZ_ImagingOrderInformation or ServiceRequest)
 
-* category 1..
+* category 1..*
+  * insert SliceElement( #value, $this )
+* category contains imaging 1..1
+* category[imaging] = $sct#363679005 // "Imaging"
 
 * authoredOn 1..
 * occurrenceDateTime
@@ -32,5 +40,12 @@ Description: "Order information for the scope of the Czech national interoperabi
 * text 1..
 * supportingInfo 0..*
 * supportingInfo only Reference(CZ_MedicationStatement or CZ_BodyHeight or CZ_BodyWeight or Condition or CZ_ConditionImage or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_ObservationImage or CZ_CarePlanImage)
+
+* supportingInfo.extension contains 
+    http://hl7.org/fhir/5.0/StructureDefinition/extension-ServiceRequest.supportingInfo named codeableConcept 0..*
+
+* extension contains http://hl7.org/fhir/5.0/StructureDefinition/extension-ServiceRequest.reason named reason 0..*
+
+
 * locationReference only Reference(CZ_LocationCore)
 * reasonReference only Reference(CZ_ConditionImage)

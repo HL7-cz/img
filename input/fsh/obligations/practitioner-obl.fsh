@@ -4,7 +4,7 @@ Id: cz-practitioner-obl-img
 Title:    "Practitioner: Obligations"
 Description: "This profile defines obligations for a practitioner in FHIR for the purpose of this guide."
 
-* insert SetFmmandStatusRule ( 0, informative)
+
 
 // L1
 * identifier[KRZP] insert OblCreator(#SHALL:populate-if-known,L1)

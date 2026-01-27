@@ -31,7 +31,7 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * . ^short = "Imaging Report Bundle"
 * . ^definition = "Imaging Report Bundle. \r\nA container for a collection of resources in the imaging report document."
 
-* insert SetFmmandStatusRule ( 0, draft )
+* insert ImposeProfile($Bundle-eu-img,0)
 
 * obeys dr-comp-subj
 * obeys one-comp
@@ -111,21 +111,14 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * entry contains imagingStudy 0..*
 * entry[imagingStudy].resource only CZ_StudyImaging
 
-* entry contains keyImageReference 0..*
-* entry[keyImageReference].resource only CZ_KeyImageDocumentReference
+* entry contains documentReference 0..*
+* entry[documentReference].resource only CZ_KeyImageDocumentReference or CZ_Logo or CZ_Attachment
 
 * entry contains procedure 0..*
 * entry[procedure].resource only CZ_ProcedureImaging
 
 * entry contains adverseEvent 0..*
 * entry[adverseEvent].resource only CZ_AdverseEvent
-
-* entry contains encounter 1..*
-* entry[encounter].resource only CZ_Encounter
-
-//* entry contains presentedForm 0..*
-//* entry[presentedForm].resource only DocumentReference
-//* entry[presentedForm].resource ^type.profile[0] = "https://hl7.cz/fhir/cz-core/StructureDefinition/cz-presented-form"
 
 /*
 * signature ^short = "Report Digital Signature"
@@ -134,7 +127,4 @@ Description: "Clinical document used to represent a Imaging Report for the scope
   * who ^short = "Who signed."
   * data ^short = "Signature content"
 */
-
-* entry contains attachment 0..*
-* entry[attachment].resource only CZ_Logo or CZ_Attachment
 

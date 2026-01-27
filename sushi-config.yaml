@@ -36,14 +36,17 @@ publisher:
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
 #     version: 1.0.0
 dependencies:
+# czech dependencies
   hl7.fhir.cz.core: current  #0.3.0-ballot
   hl7.fhir.cz.img-order: current
-  hl7.fhir.eu.base: 0.1.0-ballot
-#  hl7.fhir.eu.imaging: current -- nelze je na R5
-  hl7.fhir.extensions.r5: 4.0.1
-  hl7.fhir.uv.extensions.r4: 5.2.0
-#  hl7.fhir.eu.extensions.r4: 0.1.1-ballot
-  hl7.fhir.eu.extensions: 0.1.1-ballot
+# eu dependencies
+  hl7.fhir.eu.base: current
+  hl7.fhir.eu.extensions: current
+  hl7.fhir.eu.imaging-r4: current
+#  hl7.fhir.extensions.r5: 4.0.1
+  hl7.fhir.uv.extensions: 5.3.0-ballot
+  hl7.fhir.uv.xver-r5.r4: 0.0.1-snapshot-2 
+  hl7.fhir.uv.ips: 1.1.0
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
@@ -252,7 +255,7 @@ menu:
     Copyright (en): copyright.html
     Copyright (cs): copyright-cs.html
   Artifacts: artifacts.html
-  IG IMG EU: https://build.fhir.org/ig/hl7-eu/imaging/index.html
+  IG IMG EU: https://build.fhir.org/ig/hl7-eu/imaging-r4/en/
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
@@ -341,7 +344,6 @@ groups:
     resources:
       - StructureDefinition/cz-address-obl-img
       - StructureDefinition/cz-adverseEvent-obl-img
-      - StructureDefinition/cz-attachment-obl-img
       - StructureDefinition/cz-bundle-obl-img
       - StructureDefinition/cz-carePlan-obl-img
       - StructureDefinition/cz-composition-obl-img
@@ -349,8 +351,8 @@ groups:
       - StructureDefinition/cz-coverage-obl-img
       - StructureDefinition/cz-medicalDevice-obl-img
       - StructureDefinition/cz-diagnosticReport-obl-img
-      - StructureDefinition/cz-encounter-obl-img
       - StructureDefinition/cz-keyImageDocumentReference-obl-img
+      - StructureDefinition/cz-media-obl-img
       - StructureDefinition/cz-medication-obl-img
       - StructureDefinition/cz-medicationAdministration-obl-img
       - StructureDefinition/cz-observationResult-obl-img

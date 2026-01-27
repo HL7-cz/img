@@ -1,20 +1,8 @@
 ### Sections and content
 
-The composition contains basic elements and sections. Within the sections, it is divided into a set of mandatory and optional sections. If no data is available for a mandatory section, the reason can be stated in `composition.section.emptyReason`.
+The composition contains basic components and sections. Basic components include, for example, information about the author, the date of creation of the document, etc. The sections are divided into a set of mandatory and optional sections. If no data is available for a mandatory section, the reason must be stated in `composition.section.emptyReason`.
 
-### Composition structure
-
-The image report contains basic elements and the following sections in the order in which they are described:
-
-#### Basic elements
-
-General information about the report. Most of the information elements in this part of the composition are filled in similarly to other types of reports. It contains information about the patient, source organization, author, verifier, and report administrator.
-
-**Encounter**
-
-This profile allows the report to be linked to one specific clinical event to which the report relates.
-
-#### Body of the Imaging Report
+#### Composition sections
 
 **Imaging Study**
 

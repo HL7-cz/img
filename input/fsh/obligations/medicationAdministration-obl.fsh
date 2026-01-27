@@ -5,7 +5,7 @@ Title:    "Medication Administration: Obligations"
 Description: "This profile defines obligations for a medication administration in FHIR for the purpose of this guide."
 // * ^publisher = "HL7 Europe"
 // * ^copyright = "HL7 Europe"
-* insert SetFmmandStatusRule ( 0, informative)
+
 
 * medicationReference insert OblCreator(#SHALL:able-to-populate,L2)
 * dosage insert OblCreator(#SHOULD:able-to-populate,L2)

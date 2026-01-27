@@ -3,7 +3,7 @@ Id: HeaderImagingReportCz
 Title: "A.1 - Imaging Report header data element"
 Description: """Imaging Report - Imaging Report header data element - A.1"""
 
-* insert SetFmmandStatusRule ( 1, draft )
+
 * ^language = #cs
 
 * subject 1..1 SubjectCz "A.1.1 - Identification and A.1.2 - related contact information of the Patient/subject" """Identification of the patient/subject and Patient/subject related contact information"""

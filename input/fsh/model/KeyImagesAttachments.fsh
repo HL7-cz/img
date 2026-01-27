@@ -3,7 +3,7 @@ Id: KeyImagesAttachment
 Title: "A.2.6 - Media (attachments)"
 Description: """Imaging Report - Imaging Report media (attachments) - A.2.6 \r\nKey images related to this report."""
 
-* insert SetFmmandStatusRule ( 1, draft )
+
 * ^language = #cs
 
 * created 0..1 dateTime "A.2.6.1 - Date and time of creation" """Date and time of creation or the period during which the media was created."""

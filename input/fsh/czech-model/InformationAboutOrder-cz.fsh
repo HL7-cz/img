@@ -3,7 +3,7 @@ Id: logInformationAboutOrder
 Title: "A.2.1 - Informace o žádance (objednávce)"
 Description: """Informace o žádance (objednávce) na zdravotní službu. Zpráva může reagovat na více žádanek (objednávek). - A.2.1"""
 
-* insert SetFmmandStatusRule ( 1, draft )
+
 * ^language = #cs
 
 * idZadanky 0..1 Identifier "A.2.1.1 - ID žádanky (objednávky)" """Identifikátor žádanky (objednávky) zdravotní služby."""

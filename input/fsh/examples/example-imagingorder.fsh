@@ -8,11 +8,11 @@ Description: "Imaging order for Magnetic Resonance"
 * identifier[=].value = "27520536"
 * status = #active
 * intent = #order
-* category = $sct#363679005 	"Imaging"
+* category[imaging] = $sctCZ#363679005
 * performer = Reference(cz-examplebase-device)
 * subject = Reference(cz-examplebase-patient)
-* bodySite = $sct#72696002
-* code.coding = $sct#19741000087109
+* bodySite = $sctCZ#72696002
+* code.coding = $sctCZ#19741000087109
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Vyšetření MR pravého kolene</div>"
 * authoredOn = "2025-04-01T09:00:00+01:00"

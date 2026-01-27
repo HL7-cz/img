@@ -3,7 +3,7 @@ Id: AttesterCz
 Title: "A.1.6 - Attester (multiple attesters could be provided)"
 Description: """Attester (multiple attesters could be provided)"""
 
-* insert SetFmmandStatusRule ( 1, draft )
+
 
 * identifier 1..* Identifier "A.1.6.1 - Attester identifier" """The health professional identification number. Either an internal identifier assigned by a healthcare provider institution or (preferably) a national health professional ID such as the licence or registration number."""
 * name 1..1 HumanName "A.1.6.2 - Attester name" """Person name [the structure of the name will be the same as for the patient (given name, family name / surname)]."""

@@ -509,7 +509,7 @@ Title: "Diagnostic report: PET+CT Imaging report"
 * category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
 * category[document-category] = $loinc#18726-0
 * status = #final
-* code = $sctCZ#168500000 "Radiology result normal"
+* code = $loinc#24686-8
 * performer = Reference(urn:uuid:821077d6-ce17-4602-b3ad-d4bef845a950)
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * conclusion = "Zvýšená mitotická aktivita dorzálně za postresekční dutinou až fokálního charakteru při jejím laterálním okraji - nález vzbuzuje podezření na viabilní neoplazii.

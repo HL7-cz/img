@@ -23,7 +23,7 @@ note top #EEEEAE [[ConceptMap-AttachmentImagingReport2FHIR-cz.html]]
 Concept Map
 endnote
 
-class "cz-diagnosticReport.presentedForm" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/img-order/StructureDefinition-cz-compositionImageOrder.html#an]]
+class "cz-diagnosticReport.presentedForm" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/img/StructureDefinition-cz-composition-imaging.html#acc]]
 class "cz-attachment" <<Profile>> [[https://hl7.cz/fhir/core/StructureDefinition-cz-attachment.html]]
 
 "Presented Form" -- "Attachments"

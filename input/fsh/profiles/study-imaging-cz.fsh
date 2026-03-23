@@ -33,7 +33,7 @@ Description: """This profile represents an imaging study instance."""
 
 * series
   * specimen only Reference(CZ_Specimen)
-  * performer.function from CZ_ImagingStudyPerformerTypeVS (extensible)
+  * performer.function from CZ_ParticipationTypeVS (extensible)
   * performer.actor only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CareTeam or CZ_PatientCore or CZ_RelatedPersonCore or CZ_DeviceObserver or Device)
   * performer
     * insert SliceElement( #type, actor )

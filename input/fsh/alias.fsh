@@ -20,6 +20,7 @@ Alias: $hl7-ev = http://hl7.org/fhir/CodeSystem/event-status
 Alias: $hl7-actstatus = http://hl7.org/fhir/adverse-event-actuality
 Alias: $v3-ParticipationType = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
 Alias: $hl7-diagnostic-service-sections = http://terminology.hl7.org/CodeSystem/v2-0074
+Alias: $nclp = https://ncez.mzcr.cz/nclp/CodeSystem/nclppol
 
 // ValueSet
 Alias: $hl7MedicationAdminStatus = http://hl7.org/fhir/ValueSet/medication-admin-status

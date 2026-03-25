@@ -194,10 +194,11 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
   # excludejson: false
   # excludettl: true
   # excludemap: true
- # no-narrative:
- #   - Patient/example-targeted-provenance
- #   - Bundle/docref-example-1
-  # no-validate:
+  no-narrative:
+    - ConceptMap/AttachmentImagingReport2FHIR-cz
+    - ConceptMap/BodyImagingReport2FHIR-cz
+    - ConceptMap/HeaderImagingReport2FHIR-cz
+ # no-validate:
   #   - '*/*'  # does not seems to work
   #   - 'StructureDefinition/*'
  # version-comparison:

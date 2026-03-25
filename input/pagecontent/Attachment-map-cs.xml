@@ -134,12 +134,13 @@
 
         <tbody>
 
+          
           <tr>
             <td>PresentedForm</td>
             <td>A.3 - Presented Form</td>
             <td>ekvivalentní</td>
             <td>cz-diagnostic-report</td>
-            <td>DiagnosticReport.presentedForm</td>
+            <td>presentedForm</td>
             <td></td>
             <td></td>
           </tr>          <tr>
@@ -195,7 +196,7 @@
             <td>A.4 - Attachments</td>
             <td>související</td>
             <td>cz-diagnostic-report</td>
-            <td>DiagnosticReport.media.link</td>
+            <td>media.link</td>
             <td></td>
             <td></td>
           </tr>          <tr>
@@ -203,7 +204,7 @@
             <td>A.4.1 - Content type of media attachments</td>
             <td>ekvivalentní</td>
             <td>cz-media-img</td>
-            <td>CZ_MediaImg.contentType</td>
+            <td>content.contentType</td>
             <td></td>
             <td></td>
           </tr>          <tr>
@@ -211,7 +212,7 @@
             <td>A.4.2 - Language of media attachments</td>
             <td>ekvivalentní</td>
             <td>cz-media-img</td>
-            <td>CZ_MediaImg.language</td>
+            <td>content.language</td>
             <td></td>
             <td></td>
           </tr>          <tr>
@@ -219,7 +220,7 @@
             <td>A.4.3 - Data of media attachments</td>
             <td>ekvivalentní</td>
             <td>cz-media-img</td>
-            <td>CZ_MediaImg.content.data</td>
+            <td>content.data</td>
             <td></td>
             <td></td>
           </tr>          <tr>
@@ -227,7 +228,7 @@
             <td>A.4.4 - URL of media attachments</td>
             <td>ekvivalentní</td>
             <td>cz-media-img</td>
-            <td>CZ_MediaImg.url</td>
+            <td>content.url</td>
             <td></td>
             <td></td>
           </tr>          <tr>
@@ -235,7 +236,7 @@
             <td>A.4.5 - Title of media attachments</td>
             <td>ekvivalentní</td>
             <td>cz-media-img</td>
-            <td>CZ_MediaImg.title</td>
+            <td>content.title</td>
             <td></td>
             <td></td>
           </tr>          <tr>
@@ -243,10 +244,10 @@
             <td>A.4.6 - Date and time of creation</td>
             <td>ekvivalentní</td>
             <td>cz-media-img</td>
-            <td>CZ_MediaImg.creation</td>
+            <td>content.creation</td>
             <td></td>
             <td></td>
-          </tr>
+          </tr>        
         </tbody>
 
       </table>

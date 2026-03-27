@@ -82,17 +82,17 @@ Alias: $creatorL3 = https://hl7.cz/fhir/core/ActorDefinition/actor-creator-L3
 Alias: $consumerL3 = https://hl7.cz/fhir/core/ActorDefinition/actor-consumer-L3
 
 // EU R4 imaging profiles
-Alias: $Composition-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/CompositionEuImaging
-Alias: $DiagnosticReport-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/DiagnosticReportEuImaging
-Alias: $Observation-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/ObservationFindingEuImaging
-Alias: $AdverseEvent-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/AdverseEventEuImaging
-Alias: $ServiceRequest-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/ServiceRequestOrderEuImaging
-Alias: $Bundle-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/BundleReportEuImaging
-Alias: $ObservationRadition-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/ObservationRadiationDoseEuImaging
-Alias: $ImagingStudy-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImagingStudyEuImaging
-Alias: $ImagingSelection-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImagingSelectionEuImaging
-Alias: $SRImagingSelection-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/SrInstanceImagingSelectionEuImaging
-Alias: $ImagingSelectionKeyImage-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/ImagingSelectionKeyImageEuImaging
-Alias: $KeyImageDocumentReference-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/DocumentReferenceKeyImageEuImaging
-Alias: $Procedure-eu-img = http://hl7.eu/fhir/imaging-r4/StructureDefinition/ProcedureEuImaging
+Alias: $Composition-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/CompositionEuImaging
+Alias: $DiagnosticReport-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/DiagnosticReportEuImaging
+Alias: $Observation-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/ObservationFindingEuImaging
+Alias: $AdverseEvent-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/AdverseEventEuImaging
+Alias: $ServiceRequest-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/ServiceRequestOrderEuImaging
+Alias: $Bundle-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/BundleReportEuImaging
+Alias: $ObservationRadition-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/ObservationRadiationDoseEuImaging
+Alias: $ImagingStudy-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/ImagingStudyEuImaging
+Alias: $ImagingSelection-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/ImagingSelectionEuImaging
+Alias: $SRImagingSelection-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/SrInstanceImagingSelectionEuImaging
+Alias: $ImagingSelectionKeyImage-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/ImagingSelectionKeyImageEuImaging
+Alias: $KeyImageDocumentReference-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/DocumentReferenceKeyImageEuImaging
+Alias: $Procedure-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/ProcedureEuImaging
 

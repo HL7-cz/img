@@ -236,6 +236,8 @@ Title: "Diagnostic report: L1 Imaging report"
 * extension[composition].valueReference = Reference(urn:uuid:6390b57a-0fe7-488b-b948-eda546875bc0)
 * category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
 * category[document-category] = $loinc#18726-0
+* category[imaging] = http://hl7.eu/fhir/eu-health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
+* category[imaging-report] = $loinc#85430-7
 * status = #final
 * code = $loinc#24686-8
 * subject = Reference(urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57)

@@ -369,6 +369,8 @@ Title: "Diagnostic report: RTG Imaging report"
   * value = "o32u4js8492fs" // invented - not there in the report*
 * extension[composition].valueReference = Reference(urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9)
 * category[document-category] = $loinc#18726-0
+* category[imaging] = http://hl7.eu/fhir/eu-health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
+* category[imaging-report] = $loinc#85430-7
 * status = #final
 * code = $loinc#43468-8
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)

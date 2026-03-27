@@ -508,6 +508,8 @@ Title: "Diagnostic report: PET+CT Imaging report"
   * value = "o32u4js8492fe" // invented - not there in the report*
 * category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
 * category[document-category] = $loinc#18726-0
+* category[imaging] = http://hl7.eu/fhir/eu-health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
+* category[imaging-report] = $loinc#85430-7
 * status = #final
 * code = $loinc#24686-8
 * performer = Reference(urn:uuid:821077d6-ce17-4602-b3ad-d4bef845a950)

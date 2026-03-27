@@ -91,13 +91,8 @@
         </li>
 
         <li>
-          <strong>Cílová concept map:</strong>
-          <a href="ConceptMap-HeaderImagingReport2FHIR-cz.html">HeaderImagingReport2FHIR-cz</a>
-        </li>
-
-        <li>
           <strong>Hlavní cílový profil:</strong>
-          <a href="StructureDefinition-cz-patient-core.html">CZ_PatientCore</a>
+          <a href="https://hl7.cz/fhir/core/StructureDefinition-cz-practitioner-core.html">CZ_PatientCore</a>
         </li>
 
       </ul>

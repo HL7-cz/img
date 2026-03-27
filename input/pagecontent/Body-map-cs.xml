@@ -91,11 +91,6 @@
         </li>
 
         <li>
-          <strong>Cílová concept map:</strong>
-          <a href="ConceptMap-BodyImagingReport2FHIR-cz.html">BodyImagingReport2FHIR-cz</a>
-        </li>
-
-        <li>
           <strong>Hlavní cílový profil:</strong>
           <a href="StructureDefinition-cz-imagingOrderInformation.html">CZ_ImagingOrderInformation</a>
         </li>

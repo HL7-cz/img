@@ -88,6 +88,8 @@ Usage: #example
 * type = $loinc#43468-8
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba)
 * category[document-category] = $loinc#18726-0
+* category[imaging] = http://hl7.eu/fhir/eu-health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
+* category[imaging-report] = $loinc#85430-7
 * section[order].title = "Requested imaging studies information Document"
 * section[order].code = $loinc#55115-0 "Requested imaging studies information Document"
 * section[order].entry[0] = Reference(urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04)
@@ -100,9 +102,6 @@ Usage: #example
       * text = "Trauma skeletu?"
   * text
     * status = #additional
-    * extension[$textLink][+]
-      * extension[htmlid].valueString = "note"
-      * extension[data].valueUri = "#clinical-question-note"
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Note:</b></td><td id=\"note\"><p>Klinická otázka: Trauma skeletu?</p></td></tr></table></div>"
 * section[clinicalQuestion].text.status = #additional
 * section[imagingstudy].title = "Obrazová studie"
@@ -123,9 +122,6 @@ Usage: #example
       * text = "Nález byl negativní. Trauma skeletu nepotrvzeno."
   * text
     * status = #additional
-    * extension[$textLink][+]
-      * extension[htmlid].valueString = "note"
-      * extension[data].valueUri = "#impression-note"
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Note:</b></td><td id=\"note\"><p>Nález byl negativní. Trauma skeletu nepotrvzeno.</p></td></tr></table></div>"
 * section[history]
   * title = "History"

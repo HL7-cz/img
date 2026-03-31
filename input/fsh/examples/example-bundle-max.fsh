@@ -107,6 +107,8 @@ Usage: #example
 * type = $loinc#87905-6
 * category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
 * category[document-category] = $loinc#18726-0
+* category[imaging] = http://hl7.eu/fhir/eu-health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
+* category[imaging-report] = $loinc#85430-7
 * title = "Zpráva z vyšetření PET+CT hlavy"
 * custodian = Reference(urn:uuid:a4641bd0-34af-4038-a7db-872d08a54df9)
 * language = #cs
@@ -126,9 +128,6 @@ Usage: #example
       * text = "Recidiva?"
   * text
     * status = #additional
-    * extension[$textLink][+]
-      * extension[htmlid].valueString = "note"
-      * extension[data].valueUri = "#clinical-question-note"
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Note:</b></td><td id=\"note\"><p>Klinická otázka: Recidiva?</p></td></tr></table></div>"
   * entry[0] = Reference(urn:uuid:9ee22843-2526-436f-bf66-3f9874869c08)
 * section[imagingstudy].title = "Zobrazovací studie"
@@ -163,9 +162,6 @@ Usage: #example
 Nenalézáme žádná další jasná ložiska porušené hematoencefalické bariéry nebo zvýšené mitotické aktivity svědčící pro přítomnost viabilní neoplazie v mozku."
   * text
     * status = #additional
-    * extension[$textLink][+]
-      * extension[htmlid].valueString = "note"
-      * extension[data].valueUri = "#impression-note"
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Note:</b></td><td id=\"note\"><p>Zvýšená mitotická aktivita dorzálně za postresekční dutinou až fokálního charakteru při jejím laterálním okraji - nález vzbuzuje podezření na viabilní neoplazii.
 Nenalézáme žádná další jasná ložiska porušené hematoencefalické bariéry nebo zvýšené mitotické aktivity svědčící pro přítomnost viabilní neoplazie v mozku.</p></td></tr></table></div>"
 * section[impression].text.status = #additional

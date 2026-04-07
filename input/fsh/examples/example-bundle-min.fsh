@@ -247,6 +247,7 @@ Description: "Imaging order for Plain X-ray"
 * id = "d6784779-d008-447d-90cf-89d5d53a0f04"
 * identifier[+].system = "https://www.nemocnice_oblackov.cz/"
 * identifier[=].value = "6609024"
+* identifier[=].type = http://terminology.hl7.org/CodeSystem/v2-0203#ACSN
 * status = #active
 * intent = #order
 * category[imaging] = $sctCZ#363679005
@@ -313,6 +314,7 @@ Title: "Imaging study: RTG Imaging report"
 * id = "fc79917b-b1b0-44a6-beaa-e9715322c834"
 * identifier[studyInstanceUid].system = "urn:dicom:uid"
 * identifier[studyInstanceUid].value = "urn:oid:1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.1"
+* identifier[studyInstanceUid].type = MissingDicomTerminology#0020000D "Study Instance UID"
 * status = #available
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * series.uid = "1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.1.1"

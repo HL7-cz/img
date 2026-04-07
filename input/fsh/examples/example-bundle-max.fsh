@@ -391,6 +391,7 @@ Title: "Imaging study: PET+CT Imaging report"
 * id = "e132f687-df35-4174-91bd-fe74cda5ac5d"
 * identifier[studyInstanceUid].system = "urn:dicom:uid"
 * identifier[studyInstanceUid].value = "urn:oid:1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.2"
+* identifier[studyInstanceUid].type = MissingDicomTerminology#0020000D "Study Instance UID"
 * status = #available
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * series.uid = "1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.2.1"

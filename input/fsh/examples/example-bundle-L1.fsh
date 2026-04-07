@@ -121,6 +121,7 @@ Title: "Imaging study: RTG Imaging report"
 * id = "f5e876ca-1bbe-47a1-9bc5-b725b68a5ef8"
 * identifier[studyInstanceUid].system = "urn:dicom:uid"
 * identifier[studyInstanceUid].value = "urn:oid:1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.1"
+* identifier[studyInstanceUid].type = MissingDicomTerminology#0020000D "Study Instance UID"
 * status = #available
 * subject = Reference(urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57)
 * series.uid = "1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.1.1"

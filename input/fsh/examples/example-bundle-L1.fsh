@@ -136,7 +136,7 @@ Description: "An example of the organization with logo extension"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * identifier[=].value = "456789655"
 * type[+] = $drzar#101 "Fakultní nemocnice"
-* name = "Fakultní nemocnice Motol"
+* name = "Fakultní nemocnice Oblackov"
 * telecom[0].system = #phone
 * telecom[=].value = "+420257216007"
 * telecom[=].use = #work
@@ -146,12 +146,12 @@ Description: "An example of the organization with logo extension"
 
 * address[+].use = #work
 * address[=].type = #both
-* address[=].text = "Plzeňská 951/125, 150 00 Praha 5"
-* address[=].line[+] = "Plzeňská 951/125"
-* address[=].line[=].extension[streetName].valueString = "Plzeňská"
+* address[=].text = "Fiktivní 951/125, 100 00 Město"
+* address[=].line[+] = "Fiktivní 951/125"
+* address[=].line[=].extension[streetName].valueString = "Fiktivní"
 * address[=].line[=].extension[houseNumber].valueString = "951/125"
-* address[=].city = "Praha"
-* address[=].postalCode = "15000"
+* address[=].city = "Město"
+* address[=].postalCode = "10000"
 * address[=].country = "CZ"
 * extension[logo].valueReference = Reference(urn:uuid:38282c81-1026-410b-a2a2-157667ca24e1)
 

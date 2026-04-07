@@ -85,7 +85,7 @@ Usage: #example
 * confidentiality = #N
 * language = #cs
 * custodian = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1)
-* type = $loinc#43468-8
+* type = $loinc#24686-8
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba)
 * category[document-category] = $loinc#18726-0
 * category[imaging] = http://hl7.eu/fhir/eu-health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging

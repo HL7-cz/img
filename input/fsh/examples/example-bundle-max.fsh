@@ -300,8 +300,6 @@ Usage: #inline
 Title: "Imaging order for PET+CT Imaging report"
 Description: "Imaging order: PET+CT Imaging report"
 * id = "5be5b9c2-5ca6-4f2e-b3e2-47dc9b334a22"
-* identifier[+].system = "https://www.nempriklad.cz/nis"
-* identifier[=].value = "OBJ123456"
 * status = #active
 * intent = #order
 * category[imaging] = $sctCZ#363679005

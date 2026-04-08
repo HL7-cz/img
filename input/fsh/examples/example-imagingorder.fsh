@@ -4,8 +4,6 @@ Usage: #example
 Title: "Imaging order: MR"
 Description: "Imaging order for Magnetic Resonance"
 
-* identifier[+].system = "http://hospital.cz/nis"
-* identifier[=].value = "27520536"
 * status = #active
 * intent = #order
 * category[imaging] = $sctCZ#363679005

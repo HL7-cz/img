@@ -245,9 +245,6 @@ Usage: #example
 Title: "Imaging order: RTG Imaging report"
 Description: "Imaging order for Plain X-ray"
 * id = "d6784779-d008-447d-90cf-89d5d53a0f04"
-* identifier[+].system = "https://www.nemocnice_oblackov.cz/"
-* identifier[=].value = "6609024"
-* identifier[=].type = http://terminology.hl7.org/CodeSystem/v2-0203#ACSN
 * status = #active
 * intent = #order
 * category[imaging] = $sctCZ#363679005

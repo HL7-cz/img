@@ -107,7 +107,7 @@ Usage: #example
 * type = $loinc#87905-6
 * category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
 * category[document-category] = $loinc#18726-0
-* category[imaging] = http://hl7.eu/fhir/eu-health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
+* category[imaging] = http://hl7.eu/fhir/health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
 * category[imaging-report] = $loinc#85430-7
 * title = "Zpráva z vyšetření PET+CT hlavy"
 * custodian = Reference(urn:uuid:a4641bd0-34af-4038-a7db-872d08a54df9)
@@ -503,7 +503,7 @@ Title: "Diagnostic report: PET+CT Imaging report"
   * value = "o32u4js8492fe" // invented - not there in the report*
 * category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
 * category[document-category] = $loinc#18726-0
-* category[imaging] = http://hl7.eu/fhir/eu-health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
+* category[imaging] = http://hl7.eu/fhir/health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
 * category[imaging-report] = $loinc#85430-7
 * status = #final
 * code = $loinc#24686-8

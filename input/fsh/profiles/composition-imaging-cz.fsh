@@ -112,7 +112,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^short = "Document Category"
   * ^definition = "A categorization for the type of document."
   * coding = $loinc#18726-0
-* category[imaging] = http://hl7.eu/fhir/eu-health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
+* category[imaging] = http://hl7.eu/fhir/health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
   * ^definition = "Defines the priority category of the report as defined in the API spec."
 * category[imaging-report] = $loinc#85430-7 //Diagnostic imaging report
   * ^definition = "Defines the category of the report, Diagnostic imaging report."

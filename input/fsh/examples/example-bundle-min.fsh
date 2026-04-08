@@ -88,7 +88,7 @@ Usage: #example
 * type = $loinc#24686-8
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba)
 * category[document-category] = $loinc#18726-0
-* category[imaging] = http://hl7.eu/fhir/eu-health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
+* category[imaging] = http://hl7.eu/fhir/health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
 * category[imaging-report] = $loinc#85430-7
 * section[order].title = "Requested imaging studies information Document"
 * section[order].code = $loinc#55115-0 "Requested imaging studies information Document"
@@ -364,7 +364,7 @@ Title: "Diagnostic report: RTG Imaging report"
   * value = "o32u4js8492fs" // invented - not there in the report*
 * extension[composition].valueReference = Reference(urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9)
 * category[document-category] = $loinc#18726-0
-* category[imaging] = http://hl7.eu/fhir/eu-health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
+* category[imaging] = http://hl7.eu/fhir/health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
 * category[imaging-report] = $loinc#85430-7
 * status = #final
 * code = $loinc#43468-8

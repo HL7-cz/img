@@ -135,7 +135,7 @@ Usage: #example
 * section[imagingstudy].entry[0] = Reference(urn:uuid:e132f687-df35-4174-91bd-fe74cda5ac5d)
 * section[procedure].title = "Procedura"
 * section[procedure].code = $loinc#55111-9 "Current imaging procedure descriptions Document"
-* section[procedure].entry[0] = Reference(urn:uuid:74820e62-42c2-4a39-9ded-251f3b8a58d0)
+* section[procedure].entry[procedure] = Reference(urn:uuid:74820e62-42c2-4a39-9ded-251f3b8a58d0)
 * section[findings].title = "Nálezy"
 * section[findings].code = $loinc#59776-5 "Procedure findings Narrative"
 * section[findings].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Na tomografických řezech nacházíme nehomogenně zvýšenou akumulaci RF při zadním okraji postresekční dutiny vlevo parietotemporálně, maximum akumulace RF resp. FLT je laterálně až do charakteru ložiska výrazně zvýšeného FLT.</div>"
@@ -147,11 +147,6 @@ Usage: #example
 * section[recommendation].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Dále podle vývoje MRI.</div>"
 * section[recommendation].text.status = #additional
 * section[recommendation].entry[0] = Reference(urn:uuid:b9af425a-a9d9-4685-800c-d0d661c1b7a4)
-* section[complications].title = "Komplikace"
-* section[complications].code = $loinc#55109-3 "Complications Document"
-* section[complications].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lokální zčervenání pokožky po podání Fludeoxythymidinu</div>"
-* section[complications].text.status = #additional
-* section[complications].entry[0] = Reference(urn:uuid:0bd84e75-9c5e-406b-90a8-e39a615e9cf6)
 * section[impression]
   * title = "Výsledek"
   * code = $loinc#19005-8 "Radiology Imaging study [Impression] (narrative)"
@@ -442,6 +437,7 @@ InstanceOf: CZ_AdverseEvent
 Usage: #example
 Description: "Adverse Event during PET+CT Imaging report"
 Title: "Adverse Event: PET+CT Imaging report"
+* meta.profile[0] = "https://hl7.cz/fhir/img/StructureDefinition/cz-adverseEvent"
 * id = "0bd84e75-9c5e-406b-90a8-e39a615e9cf6"
 * actuality = $hl7-actstatus#actual
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
@@ -536,11 +532,11 @@ InstanceOf: CZ_ProcedureImaging
 Usage: #example
 Description: "Procedure of PET+CT Imaging report"
 Title: "Procedure: PET+CT Imaging report"
+* meta.profile[0] = "https://hl7.cz/fhir/img/StructureDefinition/cz-procedure-imaging"
 * id = "74820e62-42c2-4a39-9ded-251f3b8a58d0"
 * code.coding = $sctCZ#16554361000119106 "PET CT of brain"
 * status = #completed
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
-* partOf = Reference(urn:uuid:a89a0433-998e-4408-9d7a-560c6d242366)
 * note.text = "Pacient byl informován o způsobu vyšetření a podepsal informovaný souhlas s lékařskýmozářením. Pacientovi bylo i.v. podáno radiofarmakum (RF) s ohledem na jeho hmotnost 72 kg.PET skenování bylo zahájeno v 8:15 v rozsahu hlavy s přiloženými horními končetinami. Tomubezprostředně předcházelo nativní nízkodávkové CT vyšetření ve stejném rozsahu ke korekciabsorpce PET obrazu. Použité lékařské přístroje: PET / CT systém Biograph mCT Flow, Siemens,ev. č. XXXXXX. Pacientovi byla doporučena režimová opatření a po vyšetření byl propuštěn zoddělení v nezměněném zdravotním stavu. Byla provedena fúze se snímky magnetické rezonance z roku 2020 a 2019."
 * complication.coding = $sctCZ#49727002 "Cough"
 * complication.text = "Kašel"

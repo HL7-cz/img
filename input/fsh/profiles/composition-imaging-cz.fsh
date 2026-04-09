@@ -151,7 +151,6 @@ The `text` field of each section SHALL contain a textual representation of all l
     impression 0..1 and
     recommendation 0..1 and
     communication 0..1 and
-    complications 0..* and
     report 0..1
 
 
@@ -222,10 +221,18 @@ The `text` field of each section SHALL contain a textual representation of all l
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
   * extension contains $note-url named note 0..*
   * entry
-    * insert SliceElement( #profile, $this )
-  * entry contains
-      procedure 0..*
+    * insert SliceElement( #profile, [[resolve()]] )
+  * entry contains 
+      procedure 0..* and adverse-event 0..* and radiation-dose 0..*
   * entry[procedure] only Reference(CZ_ProcedureImaging)
+    * ^short = "The imaging Procedure(s)"
+    * ^definition = "A reference the the procedure(s) in which the imaging study was performed."
+  * entry[adverse-event] only Reference(CZ_AdverseEvent)
+    * ^short = "AdverseEvent(s)"
+    * ^definition = "Possible AdverseEvents that occurred during the procedure."
+  * entry[radiation-dose] only Reference(CZ_RadiationDoseObservation)
+    * ^short = "Radiation-dose information"
+    * ^definition = "Information on radiation the patient was exposed to during the procedure."
 
 ////////////////// COMPARISON SECTION //////////////////////////
 * section[comparison]
@@ -293,22 +300,6 @@ The `text` field of each section SHALL contain a textual representation of all l
 // a proper code is needed
   * code = $loinc#LP173421-1 // "Report"
   * extension contains $note-url named note 0..*
-
-// /////////////////// CZECH SECTION //////////////////////////
-* section[complications]  // sekce na záznam alergických reakcí
-  * ^short = "Complications Document"
-  * code = $loinc#55109-3 //"Note - asi jen dočasný kód TODO: Najít vhodný kód"
-  * author only Reference(CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
-  * entry 1..*
-  * entry only Reference(CZ_AdverseEvent)
-/*
-  * section[attachments]  // sekce obsahující referenci na DocumentReference
-  * ^short = "Attachments"
-  * code = $loinc#34109-9 //"Note - asi jen dočasný kód TODO: Najít vhodný kód"
-  * author only Reference(CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
-  * entry 1..*
-  * entry only Reference(CZ_Logo or DocumentReference)
-*/
 
 Invariant: text-or-section
 Description: "A Composition SHALL have either text, at least one section, or both."

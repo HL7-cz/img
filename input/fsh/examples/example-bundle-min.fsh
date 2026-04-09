@@ -109,7 +109,7 @@ Usage: #example
 * section[imagingstudy].entry[0] = Reference(urn:uuid:fc79917b-b1b0-44a6-beaa-e9715322c834)
 * section[procedure].title = "Procedura"
 * section[procedure].code = $loinc#55111-9 "Current imaging procedure descriptions Document"
-* section[procedure].entry[0] = Reference(urn:uuid:ea2967a5-0d00-461c-8785-b5affef4791c)
+* section[procedure].entry[procedure] = Reference(urn:uuid:ea2967a5-0d00-461c-8785-b5affef4791c)
 * section[findings].title = "Nálezy"
 * section[findings].code = $loinc#59776-5 "Procedure findings Narrative"
 * section[findings].entry[0] = Reference(urn:uuid:eca2bf34-9fa8-4abf-bd98-d8d49bcb1104)
@@ -347,6 +347,7 @@ InstanceOf: CZ_ProcedureImaging
 Usage: #example
 Description: "Procedure of RTG Imaging report"
 Title: "Procedure: RTG Imaging report"
+* meta.profile[0] = "https://hl7.cz/fhir/img/StructureDefinition/cz-procedure-imaging"
 * id = "ea2967a5-0d00-461c-8785-b5affef4791c"
 * code.coding = $sctCZ#168537006 "Plain X-ray"
 * status = #completed

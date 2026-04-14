@@ -20,6 +20,7 @@ Alias: $hl7-actstatus = http://hl7.org/fhir/adverse-event-actuality
 Alias: $v3-ParticipationType = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
 Alias: $hl7-diagnostic-service-sections = http://terminology.hl7.org/CodeSystem/v2-0074
 Alias: $nclp = https://ncez.mzcr.cz/nclp/CodeSystem/nclppol
+Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 
 // ValueSet
 Alias: $hl7MedicationAdminStatus = http://hl7.org/fhir/ValueSet/medication-admin-status
@@ -95,4 +96,6 @@ Alias: $SRImagingSelection-eu-img = http://hl7.eu/fhir/imaging/StructureDefiniti
 Alias: $ImagingSelectionKeyImage-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/ImagingSelectionKeyImageEuImaging
 Alias: $KeyImageDocumentReference-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/DocumentReferenceKeyImageEuImaging
 Alias: $Procedure-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/ProcedureEuImaging
-
+Alias: $AccessionNumberIdentifier-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/AccessionNumberIdentifierEuImaging
+Alias: $StudyInstanceUidIdentifier-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/StudyInstanceUidIdentifierEuImaging
+Alias: $SopInstanceUidIdentifier-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/SopInstanceUidIdentifierEuImaging

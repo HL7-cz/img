@@ -4,13 +4,13 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.cz.img
-canonical: https://hl7.cz/fhir/img #!!change here!!
+canonical: https://hl7.cz/fhir/img
 name: HL7CzImagingReportImplementationGuide
 title: HL7 Czech Imaging Report IG
 description: Czech Imaging Report Implementation Guide
 status: draft # draft | active | retired | unknown
 version: 0.1.0-ballot
-#language: cs
+language: cs
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -20,7 +20,6 @@ jurisdiction: urn:iso:std:iso:3166#CZ "Czechia" # https://www.hl7.org/fhir/value
 publisher:
   name: HL7 Czech Republic
   url: https://www.hl7.cz/
-  # email: test@example.org
 
 #copyright: >-
 #  Used by permission of HL7 Czech Republic, all rights reserved Creative Commons License
@@ -37,14 +36,12 @@ publisher:
 #     version: 1.0.0
 dependencies:
 # czech dependencies
-  hl7.fhir.cz.core: current  #0.3.0-ballot
-  hl7.fhir.cz.img-order: current
+  hl7.fhir.cz.core: 0.3.0
 # eu dependencies
-  hl7.fhir.eu.base: current
-  hl7.fhir.eu.extensions: current
-  hl7.fhir.eu.imaging-r4: current
-#  hl7.fhir.extensions.r5: 4.0.1
-  hl7.fhir.uv.extensions: 5.3.0-ballot
+  hl7.fhir.eu.base: 0.1.0
+  hl7.fhir.eu.extensions.r4: 1.2.0
+  hl7.fhir.eu.imaging: 1.0.0-ballot
+  hl7.fhir.uv.extensions.r4: 5.2.0
   hl7.fhir.uv.xver-r5.r4: 0.0.1-snapshot-2 
   hl7.fhir.uv.ips: 1.1.0
 #
@@ -193,14 +190,8 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
   apply-version: true
   show-inherited-invariants: true
   usage-stats-opt-out: true
-  # excludexml: false
-  # excludejson: false
-  # excludettl: true
-  # excludemap: true
- # no-narrative:
- #   - Patient/example-targeted-provenance
- #   - Bundle/docref-example-1
-  # no-validate:
+
+ # no-validate:
   #   - '*/*'  # does not seems to work
   #   - 'StructureDefinition/*'
  # version-comparison:
@@ -255,7 +246,7 @@ menu:
     Copyright (en): copyright.html
     Copyright (cs): copyright-cs.html
   Artifacts: artifacts.html
-  IG IMG EU: https://build.fhir.org/ig/hl7-eu/imaging-r4/en/
+  IG IMG EU: https://hl7.eu/fhir/imaging/1.0.0-ballot/en/
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

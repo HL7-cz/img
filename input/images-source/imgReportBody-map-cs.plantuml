@@ -13,9 +13,6 @@ legend right
 | <#TECHNOLOGY>  Profil |
 endlegend
 class "Tělo zprávy ze zobrazovacích metod" <<LogicalModel>> [[StructureDefinition-BodyImagingReportCz.html]]
-note top #EEEEAE [[ConceptMap-BodyImagingReport2FHIR-cz.html]]
-Concept Mapa
-endnote
 
 class "cz-composition-imaging" <<Profile>> [[StructureDefinition-cz-composition-imaging.html]]
 class "cz-imagingOrderInformation" <<Profile>> [[StructureDefinition-cz-imagingOrderInformation.html]]

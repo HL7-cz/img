@@ -13,9 +13,6 @@ legend right
 | <#TECHNOLOGY>  Profil |
 endlegend
 class "Hlavička zprávy ze zobrazovacích metod" <<LogicalModel>> [[StructureDefinition-HeaderImagingReportCz.html]]
-note top #EEEEAE [[ConceptMap-HeaderImagingReport2FHIR-cz.html]]
-Concept Mapa
-endnote
 
 class "cz-coverage" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html]]
 class "cz-patient-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html]]

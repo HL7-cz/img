@@ -23,12 +23,18 @@ Description: "Diagnostic Report used to represent an entry of a Imaging Report, 
   * insert SliceElement( #value, $this )
 * category contains
   diagnostic-service 0..1 and
-  document-category 1..1
+  document-category 1..1 and
+  imaging-report 1..1 and 
+  imaging 1..1
 * category[diagnostic-service] from $diagnostic-service-sections (required)
 * category[document-category] from $DocumentCategory (required)
   * ^short = "Document Category"
   * ^definition = "A categorization for the type of document."
   * coding = $loinc#18726-0
+* category[imaging] = http://hl7.eu/fhir/health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
+  * ^definition = "Defines the priority category of the report as defined in the API spec."
+* category[imaging-report] = $loinc#85430-7 //Diagnostic imaging report
+  * ^definition = "Defines the category of the report, Diagnostic imaging report."
 //* code 1..
 * code from $ImagingDocumentTypes (required)
 * subject 1..

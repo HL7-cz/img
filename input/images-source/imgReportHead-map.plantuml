@@ -13,9 +13,6 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 class "Imaging Report Header" <<LogicalModel>> [[StructureDefinition-HeaderImagingReportCz.html]]
-note top #EEEEAE [[ConceptMap-HeaderImagingReport2FHIR-cz.html]]
-Concept Map
-endnote
 
 class "cz-coverage" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-coverage.html]]
 class "cz-patient-core" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-patient-core.html]]

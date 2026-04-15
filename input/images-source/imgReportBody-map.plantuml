@@ -13,9 +13,6 @@ legend right
 | <#TECHNOLOGY>  Profile |
 endlegend
 class "Imaging Report Body" <<LogicalModel>> [[StructureDefinition-BodyImagingReportCz.html]]
-note top #EEEEAE [[ConceptMap-BodyImagingReport2FHIR-cz.html]]
-Concept Map
-endnote
 
 class "cz-composition-imaging" <<Profile>> [[StructureDefinition-cz-composition-imaging.html]]
 class "cz-imagingOrderInformation" <<Profile>> [[StructureDefinition-cz-imagingOrderInformation.html]]

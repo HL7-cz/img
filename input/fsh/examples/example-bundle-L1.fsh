@@ -121,6 +121,7 @@ Title: "Imaging study: RTG Imaging report"
 * id = "f5e876ca-1bbe-47a1-9bc5-b725b68a5ef8"
 * identifier[studyInstanceUid].system = "urn:dicom:uid"
 * identifier[studyInstanceUid].value = "urn:oid:1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.1"
+* identifier[studyInstanceUid].type = MissingDicomTerminology#0020000D "Study Instance UID"
 * status = #available
 * subject = Reference(urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57)
 * series.uid = "1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.1.1"
@@ -136,7 +137,7 @@ Description: "An example of the organization with logo extension"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * identifier[=].value = "456789655"
 * type[+] = $drzar#101 "Fakultní nemocnice"
-* name = "Fakultní nemocnice Motol"
+* name = "Fakultní nemocnice Oblackov"
 * telecom[0].system = #phone
 * telecom[=].value = "+420257216007"
 * telecom[=].use = #work
@@ -146,12 +147,12 @@ Description: "An example of the organization with logo extension"
 
 * address[+].use = #work
 * address[=].type = #both
-* address[=].text = "Plzeňská 951/125, 150 00 Praha 5"
-* address[=].line[+] = "Plzeňská 951/125"
-* address[=].line[=].extension[streetName].valueString = "Plzeňská"
+* address[=].text = "Fiktivní 951/125, 100 00 Město"
+* address[=].line[+] = "Fiktivní 951/125"
+* address[=].line[=].extension[streetName].valueString = "Fiktivní"
 * address[=].line[=].extension[houseNumber].valueString = "951/125"
-* address[=].city = "Praha"
-* address[=].postalCode = "15000"
+* address[=].city = "Město"
+* address[=].postalCode = "10000"
 * address[=].country = "CZ"
 * extension[logo].valueReference = Reference(urn:uuid:38282c81-1026-410b-a2a2-157667ca24e1)
 
@@ -236,6 +237,8 @@ Title: "Diagnostic report: L1 Imaging report"
 * extension[composition].valueReference = Reference(urn:uuid:6390b57a-0fe7-488b-b948-eda546875bc0)
 * category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
 * category[document-category] = $loinc#18726-0
+* category[imaging] = http://hl7.eu/fhir/health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
+* category[imaging-report] = $loinc#85430-7
 * status = #final
 * code = $loinc#24686-8
 * subject = Reference(urn:uuid:3c137453-0de8-4e1a-be72-9dc55f500d57)

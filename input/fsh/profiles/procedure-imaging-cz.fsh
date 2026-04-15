@@ -7,7 +7,7 @@ Description: "This profile on Procedure represents the imaging procedure for the
 * insert ImposeProfile($Procedure-eu-img,0)
 
 * code 1..1
-* code from CZ_ProcedureTypeVs (extensible)
+* code from CZ_ImagingProcedureVs (extensible)
 
 * basedOn only Reference(CZ_CarePlanImage or CZ_ImagingOrderInformation)
 * partOf only Reference(Procedure or CZ_ProcedureImaging or Observation or CZ_ObservationResultImaging or MedicationAdministration or CZ_MedicationAdministration)

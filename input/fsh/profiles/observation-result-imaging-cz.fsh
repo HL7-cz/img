@@ -45,7 +45,7 @@ This observation may represent the result of a imaging report
 
 * partOf only Reference(CZ_MedicationAdministration or MedicationDispense or MedicationStatement or CZ_ProcedureImaging or Immunization or CZ_StudyImaging)
 
-* code from CZ_ObservationCodeVs (required)
+* code from CZ_ImagingObservationCodeVs (required)
 
 * subject ^short = "In the initial iteration of the Czech interoperability project: this is Patient (CZ)."
 * subject only Reference(CZ_PatientCore or CZ_PatientAnimal)
@@ -56,7 +56,7 @@ This observation may represent the result of a imaging report
 * performer MS
 * performer ^short = "In the initial iteration of the Czech interoperability project: this is Organization (CZ) or Practitioner (CZ)"
 * value[x] 
-* valueCodeableConcept from CZ_ObservationValueVs (preferred)
+* valueCodeableConcept from CZ_ImagingObservationValueVs (preferred)
 * dataAbsentReason MS
 * interpretation MS
 

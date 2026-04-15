@@ -85,9 +85,11 @@ Usage: #example
 * confidentiality = #N
 * language = #cs
 * custodian = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1)
-* type = $loinc#43468-8
+* type = $loinc#24686-8
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba)
 * category[document-category] = $loinc#18726-0
+* category[imaging] = http://hl7.eu/fhir/health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
+* category[imaging-report] = $loinc#85430-7
 * section[order].title = "Requested imaging studies information Document"
 * section[order].code = $loinc#55115-0 "Requested imaging studies information Document"
 * section[order].entry[0] = Reference(urn:uuid:d6784779-d008-447d-90cf-89d5d53a0f04)
@@ -100,9 +102,6 @@ Usage: #example
       * text = "Trauma skeletu?"
   * text
     * status = #additional
-    * extension[$textLink][+]
-      * extension[htmlid].valueString = "note"
-      * extension[data].valueUri = "#clinical-question-note"
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Note:</b></td><td id=\"note\"><p>Klinická otázka: Trauma skeletu?</p></td></tr></table></div>"
 * section[clinicalQuestion].text.status = #additional
 * section[imagingstudy].title = "Obrazová studie"
@@ -110,7 +109,7 @@ Usage: #example
 * section[imagingstudy].entry[0] = Reference(urn:uuid:fc79917b-b1b0-44a6-beaa-e9715322c834)
 * section[procedure].title = "Procedura"
 * section[procedure].code = $loinc#55111-9 "Current imaging procedure descriptions Document"
-* section[procedure].entry[0] = Reference(urn:uuid:ea2967a5-0d00-461c-8785-b5affef4791c)
+* section[procedure].entry[procedure] = Reference(urn:uuid:ea2967a5-0d00-461c-8785-b5affef4791c)
 * section[findings].title = "Nálezy"
 * section[findings].code = $loinc#59776-5 "Procedure findings Narrative"
 * section[findings].entry[0] = Reference(urn:uuid:eca2bf34-9fa8-4abf-bd98-d8d49bcb1104)
@@ -123,9 +122,6 @@ Usage: #example
       * text = "Nález byl negativní. Trauma skeletu nepotrvzeno."
   * text
     * status = #additional
-    * extension[$textLink][+]
-      * extension[htmlid].valueString = "note"
-      * extension[data].valueUri = "#impression-note"
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Note:</b></td><td id=\"note\"><p>Nález byl negativní. Trauma skeletu nepotrvzeno.</p></td></tr></table></div>"
 * section[history]
   * title = "History"
@@ -249,8 +245,6 @@ Usage: #example
 Title: "Imaging order: RTG Imaging report"
 Description: "Imaging order for Plain X-ray"
 * id = "d6784779-d008-447d-90cf-89d5d53a0f04"
-* identifier[+].system = "https://www.nemocnice_oblackov.cz/"
-* identifier[=].value = "6609024"
 * status = #active
 * intent = #order
 * category[imaging] = $sctCZ#363679005
@@ -317,6 +311,7 @@ Title: "Imaging study: RTG Imaging report"
 * id = "fc79917b-b1b0-44a6-beaa-e9715322c834"
 * identifier[studyInstanceUid].system = "urn:dicom:uid"
 * identifier[studyInstanceUid].value = "urn:oid:1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.1"
+* identifier[studyInstanceUid].type = MissingDicomTerminology#0020000D "Study Instance UID"
 * status = #available
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * series.uid = "1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.1.1"
@@ -352,6 +347,7 @@ InstanceOf: CZ_ProcedureImaging
 Usage: #example
 Description: "Procedure of RTG Imaging report"
 Title: "Procedure: RTG Imaging report"
+* meta.profile[0] = "https://hl7.cz/fhir/img/StructureDefinition/cz-procedure-imaging"
 * id = "ea2967a5-0d00-461c-8785-b5affef4791c"
 * code.coding = $sctCZ#168537006 "Plain X-ray"
 * status = #completed
@@ -369,6 +365,8 @@ Title: "Diagnostic report: RTG Imaging report"
   * value = "o32u4js8492fs" // invented - not there in the report*
 * extension[composition].valueReference = Reference(urn:uuid:dbd426a9-d660-4f97-8656-1e39db4a57c9)
 * category[document-category] = $loinc#18726-0
+* category[imaging] = http://hl7.eu/fhir/health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
+* category[imaging-report] = $loinc#85430-7
 * status = #final
 * code = $loinc#43468-8
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)

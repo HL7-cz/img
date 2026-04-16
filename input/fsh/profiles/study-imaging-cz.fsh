@@ -8,6 +8,15 @@ Description: """This profile represents an imaging study instance."""
 
 * obeys imagingstudy-01
 
+* extension contains AnatomicalRegionExtension named anatomical-region 0..*
+* extension[anatomical-region] ^short = "The anatomical regions covered by the study."
+* extension[anatomical-region] ^definition = """
+The anatomical regions covered by the study, depending on the study there can be zero, one or more regions. 
+The regions SHALL overlap with the bodysite references from `ImagingStudy.serie.bodysite`.
+"""
+* extension[anatomical-region] ^requirements = "This field may be present to align with a similar field on the Imaging Manifest."
+
+
 * identifier
   * insert SliceElement( #value, system )
 * identifier contains studyInstanceUid 1..1
@@ -37,7 +46,7 @@ Description: """This profile represents an imaging study instance."""
   * performer.actor only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CareTeam or CZ_PatientCore or CZ_RelatedPersonCore or CZ_DeviceObserver or Device)
   * performer
     * insert SliceElement( #type, actor )
-  * performer contains performer 0..1 and device 0..1 and custodian 0..1
+  * performer contains performer 0..1 and device 0..1 and custodian 0..1 and organization 0..1
   * performer[performer]
     * function = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#PRF
     * actor only Reference( CZ_PractitionerRoleCore )
@@ -47,11 +56,16 @@ Description: """This profile represents an imaging study instance."""
   * performer[device]
     * function = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#DEV
     * actor only Reference( CZ_DeviceObserver ) 
- // * insert EndpointTypes 
+  * performer[organization]
+    * ^short = "The organization representing the location where the imaging was performed."
+    * function = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#LOC
+    * actor only Reference( CZ_OrganizationCore ) 
+
   * modality from CZ_ModalityVs (extensible) 
   * instance
     * extension contains 
-      ImagingStudyInstanceDescription named instance-description 0..1
+      ImagingStudyInstanceDescription named instance-description 0..1 and
+      NumberOfFrames named number-of-frames 0..1
 
 Extension: ImagingStudyInstanceDescription
 Id: instance-description
@@ -59,6 +73,13 @@ Title: "Instance Description"
 Description: "A description of the instance in an ImagingStudy."
 Context: ImagingStudy.series.instance
 * value[x] only string
+
+Extension: NumberOfFrames
+Title: "Extension: Number of Frames"
+Description: "The number of frames in an ImagingStudy instance as required by Xt-EHR logical ImagingStudy logical model."
+Context: ImagingStudy.series.instance
+
+* value[x] only integer
 
 Invariant: imagingstudy-01
 Description: "A DICOM instance UID must start with 'urn:oid:'"

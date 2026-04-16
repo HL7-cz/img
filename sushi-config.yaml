@@ -38,12 +38,16 @@ dependencies:
 # czech dependencies
   hl7.fhir.cz.core: 0.3.0
 # eu dependencies
-  hl7.fhir.eu.base: 0.1.0
+  hl7.fhir.eu.base: 2.0.0-ballot
   hl7.fhir.eu.extensions.r4: 1.2.0
   hl7.fhir.eu.imaging: 1.0.0-ballot
   hl7.fhir.uv.extensions.r4: 5.2.0
   hl7.fhir.uv.xver-r5.r4: 0.0.1-snapshot-2 
-  hl7.fhir.uv.ips: 1.1.0
+  hl7.fhir.uv.ips: 2.0.0
+  fhir.dicom: 
+    id: DICOM
+    uri: http://fhir.org/packages/fhir.dicom/ImplementationGuide/fhir.dicom
+    version: 2025.3.20250714
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
@@ -183,11 +187,16 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 #  generate-turtle:
 #  html-template:
 #  active-tables: false
-  pin-canonicals: pin-multiples
-  apply-contact: true
+#  pin-canonicals: pin-multiples
+  default-contact: true
+  default-copyright: true
+  apply-copyright: false
   apply-jurisdiction: true
+  apply-license: false
+  default-license: true
   apply-publisher: true
-  apply-version: true
+  apply-version: false
+  default-version: true
   show-inherited-invariants: true
   usage-stats-opt-out: true
 

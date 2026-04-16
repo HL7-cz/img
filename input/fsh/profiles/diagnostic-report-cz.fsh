@@ -10,14 +10,37 @@ Description: "Diagnostic Report used to represent an entry of a Imaging Report, 
 
 * insert ImposeProfile($DiagnosticReport-eu-img,0)
 
-* extension contains
-  $artifact-version-url-5 named artifactVersion 0..1
-  and $cvDiagnosticReport-supportingInfo named supportingInfo 0..*
-  and $cvDiagnosticReport-composition named composition 1..1
-* extension[composition].valueReference only Reference(CZ_CompositionImagingReport or Composition) //only Reference(CZ_DiagnosticReport)
+* extension contains $artifact-version-url named artifactVersion 0..1
+* extension contains CZ_AnatomicalRegionExtension named anatomical-region 0..*
+* extension[anatomical-region] ^short = "The anatomical regions covered by the study this report reports on."
+* extension[anatomical-region] ^definition = """
+The anatomical regions covered by the report, depending on the study there can be zero, one or more regions. 
+The regions SHALL overlap with the bodysite references from `ImagingStudy.serie.bodysite`, if present.
+"""
+* extension[anatomical-region] ^requirements = "This field is present in order to be able to populate the MHD DocumentReference field."
 
-* basedOn only Reference(CZ_ImagingOrderInformation)
-//* basedOn.extension contains DiagnosticReportBasedOnRequisition named basedOn-requisition 0..*
+//business identifier and relation with the composition resource
+* identifier 1..*
+  * ^short = "Report identifier"
+  * ^definition = "Identifiers assigned to this Imaging Report by the performer or other systems. It shall be common to several report versions"
+  * ^comment = "Composition.identifier SHALL be equal to one of the DiagnosticReport.identifier, if at least one exists"
+
+* status
+  * ^short = "Status of the Report"
+  * ^comment = "DiagnosticReport.status and Composition.status shall be aligned"
+
+* basedOn
+  * insert SliceElement( #exists, identifier )
+* basedOn contains
+    order-resource 0..* and
+    order-identifier 0..*
+* basedOn[order-resource] only Reference(CZ_ImagingOrderInformation)
+* basedOn[order-resource].reference 1..1
+* basedOn[order-resource].identifier 0..0
+* basedOn[order-identifier].reference 0..0
+* basedOn[order-identifier].identifier 1..1
+* basedOn[order-identifier].identifier only CZ_AccessionNumberIdentifier
+
 * status ^short = "Status of this report"
 * category 1..*
   * insert SliceElement( #value, $this )
@@ -36,9 +59,12 @@ Description: "Diagnostic Report used to represent an entry of a Imaging Report, 
 * category[imaging-report] = $loinc#85430-7 //Diagnostic imaging report
   * ^definition = "Defines the category of the report, Diagnostic imaging report."
 //* code 1..
+
 * code from $ImagingDocumentTypes (required)
+
 * subject 1..
 * subject only Reference(CZ_PatientCore or Patient or Group or Location or CZ_DeviceObserver or CZ_MedicalDevice)
+
 * encounter only Reference(CZ_Encounter) // profile defined for other scopes to be checked
 * effective[x] ^short = "Clinically relevant time/time-period for report."
 * performer only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CareTeam)
@@ -48,9 +74,132 @@ Description: "Diagnostic Report used to represent an entry of a Imaging Report, 
 * specimen ^short = "Specimens this report is based on." // add reference to the used profile
 * result only Reference(CZ_ObservationResultImaging)
 * result ^short = "results" // add reference to the used profiles
-* imagingStudy 0..0
+* imagingStudy
+  * insert SliceElement( #exists, identifier )
+* imagingStudy contains
+    study-resource 0..* and
+    study-identifier 0..*
+* imagingStudy[study-resource] only Reference(CZ_StudyImaging)
+* imagingStudy[study-resource].reference 1..1
+* imagingStudy[study-resource].identifier 0..0
+* imagingStudy[study-identifier].reference 0..0
+* imagingStudy[study-identifier].identifier 1..1
+* imagingStudy[study-identifier].identifier only CZ_StudyInstanceUidIdentifier
 * presentedForm 1..*
 * obeys presentedform-01
+
+* extension contains HL7IDRComparisonStudiesExt named comparison 0..* MS
+* extension[comparison] ^short = "Comparison studies"
+* extension[comparison] ^definition = """
+Studies used for comparison in part of diagnostic reporting.
+"""
+
+* extension contains HL7IDRPatientHistoryExt named patientHistory 0..* MS
+* extension[patientHistory] ^short = "Patient history items selected by radiologist"
+* extension[patientHistory] ^definition = """
+May have originally been extracted from the medical record by imaging staff,
+automated tools, or by the radiologists themselves.
+"""
+
+* extension contains HL7IDRImagingProcedureExt named procedure 0..* MS
+* extension[procedure] ^short = "Imaging procedure"
+* extension[procedure] ^definition = """
+Imaging procedure used to acquire the study.
+"""
+
+* extension contains HL7IDRFindingExt named finding 0..* MS
+* extension[finding] ^short = "Key image findings"
+* extension[finding] ^definition = """
+Key images in the report
+"""
+* extension[findings]
+
+
+* extension contains HL7IDRImpressionExt named impression 0..* MS
+* extension[impression] ^short = "Impression"
+* extension[impression] ^definition = """
+Impression in the imaging report.
+"""
+
+* extension contains HL7IDRRecommendationExt named recommendation 0..* MS
+* extension[recommendation] ^short = "Recommendations"
+* extension[recommendation] ^definition = """
+Recommendations a radiologist provides in the report for possible follow up actions.
+"""
+
+* extension contains HL7IDRCommunicationExt named communication 0..* MS
+* extension[communication] ^short = "Communications with other care providers"
+* extension[communication] ^definition = """
+Communications captures what communications have been made with other care providers.
+"""
+* extension contains RadiationDoseExt named radiationDose 0..1 MS
+
+* extension contains $information-recipient-url  named informationRecipient 0..* and $cvDiagnosticReport-composition named composition 1..1
+* extension[composition] ^short = "Imaging Diagnostic Report"
+* extension[composition].valueReference only Reference(CZ_CompositionImagingReport)
+
+// We have changed these and they now deviate from IDR as they also need to include the notes related to those sections.
+// * obeys hl7eu-im-dr-code
+// * obeys hl7eu-im-dr-category
+// * obeys hl7eu-im-dr-subject
+// * obeys hl7eu-im-dr-study
+// * obeys hl7eu-im-dr-order
+// * obeys hl7eu-im-dr-history
+// * obeys hl7eu-im-dr-procedure
+// * obeys hl7eu-im-dr-impression
+// * obeys hl7eu-im-dr-recommendation
+// * obeys hl7eu-im-dr-communication
+// * obeys hl7eu-im-dr-finding
+
+Extension: HL7IDRComparisonStudiesExt
+Title: "Extension: HL7IDR DiagnosticReport Comparison Study"
+Id: HL7IDRComparisonStudy
+Description: "Studies used for comparison in part of diagnostic reporting"
+Context: DiagnosticReport
+* value[x] only Reference(CZ_StudyImaging or CZ_ImagingSelectionImaging)
+
+Extension: HL7IDRPatientHistoryExt
+Title: "Extension: HL7IDR Patient History"
+Id: HL7IDRPatientHistory
+Description: "Patient history that are relevant for the report"
+Context: DiagnosticReport
+* value[x] only Reference
+// * value[x] only Reference(HL7IDRPatientHistoryCondition or HL7IDRPatientHistoryObservation or HL7IDRPatientHistoryProcedure or HL7IDRPatientHistoryFamilyMemberHistory)
+
+Extension: HL7IDRImagingProcedureExt
+Title: "Extension: HL7IDR Imaging Procedure"
+Id: HL7IDRImagingProcedure
+Description: "Imaging procedure used for the imaging acquisition and procedure specific information."
+Context: DiagnosticReport
+* value[x] only Reference(CZ_ProcedureImaging or AdverseEvent or CZ_RadiationDoseObservation)
+
+Extension: HL7IDRFindingExt
+Title: "Extension: HL7IDR KeyImage Finding"
+Id: HL7IDRFinding
+Description: "KeyImage in the imaging report"
+Context: DiagnosticReport
+* value[x] only Reference(CZ_ObservationImage or CZ_ImagingSelectionKeyImageImaging or CZ_KeyImageDocumentReference or DocumentReference  or Media   )
+
+Extension: HL7IDRImpressionExt
+Title: "Extension: HL7IDR Impression"
+Id: HL7IDRImpression
+Description: "Impression in the imaging report"
+Context: DiagnosticReport
+* value[x] only Reference(CZ_ObservationImage or Condition or CZ_KeyImageDocumentReference or CZ_ImagingSelectionKeyImageImaging )
+
+Extension: HL7IDRRecommendationExt
+Title: "Extension: HL7IDR Recommendation"
+Id: HL7IDRRecommendation
+Description: "Recommendations for any follow up actions"
+Context: DiagnosticReport
+* value[x] only Reference(CZ_CarePlanImage or ServiceRequest)
+
+Extension: HL7IDRCommunicationExt
+Title: "Extension: HL7IDR Communication"
+Id: HL7IDRCommunication
+Description: "Communications captures what communications have been made with other care providers"
+Context: DiagnosticReport
+* value[x] only Reference
 
 Invariant: presentedform-01
 Description: "At least one of presented form has PDF format"

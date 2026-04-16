@@ -84,7 +84,7 @@ Usage: #example
 * title = "Imaging Report - Rentgen Ing. Králíka"
 * confidentiality = #N
 * language = #cs
-* custodian = Reference(urn:uuid:9f7c3d74-2c71-4b92-9a59-2b6f37ecb3d1)
+* custodian = Reference(urn:uuid:a4641bd0-34af-4038-a7db-872d08a54df9)
 * type = $loinc#24686-8
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:bd3e7b78-bfaa-428e-9168-8cd29cf54aba)
 * category[document-category] = $loinc#18726-0
@@ -112,7 +112,7 @@ Usage: #example
 * section[procedure].entry[procedure] = Reference(urn:uuid:ea2967a5-0d00-461c-8785-b5affef4791c)
 * section[findings].title = "Nálezy"
 * section[findings].code = $loinc#59776-5 "Procedure findings Narrative"
-* section[findings].entry[0] = Reference(urn:uuid:eca2bf34-9fa8-4abf-bd98-d8d49bcb1104)
+* section[findings].entry[finding] = Reference(urn:uuid:eca2bf34-9fa8-4abf-bd98-d8d49bcb1104)
 * section[impression]
   * title = "Výsledek"
   * code = $loinc#19005-8 "Radiology Imaging study [Impression] (narrative)"
@@ -209,7 +209,7 @@ Usage: #example
 Instance: cz-examplertg-patient
 InstanceOf: CZ_PatientCore
 Usage: #example
-Title: "Patient Králík"
+Title: "Patient Králík RTG"
 Description: "Patient in RTG Imaging report"
 * id = "62d2aa9a-a15f-4e43-9458-fec16c1c4882"
 * identifier[CPOJ][+].system = "https://ncez.mzcr.cz/fhir/sid/cpoj"

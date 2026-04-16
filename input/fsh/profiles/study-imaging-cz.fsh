@@ -23,7 +23,7 @@ Description: """This profile represents an imaging study instance."""
 * basedOn contains orderaccession 0..1
 * basedOn[orderaccession] only Reference(CZ_ImagingOrderInformation)
   * identifier 1..1
-  * identifier only AccessionNumberIdentifier
+  * identifier only CZ_AccessionNumberIdentifier
 
 * referrer only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore)
 * interpreter only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore)
@@ -52,18 +52,6 @@ Description: """This profile represents an imaging study instance."""
   * instance
     * extension contains 
       ImagingStudyInstanceDescription named instance-description 0..1
-
-Profile: AccessionNumberIdentifier
-Parent: Identifier
-Id: accession-number-identifier
-Title: "Imaging Accession Number Identifier"
-Description: "This profile on Identifier represents the Accession Number for the Imaging Order."
-
-* system 1..1
-* value 1..1
-* type 1..1
-* type = http://terminology.hl7.org/CodeSystem/v2-0203#ACSN
-
 
 Extension: ImagingStudyInstanceDescription
 Id: instance-description

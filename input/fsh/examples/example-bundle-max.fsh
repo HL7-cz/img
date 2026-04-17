@@ -98,7 +98,6 @@ Usage: #example
 * identifier
   * system = "http://example.org/myhospital/reportidentifiers"
   * value = "dfkjewoieoijwoskdje"
-* meta.profile[0] = "https://hl7.cz/fhir/img/StructureDefinition/cz-composition-imaging"
 * status = #final
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * date = "2025-05-20T12:02:00+01:00"
@@ -438,7 +437,6 @@ InstanceOf: CZ_AdverseEvent
 Usage: #example
 Description: "Adverse Event during PET+CT Imaging report"
 Title: "Adverse Event: PET+CT Imaging report"
-* meta.profile[0] = "https://hl7.cz/fhir/img/StructureDefinition/cz-adverseEvent"
 * id = "0bd84e75-9c5e-406b-90a8-e39a615e9cf6"
 * actuality = $hl7-actstatus#actual
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
@@ -533,7 +531,6 @@ InstanceOf: CZ_ProcedureImaging
 Usage: #example
 Description: "Procedure of PET+CT Imaging report"
 Title: "Procedure: PET+CT Imaging report"
-* meta.profile[0] = "https://hl7.cz/fhir/img/StructureDefinition/cz-procedure-imaging"
 * id = "74820e62-42c2-4a39-9ded-251f3b8a58d0"
 * code.coding = $sctCZ#16554361000119106 "PET CT of brain"
 * status = #completed

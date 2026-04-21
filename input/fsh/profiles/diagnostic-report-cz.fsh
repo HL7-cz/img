@@ -8,8 +8,6 @@ Description: "Diagnostic Report used to represent an entry of a Imaging Report, 
 * . ^short = "Imaging Report DiagnosticReport"
 * . ^definition = "Imaging Report DiagnosticReport"
 
-* insert ImposeProfile($DiagnosticReport-eu-img,0)
-
 * extension contains $artifact-version-url named artifactVersion 0..1
 * extension contains CZ_AnatomicalRegionExtension named anatomical-region 0..*
 * extension[anatomical-region] ^short = "The anatomical regions covered by the study this report reports on."

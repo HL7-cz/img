@@ -20,7 +20,6 @@ of which the Composition is the first resource contained.\n
 \n
 The `text` field of each section SHALL contain a textual representation of all listed entries.
 """
-* insert ImposeProfile($Composition-eu-img,0)
 
 
 * identifier 1..1

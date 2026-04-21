@@ -444,7 +444,6 @@ Title: "Adverse Event: PET+CT Imaging report"
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lokální zčervenání pokožky po podání Fludeoxythymidinu</div>"
 * text.status = #additional
 * detected = "2022-10-07T08:30:00+01:00"
-* suspectEntity[procedure].instance = Reference(urn:uuid:74820e62-42c2-4a39-9ded-251f3b8a58d0)
 
 Instance: cz-examplepetct-medicationAdministration
 InstanceOf: CZ_MedicationAdministration

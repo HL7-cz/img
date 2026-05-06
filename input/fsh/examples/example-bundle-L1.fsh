@@ -117,7 +117,7 @@ Instance: cz-examplel1-imagingStudy
 InstanceOf: CZ_StudyImaging
 Usage: #example
 Description: "Imaging study of RTG Imaging report"
-Title: "Imaging study: RTG Imaging report"
+Title: "Imaging study: L1 RTG Imaging report"
 * id = "f5e876ca-1bbe-47a1-9bc5-b725b68a5ef8"
 * identifier[studyInstanceUid].system = "urn:dicom:uid"
 * identifier[studyInstanceUid].value = "urn:oid:1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.1"
@@ -169,7 +169,7 @@ Description: "Example of logo as document reference for FN Motol."
 
 Instance: cz-examplel1-practitioner
 InstanceOf: CZ_PractitionerCore
-Title: "Practitioner Testovací"
+Title: "Practitioner Testovací L1"
 Description: "Author of RTG Imaging report"
 Usage: #example
 * id = "fe8d7386-1b5c-493c-9f83-d2be26291fa8"
@@ -184,7 +184,7 @@ Usage: #example
 
 Instance: cz-examplel1-practitionerRole
 InstanceOf: CZ_PractitionerRoleCore
-Title: "PractitionerRole Testovací"
+Title: "PractitionerRole Testovací L1"
 Description: "Author of RTG Imaging report"
 Usage: #example
 * id = "daa3335b-db80-41a5-897e-ec0dd615ee9d"
@@ -195,7 +195,7 @@ Usage: #example
 Instance: cz-examplel1-patient
 InstanceOf: CZ_PatientCore
 Usage: #example
-Title: "Patient Králík"
+Title: "Patient Králík L1"
 Description: "Patient in RTG Imaging report"
 * id = "3c137453-0de8-4e1a-be72-9dc55f500d57"
 * identifier[CPOJ][+].system = "https://ncez.mzcr.cz/fhir/sid/cpoj"

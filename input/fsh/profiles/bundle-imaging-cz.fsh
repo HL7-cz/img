@@ -17,6 +17,11 @@ Description: "A imaging report SHALL include one and only one DiagnosticReport"
 Expression: "entry.resource.ofType(DiagnosticReport).count() = 1"
 Severity:    #error
 
+Invariant: dr-comp-author-org
+Description: "DiagnosticReport and Composition SHALL have the same author Organization"
+Expression: "Bundle.entry.resource.ofType(DiagnosticReport).performer.resolve().ofType(Organization) = Bundle.entry.resource.ofType(Composition).author.resolve().ofType(Organization) or (Bundle.entry.resource.ofType(DiagnosticReport).performer.resolve().ofType(Organization).empty() and Bundle.entry.resource.ofType(Composition).author.resolve().ofType(Organization).empty())"
+Severity:    #error
+
 //==========================
 // PROFILE
 //==========================
@@ -31,19 +36,19 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * . ^short = "Imaging Report Bundle"
 * . ^definition = "Imaging Report Bundle. \r\nA container for a collection of resources in the imaging report document."
 
-* insert ImposeProfile($Bundle-eu-img,0)
 
 * obeys dr-comp-subj
 * obeys one-comp
 * obeys one-dr
+* obeys dr-comp-author-org
 
 * identifier ^short = "Business identifier for this Imaging Report"
-* identifier 1..
+* identifier 1..1
 * type = #document
 * timestamp 1..
 * total ..0
 * link ..0
-* entry 1..
+* entry 2..
   * link ..0
   * fullUrl 1..1
   * resource 1..
@@ -64,7 +69,6 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * entry.resource 1..
 * entry contains composition 1..1
 * entry[composition].resource only CZ_CompositionImagingReport
-//* entry[composition].resource ^type.profile[0] = "https://hl7.cz/fhir/img/StructureDefinition/cz-composition-imaging"
 
 * entry contains diagnosticReport 1..1
 * entry[diagnosticReport].resource only CZ_DiagnosticReport

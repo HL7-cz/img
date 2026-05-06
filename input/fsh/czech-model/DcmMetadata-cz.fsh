@@ -1,6 +1,6 @@
 Logical: LogCzDcmMetadataCz
 Id: logDcmMetadata
-Title: "A.2.7 - DICOM metadata"
+Title: "A.2.7 - Vybraná DICOM metadata"
 Description: """Vybrané relevantní údaje z DICOM studie."""
 
 

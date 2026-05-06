@@ -98,7 +98,6 @@ Usage: #example
 * identifier
   * system = "http://example.org/myhospital/reportidentifiers"
   * value = "dfkjewoieoijwoskdje"
-* meta.profile[0] = "https://hl7.cz/fhir/img/StructureDefinition/cz-composition-imaging"
 * status = #final
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * date = "2025-05-20T12:02:00+01:00"
@@ -136,6 +135,7 @@ Usage: #example
 * section[procedure].title = "Procedura"
 * section[procedure].code = $loinc#55111-9 "Current imaging procedure descriptions Document"
 * section[procedure].entry[procedure] = Reference(urn:uuid:74820e62-42c2-4a39-9ded-251f3b8a58d0)
+* section[procedure].entry[adverse-event] = Reference(urn:uuid:0bd84e75-9c5e-406b-90a8-e39a615e9cf6)
 * section[findings].title = "Nálezy"
 * section[findings].code = $loinc#59776-5 "Procedure findings Narrative"
 * section[findings].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Na tomografických řezech nacházíme nehomogenně zvýšenou akumulaci RF při zadním okraji postresekční dutiny vlevo parietotemporálně, maximum akumulace RF resp. FLT je laterálně až do charakteru ložiska výrazně zvýšeného FLT.</div>"
@@ -247,7 +247,7 @@ Usage: #example
 Instance: cz-examplepetct-practitionerRole
 InstanceOf: CZ_PractitionerRoleCore
 Description: "Example of requesting practitioner for PET+CT Imaging report"
-Title: "Practitioner Blažejovský:PET+CT Imaging report"
+Title: "PractitionerRole Blažejovský:PET+CT Imaging report"
 Usage: #example
 * id = "792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0"
 * specialty = $sctCZ#394914008 "Radiology"
@@ -437,7 +437,6 @@ InstanceOf: CZ_AdverseEvent
 Usage: #example
 Description: "Adverse Event during PET+CT Imaging report"
 Title: "Adverse Event: PET+CT Imaging report"
-* meta.profile[0] = "https://hl7.cz/fhir/img/StructureDefinition/cz-adverseEvent"
 * id = "0bd84e75-9c5e-406b-90a8-e39a615e9cf6"
 * actuality = $hl7-actstatus#actual
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
@@ -445,7 +444,6 @@ Title: "Adverse Event: PET+CT Imaging report"
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Lokální zčervenání pokožky po podání Fludeoxythymidinu</div>"
 * text.status = #additional
 * detected = "2022-10-07T08:30:00+01:00"
-* suspectEntity[procedure].instance = Reference(urn:uuid:74820e62-42c2-4a39-9ded-251f3b8a58d0)
 
 Instance: cz-examplepetct-medicationAdministration
 InstanceOf: CZ_MedicationAdministration
@@ -532,7 +530,6 @@ InstanceOf: CZ_ProcedureImaging
 Usage: #example
 Description: "Procedure of PET+CT Imaging report"
 Title: "Procedure: PET+CT Imaging report"
-* meta.profile[0] = "https://hl7.cz/fhir/img/StructureDefinition/cz-procedure-imaging"
 * id = "74820e62-42c2-4a39-9ded-251f3b8a58d0"
 * code.coding = $sctCZ#16554361000119106 "PET CT of brain"
 * status = #completed
@@ -542,3 +539,4 @@ Title: "Procedure: PET+CT Imaging report"
 * complication.text = "Kašel"
 * reasonReference = Reference (cz-examplepetct-condition2)
 * reasonReference = Reference (urn:uuid:e040e1b2-9f3f-426c-bc5a-7676abae290a)
+* partOf = Reference (urn:uuid:a89a0433-998e-4408-9d7a-560c6d242366)

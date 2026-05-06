@@ -43,6 +43,4 @@ Description: "This profile on Procedure represents the imaging procedure for the
 * report only Reference(CZ_DiagnosticReport or DocumentReference or Composition or CZ_CompositionImagingReport)
 * complicationDetail only Reference(CZ_ConditionImage)
 * focalDevice.manipulated only Reference(CZ_DeviceObserver or CZ_MedicalDevice)
-* usedReference only Reference(CZ_DeviceObserver or CZ_MedicalDevice or CZ_Medication or Substance)
-
-  
+* usedReference only Reference(CZ_DeviceObserver or CZ_MedicalDevice or CZ_Medication or Substance)  

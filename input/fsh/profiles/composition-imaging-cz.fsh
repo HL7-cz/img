@@ -20,7 +20,6 @@ of which the Composition is the first resource contained.\n
 \n
 The `text` field of each section SHALL contain a textual representation of all listed entries.
 """
-* insert ImposeProfile($Composition-eu-img,0)
 
 
 * identifier 1..1
@@ -142,10 +141,10 @@ The `text` field of each section SHALL contain a textual representation of all l
 
 * section contains
     imagingstudy 1..1 and
-    order 0..1 and
+    order 1..1 and
     clinicalQuestion 0..* and
-    history 0..1 and
-    procedure 0..1 and
+    history 1..1 and
+    procedure 1..1 and
     comparison 0..1 and
     findings 0..1 and
     impression 0..1 and
@@ -209,9 +208,15 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section[history]
   * ^short = "History"
   * ^definition = "This section includes patient history and other prior clinical details deemed relevant to the imaging study by the imaging clinician."
-  * code = $loinc#11329-0 //"History general Narrative - Reported"
-  * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
+  * code = $loinc#11329-0 // "History general Narrative - Reported"
   * extension contains $note-url named note 0..*
+  * entry 
+    * insert SliceElement( #profile, [[$this.resolve()]] )
+  * entry contains vitals 0..* and problemlist 0..* and implants 0..* and medication 0..* 
+  * entry[vitals] only Reference(Observation)
+  * entry[problemlist] only Reference(Condition)
+  * entry[implants] only Reference(Device)
+  * entry[medication] only Reference(MedicationAdministration or MedicationRequest)
 
 ///////////////////////////////// PROCEDURE SECTION ///////////////////////////////////////
 * section[procedure]
@@ -219,21 +224,23 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^definition = "This section contains information such as the procedure type, the anatomy imaged, the date and time of the imaging examination, and the facility that performed it."
   * code = $loinc#55111-9 //"Current imaging procedure descriptions Document"
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
-  * extension contains $note-url named note 0..*
+  * extension contains 
+    $note-url named note 0..*
   * entry
     * insert SliceElement( #profile, [[resolve()]] )
   * entry contains 
-      procedure 0..* and adverse-event 0..* and radiation-dose 0..*
+      procedure 0..* and 
+      adverse-event 0..* and 
+      radiation-dose 0..*
   * entry[procedure] only Reference(CZ_ProcedureImaging)
     * ^short = "The imaging Procedure(s)"
-    * ^definition = "A reference the the procedure(s) in which the imaging study was performed."
+    * ^definition = "A reference the the procedure(s) in which the imaging study was performed." 
   * entry[adverse-event] only Reference(CZ_AdverseEvent)
     * ^short = "AdverseEvent(s)"
     * ^definition = "Possible AdverseEvents that occurred during the procedure."
   * entry[radiation-dose] only Reference(CZ_RadiationDoseObservation)
     * ^short = "Radiation-dose information"
     * ^definition = "Information on radiation the patient was exposed to during the procedure."
-
 ////////////////// COMPARISON SECTION //////////////////////////
 * section[comparison]
   * ^short = "Comparison"
@@ -290,7 +297,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section[communication]
   * ^short = "Communications"
 // a proper code is needed
-  * code = $loinc#73575-3 //"Radiology Consult note"
+  * code = $loinc#73568-8 //"Communication"
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
   * extension contains $note-url named note 0..*
 
@@ -316,3 +323,16 @@ Description: """
 // publisher, contact, and other metadata here using caret (^) syntax (omitted)
 * insert ExtensionContext(Composition)
 * value[x] only Reference (CZ_DiagnosticReport)
+
+Extension: RadiationDoseExt
+Title: "Extension: Radiation Dose"
+Id: RadiationDose
+Description: "Radiation dose information in the imaging report"
+* ^context[+].type = #element
+* ^context[=].expression = "Composition.section"
+* ^context[+].type = #element
+* ^context[=].expression = "DiagnosticReport"
+* value[x] only string
+* valueString ^short = "Radiation dose summary text."
+* valueString ^comment = "Information on total exposure to ionising radiation. This information is required by regulations in several EU countries."
+

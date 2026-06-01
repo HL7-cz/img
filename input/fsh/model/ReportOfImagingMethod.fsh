@@ -8,7 +8,7 @@ Description: """Imaging Report - Imaging Report report of imaging method - A.2.4
 
 * typeOfModality 0..* CodeableConcept "A.2.4.1 - Modality type" """The type of modality that was used.
 - Preferred system(s): DICOM [ModalityCodelist]"""
-* typeOfImagingMethod 1..* CodeableConcept "A.2.4.2 - Type of imaging method" """Display method type.
+* typeOfImagingMethod 1..1 CodeableConcept "A.2.4.2 - Type of imaging method" """Display method type.
 - Preferred system(s): Valueset ČRK (ERTN) 
 - Preferred system(s): LOINC Imaging Document Codes"""
 * reason 0..* Base "A.2.4.3 - Reason (indication)" """Reason (indication)"""

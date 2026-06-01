@@ -8,7 +8,7 @@ Description: """Datové elementy Zprávy ze zobrazovacích metod"""
 
 * typModality 0..* CodeableConcept "A.2.4.1 - Typ modality" """Typ modality, která byla použita.
 - Preferovany system: DICOM [ModalityCodelist]"""
-* typZobrazovaciMetody 1..* CodeableConcept "A.2.4.2 - Typ zobrazovací metody" """Typ zobrazovací metody.
+* typZobrazovaciMetody 1..1 CodeableConcept "A.2.4.2 - Typ zobrazovací metody" """Typ zobrazovací metody.
 - Preferovany system: Valueset ČRK (ERTN) 
 - Preferovany system: LOINC Imaging Document Codes"""
 * duvod 0..* Base "A.2.4.3 - Důvod (indikace)" """Důvod (indikace)"""

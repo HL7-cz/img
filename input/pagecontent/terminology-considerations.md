@@ -39,27 +39,15 @@ List of the codesystems and valueset used:
 | ------------- | ------------------------- | ----------------------------------------------------------------------- |
 | A.1.1.5       | Nationality               | https://terminology.hl7.org/4.0.0/ValueSet-v3-Country2.html             |
 | A.1.1.6       | Gender                    | https://terminology.hl7.org/4.0.0/ValueSet-v3-AdministrativeGender.html |
+| A.1.1.7       | Language                    | https://hl7.org/fhir/R4/valueset-languages.html |
 | A.1.2.1       | Address                   | https://terminology.hl7.org/4.0.0/ValueSet-v3-Country2.html             |
 | A.1.2.4.1     | Type of contact           | http://terminology.hl7.org/CodeSystem/v3-RoleClas                       |
+| A.1.2.4.2     | Personal Relationship     | http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype              |
 | A.1.8.2       | Document category         | http://hl7.org/fhir/ValueSet/referenced-item-category                   |
 | A.1.8.3       | Document status           | https://www.hl7.org/fhir/valueset-diagnostic-report-status.html         |
 | A.1.8.7       | Document confidentiality  | https://terminology.hl7.org/ValueSet-v3-Confidentiality.html            |
+| A.1.8.8       | Language  | https://hl7.org/fhir/R4/valueset-languages.html            |
 
-
-### DASTA
-
-| Item code      | Item description        | Value                         |
-| -------------- | ----------------------- | ----------------------------- |
-| A.1.1.7        | Language                | EJAZYK                        |
-| A.1.8.8        | Language                | EJAZYK                        |
-
-### MVC
-
-| Item code      | Item description        | Value                         |
-| ---------------| ----------------------- | ----------------------------- |
-| A.1.1.5        | Language                | eHDSICountry                  |
-| A.1.2.1        | Language                | eHDSICountry                  |
-| A.1.2.4.2      | Personal Relationship   | eHDSIPersonalRelationship     |
 
 ### DICOM
 

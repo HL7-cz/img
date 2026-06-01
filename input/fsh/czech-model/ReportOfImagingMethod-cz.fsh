@@ -8,9 +8,9 @@ Description: """Datové elementy Zprávy ze zobrazovacích metod"""
 
 * typModality 0..* CodeableConcept "A.2.4.1 - Typ modality" """Typ modality, která byla použita.
 - Preferovany system: DICOM [ModalityCodelist]"""
-* typZobrazovaciMetody 1..1 CodeableConcept "A.2.4.2 - Typ zobrazovací metody" """Typ zobrazovací metody.
-- Preferovany system: Valueset ČRK (ERTN) 
+* typZobrazovaciMetody 1..1 CodeableConcept "A.2.4.2 - Typ zobrazovací metody" """Typ zobrazovací metody. 
 - Preferovany system: LOINC Imaging Document Codes"""
+//- Preferovany system: Valueset ČRK (ERTN)
 * duvod 0..* Base "A.2.4.3 - Důvod (indikace)" """Důvod (indikace)"""
 * duvod.popis 0..1 string "A.2.4.3.1 - Popis důvodu" """Popis klinického stavu s uvedením důvodu, proč byla nařízena (indikována) zobrazovací metoda. Příklad: \"Kašel trvající 3 měsíce\"."""
 * duvod.klasifikace 0..* CodeableConcept "A.2.4.3.2 - Klasifikace důvodu" """Kód důvodu provedení zobrazovací metody.

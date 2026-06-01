@@ -8,9 +8,9 @@ Description: """Imaging Report - Imaging Report report of imaging method - A.2.4
 
 * typeOfModality 0..* CodeableConcept "A.2.4.1 - Modality type" """The type of modality that was used.
 - Preferred system(s): DICOM [ModalityCodelist]"""
-* typeOfImagingMethod 1..1 CodeableConcept "A.2.4.2 - Type of imaging method" """Display method type.
-- Preferred system(s): Valueset ČRK (ERTN) 
+* typeOfImagingMethod 1..1 CodeableConcept "A.2.4.2 - Type of imaging method" """Display method type. 
 - Preferred system(s): LOINC Imaging Document Codes"""
+//- Preferred system(s): Valueset ČRK (ERTN)
 * reason 0..* Base "A.2.4.3 - Reason (indication)" """Reason (indication)"""
 * reason.description 0..1 string "A.2.4.3.1 - Description of the reason" """Description of the clinical condition, stating the reason why the imaging method was ordered (indicated). Example: \"Cough lasting 3 months\"."""
 * reason.classification 0..* CodeableConcept "A.2.4.3.2 - Classification of reason" """Reason code for performing the display method.

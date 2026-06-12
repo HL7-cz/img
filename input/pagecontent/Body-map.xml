@@ -997,8 +997,8 @@
             <td>Body.ReportOfImagingMethod.typeOfImagingMethod</td>
             <td>A.2.4.2 - Type of imaging method</td>
             <td>equivalent</td>
-            <td>cz-composition-imaging</td>
-            <td>Composition.type</td>
+            <td>cz-procedure-imaging</td>
+            <td>Procedure.code</td>
             <td></td>
             <td></td>
           </tr>          <tr>

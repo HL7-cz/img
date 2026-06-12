@@ -7,7 +7,7 @@ Description: "Order information for the scope of the Czech national interoperabi
 * insert ImposeProfile($ServiceRequest-eu-img,0)
 
 * extension contains $bodySite-reference named bodySite 0..1
-* extension[bodySite].valueReference only Reference(BodyStructureCz)
+* extension[bodySite].valueReference only Reference(BodyStructureCzCore)
 * identifier
   * insert SliceElement( #value, type )
 * identifier contains accessionNumber 0..1

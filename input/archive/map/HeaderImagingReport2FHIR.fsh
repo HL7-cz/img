@@ -199,7 +199,7 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.recipient
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "Composition.extension:intendedRecipient.valueReference.resolve()"
+* group[=].element[=].target.comment = "Composition.extension:informationRecipient.valueReference.resolve()"
 * group[=].element[+].code = #IntendedRecipientCz.identifier
 * group[=].element[=].display = "A.1.4.1 - Recipient identifier"
 * group[=].element[=].target.code = #CZ_PractitionerRoleCore.identifier					

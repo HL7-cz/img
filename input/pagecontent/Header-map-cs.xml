@@ -410,7 +410,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>Header.informationRecipient</td>
+            <td>Header.intendedRecipient</td>
             <td>A.1.4 - Recipient identifier</td>
             <td>ekvivalentní</td>
             <td>cz-practitionerrole-core</td>
@@ -418,7 +418,7 @@
             <td></td>
             <td>Composition.extension:informationRecipient.valueReference.resolve()</td>
           </tr>          <tr>
-            <td>InformationRecipientCz.identifier</td>
+            <td>IntendedRecipientCz.identifier</td>
             <td>A.1.4.1 - Recipient identifier</td>
             <td>ekvivalentní</td>
             <td>cz-practitionerrole-core</td>
@@ -426,7 +426,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>InformationRecipientCz.name</td>
+            <td>IntendedRecipientCz.name</td>
             <td>A.1.4.2 - Recipient name</td>
             <td>ekvivalentní</td>
             <td>cz-practitionerrole-core</td>
@@ -434,7 +434,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>InformationRecipientCz.organizationID</td>
+            <td>IntendedRecipientCz.organizationID</td>
             <td>A.1.4.3 - Recipient organisation ID</td>
             <td>ekvivalentní</td>
             <td>cz-practitionerrole-core</td>
@@ -442,7 +442,7 @@
             <td></td>
             <td>ID Organization</td>
           </tr>          <tr>
-            <td>InformationRecipientCz.organization</td>
+            <td>IntendedRecipientCz.organization</td>
             <td>A.1.4.4 - Recipient organisation</td>
             <td>ekvivalentní</td>
             <td>cz-practitionerrole-core</td>

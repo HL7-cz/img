@@ -192,31 +192,31 @@ Usage: #definition
 * group[=].element[=].target.code = #CZ_Coverage.subscriberID
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/InformationRecipientCz"
+* group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/IntendedRecipientCz"
 * group[=].target = "https://hl7.cz/fhir/core/StructureDefinition/cz-practitionerrole-core"
-* group[=].element[+].code = #Header.informationRecipient
-* group[=].element[=].display = "A.1.4 - Recipient identifier"
+* group[=].element[+].code = #Header.intendedRecipient
+* group[=].element[=].display = "A.1.4 - Intended recipient"
 * group[=].element[=].target.code = #Composition.recipient
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "Composition.extension:informationRecipient.valueReference.resolve()"
-* group[=].element[+].code = #InformationRecipientCz.identifier
+* group[=].element[=].target.comment = "Composition.extension:intendedRecipient.valueReference.resolve()"
+* group[=].element[+].code = #IntendedRecipientCz.identifier
 * group[=].element[=].display = "A.1.4.1 - Recipient identifier"
 * group[=].element[=].target.code = #CZ_PractitionerRoleCore.identifier					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #InformationRecipientCz.name
+* group[=].element[+].code = #IntendedRecipientCz.name
 * group[=].element[=].display = "A.1.4.2 - Recipient name"
 * group[=].element[=].target.code = #CZ_PractitionerRoleCore.practictioner.name					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[+].code = #InformationRecipientCz.organizationID
+* group[=].element[+].code = #IntendedRecipientCz.organizationID
 * group[=].element[=].display = "A.1.4.3 - Recipient organisation ID"
 * group[=].element[=].target.code = #CZ_PractitioneRoleCore.organization.identifier					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "ID Organization"
-* group[=].element[+].code = #InformationRecipientCz.organization
+* group[=].element[+].code = #IntendedRecipientCz.organization
 * group[=].element[=].display = "A.1.4.4 - Recipient organisation"
 * group[=].element[=].target.code = #CZ_PractitioneRoleCore.organization					
 * group[=].element[=].target.display = ""

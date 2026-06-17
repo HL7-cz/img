@@ -10,7 +10,7 @@ skinparam topurl StructureDefinition-
 /' ***_ Health insurance code
 ***_ Health insurance name
 ***_ Health insurance number '/
-** [[logInformationRecipientCz.html Příjemce dokumentu]]
+** [[logIntendedRecipientCz.html Příjemce dokumentu]]
 ** [[logAttesterCz.html Ověřil]]
 ***_ Ověřovatel
 ***_ Datum a čas ověření

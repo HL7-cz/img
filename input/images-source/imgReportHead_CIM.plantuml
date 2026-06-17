@@ -10,7 +10,7 @@ skinparam topurl StructureDefinition-
 /' ***_ Health insurance code
 ***_ Health insurance name
 ***_ Health insurance number '/
-** [[InformationRecipientCz.html Intended Recipient]]
+** [[IntendedRecipientCz.html Intended Recipient]]
 ** [[AttesterCz.html Attestation]]
 ***_ Attester
 ***_ DateTime

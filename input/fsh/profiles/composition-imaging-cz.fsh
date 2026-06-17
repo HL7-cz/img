@@ -50,7 +50,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 //  * insert SliceElement( #value, "coding" )
 
 * event.code contains imagingStudy 1..* and procedure 1..*
-* event.code[imagingStudy].coding from https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html (preferred)
+* event.code[imagingStudy].coding from http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html (preferred)
   * ^short = "Modality"
   * ^definition = "The type of imaging modality used to perform the study."
   //* ^comment = "At least one ImagingStudy.code.coding SHALL be equal to Composition.event.code.coding[imagingstudy]"

@@ -738,15 +738,15 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod</td>
-            <td>A.2.4.9 - Result of the imaging method</td>
+            <td>examinationReport</td>
+            <td>A.2.4.9 - Examination report</td>
             <td>related-to</td>
             <td>cz-diagnostic-report</td>
             <td>Composition.extension[diagnosticreport-reference]</td>
             <td></td>
             <td>Composition.extension[diagnosticreport-reference].ofType(CZ_DiagnosticReport)</td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.narrativeText</td>
+            <td>examinationReport.narrativeText</td>
             <td>A.2.4.9.1 - Narrative text</td>
             <td>equivalent</td>
             <td>cz-diagnostic-report</td>
@@ -754,7 +754,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.dateTimeResult</td>
+            <td>examinationReport.dateTimeResult</td>
             <td>A.2.4.9.3 - Result release date and time</td>
             <td>equivalent</td>
             <td>cz-diagnostic-report</td>
@@ -762,7 +762,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.author</td>
+            <td>examinationReport.author</td>
             <td>A.2.4.9.4 - Result author</td>
             <td>equivalent</td>
             <td>cz-diagnostic-report</td>
@@ -770,7 +770,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.conclusion</td>
+            <td>examinationReport.conclusion</td>
             <td>A.2.4.10 - Conclusion</td>
             <td>related-to</td>
             <td>cz-diagnostic-report</td>
@@ -778,7 +778,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.conclusion.text</td>
+            <td>examinationReport.conclusion.text</td>
             <td>A.2.4.10.1 - Conclusion text</td>
             <td>equivalent</td>
             <td>cz-diagnostic-report</td>
@@ -786,7 +786,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.conclusion.code</td>
+            <td>examinationReport.conclusion.code</td>
             <td>A.2.4.10.2 - Coded conclusion</td>
             <td>equivalent</td>
             <td>cz-diagnostic-report</td>
@@ -794,7 +794,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.textPartsOfDocument</td>
+            <td>examinationReport.textPartsOfDocument</td>
             <td>A.2.4.12 - Text parts of the document</td>
             <td>related-to</td>
             <td>cz-diagnostic-report</td>
@@ -802,7 +802,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText</td>
+            <td>examinationReport.formalizedText</td>
             <td>A.2.4.9.2 - Formalized text</td>
             <td>related-to</td>
             <td>cz-observation-result-imaging</td>
@@ -810,7 +810,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText</td>
+            <td>examinationReport.formalizedText</td>
             <td>A.2.4.9.2 - Formalized text</td>
             <td>related-to</td>
             <td>cz-observation-result-imaging</td>
@@ -818,7 +818,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText</td>
+            <td>examinationReport.formalizedText</td>
             <td>A.2.4.9.2 - Formalized text</td>
             <td>related-to</td>
             <td>cz-observation-result-imaging</td>
@@ -826,7 +826,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.note</td>
+            <td>examinationReport.formalizedText.note</td>
             <td>A.2.4.9.2.1 - Note</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
@@ -834,7 +834,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.observationGroup</td>
+            <td>examinationReport.formalizedText.observationGroup</td>
             <td>A.2.4.9.2.2 - Observation (measurement) group</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
@@ -842,7 +842,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.observationComponent</td>
+            <td>examinationReport.formalizedText.observationComponent</td>
             <td>A.2.4.9.2.3 - Observation (measurement) component</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
@@ -850,7 +850,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.specimen</td>
+            <td>examinationReport.formalizedText.specimen</td>
             <td>A.2.4.9.2.4 - Specimen</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
@@ -858,7 +858,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.referenceRanges</td>
+            <td>examinationReport.formalizedText.referenceRanges</td>
             <td>A.2.4.9.2.5 - Reference ranges</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
@@ -866,7 +866,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.reasonForAbsence</td>
+            <td>examinationReport.formalizedText.reasonForAbsence</td>
             <td>A.2.4.9.2.6 - The reason for the absence of a value</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
@@ -874,7 +874,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.observationValue</td>
+            <td>examinationReport.formalizedText.observationValue</td>
             <td>A.2.4.9.2.7 - Observation value (measurement)</td>
             <td>related-to</td>
             <td>cz-observation-result-imaging</td>
@@ -882,7 +882,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.observationValue</td>
+            <td>examinationReport.formalizedText.observationValue</td>
             <td>A.2.4.9.2.7 - Observation value (measurement) in text form</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
@@ -890,7 +890,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.observationValue</td>
+            <td>examinationReport.formalizedText.observationValue</td>
             <td>A.2.4.9.2.7 - Observation value (measurement) in numeric form</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
@@ -898,7 +898,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.observationValue</td>
+            <td>examinationReport.formalizedText.observationValue</td>
             <td>A.2.4.9.2.7 - Observation value (measurement) in code form</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
@@ -906,7 +906,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.interpretation</td>
+            <td>examinationReport.formalizedText.interpretation</td>
             <td>A.2.4.9.2.8 - Interpretation of the result</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
@@ -914,7 +914,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.observationMethod</td>
+            <td>examinationReport.formalizedText.observationMethod</td>
             <td>A.2.4.9.2.9 - Observation (measurement) method</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
@@ -922,7 +922,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.derivedFrom</td>
+            <td>examinationReport.formalizedText.derivedFrom</td>
             <td>A.2.4.9.2.10 - Derived from</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
@@ -930,7 +930,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.observedBodyPart</td>
+            <td>examinationReport.formalizedText.observedBodyPart</td>
             <td>A.2.4.9.2.11 - Observed body part</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
@@ -938,7 +938,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.observationStatus</td>
+            <td>examinationReport.formalizedText.observationStatus</td>
             <td>A.2.4.9.2.12 - Observation status</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
@@ -946,7 +946,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.observationCode</td>
+            <td>examinationReport.formalizedText.observationCode</td>
             <td>A.2.4.9.2.13 - Observation code</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
@@ -954,7 +954,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.observationCategory</td>
+            <td>examinationReport.formalizedText.observationCategory</td>
             <td>A.2.4.9.2.14 - Observation category</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
@@ -962,7 +962,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.observationEquipment</td>
+            <td>examinationReport.formalizedText.observationEquipment</td>
             <td>A.2.4.9.2.15 - Observation equipment used</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
@@ -970,7 +970,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.dateTimeObservation</td>
+            <td>examinationReport.formalizedText.dateTimeObservation</td>
             <td>A.2.4.9.2.16 - Observation date and time</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
@@ -1010,7 +1010,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.textPartsOfDocument.completeExaminationReport</td>
+            <td>examinationReport.textPartsOfDocument.completeExaminationReport</td>
             <td>A.2.4.12.1 - Complete examination report</td>
             <td>equivalent</td>
             <td>cz-composition-imaging</td>
@@ -1018,7 +1018,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.textPartsOfDocument.comments</td>
+            <td>examinationReport.textPartsOfDocument.comments</td>
             <td>A.2.4.12.2 - Comments, interpretations and recommendations</td>
             <td>equivalent</td>
             <td>cz-composition-imaging</td>
@@ -1026,7 +1026,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.narrativeText</td>
+            <td>examinationReport.narrativeText</td>
             <td>A.2.4.9.1 - Narrative text</td>
             <td>equivalent</td>
             <td>cz-composition-imaging</td>
@@ -1034,7 +1034,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.conclusion.text</td>
+            <td>examinationReport.conclusion.text</td>
             <td>A.2.4.10.1 - Conclusion text</td>
             <td>equivalent</td>
             <td>cz-composition-imaging</td>
@@ -1042,7 +1042,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.conclusion.text</td>
+            <td>examinationReport.conclusion.text</td>
             <td>A.2.4.10.2 - Conclusion code</td>
             <td>equivalent</td>
             <td>cz-composition-imaging</td>

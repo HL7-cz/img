@@ -377,7 +377,7 @@ groups:
       - StructureDefinition/logHeaderImagingReportCz
       - StructureDefinition/logImagingReportCz
       - StructureDefinition/logInformationAboutOrder
-      - StructureDefinition/logInformationRecipientCz
+      - StructureDefinition/logIntendedRecipientCz
       - StructureDefinition/logKeyImagesAttachment
       - StructureDefinition/logLegalAuthenticatorCz
       - StructureDefinition/logLinkToRelatedReport

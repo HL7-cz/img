@@ -3,8 +3,8 @@ InstanceOf: CZ_BundleImagingReport
 Title: "Bundle: L1 Imaging report"
 Description: "Example of Imaging report (Bundle) in level L1"
 Usage: #example
-* identifier[+].system = "http://example.org"
-* identifier[=].value = "CZEXIR0003"
+* identifier[+].system = "urn:ietf:rfc:3986"
+* identifier[=].value = "urn:uuid:10fa27a5-3bad-4312-9bbd-47ec4e1aea62"
 * type = #document
 * timestamp = "2025-06-20T12:02:00+01:00"
 
@@ -64,7 +64,7 @@ Usage: #example
 * category[document-category] = $loinc#18726-0
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:8a4c6711-6192-4519-a085-77fcf36d81c3)
 * text.status = #additional
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Imaging Report - Rentgen Ing. Králíka</h2><p>RTG pacienta Ing. Králíka v L1 úrovni</p></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"cs\" xml:lang=\"cs\"><h2>Imaging Report - Rentgen Ing. Králíka</h2><p>RTG pacienta Ing. Králíka v L1 úrovni</p></div>"
 * section[history]
   * title = "History"
   * code = $loinc#11329-0 "History general Narrative - Reported"

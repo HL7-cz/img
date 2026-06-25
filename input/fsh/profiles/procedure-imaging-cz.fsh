@@ -7,7 +7,7 @@ Description: "This profile on Procedure represents the imaging procedure for the
 * insert ImposeProfile($Procedure-eu-img,0)
 
 * code 1..1
-* code from CZ_ImagingProcedureVs (extensible)
+* code from CZ_ImagingProcedureVs (required)
 * code ^binding.extension[0].extension[0].url = "key"
 * code ^binding.extension[=].extension[=].valueId = cz-crk-ertn
 * code ^binding.extension[=].extension[+].url = "purpose"

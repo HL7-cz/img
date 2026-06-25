@@ -61,7 +61,7 @@ The regions SHALL overlap with the bodysite references from `ImagingStudy.serie.
     * function = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#LOC
     * actor only Reference( CZ_OrganizationCore ) 
 
-  * modality from CZ_ModalityVs (extensible) 
+  * modality from CZ_ModalityVs (required) 
   * instance
     * extension contains 
       ImagingStudyInstanceDescription named instance-description 0..1 and

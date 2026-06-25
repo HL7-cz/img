@@ -470,7 +470,7 @@ Title: "Medication: PET+CT Imaging report"
 * identifier[=].value = "607852"
 * status = #active
 * code.coding[+] = $dlp_lecivePripravky#0226200 "Fludeoxythymidin"
-* form = $dlp_formy_cs#INJSOL "Injekční roztok"
+* form = $edqm#50053000 "Powder for solution for injection or infusion"
 
 Instance: cz-examplepetct-observation
 InstanceOf: CZ_ObservationResultImaging

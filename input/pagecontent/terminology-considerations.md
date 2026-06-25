@@ -5,7 +5,7 @@ List of the codesystems and valueset used:
 | Item code      | Item description                                | Value                     |
 | ---------------| ----------------------------------------------- | ------------------------- |
 | A.2.2.1        | Problem / diagnosis / condition description     |                           |
-| A.2.4.6.14     | Illness - reason for the procedure              |                           |
+| A.2.4.5.14     | Illness - reason for the procedure              |                           |
 
 ### Snomed-CT
 
@@ -17,20 +17,20 @@ List of the codesystems and valueset used:
 | A.2.3.6       | Morphology                         | SNOMED CT [MorfologyCodelist]                    |
 | A.2.3.7       | Source device                      | SNOMED CT                                        |
 | A.2.3.8       | Procedure                          | SNOMED CT [CollectionMethodCodelist]             |
-| A.2.4.3.2     | Reason for examination by code     | SNOMED CT [ReasonCodelist]                       |
-| A.2.4.5.1     | Body Part                          | SNOMED CT [BodyLocation]                         |
-| A.2.4.5.2     | Laterality                         | SNOMED CT [Laterality Codelists]                 |
-| A.2.4.6.7.1   | Body location code                 | SNOMED CT [BodyLocation]                         |
-| A.2.4.6.7.2   | Laterality of the body location    | SNOMED CT [Laterality Codelists]                 |
-| A.2.4.6.8.1   | Complications formalized           | SNOMED CT                                        |
-| A.2.4.6.10.4  | Type of medical device             | SNOMED CT [DiagnosticImagingEquipment]           |
-| A.2.4.6.11    | Performance category (procedures)  | SNOMED CT [ProcedureCategoryCodelist]            |
-| A.2.4.6.12    | Performance (procedures)           | SNOMED CT [ProcedureCodelist]                    |
-| A.2.4.6.13    | Achieving a result                 | SNOMED CT                                        |
-| A.2.4.7.3     | The route of administration        | SNOMED CT: <284009009                            |
-| A.2.4.8.1     | Allergy code                       | SNOMED CT                                        |
-| A.2.4.8.2     | Allergy manifestation              | SNOMED CT                                        |
-| A.2.4.9.2.13  | Observation code                   | SNOMED CT                                        |
+| A.2.4.2.2     | Reason for examination by code     | SNOMED CT [ReasonCodelist]                       |
+| A.2.4.4.1     | Body Part                          | SNOMED CT [BodyLocation]                         |
+| A.2.4.4.2     | Laterality                         | SNOMED CT [Laterality Codelists]                 |
+| A.2.4.5.7.1   | Body location code                 | SNOMED CT [BodyLocation]                         |
+| A.2.4.5.7.2   | Laterality of the body location    | SNOMED CT [Laterality Codelists]                 |
+| A.2.4.5.8.1   | Complications formalized           | SNOMED CT                                        |
+| A.2.4.5.10.4  | Type of medical device             | SNOMED CT [DiagnosticImagingEquipment]           |
+| A.2.4.5.11    | Performance category (procedures)  | SNOMED CT [ProcedureCategoryCodelist]            |
+| A.2.4.5.12    | Performance (procedures)           | SNOMED CT [ProcedureCodelist]                    |
+| A.2.4.5.13    | Achieving a result                 | SNOMED CT                                        |
+| A.2.4.6.3     | The route of administration        | SNOMED CT: <284009009                            |
+| A.2.4.7.1     | Allergy code                       | SNOMED CT                                        |
+| A.2.4.7.2     | Allergy manifestation              | SNOMED CT                                        |
+| A.2.4.8.2.13  | Observation code                   | SNOMED CT                                        |
 | A.2.6.11      | View                               | SNOMED CT [ViewProjectionCodelist]               |
 
 ### FHIR
@@ -60,4 +60,4 @@ List of the codesystems and valueset used:
 
 | Item code      | Item description        | Value                                                 |
 | -------------- | ----------------------- | ----------------------------------------------------- |
-| A.2.4.2        | Type of imaging method  | https://loinc.org/oids/1.3.6.1.4.1.12009.10.2.5/      |
+| A.1.8.2        | Document type  | https://loinc.org/oids/1.3.6.1.4.1.12009.10.2.5/      |

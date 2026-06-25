@@ -1,7 +1,7 @@
-Logical: LogEnLinkToRelatedReportCz
-Id: LinkToRelatedReport
-Title: "A.2.5 - Link to related report"
-Description: """Imaging Report - Imaging Report link to related report - A.2.5"""
+Logical: LogEncomparisonStudyCz
+Id: comparisonStudy
+Title: "A.2.5 - Comparison Study"
+Description: """Imaging Report - Imaging Report Comparison Study - A.2.5"""
 
 
 * ^language = #cs

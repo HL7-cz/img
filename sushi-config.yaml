@@ -380,11 +380,11 @@ groups:
       - StructureDefinition/logIntendedRecipientCz
       - StructureDefinition/logKeyImagesAttachment
       - StructureDefinition/logLegalAuthenticatorCz
-      - StructureDefinition/logLinkToRelatedReport
+      - StructureDefinition/logcomparisonStudy
       - StructureDefinition/logPayerCz
       - StructureDefinition/logPresentedFormCz
       - StructureDefinition/logReasonForAdmission
-      - StructureDefinition/logReportOfImagingMethod
+      - StructureDefinition/logReportOfImagingExamination
       - StructureDefinition/logSpecimenInformation
       - StructureDefinition/logSubjectCz
 

@@ -12,7 +12,7 @@ skinparam topurl StructureDefinition-
 ** [[ReasonForAdmission.html Reason for Admission]]
 ** [[DcmMetadata.html DICOM Metadata]]
 ** [[SpecimenInformation.html Sample Information]]
-** [[ReportOfImagingMethod.html Report of Imaging Method]]
+** [[ReportOfImagingExamination.html Report of Imaging]]
 ***_ Modality type
 ***_ Type of imaging method
 ***_ Reason (indication)
@@ -25,7 +25,7 @@ skinparam topurl StructureDefinition-
 ***_ Conclusion
 ***_ Recommendation
 ***_ Text parts of the document
-** [[LinkToRelatedReport.html Link to Related Report]]
+** [[comparisonStudy.html Comparison Study]]
 ** [[KeyImagesAttachment.html Key Images]]
 '** [[Attachments.html Media (Attachments)]]
 

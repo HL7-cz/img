@@ -5,7 +5,7 @@ Dokument se zaměřuje zejména na oblast sémantické interoperability, ale zpr
 
 ### Rozsah
 
-Tento dokument se zaměřuje na aspekty interoperability výsledků zobrazovacích metod vyšetření, typicky radiologických vyšetření či vyšetření nukleární medicíny, ale i vyšetření prováděná klinickými lékaři, jako je například gynekologický ultrazvuk. Typické pro zobrazovací metody vyšetření je pořizování obrazového záznamu, v současné době především v digitální podobě, které jsou posuzovány zdravotnickými pracovníky se specializací na tyto vyšetřovací metody. Zpráva ze zobrazovacích metod obsahuje informace o vlastním vyšetření a jeho výsledu v písemné podobě a je součástí zdravotnické dokumentace. Zpráva se uchovává jako součást zdravotnické dokumentace pacienta vedené poskytovatelem a je také předána nebo zpřístupněna lékaři, který provedení výkonu indikoval a pacientovi, pokud se nejedná o výkon prováděný v rámci hospitalizační péče. 
+Tento dokument se zaměřuje na aspekty interoperability výsledků zobrazovacích metod vyšetření, typicky radiologických vyšetření či vyšetření nukleární medicíny, ale i vyšetření prováděná klinickými lékaři, jako je například gynekologický ultrazvuk. Typické pro zobrazovací metody vyšetření je pořizování obrazového záznamu, v současné době především v digitální podobě, které jsou posuzovány zdravotnickými pracovníky se specializací na tyto vyšetřovací metody. Zpráva z obrazového vyšetření obsahuje informace o vlastním vyšetření a jeho výsledu v písemné podobě a je součástí zdravotnické dokumentace. Zpráva se uchovává jako součást zdravotnické dokumentace pacienta vedené poskytovatelem a je také předána nebo zpřístupněna lékaři, který provedení výkonu indikoval a pacientovi, pokud se nejedná o výkon prováděný v rámci hospitalizační péče. 
 
 Dokument se zaměřuje na:
 - prioritní případy užití;
@@ -43,7 +43,7 @@ Dokument nezahrnuje oblast obrazové dokumentace v podobě digitálních obrazov
 
 Zpráva o výsledku zobrazování by mohla být rozdělena do několika částí: záhlaví dokumentu, tělo (obsah), vizuální podobu dokumentu v PDF a volitelně může obsahovat i různé přílohy.
 
-###### Zpráva ze zobrazovacích metod
+###### Zpráva z obrazového vyšetření
 
 <figure>
   {% include imgReport_CIM-cs.svg %}

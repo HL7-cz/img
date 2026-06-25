@@ -5,7 +5,7 @@ Seznam použitých kódovacích systémů a číselníků:
 | Kód položky    | Popis položky                            | Hodnota                   |
 | ---------------| ---------------------------------------- | ------------------------- |
 | A.2.2.1        | Popis zdrav. problému/diagnózy/stavu     |                           |
-| A.2.4.6.14     | Onemocnění - důvod výkonu                |                           |
+| A.2.4.5.14     | Onemocnění - důvod výkonu                |                           |
 
 ### Snomed-CT
 
@@ -17,20 +17,20 @@ Seznam použitých kódovacích systémů a číselníků:
 | A.2.3.6       | Morfologie                         | SNOMED CT [MorfologyCodelist]                    |
 | A.2.3.7       | Zdroj materiálu                    | SNOMED CT                                        |
 | A.2.3.8       | Procedure                          | SNOMED CT [CollectionMethodCodelist]             |
-| A.2.4.3.2     | Důvod vyšetření                    | SNOMED CT [ReasonCodelist]                       |
-| A.2.4.5.1     | Část těla                          | SNOMED CT [BodyLocation]                         |
-| A.2.4.5.2     | Lateralita                         | SNOMED CT [Laterality Codelists]                 |
-| A.2.4.6.7.1   | Umístění na těle                   | SNOMED CT [BodyLocation]                         |
-| A.2.4.6.7.2   | Lateralita                         | SNOMED CT [Laterality Codelists]                 |
-| A.2.4.6.8.1   | Komplikace                         | SNOMED CT                                        |
-| A.2.4.6.10.4  | Typ zdravotnického zařízení        | SNOMED CT [DiagnosticImagingEquipment]           |
-| A.2.4.6.11    | Kategorie výkonu                   | SNOMED CT [ProcedureCategoryCodelist]            |
-| A.2.4.6.12    | Výkon                              | SNOMED CT [ProcedureCodelist]                    |
-| A.2.4.6.13    | Dosažení výsledku                  | SNOMED CT                                        |
-| A.2.4.7.3     | Cesta podání                       | SNOMED CT: <284009009                            |
-| A.2.4.8.1     | Kód alergie                        | SNOMED CT                                        |
-| A.2.4.8.2     | Projev alergie                     | SNOMED CT                                        |
-| A.2.4.9.2.13  | Typ vyšetření                      | SNOMED CT                                        |
+| A.2.4.2.2     | Důvod vyšetření                    | SNOMED CT [ReasonCodelist]                       |
+| A.2.4.4.1     | Část těla                          | SNOMED CT [BodyLocation]                         |
+| A.2.4.4.2     | Lateralita                         | SNOMED CT [Laterality Codelists]                 |
+| A.2.4.5.7.1   | Umístění na těle                   | SNOMED CT [BodyLocation]                         |
+| A.2.4.5.7.2   | Lateralita                         | SNOMED CT [Laterality Codelists]                 |
+| A.2.4.5.8.1   | Komplikace                         | SNOMED CT                                        |
+| A.2.4.5.10.4  | Typ zdravotnického zařízení        | SNOMED CT [DiagnosticImagingEquipment]           |
+| A.2.4.5.11    | Kategorie výkonu                   | SNOMED CT [ProcedureCategoryCodelist]            |
+| A.2.4.5.12    | Výkon                              | SNOMED CT [ProcedureCodelist]                    |
+| A.2.4.5.13    | Dosažení výsledku                  | SNOMED CT                                        |
+| A.2.4.6.3     | Cesta podání                       | SNOMED CT: <284009009                            |
+| A.2.4.7.1     | Kód alergie                        | SNOMED CT                                        |
+| A.2.4.7.2     | Projev alergie                     | SNOMED CT                                        |
+| A.2.4.8.2.13  | Typ vyšetření                      | SNOMED CT                                        |
 | A.2.6.11      | View                               | SNOMED CT [ViewProjectionCodelist]               |
 
 ### FHIR
@@ -59,4 +59,4 @@ Seznam použitých kódovacích systémů a číselníků:
 
 | Kód položky    | Popis položky           | Hodnota                                               |
 | -------------- | ----------------------- | ----------------------------------------------------- |
-| A.2.4.2        | Typ zobrazovací metody  | https://loinc.org/oids/1.3.6.1.4.1.12009.10.2.5/      |
+| A.1.8.2        | Typ dokumentu  | https://loinc.org/oids/1.3.6.1.4.1.12009.10.2.5/      |

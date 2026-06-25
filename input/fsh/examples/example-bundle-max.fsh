@@ -446,7 +446,7 @@ Title: "Adverse Event: PET+CT Imaging report"
 * detected = "2022-10-07T08:30:00+01:00"
 
 Instance: cz-examplepetct-medicationAdministration
-InstanceOf: CZ_MedicationAdministration
+InstanceOf: CZ_MedicationCoreAdministration
 Usage: #example
 Description: "Medication Administration during PET+CT Imaging report"
 Title: "Medication Administration: PET+CT Imaging report"
@@ -461,7 +461,7 @@ Title: "Medication Administration: PET+CT Imaging report"
 * effectiveDateTime = "2022-10-07T08:15:00+01:00"
 
 Instance: cz-examplepetct-medication
-InstanceOf: CZ_Medication
+InstanceOf: CZ_MedicationCore
 Usage: #example
 Description: "Medication during PET+CT Imaging report"
 Title: "Medication: PET+CT Imaging report"

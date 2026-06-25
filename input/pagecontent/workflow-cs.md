@@ -1,4 +1,4 @@
-Typický, standardní průběh vyšetření probíhá postupně, kdy jednotlivé kroky na sebe postupně navazují, jak je znázorněno na následujícím obrázku sekvenčního diagramu. V tomto diagramu není zahrnuta rozšířená Zpráva ze zobrazovacích metod a její uložení do repositáře EHR a odeslání externímu objednateli vyšetření.
+Typický, standardní průběh vyšetření probíhá postupně, kdy jednotlivé kroky na sebe postupně navazují, jak je znázorněno na následujícím obrázku sekvenčního diagramu. V tomto diagramu není zahrnuta rozšířená Zpráva z obrazového vyšetření a její uložení do repositáře EHR a odeslání externímu objednateli vyšetření.
 
 <div>
 <img src="workflow-1.png" class="figure-img img-responsive img-rounded center-block" width="80%">

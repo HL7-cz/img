@@ -8,15 +8,15 @@ Description: "This profile on Procedure represents the imaging procedure for the
 
 * code 1..1
 * code from CZ_ImagingProcedureVs (required)
-* code ^binding.extension[0].extension[0].url = "key"
-* code ^binding.extension[=].extension[=].valueId = cz-crk-ertn
-* code ^binding.extension[=].extension[+].url = "purpose"
-* code ^binding.extension[=].extension[=].valueCode = #candidate 
-* code ^binding.extension[=].extension[+].url = "valueSet"
-* code ^binding.extension[=].extension[=].valueCanonical = "https://ncez.mzcr.cz/terminology/ValueSet/cz-crk-ertn"
-* code ^binding.extension[=].extension[+].url = "documentation"
-* code ^binding.extension[=].extension[=].valueMarkdown = "V českém národním kontextu je doporučeno zde také uvádět ekvivalentní kód z klasifikace ČRK (ERTN)."
-* code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
+//* code ^binding.extension[0].extension[0].url = "key"
+//* code ^binding.extension[=].extension[=].valueId = cz-crk-ertn
+//* code ^binding.extension[=].extension[+].url = "purpose"
+//* code ^binding.extension[=].extension[=].valueCode = #candidate 
+//* code ^binding.extension[=].extension[+].url = "valueSet"
+//* code ^binding.extension[=].extension[=].valueCanonical = "https://ncez.mzcr.cz/terminology/ValueSet/cz-crk-ertn"
+//* code ^binding.extension[=].extension[+].url = "documentation"
+//* code ^binding.extension[=].extension[=].valueMarkdown = "V českém národním kontextu je doporučeno zde také uvádět ekvivalentní kód z klasifikace ČRK (ERTN)."
+//* code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 
 * basedOn only Reference(CZ_CarePlanImage or CZ_ImagingOrderInformation)
 * partOf only Reference(Procedure or CZ_ProcedureImaging or Observation or CZ_ObservationResultImaging or MedicationAdministration or CZ_MedicationCoreAdministration)

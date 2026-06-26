@@ -43,7 +43,7 @@ This observation may represent the result of a imaging report
   * identifier 1..1
   * identifier only CZ_AccessionNumberIdentifier
 
-* partOf only Reference(CZ_MedicationAdministrationCore or MedicationDispense or MedicationStatement or CZ_ProcedureImaging or Immunization or CZ_StudyImaging)
+* partOf only Reference(CZ_MedicationAdministrationCore or CZ_MedicationDispenseCore or CZ_MedicationStatementCore or CZ_ProcedureImaging or CZ_ImmunizationCore or CZ_StudyImaging)
 
 * code from CZ_ImagingObservationCodeVs (required)
 

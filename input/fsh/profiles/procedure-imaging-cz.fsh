@@ -7,10 +7,19 @@ Description: "This profile on Procedure represents the imaging procedure for the
 * insert ImposeProfile($Procedure-eu-img,0)
 
 * code 1..1
-* code from CZ_ImagingProcedureVs (extensible)
+* code from CZ_ImagingProcedureVs (required)
+//* code ^binding.extension[0].extension[0].url = "key"
+//* code ^binding.extension[=].extension[=].valueId = cz-crk-ertn
+//* code ^binding.extension[=].extension[+].url = "purpose"
+//* code ^binding.extension[=].extension[=].valueCode = #candidate 
+//* code ^binding.extension[=].extension[+].url = "valueSet"
+//* code ^binding.extension[=].extension[=].valueCanonical = "https://ncez.mzcr.cz/terminology/ValueSet/cz-crk-ertn"
+//* code ^binding.extension[=].extension[+].url = "documentation"
+//* code ^binding.extension[=].extension[=].valueMarkdown = "V českém národním kontextu je doporučeno zde také uvádět ekvivalentní kód z klasifikace ČRK (ERTN)."
+//* code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 
 * basedOn only Reference(CZ_CarePlanImage or CZ_ImagingOrderInformation)
-* partOf only Reference(Procedure or CZ_ProcedureImaging or Observation or CZ_ObservationResultImaging or MedicationAdministration or CZ_MedicationAdministration)
+* partOf only Reference(Procedure or CZ_ProcedureImaging or Observation or CZ_ObservationResultImaging or MedicationAdministration or CZ_MedicationCoreAdministration)
 * subject only Reference(CZ_PatientCore or CZ_PatientAnimal or Group)
 * recorder only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore)
 * asserter only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore)
@@ -43,4 +52,4 @@ Description: "This profile on Procedure represents the imaging procedure for the
 * report only Reference(CZ_DiagnosticReport or DocumentReference or Composition or CZ_CompositionImagingReport)
 * complicationDetail only Reference(CZ_ConditionImage)
 * focalDevice.manipulated only Reference(CZ_DeviceObserver or CZ_MedicalDevice)
-* usedReference only Reference(CZ_DeviceObserver or CZ_MedicalDevice or CZ_Medication or Substance)  
+* usedReference only Reference(CZ_DeviceObserver or CZ_MedicalDevice or CZ_MedicationCore or Substance)  

@@ -1,5 +1,5 @@
-Profile: CZ_MedicationObligationsImg
-Parent: CZ_Medication
+Profile: CZ_MedicationCoreObligationsImg
+Parent: CZ_MedicationCore
 Id: cz-medication-obl-img
 Title:    "Medication: Obligations"
 Description: "This profile defines obligations for a medication in FHIR for the purpose of this guide."

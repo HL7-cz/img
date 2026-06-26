@@ -11,7 +11,7 @@ skinparam topurl StructureDefinition-
 ** [[logReasonForAdmission.html Důvod vyžádání (objednání)]]
 ** [[logDcmMetadata.html DICOM metadata]]
 ** [[logSpecimenInformation.html Informace o vzorku]]
-** [[logReportOfImagingMethod.html Zpráva ze zobrazovacích metod]]
+** [[logReportOfImagingExamination.html Zpráva z obrazového vyšetření]]
 ***_ Typ modality
 ***_ Typ zobrazovací metody
 ***_ Důvod (indikace)
@@ -24,7 +24,7 @@ skinparam topurl StructureDefinition-
 ***_ Závěr
 ***_ Doporučení
 ***_ Textové části dokumentu
-** [[logLinkToRelatedReport.html Odkaz na související zprávu]]
+** [[logcomparisonStudy.html Odkaz na související zprávu]]
 ** [[logKeyImagesAttachment.html Klíčové snímky]]
 '** [[Attachments.html Média (přílohy)]]
 

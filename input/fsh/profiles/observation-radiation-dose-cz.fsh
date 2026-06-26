@@ -8,7 +8,7 @@ E.g. based on information from https://dicom.nema.org/medical/dicom/current/outp
 """
 * insert ImposeProfile($ObservationRadition-eu-img,0)
 
-* basedOn only Reference(CZ_CarePlanImage or DeviceRequest or ImmunizationRecommendation or MedicationRequest or NutritionOrder or CZ_ImagingOrderInformation)
+* basedOn only Reference(CZ_CarePlanImage or DeviceRequest or ImmunizationRecommendation or CZ_MedicationRequestCore or NutritionOrder or CZ_ImagingOrderInformation)
 * basedOn
   * insert SliceElement( #type, $this )
 * basedOn contains orderaccession 0..1
@@ -23,13 +23,13 @@ E.g. based on information from https://dicom.nema.org/medical/dicom/current/outp
   * type = MissingDicomTerminology#00083010 "Irradiation Event UID" 
   * assigner only Reference(CZ_OrganizationCore)
 
-* partOf only Reference(CZ_MedicationAdministration or MedicationDispense or MedicationStatement or Procedure or CZ_ProcedureImaging or Immunization or CZ_StudyImaging)
+* partOf only Reference(CZ_MedicationAdministrationCore or CZ_MedicationDispenseCore or CZ_MedicationStatementCore or Procedure or CZ_ProcedureImaging or C_ImmunizationCore or CZ_StudyImaging)
 * partOf 1..*
   * insert SliceElement( #profile, $this )
 * partOf contains study 1..1
 * partOf[study] only Reference( CZ_StudyImaging )
 
-* extension 2..*
+* extension 1..*
 * extension contains http://hl7.org/fhir/5.0/StructureDefinition/extension-Observation.derivedFrom named derivedFrom 1..*
 * extension[derivedFrom] contains srImagingSelection 1..* 
 * extension[derivedFrom][srImagingSelection].value[x] only Reference( CZ_SrInstanceImagingSelectionImaging)
@@ -43,7 +43,7 @@ E.g. based on information from https://dicom.nema.org/medical/dicom/current/outp
 * subject 1..1
 * subject only Reference( CZ_PatientCore )
 
-* performer only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CareTeam or CZ_PatientCore or CZ_RelatedPersonCore)
+* performer only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CareTeam)
 
 // value
 * value[x] 1..1 
@@ -58,7 +58,7 @@ E.g. based on information from https://dicom.nema.org/medical/dicom/current/outp
 * device only Reference(CZ_DeviceObserver or CZ_MedicalDevice)
 * device ^short = "Irradiating modality"
 
-* hasMember only Reference(CZ_ObservationResultImaging or Observation or QuestionnaireResponse or MolecularSequence)
+* hasMember only Reference(Observation or QuestionnaireResponse or MolecularSequence)
 * derivedFrom only Reference(DocumentReference or CZ_StudyImaging or Media or QuestionnaireResponse or MolecularSequence)
 
 // dose measurements

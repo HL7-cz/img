@@ -1,28 +1,12 @@
 == Suppressed Messages ==
-# Concept Maps Groups Source and Target  are not Code Systems
-%not fully defined and populated, and no sourceScope is specified, so the source code checking will not be performed%
-%not fully defined and populated, and no targetScope is specified, so the target code checking will not be performed%
-
 # duplicated anchor ids
-The html source has duplicate anchor Ids: 1
-
-# DICOM valuesets do not resolve - that is expected.
-%Canonical URL 'http://dicom.nema.org/medical/dicom/current/output/chtml/part%
-%The link '#DCM%
-The link '??' for "Modality%
-The link '??' for "Laterality%
-The link '??' for "AcquisitionModality%
-The link '??' for "KeyObjectSelectionDocumentTitle%
-
-# Remove warnings related to R5 use of R4 packages
-%based on FHIR version 4.0.1. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try
+The html source has duplicate anchor Ids: 2ccb472f-5747-4939-a119-5597835ad7da,hc2ccb472f-5747-4939-a119-5597835ad7da
 
 # A definition for CodeSystem or ValueSet 'url' could not be found
 A definition for CodeSystem 'http://snomed.info/sct' could not be found, so the code cannot be validated
 A definition for CodeSystem 'https://www.dastacr.cz/dasta/hypertext/DSBFV.htm' could not be found, so the code cannot be validated
-A definition for CodeSystem 'https://mkn10.uzis.cz' could not be found, so the code cannot be validated
-A definition for CodeSystem 'https://opendata.sukl.cz/ValueSet/dlp_formy' could not be found, so the code cannot be validated
 A definition could not be found for Canonical URL 'https://terminology.ncez.mzcr.cz/ValueSet/mkn-10'
+A definition could not be found for Canonical URL 'http://www.rsna.org/RadLex_Playbook.aspx'
 
 # URL does not resolve
 No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/krzp'
@@ -30,18 +14,39 @@ No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/cpoj'
 No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/rid'
 No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/rcis'
 No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/kp'
-No definition could be found for URL value 'http://hospital.cz/nis'
-No definition could be found for URL value 'https://mkn10.uzis.cz'
-No definition could be found for URL value 'https://www.nempriklad.cz/'
-No definition could be found for URL value 'https://opendata.sukl.cz/ValueSet/dlp_lecivepripravky'
-No definition could be found for URL value 'https://opendata.sukl.cz/ValueSet/dlp_formy'
-
-# Error in the extension pack, see https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Sub-extension.20url.20'source'.20is.20not.20defined.20by.20Extension.20error
-%Sub-extension url 'source' is not defined by the Extension http://hl7.org/fhir/StructureDefinition/obligation|5.3.0%
-%This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
+No definition could be found for URL value '/viewer/KOS.dcm'
 
 # Due to time constraints, examples could not generated for all resources
-%The Implementation Guide contains no explicitly linked examples for this profile
 %The Implementation Guide contains no examples for this profile
 %The Implementation Guide contains no examples for this data type profile
 %The Implementation Guide contains no examples for this extension
+
+# Information about no valid translation to Czechia 
+There are no valid display names found for the code urn:iso:std:iso:3166#CZ for language(s) 'cs'. The display is 'Czechia' which is the default language display
+
+#Information about obligation
+This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+
+# DICOM valuesets do not resolve - that is expected.
+%Canonical URL 'http://dicom.nema.org/medical/dicom/current/output/chtml/part%
+%The link '#DCM%
+The link '??' for "Modality%
+The link '??' for "Laterality%
+The link '??' for "KeyObjectSelectionDocumentTitle%
+
+# DICOM ValueSets are not available using download
+ValueSet 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04%
+Canonical URL 'https://dicom.nema.org/medical/dicom/current/output/chtml/part16%
+
+# No code system exists for DICOM SOPclass
+%in the CodeSystem 'urn:ietf:rfc:3986' version 'null'
+
+# There are no valid display names found for the code for language(s) 'cs-CS'.
+NO_VALID_DISPLAY_FOUND_NONE_FOR_LANG_OK
+
+# Reference to deprecated ValueSet and extensions
+MSG_DEPRECATED
+MSG_DEPENDS_ON_DEPRECATED
+
+# The display in the ValueSet does not match with any known display
+VALUESET_CODE_CONCEPT_HINT

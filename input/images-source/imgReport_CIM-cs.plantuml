@@ -1,12 +1,12 @@
 @startmindmap
 skinparam topurl StructureDefinition-
 
-* [[logImagingReportCz.html Zpráva ze zobrazovacích metod]]
+* [[logImagingReportCz.html Zpráva z obrazového vyšetření]]
 ** [[logHeaderImagingReportCz.html Hlavička dokumentu]]
 ** [[logBodyImagingReportCz.html Tělo dokumentu]]
 ** Vizuální podoba dokumentu
 ** Přílohy
-'** Link to Related Report
+'** Comparison Study
 '** Media
 '** Dicom Metadata
 @endmindmap

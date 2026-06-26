@@ -1,5 +1,5 @@
-Logical: LogCzInformationRecipientImagingCz
-Id: logInformationRecipientCz
+Logical: LogCzIntendedRecipientImagingCz
+Id: logIntendedRecipientCz
 Title: "A.1.4 - Příjemce dokumentu"
 Description: """Informace o zamýšleném příjemci dokumentu"""
 

@@ -282,7 +282,7 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>Body.ReportOfImagingMethod.typeOfModality</td>
+            <td>Body.ReportOfImagingExamination.typeOfModality</td>
             <td>A.2.4.1 - Modality type</td>
             <td>equivalent</td>
             <td>cz-study-imaging</td>
@@ -290,72 +290,72 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>Body.ReportOfImagingMethod.partOfBody</td>
-            <td>A.2.4.5 - Body part</td>
+            <td>Body.ReportOfImagingExamination.partOfBody</td>
+            <td>A.2.4.4 - Body part</td>
             <td>equivalent</td>
             <td>cz-study-imaging</td>
             <td>CZ_StudyImaging.series.bodySite.ofType(bodyStructure)</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>Body.ReportOfImagingMethod.partOfBody.code</td>
-            <td>A.2.4.5.1 - Body part code</td>
+            <td>Body.ReportOfImagingExamination.partOfBody.code</td>
+            <td>A.2.4.4.1 - Body part code</td>
             <td>equivalent</td>
             <td>cz-study-imaging</td>
             <td>bodyStructure.includedStructure.structure</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>Body.ReportOfImagingMethod.partOfBody.laterality</td>
-            <td>A.2.4.5.2 - Laterality of body part</td>
+            <td>Body.ReportOfImagingExamination.partOfBody.laterality</td>
+            <td>A.2.4.4.2 - Laterality of body part</td>
             <td>equivalent</td>
             <td>cz-study-imaging</td>
             <td>bodyStructure.includedStructure.laterality</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>Body.ReportOfImagingMethod.partOfBody.description</td>
-            <td>A.2.4.5.2 - Body part description</td>
+            <td>Body.ReportOfImagingExamination.partOfBody.description</td>
+            <td>A.2.4.4.2 - Body part description</td>
             <td>equivalent</td>
             <td>cz-study-imaging</td>
             <td>bodyStructure.description</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>Body.ReportOfImagingMethod.reason</td>
-            <td>A.2.4.3 - Reason (indication)</td>
+            <td>Body.ReportOfImagingExamination.reason</td>
+            <td>A.2.4.2 - Reason (indication)</td>
             <td>related-to</td>
             <td>cz-conditionImage</td>
             <td>Composition.section:procedure.reason</td>
             <td></td>
             <td>Composition.section:procedure.reason.ofType(CZ_ConditionImage)</td>
           </tr>          <tr>
-            <td>Body.ReportOfImagingMethod.reason.description</td>
-            <td>A.2.4.3.1 - Description of the reason</td>
+            <td>Body.ReportOfImagingExamination.reason.description</td>
+            <td>A.2.4.2.1 - Description of the reason</td>
             <td>equivalent</td>
             <td>cz-conditionImage</td>
             <td>CZ_ConditionImage.code.text</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>Body.ReportOfImagingMethod.reason.classification</td>
-            <td>A.2.4.3.2 - Classification of reason</td>
+            <td>Body.ReportOfImagingExamination.reason.classification</td>
+            <td>A.2.4.2.2 - Classification of reason</td>
             <td>equivalent</td>
             <td>cz-conditionImage</td>
             <td>CZ_ConditionImage.code.coding</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>Body.ReportOfImagingMethod.clinicalQuestion</td>
-            <td>A.2.4.4 - A clinical question in code form</td>
+            <td>Body.ReportOfImagingExamination.clinicalQuestion</td>
+            <td>A.2.4.3 - A clinical question in code form</td>
             <td>equivalent</td>
             <td>cz-conditionImage</td>
             <td>Composition.section:clinicalQuestion.entry.ofType(CZ_Condition).code</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>Body.ReportOfImagingMethod.Procedure</td>
-            <td>A.2.4.6 - Performance (procedure)</td>
+            <td>Body.ReportOfImagingExamination.Procedure</td>
+            <td>A.2.4.5 - Performance (procedure)</td>
             <td>related-to</td>
             <td>cz-procedure-imaging</td>
             <td>Composition.section:procedure</td>
@@ -363,7 +363,7 @@
             <td>Composition.section:procedure.entry.ofType(CZ_ProcedureImaging)</td>
           </tr>          <tr>
             <td>Procedure.reason</td>
-            <td>A.2.4.6.1 - Reason for performance</td>
+            <td>A.2.4.5.1 - Reason for performance</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.reasonReference.display</td>
@@ -371,7 +371,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.start</td>
-            <td>A.2.4.6.2 - Start of the procedure</td>
+            <td>A.2.4.5.2 - Start of the procedure</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.performancePeriod.start</td>
@@ -379,7 +379,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.end</td>
-            <td>A.2.4.6.3 - End of the procedure</td>
+            <td>A.2.4.5.3 - End of the procedure</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.performancePeriod.end</td>
@@ -387,7 +387,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.performedBy</td>
-            <td>A.2.4.6.4 - Performed by</td>
+            <td>A.2.4.5.4 - Performed by</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.performer</td>
@@ -395,7 +395,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.recordedBy</td>
-            <td>A.2.4.6.5 - Recorded by</td>
+            <td>A.2.4.5.5 - Recorded by</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.recorder</td>
@@ -403,7 +403,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.place</td>
-            <td>A.2.4.6.6 - Place of performance</td>
+            <td>A.2.4.5.6 - Place of performance</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.location</td>
@@ -411,7 +411,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.anatomicalFocus</td>
-            <td>A.2.4.6.7 - Anatomical focus of performance</td>
+            <td>A.2.4.5.7 - Anatomical focus of performance</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.bodySite.extension[bodyStructure]</td>
@@ -419,7 +419,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.anatomicalFocus.code</td>
-            <td>A.2.4.6.7.1 - Body location code</td>
+            <td>A.2.4.5.7.1 - Body location code</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>BodyStructure.bodySite</td>
@@ -427,7 +427,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.anatomicalFocus.laterality</td>
-            <td>A.2.4.6.7.2 - Laterality of the body location</td>
+            <td>A.2.4.5.7.2 - Laterality of the body location</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>BodyStructure.laterality</td>
@@ -435,7 +435,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.anatomicalFocus.description</td>
-            <td>A.2.4.6.7.3 - Description of the location on/in the body</td>
+            <td>A.2.4.5.7.3 - Description of the location on/in the body</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>BodyStructure.description</td>
@@ -443,7 +443,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.complication</td>
-            <td>A.2.4.6.8 - Complications during the procedure</td>
+            <td>A.2.4.5.8 - Complications during the procedure</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.complication</td>
@@ -451,7 +451,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.complication.code</td>
-            <td>A.2.4.6.8.1 - Complications formalized</td>
+            <td>A.2.4.5.8.1 - Complications formalized</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.complication.code</td>
@@ -459,7 +459,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.complication.description</td>
-            <td>A.2.4.6.8.2 - Description of complications</td>
+            <td>A.2.4.5.8.2 - Description of complications</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.complication.text</td>
@@ -467,7 +467,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.comment</td>
-            <td>A.2.4.6.9 - Comment on the performance (procedure)</td>
+            <td>A.2.4.5.9 - Comment on the performance (procedure)</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.note</td>
@@ -475,7 +475,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.comment.author</td>
-            <td>A.2.4.6.9.1 - Author of the comment</td>
+            <td>A.2.4.5.9.1 - Author of the comment</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.note.author</td>
@@ -483,7 +483,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.comment.text</td>
-            <td>A.2.4.6.9.2 - Text of the comment</td>
+            <td>A.2.4.5.9.2 - Text of the comment</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.note.text</td>
@@ -491,7 +491,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.comment.dateTime</td>
-            <td>A.2.4.6.9.3 - Date and time of the comment</td>
+            <td>A.2.4.5.9.3 - Date and time of the comment</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.note.time</td>
@@ -499,7 +499,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.usedDevice</td>
-            <td>A.2.4.6.10 - Used medical device</td>
+            <td>A.2.4.5.10 - Used medical device</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.used[device]</td>
@@ -507,7 +507,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.usedDevice.name</td>
-            <td>A.2.4.6.10.1 - Name of medical device</td>
+            <td>A.2.4.5.10.1 - Name of medical device</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.used[device].deviceName.name</td>
@@ -515,7 +515,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.usedDevice.model</td>
-            <td>A.2.4.6.10.2 - Medical device model</td>
+            <td>A.2.4.5.10.2 - Medical device model</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.used[device].modelNumber</td>
@@ -523,7 +523,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.usedDevice.iden</td>
-            <td>A.2.4.6.10.3 - Medical device ID</td>
+            <td>A.2.4.5.10.3 - Medical device ID</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.used[device].identifier</td>
@@ -531,7 +531,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.usedDevice.type</td>
-            <td>A.2.4.6.10.4 - Type of medical device</td>
+            <td>A.2.4.5.10.4 - Type of medical device</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.used[device].type</td>
@@ -539,7 +539,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.usedDevice.description</td>
-            <td>A.2.4.6.10.5 - Description of the medical device</td>
+            <td>A.2.4.5.10.5 - Description of the medical device</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.used[device].note</td>
@@ -547,7 +547,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.usedDevice.manufacturer</td>
-            <td>A.2.4.6.10.6 - Manufacturer of medical device</td>
+            <td>A.2.4.5.10.6 - Manufacturer of medical device</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.used[device].manufacturer</td>
@@ -555,7 +555,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.usedDevice.udi</td>
-            <td>A.2.4.6.10.7 - UDI of the medical device</td>
+            <td>A.2.4.5.10.7 - UDI of the medical device</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.used[device].udiCarrier</td>
@@ -563,7 +563,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.category</td>
-            <td>A.2.4.6.11 - Performance category (procedures)</td>
+            <td>A.2.4.5.11 - Performance category (procedures)</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.category</td>
@@ -571,7 +571,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.code</td>
-            <td>A.2.4.6.12 - Performance (procedure)</td>
+            <td>A.2.4.5.12 - Performance (procedure)</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.code</td>
@@ -579,7 +579,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.achievement</td>
-            <td>A.2.4.6.13 - Achieving a result</td>
+            <td>A.2.4.5.13 - Achieving a result</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.outcome</td>
@@ -587,7 +587,7 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.illnessCode</td>
-            <td>A.2.4.6.14 - Illness - reason for the procedure</td>
+            <td>A.2.4.5.14 - Illness - reason for the procedure</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.reasonCode</td>
@@ -595,15 +595,15 @@
             <td></td>
           </tr>          <tr>
             <td>Procedure.relatedDevice</td>
-            <td>A.2.4.6.15 - Resource related</td>
+            <td>A.2.4.5.15 - Resource related</td>
             <td>equivalent</td>
             <td>cz-procedure-imaging</td>
             <td>CZ_ProcedureImaging.used[device]</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>Body.ReportOfImagingMethod.adverseReaction</td>
-            <td>A.2.4.8 - Adverse reaction</td>
+            <td>Body.ReportOfImagingExamination.adverseReaction</td>
+            <td>A.2.4.7 - Adverse reaction</td>
             <td>related-to</td>
             <td>cz-allergyIntolerance</td>
             <td>Composition.section:complications</td>
@@ -611,7 +611,7 @@
             <td>Composition.section:findings.entry.ofType(CZ_AdverseEvent)</td>
           </tr>          <tr>
             <td>adverseReaction.reaction</td>
-            <td>A.2.4.8.1 - Allergy code</td>
+            <td>A.2.4.7.1 - Allergy code</td>
             <td>equivalent</td>
             <td>cz-allergyIntolerance</td>
             <td>CZ_AdverseEvent.event</td>
@@ -619,7 +619,7 @@
             <td></td>
           </tr>          <tr>
             <td>adverseReaction.seriousness</td>
-            <td>A.2.4.8.2 - Allergy manifestation</td>
+            <td>A.2.4.7.2 - Allergy manifestation</td>
             <td>equivalent</td>
             <td>cz-allergyIntolerance</td>
             <td>CZ_AdverseEvent.seriousness</td>
@@ -627,7 +627,7 @@
             <td></td>
           </tr>          <tr>
             <td>adverseReaction.dateTime</td>
-            <td>A.2.4.8.3 - Alergy date and time</td>
+            <td>A.2.4.7.3 - Alergy date and time</td>
             <td>equivalent</td>
             <td>cz-allergyIntolerance</td>
             <td>CZ_AdverseEvent.detected</td>
@@ -635,351 +635,351 @@
             <td></td>
           </tr>          <tr>
             <td>adverseReaction.allergyDescription</td>
-            <td>A.2.4.8.4 - Alergy description</td>
+            <td>A.2.4.7.4 - Alergy description</td>
             <td>equivalent</td>
             <td>cz-allergyIntolerance</td>
             <td>CZ_AdverseEvent.text</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>Body.ReportOfImagingMethod.Medication</td>
-            <td>A.2.4.7 - Medication</td>
+            <td>Body.ReportOfImagingExamination.Medication</td>
+            <td>A.2.4.6 - Medication</td>
             <td>related-to</td>
             <td>cz-MedicationAdministration</td>
             <td>Composition.section:procedure.partOf</td>
             <td></td>
-            <td>Composition.section:procedure.partOf.ofType(CZ_MedicationAdministration)</td>
+            <td>Composition.section:procedure.partOf.ofType(CZ_MedicationCoreAdministration)</td>
           </tr>          <tr>
             <td>Medication.name</td>
-            <td>A.2.4.7.1 - Administered medicinal product</td>
+            <td>A.2.4.6.1 - Administered medicinal product</td>
             <td>equivalent</td>
             <td>cz-MedicationAdministration</td>
-            <td>CZ_MedicationAdministration.medication.code</td>
+            <td>CZ_MedicationCoreAdministration.medication.code</td>
             <td></td>
             <td></td>
           </tr>          <tr>
             <td>Medication.dosage</td>
-            <td>A.2.4.7.2 - Dosage</td>
+            <td>A.2.4.6.2 - Dosage</td>
             <td>equivalent</td>
             <td>cz-MedicationAdministration</td>
-            <td>CZ_MedicationAdministration.dosage.dose</td>
+            <td>CZ_MedicationCoreAdministration.dosage.dose</td>
             <td></td>
             <td></td>
           </tr>          <tr>
             <td>Medication.routeOfAdministration</td>
-            <td>A.2.4.7.3 - The route of administration of the active substance</td>
+            <td>A.2.4.6.3 - The route of administration of the active substance</td>
             <td>equivalent</td>
             <td>cz-MedicationAdministration</td>
-            <td>CZ_MedicationAdministration.dosage.route</td>
+            <td>CZ_MedicationCoreAdministration.dosage.route</td>
             <td></td>
             <td></td>
           </tr>          <tr>
             <td>Medication.dosingDevice</td>
-            <td>A.2.4.7.4 - Dosing device</td>
+            <td>A.2.4.6.4 - Dosing device</td>
             <td>equivalent</td>
             <td>cz-MedicationAdministration</td>
-            <td>CZ_MedicationAdministration.device</td>
+            <td>CZ_MedicationCoreAdministration.device</td>
             <td></td>
             <td></td>
           </tr>          <tr>
             <td>Medication.batchNumber</td>
-            <td>A.2.4.7.5 - Batch number</td>
+            <td>A.2.4.6.5 - Batch number</td>
             <td>equivalent</td>
             <td>cz-MedicationAdministration</td>
-            <td>CZ_MedicationAdministration.medication.batch.lotNumber</td>
+            <td>CZ_MedicationCoreAdministration.medication.batch.lotNumber</td>
             <td></td>
             <td></td>
           </tr>          <tr>
             <td>Medication.dateTimeStart</td>
-            <td>A.2.4.7.6 - Start date and time</td>
+            <td>A.2.4.6.6 - Start date and time</td>
             <td>equivalent</td>
             <td>cz-MedicationAdministration</td>
-            <td>CZ_MedicationAdministration.effectivePeriod.start</td>
+            <td>CZ_MedicationCoreAdministration.effectivePeriod.start</td>
             <td></td>
             <td></td>
           </tr>          <tr>
             <td>Medication.dateTimeEnd</td>
-            <td>A.2.4.7.7 - End date and time</td>
+            <td>A.2.4.6.7 - End date and time</td>
             <td>equivalent</td>
             <td>cz-MedicationAdministration</td>
-            <td>CZ_MedicationAdministration.effectivePeriod.end</td>
+            <td>CZ_MedicationCoreAdministration.effectivePeriod.end</td>
             <td></td>
             <td></td>
           </tr>          <tr>
             <td>Medication.administrator</td>
-            <td>A.2.4.7.8 - Administrator</td>
+            <td>A.2.4.6.8 - Administrator</td>
             <td>equivalent</td>
             <td>cz-MedicationAdministration</td>
-            <td>CZ_MedicationAdministration.performer</td>
+            <td>CZ_MedicationCoreAdministration.performer</td>
             <td></td>
             <td></td>
           </tr>          <tr>
             <td>Medication.reasonForSubmission</td>
-            <td>A.2.4.7.9 - Reason for submission</td>
+            <td>A.2.4.6.9 - Reason for submission</td>
             <td>equivalent</td>
             <td>cz-MedicationAdministration</td>
-            <td>CZ_MedicationAdministration.reasonCode</td>
+            <td>CZ_MedicationCoreAdministration.reasonCode</td>
             <td></td>
             <td></td>
           </tr>          <tr>
             <td>Medication.comment</td>
-            <td>A.2.4.7.10 - Comment</td>
+            <td>A.2.4.6.10 - Comment</td>
             <td>equivalent</td>
             <td>cz-MedicationAdministration</td>
-            <td>CZ_MedicationAdministration.note</td>
+            <td>CZ_MedicationCoreAdministration.note</td>
             <td></td>
             <td></td>
           </tr>          <tr>
             <td>Medication.dateTimeOfEntry</td>
-            <td>A.2.4.7.11 - Entry date and time</td>
+            <td>A.2.4.6.11 - Entry date and time</td>
             <td>equivalent</td>
             <td>cz-MedicationAdministration</td>
-            <td>CZ_MedicationAdministration.effectiveDateTime</td>
+            <td>CZ_MedicationCoreAdministration.effectiveDateTime</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod</td>
-            <td>A.2.4.9 - Result of the imaging method</td>
+            <td>examinationReport</td>
+            <td>A.2.4.8 - Examination report</td>
             <td>related-to</td>
             <td>cz-diagnostic-report</td>
             <td>Composition.extension[diagnosticreport-reference]</td>
             <td></td>
             <td>Composition.extension[diagnosticreport-reference].ofType(CZ_DiagnosticReport)</td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.narrativeText</td>
-            <td>A.2.4.9.1 - Narrative text</td>
+            <td>examinationReport.narrativeText</td>
+            <td>A.2.4.8.1 - Narrative text</td>
             <td>equivalent</td>
             <td>cz-diagnostic-report</td>
             <td>CZ_DiagnosticReport.text</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.dateTimeResult</td>
-            <td>A.2.4.9.3 - Result release date and time</td>
+            <td>examinationReport.dateTimeResult</td>
+            <td>A.2.4.8.3 - Result release date and time</td>
             <td>equivalent</td>
             <td>cz-diagnostic-report</td>
             <td>CZ_DiagnosticReport.effectiveDateTime</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.author</td>
-            <td>A.2.4.9.4 - Result author</td>
+            <td>examinationReport.author</td>
+            <td>A.2.4.8.4 - Result author</td>
             <td>equivalent</td>
             <td>cz-diagnostic-report</td>
             <td>CZ_DiagnosticReport.performer[author]</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.conclusion</td>
-            <td>A.2.4.10 - Conclusion</td>
+            <td>examinationReport.conclusion</td>
+            <td>A.2.4.9 - Conclusion</td>
             <td>related-to</td>
             <td>cz-diagnostic-report</td>
             <td>CZ_DiagnosticReport.conclusionCode</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.conclusion.text</td>
-            <td>A.2.4.10.1 - Conclusion text</td>
+            <td>examinationReport.conclusion.text</td>
+            <td>A.2.4.9.1 - Conclusion text</td>
             <td>equivalent</td>
             <td>cz-diagnostic-report</td>
             <td>CZ_DiagnosticReport.conclusion</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.conclusion.code</td>
-            <td>A.2.4.10.2 - Coded conclusion</td>
+            <td>examinationReport.conclusion.code</td>
+            <td>A.2.4.9.2 - Coded conclusion</td>
             <td>equivalent</td>
             <td>cz-diagnostic-report</td>
             <td>CZ_DiagnosticReport.conclusionCode</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.textPartsOfDocument</td>
-            <td>A.2.4.12 - Text parts of the document</td>
+            <td>examinationReport.textPartsOfDocument</td>
+            <td>A.2.4.11 - Text parts of the document</td>
             <td>related-to</td>
             <td>cz-diagnostic-report</td>
             <td>CZ_DiagnosticReport.presentedForm</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText</td>
-            <td>A.2.4.9.2 - Formalized text</td>
+            <td>examinationReport.formalizedText</td>
+            <td>A.2.4.8.2 - Formalized text</td>
             <td>related-to</td>
             <td>cz-observation-result-imaging</td>
             <td>CZ_DiagnosticReport.result</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText</td>
-            <td>A.2.4.9.2 - Formalized text</td>
+            <td>examinationReport.formalizedText</td>
+            <td>A.2.4.8.2 - Formalized text</td>
             <td>related-to</td>
             <td>cz-observation-result-imaging</td>
             <td>#CZ_ObservationResultImaging.partOf</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText</td>
-            <td>A.2.4.9.2 - Formalized text</td>
+            <td>examinationReport.formalizedText</td>
+            <td>A.2.4.8.2 - Formalized text</td>
             <td>related-to</td>
             <td>cz-observation-result-imaging</td>
             <td>Composition.section:findings.entry.ofType(CZ_ObservationResultImaging)</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.note</td>
-            <td>A.2.4.9.2.1 - Note</td>
+            <td>examinationReport.formalizedText.note</td>
+            <td>A.2.4.8.2.1 - Note</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
             <td>CZ_ObservationResultImaging.note</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.observationGroup</td>
-            <td>A.2.4.9.2.2 - Observation (measurement) group</td>
+            <td>examinationReport.formalizedText.observationGroup</td>
+            <td>A.2.4.8.2.2 - Observation (measurement) group</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
             <td>CZ_ObservationResultImaging.hasMember</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.observationComponent</td>
-            <td>A.2.4.9.2.3 - Observation (measurement) component</td>
+            <td>examinationReport.formalizedText.observationComponent</td>
+            <td>A.2.4.8.2.3 - Observation (measurement) component</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
             <td>CZ_ObservationResultImaging.component</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.specimen</td>
-            <td>A.2.4.9.2.4 - Specimen</td>
+            <td>examinationReport.formalizedText.specimen</td>
+            <td>A.2.4.8.2.4 - Specimen</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
             <td>CZ_ObservationResultImaging.specimen</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.referenceRanges</td>
-            <td>A.2.4.9.2.5 - Reference ranges</td>
+            <td>examinationReport.formalizedText.referenceRanges</td>
+            <td>A.2.4.8.2.5 - Reference ranges</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
             <td>CZ_ObservationResultImaging.referenceRange</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.reasonForAbsence</td>
-            <td>A.2.4.9.2.6 - The reason for the absence of a value</td>
+            <td>examinationReport.formalizedText.reasonForAbsence</td>
+            <td>A.2.4.8.2.6 - The reason for the absence of a value</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
             <td>CZ_ObservationResultImaging.dataAbsentReason</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.observationValue</td>
-            <td>A.2.4.9.2.7 - Observation value (measurement)</td>
+            <td>examinationReport.formalizedText.observationValue</td>
+            <td>A.2.4.8.2.7 - Observation value (measurement)</td>
             <td>related-to</td>
             <td>cz-observation-result-imaging</td>
             <td>CZ_ObservationResultImaging.value[x]</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.observationValue</td>
-            <td>A.2.4.9.2.7 - Observation value (measurement) in text form</td>
+            <td>examinationReport.formalizedText.observationValue</td>
+            <td>A.2.4.8.2.7 - Observation value (measurement) in text form</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
             <td>CZ_ObservationResultImaging.valueString</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.observationValue</td>
-            <td>A.2.4.9.2.7 - Observation value (measurement) in numeric form</td>
+            <td>examinationReport.formalizedText.observationValue</td>
+            <td>A.2.4.8.2.7 - Observation value (measurement) in numeric form</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
             <td>CZ_ObservationResultImaging.valueQuanity</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.observationValue</td>
-            <td>A.2.4.9.2.7 - Observation value (measurement) in code form</td>
+            <td>examinationReport.formalizedText.observationValue</td>
+            <td>A.2.4.8.2.7 - Observation value (measurement) in code form</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
             <td>CZ_ObservationResultImaging.valueCodeableConcept</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.interpretation</td>
-            <td>A.2.4.9.2.8 - Interpretation of the result</td>
+            <td>examinationReport.formalizedText.interpretation</td>
+            <td>A.2.4.8.2.8 - Interpretation of the result</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
             <td>CZ_ObservationResultImaging.interpretation</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.observationMethod</td>
-            <td>A.2.4.9.2.9 - Observation (measurement) method</td>
+            <td>examinationReport.formalizedText.observationMethod</td>
+            <td>A.2.4.8.2.9 - Observation (measurement) method</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
             <td>CZ_ObservationResultImaging.method</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.derivedFrom</td>
-            <td>A.2.4.9.2.10 - Derived from</td>
+            <td>examinationReport.formalizedText.derivedFrom</td>
+            <td>A.2.4.8.2.10 - Derived from</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
             <td>CZ_ObservationResultImaging.derivedFrom</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.observedBodyPart</td>
-            <td>A.2.4.9.2.11 - Observed body part</td>
+            <td>examinationReport.formalizedText.observedBodyPart</td>
+            <td>A.2.4.8.2.11 - Observed body part</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
             <td>CZ_ObservationResultImaging.bodySite</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.observationStatus</td>
-            <td>A.2.4.9.2.12 - Observation status</td>
+            <td>examinationReport.formalizedText.observationStatus</td>
+            <td>A.2.4.8.2.12 - Observation status</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
             <td>CZ_ObservationResultImaging.status</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.observationCode</td>
-            <td>A.2.4.9.2.13 - Observation code</td>
+            <td>examinationReport.formalizedText.observationCode</td>
+            <td>A.2.4.8.2.13 - Observation code</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
             <td>CZ_ObservationResultImaging.code</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.observationCategory</td>
-            <td>A.2.4.9.2.14 - Observation category</td>
+            <td>examinationReport.formalizedText.observationCategory</td>
+            <td>A.2.4.8.2.14 - Observation category</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
             <td>CZ_ObservationResultImaging.category</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.observationEquipment</td>
-            <td>A.2.4.9.2.15 - Observation equipment used</td>
+            <td>examinationReport.formalizedText.observationEquipment</td>
+            <td>A.2.4.8.2.15 - Observation equipment used</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
             <td>CZ_ObservationResultImaging.device</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.formalizedText.dateTimeObservation</td>
-            <td>A.2.4.9.2.16 - Observation date and time</td>
+            <td>examinationReport.formalizedText.dateTimeObservation</td>
+            <td>A.2.4.8.2.16 - Observation date and time</td>
             <td>equivalent</td>
             <td>cz-observation-result-imaging</td>
             <td>CZ_ObservationResultImaging.effectiveDateTime</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>Body.ReportOfImagingMethod.recommendation</td>
-            <td>A.2.4.11 - Recommendation</td>
+            <td>Body.ReportOfImagingExamination.recommendation</td>
+            <td>A.2.4.10 - Recommendation</td>
             <td>equivalent</td>
             <td>cz-carePlanImage</td>
             <td>Composition.section:recommendation.entry.ofType(CZ_Careplan).description</td>
@@ -994,64 +994,56 @@
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>Body.ReportOfImagingMethod.typeOfImagingMethod</td>
-            <td>A.2.4.2 - Type of imaging method</td>
-            <td>equivalent</td>
-            <td>cz-composition-imaging</td>
-            <td>Composition.type</td>
-            <td></td>
-            <td></td>
-          </tr>          <tr>
-            <td>Body.ReportOfImagingMethod.clinicalQuestion</td>
-            <td>A.2.4.4 - A clinical question in code form</td>
+            <td>Body.ReportOfImagingExamination.clinicalQuestion</td>
+            <td>A.2.4.3 - A clinical question in code form</td>
             <td>equivalent</td>
             <td>cz-composition-imaging</td>
             <td>Composition.section:clinicalQuestion.entry.ofType(CZ_Condition).code</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.textPartsOfDocument.completeExaminationReport</td>
-            <td>A.2.4.12.1 - Complete examination report</td>
+            <td>examinationReport.textPartsOfDocument.completeExaminationReport</td>
+            <td>A.2.4.11.1 - Complete examination report</td>
             <td>equivalent</td>
             <td>cz-composition-imaging</td>
             <td>Composition.text</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.textPartsOfDocument.comments</td>
-            <td>A.2.4.12.2 - Comments, interpretations and recommendations</td>
+            <td>examinationReport.textPartsOfDocument.comments</td>
+            <td>A.2.4.11.2 - Comments, interpretations and recommendations</td>
             <td>equivalent</td>
             <td>cz-composition-imaging</td>
             <td>Composition.text</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.narrativeText</td>
-            <td>A.2.4.9.1 - Narrative text</td>
+            <td>examinationReport.narrativeText</td>
+            <td>A.2.4.8.1 - Narrative text</td>
             <td>equivalent</td>
             <td>cz-composition-imaging</td>
             <td>Composition.section:findings.text</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.conclusion.text</td>
-            <td>A.2.4.10.1 - Conclusion text</td>
+            <td>examinationReport.conclusion.text</td>
+            <td>A.2.4.9.1 - Conclusion text</td>
             <td>equivalent</td>
             <td>cz-composition-imaging</td>
             <td>Composition.section:impression.text</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>resultOfImagingMethod.conclusion.text</td>
-            <td>A.2.4.10.2 - Conclusion code</td>
+            <td>examinationReport.conclusion.text</td>
+            <td>A.2.4.9.2 - Conclusion code</td>
             <td>equivalent</td>
             <td>cz-composition-imaging</td>
             <td>Composition.section:impression.entry.ofType(CZ_ObservationResultImaging).code</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>Body.ReportOfImagingMethod.recommendation</td>
-            <td>A.2.4.11 - Recommendation</td>
+            <td>Body.ReportOfImagingExamination.recommendation</td>
+            <td>A.2.4.10 - Recommendation</td>
             <td>equivalent</td>
             <td>cz-composition-imaging</td>
             <td>Composition.section:recommendation.text</td>
@@ -1059,14 +1051,14 @@
             <td></td>
           </tr>          <tr>
             <td>adverseReaction.allergyDescription</td>
-            <td>A.2.4.8.4 - Alergy description</td>
+            <td>A.2.4.7.4 - Alergy description</td>
             <td>equivalent</td>
             <td>cz-composition-imaging</td>
             <td>Composition.section:complications.text</td>
             <td></td>
             <td></td>
           </tr>          <tr>
-            <td>Body.LinkToRelatedReport.documentReference</td>
+            <td>Body.comparisonStudy.documentReference</td>
             <td>A.2.5.1 DocumentReference</td>
             <td>related-to</td>
             <td>cz-study-imaging</td>

@@ -1,5 +1,5 @@
-Logical: LogCzLinkToRelatedReportCz
-Id: logLinkToRelatedReport
+Logical: LogCzcomparisonStudyCz
+Id: logcomparisonStudy
 Title: "A.2.5 - Odkaz na související zprávu"
 Description: """Odkaz na související zprávu"""
 

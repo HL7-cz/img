@@ -1,7 +1,7 @@
-Logical: LogEnInformationRecipientImagingCz
-Id: InformationRecipientCz
-Title: "A.1.4 - Information recipient - (intended recipient or recipients of the report), if applicable"
-Description: """Information recipient - (intended recipient or recipients of the report), if applicable"""
+Logical: LogEnIntendedRecipientImagingCz
+Id: IntendedRecipientCz
+Title: "A.1.4 - Intended recipient - (intended recipient or recipients of the report), if applicable"
+Description: """Intended recipient - (intended recipient or recipients of the report), if applicable"""
 
 * identifier 0..1 Identifier "A.1.4.1 - Recipient identifier" """The health professional or patient identifier. Either an internal identifier assigned by a healthcare provider institution or (preferably) a national health professional ID such as the licence or registration number. In case when the recipient is not a health professional, e.g. patient, appropriate personal identifier could be used."""
 * name 0..1 HumanName "A.1.4.2 - Recipient name" """Person name [the structure of the name will be the same as for the patient (given name, family name / surname)]."""

@@ -7,7 +7,7 @@ Description: "Order information for the scope of the Czech national interoperabi
 * insert ImposeProfile($ServiceRequest-eu-img,0)
 
 * extension contains $bodySite-reference named bodySite 0..1
-* extension[bodySite].valueReference only Reference(BodyStructureCz)
+* extension[bodySite].valueReference only Reference(BodyStructureCzCore)
 * identifier
   * insert SliceElement( #value, type )
 * identifier contains accessionNumber 0..1
@@ -41,7 +41,7 @@ Description: "Order information for the scope of the Czech national interoperabi
 * bodySite from $sctBodySite (preferred)
 * text 1..
 * supportingInfo 0..*
-* supportingInfo only Reference(CZ_MedicationStatement or CZ_BodyHeight or CZ_BodyWeight or Condition or CZ_ConditionImage or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_ObservationImage or CZ_CarePlanImage)
+* supportingInfo only Reference(CZ_MedicationStatementCore or CZ_BodyHeight or CZ_BodyWeight or CZ_ConditionCore or CZ_ConditionImage or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_ObservationImage or CZ_CarePlanImage)
 
 * supportingInfo.extension contains 
     http://hl7.org/fhir/5.0/StructureDefinition/extension-ServiceRequest.supportingInfo named codeableConcept 0..*

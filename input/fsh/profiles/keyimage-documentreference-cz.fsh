@@ -31,7 +31,7 @@ When the resource represents a DICOM instance it SHALL contain a the `SOP Instan
 * extension
   * ^slicing.discriminator[1].type = #value
   * ^slicing.discriminator[=].path = "value"
-* extension[basedOn].valueReference only Reference (Appointment or AppointmentResponse or CZ_CarePlanImage or Claim or CommunicationRequest or Contract or CoverageEligibilityRequest or DeviceRequest or EnrollmentRequest or ImmunizationRecommendation or MedicationRequest or NutritionOrder or ServiceRequest or SupplyRequest or VisionPrescription or CZ_ImagingServiceRequest)
+* extension[basedOn].valueReference only Reference (CZ_AppointmentCore or AppointmentResponse or CZ_CarePlanImage or Claim or CommunicationRequest or Contract or CoverageEligibilityRequest or DeviceRequest or EnrollmentRequest or ImmunizationRecommendation or CZ_MedicationRequestCore or NutritionOrder or ServiceRequest or SupplyRequest or VisionPrescription or CZ_ImagingServiceRequest)
 * extension[basedOn] contains imorderaccession 0..1
 * extension[basedOn][imorderaccession].value[x] only Reference(CZ_ImagingServiceRequest)
   * identifier 1..1

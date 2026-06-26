@@ -37,9 +37,9 @@ This observation may represent the result of a imaging report
 
 * basedOn
   * insert SliceElement( #type, $this )
-* basedOn only Reference(CarePlan or DeviceRequest or ImmunizationRecommendation or MedicationRequest or NutritionOrder or ServiceRequest or CZ_ImagingOrderInformation)
+* basedOn only Reference(CarePlan or DeviceRequest or ImmunizationRecommendation or MedicationRequest or NutritionOrder or ServiceRequest or CZ_ImagingServiceRequest)
 * basedOn contains ServiceRequestOrderImagingAccession 0..*
-* basedOn[ServiceRequestOrderImagingAccession] only Reference( CZ_ImagingOrderInformation )
+* basedOn[ServiceRequestOrderImagingAccession] only Reference( CZ_ImagingServiceRequest )
   * identifier 1..1
   * identifier only CZ_AccessionNumberIdentifier
 

@@ -18,7 +18,7 @@ Description: "This profile on Procedure represents the imaging procedure for the
 //* code ^binding.extension[=].extension[=].valueMarkdown = "V českém národním kontextu je doporučeno zde také uvádět ekvivalentní kód z klasifikace ČRK (ERTN)."
 //* code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 
-* basedOn only Reference(CZ_CarePlanImage or CZ_ImagingOrderInformation)
+* basedOn only Reference(CZ_CarePlanImage or CZ_ImagingServiceRequest)
 * partOf only Reference(Procedure or CZ_ProcedureImaging or Observation or CZ_ObservationResultImaging or MedicationAdministration or CZ_MedicationAdministrationCore)
 * subject only Reference(CZ_PatientCore or CZ_PatientAnimal or Group)
 * recorder only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore)

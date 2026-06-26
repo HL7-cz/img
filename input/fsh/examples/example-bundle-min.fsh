@@ -240,7 +240,7 @@ Description: "Patient in RTG Imaging report"
 * communication[=].preferred = true
 
 Instance: cz-examplertg-order
-InstanceOf: CZ_ImagingOrderInformation
+InstanceOf: CZ_ImagingServiceRequest
 Usage: #example
 Title: "Imaging order: RTG Imaging report"
 Description: "Imaging order for Plain X-ray"

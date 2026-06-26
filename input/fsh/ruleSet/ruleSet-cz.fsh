@@ -55,7 +55,7 @@ RuleSet: SliceElementWithDescription( type, path, description )
 * ^slicing.ordered = false
 
 RuleSet: BasedOnOrderReference( slicename )
-* basedOn[{slicename}] only Reference( CZ_ImagingOrderInformation )
+* basedOn[{slicename}] only Reference( CZ_ImagingServiceRequest )
   * identifier 1..1
   * identifier only CZ_AccessionNumberIdentifier
 

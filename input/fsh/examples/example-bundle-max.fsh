@@ -290,7 +290,7 @@ Title: "Patient Example: PET+CT Imaging report"
 * communication[+].language = urn:ietf:bcp:47#cs
 
 Instance: cz-examplepetct-order
-InstanceOf: CZ_ImagingOrderInformation
+InstanceOf: CZ_ImagingServiceRequest
 Usage: #inline
 Title: "Imaging order for PET+CT Imaging report"
 Description: "Imaging order: PET+CT Imaging report"
@@ -470,7 +470,7 @@ Title: "Medication: PET+CT Imaging report"
 * identifier[=].value = "607852"
 * status = #active
 * code.coding[+] = $dlp_lecivePripravky#0226200 "Fludeoxythymidin"
-* form = $edqm#50053000 "Powder for solution for injection or infusion"
+* form = $edqm#11201000 "Injekční roztok"
 
 Instance: cz-examplepetct-observation
 InstanceOf: CZ_ObservationResultImaging

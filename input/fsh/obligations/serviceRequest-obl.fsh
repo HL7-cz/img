@@ -1,5 +1,5 @@
 Profile: CZ_ServiceRequestObligationsImg
-Parent: CZ_ImagingOrderInformation
+Parent: CZ_ImagingServiceRequest
 Id: cz-serviceRequest-obl-img
 Title:    "Service Request: Obligations"
 Description: "This profile defines obligations for an order information in FHIR for the purpose of this guide."

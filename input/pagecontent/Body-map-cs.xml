@@ -92,7 +92,7 @@
 
         <li>
           <strong>Hlavní cílový profil:</strong>
-          <a href="StructureDefinition-cz-imagingOrderInformation.html">CZ_ImagingOrderInformation</a>
+          <a href="StructureDefinition-cz-imagingOrderInformation.html">CZ_ImagingServiceRequest</a>
         </li>
 
       </ul>
@@ -142,7 +142,7 @@
             <td>A.2.1 - Order detail</td>
             <td>ekvivalentní</td>
             <td>cz-imagingOrderInformation</td>
-            <td>CZ_ImagingOrderInformation</td>
+            <td>CZ_ImagingServiceRequest</td>
             <td></td>
             <td></td>
           </tr>          <tr>
@@ -150,7 +150,7 @@
             <td>A.2.1.1 - Identifier of order detail</td>
             <td>ekvivalentní</td>
             <td>cz-imagingOrderInformation</td>
-            <td>CZ_ImagingOrderInformation.identifier</td>
+            <td>CZ_ImagingServiceRequest.identifier</td>
             <td></td>
             <td></td>
           </tr>          <tr>
@@ -158,7 +158,7 @@
             <td>A.2.1.2 - Date and time of the order placement</td>
             <td>ekvivalentní</td>
             <td>cz-imagingOrderInformation</td>
-            <td>CZ_ImagingOrderInformation.authoredOn</td>
+            <td>CZ_ImagingServiceRequest.authoredOn</td>
             <td></td>
             <td></td>
           </tr>          <tr>
@@ -166,7 +166,7 @@
             <td>A.2.1.3 - Date and time of requested execution</td>
             <td>ekvivalentní</td>
             <td>cz-imagingOrderInformation</td>
-            <td>CZ_ImagingOrderInformation.occurrenceDateTime</td>
+            <td>CZ_ImagingServiceRequest.occurrenceDateTime</td>
             <td></td>
             <td></td>
           </tr>          <tr>
@@ -174,7 +174,7 @@
             <td>A.2.2 - Order reason</td>
             <td>ekvivalentní</td>
             <td>cz-imagingOrderInformation</td>
-            <td>CZ_ImagingOrderInformation.reasonReference.ofType(CZ_Condition)</td>
+            <td>CZ_ImagingServiceRequest.reasonReference.ofType(CZ_Condition)</td>
             <td></td>
             <td></td>
           </tr>          <tr>
@@ -182,7 +182,7 @@
             <td>A.2.2.1 -  Problem / diagnosis / condition description</td>
             <td>ekvivalentní</td>
             <td>cz-imagingOrderInformation</td>
-            <td>CZ_ImagingOrderInformation.reasonReference.ofType(CZ_Condition).code</td>
+            <td>CZ_ImagingServiceRequest.reasonReference.ofType(CZ_Condition).code</td>
             <td></td>
             <td></td>
           </tr>          <tr>

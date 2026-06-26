@@ -24,7 +24,7 @@ class "cz-keyImage-documentReference" <<Profile>> [[StructureDefinition-cz-keyIm
 class "cz-observation-result-imaging" <<Profile>> [[StructureDefinition-cz-observation-result-imaging.html]]
 class "cz-radiationDoseObservation" <<Profile>> [[StructureDefinition-cz-radiationDoseObservation.html]]
 class "cz-specimen" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-specimen.html]]
-class "cz-MedicationAdministration" <<Profile>> [[StructureDefinition-cz-MedicationAdministration.html]]
+class "cz-MedicationAdministration" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-MedicationAdministration.html]]
 class "cz-allergyIntolerance" <<Profile>> [[https://build.fhir.org/ig/HL7-cz/cz-core/StructureDefinition-cz-allergyIntolerance.html]]
 class "cz-carePlanImage" <<Profile>> [[StructureDefinition-cz-carePlanImage.html]]
 

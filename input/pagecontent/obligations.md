@@ -53,7 +53,7 @@ Actors were specified in these roles:
 16. Obligations for profile Medical device ([CZ_MedicalDeviceObligationsImg](StructureDefinition-cz-medicalDevice-obl-img.html))
 17. Obligations for profile Key image document Reference ([CZ_KeyImageDocumentReferenceObligationsImg](StructureDefinition-cz-keyImageDocumentReference-obl-img.html))
 18. Obligations for profile Medication ([CZ_MedicationCoreObligationsImg](StructureDefinition-cz-medication-obl-img.html))
-19. Obligations for profile Medication administration ([CZ_MedicationCoreAdministrationObligationsImg](StructureDefinition-cz-medicationAdministration-obl-img.html))
+19. Obligations for profile Medication administration ([CZ_MedicationAdministrationCoreObligationsImg](StructureDefinition-cz-medicationAdministration-obl-img.html))
 20. Obligations for profile Patient animal ([CZ_PatientAnimalObligationsImg](StructureDefinition-cz-patientAnimal-obl-img.html))
 21. Obligations for profile Procedure ([CZ_ProcedureObligationsImg](StructureDefinition-cz-procedure-obl-img.html))
 22. Obligations for profile Radiation dose observation ([CZ_RadiationDoseObservationObligationsImg](StructureDefinition-cz-radiationDoseObservation-obl-img.html))

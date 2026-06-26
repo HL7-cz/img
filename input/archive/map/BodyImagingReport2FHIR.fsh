@@ -369,63 +369,63 @@ Usage: #definition
 * group[=].target = "https://hl7.cz/fhir/img/StructureDefinition/cz-MedicationAdministration"
 * group[=].element[+].code = #ReportOfImagingExamination.Medication
 * group[=].element[=].display = "A.2.4.6 - Medication"
-* group[=].element[=].target.code = #CZ_MedicationCoreAdministration
-* group[=].element[=].target.display = "Referenced from Composition.section:procedure.partOf.ofType(CZ_MedicationCoreAdministration)"
-* group[=].element[=].target.comment = "Composition.section:procedure.partOf.ofType(CZ_MedicationCoreAdministration)"
+* group[=].element[=].target.code = #CZ_MedicationAdministrationCore
+* group[=].element[=].target.display = "Referenced from Composition.section:procedure.partOf.ofType(CZ_MedicationAdministrationCore)"
+* group[=].element[=].target.comment = "Composition.section:procedure.partOf.ofType(CZ_MedicationAdministrationCore)"
 * group[=].element[=].target.equivalence = #relatedto
 * group[=].element[+].code = #Medication.name
 * group[=].element[=].display = "A.2.4.6.1 - Administered medicinal product"
-* group[=].element[=].target.code = #CZ_MedicationCoreAdministration.medication.code
+* group[=].element[=].target.code = #CZ_MedicationAdministrationCore.medication.code
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent	
 * group[=].element[+].code = #Medication.dosage
 * group[=].element[=].display = "A.2.4.6.2 - Dosage"
-* group[=].element[=].target.code = #CZ_MedicationCoreAdministration.dosage.dose
+* group[=].element[=].target.code = #CZ_MedicationAdministrationCore.dosage.dose
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Medication.routeOfAdministration
 * group[=].element[=].display = "A.2.4.6.3 - The route of administration of the active substance"
-* group[=].element[=].target.code = #CZ_MedicationCoreAdministration.dosage.route
+* group[=].element[=].target.code = #CZ_MedicationAdministrationCore.dosage.route
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Medication.dosingDevice
 * group[=].element[=].display = "A.2.4.6.4 - Dosing device"
-* group[=].element[=].target.code = #CZ_MedicationCoreAdministration.device
+* group[=].element[=].target.code = #CZ_MedicationAdministrationCore.device
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Medication.batchNumber
 * group[=].element[=].display = "A.2.4.6.5 - Batch number"
-* group[=].element[=].target.code = #CZ_MedicationCoreAdministration.medication.batch.lotNumber
+* group[=].element[=].target.code = #CZ_MedicationAdministrationCore.medication.batch.lotNumber
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Medication.dateTimeStart
 * group[=].element[=].display = "A.2.4.6.6 - Start date and time"
-* group[=].element[=].target.code = #CZ_MedicationCoreAdministration.effectivePeriod.start
+* group[=].element[=].target.code = #CZ_MedicationAdministrationCore.effectivePeriod.start
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Medication.dateTimeEnd
 * group[=].element[=].display = "A.2.4.6.7 - End date and time"
-* group[=].element[=].target.code = #CZ_MedicationCoreAdministration.effectivePeriod.end
+* group[=].element[=].target.code = #CZ_MedicationAdministrationCore.effectivePeriod.end
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Medication.administrator
 * group[=].element[=].display = "A.2.4.6.8 - Administrator"
-* group[=].element[=].target.code = #CZ_MedicationCoreAdministration.performer
+* group[=].element[=].target.code = #CZ_MedicationAdministrationCore.performer
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Medication.reasonForSubmission
 * group[=].element[=].display = "A.2.4.6.9 - Reason for submission"
-* group[=].element[=].target.code = #CZ_MedicationCoreAdministration.reasonCode
+* group[=].element[=].target.code = #CZ_MedicationAdministrationCore.reasonCode
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Medication.comment
 * group[=].element[=].display = "A.2.4.6.10 - Comment"
-* group[=].element[=].target.code = #CZ_MedicationCoreAdministration.note
+* group[=].element[=].target.code = #CZ_MedicationAdministrationCore.note
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[=].element[+].code = #Medication.dateTimeOfEntry
 * group[=].element[=].display = "A.2.4.6.11 - Entry date and time"
-* group[=].element[=].target.code = #CZ_MedicationCoreAdministration.effectiveDateTime
+* group[=].element[=].target.code = #CZ_MedicationAdministrationCore.effectiveDateTime
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent
 * group[+].source = "https://hl7.cz/fhir/img/StructureDefinition/ReportOfImagingExamination"

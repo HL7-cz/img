@@ -55,7 +55,7 @@ Byli specifikováni aktéři ve těchto rolích:
 16. Pravidla pro profil Zdravotnický prostředek ([CZ_MedicalDeviceObligationsImg](StructureDefinition-cz-medicalDevice-obl-img.html))
 17. Pravidla pro profil Odkaz na klíčové DICOM snímky ([CZ_KeyImageDocumentReferenceObligationsImg](StructureDefinition-cz-keyImageDocumentReference-obl-img.html))
 18. Pravidla pro profil Medikace ([CZ_MedicationCoreObligationsImg](StructureDefinition-cz-medication-obl-img.html))
-19. Pravidla pro profil Administrace medikace ([CZ_MedicationCoreAdministrationObligationsImg](StructureDefinition-cz-medicationAdministration-obl-img.html))
+19. Pravidla pro profil Administrace medikace ([CZ_MedicationAdministrationCoreObligationsImg](StructureDefinition-cz-medicationAdministration-obl-img.html))
 20. Pravidla pro profil Zvířecí pacient ([CZ_PatientAnimalObligationsImg](StructureDefinition-cz-patientAnimal-obl-img.html))
 21. Pravidla pro profil Procedura ([CZ_ProcedureObligationsImg](StructureDefinition-cz-procedure-obl-img.html))
 22. Pravidla pro profil Nález radiační dávky ([CZ_RadiationDoseObservationObligationsImg](StructureDefinition-cz-radiationDoseObservation-obl-img.html))

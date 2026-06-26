@@ -32,7 +32,7 @@ The `text` field of each section SHALL contain a textual representation of all l
     $information-recipient-url  named informationRecipient 0..* and
     $hl7euDiagnosticReference   named diagnosticreport-reference 0..1
 
-* extension[basedOn].valueReference only Reference(CZ_ImagingOrderInformation)
+* extension[basedOn].valueReference only Reference(CZ_ImagingServiceRequest)
 * extension[diagnosticreport-reference].valueReference only Reference(CZ_DiagnosticReport)
 * extension[informationRecipient].valueReference only Reference(CZ_PractitionerCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_PractitionerRoleCore or CZ_OrganizationCore)
 
@@ -189,7 +189,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * entry[order]
     * ^short = "Order reference"
     * ^definition = "This entry holds a reference to the order for the Imaging Study and report."
-  * entry[order] only Reference(CZ_ImagingOrderInformation)
+  * entry[order] only Reference(CZ_ImagingServiceRequest)
 
 ///////////////////////////////// Clinical question SECTION ///////////////////////////////////////
 * section[clinicalQuestion]
@@ -291,7 +291,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * entry
     * insert SliceElement( #profile, $this )
   * entry contains suggestion 0..*
-  * entry[suggestion] only Reference(CZ_CarePlanImage or CZ_ImagingOrderInformation)
+  * entry[suggestion] only Reference(CZ_CarePlanImage or CZ_ImagingServiceRequest)
 
 // /////////////////// COMMUNICATION SECTION //////////////////////////
 * section[communication]
@@ -312,27 +312,3 @@ Invariant: text-or-section
 Description: "A Composition SHALL have either text, at least one section, or both."
 Expression: "text.exists() or section.exists()"
 Severity: #error
-
-
-Extension: ImDiagnosticReportReference
-Id:   im-composition-diagnosticReportReference
-Title:  "Document DiagnosticReport Reference"
-Description: """
-    This extension provides a reference to the DiagnosticReport instance that is associated with this Composition.
-    """
-// publisher, contact, and other metadata here using caret (^) syntax (omitted)
-* insert ExtensionContext(Composition)
-* value[x] only Reference (CZ_DiagnosticReport)
-
-Extension: RadiationDoseExt
-Title: "Extension: Radiation Dose"
-Id: RadiationDose
-Description: "Radiation dose information in the imaging report"
-* ^context[+].type = #element
-* ^context[=].expression = "Composition.section"
-* ^context[+].type = #element
-* ^context[=].expression = "DiagnosticReport"
-* value[x] only string
-* valueString ^short = "Radiation dose summary text."
-* valueString ^comment = "Information on total exposure to ionising radiation. This information is required by regulations in several EU countries."
-

@@ -74,7 +74,7 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * entry[diagnosticReport].resource only CZ_DiagnosticReport
 
 * entry contains serviceRequest 0..*
-* entry[serviceRequest].resource only CZ_ImagingOrderInformation
+* entry[serviceRequest].resource only CZ_ImagingServiceRequest
 
 * entry contains patient 1..*
 * entry[patient].resource only CZ_PatientCore or CZ_PatientAnimal

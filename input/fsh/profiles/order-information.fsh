@@ -1,4 +1,4 @@
-Profile: CZ_ImagingOrderInformation
+Profile: CZ_ImagingServiceRequest
 Parent: ServiceRequest
 Id: cz-imagingOrderInformation
 Title: "Service Request: Imaging Report (CZ)"
@@ -15,8 +15,8 @@ Description: "Order information for the scope of the Czech national interoperabi
 * identifier[accessionNumber].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[accessionNumber].type.coding.code = #ACSN
 
-* basedOn only Reference(CZ_CarePlanImage or CarePlan or CZ_ImagingOrderInformation or ServiceRequest or MedicationRequest)
-* replaces only Reference(CZ_ImagingOrderInformation or ServiceRequest)
+* basedOn only Reference(CZ_CarePlanImage or CZ_CarePlanCore or CZ_ImagingServiceRequest or ServiceRequest or CZ_MedicationRequestCore)
+* replaces only Reference(CZ_ImagingServiceRequest or ServiceRequest)
 
 * category 1..*
   * insert SliceElement( #value, $this )

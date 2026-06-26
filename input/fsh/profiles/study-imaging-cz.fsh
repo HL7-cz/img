@@ -30,7 +30,7 @@ The regions SHALL overlap with the bodysite references from `ImagingStudy.serie.
 * basedOn
   * insert SliceElement( #type, $this )
 * basedOn contains orderaccession 0..1
-* basedOn[orderaccession] only Reference(CZ_ImagingOrderInformation)
+* basedOn[orderaccession] only Reference(CZ_ImagingServiceRequest)
   * identifier 1..1
   * identifier only CZ_AccessionNumberIdentifier
 
@@ -67,19 +67,6 @@ The regions SHALL overlap with the bodysite references from `ImagingStudy.serie.
       ImagingStudyInstanceDescription named instance-description 0..1 and
       NumberOfFrames named number-of-frames 0..1
 
-Extension: ImagingStudyInstanceDescription
-Id: instance-description
-Title: "Instance Description"
-Description: "A description of the instance in an ImagingStudy."
-Context: ImagingStudy.series.instance
-* value[x] only string
-
-Extension: NumberOfFrames
-Title: "Extension: Number of Frames"
-Description: "The number of frames in an ImagingStudy instance as required by Xt-EHR logical ImagingStudy logical model."
-Context: ImagingStudy.series.instance
-
-* value[x] only integer
 
 Invariant: imagingstudy-01
 Description: "A DICOM instance UID must start with 'urn:oid:'"

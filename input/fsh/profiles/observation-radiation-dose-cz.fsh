@@ -8,11 +8,11 @@ E.g. based on information from https://dicom.nema.org/medical/dicom/current/outp
 """
 * insert ImposeProfile($ObservationRadition-eu-img,0)
 
-* basedOn only Reference(CZ_CarePlanImage or DeviceRequest or ImmunizationRecommendation or CZ_MedicationRequestCore or NutritionOrder or CZ_ImagingOrderInformation)
+* basedOn only Reference(CZ_CarePlanImage or DeviceRequest or ImmunizationRecommendation or CZ_MedicationRequestCore or NutritionOrder or CZ_ImagingServiceRequest)
 * basedOn
   * insert SliceElement( #type, $this )
 * basedOn contains orderaccession 0..1
-* basedOn[orderaccession] only Reference( CZ_ImagingOrderInformation )
+* basedOn[orderaccession] only Reference( CZ_ImagingServiceRequest )
   * identifier 1..1
   * identifier only CZ_AccessionNumberIdentifier
 
@@ -23,7 +23,8 @@ E.g. based on information from https://dicom.nema.org/medical/dicom/current/outp
   * type = MissingDicomTerminology#00083010 "Irradiation Event UID" 
   * assigner only Reference(CZ_OrganizationCore)
 
-* partOf only Reference(CZ_MedicationAdministrationCore or CZ_MedicationDispenseCore or CZ_MedicationStatementCore or Procedure or CZ_ProcedureImaging or C_ImmunizationCore or CZ_StudyImaging)
+* partOf only Reference(CZ_MedicationAdministrationCore or CZ_MedicationDispenseCore or CZ_MedicationStatementCore or Procedure or CZ_ProcedureImaging or CZ_ImmunizationCore or CZ_StudyImaging)
+
 * partOf 1..*
   * insert SliceElement( #profile, $this )
 * partOf contains study 1..1
@@ -119,27 +120,3 @@ E.g. based on information from https://dicom.nema.org/medical/dicom/current/outp
   * code = $dcm#113839 "Effective Dose"
   * value[x] only Quantity
   * valueQuantity from ImEffectiveDoseUnits
-
-ValueSet: ImEffectiveDoseUnits
-Id: im-effective-dose-units
-Title: "Effective Dose Units"
-Description: "Units for Effective Dose."
-* insert UCUMCopyrightForVS
-* ^experimental = false
-* $ucum#Sv "Sv"        // Effective Dose
-* $ucum#mSv "mSv"       // Effective Dose
-
-ValueSet: ImDoseLengthUnits
-Id: im-dose-length-units
-Title: "Dose Length Units"
-Description: "Units for Dose Length."
-* ^experimental = false
-* $ucum#mGy.cm "mGy.cm" // Dose length product
-
-ValueSet: ImGraySquareUnits
-Id: im-gray-square-units
-Title: "Gray Square Units"
-Description: "Units for Gray Square."
-* ^experimental = false
-* $ucum#Gy.m2 "Gy.m2"   // Dose area product
-* $ucum#mGy.cm2 "mGy.cm2"   // Dose area product

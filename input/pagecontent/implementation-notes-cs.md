@@ -12,7 +12,7 @@ classDiagram
   CZ_BundleImagingReport *-- "1" CZ_CompositionImagingReport
   CZ_BundleImagingReport *-- "1" CZ_DiagnosticReport
   CZ_BundleImagingReport *-- "1" CZ_PatientCore
-  CZ_BundleImagingReport *-- "0..*" CZ_ImagingOrderInformation
+  CZ_BundleImagingReport *-- "0..*" CZ_ImagingServiceRequest
   CZ_BundleImagingReport *-- "0..*" CZ_Practioner
   CZ_BundleImagingReport *-- "0..*" CZ_DeviceObserver
   CZ_BundleImagingReport *-- "0..*" CZ_OrganizationCore
@@ -26,7 +26,7 @@ classDiagram
   CZ_DiagnosticReport --> CZ_CompositionImagingReport: composition
   
 
-  CZ_CompositionImagingReport --> CZ_ImagingOrderInformation: extension[basedOn]  
+  CZ_CompositionImagingReport --> CZ_ImagingServiceRequest: extension[basedOn]  
   CZ_CompositionImagingReport --> CZ_DiagnosticReport: extension[diagnosticreport-reference]
   CZ_CompositionImagingReport --> CZ_Practioner: author[author]
   CZ_CompositionImagingReport --> CZ_DeviceObserver: author[authoring-device]
@@ -35,7 +35,7 @@ classDiagram
   CZ_CompositionImagingReport --> CZ_OrganizationCore: custodian
   CZ_CompositionImagingReport --> CZ_PatientCore: subject
   CZ_CompositionImagingReport --> CZ_StudyImaging: section[imagingstudy]
-  CZ_CompositionImagingReport --> CZ_ImagingOrderInformation: section[order]
+  CZ_CompositionImagingReport --> CZ_ImagingServiceRequest: section[order]
   CZ_CompositionImagingReport --> CZ_ConditionImage: section[clinicalQuestion]
   CZ_CompositionImagingReport --> CZ_ProcedureImaging: section[procedure]
   CZ_CompositionImagingReport --> CZ_StudyImaging: section[comparison]

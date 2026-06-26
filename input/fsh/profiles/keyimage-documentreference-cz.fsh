@@ -31,9 +31,9 @@ When the resource represents a DICOM instance it SHALL contain a the `SOP Instan
 * extension
   * ^slicing.discriminator[1].type = #value
   * ^slicing.discriminator[=].path = "value"
-* extension[basedOn].valueReference only Reference (Appointment or AppointmentResponse or CZ_CarePlanImage or Claim or CommunicationRequest or Contract or CoverageEligibilityRequest or DeviceRequest or EnrollmentRequest or ImmunizationRecommendation or MedicationRequest or NutritionOrder or ServiceRequest or SupplyRequest or VisionPrescription or CZ_ImagingOrderInformation)
+* extension[basedOn].valueReference only Reference (CZ_AppointmentCore or AppointmentResponse or CZ_CarePlanImage or Claim or CommunicationRequest or Contract or CoverageEligibilityRequest or DeviceRequest or EnrollmentRequest or ImmunizationRecommendation or CZ_MedicationRequestCore or NutritionOrder or ServiceRequest or SupplyRequest or VisionPrescription or CZ_ImagingServiceRequest)
 * extension[basedOn] contains imorderaccession 0..1
-* extension[basedOn][imorderaccession].value[x] only Reference(CZ_ImagingOrderInformation)
+* extension[basedOn][imorderaccession].value[x] only Reference(CZ_ImagingServiceRequest)
   * identifier 1..1
   * identifier only CZ_AccessionNumberIdentifier 
 
@@ -77,20 +77,3 @@ When the resource represents a DICOM instance it SHALL contain a the `SOP Instan
 * extension contains $note-url named note 0..1 and CrossVersionMediaViewExtension named view 0..1
 
 * context.sourcePatientInfo only Reference(CZ_PatientCore or CZ_PatientAnimal)
-
-Extension: CrossVersionMediaViewExtension
-Title: "Media.view extension"
-Description: "This cross version extension includes the FHIR R4 version of the Media.view field which has at this point in time (April 18, 2025), not yet been included in the extension pack."
-Context: DocumentReference
-* extension 0..0
-* value[x] only CodeableConcept
-* valueCodeableConcept from CrossVersionMediaView
-
-ValueSet: CrossVersionMediaView
-Id: media-view
-Title: "Media View types - placeholder for cross-version extension"
-Description: "Codes defined in SNOMED CT that can be used to record Media Recording views."
-* insert SNOMEDCopyrightForVS
-* ^experimental = false
-* ^version = "4.0.1"
-* include codes from system $sct where concept is-a #260419006

@@ -290,7 +290,7 @@ Title: "Patient Example: PET+CT Imaging report"
 * communication[+].language = urn:ietf:bcp:47#cs
 
 Instance: cz-examplepetct-order
-InstanceOf: CZ_ImagingOrderInformation
+InstanceOf: CZ_ImagingServiceRequest
 Usage: #inline
 Title: "Imaging order for PET+CT Imaging report"
 Description: "Imaging order: PET+CT Imaging report"
@@ -425,7 +425,7 @@ Usage: #example
 Description: "Care plan for PET+CT Imaging report"
 Title: "Care plan: PET+CT Imaging report"
 * id = "b9af425a-a9d9-4685-800c-d0d661c1b7a4"
-* identifier.system = "urn:nis:careplan-id"
+* identifier.system = "https://www.nemocnice.cz/sid/careplan-id"
 * identifier.value = "1234567"
 * description = "Dále podle vývoje MRI."
 * status = #completed
@@ -446,12 +446,12 @@ Title: "Adverse Event: PET+CT Imaging report"
 * detected = "2022-10-07T08:30:00+01:00"
 
 Instance: cz-examplepetct-medicationAdministration
-InstanceOf: CZ_MedicationCoreAdministration
+InstanceOf: CZ_MedicationAdministrationCore
 Usage: #example
 Description: "Medication Administration during PET+CT Imaging report"
 Title: "Medication Administration: PET+CT Imaging report"
 * id = "a89a0433-998e-4408-9d7a-560c6d242366"
-* identifier[+].system = "urn:nis:medicationadministration-id"
+* identifier[+].system = "https://www.nemocnice.cz/sid/medicationadministration-id"
 * identifier[=].value = "12345"
 * status = #completed
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
@@ -466,11 +466,11 @@ Usage: #example
 Description: "Medication during PET+CT Imaging report"
 Title: "Medication: PET+CT Imaging report"
 * id = "0987d1c9-0d9a-4d33-8efc-eee6a8c63059"
-* identifier[+].system = "urn:nis:medication-id"
+* identifier[+].system = "https://www.nemocnice.cz/sid/medication-id"
 * identifier[=].value = "607852"
 * status = #active
 * code.coding[+] = $dlp_lecivePripravky#0226200 "Fludeoxythymidin"
-* form = $edqm#50053000 "Powder for solution for injection or infusion"
+* form = $edqm#11201000 "Injekční roztok"
 
 Instance: cz-examplepetct-observation
 InstanceOf: CZ_ObservationResultImaging

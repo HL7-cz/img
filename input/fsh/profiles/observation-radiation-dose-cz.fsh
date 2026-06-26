@@ -23,7 +23,7 @@ E.g. based on information from https://dicom.nema.org/medical/dicom/current/outp
   * type = MissingDicomTerminology#00083010 "Irradiation Event UID" 
   * assigner only Reference(CZ_OrganizationCore)
 
-* partOf only Reference(CZ_MedicationCoreAdministration or MedicationDispense or MedicationStatement or Procedure or CZ_ProcedureImaging or Immunization or CZ_StudyImaging)
+* partOf only Reference(CZ_MedicationAdministrationCore or MedicationDispense or MedicationStatement or Procedure or CZ_ProcedureImaging or Immunization or CZ_StudyImaging)
 * partOf 1..*
   * insert SliceElement( #profile, $this )
 * partOf contains study 1..1

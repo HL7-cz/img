@@ -19,7 +19,7 @@ Description: "This profile on Procedure represents the imaging procedure for the
 //* code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 
 * basedOn only Reference(CZ_CarePlanImage or CZ_ImagingServiceRequest)
-* partOf only Reference(Procedure or CZ_ProcedureImaging or Observation or CZ_ObservationResultImaging or MedicationAdministration or CZ_MedicationAdministrationCore)
+* partOf only Reference(Procedure or CZ_ProcedureImaging or Observation or CZ_ObservationResultImaging or CZ_MedicationAdministrationCore or CZ_MedicationAdministrationCore)
 * subject only Reference(CZ_PatientCore or CZ_PatientAnimal or Group)
 * recorder only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore)
 * asserter only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_PatientCore or CZ_RelatedPersonCore)

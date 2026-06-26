@@ -15,7 +15,7 @@ Description: "Order information for the scope of the Czech national interoperabi
 * identifier[accessionNumber].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[accessionNumber].type.coding.code = #ACSN
 
-* basedOn only Reference(CZ_CarePlanImage or CarePlan or CZ_ImagingServiceRequest or ServiceRequest or MedicationRequest)
+* basedOn only Reference(CZ_CarePlanImage or CZ_CarePlanCore or CZ_ImagingServiceRequest or ServiceRequest or CZ_MedicationRequestCore)
 * replaces only Reference(CZ_ImagingServiceRequest or ServiceRequest)
 
 * category 1..*

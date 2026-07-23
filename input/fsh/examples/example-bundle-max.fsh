@@ -129,7 +129,7 @@ Usage: #example
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Note:</b></td><td id=\"note\"><p>Klinická otázka: Recidiva?</p></td></tr></table></div>"
   * entry[0] = Reference(urn:uuid:9ee22843-2526-436f-bf66-3f9874869c08)
 * section[imagingstudy].title = "Zobrazovací studie"
-* section[imagingstudy].code = $loinc#18726-0 "Radiology studies (set)"
+* section[imagingstudy].code = $loinc#18726-0 "zobrazovací studie"
 * section[imagingstudy].entry[0] = Reference(urn:uuid:e132f687-df35-4174-91bd-fe74cda5ac5d)
 * section[procedure].title = "Procedura"
 * section[procedure].code = $loinc#55111-9 "Current imaging procedure descriptions Document"
@@ -405,7 +405,7 @@ Usage: #example
 Description: "First Diagnosis for PET+CT Imaging report"
 Title: "Diagnosis 1: PET+CT Imaging report"
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
-* code.coding[diagnosis] = #D50.0 "Anemie z nedostatku železa, sekundární po ztrátě krve (chronická)"
+* code.coding[diagnosis] = #D500 "Anemie z nedostatku železa, sekundární po ztrátě krve (chronická)"
 * code.text = "Anemie recidivující ztrátová hyposideremická z angiektázií ve vzestupném tračníku"
 
 Instance: cz-examplepetct-condition3
@@ -415,7 +415,7 @@ Description: "Second Diagnosis for PET+CT Imaging report"
 Title: "Diagnosis 2: PET+CT Imaging report"
 * id = "e040e1b2-9f3f-426c-bc5a-7676abae290a"
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
-* code.coding[diagnosis] = #G45.9 "Tranzitorní ischemická ataka (TIA) NS"
+* code.coding[diagnosis] = #G459 "Tranzitorní ischemická ataka (TIA) NS"
 * code.text = "Transitorní ischemická ataka"
 
 Instance: cz-examplepetct-carePlan
@@ -468,8 +468,8 @@ Title: "Medication: PET+CT Imaging report"
 * identifier[+].system = "https://www.nemocnice.cz/sid/medication-id"
 * identifier[=].value = "607852"
 * status = #active
-* code.coding[+] = $dlp_lecivePripravky#0226200 "Fludeoxythymidin"
-* form = $edqm#11201000 "Injekční roztok"
+* code.coding[+] = $dlp_lecivePripravky#0226200 "FLUDEOXYTHYMIDIN (18F) RADIOMEDIC 1-8GBQ INJ SOL 1,25GBQ"
+* form = $edqm#11201000 "Solution for injection"
 
 Instance: cz-examplepetct-observation
 InstanceOf: CZ_ObservationResultImaging

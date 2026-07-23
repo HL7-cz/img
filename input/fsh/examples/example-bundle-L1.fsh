@@ -110,7 +110,7 @@ Usage: #example
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Unavailable</div>"
 * section[imagingstudy]
 * section[imagingstudy].title = "Obrazová studie"
-* section[imagingstudy].code = $loinc#18726-0 "Radiology studies (set)"
+* section[imagingstudy].code = $loinc#18726-0 "zobrazovací studie"
 * section[imagingstudy].entry[0] = Reference(urn:uuid:f5e876ca-1bbe-47a1-9bc5-b725b68a5ef8)
 
 Instance: cz-examplel1-imagingStudy

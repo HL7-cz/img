@@ -104,7 +104,7 @@ Usage: #example
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Note:</b></td><td id=\"note\"><p>Klinická otázka: Trauma skeletu?</p></td></tr></table></div>"
 * section[clinicalQuestion].text.status = #additional
 * section[imagingstudy].title = "Obrazová studie"
-* section[imagingstudy].code = $loinc#18726-0 "Radiology studies (set)"
+* section[imagingstudy].code = $loinc#18726-0 "zobrazovací studie"
 * section[imagingstudy].entry[0] = Reference(urn:uuid:fc79917b-b1b0-44a6-beaa-e9715322c834)
 * section[procedure].title = "Procedura"
 * section[procedure].code = $loinc#55111-9 "Current imaging procedure descriptions Document"
@@ -270,7 +270,7 @@ Description: "Reason For Admission of RTG Imaging report"
 Title: "Condition - Reason For Admission: RTG Imaging report"
 * id = "e20f7fc3-0237-496a-a57a-18acac3776df"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
-* code.coding = $mkn-10#S01.8 "Otevřená rána jiných částí hlavy"
+* code.coding = $mkn-10#S018 "Otevřená rána jiných částí hlavy"
 * code.text = "vyskočil z okna, pád ze 3 metrů na nohy (na hlavě jen exkoriace), v bezvědomí nebyl, kulhá, z hlavy mu teče krev, stěžuje si na bolest dolní části zad."
 
 Instance: cz-examplertg-device
@@ -338,8 +338,8 @@ Description: "Diagnosis for RTG Imaging report"
 Title: "Condition - Diagnosis: RTG Imaging report"
 * id = "96b5af8a-9127-45fd-b549-ab79f5c56a41"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
-* code.coding[diagnosis] = #T09.3 "Poranění míchy‚ úroveň neurčena"
-* code.text = "Poranění míchy‚ úroveň neurčena"
+* code.coding[diagnosis] = #T093 "Poranění míchy, úroveň neurčena"
+* code.text = "Poranění míchy, úroveň neurčena"
 
 Instance: cz-examplertg-procedure
 InstanceOf: CZ_ProcedureImaging

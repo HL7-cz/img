@@ -153,7 +153,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^short = "Imaging Study"
   * ^definition = "This section holds information related to the imaging studies covered by this report."
   // * title = "Imaging Studies"
-  * code = $loinc#18726-0 //"Radiology studies (set)"
+  * code = $loinc#18726-0
   * extension contains $note-url named note 0..*
   * entry
     * insert SliceElement( #profile, $this )

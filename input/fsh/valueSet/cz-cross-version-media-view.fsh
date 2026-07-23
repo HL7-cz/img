@@ -5,4 +5,4 @@ Description: "Codes defined in SNOMED CT that can be used to record Media Record
 * insert SNOMEDCopyrightForVS
 * ^experimental = false
 * ^version = "4.0.1"
-* include codes from system $sct where concept is-a #260419006
+* include codes from system $sctCZ where concept is-a #260419006

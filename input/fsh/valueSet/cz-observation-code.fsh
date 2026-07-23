@@ -11,5 +11,5 @@ Description: "This value set includes all observation procedure code from SNOMED
 * ^url = "https://ncez.mzcr.cz/terminology/ValueSet/imaging-observationCode-cz"
 
 * insert SNOMEDCopyrightForVS
-* include codes from system $sct where concept descendent-of #363679005
-* include codes from system $sct where concept descendent-of #363787002 
+* include codes from system $sctCZ where concept descendent-of #363679005
+* include codes from system $sctCZ where concept descendent-of #363787002 

@@ -61,7 +61,7 @@ Usage: #example
 * language = #cs
 * type = $loinc#24686-8
 * category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
-* category[document-category] = $loinc#18726-0
+* category[imaging-report] = $loinc#85430-7
 * extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:8a4c6711-6192-4519-a085-77fcf36d81c3)
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"cs\" xml:lang=\"cs\"><h2>Imaging Report - Rentgen Ing. Králíka</h2><p>RTG pacienta Ing. Králíka v L1 úrovni</p></div>"
@@ -236,7 +236,6 @@ Title: "Diagnostic report: L1 Imaging report"
   * value = "o32u4js8492ff" // invented - not there in the report*
 * extension[composition].valueReference = Reference(urn:uuid:6390b57a-0fe7-488b-b948-eda546875bc0)
 * category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
-* category[document-category] = $loinc#18726-0
 * category[imaging] = http://hl7.eu/fhir/health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
 * category[imaging-report] = $loinc#85430-7
 * status = #final

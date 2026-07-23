@@ -21,7 +21,7 @@ Description: "Order information for the scope of the Czech national interoperabi
 * category 1..*
   * insert SliceElement( #value, $this )
 * category contains imaging 1..1
-* category[imaging] = $sct#363679005 // "Imaging"
+* category[imaging] = $sctCZ#363679005 // "Imaging"
 
 * authoredOn 1..
 * occurrenceDateTime

@@ -129,7 +129,7 @@ Usage: #example
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Note:</b></td><td id=\"note\"><p>Klinická otázka: Recidiva?</p></td></tr></table></div>"
   * entry[0] = Reference(urn:uuid:9ee22843-2526-436f-bf66-3f9874869c08)
 * section[imagingstudy].title = "Zobrazovací studie"
-* section[imagingstudy].code = $loinc#18726-0 "zobrazovací studie"
+* section[imagingstudy].code = $loinc#18726-0 "Radiology studies (set)"
 * section[imagingstudy].entry[0] = Reference(urn:uuid:e132f687-df35-4174-91bd-fe74cda5ac5d)
 * section[procedure].title = "Procedura"
 * section[procedure].code = $loinc#55111-9 "Current imaging procedure descriptions Document"
@@ -316,7 +316,7 @@ Usage: #example
 * id = "9f79ad8f-056e-4931-ae19-810064de607b"
 * status = #final
 * effectiveDateTime = "2023-06-01"
-* code = $loinc#29463-7 "tělesná hmotnost"
+* code = $loinc#29463-7 "Body weight"
 * category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 * subject =  Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * performer = Reference(urn:uuid:792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0)
@@ -334,7 +334,7 @@ Usage: #example
 * id = "40fb226b-e11f-4d02-aa30-97ba51ab4ff6"
 * status = #final
 * effectiveDateTime = "2023-06-01"
-* code = $loinc#8302-2 "tělesná výška"
+* code = $loinc#8302-2 "Body height"
 * category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 * subject =  Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * performer = Reference(urn:uuid:792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0)
@@ -469,7 +469,7 @@ Title: "Medication: PET+CT Imaging report"
 * identifier[=].value = "607852"
 * status = #active
 * code.coding[+] = $dlp_lecivePripravky#0226200 "FLUDEOXYTHYMIDIN (18F) RADIOMEDIC 1-8GBQ INJ SOL 1,25GBQ"
-* form = $edqm#11201000 "Injekční roztok"
+* form = $edqm#11201000 "Solution for injection"
 
 Instance: cz-examplepetct-observation
 InstanceOf: CZ_ObservationResultImaging

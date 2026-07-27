@@ -104,7 +104,7 @@ Usage: #example
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Note:</b></td><td id=\"note\"><p>Klinická otázka: Trauma skeletu?</p></td></tr></table></div>"
 * section[clinicalQuestion].text.status = #additional
 * section[imagingstudy].title = "Obrazová studie"
-* section[imagingstudy].code = $loinc#18726-0 "zobrazovací studie"
+* section[imagingstudy].code = $loinc#18726-0 "Radiology studies (set)"
 * section[imagingstudy].entry[0] = Reference(urn:uuid:fc79917b-b1b0-44a6-beaa-e9715322c834)
 * section[procedure].title = "Procedura"
 * section[procedure].code = $loinc#55111-9 "Current imaging procedure descriptions Document"

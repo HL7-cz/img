@@ -11,6 +11,6 @@ Description: "This value set includes all observation valuecodeable concept from
 * ^url = "https://ncez.mzcr.cz/terminology/ValueSet/imaging-observationValue-cz"
 
 * insert SNOMEDCopyrightForVS
-* include codes from system $sctCZ where concept descendent-of #404684003
-* include codes from system $sctCZ where concept descendent-of #410607006 
-* include codes from system $sctCZ where concept descendent-of #260787004
+* include codes from system $sct where concept descendent-of #404684003
+* include codes from system $sct where concept descendent-of #410607006 
+* include codes from system $sct where concept descendent-of #260787004

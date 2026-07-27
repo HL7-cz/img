@@ -1,7 +1,6 @@
 //============== ALIAS ===============
 // Code systems
-Alias: $sct =  http://snomed.info/sct
-Alias: $sctCZ = http://snomed.info/sct|http://snomed.info/sct/11000279109/version/20260618
+Alias: $sct = http://snomed.info/sct
 Alias: $orpha = https://www.orpha.net
 Alias: $loinc =  http://loinc.org
 Alias: $iso3166 = urn:iso:std:iso:3166

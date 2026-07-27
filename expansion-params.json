@@ -3,8 +3,16 @@
   "id": "expansion-params",
   "parameter": [
     {
+      "name": "displayLanguage",
+      "valueCode": "cs"
+    },
+    {
+      "name": "includeDesignations",
+      "valueBoolean": true
+    },
+    {
       "name": "system-version",
-      "valueUri": "http://snomed.info/sct|http://snomed.info/sct/11000279109/version/20260618"
+      "valueUri": "http://snomed.info/sct|http://snomed.info/sct/11000279109"
     }
   ]
 }

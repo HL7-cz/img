@@ -201,7 +201,7 @@ Title: "PractitionerRole Testovací"
 Description: "Author of RTG Imaging report"
 Usage: #example
 * id = "aafd64f9-36ab-4583-8088-efb93b44db9b"
-* specialty = $sctCZ#394914008 "Radiology"
+* specialty = $sct#394914008 "Radiology"
 * practitioner = Reference(urn:uuid:0b00169f-4815-41da-9814-cd3d7504344d)
 * organization = Reference(urn:uuid:e96e9bd5-0695-4725-acb2-c731aa071a55)
 
@@ -246,18 +246,18 @@ Description: "Imaging order for Plain X-ray"
 * id = "d6784779-d008-447d-90cf-89d5d53a0f04"
 * status = #active
 * intent = #order
-* category[imaging] = $sctCZ#363679005
+* category[imaging] = $sct#363679005
 * performer = Reference(urn:uuid:03903bc5-4ca0-4c55-8e4a-b256da9f788d)
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * insurance = Reference(urn:uuid:6a2b30b1-4ba7-4a24-adcf-beefa0eface1)
-* bodySite = $sctCZ#6757004 "Right knee"
-* bodySite = $sctCZ#62175007 "Right leg"
-* bodySite = $sctCZ#731788002 "LS Spine"
-* bodySite = $sctCZ#737406006 "Right talus"
-* bodySite = $sctCZ#12921003 "Pelvis"
-* bodySite = $sctCZ#287579007 "Right hip"
-* bodySite = $sctCZ#287679003 "Left hip"
-* code.coding = $sctCZ#168537006 "Plain X-ray"
+* bodySite = $sct#6757004 "Right knee"
+* bodySite = $sct#62175007 "Right leg"
+* bodySite = $sct#731788002 "LS Spine"
+* bodySite = $sct#737406006 "Right talus"
+* bodySite = $sct#12921003 "Pelvis"
+* bodySite = $sct#287579007 "Right hip"
+* bodySite = $sct#287679003 "levá kyčelní krajina"
+* code.coding = $sct#168537006 "rentgenový snímek"
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">RTG Požadované vyšetření: LS páteř, Noha pravá, Hlezno pravé, Pánev, Koleno pravé, Kyčel levý, Kyčel pravý</div>"
 * authoredOn = "2025-05-20T12:02:00+01:00"
@@ -279,7 +279,7 @@ Usage: #example
 Description: "Radiographic imaging device used in RTG Imaging report"
 Title: "Device - Radiographic unit: RTG Imaging report"
 * id = "03903bc5-4ca0-4c55-8e4a-b256da9f788d"
-* type = $sctCZ#68080007 "Radiographic unit"
+* type = $sct#68080007 "radiografická jednotka"
 
 Instance: cz-examplertg-coverage
 InstanceOf: CZ_Coverage
@@ -327,7 +327,7 @@ Title: "Observation: RTG Imaging report"
 * status = #final
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * performer = Reference(urn:uuid:aafd64f9-36ab-4583-8088-efb93b44db9b)
-* code = $sctCZ#715959009 //"Imaging of pelvis"
+* code = $sct#715959009 //"Imaging of pelvis"
 * valueString = "Bez nálezu."
 * effectiveDateTime = "2025-10-06T09:10:00+01:00"
 
@@ -348,7 +348,7 @@ Description: "Procedure of RTG Imaging report"
 Title: "Procedure: RTG Imaging report"
 * meta.profile[0] = "https://hl7.cz/fhir/img/StructureDefinition/cz-procedure-imaging"
 * id = "ea2967a5-0d00-461c-8785-b5affef4791c"
-* code.coding = $sctCZ#168537006 "Plain X-ray"
+* code.coding = $sct#168537006 "rentgenový snímek"
 * status = #completed
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * reasonReference = Reference (urn:uuid:96b5af8a-9127-45fd-b549-ab79f5c56a41)

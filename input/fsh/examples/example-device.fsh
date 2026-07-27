@@ -4,4 +4,4 @@ Usage: #example
 Title: "Device - MR"
 Description: "Magnetic Resonance device"
 
-* type = $sctCZ#90003000 "Magnetic resonance imaging unit"
+* type = $sct#90003000 "jednotka magnetické rezonance"

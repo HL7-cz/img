@@ -35,7 +35,7 @@ Description: "This profile on Procedure represents the imaging procedure for the
     * coding
       * insert SliceElement( #value, "$this" )
     * coding contains healthcare-professional 0..1
-    * coding[healthcare-professional] = $sct#223366009 "Healthcare professional" // TODO check this code
+    * coding[healthcare-professional] = $sct#223366009 "Healthcare professional"
   * actor only Reference(CZ_PractitionerRoleCore)
   * onBehalfOf only Reference(CZ_OrganizationCore)
 * performer[imaging-device]
@@ -43,7 +43,7 @@ Description: "This profile on Procedure represents the imaging procedure for the
     * coding
       * insert SliceElement( #value, "$this" )
     * coding contains imaging-equipment 0..1
-    * coding[imaging-equipment] = $sct#314789007 "Diagnostic imaging equipment" // TODO check this code
+    * coding[imaging-equipment] = $sct#314789007 "diagnostický zobrazovací přístroj"
   * actor only Reference(CZ_DeviceObserver or CZ_MedicalDevice)
   * onBehalfOf only Reference(CZ_OrganizationCore)
 

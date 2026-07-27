@@ -9,12 +9,20 @@ A definition could not be found for Canonical URL 'https://terminology.ncez.mzcr
 A definition could not be found for Canonical URL 'http://www.rsna.org/RadLex_Playbook.aspx'
 
 # URL does not resolve
-No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/krzp'
-No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/cpoj'
-No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/rid'
-No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/rcis'
+URL value 'https://hl7europe.org/example-identifier' does not resolve
+URL value 'https://ncez.mzcr.cz/fhir/sid/krzp' does not resolve
+URL value 'https://ncez.mzcr.cz/fhir/sid/cpoj' does not resolve
+URL value 'https://ncez.mzcr.cz/fhir/sid/rid' does not resolve
+URL value 'https://ncez.mzcr.cz/fhir/sid/rcis' does not resolve
+URL value 'https://ncez.mzcr.cz/fhir/sid/kp' does not resolve
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/ico'
 No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/kp'
-No definition could be found for URL value '/viewer/KOS.dcm'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/rcis'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/rid'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/krzp'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/ruian'
+No definition could be found for URL value 'https://ncez.mzcr.cz/fhir/sid/cpoj'
+No definition could be found for URL value 'https://hl7.cz/fhir/sid/idcard-CZE'
 
 # Due to time constraints, examples could not generated for all resources
 %The Implementation Guide contains no examples for this profile
@@ -50,3 +58,10 @@ MSG_DEPENDS_ON_DEPRECATED
 
 # The display in the ValueSet does not match with any known display
 VALUESET_CODE_CONCEPT_HINT
+
+# Tooling Errors
+# ERROR: ImplementationGuide/hl7.fhir.cz.core: ImplementationGuide.definition.extension[35].url: No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
+WARNING: 5: The HTML fragment 'expansion-params.xhtml' is not included anywhere in the produced implementation guide
+
+# Missing ISO3166 Czech designations of the country codes on tx servers
+%There are no valid display names found for the code urn:iso:std:iso:3166%

@@ -4,7 +4,7 @@ Id: cz-bodyweight
 Title: "Body Weight: Imaging Order (CZ)"
 Description: "Profile of body weight for the scope of the Czech national interoperability project."
 * subject
-* code.coding[LOINC] = $loinc#29463-7 //Body weight
+//* code.coding[LOINC] = $loinc#29463-7 //Body weight
 * code.coding[SNOMEDCT].code = #27113001 (exactly)
 * code.coding[SNOMEDCT].system = $sct (exactly)
 * code.coding[NCLP] = $nclp#20042

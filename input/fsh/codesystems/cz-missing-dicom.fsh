@@ -6,8 +6,9 @@ Description: "Code system for codes that are defined in DICOM but for which no m
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
 * ^content = #fragment
+* ^url = "http://hl7.eu/fhir/imaging/CodeSystem/codesystem-missing-dicom-terminology"
 
-* #elements "DICOM Elements" "DICOM Element definitions"	
+* #elements "DICOM Elements" "DICOM Element definitions"
   * #00080016 "SOP Class UID" "Uniquely identifies the SOP Class."
   * #00080018 "SOP Instance UID" "Uniquely identifies the SOP Instance."
   * #00080060 "Modality" "Type of device, process or method that originally acquired or produced the data used to create the Instances in this Series."

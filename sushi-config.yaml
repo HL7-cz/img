@@ -9,11 +9,11 @@ name: HL7CzImagingReportImplementationGuide
 title: HL7 Czech Imaging Report IG
 description: Czech Imaging Report Implementation Guide
 status: draft # draft | active | retired | unknown
-version: 0.1.0-ballot
+version: 1.0.0
 language: cs
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
-releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: trial-use # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 jurisdiction: urn:iso:std:iso:3166#CZ "Czechia" # https://www.hl7.org/fhir/valueset-jurisdiction.html
@@ -36,7 +36,7 @@ publisher:
 #     version: 1.0.0
 dependencies:
 # czech dependencies
-  hl7.fhir.cz.core: current
+  hl7.fhir.cz.core: 1.0.0
 # eu dependencies
   hl7.fhir.eu.base: 2.0.0
   hl7.fhir.eu.laboratory: 2.0.0
@@ -45,6 +45,7 @@ dependencies:
   hl7.fhir.eu.imaging: 1.0.0-ballot
   hl7.fhir.uv.extensions.r4: 5.3.0
   hl7.fhir.uv.xver-r5.r4: 0.0.1-snapshot-2
+  #hl7.fhir.uv.xver-r5.r4: 0.1.0
   hl7.fhir.uv.ips: 2.0.0
   fhir.dicom:
     id: DICOM
@@ -161,13 +162,16 @@ pages:
 #
 parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   special-url:
-    - https://ncez.mzcr.cz/terminology/ValueSet/imaging-observationCode-cz
-    - https://ncez.mzcr.cz/terminology/ValueSet/imaging-observationValue-cz
-    - https://ncez.mzcr.cz/terminology/ValueSet/imaging-procedure-cz
-    - https://ncez.mzcr.cz/terminology/ValueSet/cz-modality
+    - https://ncez.mzcr.cz/terminology/ValueSet/imaging-observationCode-vs
+    - https://ncez.mzcr.cz/terminology/ValueSet/imaging-observationValue-vs
+    - https://ncez.mzcr.cz/terminology/ValueSet/imaging-procedure-vs
+    - https://ncez.mzcr.cz/terminology/ValueSet/modality-vs
     - https://ncez.mzcr.cz/terminology/ValueSet/observationUnitsHeight-cz
     - https://ncez.mzcr.cz/terminology/ValueSet/observationUnitsWeight-cz
     - https://ncez.mzcr.cz/terminology/ValueSet/participationType-cz
+    - https://ncez.mzcr.cz/terminology/ValueSet/anatomical-region
+    - https://ncez.mzcr.cz/terminology/ValueSet/media-view
+    - http://hl7.eu/fhir/imaging/CodeSystem/codesystem-missing-dicom-terminology
 
   path-expansion-params: '../../expansion-params.json' # for using SNOMED CT Czech Extension
 # path-resource:
@@ -184,7 +188,7 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 #  generate-turtle:
 #  html-template:
 #  active-tables: false
-#  pin-canonicals: pin-multiples
+  pin-canonicals: pin-multiples
   default-contact: true
   default-copyright: true
   apply-copyright: false

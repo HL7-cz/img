@@ -1,5 +1,5 @@
 ValueSet: CZ_ImagingObservationValueVs
-Id: cz-imaging-observationValue-vs
+Id: imaging-observationValue-vs
 Title: "Czech Imaging Observation value codeable concept"
 Description: "This value set includes all observation valuecodeable concept from SNOMED CT."
 * ^language = #cs
@@ -8,9 +8,9 @@ Description: "This value set includes all observation valuecodeable concept from
 * ^date = "2024-01-01"
 * ^publisher = "NCEZ"
 * ^experimental = false
-* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/imaging-observationValue-cz"
+* ^url = "https://ncez.mzcr.cz/terminology/ValueSet/imaging-observationValue-vs"
 
 * insert SNOMEDCopyrightForVS
 * include codes from system $sct where concept descendent-of #404684003
-* include codes from system $sct where concept descendent-of #410607006 
+* include codes from system $sct where concept descendent-of #410607006
 * include codes from system $sct where concept descendent-of #260787004

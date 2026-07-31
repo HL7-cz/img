@@ -1,5 +1,5 @@
 Profile: CZ_DiagnosticReport
-Parent: DiagnosticReport
+Parent: CZ_DiagnosticReportCore
 Id: cz-diagnostic-report
 Title: "Diagnostic Report: Imaging Report (CZ)"
 Description: "Diagnostic Report used to represent an entry of a Imaging Report, including its context, for the scope of the Czech national interoperability project."
@@ -8,12 +8,13 @@ Description: "Diagnostic Report used to represent an entry of a Imaging Report, 
 * . ^short = "Imaging Report DiagnosticReport"
 * . ^definition = "Imaging Report DiagnosticReport"
 
+* insert ImposeProfile($DiagnosticReport-eu-img,0)
 * extension contains $artifact-version-url named artifactVersion 0..1
 * extension contains CZ_AnatomicalRegionExtension named anatomical-region 0..*
-* extension[anatomical-region] ^short = "The anatomical regions covered by the study this report reports on."
+* extension[anatomical-region] ^short = "The anatomical regions covered by the study this report reports on." // this extension is useful, as it allows to sumarise all anatomic regions covered by the report, it also serves as a fall back for situations when imaging study resources are not included in the report
 * extension[anatomical-region] ^definition = """
-The anatomical regions covered by the report, depending on the study there can be zero, one or more regions. 
-The regions SHALL overlap with the bodysite references from `ImagingStudy.serie.bodysite`, if present.
+The anatomical regions covered by the report, depending on the study there can be zero, one or more regions.
+The regions SHALL overlap with the ImagingStudy anatomica-region extension and references from `ImagingStudy.serie.bodysite`, if present.
 """
 * extension[anatomical-region] ^requirements = "This field is present in order to be able to populate the MHD DocumentReference field."
 
@@ -25,14 +26,14 @@ The regions SHALL overlap with the bodysite references from `ImagingStudy.serie.
 
 * status
   * ^short = "Status of the Report"
-  * ^comment = "DiagnosticReport.status and Composition.status shall be aligned"
+//  * ^comment = "DiagnosticReport.status and Composition.status shall be aligned"
 
 * basedOn
   * insert SliceElement( #exists, identifier )
 * basedOn contains
     order-resource 0..* and
     order-identifier 0..*
-* basedOn[order-resource] only Reference(CZ_ImagingServiceRequest)
+* basedOn[order-resource] only Reference(CZ_ImagingServiceRequest or CZ_CarePlanCore)
 * basedOn[order-resource].reference 1..1
 * basedOn[order-resource].identifier 0..0
 * basedOn[order-identifier].reference 0..0
@@ -44,9 +45,9 @@ The regions SHALL overlap with the bodysite references from `ImagingStudy.serie.
   * insert SliceElement( #value, $this )
 * category contains
   diagnostic-service 0..1 and
-  imaging-report 1..1 and 
+  imaging-report 1..1 and
   imaging 1..1
-* category[diagnostic-service] from $diagnostic-service-sections (required)
+* category[diagnostic-service] from $diagnostic-service-sections (required)  // TODO: Create a meaningful Czech national value set
 * category[imaging] = http://hl7.eu/fhir/health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
   * ^definition = "Defines the priority category of the report as defined in the API spec."
 * category[imaging-report] = $loinc#85430-7 //Diagnostic imaging report
@@ -56,17 +57,21 @@ The regions SHALL overlap with the bodysite references from `ImagingStudy.serie.
 * code from $ImagingDocumentTypes (required)
 
 * subject 1..
-* subject only Reference(CZ_PatientCore or Patient or Group or Location or CZ_DeviceObserver or CZ_MedicalDevice)
-
-* encounter only Reference(CZ_Encounter) // profile defined for other scopes to be checked
-* effective[x] ^short = "Clinically relevant time/time-period for report."
-* performer only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CareTeam)
-* performer ^short = "Responsible Diagnostic Service." // add reference to the used profiles
-* resultsInterpreter only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CareTeam)
-* specimen only Reference(CZ_Specimen)
-* specimen ^short = "Specimens this report is based on." // add reference to the used profile
+// From CZ_DiagnosticReportCore
+//* subject only Reference(CZ_PatientCore or Group or Location or CZ_DeviceObserver or CZ_MedicalDevice)
+* encounter only Reference(CZ_Encounter) // missing in cz-core 1.0.0
+//* effective[x] ^short = "Clinically relevant time/time-period for report."
+// * performer only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CareTeam)
+* performer ^short = "Responsible Diagnostic Service."
+//* resultsInterpreter only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CareTeam)
+//* specimen only Reference(CZ_Specimen)
+//* specimen ^short = "Specimens this report is based on." // add reference to the used profile
 * result only Reference(CZ_ObservationResultImaging)
-* result ^short = "results" // add reference to the used profiles
+* result ^short = "Findings" // add reference to the used profiles
+* result ^definition = """
+Detailed description of the findings on the imaging study. The findings should be described in a clear and concise manner,
+using standardized anatomic, pathologic, and radiologic terminology whenever possible.
+"""
 * imagingStudy
   * insert SliceElement( #exists, identifier )
 * imagingStudy contains
@@ -81,7 +86,7 @@ The regions SHALL overlap with the bodysite references from `ImagingStudy.serie.
 * presentedForm 1..*
 * obeys presentedform-01
 
-* extension contains HL7IDRComparisonStudiesExt named comparison 0..* MS
+/* * extension contains HL7IDRComparisonStudiesExt named comparison 0..* MS
 * extension[comparison] ^short = "Comparison studies"
 * extension[comparison] ^definition = """
 Studies used for comparison in part of diagnostic reporting.
@@ -125,11 +130,14 @@ Recommendations a radiologist provides in the report for possible follow up acti
 * extension[communication] ^definition = """
 Communications captures what communications have been made with other care providers.
 """
-* extension contains RadiationDoseExt named radiationDose 0..1 MS
+ */
 
-* extension contains $information-recipient-url  named informationRecipient 0..* and $cvDiagnosticReport-composition named composition 1..1
-* extension[composition] ^short = "Imaging Diagnostic Report"
-* extension[composition].valueReference only Reference(CZ_CompositionImagingReport)
+//* extension contains RadiationDoseExt named radiationDose 0..1 MS
+
+// In CZ_DiagnosticReportCore
+// * extension contains $information-recipient-url  named informationRecipient 0..* and $cvDiagnosticReport-composition named composition 1..1
+// * extension[composition] ^short = "Imaging Diagnostic Report"
+// * extension[composition].valueReference only Reference(CZ_CompositionImagingReport)
 
 // We have changed these and they now deviate from IDR as they also need to include the notes related to those sections.
 // * obeys hl7eu-im-dr-code

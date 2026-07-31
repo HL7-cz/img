@@ -1,22 +1,22 @@
 Profile: CZ_ConditionImage
-Parent: Condition
+Parent: CZ_ConditionCore
 Id: cz-conditionImage
 Title: "Condition: Imaging Report (CZ)"
 Description: "Condition for Imaging Report for the scope of the Czech national interoperability project."
 
 * identifier
 * subject
-* subject only Reference(CZ_PatientCore or Group)
+* subject only Reference(CZ_PatientCore)
 * category from $hl7-condition-category
 * code MS
 * code.coding ^slicing.discriminator[0].type = #value
 * code.coding ^slicing.discriminator[0].path = "system"
 * code.coding ^slicing.rules = #open
-* code.coding contains 
-    diagnosis 0..1 and 
-    condition 0..1 
+* code.coding contains
+    diagnosis 0..1 and
+    condition 0..1
 * code.coding[diagnosis] from $mkn-10-problem-list
-* code.coding[diagnosis].system = $mkn-10 
+* code.coding[diagnosis].system = $mkn-10
 * code.coding[condition] from $sct-condition-code
 * code.coding[condition].system = "http://snomed.info/sct" (exactly)
 

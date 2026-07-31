@@ -1,6 +1,6 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile: CZ_CompositionImagingReport
-Parent: Composition
+Parent: CZ_CompositionCore
 Id: cz-composition-imaging
 //Id: composition-cz-imaging
 Title: "Composition: Imaging Report (CZ)"
@@ -28,19 +28,19 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^comment = "Composition.identifier SHALL be equal to one of the DiagnosticReport.identifier, if at least one exists"
 
 * extension contains
-    $event-basedOn-url          named basedOn 0..* and
-    $information-recipient-url  named informationRecipient 0..* and
-    $hl7euDiagnosticReference   named diagnosticreport-reference 0..1
+    $event-basedOn-url          named basedOn 0..* // and
+    // $information-recipient-url  named informationRecipient 0..* and
+    // $hl7euDiagnosticReference   named diagnosticreport-reference 0..1
 
-* extension[basedOn].valueReference only Reference(CZ_ImagingServiceRequest)
-* extension[diagnosticreport-reference].valueReference only Reference(CZ_DiagnosticReport)
-* extension[informationRecipient].valueReference only Reference(CZ_PractitionerCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_PractitionerRoleCore or CZ_OrganizationCore)
+* extension[basedOn].valueReference only Reference(CZ_ImagingServiceRequest or CZ_CarePlanImage)
+// * extension[diagnosticReport].valueReference only Reference(CZ_DiagnosticReport)
+// * extension[informationRecipient].valueReference only Reference(CZ_PractitionerCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_PractitionerRoleCore or CZ_OrganizationCore)
 
-* extension contains $CrossVersion-Composition.version named version 0..1
+//* extension contains $CrossVersion-Composition.version named version 0..1
 
 * status
-  * ^short = "Status of the Report"
-  * ^comment = "DiagnosticReport.status and Composition.status shall be aligned"
+  // * ^short = "Status of the Report"
+  // * ^comment = "DiagnosticReport.status and Composition.status shall be aligned"
 
 * event.code
   * ^slicing.discriminator.type = #value
@@ -58,8 +58,8 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^short = "Study Type"
   * ^definition = "The type of imaging study performed."
 
-* subject 1..1 MS
-* subject only Reference(CZ_PatientCore)
+//* subject 1..1 MS
+//* subject only Reference(CZ_PatientCore)
 
 * custodian only Reference(CZ_OrganizationCore)
   * ^short = "Organization that manages the Imaging Report"
@@ -83,7 +83,7 @@ The `text` field of each section SHALL contain a textual representation of all l
 //  * party only Reference(CZ_PatientCore or CZ_RelatedPersonCore or CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore)
 
 * attester contains
-    legalAuthenticator 0..* and
+//     legalAuthenticator 0..* and
     resultValidator 0..*
 * attester[legalAuthenticator]
   * mode 1..1
@@ -94,6 +94,8 @@ The `text` field of each section SHALL contain a textual representation of all l
   * mode 1..1
   * mode = http://hl7.org/fhir/composition-attestation-mode#professional
   * party only Reference(CZ_PractitionerRoleCore)
+  // This extension is included in EU-imaging profile however does not fit our requirements
+  //* party.extension contains DeviceAttesterExt named deviceAttester 0..1
   * time 1..1
 
 * type from $ImagingDocumentTypes (preferred)
@@ -103,7 +105,7 @@ The `text` field of each section SHALL contain a textual representation of all l
   * insert SliceElement( #value, $this )
 * category contains
   diagnostic-service 0..1 and
-  imaging-report 1..1 and 
+  imaging-report 1..1 and
   imaging 1..1
 * category[diagnostic-service] from $diagnostic-service-sections (required)
 * category[imaging] = http://hl7.eu/fhir/health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
@@ -115,12 +117,26 @@ The `text` field of each section SHALL contain a textual representation of all l
 * encounter only Reference(CZ_Encounter)
   * ^short = "Context that defines the Image Report"
 
-* date MS
+* date //MS
   * ^short = "Date the report was last changed."
 
-* confidentiality 1..1
-* language 1..1
-* title 1..1
+// * confidentiality 1..1
+// * language 1..1
+// * title 1..1
+
+// Relationship to a prior report: replacement or retraction (both use replaces).
+// Mirrors the FHIR Clinical Document Composition profile slicing.
+* relatesTo ^slicing.discriminator.type = #value
+* relatesTo ^slicing.discriminator.path = "code"
+//R5* relatesTo ^slicing.discriminator.path = "type"
+* relatesTo ^slicing.rules = #open
+* relatesTo contains replaced_document 0..1
+* relatesTo[replaced_document] ^short = "Prior report this one replaces or retracts"
+* relatesTo[replaced_document].code = #replaces
+* relatesTo[replaced_document].target[x] only Identifier
+* relatesTo[replaced_document].targetIdentifier 1..1
+
+* obeys imaging-comp-status-succession
 
 * section 0..
   * ^short = "Sections of the report"
@@ -130,10 +146,12 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^slicing.ordered = false
 //  * insert SliceElement( #value, "code" )
 
+* section.code 1..1
+
 * section.author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
-
-* obeys text-or-section
-
+* section.emptyReason from SectionEmptyReasonEuImaging (preferred)
+* section obeys eu-imaging-composition-1
+* section obeys eu-imaging-composition-2
 * section contains
     imagingstudy 1..1 and
     order 1..1 and
@@ -202,12 +220,15 @@ The `text` field of each section SHALL contain a textual representation of all l
 ///////////////////////////////// HISTORY SECTION ///////////////////////////////////////
 * section[history]
   * ^short = "History"
-  * ^definition = "This section includes patient history and other prior clinical details deemed relevant to the imaging study by the imaging clinician."
+  * ^definition = """
+  Additional clinical information about the patient or specimen that may affect service delivery or interpretation
+  with information specific for imaging (i.e. Observation, Condition, Device, Medication Administration).
+  """
   * code = $loinc#11329-0 // "History general Narrative - Reported"
   * extension contains $note-url named note 0..*
-  * entry 
+  * entry
     * insert SliceElement( #profile, [[$this.resolve()]] )
-  * entry contains vitals 0..* and problemlist 0..* and implants 0..* and medication 0..* 
+  * entry contains vitals 0..* and problemlist 0..* and implants 0..* and medication 0..*
   * entry[vitals] only Reference(Observation)
   * entry[problemlist] only Reference(Condition)
   * entry[implants] only Reference(Device)
@@ -219,17 +240,17 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^definition = "This section contains information such as the procedure type, the anatomy imaged, the date and time of the imaging examination, and the facility that performed it."
   * code = $loinc#55111-9 //"Current imaging procedure descriptions Document"
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
-  * extension contains 
+  * extension contains
     $note-url named note 0..*
   * entry
     * insert SliceElement( #profile, [[resolve()]] )
-  * entry contains 
-      procedure 0..* and 
-      adverse-event 0..* and 
+  * entry contains
+      procedure 0..* and
+      adverse-event 0..* and
       radiation-dose 0..*
   * entry[procedure] only Reference(CZ_ProcedureImaging)
     * ^short = "The imaging Procedure(s)"
-    * ^definition = "A reference the the procedure(s) in which the imaging study was performed." 
+    * ^definition = "A reference the the procedure(s) in which the imaging study was performed."
   * entry[adverse-event] only Reference(CZ_AdverseEvent)
     * ^short = "AdverseEvent(s)"
     * ^definition = "Possible AdverseEvents that occurred during the procedure."
@@ -303,7 +324,31 @@ The `text` field of each section SHALL contain a textual representation of all l
   * code = $loinc#LP173421-1 // "Report"
   * extension contains $note-url named note 0..*
 
-Invariant: text-or-section
-Description: "A Composition SHALL have either text, at least one section, or both."
-Expression: "text.exists() or section.exists()"
+
+
+/////////////////////// EXTENSIONS //////////////////////////
+
+Extension: DeviceAttesterExt
+Title: "Extension: Device Attester"
+Description: 	"Attester of type Device who validated the document"
+* ^context[+].type = #element
+* ^context[=].expression = "Composition.attester.party"
+* value[x] only Reference(Device)
+
+/////////////////////// INVARIANTS //////////////////////////
+
+Invariant: eu-imaging-composition-1
+Description: "When a section is empty, the emptyReason extension SHALL be present."
 Severity: #error
+Expression: "entry.empty().not() or emptyReason.exists() or section.exists() or extension('http://hl7.org/fhir/StructureDefinition/note').value.text.exists()"
+
+Invariant: eu-imaging-composition-2
+Description: "A section must contain at least one of text, entries, or sub-sections."
+Severity: #error
+Expression: "text.exists() or entry.exists() or section.exists()"
+
+Invariant: imaging-comp-status-succession
+Description: "A Composition that replaces or retracts a prior report SHALL have status final or entered-in-error."
+* severity = #error
+* expression = "relatesTo.where(code = 'replaces').exists() implies status in ('final' | 'entered-in-error')"
+//R5* expression = "relatesTo.where(type = 'replaces').exists() implies status in ('final' | 'entered-in-error')"

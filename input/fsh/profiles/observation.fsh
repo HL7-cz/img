@@ -1,5 +1,5 @@
 Profile: CZ_ObservationImage
-Parent: Observation
+Parent: CZ_MedicalTestResultCore
 Id: cz-observationImage
 Title: "Observation: Imaging Order (CZ)"
 Description: "Observation for Imaging Order for the scope of the Czech national interoperability project."
@@ -13,15 +13,15 @@ Description: "Observation for Imaging Order for the scope of the Czech national 
   * ^slicing.discriminator.path = "system"
   * ^slicing.rules = #open
 * code.coding contains
-    LOINC 0..1 and
+    //LOINC 0..1 and
     SNOMEDCT 0..1 and
     NCLP 0..1
  // NCLP OR NPU 0..1 and
-* code.coding[LOINC] 
-  * ^short = "LOINC code for the observation"
-  * system 1..
-  * system = "http://loinc.org" (exactly)
-  * code 1..
+// * code.coding[LOINC]
+//   * ^short = "LOINC code for the observation"
+//   * system 1..
+//   * system = "http://loinc.org" (exactly)
+//   * code 1..
 * code.coding[SNOMEDCT]
   * ^short = "SNOMED CT code for the observation"
   * system 1..

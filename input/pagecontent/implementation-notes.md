@@ -1,7 +1,7 @@
 
 On the following page, you will find notes on implementing the image report. They concern the creation of a bundle, its composition, and filling these profiles with the relevant data.
 
-### Contents overview 
+### Contents overview
 
 ```mermaid
 classDiagram
@@ -24,10 +24,10 @@ classDiagram
   CZ_BundleImagingReport *-- "0..*" CZ_CarePlanImage
 
   CZ_DiagnosticReport --> CZ_CompositionImagingReport: composition
-  
 
-  CZ_CompositionImagingReport --> CZ_ImagingServiceRequest: extension[basedOn]  
-  CZ_CompositionImagingReport --> CZ_DiagnosticReport: extension[diagnosticreport-reference]
+
+  CZ_CompositionImagingReport --> CZ_ImagingServiceRequest: extension[basedOn]
+  CZ_CompositionImagingReport --> CZ_DiagnosticReport: extension[diagnosticReport]
   CZ_CompositionImagingReport --> CZ_Practioner: author[author]
   CZ_CompositionImagingReport --> CZ_DeviceObserver: author[authoring-device]
   CZ_CompositionImagingReport --> CZ_Practioner: attester[legalAuthenticator]

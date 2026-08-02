@@ -62,7 +62,7 @@ Usage: #example
 * type = $loinc#24686-8
 * category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
 * category[imaging-report] = $loinc#85430-7
-* extension[diagnosticreport-reference].valueReference = Reference(urn:uuid:8a4c6711-6192-4519-a085-77fcf36d81c3)
+* extension[diagnosticReport].valueReference = Reference(urn:uuid:8a4c6711-6192-4519-a085-77fcf36d81c3)
 * text.status = #additional
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"cs\" xml:lang=\"cs\"><h2>Imaging Report - Rentgen Ing. Králíka</h2><p>RTG pacienta Ing. Králíka v L1 úrovni</p></div>"
 * section[history]
@@ -108,7 +108,9 @@ Usage: #example
   * emptyReason = http://terminology.hl7.org/CodeSystem/list-empty-reason#unavailable "Unavailable"
   * text.status = #generated
   * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Unavailable</div>"
-* section[imagingstudy]
+* section[imagingstudy].text
+  * status = #additional
+  * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"cs\" xml:lang=\"cs\"><p>Souhrnný popis obrazové studie</p></div>"
 * section[imagingstudy].title = "Obrazová studie"
 * section[imagingstudy].code = $loinc#18726-0 "Radiology studies (set)"
 * section[imagingstudy].entry[0] = Reference(urn:uuid:f5e876ca-1bbe-47a1-9bc5-b725b68a5ef8)
@@ -234,7 +236,7 @@ Title: "Diagnostic report: L1 Imaging report"
 * identifier
   * system = "http://example.org/myhospital/reportidentifiers"
   * value = "o32u4js8492ff" // invented - not there in the report*
-* extension[composition].valueReference = Reference(urn:uuid:6390b57a-0fe7-488b-b948-eda546875bc0)
+* extension[DiagnosticReportCompositionR5].valueReference = Reference(urn:uuid:6390b57a-0fe7-488b-b948-eda546875bc0)
 * category[diagnostic-service] = $hl7-diagnostic-service-sections#RAD
 * category[imaging] = http://hl7.eu/fhir/health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
 * category[imaging-report] = $loinc#85430-7

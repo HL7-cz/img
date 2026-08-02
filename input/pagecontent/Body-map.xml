@@ -742,9 +742,9 @@
             <td>A.2.4.8 - Examination report</td>
             <td>related-to</td>
             <td>cz-diagnostic-report</td>
-            <td>Composition.extension[diagnosticreport-reference]</td>
+            <td>Composition.extension[diagnosticReport]</td>
             <td></td>
-            <td>Composition.extension[diagnosticreport-reference].ofType(CZ_DiagnosticReport)</td>
+            <td>Composition.extension[diagnosticReport].ofType(CZ_DiagnosticReport)</td>
           </tr>          <tr>
             <td>examinationReport.narrativeText</td>
             <td>A.2.4.8.1 - Narrative text</td>

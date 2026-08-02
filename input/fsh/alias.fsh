@@ -68,11 +68,12 @@ Alias: $cz-organization-logo              = https://hl7.cz/fhir/core/StructureDe
 Alias: $composition.version-r5            = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version
 Alias: $patient-animal                    = http://hl7.org/fhir/StructureDefinition/patient-animal
 Alias: $hl7euDiagnosticReference          = http://hl7.eu/fhir/extensions/StructureDefinition/composition-diagnosticReportReference
-Alias: $CrossVersion-Composition.version  = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version
+//Alias: $CrossVersion-Composition.version  = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version
 Alias: $textLink                          = http://hl7.org/fhir/StructureDefinition/textLink
 Alias: $note-url                          = http://hl7.org/fhir/StructureDefinition/note
 
 Alias: $CrossVersion-R5-ImagingSelection-for-R4 = http://hl7.org/fhir/4.0/StructureDefinition/R5-ImagingSelection-for-R4
+//Alias: $CrossVersion-R5-ImagingSelection-for-R4 = http://hl7.org/fhir/5.0/StructureDefinition/profile-ImagingSelection
 
 //Alias: $server = http://hl7.cz/fhir/img/actor-server-img
 Alias: $creatorL1 = https://hl7.cz/fhir/core/ActorDefinition/actor-creator-L1
@@ -99,3 +100,7 @@ Alias: $Procedure-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/Proced
 Alias: $AccessionNumberIdentifier-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/AccessionNumberIdentifierEuImaging
 Alias: $StudyInstanceUidIdentifier-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/StudyInstanceUidIdentifierEuImaging
 Alias: $SopInstanceUidIdentifier-eu-img = http://hl7.eu/fhir/imaging/StructureDefinition/SopInstanceUidIdentifierEuImaging
+
+
+// CZ Core profiles
+Alias: $Observation-cz-core = https://hl7.cz/fhir/core/StructureDefinition/medicalTestResult-cz-core

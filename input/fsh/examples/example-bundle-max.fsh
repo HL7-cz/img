@@ -129,7 +129,7 @@ Usage: #example
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Note:</b></td><td id=\"note\"><p>Klinická otázka: Recidiva?</p></td></tr></table></div>"
   * entry[0] = Reference(urn:uuid:9ee22843-2526-436f-bf66-3f9874869c08)
 * section[imagingstudy].title = "Zobrazovací studie"
-* section[imagingstudy].code = $loinc#18726-0 "Radiology studies (set)"
+* section[imagingstudy].code = $loinc#18726-0 
 * section[imagingstudy].text.status = #additional
 * section[imagingstudy].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"cs\" xml:lang=\"cs\"><p>Obrazová studie PET/CT mozku, modalita CT.</p></div>"
 * section[imagingstudy].entry[0] = Reference(urn:uuid:e132f687-df35-4174-91bd-fe74cda5ac5d)

@@ -172,7 +172,6 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^definition = "This section holds information related to the imaging studies covered by this report."
   // * title = "Imaging Studies"
   * code = $loinc#18726-0
-  * extension contains $note-url named note 0..*
   * entry
     * insert SliceElement( #profile, $this )
   * entry contains imagingstudy 1..*
@@ -192,7 +191,6 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^extension[0].valueString = "Section"
   * code = $loinc#55115-0 //"Requested imaging studies information Document"
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
-  * extension contains $note-url named note 0..*
 
   * entry
     * insert SliceElement( #profile, $this )
@@ -212,7 +210,6 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^extension[0].valueString = "Section"
   * code = $loinc#18785-6	//"Radiology Reason for study (narrative)"
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
-  * extension contains $note-url named note 0..*
   * text 1..
   * entry 0..
   * entry only Reference(CZ_ConditionImage)
@@ -225,7 +222,6 @@ The `text` field of each section SHALL contain a textual representation of all l
   with information specific for imaging (i.e. Observation, Condition, Device, Medication Administration).
   """
   * code = $loinc#11329-0 // "History general Narrative - Reported"
-  * extension contains $note-url named note 0..*
   * entry
     * insert SliceElement( #profile, [[$this.resolve()]] )
   * entry contains vitals 0..* and problemlist 0..* and implants 0..* and medication 0..*
@@ -240,8 +236,6 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^definition = "This section contains information such as the procedure type, the anatomy imaged, the date and time of the imaging examination, and the facility that performed it."
   * code = $loinc#55111-9 //"Current imaging procedure descriptions Document"
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
-  * extension contains
-    $note-url named note 0..*
   * entry
     * insert SliceElement( #profile, [[resolve()]] )
   * entry contains
@@ -262,7 +256,6 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^short = "Comparison"
   * code = $loinc#18834-2 //"Radiology Comparison study (narrative)"
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
-  * extension contains $note-url named note 0..*
   * entry
     * insert SliceElement( #profile, [[resolve()]] )
   * entry contains
@@ -286,7 +279,6 @@ The `text` field of each section SHALL contain a textual representation of all l
 * section[impression]
   * ^short = "Impressions"
   * code = $loinc#19005-8 //"Radiology Imaging study [Impression] (narrative)"
-  * extension contains $note-url named note 0..*
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
   * entry
     * insert SliceElement( #profile, $this )
@@ -303,7 +295,6 @@ The `text` field of each section SHALL contain a textual representation of all l
   * ^short = "Recommendations"
   * code = $loinc#18783-1 //"Radiology Study recommendation (narrative)"
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
-  * extension contains $note-url named note 0..*
   * entry
     * insert SliceElement( #profile, $this )
   * entry contains suggestion 0..*
@@ -315,14 +306,12 @@ The `text` field of each section SHALL contain a textual representation of all l
 // a proper code is needed
   * code = $loinc#73568-8 //"Communication"
   * author only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_DeviceObserver or CZ_PatientCore or CZ_RelatedPersonCore or CZ_OrganizationCore)
-  * extension contains $note-url named note 0..*
 
 //// /////////////////// REPORT SECTION //////////////////////////
 * section[report]
   * ^short = "Report - all content in one section"
 // a proper code is needed
   * code = $loinc#LP173421-1 // "Report"
-  * extension contains $note-url named note 0..*
 
 
 

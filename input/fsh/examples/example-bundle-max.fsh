@@ -315,14 +315,14 @@ Description: "Imaging order: PET+CT Imaging report"
 * requester = Reference(urn:uuid:792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0)
 
 Instance: cz-examplepetct-weightObservation
-InstanceOf: CZ_ObservationResultImaging
+InstanceOf: CZ_ObservationImage
 Title: "Observation: patient weight"
 Description: "Patient weight in echo report history section"
 Usage: #example
 * id = "9f79ad8f-056e-4931-ae19-810064de607b"
 * status = #final
 * effectiveDateTime = "2023-06-01"
-* code = $loinc#29463-7 "Body weight"
+* code = $loinc#29463-7
 * category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 * subject =  Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * performer = Reference(urn:uuid:792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0)
@@ -340,7 +340,7 @@ Usage: #example
 * id = "40fb226b-e11f-4d02-aa30-97ba51ab4ff6"
 * status = #final
 * effectiveDateTime = "2023-06-01"
-* code = $loinc#8302-2 "Body height"
+* code = $loinc#8302-2
 * category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 * subject =  Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * performer = Reference(urn:uuid:792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0)
@@ -475,7 +475,7 @@ Title: "Medication: PET+CT Imaging report"
 * identifier[=].value = "607852"
 * status = #active
 * code.coding[+] = $dlp_lecivePripravky#0226200 "FLUDEOXYTHYMIDIN (18F) RADIOMEDIC 1-8GBQ INJ SOL 1,25GBQ"
-* form = $edqm#11201000 "Solution for injection"
+* form = $edqm#11201000
 
 Instance: cz-examplepetct-observation
 InstanceOf: CZ_ObservationResultImaging
@@ -485,6 +485,7 @@ Title: "Observation: PET+CT Imaging report"
 * id = "1bcd2d5a-e401-4ac2-80d0-7ec558d6b250"
 * language = #cs
 * status = #final
+* category = http://terminology.hl7.org/CodeSystem/observation-category#imaging "Imaging"
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * performer = Reference(urn:uuid:7ac8dfd6-d559-467b-b5ef-a05198a3ea2c)
 * code = $sct#16554361000119106 //"PET CT of brain"

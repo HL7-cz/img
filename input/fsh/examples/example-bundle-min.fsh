@@ -336,6 +336,7 @@ Title: "Observation: RTG Imaging report"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * performer = Reference(urn:uuid:aafd64f9-36ab-4583-8088-efb93b44db9b)
 * code = $sct#715959009 //"Imaging of pelvis"
+* category = http://terminology.hl7.org/CodeSystem/observation-category#imaging "Imaging"
 * valueString = "Bez nálezu."
 * effectiveDateTime = "2025-10-06T09:10:00+01:00"
 

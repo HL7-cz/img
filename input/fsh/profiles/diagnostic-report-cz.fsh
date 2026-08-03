@@ -8,7 +8,7 @@ Description: "Diagnostic Report used to represent an entry of a Imaging Report, 
 * . ^short = "Imaging Report DiagnosticReport"
 * . ^definition = "Imaging Report DiagnosticReport"
 
-* insert ImposeProfile($DiagnosticReport-eu-img,0)
+//* insert ImposeProfile($DiagnosticReport-eu-img,0) - error in composition.section:procedure.slicing we cant impose before error will be fixed
 * extension contains $artifact-version-url named artifactVersion 0..1
 * extension contains CZ_AnatomicalRegionExtension named anatomical-region 0..*
 * extension[anatomical-region] ^short = "The anatomical regions covered by the study this report reports on." // this extension is useful, as it allows to sumarise all anatomic regions covered by the report, it also serves as a fall back for situations when imaging study resources are not included in the report
@@ -17,6 +17,7 @@ The anatomical regions covered by the report, depending on the study there can b
 The regions SHALL overlap with the ImagingStudy anatomica-region extension and references from `ImagingStudy.serie.bodysite`, if present.
 """
 * extension[anatomical-region] ^requirements = "This field is present in order to be able to populate the MHD DocumentReference field."
+* extension[DiagnosticReportCompositionR5].valueReference only Reference(CZ_CompositionImagingReport) 
 
 //business identifier and relation with the composition resource
 * identifier 1..*

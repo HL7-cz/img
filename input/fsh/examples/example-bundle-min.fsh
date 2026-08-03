@@ -106,7 +106,7 @@ Usage: #example
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Note:</b></td><td id=\"note\"><p>Klinická otázka: Trauma skeletu?</p></td></tr></table></div>"
 * section[clinicalQuestion].text.status = #additional
 * section[imagingstudy].title = "Obrazová studie"
-* section[imagingstudy].code = $loinc#18726-0 "Radiology studies (set)"
+* section[imagingstudy].code = $loinc#18726-0 
 * section[imagingstudy].text.status = #additional
 * section[imagingstudy].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"cs\" xml:lang=\"cs\"><p>Obrazová studie digitální radiografie.</p></div>"
 * section[imagingstudy].entry[0] = Reference(urn:uuid:fc79917b-b1b0-44a6-beaa-e9715322c834)
@@ -336,6 +336,7 @@ Title: "Observation: RTG Imaging report"
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * performer = Reference(urn:uuid:aafd64f9-36ab-4583-8088-efb93b44db9b)
 * code = $sct#715959009 //"Imaging of pelvis"
+* category = http://terminology.hl7.org/CodeSystem/observation-category#imaging "Imaging"
 * valueString = "Bez nálezu."
 * effectiveDateTime = "2025-10-06T09:10:00+01:00"
 

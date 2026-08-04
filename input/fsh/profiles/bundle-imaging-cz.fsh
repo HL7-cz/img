@@ -22,6 +22,17 @@ Description: "DiagnosticReport and Composition SHALL have the same author Organi
 Expression: "Bundle.entry.resource.ofType(DiagnosticReport).performer.resolve().ofType(Organization) = Bundle.entry.resource.ofType(Composition).author.resolve().ofType(Organization) or (Bundle.entry.resource.ofType(DiagnosticReport).performer.resolve().ofType(Organization).empty() and Bundle.entry.resource.ofType(Composition).author.resolve().ofType(Organization).empty())"
 Severity:    #error
 
+Invariant: img-document-reference-profile
+Description: "DocumentReference entries shall declare an allowed CZ profile."
+Severity: #error
+Expression: """
+resource.meta.profile.where(
+  $this = 'https://hl7.cz/fhir/core/StructureDefinition/cz-attachment' or
+  $this = 'https://hl7.cz/fhir/core/StructureDefinition/cz-logo' or
+  $this = 'https://hl7.cz/fhir/img/StructureDefinition/cz-keyImage-documentReference'
+).exists()
+"""
+
 //==========================
 // PROFILE
 //==========================
@@ -80,7 +91,7 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * entry[patient].resource only CZ_PatientCore or CZ_PatientAnimal
 
 * entry contains observation 0..*
-* entry[observation].resource only CZ_ObservationResultImaging
+* entry[observation].resource only CZ_ObservationResultImaging or CZ_ObservationImage
 
 * entry contains specimen 0..*
 * entry[specimen].resource only CZ_Specimen
@@ -115,9 +126,31 @@ Description: "Clinical document used to represent a Imaging Report for the scope
 * entry contains imagingStudy 0..*
 * entry[imagingStudy].resource only CZ_StudyImaging
 
-* entry contains documentReference 0..*
-* entry[documentReference].resource only CZ_KeyImageDocumentReference or CZ_Logo or CZ_Attachment
+// * entry contains documentReference 0..*
+// * entry[documentReference].resource only CZ_KeyImageDocumentReference or CZ_Logo or CZ_Attachment
 
+/* alternativní reprezentace, která řeší překrývající se slicing v původní specifikaci profilu */
+* entry contains documentReference 0..*
+* entry[documentReference] obeys img-document-reference-profile
+* entry[documentReference] ^short =
+    "Attachment, logo, or key image"
+* entry[documentReference] ^definition = """
+A DocumentReference included in the imaging report bundle.
+It may represent a general CZ Attachment, an organization logo
+conforming to CZ Logo, or a key image conforming to
+CZ Key Image DocumentReference.
+"""
+* entry[documentReference].resource only CZ_Attachment
+* entry[documentReference].resource ^short =
+    "CZ Attachment, including specialized logo and key-image profiles"
+* entry[documentReference].resource ^definition = """
+The resource conforms to CZ Attachment. Specialized resources SHOULD
+also declare the applicable profile in meta.profile:
+
+- https://hl7.cz/fhir/core/StructureDefinition/cz-logo
+- https://hl7.cz/fhir/img/StructureDefinition/cz-keyImage-documentReference
+"""
+/* ----------------------------*/
 * entry contains procedure 0..*
 * entry[procedure].resource only CZ_ProcedureImaging
 

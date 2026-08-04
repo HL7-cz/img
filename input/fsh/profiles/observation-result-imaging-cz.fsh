@@ -8,7 +8,7 @@ This observation may represent the result of a imaging report
 """
 
 * insert ImposeProfile($Observation-eu-img,0)
-* insert ImposeProfile($Observation-cz-core,0)
+* insert ImposeProfile($Observation-cz-core,1)
 
 * ^purpose = "This profile constrains the Observation resource to represent a imaging report."
 * . ^short = "Imaging result for a imaging report"

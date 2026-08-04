@@ -34,8 +34,8 @@ Description: "Order information for the scope of the Czech national interoperabi
 * code
 * code.coding from CZ_ImagingProcedureVs (preferred)
 
-* requester only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CZ_PatientCore or CZ_RelatedPersonCore or CZ_DeviceObserver or Device)
-* performer only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CareTeam or HealthcareService or CZ_PatientCore or CZ_RelatedPersonCore or CZ_DeviceObserver or Device)
+* requester only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CZ_PatientCore or CZ_RelatedPersonCore or CZ_DeviceObserver) // or Device)
+* performer only Reference(CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore or CareTeam or HealthcareService or CZ_PatientCore or CZ_RelatedPersonCore or CZ_DeviceObserver) // or Device)
 * performer.type from $sct-device-type
 * bodySite
 * bodySite from $sctBodySite (preferred)
@@ -43,7 +43,7 @@ Description: "Order information for the scope of the Czech national interoperabi
 * supportingInfo 0..*
 * supportingInfo only Reference(CZ_MedicationStatementCore or CZ_BodyHeight or CZ_BodyWeight or CZ_ConditionCore or CZ_ConditionImage or CZ_AllergyIntolerance or CZ_MedicalDevice or CZ_ObservationImage or CZ_CarePlanImage)
 
-* supportingInfo.extension contains 
+* supportingInfo.extension contains
     http://hl7.org/fhir/5.0/StructureDefinition/extension-ServiceRequest.supportingInfo named codeableConcept 0..*
 
 * extension contains http://hl7.org/fhir/5.0/StructureDefinition/extension-ServiceRequest.reason named reason 0..*

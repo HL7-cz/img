@@ -106,7 +106,7 @@ Usage: #example
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Note:</b></td><td id=\"note\"><p>Klinická otázka: Trauma skeletu?</p></td></tr></table></div>"
 * section[clinicalQuestion].text.status = #additional
 * section[imagingstudy].title = "Obrazová studie"
-* section[imagingstudy].code = $loinc#18726-0 
+* section[imagingstudy].code = $loinc#18726-0
 * section[imagingstudy].text.status = #additional
 * section[imagingstudy].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"cs\" xml:lang=\"cs\"><p>Obrazová studie digitální radiografie.</p></div>"
 * section[imagingstudy].entry[0] = Reference(urn:uuid:fc79917b-b1b0-44a6-beaa-e9715322c834)
@@ -317,8 +317,9 @@ Description: "Imaging study of RTG Imaging report"
 Title: "Imaging study: RTG Imaging report"
 * id = "fc79917b-b1b0-44a6-beaa-e9715322c834"
 * identifier[studyInstanceUid].system = "urn:dicom:uid"
-* identifier[studyInstanceUid].value = "urn:oid:1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.1"
-* identifier[studyInstanceUid].type = MissingDicomTerminology#0020000D "Study Instance UID"
+* identifier[studyInstanceUid].value = "urn:oid:2.25.335596673607129974740986219160701945908"  // Derived from id = "fc79917b-b1b0-44a6-beaa-e9715322c834" based on DICOM PS3.5, B.2 rules: https://dicom.nema.org/medical/dicom/current/output/chtml/part05/sect_B.2.html, real OID created by DICOM modality shall be provided
+//* identifier[studyInstanceUid].type = MissingDicomTerminology#0020000D "Study Instance UID"
+* identifier[studyInstanceUid].type.coding[dcm] = $dcm#110180 "Study Instance UID"
 * status = #available
 * subject = Reference(urn:uuid:62d2aa9a-a15f-4e43-9458-fec16c1c4882)
 * series.uid = "1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.1.1"

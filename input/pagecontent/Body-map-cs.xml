@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <div xmlns="http://www.w3.org/1999/xhtml">
 
-  <head>
-    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-    <title>Tělo -&gt; FHIR profily (CZ IMG)</title>
-
-    <style type="text/css">
+  <style type="text/css">
 
       .model-map-block { margin: 0 0 1rem 0; }
 
@@ -55,10 +51,7 @@
       .relsub { background: #c9bed1; }
       .tgt-sub { background: #cf8398; }
 
-    </style>
-  </head>
-
-  <body>
+  </style>
 
     <div class="model-map-block">
       <div class="callout-wrapper">
@@ -69,13 +62,11 @@
       </div>
     </div>
 
-    <h3>Tělo -&gt; FHIR profily (CZ IMG)</h3>
-
     <p>
       Tato stránka vysvětluje, jak jsou konceptuální prvky logického modelu těla vyjádřeny v odpovídajících FHIR profilech použitých v této implementační příručce.
     </p>
 
-    <h4 id="model">Přehled modelu</h4>
+    <h3>Přehled modelu</h3>
 
     <p>{% include imgReportBody-map-cs.svg %}</p>
 
@@ -1375,7 +1366,5 @@
       </table>
 
     </div>
-
-  </body>
 
 </div>

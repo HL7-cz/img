@@ -8,7 +8,7 @@ Description: "Condition for Imaging Report for the scope of the Czech national i
 * subject
 * subject only Reference(CZ_PatientCore)
 * category from $hl7-condition-category
-* code MS
+* code //MS
 * code.coding ^slicing.discriminator[0].type = #value
 * code.coding ^slicing.discriminator[0].path = "system"
 * code.coding ^slicing.rules = #open

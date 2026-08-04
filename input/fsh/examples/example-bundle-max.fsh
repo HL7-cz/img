@@ -129,7 +129,7 @@ Usage: #example
     * div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table><tr><td><b>Note:</b></td><td id=\"note\"><p>Klinická otázka: Recidiva?</p></td></tr></table></div>"
   * entry[0] = Reference(urn:uuid:9ee22843-2526-436f-bf66-3f9874869c08)
 * section[imagingstudy].title = "Zobrazovací studie"
-* section[imagingstudy].code = $loinc#18726-0 
+* section[imagingstudy].code = $loinc#18726-0
 * section[imagingstudy].text.status = #additional
 * section[imagingstudy].text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"cs\" xml:lang=\"cs\"><p>Obrazová studie PET/CT mozku, modalita CT.</p></div>"
 * section[imagingstudy].entry[0] = Reference(urn:uuid:e132f687-df35-4174-91bd-fe74cda5ac5d)
@@ -290,7 +290,7 @@ Title: "Patient Example: PET+CT Imaging report"
 * address[=].country = "CZ"
   * extension[countryCode].valueCoding = urn:iso:std:iso:3166#CZ "Czechia"
 
-* communication[+].language = urn:ietf:bcp:47#sk
+* communication[+].language = urn:ietf:bcp:47#en
 * communication[=].preferred = true
 * communication[+].language = urn:ietf:bcp:47#cs
 
@@ -322,7 +322,7 @@ Usage: #example
 * id = "9f79ad8f-056e-4931-ae19-810064de607b"
 * status = #final
 * effectiveDateTime = "2023-06-01"
-* code = $loinc#29463-7
+* code = $nclp#20042 "Hmotnost aktuální (Pt; hmotnost [kg] Vážení)"
 * category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 * subject =  Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * performer = Reference(urn:uuid:792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0)
@@ -340,7 +340,7 @@ Usage: #example
 * id = "40fb226b-e11f-4d02-aa30-97ba51ab4ff6"
 * status = #final
 * effectiveDateTime = "2023-06-01"
-* code = $loinc#8302-2
+* code = $nclp#20411 "Výška aktuální (Pt; výška [cm] Měření délky)"
 * category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 * subject =  Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * performer = Reference(urn:uuid:792a7a2e-4acd-42fd-bd2c-c2ff4e2f66a0)
@@ -388,8 +388,9 @@ Description: "Imaging study of PET+CT Imaging report"
 Title: "Imaging study: PET+CT Imaging report"
 * id = "e132f687-df35-4174-91bd-fe74cda5ac5d"
 * identifier[studyInstanceUid].system = "urn:dicom:uid"
-* identifier[studyInstanceUid].value = "urn:oid:1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.2"
-* identifier[studyInstanceUid].type = MissingDicomTerminology#0020000D "Study Instance UID"
+* identifier[studyInstanceUid].value = "urn:oid:2.25.299340914132176789884138033964638383197"
+//* identifier[studyInstanceUid].type = MissingDicomTerminology#0020000D "Study Instance UID"
+* identifier[studyInstanceUid].type.coding[dcm] = $dcm#110180 "Study Instance UID"
 * status = #available
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * series.uid = "1.3.6.1.4.1.36160.1.2.1000.20250505120001200.1.1.2.1"
@@ -430,7 +431,7 @@ Usage: #example
 Description: "Care plan for PET+CT Imaging report"
 Title: "Care plan: PET+CT Imaging report"
 * id = "b9af425a-a9d9-4685-800c-d0d661c1b7a4"
-* identifier.system = "https://www.nemocnice.cz/sid/careplan-id"
+* identifier.system = "http://example.org/fhir/sid/careplan-id"
 * identifier.value = "1234567"
 * description = "Dále podle vývoje MRI."
 * status = #completed
@@ -456,13 +457,13 @@ Usage: #example
 Description: "Medication Administration during PET+CT Imaging report"
 Title: "Medication Administration: PET+CT Imaging report"
 * id = "a89a0433-998e-4408-9d7a-560c6d242366"
-* identifier[+].system = "https://www.nemocnice.cz/sid/medicationadministration-id"
+* identifier[+].system = "http://example.org/fhir/sid/medicationadministration-id"
 * identifier[=].value = "12345"
 * status = #completed
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * medicationReference = Reference (urn:uuid:0987d1c9-0d9a-4d33-8efc-eee6a8c63059)
 * dosage.dose = 260000 'ul' "ul"
-* dosage.route = $sct#47625008 "intravenózní aplikace"
+* dosage.route = $edqm#20045000 "intravenózní podání"
 * effectiveDateTime = "2022-10-07T08:15:00+01:00"
 
 Instance: cz-examplepetct-medication
@@ -471,7 +472,7 @@ Usage: #example
 Description: "Medication during PET+CT Imaging report"
 Title: "Medication: PET+CT Imaging report"
 * id = "0987d1c9-0d9a-4d33-8efc-eee6a8c63059"
-* identifier[+].system = "https://www.nemocnice.cz/sid/medication-id"
+* identifier[+].system = "http://example.org/fhir/sid/medication-id"
 * identifier[=].value = "607852"
 * status = #active
 * code.coding[+] = $dlp_lecivePripravky#0226200 "FLUDEOXYTHYMIDIN (18F) RADIOMEDIC 1-8GBQ INJ SOL 1,25GBQ"
@@ -526,7 +527,7 @@ Title: "Key Image Document reference: PET+CT Imaging report"
 * status = http://hl7.org/fhir/document-reference-status#current
 * subject = Reference(urn:uuid:2ccb472f-5747-4939-a119-5597835ad7da)
 * content[content].attachment.contentType = #application/dicom
-* content[content].attachment.url = "/viewer/KOS.dcm"
+* content[content].attachment.url = "http://example.org/viewer/KOS.dcm"
 * content[content].attachment.title = "Key Image Document"
 * extension[modality].valueCodeableConcept = $dcm#CT
 

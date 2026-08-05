@@ -82,15 +82,15 @@ The `text` field of each section SHALL contain a textual representation of all l
 
 //  * party only Reference(CZ_PatientCore or CZ_RelatedPersonCore or CZ_PractitionerCore or CZ_PractitionerRoleCore or CZ_OrganizationCore)
 
-* attester contains
+//* attester contains
 //     legalAuthenticator 0..* and
-    resultValidator 0..*
-* attester[legalAuthenticator]
+//    resultValidator 0..* MS
+* attester[legalAuthenticator] MS
   * mode 1..1
   * mode = http://hl7.org/fhir/composition-attestation-mode#legal
   * party only Reference(CZ_PractitionerRoleCore)
   * time 1..1
-* attester[resultValidator]
+* attester[validator] MS
   * mode 1..1
   * mode = http://hl7.org/fhir/composition-attestation-mode#professional
   * party only Reference(CZ_PractitionerRoleCore)

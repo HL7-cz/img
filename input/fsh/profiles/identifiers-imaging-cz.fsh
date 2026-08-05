@@ -11,7 +11,7 @@ Description: "This profile on Identifier represents the Accession Number for the
   * coding
     * insert SliceElement( #value, $this )
   * coding contains v2-0203-coding 1..1 and dcm 0..1
-  * coding[v2-0203-coding] = $v2-0203#ACSN 
+  * coding[v2-0203-coding] = $v2-0203#ACSN
   * coding[dcm] = http://dicom.nema.org/resources/ontology/DCM#121022 "Accession Number"
 
 Profile: CZ_StudyInstanceUidIdentifier
@@ -27,7 +27,7 @@ Description: "This profile on Identifier represents the Study Instance UID (0020
   * coding
     * insert SliceElement( #value, $this )
   * coding contains dcm 1..1
-  * coding[dcm] = http://dicom.nema.org/resources/ontology/DCM#110180 "Study Instance UID"
+  * coding[dcm] = http://dicom.nema.org/resources/ontology/DCM#110180 //"Study Instance UID"
 * assigner only Reference(CZ_OrganizationCore)
 
 Profile: CZ_SopInstanceUidIdentifier
@@ -39,5 +39,5 @@ Description: "This profile on Identifier represents the SOP Class UID (0008,0018
 * system = "urn:dicom:uid"
 * value 1..1
 * type 1..1
-* type = MissingDicomTerminology#00080018 "SOP Instance UID"
+* type = MissingDicomTerminology#00080018 //"SOP Instance UID"
 * assigner only Reference(CZ_OrganizationCore)

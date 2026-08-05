@@ -46,7 +46,7 @@ dependencies:
   hl7.fhir.uv.extensions.r4: 5.3.0
   hl7.fhir.uv.xver-r5.r4: 0.0.1-snapshot-2
   #hl7.fhir.uv.xver-r5.r4: 0.1.0
-  hl7.fhir.uv.ips: 2.0.0
+  hl7.fhir.uv.ips: 2.0.1
   fhir.dicom:
     id: DICOM
     uri: http://fhir.org/packages/fhir.dicom/ImplementationGuide/fhir.dicom
@@ -171,6 +171,7 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
     - https://ncez.mzcr.cz/terminology/ValueSet/participationType-cz
     - https://ncez.mzcr.cz/terminology/ValueSet/anatomical-region
     - https://ncez.mzcr.cz/terminology/ValueSet/media-view
+    - https://ncez.mzcr.cz/terminology/ValueSet/condition-code
     - http://hl7.eu/fhir/imaging/CodeSystem/codesystem-missing-dicom-terminology
 
   path-expansion-params: '../../expansion-params.json' # for using SNOMED CT Czech Extension

@@ -31,7 +31,7 @@ classDiagram
   CZ_CompositionImagingReport --> CZ_Practioner: author[author]
   CZ_CompositionImagingReport --> CZ_DeviceObserver: author[authoring-device]
   CZ_CompositionImagingReport --> CZ_Practioner: attester[legalAuthenticator]
-  CZ_CompositionImagingReport --> CZ_Practioner: attester[resultValidator]
+  CZ_CompositionImagingReport --> CZ_Practioner: attester[validator]
   CZ_CompositionImagingReport --> CZ_OrganizationCore: custodian
   CZ_CompositionImagingReport --> CZ_PatientCore: subject
   CZ_CompositionImagingReport --> CZ_StudyImaging: section[imagingstudy]

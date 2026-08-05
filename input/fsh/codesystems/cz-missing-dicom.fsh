@@ -6,6 +6,7 @@ Description: "Code system for codes that are defined in DICOM but for which no m
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
 * ^content = #fragment
+* ^status = #draft
 * ^url = "http://hl7.eu/fhir/imaging/CodeSystem/codesystem-missing-dicom-terminology"
 
 * #elements "DICOM Elements" "DICOM Element definitions"

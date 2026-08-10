@@ -57,7 +57,7 @@
       <div class="callout-wrapper">
         <div class="callout-box">
           <strong>Probíhající sladění:</strong>
-          Logické modely Xt-EHR jsou průběžně revidovány a dále zpřesňovány. Aktualizace z Xt-EHR budou postupně promítány do této implementační příručky, aby byla zachována návaznost na vyvíjející se specifikace EHDS.
+          Logické modely EHDS jsou průběžně revidovány a dále zpřesňovány. Aktualizace EHDS modelů budou postupně promítána do dalších verzí této implementační příručky.
         </div>
       </div>
     </div>
